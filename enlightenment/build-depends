@@ -1,0 +1,11 @@
+efl-dev
+libexif-dev
+libunwind-dev
+mesa-dev
+pulseaudio-dev
+wayland-dev
+wayland-protocols
+xcb-util-keysyms-dev
+xkeyboard-config
+x.org-server-dev
+x.org-xwayland

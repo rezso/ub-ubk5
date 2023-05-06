@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+gtkspell-${UB_VERSION}.tar.gz gtkspell-${UB_VERSION}/
+	https://sourceforge.net/projects/gtkspell/files/${UB_VERSION}/

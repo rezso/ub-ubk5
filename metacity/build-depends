@@ -1,0 +1,16 @@
+dconf-dev
+gsettings-desktop-schemas
+gtk3-dev
+intltool
+itstool
+libcanberra-dev
+libgtop2-dev
+libsm-dev
+libxpresent-dev
+libxres-dev
+startup-notification-dev
+tdb-dev
+vulkan-headers
+vulkan-loader-dev
+xcb-util-dev
+zenity

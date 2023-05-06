@@ -1,0 +1,25 @@
+#!/bin/sh -eux
+
+cp -a texmf-dist "$UB_INSTALLDIR"/usr/share/
+
+cd build
+ub_install
+
+# a kpsewhere nélkül rakat hibás szimlink lesz,
+# de a kpsewhere csak akkor működik, ha megvan neki a libkpathsea
+make DESTDIR="$UB_INSTALLDIR" LD_LIBRARY_PATH="$UB_INSTALLDIR/usr/lib" texlinks
+
+# install perl module
+cd ..
+mkdir -p "$UB_INSTALLDIR"/usr/share/tlpkg/TeXLive
+install -m644 texk/tests/TeXLive/*.pm "$UB_INSTALLDIR"/usr/share/tlpkg/TeXLive/
+
+rm -f "$UB_INSTALLDIR"/usr/bin/man
+
+# python2
+rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/scripts/pythontex/pythontex2.py
+rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/scripts/pythontex/depythontex2.py
+# fontforge
+rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/source/fonts/gentium-tug/type1/ff-gentium.pe
+# lua
+rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/tex/lualatex/bezierplot/bezierplot.lua

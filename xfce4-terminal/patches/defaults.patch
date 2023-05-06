@@ -1,0 +1,57 @@
+diff -Naur a/terminal/terminal-preferences.c b/terminal/terminal-preferences.c
+--- a/terminal/terminal-preferences.c	2022-04-24 11:01:58.000000000 +0200
++++ b/terminal/terminal-preferences.c	2022-05-15 04:20:57.364503494 +0200
+@@ -801,7 +801,7 @@
+       g_param_spec_boolean ("font-allow-bold",
+                             NULL,
+                             "FontAllowBold",
+-                            TRUE,
++                            FALSE,
+                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+ 
+   /**
+@@ -942,7 +942,7 @@
+       g_param_spec_boolean ("misc-toolbar-default",
+                             NULL,
+                             "MiscToolbarDefault",
+-                            FALSE,
++                            TRUE,
+                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+ 
+   /**
+@@ -1135,7 +1135,7 @@
+       g_param_spec_uint ("scrolling-lines",
+                          NULL,
+                          "ScrollingLines",
+-                         0u, 1024u * 1024u, 1000u,
++                         0u, 1024u * 1024u, 2000u,
+                          G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+ 
+   /**
+@@ -1189,7 +1189,7 @@
+       g_param_spec_boolean ("shortcuts-no-menukey",
+                             NULL,
+                             "ShortcutsNoMenukey",
+-                            FALSE,
++                            TRUE,
+                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+ 
+   /**
+@@ -1199,7 +1199,7 @@
+       g_param_spec_boolean ("shortcuts-no-mnemonics",
+                             NULL,
+                             "ShortcutsNoMnemonics",
+-                            FALSE,
++                            TRUE,
+                             G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+ 
+   /**
+@@ -1230,7 +1230,7 @@
+       g_param_spec_string ("word-chars",
+                            NULL,
+                            "WordChars",
+-                           "-A-Za-z0-9,./?%&#:_=+@~",
++                           "-,./?%&#:_=+@~",
+                            G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS);
+ 
+   /**

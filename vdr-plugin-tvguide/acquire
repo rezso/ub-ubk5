@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+tvguide-v${UB_VERSION}.tar.gz tvguide-v${UB_VERSION}/
+	https://gitlab.com/kamel5/tvguide/-/archive/v${UB_VERSION}/

@@ -1,0 +1,13 @@
+ctpl-dev
+geany-dev
+gpgme-dev
+gtkspell-dev
+intltool
+libwnck-dev
+libxml2-dev
+lua51-dev
+mesa-dev
+vala-dev
+vte-dev
+webkit2gtk-4.1-dev
+xcb-util-dev

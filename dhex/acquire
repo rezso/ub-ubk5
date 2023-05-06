@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+dhex_${UB_VERSION}.tar.gz dhex_${UB_VERSION}/
+	https://www.dettus.net/dhex/

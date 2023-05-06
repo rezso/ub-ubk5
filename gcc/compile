@@ -1,0 +1,47 @@
+#!/bin/sh -eux
+
+# ada, brig, jit, objcp
+
+cd "$UB_OBJECTDIR"
+
+arch="x86_64-unknown-linux-gnu"
+
+OPT_FLAGS="-m64 -O2 -mtune=generic"
+
+export CFLAGS="$OPT_FLAGS"
+export CXXFLAGS="$OPT_FLAGS"
+SED=sed \
+
+"$UB_COMPILEDIR"/configure \
+    --build=$arch \
+    --host=$arch \
+    --target=$arch \
+	--prefix=/usr \
+	--infodir=/usr/share/info \
+	--mandir=/usr/share/man \
+	--enable-languages=c,c++,d,fortran,go,objc \
+    --enable-__cxa_atexit \
+    --enable-cet=auto \
+    --enable-checking=release \
+    --enable-clocale=gnu \
+    --enable-default-pie \
+    --enable-default-ssp \
+    --enable-gnu-indirect-function \
+    --enable-gnu-unique-object \
+    --enable-libstdcxx-backtrace \
+    --enable-link-serialization=1 \
+    --enable-linker-build-id \
+    --enable-lto \
+    --enable-plugin \
+    --enable-shared \
+    --enable-threads=posix \
+    --disable-libssp \
+    --disable-libstdcxx-pch \
+    --disable-multilib \
+    --disable-werror \
+	--with-build-config=bootstrap-lto \
+	--with-linker-hash-style=gnu \
+	--with-system-zlib \
+	--with-tune=generic
+
+ub_make -j2

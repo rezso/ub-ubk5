@@ -1,0 +1,7 @@
+gjs-dev
+gobject-introspection-dev
+gtk4-dev
+intltool
+libadwaita-dev
+libhandy-dev
+libunistring-dev

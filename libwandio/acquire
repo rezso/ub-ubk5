@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION/+/-}.tar.gz wandio-${UB_VERSION/+/-}/
+	https://github.com/LibtraceTeam/wandio/archive/refs/tags/

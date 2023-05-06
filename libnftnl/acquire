@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libnftnl-${UB_VERSION}.tar.xz libnftnl-${UB_VERSION}/
+	https://www.netfilter.org/projects/libnftnl/files/

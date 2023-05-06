@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dca_certificates=true \
+	-Dca_certificates_path=/etc/ssl/certs/ca-certificates.crt \
+	-Dexamples=false \
+	-Dgtk_doc=false \
+	-Dtests=false

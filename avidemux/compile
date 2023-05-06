@@ -1,0 +1,11 @@
+#!/bin/sh -eux
+
+export CMAKE_PREFIX_PATH=/usr/lib/qt5
+export OpenGL_GL_PREFERENCE=GLVND
+sh bootStrap.bash \
+        --with-system-libass \
+        --with-system-libmad \
+        --with-system-liba52 \
+        --with-cli \
+        --with-core \
+        --with-plugins

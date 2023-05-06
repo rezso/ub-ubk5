@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dos_backend=linux \
+	-Dudevrulesdir=/usr/lib/udev/rules.d \
+	-Dgtk-doc=false

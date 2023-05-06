@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+make \
+    LIB_DIR=/usr/lib \
+    RULESDIR=/usr/lib/udev/rules.d \
+    SBINDIR=/usr/sbin \
+    user

@@ -1,0 +1,13 @@
+ffmpeg-dev
+gtk2-dev
+jack-dev
+ladspa-dev
+libdv-dev
+libsamplerate-dev
+libvdpau-dev
+libvorbis-dev
+libxml2-dev
+qt5-dev
+sdl2-dev
+sox-dev
+x264-dev

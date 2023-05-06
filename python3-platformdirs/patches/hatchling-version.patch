@@ -1,0 +1,12 @@
+diff -Naur a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	2020-02-02 01:00:00.000000000 +0100
++++ b/pyproject.toml	2023-04-26 17:22:50.606231428 +0200
+@@ -2,7 +2,7 @@
+ build-backend = "hatchling.build"
+ requires = [
+   "hatch-vcs>=0.3",
+-  "hatchling>=1.14",
++  "hatchling>=1.13",
+ ]
+ 
+ [project]

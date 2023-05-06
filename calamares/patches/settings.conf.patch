@@ -1,0 +1,63 @@
+diff -Naur orig/settings.conf patched/settings.conf
+--- orig/settings.conf	2021-12-11 13:23:23.000000000 +0100
++++ patched/settings.conf	2022-01-03 17:38:34.660719834 +0100
+@@ -115,44 +115,30 @@
+ sequence:
+ - show:
+   - welcome
+-#  - notesqml
+   - locale
+   - keyboard
+   - partition
+   - users
+-#  - tracking
++  - netinstall
+   - summary
+ - exec:
+-#  - dummycpp
+-#  - dummyprocess
+-#  - dummypython
+   - partition
+-#  - zfs
+   - mount
+-  - unpackfs
++  - chrootcfg
++  - networkcfg
++  - packages
+   - machineid
+   - fstab
+   - locale
+-  - keyboard
+   - localecfg
+-#  - luksbootkeyfile
+-#  - luksopenswaphookcfg
+-#  - dracutlukscfg
+-#  - plymouthcfg
+-  - initcpiocfg
+-  - initcpio
+   - users
+   - displaymanager
+-  - networkcfg
+   - hwclock
+-  - services-systemd
+-#  - dracut
+-  - initramfs
+-#  - grubcfg
++  - dracut
++  - grubcfg
+   - bootloader
+   - umount
+ - show:
+-#  - webview@owncloud
+   - finished
+ 
+ # A branding component is a directory, either in SHARE/calamares/branding or
+@@ -233,3 +219,8 @@
+ #
+ #
+ quit-at-end: false
++#
++#
++packageOperations:
++  -install
++  -remove

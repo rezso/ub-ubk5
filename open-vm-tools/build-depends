@@ -1,0 +1,14 @@
+fuse-dev
+gdk-pixbuf-xlib-dev
+gtk3-dev
+-gtkmm3-dev
+libdrm-dev
+libice-dev
+libmspack-dev
+libsm-dev
+libtirpc-dev
+libxtst-dev
+openssl-dev
+procps-dev
+rpcsvc-proto
+systemd-dev

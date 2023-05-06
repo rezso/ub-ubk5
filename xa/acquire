@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+xa-${UB_VERSION}.tar.gz xa-${UB_VERSION}/
+	https://www.floodgap.com/retrotech/xa/dists/

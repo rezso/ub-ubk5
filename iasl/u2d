@@ -1,0 +1,1 @@
+curl -k -s https://raw.githubusercontent.com/acpica/acpica/master/source/include/acpixf.h | grep VERSION | sed s/.*x//g

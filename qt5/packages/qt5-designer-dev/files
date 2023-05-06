@@ -1,0 +1,8 @@
+	/usr/include/qt5/QtDesigner
+	/usr/include/qt5/QtDesignerComponents
+	/usr/lib/cmake/Qt5Designer
+	/usr/lib/libQt5DesignerComponents.prl
+@	/usr/lib/libQt5DesignerComponents.so
+	/usr/lib/libQt5Designer.prl
+@	/usr/lib/libQt5Designer.so
+	/usr/lib/pkgconfig/Qt5Designer.pc

@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+cd hostapd
+ub_install DESTDIR=$UB_INSTALLDIR BINDIR=/usr/bin/
+mkdir -p $UB_INSTALLDIR/etc/hostapd
+cp hostapd.{accept,conf,deny,eap_user,radius_clients,vlan,wpa_psk} $UB_INSTALLDIR/etc/hostapd/

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+speex-${UB_VERSION/~/}.tar.gz speex-${UB_VERSION/~/}/
+	https://downloads.xiph.org/releases/speex/

@@ -1,0 +1,17 @@
+#!/bin/sh -eux
+
+rm -f CMakeLists.txt
+
+./autogen.sh
+ub_compile \
+	--with-systemdsystemunitdir=/usr/lib/systemd/system \
+	--with-embedded-crypto \
+	--with-libmongo-client=no \
+	--with-jsonc=system \
+	--enable-env-wrapper \
+	--enable-spoof-source \
+	--disable-python \
+	--disable-python-modules \
+	--sysconfdir=/etc/syslog-ng \
+	--localstatedir=/var/lib/syslog-ng \
+	--datadir=/usr/share/syslog-ng

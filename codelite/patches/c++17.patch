@@ -1,0 +1,43 @@
+From 6f41d7963a22a3bb30409c23938fd0c488ee0ac7 Mon Sep 17 00:00:00 2001
+From: Uffe Jakobsen <uffe@uffe.org>
+Date: Mon, 20 Mar 2023 15:45:24 +0100
+Subject: [PATCH] DebugAdapterClient compile fix: std=c++17
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Fixes the following compile error:
+```
+FAILED: DebugAdapterClient/CMakeFiles/DebugAdapterClient.dir/BreakpointsHelper.cpp.o
+
+In file included from /tmp/codelite-devel.git/DebugAdapterClient/clDapSettingsStore.hpp:4,
+                 from /tmp/codelite-devel.git/DebugAdapterClient/DebugSession.hpp:4,
+                 from /tmp/codelite-devel.git/DebugAdapterClient/BreakpointsHelper.hpp:4,
+                 from /tmp/codelite-devel.git/DebugAdapterClient/BreakpointsHelper.cpp:1:
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:29: error: ‘string_view’ is not a member of ‘std’
+  101 |     std::unordered_map<std::string_view, JSONItem> GetAsMap() const;
+      |                             ^~~~~~~~~~~
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:29: note: ‘std::string_view’ is only available from C++17 onwards
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:29: error: ‘string_view’ is not a member of ‘std’
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:29: note: ‘std::string_view’ is only available from C++17 onwards
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:50: error: template argument 1 is invalid
+  101 |     std::unordered_map<std::string_view, JSONItem> GetAsMap() const;
+      |                                                  ^
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:50: error: template argument 3 is invalid
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:50: error: template argument 4 is invalid
+/tmp/codelite-devel.git/CodeLite/JSON.h:101:50: error: template argument 5 is invalid
+```
+---
+ DebugAdapterClient/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/DebugAdapterClient/CMakeLists.txt b/DebugAdapterClient/CMakeLists.txt
+index 93d69c075..61a2b31f4 100644
+--- a/DebugAdapterClient/CMakeLists.txt
++++ b/DebugAdapterClient/CMakeLists.txt
+@@ -1,5 +1,5 @@
+ # lldb requires C++11
+-add_definitions(-std=c++11)
++add_definitions(-std=c++17)
+ set(PLUGIN_NAME "DebugAdapterClient")
+ project(DebugAdapterClient)

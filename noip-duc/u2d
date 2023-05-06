@@ -1,0 +1,1 @@
+_geturl https://www.noip.com/download?page=linux | grep 'Stable version' | sed -e 's/.* Stable version //'

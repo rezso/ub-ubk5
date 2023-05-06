@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+dhcpcd-${UB_VERSION}.tar.gz dhcpcd-dhcpcd-${UB_VERSION}/
+	https://github.com/NetworkConfiguration/dhcpcd/archive/refs/tags/

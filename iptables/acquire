@@ -1,0 +1,5 @@
+#!/usr/bin/env dl
+
+iptables-${UB_VERSION}.tar.xz iptables-${UB_VERSION}/
+	https://www.netfilter.org/pub/iptables/
+	https://www.netfilter.org/projects/iptables/files/

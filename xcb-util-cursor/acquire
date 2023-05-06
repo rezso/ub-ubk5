@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+xcb-util-cursor-${UB_VERSION}.tar.xz xcb-util-cursor-${UB_VERSION}/
+	https://xcb.freedesktop.org/dist/

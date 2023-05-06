@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+dvdrip-${UB_VERSION}.tar.gz dvdrip-${UB_VERSION}/
+	https://www.exit1.org/dvdrip/dist/

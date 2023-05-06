@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+gnupg-${UB_VERSION}.tar.gz gnupg-${UB_VERSION}/
+	https://pypi.io/packages/source/g/gnupg/

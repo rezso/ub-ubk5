@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+mtpfs-${UB_VERSION}.tar.gz mtpfs-${UB_VERSION}/
+	https://www.adebenham.com/files/mtp/

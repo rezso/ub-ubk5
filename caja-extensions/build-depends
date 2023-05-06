@@ -1,0 +1,8 @@
+caja-dev
+dbus-glib-dev
+gst-plugins-base-dev
+gtk3-dev
+gupnp-dev
+mate-desktop-dev
+util-linux-dev
+xcb-util-dev

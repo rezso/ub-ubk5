@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+polkit-${UB_VERSION}.tar.gz polkit-${UB_VERSION}/
+	https://gitlab.freedesktop.org/polkit/polkit/-/archive/${UB_VERSION}/

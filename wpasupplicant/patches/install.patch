@@ -1,0 +1,16 @@
+diff -Naur a/wpa_supplicant/Makefile b/wpa_supplicant/Makefile
+--- a/wpa_supplicant/Makefile	2022-01-16 21:51:29.000000000 +0100
++++ b/wpa_supplicant/Makefile	2022-05-09 21:28:24.011328110 +0200
+@@ -30,9 +30,9 @@
+ endif
+ endif
+ 
+-export LIBDIR ?= /usr/local/lib
+-export INCDIR ?= /usr/local/include
+-export BINDIR ?= /usr/local/sbin
++export LIBDIR ?= /usr/lib
++export INCDIR ?= /usr/include
++export BINDIR ?= /usr/sbin
+ PKG_CONFIG ?= pkg-config
+ 
+ CFLAGS += $(EXTRA_CFLAGS)

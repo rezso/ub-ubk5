@@ -1,0 +1,6 @@
+#!/usr/bin/env dl
+
+taglib-${UB_VERSION}.tar.gz taglib-${UB_VERSION}/
+	https://taglib.github.io/releases/
+	https://github.com/downloads/taglib/taglib/
+	https://developer.kde.org/~wheeler/files/src/

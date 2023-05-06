@@ -1,0 +1,23 @@
+apt >= 1.1
+bzip2
+coreutils
+cpp
+curl
+diffutils
+dpkg
+findutils
+gawk
+git
+grep
+gzip
+hunspell
+hunspell-hu
+inetutils
+lynx
+pretendroot
+sed
+shadow
+sortdir
+tar
+uhu-base
+unzip

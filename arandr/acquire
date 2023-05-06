@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+arandr-${UB_VERSION}.tar.gz arandr-${UB_VERSION}/
+	https://christian.amsuess.com/tools/arandr/files/

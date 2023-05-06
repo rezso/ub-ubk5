@@ -1,0 +1,12 @@
+appstream-glib-dev
+dbus-python-dev
+gedit-dev
+gtk3-dev
+intltool
+itstool
+meson
+python3-pygobject-dev
+sqlite-dev
+vala-dev
+vte-dev
+yelp-tools

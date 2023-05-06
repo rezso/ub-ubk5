@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz vdr-plugin-streamdev-${UB_VERSION}/
+	https://github.com/vdr-projects/vdr-plugin-streamdev/archive/refs/tags/

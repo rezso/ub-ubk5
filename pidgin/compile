@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+ub_compile \
+	--disable-meanwhile \
+	--disable-tcl \
+	--enable-cyrus-sasl \
+	--enable-vv \
+	--disable-gevolution

@@ -1,0 +1,12 @@
+egl-wayland-dev
+glu-dev
+gtk3-dev
+jansson-dev
+kernel-dev
+libtirpc-dev
+libvdpau-dev
+libxv-dev
+libxvmc-dev
+libxxf86vm-dev
+wayland-dev
+x.org-server-dev

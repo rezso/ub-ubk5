@@ -1,0 +1,16 @@
+alsa-lib-dev
+cups-dev
+fontconfig-dev
+freetype2-dev
+lcms2-dev
+libjpeg-turbo-dev
+libpng-dev
+libungif-dev
+libx11-dev
+libxext-dev
+libxrandr-dev
+libxrender-dev
+libxt-dev
+libxtst-dev
+libzip-dev
+zip

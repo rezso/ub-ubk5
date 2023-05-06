@@ -1,0 +1,24 @@
+diff -Naur a/googletest/CMakeLists.txt b/googletest/CMakeLists.txt
+--- a/googletest/CMakeLists.txt	2023-04-10 03:33:02.467845911 +0200
++++ b/googletest/CMakeLists.txt	2023-04-10 03:35:15.284350881 +0200
+@@ -33,6 +33,9 @@
+   pre_project_set_up_hermetic_build()
+ endif()
+ 
++# pkg-config support
++configure_file("gtest.pc.in" "gtest.pc" @ONLY)
++
+ ########################################################################
+ #
+ # Project-wide settings
+@@ -149,6 +152,10 @@
+ # Install rules
+ install_project(gtest gtest_main)
+ 
++install(FILES "${CMAKE_CURRENT_BINARY_DIR}/gtest.pc"
++  DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig/"
++)
++
+ ########################################################################
+ #
+ # Samples on how to link user tests with gtest or gtest_main.

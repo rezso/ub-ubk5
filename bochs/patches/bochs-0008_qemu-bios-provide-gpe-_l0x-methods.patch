@@ -1,0 +1,75 @@
+diff -Naur a/bios/acpi-dsdt.dsl b/bios/acpi-dsdt.dsl
+--- a/bios/acpi-dsdt.dsl	2017-04-17 09:26:00.000000000 +0200
++++ b/bios/acpi-dsdt.dsl	2021-08-17 21:28:45.606023925 +0200
+@@ -595,4 +595,59 @@
+         Zero,  /* reserved */
+         Zero   /* reserved */
+     })
++
++    Scope (\_GPE)
++    {
++        Name(_HID, "ACPI0006")
++
++        Method(_L00) {
++            Return(0x01)
++        }
++        Method(_L01) {
++            Return(0x01)
++        }
++        Method(_L02) {
++            Return(0x01)
++        }
++        Method(_L03) {
++            Return(0x01)
++        }
++        Method(_L04) {
++            Return(0x01)
++        }
++        Method(_L05) {
++            Return(0x01)
++        }
++        Method(_L06) {
++            Return(0x01)
++        }
++        Method(_L07) {
++            Return(0x01)
++        }
++        Method(_L08) {
++            Return(0x01)
++        }
++        Method(_L09) {
++            Return(0x01)
++        }
++        Method(_L0A) {
++            Return(0x01)
++        }
++        Method(_L0B) {
++            Return(0x01)
++        }
++        Method(_L0C) {
++            Return(0x01)
++        }
++        Method(_L0D) {
++            Return(0x01)
++        }
++        Method(_L0E) {
++            Return(0x01)
++        }
++        Method(_L0F) {
++            Return(0x01)
++        }
++    }
++
+ }
+diff -Naur a/bios/rombios32.c b/bios/rombios32.c
+--- a/bios/rombios32.c	2021-06-27 16:50:26.000000000 +0200
++++ b/bios/rombios32.c	2021-08-17 21:28:45.606023925 +0200
+@@ -1747,6 +1747,8 @@
+     fadt->pm_tmr_len = 4;
+     fadt->plvl2_lat = cpu_to_le16(0xfff); // C2 state not supported
+     fadt->plvl3_lat = cpu_to_le16(0xfff); // C3 state not supported
++    fadt->gpe0_blk = cpu_to_le32(0xafe0);
++    fadt->gpe0_blk_len = 4;
+     /* WBINVD + PROC_C1 + PWR_BUTTON + SLP_BUTTON + FIX_RTC */
+     fadt->flags = cpu_to_le32((1 << 0) | (1 << 2) | (1 << 4) | (1 << 5) | (1 << 6));
+     acpi_build_table_header((struct acpi_table_header *)fadt, "FACP",

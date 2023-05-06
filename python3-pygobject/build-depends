@@ -1,0 +1,4 @@
+cairo-dev
+gobject-introspection-dev
+python3-cairo-dev
+python3-setuptools

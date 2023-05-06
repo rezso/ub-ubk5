@@ -1,0 +1,50 @@
+diff -Naur a/external/more_fonts/Module_more_fonts.mk b/external/more_fonts/Module_more_fonts.mk
+--- a/external/more_fonts/Module_more_fonts.mk	2022-12-22 01:14:09.000000000 +0100
++++ b/external/more_fonts/Module_more_fonts.mk	2023-01-08 18:45:54.455002199 +0100
+@@ -15,14 +15,10 @@
+ 	ExternalPackage_caladea \
+ 	ExternalPackage_carlito \
+ 	$(if $(MPL_SUBSET),,ExternalPackage_culmus) \
+-	ExternalPackage_dejavu \
+ 	ExternalPackage_gentium \
+-	ExternalPackage_liberation \
+ 	ExternalPackage_liberation_narrow \
+-	ExternalPackage_libertineg \
+ 	ExternalPackage_libre_hebrew \
+ 	ExternalPackage_sourcesans \
+-	ExternalPackage_noto \
+ 	ExternalPackage_reem \
+ 	ExternalPackage_scheherazade \
+ 	UnpackedTarball_alef \
+@@ -30,14 +26,10 @@
+ 	UnpackedTarball_caladea \
+ 	UnpackedTarball_carlito \
+ 	$(if $(MPL_SUBSET),,UnpackedTarball_culmus) \
+-	UnpackedTarball_dejavu \
+ 	UnpackedTarball_gentium \
+-	UnpackedTarball_liberation \
+ 	UnpackedTarball_liberation_narrow \
+-	UnpackedTarball_libertineg \
+ 	UnpackedTarball_libre_hebrew \
+ 	UnpackedTarball_sourcesans \
+-	UnpackedTarball_noto \
+ 	UnpackedTarball_reem \
+ 	UnpackedTarball_scheherazade \
+ ))
+diff -Naur a/Repository.mk b/Repository.mk
+--- a/Repository.mk	2022-12-22 01:14:09.000000000 +0100
++++ b/Repository.mk	2023-01-08 18:47:50.094602494 +0100
+@@ -1038,13 +1038,9 @@
+ 		fonts_caladea \
+ 		fonts_carlito \
+ 		$(if $(MPL_SUBSET),,fonts_culmus) \
+-		fonts_dejavu \
+ 		fonts_gentium \
+-		fonts_liberation \
+ 		fonts_liberation_narrow \
+-		fonts_libertineg \
+ 		fonts_libre_hebrew \
+-		fonts_noto \
+ 		fonts_reem \
+ 		fonts_sourcesans \
+ 		fonts_scheherazade \

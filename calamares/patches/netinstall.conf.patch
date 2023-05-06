@@ -1,0 +1,12 @@
+diff -Naur orig/src/modules/netinstall/netinstall.conf patched/src/modules/netinstall/netinstall.conf
+--- orig/src/modules/netinstall/netinstall.conf	2021-07-14 09:29:20.000000000 +0200
++++ patched/src/modules/netinstall/netinstall.conf	2021-07-21 20:42:36.231782192 +0200
+@@ -69,7 +69,7 @@
+ # they are interpreted like the *groups* key below. The special case
+ # `local` loads the data directly from **this** file.
+ #
+-groupsUrl: local
++groupsUrl: file:///usr/share/calamares/netinstall.yaml
+ 
+ # Alternate form:
+ # groupsUrl: [ local ]

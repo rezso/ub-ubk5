@@ -1,0 +1,9 @@
+appstream-glib-dev
+gobject-introspection-dev
+gtk3-dev
+intltool
+itstool
+libxslt
+meson
+systemd-dev
+webkit2gtk-4.1-dev

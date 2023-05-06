@@ -1,0 +1,2 @@
+rev=$(urllist https://trac.streamboard.tv/oscam/browser/trunk | grep '?rev=' | grep 'format=zip' | sed -e 's/trunk?rev=//' -e 's/&format=zip//' | sort -V | tail -n 1)
+echo 1.20~r$rev

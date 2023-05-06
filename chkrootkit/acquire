@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+chkrootkit-${UB_VERSION}.tar.gz chkrootkit-${UB_VERSION}/
+	https://fossies.org/linux/misc/

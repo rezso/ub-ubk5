@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+
+ub_compile \
+	-Dmodules_path=/usr/lib/apache

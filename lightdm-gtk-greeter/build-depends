@@ -1,0 +1,6 @@
+gobject-introspection-dev
+gtk3-dev
+intltool
+libxklavier-dev
+lightdm-dev
+xfce4-dev-tools

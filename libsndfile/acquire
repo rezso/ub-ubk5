@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz libsndfile-${UB_VERSION}/
+	https://github.com/libsndfile/libsndfile/archive/

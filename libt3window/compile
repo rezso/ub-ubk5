@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+
+export LIBTOOL=/usr/bin/libtool
+ub_compile

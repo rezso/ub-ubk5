@@ -1,0 +1,11 @@
+#!/bin/sh -eux
+
+ub_compile \
+	-DCMAKE_INSTALL_LIBDIR=lib \
+	-DCMAKE_PREFIX_PATH=/usr/lib/qt5 \
+	-DUSE_HDF5=ON \
+	-DHDF5_INCLUDE_DIRS=/usr/include \
+	-DUSE_LIBMSYM=OFF \
+	-DUSE_MMTF=OFF \
+    -DOpenGL_GL_PREFERENCE=GLVND \
+    -DENABLE_TRANSLATIONS=ON

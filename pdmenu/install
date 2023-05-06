@@ -1,0 +1,3 @@
+#!/bin/sh -eux
+
+INSTALL_PREFIX=${UB_INSTALLDIR} make install

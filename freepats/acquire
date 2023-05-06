@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+freepats-${UB_VERSION}.tar.xz freepats/
+	https://freepats.zenvoid.org/

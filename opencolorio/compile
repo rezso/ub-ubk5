@@ -1,0 +1,13 @@
+#!/bin/sh -eux
+
+mkdir build
+cd build
+cmake \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_INSTALL_PREFIX=/usr \
+	-DOCIO_BUILD_APPS=OFF \
+	-DOCIO_BUILD_PYTHON=OFF \
+	-DOCIO_BUILD_TESTS=OFF \
+	-DOCIO_BUILD_GPU_TESTS=OFF \
+    ..
+ub_make

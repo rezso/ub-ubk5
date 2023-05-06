@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+tcpdump-${UB_VERSION}.tar.gz tcpdump-${UB_VERSION}/
+	https://www.tcpdump.org/release/

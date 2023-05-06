@@ -1,0 +1,6 @@
+gobject-introspection-dev
+json-glib-dev
+libusb-dev
+python3-setuptools
+systemd-dev
+vala-dev

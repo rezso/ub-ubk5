@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libxcb-${UB_VERSION}.tar.xz libxcb-${UB_VERSION}/
+	https://xcb.freedesktop.org/dist/

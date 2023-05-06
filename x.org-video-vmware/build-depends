@@ -1,0 +1,4 @@
+libxext-dev
+mesa-dev
+systemd-dev
+x.org-server-dev

@@ -1,0 +1,1 @@
+_geturl https://moc.daper.net/ | grep Stable: | sed 's/.*Stable: //'

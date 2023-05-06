@@ -1,0 +1,8 @@
+freetype2-dev
+gdk-pixbuf-dev
+gobject-introspection-dev
+harfbuzz-dev
+libxml2-dev
+pango-dev
+rust
+vala-dev

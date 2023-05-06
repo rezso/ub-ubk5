@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+gocr-"$UB_VERSION".tar.gz gocr-"$UB_VERSION"/
+	https://www-e.uni-magdeburg.de/jschulen/ocr/

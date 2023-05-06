@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+drbd-utils-${UB_VERSION}.tar.gz drbd-utils-${UB_VERSION}/
+	https://pkg.linbit.com//downloads/drbd/utils/

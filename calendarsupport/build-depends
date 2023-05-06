@@ -1,0 +1,17 @@
+akonadi-calendar-dev
+akonadi-contacts-dev
+akonadi-dev
+akonadi-mime-dev
+akonadi-notes-dev
+boost-dev
+cyrus-sasl2-dev
+kcalutils-dev
+kf5-dev
+kidentitymanagement-dev
+kimap-dev
+kmime-dev
+kpimtextedit-dev
+libical-dev
+libkdepim-dev
+pimcommon-dev
+qt5-dev

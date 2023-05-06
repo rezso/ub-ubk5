@@ -1,0 +1,3 @@
+slim-themes
+cursor-theme-x.org
+unicode-screensaver

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+dnsmasq-${UB_VERSION}.tar.gz dnsmasq-${UB_VERSION}/
+	https://thekelleys.org.uk/dnsmasq/

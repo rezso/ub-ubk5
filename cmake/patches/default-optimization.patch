@@ -1,0 +1,95 @@
+diff -Naur a/Modules/Compiler/Absoft-Fortran.cmake b/Modules/Compiler/Absoft-Fortran.cmake
+--- a/Modules/Compiler/Absoft-Fortran.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/Absoft-Fortran.cmake	2022-08-20 18:32:59.987995629 +0200
+@@ -1,7 +1,7 @@
+ string(APPEND CMAKE_Fortran_FLAGS_INIT " ")
+ string(APPEND CMAKE_Fortran_FLAGS_DEBUG_INIT " -g")
+ string(APPEND CMAKE_Fortran_FLAGS_MINSIZEREL_INIT " ")
+-string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O3")
++string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O2")
+ string(APPEND CMAKE_Fortran_FLAGS_RELWITHDEBINFO_INIT " -O2 -g")
+ set(CMAKE_Fortran_MODDIR_FLAG "-YMOD_OUT_DIR=")
+ set(CMAKE_Fortran_MODPATH_FLAG "-p")
+diff -Naur a/Modules/Compiler/G95-Fortran.cmake b/Modules/Compiler/G95-Fortran.cmake
+--- a/Modules/Compiler/G95-Fortran.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/G95-Fortran.cmake	2022-08-20 18:32:59.987995629 +0200
+@@ -1,7 +1,7 @@
+ string(APPEND CMAKE_Fortran_FLAGS_INIT " ")
+ string(APPEND CMAKE_Fortran_FLAGS_DEBUG_INIT " -g")
+ string(APPEND CMAKE_Fortran_FLAGS_MINSIZEREL_INIT " -Os")
+-string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O3")
++string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O2")
+ string(APPEND CMAKE_Fortran_FLAGS_RELWITHDEBINFO_INIT " -O2 -g")
+ set(CMAKE_Fortran_MODDIR_FLAG "-fmod=")
+ set(CMAKE_Fortran_VERBOSE_FLAG "-v")
+diff -Naur a/Modules/Compiler/GNU.cmake b/Modules/Compiler/GNU.cmake
+--- a/Modules/Compiler/GNU.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/GNU.cmake	2022-08-20 18:32:59.987995629 +0200
+@@ -56,7 +56,7 @@
+   string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
+   string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g")
+   string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -Os -DNDEBUG")
+-  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O3 -DNDEBUG")
++  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O2 -DNDEBUG")
+   string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -O2 -g -DNDEBUG")
+   set(CMAKE_${lang}_CREATE_PREPROCESSED_SOURCE "<CMAKE_${lang}_COMPILER> <DEFINES> <INCLUDES> <FLAGS> -E <SOURCE> > <PREPROCESSED_SOURCE>")
+   set(CMAKE_${lang}_CREATE_ASSEMBLY_SOURCE "<CMAKE_${lang}_COMPILER> <DEFINES> <INCLUDES> <FLAGS> -S <SOURCE> -o <ASSEMBLY_SOURCE>")
+diff -Naur a/Modules/Compiler/GNU-Fortran.cmake b/Modules/Compiler/GNU-Fortran.cmake
+--- a/Modules/Compiler/GNU-Fortran.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/GNU-Fortran.cmake	2022-08-20 18:32:59.987995629 +0200
+@@ -19,7 +19,7 @@
+ 
+ # No -DNDEBUG for Fortran.
+ string(APPEND CMAKE_Fortran_FLAGS_MINSIZEREL_INIT " -Os")
+-string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O3")
++string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O2")
+ 
+ # No -isystem for Fortran because it will not find .mod files.
+ unset(CMAKE_INCLUDE_SYSTEM_FLAG_Fortran)
+diff -Naur a/Modules/Compiler/Intel.cmake b/Modules/Compiler/Intel.cmake
+--- a/Modules/Compiler/Intel.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/Intel.cmake	2022-08-20 18:32:59.987995629 +0200
+@@ -23,7 +23,7 @@
+     string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
+     string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g")
+     string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -Os")
+-    string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O3")
++    string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O2")
+     string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -O2 -g")
+     set(CMAKE_${lang}_COMPILE_OPTIONS_WARNING_AS_ERROR "-Werror-all")
+ 
+diff -Naur a/Modules/Compiler/NVIDIA-CUDA.cmake b/Modules/Compiler/NVIDIA-CUDA.cmake
+--- a/Modules/Compiler/NVIDIA-CUDA.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/NVIDIA-CUDA.cmake	2022-08-20 18:32:59.987995629 +0200
+@@ -57,7 +57,7 @@
+   set(CMAKE_SHARED_LIBRARY_CUDA_FLAGS -fPIC)
+   string(APPEND CMAKE_CUDA_FLAGS_INIT " ")
+   string(APPEND CMAKE_CUDA_FLAGS_DEBUG_INIT " -g")
+-  string(APPEND CMAKE_CUDA_FLAGS_RELEASE_INIT " -O3 -DNDEBUG")
++  string(APPEND CMAKE_CUDA_FLAGS_RELEASE_INIT " -O2 -DNDEBUG")
+   string(APPEND CMAKE_CUDA_FLAGS_MINSIZEREL_INIT " -O1 -DNDEBUG")
+   string(APPEND CMAKE_CUDA_FLAGS_RELWITHDEBINFO_INIT " -O2 -g -DNDEBUG")
+ endif()
+diff -Naur a/Modules/Compiler/PathScale.cmake b/Modules/Compiler/PathScale.cmake
+--- a/Modules/Compiler/PathScale.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/PathScale.cmake	2022-08-20 18:32:59.991995620 +0200
+@@ -16,6 +16,6 @@
+   string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
+   string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g -O0")
+   string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -Os")
+-  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O3")
++  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O2")
+   string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -g -O2")
+ endmacro()
+diff -Naur a/Modules/Compiler/PGI.cmake b/Modules/Compiler/PGI.cmake
+--- a/Modules/Compiler/PGI.cmake	2022-08-17 18:54:57.000000000 +0200
++++ b/Modules/Compiler/PGI.cmake	2022-08-20 18:32:59.991995620 +0200
+@@ -18,7 +18,7 @@
+   string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
+   string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g -O0")
+   string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -O2 -s")
+-  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -fast -O3")
++  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O2 -gopt")
+   string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -O2 -gopt")
+ 
+   if(CMAKE_HOST_WIN32)

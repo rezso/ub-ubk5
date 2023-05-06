@@ -1,0 +1,6 @@
+extra-cmake-modules
+mesa-dev
+plasma-wayland-protocols
+qt5-dev
+wayland-dev
+wayland-protocols

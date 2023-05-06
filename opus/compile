@@ -1,0 +1,10 @@
+#!/bin/sh -eux
+
+rm -f CMakeLists.txt
+ub_compile \
+	-Dcustom-modes=true \
+	-Dintrinsics=enabled \
+	-Drtcd=enabled \
+	-Dextra-programs=disabled \
+	-Dtests=disabled \
+	-Ddocs=disabled

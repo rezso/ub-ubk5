@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+radeontool-${UB_VERSION}.tar.gz radeontool-${UB_VERSION}/
+	https://people.freedesktop.org/~airlied/radeontool/

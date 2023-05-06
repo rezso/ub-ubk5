@@ -1,0 +1,5 @@
+#!/bin/sh -eux
+
+ub_install
+cp -a -r ${UB_INSTALLDIR}/${UB_COMPILEDIR}/build/ext/dist/* ${UB_INSTALLDIR}/usr/
+rm -Rf ${UB_INSTALLDIR}/var

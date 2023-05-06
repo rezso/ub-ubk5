@@ -1,0 +1,12 @@
+gdk-pixbuf-xlib-dev
+glu-dev
+gtk3-dev
+intltool
+libjpeg-turbo-dev
+libxi-dev
+libxml2-dev
+libxmu-dev
+libxpm-dev
+pam
+systemd-dev
+xdg-utils

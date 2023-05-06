@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+make \
+	DESTDIR="$UB_INSTALLDIR" \
+	MANDIR=/usr/share/man \
+	install
+
+find "$UB_INSTALLDIR"/usr/lib -print0 | xargs -r0 chmod u+w

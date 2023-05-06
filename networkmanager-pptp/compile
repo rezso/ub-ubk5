@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+PPPD_VERSION=$(pkg-config --modversion pppd)
+
+ub_compile \
+	--disable-more-warnings \
+	--with-pppd-plugin-dir=/usr/lib/pppd/$PPPD_VERSION

@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+rm -f CMakeLists.txt
+ub_compile \
+    --disable-doxygen \
+    --disable-dot \
+    --disable-html-docs \
+    --disable-latex-docs

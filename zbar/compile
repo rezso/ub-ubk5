@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+export CFLAGS='-DNDEBUG'
+ub_compile \
+	--with-python=python3 \
+	--with-gtk=gtk3 \
+	--with-qt

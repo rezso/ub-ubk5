@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+redland-${UB_VERSION}.tar.gz redland-${UB_VERSION}/
+	https://download.librdf.org/source/

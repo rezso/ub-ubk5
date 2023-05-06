@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION/+/-}.tar.gz libtrace-${UB_VERSION/+/-}/
+	https://github.com/LibtraceTeam/libtrace/archive/refs/tags/

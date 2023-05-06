@@ -1,0 +1,10 @@
+graphviz-dev
+gtk3-dev
+libevdev-dev
+libgudev-dev
+libwacom-dev
+mtdev-dev
+systemd-dev
+valgrind
+wayland-dev
+wayland-protocols

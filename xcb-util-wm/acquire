@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+xcb-util-wm-${UB_VERSION}.tar.xz xcb-util-wm-${UB_VERSION}/
+	https://xcb.freedesktop.org/dist/

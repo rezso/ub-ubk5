@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+xcmsdb-${UB_VERSION}.tar.xz xcmsdb-${UB_VERSION}/
+  https://www.x.org/releases/individual/app/

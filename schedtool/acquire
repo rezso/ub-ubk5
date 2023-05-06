@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+schedtool-${UB_VERSION}.tar.bz2 schedtool-${UB_VERSION}/
+	http://gpl.matrix-vision.com/mvblx-sources/GPLv2/schedtool/

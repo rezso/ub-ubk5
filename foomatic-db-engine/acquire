@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+foomatic-db-engine-${UB_VERSION}.tar.gz foomatic-db-engine-${UB_VERSION}/
+	https://www.openprinting.org/download/foomatic/

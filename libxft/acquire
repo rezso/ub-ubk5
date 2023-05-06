@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libXft-$UB_VERSION.tar.xz libXft-$UB_VERSION/
+	https://www.x.org/releases/individual/lib/

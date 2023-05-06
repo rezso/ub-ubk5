@@ -1,0 +1,11 @@
+#!/bin/sh -eux
+
+python3 setup.py install --root="$UB_INSTALLDIR"
+
+mkdir -p ${UB_INSTALLDIR}/usr/share/icons/hicolor
+cp -a build/share ${UB_INSTALLDIR}/usr/
+cp -a data/icons/* ${UB_INSTALLDIR}/usr/share/icons/hicolor/
+
+mv $UB_INSTALLDIR/usr/bin/gufw-pkexec $UB_INSTALLDIR/usr/sbin/gufw
+rm $UB_INSTALLDIR/usr/bin/gufw
+rm -rf ${UB_INSTALLDIR}/usr/share/doc/gufw

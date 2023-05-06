@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz gufw-${UB_VERSION}/
+	https://github.com/costales/gufw/archive/

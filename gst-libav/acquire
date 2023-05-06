@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+gst-libav-${UB_VERSION}.tar.xz gst-libav-${UB_VERSION}/
+	https://gstreamer.freedesktop.org/src/gst-libav/

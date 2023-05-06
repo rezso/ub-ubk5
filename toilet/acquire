@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+toilet-${UB_VERSION}.tar.gz toilet-${UB_VERSION}/
+	https://libcaca.zoy.org/files/toilet/

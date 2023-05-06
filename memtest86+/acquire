@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION/~/-}.tar.gz memtest86plus-${UB_VERSION/~/-}/
+	https://github.com/memtest86plus/memtest86plus/archive/refs/tags/

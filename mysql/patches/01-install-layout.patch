@@ -1,0 +1,63 @@
+diff -Naur orig/cmake/install_layout.cmake patched/cmake/install_layout.cmake
+--- orig/cmake/install_layout.cmake	2021-07-05 12:15:47.000000000 +0200
++++ patched/cmake/install_layout.cmake	2021-07-20 02:52:13.022031318 +0200
+@@ -175,29 +175,29 @@
+ SET(INSTALL_SYSCONFDIR_DEB              "/etc")
+ SET(INSTALL_SYSCONF2DIR_DEB             "/etc/mysql/mariadb.conf.d")
+ #
+-SET(INSTALL_LIBDIR_DEB                  "lib/${CMAKE_CXX_LIBRARY_ARCHITECTURE}")
++SET(INSTALL_LIBDIR_DEB                  "lib")
+ SET(INSTALL_PLUGINDIR_DEB               "lib/mysql/plugin")
+ #
+ SET(INSTALL_INCLUDEDIR_DEB              "include/mariadb")
+ #
+-SET(INSTALL_DOCDIR_DEB                  "share/doc")
+-SET(INSTALL_DOCREADMEDIR_DEB            "share/doc")
++SET(INSTALL_DOCDIR_DEB                  "share/doc/mysql")
++SET(INSTALL_DOCREADMEDIR_DEB            "share/doc/mysql")
+ SET(INSTALL_MANDIR_DEB                  "share/man")
+ SET(INSTALL_INFODIR_DEB                 "share/info")
+ #
+ SET(INSTALL_SHAREDIR_DEB                "share")
+ SET(INSTALL_MYSQLSHAREDIR_DEB           "share/mysql")
+ SET(INSTALL_MYSQLTESTDIR_DEB            "share/mysql/mysql-test")
+-SET(INSTALL_SQLBENCHDIR_DEB             ".")
++SET(INSTALL_SQLBENCHDIR_DEB             "")
+ SET(INSTALL_SUPPORTFILESDIR_DEB         "share/mysql")
+ #
+ SET(INSTALL_MYSQLDATADIR_DEB            "/var/lib/mysql")
+ 
+ SET(INSTALL_UNIX_ADDRDIR_DEB            "/run/mysqld/mysqld.sock")
+-SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/lib/systemd/system")
++SET(INSTALL_SYSTEMD_UNITDIR_DEB         "/usr/lib/systemd/system")
+ SET(INSTALL_SYSTEMD_SYSUSERSDIR_DEB     "/usr/lib/sysusers.d")
+ SET(INSTALL_SYSTEMD_TMPFILESDIR_DEB     "/usr/lib/tmpfiles.d")
+-SET(INSTALL_PAMDIR_DEB                  "/lib/${CMAKE_CXX_LIBRARY_ARCHITECTURE}/security")
++SET(INSTALL_PAMDIR_DEB                  "/usr/lib/security")
+ SET(INSTALL_PAMDATADIR_DEB              "/etc/security")
+ 
+ #
+diff -Naur orig/libmariadb/cmake/install.cmake patched/libmariadb/cmake/install.cmake
+--- orig/libmariadb/cmake/install.cmake	2021-07-05 12:15:50.000000000 +0200
++++ patched/libmariadb/cmake/install.cmake	2021-07-20 02:52:13.022031318 +0200
+@@ -94,8 +94,8 @@
+ # DEB layout
+ #
+ SET(INSTALL_BINDIR_DEB "bin")
+-SET(INSTALL_LIBDIR_DEB "lib/${CMAKE_LIBRARY_ARCHITECTURE}")
+-SET(INSTALL_PCDIR_DEB "lib/${CMAKE_LIBRARY_ARCHITECTURE}/pkgconfig")
++SET(INSTALL_LIBDIR_DEB "lib")
++SET(INSTALL_PCDIR_DEB "lib/pkgconfig")
+ SET(INSTALL_PLUGINDIR_DEB "${INSTALL_LIBDIR_DEB}/libmariadb${CPACK_PACKAGE_VERSION_MAJOR}/plugin")
+ SET(INSTALL_INCLUDEDIR_DEB "include/mariadb")
+ SET(INSTALL_MANDIR_DEB "share/man")
+diff -Naur orig/support-files/rpm/my.cnf patched/support-files/rpm/my.cnf
+--- orig/support-files/rpm/my.cnf	2021-07-05 12:15:50.000000000 +0200
++++ patched/support-files/rpm/my.cnf	2021-07-20 02:52:13.022031318 +0200
+@@ -7,5 +7,5 @@
+ #
+ # include *.cnf from the config directory
+ #
+-!includedir /etc/my.cnf.d
++!includedir /etc/mysql/conf.d
+ 

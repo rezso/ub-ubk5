@@ -1,0 +1,8 @@
+gst-libav
+gst-plugins-bad-dev
+gst-plugins-good
+gst-plugins-ugly
+intltool
+libnotify
+python3-dev
+xdg-user-dirs-gtk

@@ -1,0 +1,11 @@
+docbook-dtds
+docbook-xsl
+gobject-introspection-dev
+gtk3-dev
+intltool
+itstool
+libxml2-dev
+libxslt
+python3-dev
+python3-pygobject-dev
+yelp-tools

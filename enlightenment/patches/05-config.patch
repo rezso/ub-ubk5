@@ -1,0 +1,32 @@
+diff -Nur orig/data/config/default/e.src mod/data/config/default/e.src
+--- orig/data/config/default/e.src	2021-12-27 21:21:38.000000000 +0100
++++ mod/data/config/default/e.src	2021-12-27 21:27:52.946699845 +0100
+@@ -19,6 +19,7 @@
+   value "show_desktop_icons" int: 1;
+   value "edge_flip_dragging" int: 0;
+   value "use_shaped_win" int: 0;
++  value "language" string: "hu_HU.UTF-8";
+   group "modules" list {
+     group "E_Config_Module" struct {
+       value "name" string: "wizard";
+diff -Nur orig/data/config/standard/e.src mod/data/config/standard/e.src
+--- orig/data/config/standard/e.src	2021-12-26 12:45:13.000000000 +0100
++++ mod/data/config/standard/e.src	2021-12-27 21:30:26.811295417 +0100
+@@ -19,7 +19,7 @@
+     value "show_desktop_icons" int: 1;
+     value "edge_flip_dragging" int: 1;
+     value "use_shaped_win" int: 0;
+-    value "language" string: "en_US.UTF-8";
++    value "language" string: "hu_HU.UTF-8";
+     value "window_placement_policy" int: 0;
+     value "window_grouping" int: 0;
+     value "focus_policy" int: 2;
+@@ -1044,7 +1044,7 @@
+         }
+         group "E_Config_Module" struct {
+             value "name" string: "connman";
+-            value "enabled" uchar: 1;
++            value "enabled" uchar: 0;
+         }
+         group "E_Config_Module" struct {
+             value "name" string: "bluez5";

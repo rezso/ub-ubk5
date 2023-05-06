@@ -1,0 +1,10 @@
+gobject-introspection-dev
+intltool
+itstool
+libgcrypt-dev
+libxkbfile-dev
+libxklavier-dev
+qt5-dev
+systemd-dev
+vala-dev
+yelp-tools

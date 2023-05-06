@@ -1,0 +1,11 @@
+dbus-glib-dev
+dconf-dev
+gobject-introspection-dev
+gtk3-dev
+hwdata
+iso-codes
+itstool
+librsvg-dev
+libsm-dev
+startup-notification-dev
+xcb-util-dev

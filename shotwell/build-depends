@@ -1,0 +1,15 @@
+gexiv2-dev
+gst-plugins-base-dev
+gtk3-dev
+intltool
+itstool
+json-glib-dev
+libchamplain-dev
+libgee-dev
+libgphoto2-dev
+libgudev-dev
+libportal-dev
+libraw-dev
+sqlite-dev
+vala-dev
+webkit2gtk-4.1-dev

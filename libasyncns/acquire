@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libasyncns-${UB_VERSION}.tar.gz libasyncns-${UB_VERSION}/
+	https://0pointer.de/lennart/projects/libasyncns/

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+LuaJIT-${UB_VERSION/~/-}.tar.gz LuaJIT-${UB_VERSION/~/-}/
+	https://luajit.org/download/

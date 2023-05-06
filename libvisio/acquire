@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libvisio-${UB_VERSION}.tar.xz libvisio-${UB_VERSION}/
+	https://dev-www.libreoffice.org/src/libvisio/

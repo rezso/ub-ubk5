@@ -1,0 +1,14 @@
+gobject-introspection
+gsettings-desktop-schemas
+gspell-dev
+gtksourceview4-dev
+intltool
+json-glib-dev
+libdazzle-dev
+libgee-dev
+libgit2-glib-dev
+libpeas-dev
+libsecret-dev
+meson
+python3-pygobject
+vala-dev

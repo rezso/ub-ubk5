@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION/~/}.tar.gz rrdtool-1.x-${UB_VERSION}/
+    https://github.com/oetiker/rrdtool-1.x/archive/refs/tags/

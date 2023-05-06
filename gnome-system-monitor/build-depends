@@ -1,0 +1,11 @@
+docbook-dtds
+docbook-xsl
+gtkmm3-dev
+icon-theme-gnome
+intltool
+itstool
+libgtop2-dev
+libhandy-dev
+librsvg-dev
+libwnck-dev
+meson

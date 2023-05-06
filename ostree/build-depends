@@ -1,0 +1,13 @@
+avahi-dev
+curl-dev
+e2fsprogs-dev
+fuse-dev
+glib-dev
+gobject-introspection
+gpgme-dev
+libarchive-dev
+libxml2-dev
+libxslt
+openssl-dev
+systemd-dev
+util-linux-dev

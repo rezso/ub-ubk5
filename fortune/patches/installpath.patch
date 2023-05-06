@@ -1,0 +1,21 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2022-05-03 05:16:44.000000000 +0200
++++ b/CMakeLists.txt	2022-05-04 16:07:27.647727833 +0200
+@@ -96,7 +96,7 @@
+ SET (WITH_TEST_SUITE CACHE BOOL "")
+ SET (NO_OFFENSIVE CACHE BOOL "Exclude the offensive option.")
+ SET (USE_WIN32_REGEX_LIBS TRUE CACHE BOOL "Link to the regex libraries (only affects MSWin builds)")
+-SET (LOCALDIR "${CMAKE_INSTALL_PREFIX}/local/share/games/fortunes" CACHE STRING "LOCALDIR fortunes dir")
++SET (LOCALDIR "${CMAKE_INSTALL_PREFIX}/share/games/fortunes" CACHE STRING "LOCALDIR fortunes dir")
+ SET (LOCALODIR "${LOCALDIR}/off" CACHE STRING "offensive fortunes localdir")
+ SET (COOKIEDIR "${CMAKE_INSTALL_PREFIX}/share/games/fortunes" CACHE STRING  "cookie dir not under /usr/local")
+ SET (OCOOKIEDIR "${COOKIEDIR}/off" CACHE STRING "offensive cookie dir not under /usr/local")
+@@ -175,7 +175,7 @@
+ my_exe(
+     "fortune"
+     "fortune/fortune.c"
+-    "games"
++    "bin"
+ )
+ 
+ my_exe(

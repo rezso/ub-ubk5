@@ -1,0 +1,79 @@
+#!/bin/sh -eux
+
+# headerdir /usr/lib/qt5/include
+# libdir /usr/lib/qt5/lib
+
+# Update catapult for python3 compatibility
+rm -r qtwebengine/src/3rdparty/chromium/third_party/catapult
+mv catapult qtwebengine/src/3rdparty/chromium/third_party
+
+cd $UB_OBJECTDIR
+
+procs=$(grep ^processor /proc/cpuinfo | wc -l)
+jobs=$(($procs / 2))
+
+export LD_LIBRARY_PATH="$(pwd)"/lib
+export LDFLAGS=" -Wl,--no-keep-memory "
+export NINJAFLAGS=" -j$jobs "
+
+$UB_COMPILEDIR/configure \
+	-prefix /usr/lib/qt5 \
+	-sysconfdir /etc/xdg \
+	-headerdir /usr/include/qt5 \
+	-libdir /usr/lib \
+	\
+	-release            \
+	-opensource         \
+	-confirm-license	\
+	-shared             \
+	-journald			\
+	-verbose            \
+	-silent             \
+	-ccache             \
+	-no-pch             \
+	-qml-debug			\
+	-no-use-gold-linker \
+	-reduce-relocations \
+	-no-rpath           \
+	\
+	-nomake examples    \
+	-nomake tests		\
+	\
+	-accessibility      \
+	\
+	-plugin-sql-sqlite  \
+	\
+	-gstreamer 1.0		\
+	\
+	-system-freetype	\
+	-system-harfbuzz	\
+	-system-libjpeg     \
+	-system-libpng      \
+	-system-pcre		\
+	-system-sqlite		\
+	-system-zlib        \
+	\
+	-dbus-linked        \
+	-openssl-linked     \
+	-ssl               \
+	\
+	-cups               \
+	-glib               \
+	-gtk				\
+	-opengl             \
+	-eglfs              \
+	-no-iconv           \
+	-no-linuxfb         \
+	-no-kms             \
+	-no-libproxy		\
+	\
+	-fontconfig         \
+	-evdev				\
+	-mtdev				\
+	-libinput			\
+	-tslib              \
+	\
+	-system-webengine-icu \
+#	-system-ffmpeg
+
+ub_make

@@ -1,0 +1,21 @@
+#!/bin/sh -eux
+
+rm -r  cups/libs expat jpeg leptonica libpng tesseract tiff zlib
+cd ijs
+libtoolize
+cd ..
+ub_configure \
+	--with-ijs \
+	--with-drivers=ALL \
+	--with-fontpath="/usr/share/fonts/ghostscript:/usr/share/fonts/Type1:/usr/share/fonts/truetype" \
+	--enable-fontconfig \
+	--enable-freetype \
+	--enable-openjpeg \
+	--with-system-libtiff \
+	--disable-compile-inits \
+	--without-versioned-path
+
+ub_make so
+
+cd ijs
+ub_compile

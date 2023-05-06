@@ -1,0 +1,15 @@
+dbus-dev
+gst-plugins-base-dev
+gstreamer-dev
+intltool
+libexif-dev
+libgxps-dev
+libosinfo-dev
+libseccomp-dev
+libtiff-dev
+libungif-dev
+poppler-glib-dev
+taglib-dev
+totem-plparser-dev
+tracker-dev
+upower-dev

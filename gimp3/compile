@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dcheck-update=no \
+    -Dappdata-test=disabled \
+	-Dgi-docgen=disabled \
+	-Dg-ir-doc=false \
+	-Dvala-plugins=disabled
