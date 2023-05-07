@@ -1,2 +1,2 @@
-noupdate: körkörös függések - poetry, pyproject-hooks, pep517
+noupdate: pyproject-hooks
 # u2dpypi build
