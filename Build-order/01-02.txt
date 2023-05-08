@@ -68,7 +68,6 @@ libqrtr-glib
 libqmi
 ntp
 python3-cairo
-serf
 slang
 enchant
 glew

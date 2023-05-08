@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-scons \
-    PREFIX=/usr \
-	LIBDIR=/usr/lib

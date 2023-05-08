@@ -79,7 +79,6 @@ gtk-stock-icons
 
 vigra
 libodfgen
-libtrace
 alsa-plugins
 timidity
 python3-pygame

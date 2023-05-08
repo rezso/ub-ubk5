@@ -30,7 +30,6 @@ atkmm1.6
 atkmm
 gtkmm2
 sdl-image
-sdl-ttf
 smpeg
 sdl-sound
 bolt
@@ -38,7 +37,6 @@ libvisio
 libwnck2
 libwnck
 emacs
-sdl-mixer
 cdrkit
 c++-gtk-utils
 sudo
@@ -69,7 +67,6 @@ clutter-gtk
 gtkspell
 scim
 sdl2-image
-sdl2-pango
 sdl2-ttf
 slim
 accountsservice

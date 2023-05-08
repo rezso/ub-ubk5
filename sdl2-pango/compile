@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-dos2unix SDL2_Pango.pc.in
-autoreconf -vif
-ub_compile
