@@ -1,6 +1,6 @@
-diff -Naur orig/po/hu.po mod/po/hu.po
---- orig/po/hu.po	1970-01-01 01:00:00.000000000 +0100
-+++ mod/po/hu.po	2021-06-10 15:31:52.394053048 +0200
+diff -Naur a/po/hu.po b/po/hu.po
+--- a/po/hu.po	1970-01-01 01:00:00.000000000 +0100
++++ b/po/hu.po	2023-05-09 19:42:05.125938857 +0200
 @@ -0,0 +1,1541 @@
 +# SOME DESCRIPTIVE TITLE.
 +# Copyright (C) YEAR The ALSA Team
@@ -1543,9 +1543,9 @@ diff -Naur orig/po/hu.po mod/po/hu.po
 +#, c-format
 +msgid "Time per period = %lf\n"
 +msgstr ""
-diff -Naur orig/po/LINGUAS mod/po/LINGUAS
---- orig/po/LINGUAS	2021-05-27 19:18:36.000000000 +0200
-+++ mod/po/LINGUAS	2021-06-10 15:32:15.678351052 +0200
+diff -Naur a/po/LINGUAS b/po/LINGUAS
+--- a/po/LINGUAS	2023-05-04 09:16:17.000000000 +0200
++++ b/po/LINGUAS	2023-05-09 19:41:09.525775068 +0200
 @@ -1 +1 @@
--de eu fr ja sk
-+de eu fr hu ja sk
+-de eu fr ja ka sk
++de eu fr hu ja ka sk
