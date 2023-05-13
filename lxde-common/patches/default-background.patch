@@ -6,7 +6,7 @@ diff -Nur orig/pcmanfm/pcmanfm.conf.in mod/pcmanfm/pcmanfm.conf.in
  [desktop]
  wallpaper_mode=crop
 -wallpaper=@prefix@/share/lxde/wallpapers/lxde_blue.jpg
-+wallpaper=@prefix@/share/backgrounds/UHU/uhu_linux_ubk.jpg
++wallpaper=@prefix@/share/backgrounds/UHU/abstract-g985341857.png
  desktop_bg=#000000
  desktop_fg=#ffffff
  desktop_shadow=#000000
