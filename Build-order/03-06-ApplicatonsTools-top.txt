@@ -29,7 +29,6 @@ gkrellm-themes
 liblinebreak
 dmidecode
 tree
-unace
 multitail
 nload
 pcspk

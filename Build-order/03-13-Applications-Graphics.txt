@@ -12,7 +12,6 @@ povray
 mtpaint
 gphoto2
 libxaw3dxft
-xpaint
 geeqie
 spglib
 molequeue

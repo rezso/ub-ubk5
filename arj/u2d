@@ -1,2 +1,0 @@
-buildver=$(sflist arj arj | grep build | sed 's/.*build //g' | sort -V | tail -n 1)
-sflist arj arj | grep 'build '$buildver | sed s/.*_//g | sed 's/ build /\./g'

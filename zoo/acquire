@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-zoo_${UB_VERSION}.orig.tar.gz zoo-${UB_VERSION}.orig/
-	https://ftp.debian.org/debian/pool/main/z/zoo/
