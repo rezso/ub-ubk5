@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+cargo install \
+    --path . \
+    --root "$UB_INSTALLDIR"/usr \
+    --frozen \
+    --offline \
+    --no-track
