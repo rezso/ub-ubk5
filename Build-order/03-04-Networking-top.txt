@@ -1,12 +1,10 @@
 gn
 nomarch
-adzapper
 corkscrew
 htpdate
 icmptx
 iodine
 iperf
-noip-duc
 pptpclient
 qstat
 fping

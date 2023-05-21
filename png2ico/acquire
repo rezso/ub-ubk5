@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-png2ico-src-${UB_VERSION//./-}.tar.gz png2ico/
-	https://www.winterdrache.de/freeware/png2ico/data/

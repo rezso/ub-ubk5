@@ -3,11 +3,9 @@ jhead
 converseen
 sane-frontends
 simple-scan
-png2ico
 aaphoto
 exif
 evolvotron
-mscgen
 povray
 mtpaint
 gphoto2

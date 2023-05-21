@@ -1,7 +1,6 @@
 fish
 acpid
 alien
-brainfuck
 fonts-libertine
 htop
 man-pages
