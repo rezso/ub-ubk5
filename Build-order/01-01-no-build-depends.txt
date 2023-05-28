@@ -87,7 +87,6 @@ libupnp
 liburcu
 libvidstab
 libvisual
-libwandio
 libx86
 libyajl
 libytnef

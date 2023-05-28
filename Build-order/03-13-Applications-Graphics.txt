@@ -9,7 +9,6 @@ evolvotron
 povray
 mtpaint
 gphoto2
-libxaw3dxft
 geeqie
 spglib
 molequeue

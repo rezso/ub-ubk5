@@ -23,7 +23,6 @@ xbindkeys
 xinit
 libextractor
 wget
-pangox-compat
 libxml++3
 upower
 icon-theme-gnome

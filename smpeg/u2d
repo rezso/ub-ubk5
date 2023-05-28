@@ -1,1 +1,0 @@
-u2d https://github.com/icculus/smpeg/tags release_ | sed -e 's/_/\./g' | sort -V | tail -n 1

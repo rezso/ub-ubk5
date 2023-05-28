@@ -30,7 +30,6 @@ atkmm1.6
 atkmm
 gtkmm2
 sdl-image
-smpeg
 sdl-sound
 bolt
 libvisio
