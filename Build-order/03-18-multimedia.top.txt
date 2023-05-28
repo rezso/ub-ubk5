@@ -10,6 +10,7 @@ mp3wrap
 pavumeter
 canorus
 exaile
+grimripper
 acidrip
 wxsvg
 opus-tools
