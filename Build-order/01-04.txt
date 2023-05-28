@@ -34,7 +34,6 @@ smpeg
 sdl-sound
 bolt
 libvisio
-libwnck2
 libwnck
 emacs
 cdrkit

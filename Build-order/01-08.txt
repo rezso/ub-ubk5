@@ -24,7 +24,6 @@ xinit
 libextractor
 wget
 pangox-compat
-gtkglext
 libxml++3
 upower
 icon-theme-gnome

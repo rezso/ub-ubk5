@@ -23,7 +23,6 @@ whois
 ufw
 nrpe
 ytalk
-transgui
 grsync
 libfilezilla
 speedtest-cli
@@ -56,7 +55,6 @@ wireshark
 balsa
 claws-mail
 liferea
-anydesk
 seamonkey
 firefox
 thunderbird

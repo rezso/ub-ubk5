@@ -1,5 +1,3 @@
-xboard
-gnuchess
 dleyna
 libgnome-games-support
 libmanette
@@ -21,7 +19,6 @@ four-in-a-row
 gnome-klotski
 gnome-robots
 gnome-taquin
-gnome-chess
 gnome-sound-recorder
 gnome-todo
 aisleriot

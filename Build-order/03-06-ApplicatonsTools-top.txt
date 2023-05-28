@@ -74,7 +74,6 @@ gkrellm
 gtklp
 gammu
 encfs
-cellwriter
 simple-screen-recorder
 xca
 mount-gtk
@@ -92,7 +91,6 @@ fbreader
 redshift
 synergy
 virt-manager
-alltray
 catfish
 intel-gpu-tools
 gparted

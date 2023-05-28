@@ -5,6 +5,5 @@ librecad
 gtkdatabox
 klavaro
 xplanet
-celestia
 calcmysky
 stellarium
