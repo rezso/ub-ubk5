@@ -1,7 +1,6 @@
-libproxy #-networkmanager
+libproxy
 glib-networking
 networkmanager
-libproxy #+networkmanager
 
 libxmlb
 appstream

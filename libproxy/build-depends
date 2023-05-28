@@ -1,5 +1,5 @@
-dbus-dev
+curl-dev
 glib-dev
-libx11-dev
-libxmu-dev
-networkmanager-dev
+gobject-introspection-dev
+gsettings-desktop-schemas
+vala-dev
