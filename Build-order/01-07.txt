@@ -17,7 +17,6 @@ libchamplain
 libosinfo
 osinfo-db-tools
 gst-plugins-good
-libdmapsharing
 gssdp
 gupnp
 gupnp-dlna

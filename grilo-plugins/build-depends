@@ -12,7 +12,6 @@ intltool
 itstool
 json-glib-dev
 libarchive-dev
-libdmapsharing-dev
 libmediaart-dev
 liboauth-dev
 libxml2-dev

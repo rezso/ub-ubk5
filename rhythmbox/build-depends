@@ -10,7 +10,6 @@ intltool
 itstool
 json-glib-dev
 libcap-dev
-libdmapsharing-dev
 libmtp-dev
 libnotify-dev
 libpeas-dev
