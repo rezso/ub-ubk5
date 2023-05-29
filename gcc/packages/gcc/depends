@@ -1,4 +1,3 @@
 binutils
-libobjc >=
 libstdc++ >=
 libstdc++-dev >=

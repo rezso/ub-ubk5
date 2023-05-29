@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-# ada, brig, jit, objcp
+# ada, d, fortran, go, jit, objc, objcp
 
 cd "$UB_OBJECTDIR"
 
@@ -13,7 +13,7 @@ export CXXFLAGS="$OPT_FLAGS"
 	--prefix=/usr \
 	--infodir=/usr/share/info \
 	--mandir=/usr/share/man \
-	--enable-languages=c,c++,objc \
+	--enable-languages=c,c++ \
     --enable-__cxa_atexit \
     --enable-cet=auto \
     --enable-checking=release \
