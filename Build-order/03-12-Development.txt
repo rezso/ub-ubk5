@@ -7,13 +7,6 @@ patchutils
 ltrace
 cgdb
 python3-future
-python3-text-unidecode
-python3-unidecode
-python3-smmap
-python3-slugify
-python3-gitdb
-python3-gitpython
-python3-transifex-client
 icon-slicer
 pugixml
 lucene++

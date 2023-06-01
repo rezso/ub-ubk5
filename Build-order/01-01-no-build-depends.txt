@@ -2,7 +2,6 @@
 acpitool
 alsa-lib
 aoetools
-apmd
 apr
 at
 audiofile

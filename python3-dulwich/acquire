@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-dulwich-${UB_VERSION}.tar.gz dulwich-${UB_VERSION}/
-	https://files.pythonhosted.org/packages/source/d/dulwich/

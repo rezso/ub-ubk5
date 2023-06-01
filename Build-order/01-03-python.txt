@@ -20,8 +20,6 @@ python3-idna
 python3-imagesize
 python3-incremental
 python3-ipython-genutils
-python3-isort
-python3-mccabe
 python3-mutagen
 python3-mypy-extensions
 python3-nose
@@ -35,15 +33,18 @@ python3-pycparser
 python3-pyxdg
 python3-semantic-version
 python3-simplegeneric
-python3-sqlalchemy
 python3-testpath
 python3-tornado
 python3-wcwidth
-python3-websockets
 python3-wrapt
 python3-xlib
 python3-zope.fixers
 python3-importlib-resources
+python3-configobj
+python3-cython
+python3-certifi
+python3-urllib3
+dbus-python
 sip
 
 #csak-rd-t-nézni-mert-python3-setuptools-van-a-build-depends-ben
@@ -54,7 +55,6 @@ python3-random2
 python3-jedi
 python3-prompt-toolkit
 python3-yarl
-python3-mock
 python3-frozenlist
 python3-aiohttp
 python3-asn1-modules
@@ -79,7 +79,6 @@ python3-pillow
 python3-pyalsa
 python3-lazy-object-proxy
 python3-typed-ast
-python3-platformdirs
 python3-iniconfig
 python3-py
 python3-pylibacl
@@ -87,9 +86,6 @@ python3-setproctitle
 python3-pyzmq
 python3-babel
 python3-pyatspi
-python3-astroid
-python3-logilab-common
-python3-dill
 python3-automat
 python3-webencodings
 python3-html5lib
@@ -109,6 +105,7 @@ python3-matplotlib-inline
 python3-ipython
 python3-multidict
 python3-rencode
+python3-future
 
 #sphynxcucc
 
