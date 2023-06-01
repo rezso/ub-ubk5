@@ -21,7 +21,6 @@ python3-imagesize
 python3-incremental
 python3-ipython-genutils
 python3-mutagen
-python3-mypy-extensions
 python3-nose
 python3-parso
 python3-pathlib2
@@ -36,7 +35,6 @@ python3-simplegeneric
 python3-testpath
 python3-tornado
 python3-wcwidth
-python3-wrapt
 python3-xlib
 python3-zope.fixers
 python3-importlib-resources
@@ -77,8 +75,6 @@ python3-pytz
 python3-gst
 python3-pillow
 python3-pyalsa
-python3-lazy-object-proxy
-python3-typed-ast
 python3-iniconfig
 python3-py
 python3-pylibacl
