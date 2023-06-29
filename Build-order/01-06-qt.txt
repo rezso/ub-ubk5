@@ -7,7 +7,6 @@ qt6
 gpsd
 lightdm
 lightdm-qt5-greeter
-lightdm-gtk-greeter
 extra-cmake-modules
 libv4l
 poppler

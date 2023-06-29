@@ -36,7 +36,6 @@ apache
 aspell
 cbindgen
 dhcp
-gnome2-mime-data
 gpm
 libidl2
 libnftnl
@@ -136,7 +135,6 @@ libmpeg2
 cogl
 libwmf
 clutter
-gnome-keyring
 parted
 gst-plugins-ugly
 man-db

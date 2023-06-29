@@ -54,3 +54,4 @@ xfce4-mount-plugin
 xfce4-smartbookmark-plugin
 xfce4-verve-plugin
 xfce
+lightdm-gtk-greeter # xfce4-dev-tools

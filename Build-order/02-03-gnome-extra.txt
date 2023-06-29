@@ -4,7 +4,6 @@ atomix
 meld
 d-feet
 ghex
-chemical-mime-data
 gpx-viewer
 gwget
 pan

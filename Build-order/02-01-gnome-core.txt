@@ -55,6 +55,7 @@ metacity
 mousetweaks
 gnome-initial-setup
 gnome-software
+gnome-keyring
 orca
 seahorse
 sushi
