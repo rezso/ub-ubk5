@@ -20,7 +20,6 @@ rsync
 kernel
 cracklib
 pcre
-libeconf
 pam
 attr
 libcap
