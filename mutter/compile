@@ -3,4 +3,5 @@
 ub_compile \
 	-Dremote_desktop=true \
 	-Degl_device=true \
+	-Dwayland_eglstream=true \
 	-Dtests=false
