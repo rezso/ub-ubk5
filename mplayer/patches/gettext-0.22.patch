@@ -1,0 +1,13 @@
+diff -Naur a/help/help_create_po.pl b/help/help_create_po.pl
+--- a/help/help_create_po.pl	2021-03-04 15:43:07.000000000 +0100
++++ b/help/help_create_po.pl	2023-06-23 16:50:41.794844217 +0200
+@@ -56,6 +56,9 @@
+ open(po, "> $ARGV[1]") or die "Cannot open $ARGV[1]";
+ 
+ print po "# DO NOT EDIT - this file is generated from $ARGV[0]\n";
++print po "msgid \"\"\n";
++print po "msgstr \"\"\n";
++print po "\"Content-Type: text/plain; charset=UTF-8\"\n";
+ 
+ foreach my $id (keys %podefs)
+ {

@@ -1,0 +1,12 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2023-05-08 13:05:19.000000000 +0200
++++ b/CMakeLists.txt	2023-06-17 16:58:18.663729718 +0200
+@@ -525,7 +525,7 @@
+ file(RELATIVE_PATH PACKAGE_RELATIVE_PATH "${CMAKE_INSTALL_FULL_LIBDIR}/pkgconfig" "${CMAKE_INSTALL_PREFIX}")
+ string(REGEX REPLACE "/$" "" PACKAGE_RELATIVE_PATH "${PACKAGE_RELATIVE_PATH}")
+ 
+-set(prefix "\${pcfiledir}/${PACKAGE_RELATIVE_PATH}")
++set(prefix "${CMAKE_INSTALL_PREFIX}")
+ set(exec_prefix "\${prefix}")
+ set(libdir "\${prefix}/${CMAKE_INSTALL_LIBDIR}")
+ set(includedir "\${prefix}/${CMAKE_INSTALL_INCLUDEDIR}")
