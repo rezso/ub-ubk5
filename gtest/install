@@ -13,3 +13,5 @@ install -Dm 644 src/* -t "${UB_INSTALLDIR}/usr/src/gmock/src"
 install -Dm 644 CMakeLists.txt -t "${UB_INSTALLDIR}/usr/src/gmock"
 
 sed -i 's|src/||' "${UB_INSTALLDIR}/usr/src/gmock/src/gmock-all.cc"
+
+sed -i "s/Version:.*/Version: $UB_VERSION/" "${UB_INSTALLDIR}/usr/lib/pkgconfig/gtest.pc"

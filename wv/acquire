@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-wv-${UB_VERSION}.tar.gz wv-${UB_VERSION}/
-	https://www.abisource.com/downloads/wv/${UB_VERSION}/
+wv-${UB_VERSION//./-}.tar.gz wv-wv-${UB_VERSION//./-}/
+	https://github.com/AbiWord/wv/archive/refs/tags/

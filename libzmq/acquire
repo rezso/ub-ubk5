@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-v${UB_VERSION}.tar.gz libzmq-${UB_VERSION}/
-	https://github.com/zeromq/libzmq/archive/
+#v${UB_VERSION}.tar.gz libzmq-${UB_VERSION}/
+#	https://github.com/zeromq/libzmq/archive/
+
+${UB_VERSION}.tar.gz libzmq-eaaea73/
+    git+https://github.com/zeromq/libzmq.git@eaaea73

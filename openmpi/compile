@@ -4,6 +4,6 @@ ub_configure \
 	--sysconfdir=/etc/openmpi \
 	--libdir=/usr/lib/openmpi \
 	--enable-static \
-	FC=/usr/bin/gfortran
+	--enable-mpi=fortran=no
 
 ub_make
