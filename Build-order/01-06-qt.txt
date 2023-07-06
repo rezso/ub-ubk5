@@ -21,6 +21,7 @@ dav1d
 ffmpeg
 volume-key
 btrfs-progs
+libnvme
 libblockdev
 fuse2
 fuse-ntfs-3g

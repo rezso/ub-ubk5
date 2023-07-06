@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz libnvme-${UB_VERSION}/
+	https://github.com/linux-nvme/libnvme/archive/refs/tags/

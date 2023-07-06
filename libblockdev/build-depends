@@ -1,10 +1,12 @@
 btrfs-progs
 cryptsetup-dev
-dosfstools
+e2fsprogs-dev
 glib-dev
 gobject-introspection-dev
+keyutils-dev
 kmod-dev
 libbytesize-dev
+libnvme-dev
 libyaml-dev
 lvm-dev
 ndctl-dev
