@@ -1,6 +1,6 @@
-diff -urN tvtime-0.9.13.orig/docs/html/default.tvtime.xml tvtime-0.9.13/docs/html/default.tvtime.xml
---- tvtime-0.9.13.orig/docs/html/default.tvtime.xml	2004-08-27 03:14:21.000000000 +0200
-+++ tvtime-0.9.13/docs/html/default.tvtime.xml	2004-10-16 15:52:28.339245250 +0200
+diff -Naur a/docs/html/default.tvtime.xml b/docs/html/default.tvtime.xml
+--- a/docs/html/default.tvtime.xml	2005-09-08 06:06:57.000000000 +0200
++++ b/docs/html/default.tvtime.xml	2023-07-15 02:49:28.488773226 +0200
 @@ -41,7 +41,7 @@
         PAL-N
         PAL-60
@@ -19,8 +19,8 @@ diff -urN tvtime-0.9.13.orig/docs/html/default.tvtime.xml tvtime-0.9.13/docs/htm
  
    <!--
      There are two special NTSC cable standards in the US: IRC and HRC.
-@@ -217,7 +217,7 @@
-     applications, you can use this valume to have it always set to your
+@@ -225,7 +225,7 @@
+     applications, you can use this value to have it always set to your
      favorite volume.  Use -1 to have tvtime not touch the volume.
    -->
 -  <option name="AudioBoost" value="-1"/>

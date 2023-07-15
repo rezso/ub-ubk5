@@ -13,4 +13,9 @@ ub_compile \
     -DGTEST_ROOT=gtest
 
 cd gnucash-docs
-ub_compile
+ub_compile \
+	-DWITH_XDGHELP=ON \
+	-DWITH_HTML=OFF \
+	-DWITH_PDF=OFF \
+	-DWITH_EPUB=OFF \
+	-DWITH_CHM=OFF \
