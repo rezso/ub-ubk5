@@ -4,7 +4,6 @@ cbindgen
 dbus-glib-dev
 gtk3-dev
 hunspell-dev
-libnotify-dev
 libvpx-dev
 libx11-dev
 libxext-dev
@@ -18,7 +17,6 @@ nodejs
 nspr-dev
 nss-dev
 pulseaudio-dev
-python2
 rust
 sqlite-dev
 startup-notification-dev
