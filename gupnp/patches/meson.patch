@@ -1,0 +1,12 @@
+diff -Naur a/subprojects/gssdp-1.6.wrap b/subprojects/gssdp-1.6.wrap
+--- a/subprojects/gssdp-1.6.wrap	2023-07-01 17:39:34.000000000 +0200
++++ b/subprojects/gssdp-1.6.wrap	2023-07-23 19:03:50.812772533 +0200
+@@ -3,6 +3,6 @@
+ revision = master
+ depth = 1
+  
+-[provides]
+-dependency_name = gssdp-1.6
++[provide]
++dependency_names = gssdp-1.6
+ 

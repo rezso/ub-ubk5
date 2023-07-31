@@ -1,18 +1,6 @@
-diff -Naur a/man/CMakeLists.txt b/man/CMakeLists.txt
---- a/man/CMakeLists.txt	2023-02-06 20:55:26.000000000 +0100
-+++ b/man/CMakeLists.txt	2023-04-07 14:28:02.231203674 +0200
-@@ -18,7 +18,7 @@
- SET(MAN1_SERVER innochecksum.1 myisam_ftdump.1 myisamchk.1
-                 aria_chk.1 aria_dump_log.1 aria_ftdump.1 aria_pack.1 aria_read_log.1
-                 aria_s3_copy.1
--		myisamlog.1 myisampack.1 mysql.server.1 mariadb-conv.1
-+		myisamlog.1 myisampack.1 mariadb-conv.1
- 		mysql_fix_extensions.1
- 		mysql_install_db.1
- 		mysql_upgrade.1
 diff -Naur a/support-files/CMakeLists.txt b/support-files/CMakeLists.txt
---- a/support-files/CMakeLists.txt	2023-02-06 20:55:29.000000000 +0100
-+++ b/support-files/CMakeLists.txt	2023-04-07 14:29:54.867580739 +0200
+--- a/support-files/CMakeLists.txt	2023-06-05 19:36:18.000000000 +0200
++++ b/support-files/CMakeLists.txt	2023-07-18 11:42:52.171339087 +0200
 @@ -64,7 +64,7 @@
  
  IF(UNIX AND NOT WITHOUT_SERVER)
@@ -62,9 +50,8 @@ diff -Naur a/support-files/CMakeLists.txt b/support-files/CMakeLists.txt
    ELSE()
      SET(sysconf2dir "${sysconfdir}/mysql")
    ENDIF()
--  CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql.server.sh 
 +  IF(NOT HAVE_SYSTEMD)
-+  CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql.server.sh
+   CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/mysql.server.sh 
                   ${CMAKE_CURRENT_BINARY_DIR}/mysql.server @ONLY)
    INSTALL(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/mysql.server
      DESTINATION ${inst_location} COMPONENT SupportFiles)

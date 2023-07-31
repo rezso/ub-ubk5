@@ -11,6 +11,7 @@ mkdir build
 cd build
 ../bootstrap \
 	--system-libs \
+	--no-system-cppdap \
 	--no-system-jsoncpp \
 	--no-system-libuv \
 	--no-system-librhash \

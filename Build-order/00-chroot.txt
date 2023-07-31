@@ -60,7 +60,7 @@ perl-extutils-helpers
 perl-extutils-installpaths
 perl-module-build-tiny
 perl-xml-parser
-perl-gettext
+perl-locale-gettext
 perl-timedate
 perl-http-date
 perl-file-listing
@@ -322,8 +322,6 @@ pango
 libungif
 libwebp
 gdk-pixbuf
-jam
-argyllcms
 colord
 gtk3
 gtk2

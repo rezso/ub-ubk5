@@ -9,10 +9,8 @@ ico2xpm
 localepurge
 nrg2iso
 numdiff
-pv
 pwgen
 rand
-sgrep
 statifier
 supercat
 symlinks
@@ -62,7 +60,6 @@ fonts-terminus
 nfoview
 xorriso
 lshw
-launchy
 hardinfo
 catdoc
 xchm

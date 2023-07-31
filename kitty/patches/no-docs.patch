@@ -1,7 +1,7 @@
 diff -Nur orig/setup.py mod/setup.py
 --- orig/setup.py	2022-03-10 19:42:52.298752204 +0100
 +++ mod/setup.py	2022-03-10 19:47:02.707465940 +0100
-@@ -943,11 +943,6 @@
+@@ -1000,11 +1000,6 @@
  
  
  def create_linux_bundle_gunk(ddir: str, libdir_name: str) -> None:

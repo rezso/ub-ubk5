@@ -1,0 +1,22 @@
+diff -Naur a/skia/ext/skcolorspace_trfn.cc b/skia/ext/skcolorspace_trfn.cc
+--- a/skia/ext/skcolorspace_trfn.cc	2023-07-25 20:44:58.361745000 +0200
++++ b/skia/ext/skcolorspace_trfn.cc	2023-07-28 18:53:41.381393331 +0200
+@@ -4,6 +4,8 @@
+ 
+ #include "skia/ext/skcolorspace_trfn.h"
+ 
++#include <cmath>
++
+ namespace skia {
+ 
+ namespace {
+diff -Naur a/net/cert/pki/verify_name_match.h b/net/cert/pki/verify_name_match.h
+--- a/net/cert/pki/verify_name_match.h
++++ b/net/cert/pki/verify_name_match.h
+@@ -6,6 +6,7 @@
+ #define NET_CERT_PKI_VERIFY_NAME_MATCH_H_
+ 
+ #include <string>
++#include <vector>
+ 
+ #include "net/base/net_export.h"

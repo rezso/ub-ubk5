@@ -8,3 +8,4 @@ libarchive-dev
 libtiff-dev
 poppler-glib-dev
 vim
+webp-pixbuf-loader

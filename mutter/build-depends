@@ -18,7 +18,7 @@ libseccomp-dev
 libsm-dev
 libxkbfile-dev
 libxtst-dev
-meson
+mesa-dev
 pango-dev
 pipewire-dev
 startup-notification-dev

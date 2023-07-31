@@ -20,7 +20,7 @@ krb5-dev
 libcanberra-dev
 libgudev-dev
 libxkbfile-dev
-meson
+mesa-dev
 mutter-dev
 networkmanager-dev
 polkit-dev

@@ -85,8 +85,6 @@ libtheora
 gst-plugins-base
 ldb
 samba
-python3-pygobject
-python3-numpy
 ladspa
 aom
 enca
@@ -156,8 +154,6 @@ dnsmasq
 libgtop2
 libmediaart
 libgadu
-libgit2
-libgit2-glib
 libdbusmenu-gtk3
 sound-theme-freedesktop
 libcanberra

@@ -16,7 +16,6 @@ qemacs
 yudit
 efte
 texstudio
-scite
 lyx
 texmaker
 xpad

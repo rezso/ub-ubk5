@@ -1,6 +1,6 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
 --- a/pyproject.toml	2020-02-02 01:00:00.000000000 +0100
-+++ b/pyproject.toml	2022-09-26 01:20:22.672367854 +0200
++++ b/pyproject.toml	2023-07-21 19:23:37.220151286 +0200
 @@ -1,5 +1,5 @@
  [build-system]
 -requires = ["hatchling", "hatch-vcs", "hatch-fancy-pypi-readme"]
@@ -8,16 +8,19 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  build-backend = "hatchling.build"
  
  [tool.hatch.version]
-@@ -29,7 +29,7 @@
+@@ -27,10 +27,8 @@
+   "Programming Language :: Python :: 3.11",
    "Programming Language :: Python :: Implementation :: CPython",
    "Programming Language :: Python :: Implementation :: PyPy",
+-  "Topic :: File Formats :: JSON",
+-  "Topic :: File Formats :: JSON :: JSON Schema",
  ]
 -dynamic = ["version", "readme"]
 +dynamic = ["version"]
  
  dependencies = [
-   "attrs>=17.4.0",
-@@ -76,30 +76,6 @@
+   "attrs>=22.2.0",
+@@ -76,30 +74,6 @@
  Changelog = "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst"
  Source = "https://github.com/python-jsonschema/jsonschema"
  
@@ -45,6 +48,6 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -path = "CHANGELOG.rst"
 -pattern = "(^v.+?)\nv"
 -
- [tool.isort]
- from_first = true
- include_trailing_comma = true
+ [tool.coverage.html]
+ show_contexts = true
+ skip_covered = false

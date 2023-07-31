@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-cd src
-rm -f CMakeLists.txt
-qmake src.pro
-ub_compile
