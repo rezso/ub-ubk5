@@ -21,7 +21,7 @@ diff -Nur orig/data/config/standard/e.src mod/data/config/standard/e.src
      value "window_placement_policy" int: 0;
      value "window_grouping" int: 0;
      value "focus_policy" int: 2;
-@@ -1044,7 +1044,7 @@
+@@ -1046,7 +1046,7 @@
          }
          group "E_Config_Module" struct {
              value "name" string: "connman";

@@ -2,6 +2,7 @@ alsa-lib-dev
 audiofile-dev
 esound-dev
 jack-dev
+libglvnd-dev
 libunwind-dev
 libusb-compat-dev
 libusb-dev
@@ -11,7 +12,6 @@ libxkbcommon-dev
 libxrandr-dev
 libxscrnsaver-dev
 libxt-dev
-mesa-dev
 pulseaudio-dev
 tslib-dev
 wayland-dev

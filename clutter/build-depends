@@ -3,9 +3,9 @@ gobject-introspection-dev
 gtk3-dev
 json-glib-dev
 libffi-dev
+libglvnd-dev
 libgudev-dev
 libinput-dev
 libxi-dev
-mesa-dev
 pango-dev
 wayland-dev

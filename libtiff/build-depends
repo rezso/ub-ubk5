@@ -1,8 +1,8 @@
+freeglut-dev
 glu-dev
 libice-dev
 libjpeg-turbo-dev
 libwebp-dev
 libx11-dev
 libxext-dev
-mesa-dev
 zstd-dev
