@@ -12,7 +12,6 @@ spice-gtk
 appstream-glib
 libsoup
 libsoup3
-libchamplain
 libosinfo
 osinfo-db-tools
 gst-plugins-good

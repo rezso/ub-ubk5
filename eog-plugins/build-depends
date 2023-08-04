@@ -2,7 +2,6 @@ dbus-dev
 eog-dev
 gsettings-desktop-schemas
 intltool
-libchamplain-dev
 libexif-dev
 liboauth-dev
 libpeas-dev

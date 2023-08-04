@@ -1,5 +1,7 @@
 #!/bin/sh -eux
 
+export LDFLAGS=-lX11
 ub_compile \
-	-Dlibchamplain=true \
+	-Dclutter=false \
+	-Dlibchamplain=false \
 	-Dwebservices=false
