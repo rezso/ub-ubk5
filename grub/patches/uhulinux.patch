@@ -1,6 +1,6 @@
 diff -Naur a/grub/util/grub.d/10_linux.in b/grub/util/grub.d/10_linux.in
---- a/grub/util/grub.d/10_linux.in	2023-05-07 18:24:17.000000000 +0200
-+++ b/grub/util/grub.d/10_linux.in	2023-05-08 20:09:24.109451756 +0200
+--- a/grub/util/grub.d/10_linux.in	2023-07-19 00:44:41.000000000 +0200
++++ b/grub/util/grub.d/10_linux.in	2023-08-06 20:14:33.299383563 +0200
 @@ -31,7 +31,7 @@
  if [ "x${GRUB_DISTRIBUTOR}" = "x" ] ; then
    OS=GNU/Linux
@@ -50,16 +50,13 @@ diff -Naur a/grub/util/grub.d/10_linux.in b/grub/util/grub.d/10_linux.in
                    if grub_file_is_not_garbage "$i" ; then list="$list $i" ; fi
  	done ;;
  esac
-@@ -299,6 +303,12 @@
+@@ -299,6 +303,9 @@
  
    linux_entry "${OS}" "${version}" advanced \
                "${GRUB_CMDLINE_LINUX} ${GRUB_CMDLINE_LINUX_DEFAULT}"
 +  # nomodeset mód
 +  linux_entry "${OS}" "${version}" nomodeset \
 +                "nomodeset ${GRUB_CMDLINE_LINUX}"
-+  # intel-nomodeset mód
-+  linux_entry "${OS}" "${version}" intel-nomodeset \
-+                "i915.modeset=0 ${GRUB_CMDLINE_LINUX}"
    if [ "x${GRUB_DISABLE_RECOVERY}" != "xtrue" ]; then
      linux_entry "${OS}" "${version}" recovery \
                  "${GRUB_CMDLINE_LINUX_RECOVERY} ${GRUB_CMDLINE_LINUX}"
