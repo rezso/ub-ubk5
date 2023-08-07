@@ -23,7 +23,5 @@ libxkbcommon-dev
 libxrandr-dev
 libxslt-dev
 pango-dev
-vulkan-headers
-vulkan-loader-dev
 wayland-dev
 wayland-protocols

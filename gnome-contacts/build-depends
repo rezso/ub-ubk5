@@ -13,7 +13,6 @@ intltool
 itstool
 libadwaita-dev
 libcap-dev
-libchamplain-dev
 libgudev-dev
 libnotify-dev
 libportal-dev

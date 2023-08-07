@@ -1,13 +1,14 @@
 #!/bin/sh -eux
 
-# rm -f subprojects/{gtk-doc,libsass,sassc}.wrap
+# vulkan: requires glslang
+
 rm -f subprojects/gtk-doc.wrap
 
 ub_compile \
     -Dx11-backend=true \
 	-Dwayland-backend=true \
 	-Dbroadway-backend=false \
-	-Dvulkan=enabled \
+	-Dvulkan=disabled \
 	-Dmedia-ffmpeg=disabled \
 	-Dmedia-gstreamer=disabled \
 	-Dgtk_doc=false \
