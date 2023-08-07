@@ -27,7 +27,5 @@ openal-dev
 pulseaudio-dev
 samba-dev
 uchardet-dev
-vulkan-headers
-vulkan-loader-dev
 wayland-dev
 wayland-protocols

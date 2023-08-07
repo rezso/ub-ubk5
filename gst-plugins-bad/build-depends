@@ -49,8 +49,6 @@ sbc-dev
 soundtouch-dev
 srt-dev
 valgrind-dev
-vulkan-headers
-vulkan-loader-dev
 wayland-dev
 wildmidi-dev
 x264-dev

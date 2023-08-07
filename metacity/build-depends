@@ -10,7 +10,5 @@ libxpresent-dev
 libxres-dev
 startup-notification-dev
 tdb-dev
-vulkan-headers
-vulkan-loader-dev
 xcb-util-dev
 zenity

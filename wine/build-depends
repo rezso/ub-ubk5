@@ -38,4 +38,3 @@ pulseaudio-dev
 sane-backends-dev
 unixodbc-dev
 valgrind
-vulkan-loader-dev

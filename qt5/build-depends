@@ -33,7 +33,6 @@ re2c
 sqlite-dev
 systemd-dev
 tslib-dev
-vulkan-headers
 wayland-dev
 xcb-util-dev
 xcb-util-image-dev

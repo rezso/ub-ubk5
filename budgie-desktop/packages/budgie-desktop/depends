@@ -2,6 +2,6 @@ budgie-control-center
 budgie-screensaver
 gnome-session
 gnome-settings-daemon
-gnome-themes-standard
+gnome-themes-extra
 nm-applet
 zenity
