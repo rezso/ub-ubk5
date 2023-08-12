@@ -10,5 +10,4 @@ portaudio-dev
 pulseaudio-dev
 qt5-dev
 sdl-dev
-sdl-sound-dev
 xcb-util-dev
