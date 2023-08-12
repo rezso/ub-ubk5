@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-SDL2_image-${UB_VERSION}.tar.gz SDL2_image-${UB_VERSION}/
-	https://www.libsdl.org/projects/SDL_image/release/
+release-${UB_VERSION}.tar.gz SDL2_image-release-${UB_VERSION}/
+	https://github.com/libsdl-org/SDL_image/archive/refs/tags/

@@ -47,7 +47,6 @@ popt-dev
 portaudio-dev
 qt5-dev
 samba-dev
-sdl-image-dev
 speexdsp-dev
 taglib-dev
 vcdimager-dev

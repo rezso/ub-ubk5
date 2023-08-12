@@ -1,8 +1,11 @@
 alsa-lib-dev
-glu-dev
+fluidsynth-dev
 libglvnd-dev
+libjpeg-turbo-dev
 libpng-dev
-libx11-dev
-sdl-dev
-sdl-net-dev
-sdl-sound-dev
+libxi-dev
+opusfile-dev
+sdl2-dev
+sdl2-image-dev
+sdl2-net-dev
+speexdsp-dev

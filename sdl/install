@@ -1,3 +1,5 @@
 #!/bin/sh -eux
 
 ub_install
+
+ln -s sdl12_compat.pc ${UB_INSTALLDIR}/usr/lib/pkgconfig/sdl.pc

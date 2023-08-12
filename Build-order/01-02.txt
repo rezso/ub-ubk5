@@ -80,6 +80,7 @@ portaudio
 sbc
 lirc
 pulseaudio
+sdl2
 sdl
 libtheora
 gst-plugins-base
@@ -115,7 +116,6 @@ zvbi
 libbluray
 libofa
 aalib
-sdl2
 fluidsynth
 libass
 libdc1394
