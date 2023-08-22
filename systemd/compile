@@ -4,10 +4,15 @@
 # microhttpd: systemd-jornal-{gateway,remote}
 # libcurl: systemd-jornal-upload
 # -Ddefault-dnssec=no: a dnssec experimental
+# -Ddefault-timeout-sec=45 \
+# -Ddefault-user-timeout-sec=45 \
 
 ub_compile \
     -Dmode=release \
    	-Dsplit-usr=false \
+   	-Dinitrd=true \
+   	-Dstandalone-binaries=true \
+   	-Ddefault-kill-user-processes=false \
 	-Dpamlibdir=/usr/lib/security \
 	-Ddefault-dnssec=no \
 	-Dlink-udev-shared=true \
