@@ -11,4 +11,5 @@ kmailtransport-dev
 kmime-dev
 kpimtextedit-dev
 libical-dev
+messagelib-dev
 qt5-dev
