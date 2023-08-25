@@ -1,4 +1,3 @@
-dbus-glib-dev
 exempi-dev
 gobject-introspection-dev
 gtk3-dev
@@ -8,9 +7,8 @@ libexif-dev
 libjpeg-turbo-dev
 libpeas-dev
 librsvg-dev
-libsm-dev
+libxml2-dev
 mate-desktop-dev
 mate-icon-theme
 util-linux-dev
-xcb-util-dev
 yelp-tools
