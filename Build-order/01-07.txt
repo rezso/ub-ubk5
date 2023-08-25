@@ -53,7 +53,6 @@ xdialog
 xdm
 fonts-unicode
 lndir
-makedepend
 mdadm
 squashfs-tools
 reiser4progs
