@@ -1,4 +1,6 @@
 avahi-dev
+gtk3-dev
+gtk3-layer-shell-dev
 inkscape
 itstool
 libcanberra-dev
