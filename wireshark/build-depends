@@ -2,10 +2,12 @@ brotli-dev
 c-ares-dev
 db4-dev
 geoip-dev
+glib-dev
 gnutls-dev
 krb5-dev
 libcap-dev
 libgcrypt-dev
+libglvnd-dev
 liblz4-dev
 libnl-dev
 libpcap-dev
@@ -16,6 +18,7 @@ openssl-dev
 pcre2-dev
 portaudio-dev
 python3-dev
-qt5-dev
+qt6-dev
 sbc-dev
+speexdsp-dev
 zstd-dev
