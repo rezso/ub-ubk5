@@ -2,12 +2,10 @@ brotli-dev
 c-ares-dev
 db4-dev
 geoip-dev
-glib-dev
 gnutls-dev
 krb5-dev
 libcap-dev
 libgcrypt-dev
-libglvnd-dev
 liblz4-dev
 libnl-dev
 libpcap-dev
