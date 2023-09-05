@@ -73,7 +73,7 @@ diff -Nur orig/util/startfluxbox.in mod/util/startfluxbox.in
 +#wmsmixer -w &
 +
 +# ha a megjelenített háttér nem megfelelő
-+#feh --bg-scale ~/.fluxbox/backgrounds/ubk4.png &
++#feh --bg-scale ~/.fluxbox/backgrounds/ubk5-blue-g1b0539aad.png &
  
  # And last but not least we start fluxbox.
  # Because it is the last app you have to run it with ''exec'' before it.

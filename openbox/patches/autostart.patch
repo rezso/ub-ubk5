@@ -25,7 +25,7 @@ diff -Nur orig/data/autostart/autostart.in mod/data/autostart/autostart.in
 +#tint2 &
 +
 +# háttérképek
-+#feh --bg-scale /usr/share/backgrounds/UHU/ubk4.png
++#feh --bg-scale /usr/share/backgrounds/UHU/ubk5-blue-g1b0539aad.png
 +
 +# képernyővédő
 +#xscreensaver &

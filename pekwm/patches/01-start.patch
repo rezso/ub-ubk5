@@ -7,7 +7,7 @@ diff -Nur orig/data/start mod/data/start
  # wasn't one, and I wanted to avoid that for pekwm. ;) --eyez
 +
 +#háttérkép
-+#pekwm_bg Image /usr/share/backgrounds/UHU/ubk4.png#scaled &
++#pekwm_bg Image /usr/share/backgrounds/UHU/ubk5-blue-g1b0539aad.png#scaled &
 +
 +#polkit ügynökök, ki kell választani egyet.
 +#/usr/libexec/lxpolkit
@@ -44,7 +44,7 @@ diff -Nur orig/data/start mod/data/start
 +#wmsmixer -w &
 +
 +# háttérkép
-+#pekwm_bg Image /usr/share/backgrounds/UHU/ubk4.png#scaled &
++#pekwm_bg Image /usr/share/backgrounds/UHU/ubk5-blue-g1b0539aad.png#scaled &
 +
 +# ha a megjelenített háttér nem megfelelő
-+#feh --bg-scale ~/usr/share/backgrounds/UHU/ubk4.png &
++#feh --bg-scale ~/usr/share/backgrounds/UHU/ubk5-blue-g1b0539aad.png &

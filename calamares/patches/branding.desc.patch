@@ -19,14 +19,14 @@ diff -Nur orig/src/branding/default/branding.desc mod/src/branding/default/brand
 -    donateUrl:           https://kde.org/community/donations/index.php
 +    productName:         UHU-Linux
 +    shortProductName:    UHU-Linux
-+    version:             UBK4 (PAFF)
-+    shortVersion:        UBK4
-+    versionedName:       UHU-Linux UBK4 (PAFF)
-+    shortVersionedName:  UHU-Linux UBK4
++    version:             UBK5 (NG)
++    shortVersion:        UBK5
++    versionedName:       UHU-Linux UBK5 (NG)
++    shortVersionedName:  UHU-Linux UBK5
 +    bootloaderEntryName: UHU-Linux
 +    productUrl:          https://ubk.hu/
-+    supportUrl:          https://github.com/uhulinux/ub-ubk4/issues
-+    knownIssuesUrl:      https://github.com/uhulinux/ub-ubk4/issues
++    supportUrl:          https://github.com/uhulinux/ub-ubk5/issues
++    knownIssuesUrl:      https://github.com/uhulinux/ub-ubk5/issues
  
  # These images are loaded from the branding module directory.
  #
