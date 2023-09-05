@@ -59,6 +59,7 @@ usb-modeswitch-data
 usb-modeswitch
 clamav
 qlam
+pinentry-qt
 inxi
 tlp
 neofetch
