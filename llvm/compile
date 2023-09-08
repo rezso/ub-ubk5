@@ -3,7 +3,8 @@
 # ha BUILD_SHARED_LIBS=ON:
 # LLVM_BUILD_LLVM_DYLIB=OFF / LLVM_LINK_LLVM_DYLIB=OFF
 # másképp nem működik
-triple=$(gcc -dumpmachine)
+# triple=$(gcc -dumpmachine)
+triple="x86_64-unknown-linux-gnu" # gcc, rust
 
 cd llvm
 ub_compile \

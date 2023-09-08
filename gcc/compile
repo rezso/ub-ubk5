@@ -5,11 +5,15 @@
 cd "$UB_OBJECTDIR"
 
 OPT_FLAGS="-m64 -O2 -mtune=generic"
+triple="x86_64-unknown-linux-gnu" # LLVM, rust
 
 export CFLAGS="$OPT_FLAGS"
 export CXXFLAGS="$OPT_FLAGS"
 
 "$UB_COMPILEDIR"/configure \
+    --host=$triple \
+    --build=$triple \
+    --target=$triple \
 	--prefix=/usr \
 	--infodir=/usr/share/info \
 	--mandir=/usr/share/man \
