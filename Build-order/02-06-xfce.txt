@@ -6,6 +6,7 @@ garcon
 libexo
 xfce4-panel
 thunar
+xfce4-polkit
 xfce4-settings
 xfce4-session
 xfdesktop
