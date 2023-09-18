@@ -1,1 +1,3 @@
 gnome-settings-daemon >=
+setxkbmap
+tecla

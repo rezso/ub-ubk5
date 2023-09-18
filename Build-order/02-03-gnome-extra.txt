@@ -21,4 +21,5 @@ rhythmbox
 evolution-ews
 gnome-extra
 gnome
+metacity
 gnome-flashback

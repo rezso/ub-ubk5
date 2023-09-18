@@ -1,6 +1,6 @@
-diff -Naur orig/schemas/org.gnome.desktop.input-sources.gschema.xml.in mod/schemas/org.gnome.desktop.input-sources.gschema.xml.in
---- orig/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2015-05-23 02:38:48.000000000 +0200
-+++ mod/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2016-01-30 11:40:07.169153189 +0100
+diff -Naur a/schemas/org.gnome.desktop.input-sources.gschema.xml.in b/schemas/org.gnome.desktop.input-sources.gschema.xml.in
+--- a/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2023-09-16 18:49:23.000000000 +0200
++++ b/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2023-09-18 12:07:23.828996241 +0200
 @@ -15,7 +15,7 @@
        </description>
      </key>

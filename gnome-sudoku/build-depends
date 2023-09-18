@@ -1,7 +1,8 @@
-gtk3-dev
+gtk4-dev
 intltool
 itstool
 json-glib-dev
+libadwaita-dev
 libgee-dev
 libxml2-dev
 meson

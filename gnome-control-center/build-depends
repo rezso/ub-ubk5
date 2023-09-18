@@ -20,7 +20,7 @@ gsettings-desktop-schemas
 gsound-dev
 gst-plugins-bad-dev
 gst-plugins-base-dev
-gtk3-dev
+gtk4-dev
 ibus-dev
 intltool
 iso-codes
@@ -52,8 +52,10 @@ p11-kit-dev
 polkit-dev
 pulseaudio-dev
 samba-dev
+setxkbmap
 startup-notification-dev
 systemd-dev
+tecla
 telepathy-glib-dev
 tzdata
 udisks2-dev

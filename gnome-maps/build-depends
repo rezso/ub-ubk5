@@ -6,5 +6,6 @@ itstool
 libadwaita-dev
 libgweather-dev
 libhandy-dev
+libportal-dev
 libshumate-dev
 rest-dev
