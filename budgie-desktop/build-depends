@@ -15,8 +15,8 @@ libnotify-dev
 libpeas-dev
 libwnck-dev
 libxkbfile-dev
+magpie-dev
 meson
-mutter-dev
 polkit-dev
 pulseaudio-dev
 sassc
