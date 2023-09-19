@@ -1,6 +1,3 @@
-geany
-ctpl
-geany-plugins
 diffstat
 dpkg-repack
 patchutils

@@ -12,7 +12,6 @@ cdparanoia
 chmlib
 chrpath
 cldr-emoji-annotation
-clucene-core
 cmark
 cppunit
 cron
@@ -110,7 +109,6 @@ recode
 rinutils
 rpcsvc-proto
 sg3-utils
-silc-toolkit
 smartmontools
 soundtouch
 taglib

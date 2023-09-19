@@ -145,7 +145,6 @@ libopusenc
 libept
 libgee
 libindicator3
-libmikmod
 liblangtag
 liblensfun
 startup-notification
@@ -153,7 +152,6 @@ libmicrohttpd
 dnsmasq
 libgtop2
 libmediaart
-libgadu
 libdbusmenu-gtk3
 sound-theme-freedesktop
 libcanberra

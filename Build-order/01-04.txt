@@ -44,7 +44,6 @@ exempi
 gtk2-engines
 xmessage
 gstreamermm
-gtkspell2
 opusfile
 xdg-user-dirs
 xmlrpc-c
@@ -86,7 +85,6 @@ gexiv2
 gspell
 polkit-gnome
 rasqal
-redland
 gucharmap
 zeitgeist
 gtk-vnc

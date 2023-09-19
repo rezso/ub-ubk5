@@ -31,8 +31,6 @@ deluge
 stunnel
 gftp
 mtr
-pidgin-libnotify
-skype4pidgin
 gufw
 qbittorrent
 fwbuilder

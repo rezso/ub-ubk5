@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-gedit-${UB_VERSION}.tar.xz gedit-${UB_VERSION}/
-	https://download.gnome.org/sources/gedit/${UB_VERSION_HEAD1}/

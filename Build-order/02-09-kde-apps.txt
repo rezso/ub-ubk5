@@ -43,8 +43,6 @@ perl-moo
 perl-path-tiny
 perl-appconfig
 perl-template-toolkit
-black-hole-solver
-freecell-solver
 kdegames
 falkon
 calligra
