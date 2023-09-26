@@ -40,7 +40,6 @@ libgit2-glib
 gitg
 brasero
 libgda
-gst-editing-services
 rygel
 gegl
 evolution

@@ -81,7 +81,6 @@ testdisk
 lesspipe
 easystroke
 mugshot
-krb5-auth-dialog
 mailutils
 fbreader
 redshift

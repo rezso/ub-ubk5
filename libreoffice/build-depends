@@ -26,7 +26,6 @@ ki18n-dev
 kio-dev
 kwindowsystem-dev
 lcms2-dev
-libecpg-dev
 libetonyek-dev
 libjpeg-turbo-dev
 libodfgen-dev

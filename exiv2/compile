@@ -1,3 +1,6 @@
 #!/bin/sh -eux
 
-ub_compile
+ub_compile \
+    -DEXIV2_ENABLE_NLS=ON \
+    -DEXIV2_ENABLE_VIDEO=ON \
+    -DEXIV2_BUILD_SAMPLES=OFF \

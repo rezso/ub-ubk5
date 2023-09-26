@@ -75,7 +75,6 @@ ccache --max-size=12G
     --enable-avahi \
     --enable-fetch-external \
     --enable-gstreamer-1-0 \
-    --enable-postgresql-sdbc \
     --enable-python \
     --enable-ext-nlpsolver \
     --enable-gio \

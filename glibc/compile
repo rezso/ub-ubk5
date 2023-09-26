@@ -18,6 +18,7 @@ UB_CONFIGURE_DIR="$UB_COMPILEDIR" ub_configure \
 	--disable-profile \
 	--enable-lock-elision \
 	--enable-stack-protector=strong \
+	--enable-crypt \
 	libc_cv_slibdir=/usr/lib \
 	libc_cv_rtlddir=/usr/lib
 

@@ -3,10 +3,7 @@ enchant-dev
 geoclue-dev
 gobject-introspection-dev
 gperf
-gst-libav
-gst-plugins-bad-dev
-gst-plugins-base-dev
-gst-plugins-good
+gstreamer-dev
 gtk3-dev
 hyphen-dev
 icu-dev

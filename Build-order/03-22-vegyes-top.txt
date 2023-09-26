@@ -2,7 +2,6 @@ funny-manpages
 aspell-dict-english
 aspell-dict-german
 aspell-dict-hungarian
-postgresql-odbc
 media-player-info
 lightdm-gtk-greeter-settings
 sddm-config-editor

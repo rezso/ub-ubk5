@@ -113,7 +113,6 @@ sed
 tar
 tcl
 texinfo
-uni2ascii
 unzip
 which
 zip
@@ -176,15 +175,12 @@ git
 lcms2
 xmlto
 opensp
-openjade
-linuxdoc-tools
 talloc
 dbus
 glib
 dbus-glib
 krb5
 openldap
-postgresql
 cyrus-sasl2
 triehash
 xxhash
@@ -361,8 +357,6 @@ rrdtool
 lmsensors
 libva
 libglvnd
-vulkan-headers
-vulkan-loader
 glslang
 python3-six
 python3-beaker

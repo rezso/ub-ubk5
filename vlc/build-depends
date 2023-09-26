@@ -4,7 +4,7 @@ faad2
 ffmpeg-dev
 flac-dev
 fluidsynth-dev
-gst-plugins-base-dev
+gstreamer-dev
 lame
 liba52-dev
 libarchive-dev

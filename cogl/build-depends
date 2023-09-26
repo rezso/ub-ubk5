@@ -2,6 +2,7 @@ egl-wayland-dev
 gdk-pixbuf-dev
 glib-dev
 gobject-introspection-dev
+libglvnd-dev
 libxcomposite-dev
 libxdamage-dev
 libxrandr-dev

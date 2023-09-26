@@ -1,7 +1,5 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--with-optimization=0 \
-	--enable-gapless \
 	--enable-int-quality \
-	--with-audio="alsa oss sdl jack pulse portaudio"
+	--with-audio="alsa jack pulse"

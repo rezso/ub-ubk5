@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-xcb-proto-${UB_VERSION}.tar.gz xcb-proto-${UB_VERSION}/
-    https://xcb.freedesktop.org/dist/
+xcbproto-xcb-proto-${UB_VERSION}.tar.gz xcbproto-xcb-proto-${UB_VERSION}/
+    https://gitlab.freedesktop.org/xorg/proto/xcbproto/-/archive/xcb-proto-${UB_VERSION}/

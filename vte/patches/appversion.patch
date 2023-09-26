@@ -1,6 +1,6 @@
-diff -Naur orig/src/app/meson.build patched/src/app/meson.build
---- orig/src/app/meson.build	2021-09-22 18:41:17.000000000 +0200
-+++ patched/src/app/meson.build	2021-09-23 01:11:47.285505901 +0200
+diff -Naur a/src/app/meson.build b/src/app/meson.build
+--- a/src/app/meson.build	2023-09-12 23:06:50.000000000 +0200
++++ b/src/app/meson.build	2023-09-24 00:51:39.054923471 +0200
 @@ -48,7 +48,7 @@
    app_gtk3_deps = app_common_deps + [libvte_gtk3_dep]
  
@@ -10,3 +10,12 @@ diff -Naur orig/src/app/meson.build patched/src/app/meson.build
      app_gtk3_sources,
      dependencies: app_gtk3_deps,
      cpp_args: app_gtk3_cppflags,
+@@ -77,7 +77,7 @@
+   app_gtk4_deps = app_common_deps + [libvte_gtk4_dep]
+ 
+   app_gtk4 = executable(
+-    'vte-' + vte_api_version + '-gtk4',
++    'vte-gtk4',
+     app_gtk4_sources,
+     dependencies: app_gtk4_deps,
+     cpp_args: app_gtk4_cppflags,

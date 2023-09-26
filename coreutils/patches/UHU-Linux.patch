@@ -1,0 +1,12 @@
+diff -Naur a/configure b/configure
+--- a/configure	2023-08-29 15:37:00.000000000 +0200
++++ b/configure	2023-09-21 14:15:52.489697687 +0200
+@@ -54580,7 +54580,7 @@
+        mint*)           os='MiNT';;
+        mingw* | windows*) os='MinGW';;
+        lynxos*)         os='LynxOS';;
+-       linux*)          os='GNU/Linux';;
++       linux*)          os='UHU-Linux';;
+        hpux*)           os='HP-UX';;
+        hiux*)           os='HI-UX';;
+        gnu*)            os='GNU';;

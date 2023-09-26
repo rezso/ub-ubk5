@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-release-${UB_VERSION}.tar.gz SDL2_mixer-release-${UB_VERSION}/
+release-${UB_VERSION}.tar.gz SDL_mixer-release-${UB_VERSION}/
 	https://github.com/libsdl-org/SDL_mixer/archive/refs/tags/

@@ -1,5 +1,5 @@
 clutter-dev
 gobject-introspection-dev
-gst-plugins-base-dev
+gstreamer-dev
 libgudev-dev
 wayland-dev

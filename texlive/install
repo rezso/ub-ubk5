@@ -23,3 +23,8 @@ rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/scripts/pythontex/depythontex2.py
 rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/source/fonts/gentium-tug/type1/ff-gentium.pe
 # lua
 rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/tex/lualatex/bezierplot/bezierplot.lua
+rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/tex/latex/greek-fontenc/lgr2licr.lua
+# snobol4
+rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/scripts/texaccents/texaccents.sno
+# ruby
+rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/source/fonts/japanese-otf/script/otf-hangul.rb

@@ -1,6 +1,6 @@
 diff -Naur a/po/hu.po b/po/hu.po
 --- a/po/hu.po	1970-01-01 01:00:00.000000000 +0100
-+++ b/po/hu.po	2023-05-09 19:42:05.125938857 +0200
++++ b/po/hu.po	2023-09-23 22:47:42.832153369 +0200
 @@ -0,0 +1,1541 @@
 +# SOME DESCRIPTIVE TITLE.
 +# Copyright (C) YEAR The ALSA Team
@@ -1544,8 +1544,8 @@ diff -Naur a/po/hu.po b/po/hu.po
 +msgid "Time per period = %lf\n"
 +msgstr ""
 diff -Naur a/po/LINGUAS b/po/LINGUAS
---- a/po/LINGUAS	2023-05-04 09:16:17.000000000 +0200
-+++ b/po/LINGUAS	2023-05-09 19:41:09.525775068 +0200
+--- a/po/LINGUAS	2023-09-01 17:36:26.000000000 +0200
++++ b/po/LINGUAS	2023-09-23 22:48:30.252335534 +0200
 @@ -1 +1 @@
--de eu fr ja ka sk
-+de eu fr hu ja ka sk
+-de eu fr ja ka ko sk
++de eu fr hu ja ka ko sk

@@ -8,6 +8,5 @@ export CFLAGS="-I${UB_INSTALLDIR}/usr/include"
 cd drivers
 ub_compile \
 	--with-dbi-libdir=${UB_INSTALLDIR}/usr/lib \
-	--with-mysql \
 	--with-sqlite3 \
 	--disable-docs

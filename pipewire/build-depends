@@ -1,7 +1,7 @@
 bluez-dev
 dbus-dev
 ffmpeg-dev
-gst-plugins-base-dev
+gstreamer-dev
 jack-dev
 libv4l-dev
 meson

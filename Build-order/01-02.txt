@@ -83,7 +83,6 @@ pulseaudio
 sdl2
 sdl
 libtheora
-gst-plugins-base
 ldb
 samba
 ladspa
@@ -134,7 +133,6 @@ cogl
 libwmf
 clutter
 parted
-gst-plugins-ugly
 man-db
 fltk
 openexr

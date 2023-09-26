@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-cd contrib
-ub_install
-cd ..

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-gst-plugins-base-${UB_VERSION}.tar.xz gst-plugins-base-${UB_VERSION}/
-	https://gstreamer.freedesktop.org/src/gst-plugins-base/

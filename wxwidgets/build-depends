@@ -1,6 +1,6 @@
 curl-dev
 glu-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtk3-dev
 libglvnd-dev
 libjpeg-turbo-dev

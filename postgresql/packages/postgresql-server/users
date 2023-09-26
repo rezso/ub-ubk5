@@ -1,1 +1,0 @@
-postgres   31   31  -d /var/lib/postgres -s /bin/sh

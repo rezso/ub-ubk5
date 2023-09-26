@@ -1,8 +1,14 @@
 #!/bin/sh -eux
 
 ub_compile \
-	-Dptp-helper-permissions=capabilities \
-	-Ddbghelp=disabled \
-	-Dgobject-cast-checks=disabled \
-	-Dglib-asserts=disabled \
-	-Dglib-checks=disabled
+    -Dpython=enabled \
+    -Ddevtools=disabled \
+    -Dvaapi=disabled \
+    -Dsharp=disabled \
+    -Dgst-examples=disabled \
+    -Drs=disabled \
+    -Dlibnice=disabled \
+    -Dtls=disabled \
+    -Dorc-source=system \
+    -Dtests=disabled \
+    -Dexamples=disabled

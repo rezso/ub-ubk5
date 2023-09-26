@@ -76,7 +76,6 @@ python3-pycurl
 python3-pyicu
 python3-pysmbc
 python3-pytz
-python3-gst
 python3-pillow
 python3-pyalsa
 python3-iniconfig

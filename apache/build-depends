@@ -4,4 +4,3 @@ expat-dev
 libxml2-dev
 openssl-dev
 pcre2-dev
-uni2ascii

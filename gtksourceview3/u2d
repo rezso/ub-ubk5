@@ -1,3 +1,0 @@
-ver="$(urllist "https://download.gnome.org/sources/gtksourceview/" | grep -E '^3+\.[02468]*['02468'](\.[0-9.])?$' | sort -V | tail -n 1)"
-u2d "https://download.gnome.org/sources/gtksourceview/$ver"
-

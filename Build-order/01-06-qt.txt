@@ -29,7 +29,6 @@ mtools
 xfsprogs
 udisks2
 mjpegtools
-gst-libav
 opencv
 libdbusmenu-qt
 openmpi

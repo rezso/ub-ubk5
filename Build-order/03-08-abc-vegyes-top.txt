@@ -18,7 +18,6 @@ rp-pppoe
 exfat-utils
 hostapd
 logrotate
-fonts-bitstream-vera
 upx
 a2ps
 fuse-sshfs

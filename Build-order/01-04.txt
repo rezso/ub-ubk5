@@ -49,8 +49,6 @@ xdg-user-dirs
 xmlrpc-c
 strace
 babl
-libgdl
-gtksourceview3
 vpnc
 openvpn
 yelp-xsl
@@ -88,15 +86,10 @@ rasqal
 gucharmap
 zeitgeist
 gtk-vnc
-glade
 vte
 xterm
 freerdp
 graphicsmagick
-libdazzle
-libadwaita
-sysprof
-gjs
 ibus
 spice-protocol
 pavucontrol

@@ -1,7 +1,0 @@
-#!/usr/bin/env dl
-
-#linuxdoc-tools-${UB_VERSION}.tar.gz linuxdoc-tools-${UB_VERSION}/
-#   https://gitlab.com/agmartin/linuxdoc-tools/-/archive/${UB_VERSION}/
-
-linuxdoc-tools-upstream-${UB_VERSION}.tar.gz linuxdoc-tools-upstream-${UB_VERSION}/
-    https://gitlab.com/agmartin/linuxdoc-tools/-/archive/upstream/${UB_VERSION}/

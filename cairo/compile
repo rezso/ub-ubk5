@@ -1,7 +1,10 @@
 #!/bin/sh -eux
 
-export UB_MAKE_PROCS=1
 ub_compile \
-	--enable-tee \
-	--enable-xlib-xcb \
-	--enable-gl
+    -Dfontconfig=enabled \
+    -Dfreetype=enabled \
+    -Dpng=enabled \
+	-Dtee=enabled \
+	-Dxcb=enabled \
+	-Dxlib=enabled \
+	-Dxlib-xcb=enabled

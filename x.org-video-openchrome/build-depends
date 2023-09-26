@@ -1,4 +1,5 @@
 libdrm-dev
+libglvnd-dev
 libx11-dev
 libxv-dev
 libxvmc-dev

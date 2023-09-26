@@ -1,7 +1,7 @@
 gcr-dev
 geoclue-dev
 gobject-introspection-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtk3-dev
 intltool
 json-glib-dev

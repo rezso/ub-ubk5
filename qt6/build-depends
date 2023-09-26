@@ -3,7 +3,7 @@ cups-dev
 dbus-dev
 double-conversion
 gperf
-gst-plugins-base-dev
+gstreamer-dev
 gtk3-dev
 hunspell-dev
 icu-dev

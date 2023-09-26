@@ -10,7 +10,6 @@ gnote
 glabels
 gnomeradio
 cairo-dock
-gnome-packagekit
 sound-juicer
 easytag
 gthumb

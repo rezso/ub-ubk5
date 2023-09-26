@@ -41,7 +41,6 @@ joe
 keyutils
 liba52
 libaal
-libart-lgpl
 libasyncns
 libburn
 libcue
