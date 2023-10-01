@@ -210,7 +210,7 @@ patchelf
 rust
 double-conversion
 python3-psutil
-js102
+duktape
 js115
 polkit
 e2fsprogs
