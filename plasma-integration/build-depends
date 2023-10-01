@@ -2,6 +2,8 @@ breeze
 fonts-hack
 fonts-noto
 kf5-dev
+libxcursor-dev
 plasma-wayland-protocols
 qqc2-desktop-style
 qt5-dev
+wayland-dev

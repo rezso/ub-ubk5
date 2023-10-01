@@ -1,24 +1,8 @@
-eiciel
+gnome-menus  # flashback
 alacarte
-atomix
-meld
-d-feet
-ghex
-gwget
-pan
-gnote
-glabels
-gnomeradio
+gnome-panel # flashback
+gnome-applets # flashback
+metacity # flashback
 cairo-dock
-sound-juicer
-easytag
-gthumb
-gtranslator
-shotwell
 cairo-dock-plugins
-rhythmbox
-evolution-ews
-gnome-extra
-gnome
-metacity
 gnome-flashback

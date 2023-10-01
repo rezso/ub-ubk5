@@ -211,6 +211,7 @@ rust
 double-conversion
 python3-psutil
 js102
+js115
 polkit
 e2fsprogs
 fonts-dejavu

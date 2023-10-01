@@ -2,4 +2,5 @@
 
 ub_compile \
     -Ddocs=false \
-    -Dselinux=false
+    -Dselinux=false \
+    -Dcloudproviders=false

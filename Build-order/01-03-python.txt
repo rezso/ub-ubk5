@@ -26,7 +26,6 @@ python3-mutagen
 python3-nose
 python3-parso
 python3-pathlib2
-python3-pbr
 python3-pickleshare
 python3-ply
 python3-pyasn1

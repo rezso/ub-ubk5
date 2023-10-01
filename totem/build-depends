@@ -1,8 +1,6 @@
 gnome-desktop-dev
 gobject-introspection-dev
 grilo-dev
-gst-plugins-bad-dev
-gst-plugins-good
 gstreamer-dev
 gtk3-dev
 intltool

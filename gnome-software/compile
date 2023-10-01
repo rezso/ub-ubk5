@@ -1,9 +1,14 @@
 #!/bin/sh -eux
 
 ub_compile \
+    -Deos_updater=false \
+    -Dflatpak=false \
     -Dfwupd=false \
-    -Dgtk_doc=false \
+    -Drpm_ostree=false \
+    -Dsnap=false \
     -Dmalcontent=false \
     -Dexternal_appstream=true \
+    -Dapt=true \
+    -Dgtk_doc=false \
     -Dtests=false \
     -Dsoup2=false

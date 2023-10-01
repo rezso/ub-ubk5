@@ -50,6 +50,7 @@ perl-mail-dkim
 perl-mail-spf
 perl-class-inspector
 perl-archive-zip
+perl-path-tiny # fortune
 perl-db-file # spamassassin
 perl-encode-detect # spamassassin
 perl-gpg # spamassassin

@@ -12,6 +12,7 @@ libpng-dev
 libquazip-dev
 libtiff-dev
 libungif-dev
+libxi-dev
 opencolorio-dev
 openexr-dev
 poppler-qt5-dev

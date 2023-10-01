@@ -1,10 +1,9 @@
 gexiv2-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtk3-dev
 intltool
 itstool
 json-glib-dev
-libchamplain-dev
 libgee-dev
 libgphoto2-dev
 libgudev-dev

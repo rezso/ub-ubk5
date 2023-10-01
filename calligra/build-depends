@@ -10,7 +10,6 @@ lcms2-dev
 libetonyek-dev
 libgsl-dev
 libodfgen-dev
-libpq-dev
 libvisio-dev
 libwpd-dev
 libwpg-dev
@@ -22,7 +21,6 @@ openexr-dev
 openjpeg-dev
 phonon-dev
 poppler-qt5-dev
-postgresql-dev
 qca-dev
 qt5-dev
 qtkeychain-dev

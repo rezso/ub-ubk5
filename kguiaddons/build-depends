@@ -2,4 +2,5 @@ extra-cmake-modules
 libxfixes-dev
 plasma-wayland-protocols
 qt5-dev
+wayland-dev
 xcb-util-keysyms-dev

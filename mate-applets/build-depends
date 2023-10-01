@@ -1,7 +1,7 @@
 avahi-dev
 cpupower-dev
 gobject-introspection-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtksourceview4-dev
 itstool
 libgtop2-dev

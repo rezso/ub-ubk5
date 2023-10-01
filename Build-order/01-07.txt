@@ -14,10 +14,6 @@ libsoup
 libsoup3
 libosinfo
 osinfo-db-tools
-gssdp
-gupnp
-gupnp-dlna
-gupnp-igd
 libnice
 libde265
 srt

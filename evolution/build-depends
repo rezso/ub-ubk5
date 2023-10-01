@@ -10,7 +10,7 @@ gnome-desktop-dev
 gnome-online-accounts-dev
 gsettings-desktop-schemas
 gspell-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtkspell-dev
 highlight
 icon-theme-gnome

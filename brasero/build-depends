@@ -1,7 +1,7 @@
 curl-dev
 dbus-dev
 gobject-introspection-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtk3-dev
 intltool
 itstool

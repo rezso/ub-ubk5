@@ -18,8 +18,7 @@ gobject-introspection-dev
 grilo-dev
 gsettings-desktop-schemas
 gsound-dev
-gst-plugins-bad-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtk4-dev
 ibus-dev
 intltool

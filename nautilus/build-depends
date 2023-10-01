@@ -3,7 +3,7 @@ gexiv2-dev
 gnome-autoar-dev
 gnome-desktop-dev
 gobject-introspection-dev
-gst-plugins-base-dev
+gstreamer-dev
 intltool
 libadwaita-dev
 libexif-dev

@@ -5,7 +5,6 @@ gobject-introspection-dev
 gom-dev
 gperf
 grilo-dev
-gst-plugins-base-dev
 gstreamer-dev
 gupnp-av-dev
 intltool

@@ -1,11 +1,6 @@
 gdk-pixbuf-dev
 gobject-introspection-dev
 gssdp-dev
-gst-editing-services-dev
-gst-plugins-bad-dev
-gst-plugins-base-dev
-gst-plugins-good
-gst-plugins-ugly
 gstreamer-dev
 gtk3-dev
 gupnp-av-dev

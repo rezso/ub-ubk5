@@ -7,4 +7,5 @@ libkipi-dev
 libpng-dev
 phonon-dev
 qt5-dev
+wayland-dev
 wayland-protocols

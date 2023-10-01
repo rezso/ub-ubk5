@@ -4,5 +4,6 @@ liblxqt-dev
 libqtxdg-dev
 libxcursor-dev
 libxfixes-dev
+libxi-dev
 lxqt-build-tools
 x.org-input-libinput-dev

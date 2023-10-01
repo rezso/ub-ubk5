@@ -3,3 +3,4 @@
 krita-${UB_VERSION}.tar.gz krita-${UB_VERSION}/
 	https://download.kde.org/stable/krita/${UB_VERSION}/
 	https://download.kde.org/stable/krita/${UB_VERSION_HEAD3}/
+	https://invent.kde.org/graphics/krita/-/archive/${UB_VERSION}/

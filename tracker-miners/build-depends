@@ -1,5 +1,4 @@
 dbus-dev
-gst-plugins-base-dev
 gstreamer-dev
 intltool
 libexif-dev

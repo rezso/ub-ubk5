@@ -9,6 +9,7 @@ libsysstat-dev
 libx11-dev
 libxcomposite-dev
 libxkbcommon-dev
+libxtst-dev
 lmsensors-dev
 lxqt-build-tools
 lxqt-globalkeys-dev

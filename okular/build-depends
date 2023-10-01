@@ -1,6 +1,7 @@
 chmlib-dev
 djvulibre-dev
 ebook-tools-dev
+freetype2-dev
 kf5-dev
 libspectre-dev
 libzip-dev

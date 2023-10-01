@@ -1,7 +1,7 @@
 avahi-dev
 dbus-dev
 glib-dev
-gst-plugins-base-dev
+gstreamer-dev
 ibus-dev
 imagemagick
 libglvnd-dev

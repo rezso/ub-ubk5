@@ -5,7 +5,7 @@ clutter-gst-dev
 clutter-gtk-dev
 gobject-introspection-dev
 grilo-dev
-gst-plugins-base-dev
+gstreamer-dev
 intltool
 itstool
 json-glib-dev
