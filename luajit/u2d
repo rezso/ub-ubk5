@@ -1,2 +1,1 @@
-echo "2.1.0~beta3"
-#u2d https://luajit.org/download.html LuaJIT-
+u2d https://github.com/LuaJIT/LuaJIT/tags v .ROLLING

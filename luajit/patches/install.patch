@@ -1,0 +1,27 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	2023-08-21 03:18:35.000000000 +0200
++++ b/Makefile	2023-10-05 12:22:00.394821059 +0200
+@@ -30,7 +30,7 @@
+ # Change the installation path as needed. This automatically adjusts
+ # the paths in src/luaconf.h, too. Note: PREFIX must be an absolute path!
+ #
+-export PREFIX= /usr/local
++export PREFIX= /usr
+ export MULTILIB= lib
+ ##############################################################################
+ 
+@@ -50,12 +50,12 @@
+ INSTALL_MAN= $(INSTALL_SHARE)/man/man1
+ INSTALL_PKGCONFIG= $(INSTALL_LIB)/pkgconfig
+ 
+-INSTALL_TNAME= luajit-$(VERSION)
++INSTALL_TNAME= luajit-$(MMVERSION)
+ INSTALL_TSYMNAME= luajit
+ INSTALL_ANAME= libluajit-$(ABIVER).a
+ INSTALL_SOSHORT1= libluajit-$(ABIVER).so
+ INSTALL_SOSHORT2= libluajit-$(ABIVER).so.$(MAJVER)
+-INSTALL_SONAME= libluajit-$(ABIVER).so.$(VERSION)
++INSTALL_SONAME= libluajit-$(ABIVER).so.$(MMVERSION)
+ INSTALL_DYLIBSHORT1= libluajit-$(ABIVER).dylib
+ INSTALL_DYLIBSHORT2= libluajit-$(ABIVER).$(MAJVER).dylib
+ INSTALL_DYLIBNAME= libluajit-$(ABIVER).$(VERSION).dylib

@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-LuaJIT-${UB_VERSION/~/-}.tar.gz LuaJIT-${UB_VERSION/~/-}/
-	https://luajit.org/download/
+v${UB_VERSION}.ROLLING.tar.gz LuaJIT-${UB_VERSION}.ROLLING/
+	https://github.com/LuaJIT/LuaJIT/archive/refs/tags/
