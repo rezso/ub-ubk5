@@ -2,10 +2,13 @@ alsa-lib-dev
 fftw3-dev
 fltk-dev
 fluidsynth-dev
+fontconfig-dev
 jack-dev
 liblame-dev
 libsamplerate-dev
 libsndfile-dev
+libxft-dev
+libxinerama-dev
 portaudio-dev
 pulseaudio-dev
 qt5-dev

@@ -1,6 +1,4 @@
 enchant-dev
-gst-plugins-base-dev
-gst-plugins-good
 gstreamermm-dev
 gtk3-dev
 gtkmm3-dev

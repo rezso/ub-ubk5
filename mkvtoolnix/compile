@@ -1,5 +1,4 @@
 #!/bin/sh -eux
 
-ub_configure \
-	--with-rcc=/usr/lib/qt5/bin/rcc
+ub_configure
 rake

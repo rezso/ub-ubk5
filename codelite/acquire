@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-${UB_VERSION}.tar.gz codelite-${UB_VERSION/}/
-	https://github.com/eranif/codelite/archive/refs/tags/
+#${UB_VERSION}.tar.gz codelite-${UB_VERSION}/
+#	https://github.com/eranif/codelite/archive/refs/tags/
+
+git-${UB_VERSION}.tar.gz codelite-a96e55b/
+	git+https://github.com/eranif/codelite.git@a96e55b

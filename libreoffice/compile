@@ -42,6 +42,7 @@ ccache --max-size=12G
     --without-system-abseil \
     --without-system-bluez \
     --without-system-box2d \
+    --without-system-clucene \
     --without-system-dragonbox \
     --without-system-frozen \
     --without-system-libabw \
@@ -64,6 +65,7 @@ ccache --max-size=12G
     --without-system-mythes \
     --without-system-orcus \
     --without-system-poppler \
+    --without-system-redland \
     --without-system-xmlsec \
     --without-system-zxing \
     --disable-coinmp \
@@ -71,6 +73,7 @@ ccache --max-size=12G
     --disable-debug \
     --disable-odk \
     --disable-firebird-sdbc \
+    --disable-postgresql-sdbc \
     --disable-skia \
     --enable-avahi \
     --enable-fetch-external \

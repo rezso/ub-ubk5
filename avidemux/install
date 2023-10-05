@@ -2,5 +2,6 @@
 
 # a build során minden az UB_INSTALLDIR alá kerül,
 # nem kell külön install
-ln -s avidemux3_qt5 "${UB_INSTALLDIR}"/usr/bin/avidemux
+ln -s avidemux3_qt6 "${UB_INSTALLDIR}"/usr/bin/avidemux
 rm -rf ${UB_INSTALLDIR}/usr/share/ADM6_addons
+rm -rf ${UB_INSTALLDIR}/usr/include

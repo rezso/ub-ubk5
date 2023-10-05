@@ -373,7 +373,6 @@ x.org-input-libinput
 libgsf
 libvdpau
 libvpx
-lua51
 graphviz
 libaio
 desktop-file-utils

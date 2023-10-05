@@ -1,7 +1,4 @@
-gst-libav
-gst-plugins-bad-dev
-gst-plugins-good
-gst-plugins-ugly
+gstreamer-dev
 intltool
 libnotify
 python3-dev

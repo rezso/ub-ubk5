@@ -1,6 +1,5 @@
 accountsservice
 dbus-python3
-gst-plugins-good
 gtk3
 python3-cairo
 python3-pexpect

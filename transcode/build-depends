@@ -1,8 +1,8 @@
 alsa-lib-dev
 faac-dev
 ffmpeg4.4-dev
+freetype2-dev
 gawk
-imagemagick-dev
 liba52-dev
 libdv-dev
 libdvdread-dev
@@ -13,6 +13,7 @@ libtheora-dev
 libv4l-dev
 libvorbis-dev
 libxaw-dev
+libxml2-dev
 libxv-dev
 mjpegtools-dev
 nasm

@@ -21,7 +21,8 @@ libxslt-dev
 libxv-dev
 opencore-amr-dev
 opus-dev
-qt5-dev
+qt6-dev
+sqlite-dev
 x264-dev
 x265-dev
 xvid-dev

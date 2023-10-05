@@ -1,4 +1,6 @@
 #!/usr/bin/env dl
 
-dpkg-repack_${UB_VERSION}.tar.xz dpkg-repack-${UB_VERSION}/
-	https://ftp.hu.debian.org/debian/pool/main/d/dpkg-repack/
+${UB_VERSION}.tar.gz dpkg-repack/
+	https://salsa.debian.org/dpkg-team/dpkg-repack/
+	https://codeberg.org/dpkg/dpkg-repack/archive/
+	https://github.com/guillemj/dpkg-repack/archive/refs/tags/

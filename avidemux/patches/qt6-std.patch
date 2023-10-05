@@ -1,0 +1,36 @@
+diff -Naur a/avidemux/qt4/CMakeLists.txt b/avidemux/qt4/CMakeLists.txt
+--- a/avidemux/qt4/CMakeLists.txt	2022-09-17 15:59:17.000000000 +0200
++++ b/avidemux/qt4/CMakeLists.txt	2023-10-03 23:09:21.716896319 +0200
+@@ -11,8 +11,6 @@
+ MESSAGE("Configure for Avidemux Qt Started")
+ MESSAGE("#########################################")
+ MESSAGE("")
+-#fedora 
+-ADD_DEFINITIONS("-std=c++11")
+ MESSAGE(STATUS "Checking for avidemux development files ..")
+ 
+ IF(NOT FAKEROOT)
+diff -Naur a/avidemux/qt4/xdg_data/org.avidemux.Avidemux.appdata.xml.in b/avidemux/qt4/xdg_data/org.avidemux.Avidemux.appdata.xml.in
+--- a/avidemux/qt4/xdg_data/org.avidemux.Avidemux.appdata.xml.in	2022-09-17 15:59:17.000000000 +0200
++++ b/avidemux/qt4/xdg_data/org.avidemux.Avidemux.appdata.xml.in	2023-10-03 23:39:56.642375217 +0200
+@@ -20,7 +20,7 @@
+     </categories>
+     <url type="homepage">https://www.avidemux.org/</url>
+     <provides>
+-        <binary>avidemux3_qt5</binary>
++        <binary>avidemux3_qt6</binary>
+     </provides>
+     <update_contact>Avidemux team -- avidemux.org/smif/</update_contact>
+     <screenshots>
+diff -Naur a/avidemux/qt4/xdg_data/org.avidemux.Avidemux.desktop b/avidemux/qt4/xdg_data/org.avidemux.Avidemux.desktop
+--- a/avidemux/qt4/xdg_data/org.avidemux.Avidemux.desktop	2022-09-17 15:59:17.000000000 +0200
++++ b/avidemux/qt4/xdg_data/org.avidemux.Avidemux.desktop	2023-10-03 23:40:09.694413300 +0200
+@@ -2,7 +2,7 @@
+ Name=Avidemux
+ GenericName=Video Editor
+ Comment=Multiplatform video editor
+-Exec=avidemux3_qt5 %f
++Exec=avidemux3_qt6 %f
+ Icon=org.avidemux.Avidemux
+ Terminal=false
+ Type=Application

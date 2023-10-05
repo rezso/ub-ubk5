@@ -10,7 +10,7 @@ diff -Nur orig/bootStrap.bash mod/bootStrap.bash
  	if  [ "x$PKG" != "x" ] ; then
            $FAKEROOT_COMMAND make package DESTDIR=$FAKEROOT_DIR/tmp || fail package
  	fi
-@@ -257,7 +257,7 @@
+@@ -263,7 +263,7 @@
  
  export TOP=$PWD
  export POSTFIX=""

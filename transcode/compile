@@ -14,7 +14,6 @@ ub_compile \
     --enable-libdv \
     --enable-libxml2 \
     --enable-v4l \
-    --enable-imagemagick \
     --enable-libjpeg \
     --enable-lzo \
     --enable-mjpegtools \

@@ -1,5 +1,7 @@
 #!/bin/sh -eux
 
+touch src/revision.txt
+
 ./bootstrap
 export LUAC=luac5.2
 ub_compile \
@@ -14,4 +16,4 @@ ub_compile \
 	--disable-dav1d \
 	--disable-opencv \
 	--disable-update-check \
-    --enable-qt=5
+    --enable-qt

@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 v${UB_VERSION}.tar.gz boxes-${UB_VERSION}/
-	https://github.com/ascii-boxes/boxes/archive/
+	https://github.com/ascii-boxes/boxes/archive/refs/tags/
