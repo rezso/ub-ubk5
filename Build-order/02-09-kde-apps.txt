@@ -36,7 +36,6 @@ kdegames
 falkon
 calligra
 digikam
-krita
 yaz
 tellico
 skanlite
