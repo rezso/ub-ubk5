@@ -1,7 +1,9 @@
+fontconfig-dev
 glib-dev
 libglvnd-dev
 libxcb-dev
 libxkbcommon-dev
+libxtst-dev
 qt5-linguist
 xcb-util-image-dev
 xcb-util-keysyms-dev

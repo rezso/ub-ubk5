@@ -1,5 +1,9 @@
 #!/bin/sh -eux
 
+rm -f meson.build
+
+# a meson vala kezelése időnként bugos...
+if [ -f meson.build ]; then
 ub_compile \
 	-Dudev_dir=/usr/lib/udev/ \
 	-Dconfig_dhcp_default=internal \
@@ -12,3 +16,17 @@ ub_compile \
 	-Dqt=false \
 	-Dbluez5_dun=true \
 	-Dpolkit=true
+else
+ub_compile \
+	--with-udev-dir=/usr/lib/udev/ \
+	--with-config-dhcp-default=internal \
+	--with-session-tracking=systemd \
+	--enable-ifupdown \
+	--enable-modify-system \
+	--enable-concheck \
+	--with-selinux=no \
+	--with-nmtui=no \
+	--disable-qt \
+	--enable-bluez5-dun \
+	--enable-polkit=yes
+fi

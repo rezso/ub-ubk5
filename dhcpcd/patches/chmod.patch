@@ -1,8 +1,9 @@
-diff -Naur orig/Makefile.inc patched/Makefile.inc
---- orig/Makefile.inc	2013-06-25 11:04:10.000000000 +0200
-+++ patched/Makefile.inc	2013-07-09 01:09:47.349622083 +0200
-@@ -1,7 +1,7 @@
- # System definitions
+diff -Naur a/Makefile.inc b/Makefile.inc
+--- a/Makefile.inc	2023-10-06 10:27:53.000000000 +0200
++++ b/Makefile.inc	2023-10-07 01:04:08.209252167 +0200
+@@ -2,8 +2,8 @@
+ 
+ PICFLAG?=	-fPIC
  
 -BINMODE?=	0555
 -NONBINMODE?=	0444
@@ -10,4 +11,4 @@ diff -Naur orig/Makefile.inc patched/Makefile.inc
 +NONBINMODE?=	0644
  MANMODE?=	${NONBINMODE}
  CONFMODE?=	0644
- 
+ DBMODE?=	0750

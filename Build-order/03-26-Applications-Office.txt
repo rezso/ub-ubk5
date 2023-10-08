@@ -19,4 +19,3 @@ fonts-symbola
 libreoffice
 master-pdf-editor
 scribus
-calibre
