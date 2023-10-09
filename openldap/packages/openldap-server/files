@@ -1,8 +1,6 @@
-	/etc/init.d
-	/etc/openldap/DB_CONFIG.example
 	/etc/openldap/schema
 	/etc/openldap/slapd.ldif*
-	/etc/runlevel.d
+	/usr/libexec/slapd
 	/usr/lib/systemd/system/slapd.service
 	/usr/sbin/slap*
 	/usr/share/man/man5/slap*
