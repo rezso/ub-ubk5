@@ -82,7 +82,6 @@ exiv2
 gexiv2
 gspell
 polkit-gnome
-rasqal
 gucharmap
 zeitgeist
 gtk-vnc

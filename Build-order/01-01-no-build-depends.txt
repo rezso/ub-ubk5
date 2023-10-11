@@ -60,7 +60,6 @@ libid3tag
 libidn
 libinih
 libiniparser
-libiodbc
 libiptcdata
 liblockfile
 libmad
