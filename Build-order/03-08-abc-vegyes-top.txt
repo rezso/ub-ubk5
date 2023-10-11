@@ -19,7 +19,6 @@ exfat-utils
 hostapd
 logrotate
 upx
-a2ps
 fuse-sshfs
 xfsdump
 linuxconsole

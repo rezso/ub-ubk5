@@ -1,6 +1,4 @@
 #!/usr/bin/env dl
 
-libwebp-${UB_VERSION}.tar.gz libwebp-${UB_VERSION}/
-	http://downloads.webmproject.org/releases/webp/
-	http://downloads.webmproject.org/releases/webp/archive/
-	https://webp.googlecode.com/files/
+v${UB_VERSION}.tar.gz libwebp-${UB_VERSION}/
+	https://github.com/webmproject/libwebp/archive/refs/tags/

@@ -1,4 +1,5 @@
 #!/usr/bin/env dl
 
-xkeyboard-config-${UB_VERSION}.tar.bz2 xkeyboard-config-${UB_VERSION}/
-	http://ftp.osuosl.org/pub/blfs/conglomeration/xkeyboard-config/
+xkeyboard-config-${UB_VERSION}.tar.xz xkeyboard-config-${UB_VERSION}/
+	https://www.x.org/releases/individual/data/xkeyboard-config/
+	https://ftp.osuosl.org/pub/blfs/conglomeration/xkeyboard-config/
