@@ -5,6 +5,7 @@ git clone https://github.com/eranif/wxdap.git wxdap
 git clone https://github.com/jbeder/yaml-cpp.git yaml-cpp
 git clone https://github.com/eranif/cc-wrapper.git cc-wrapper
 git clone https://github.com/eranif/tinyjson.git cc-wrapper/tinyjson
+git clone https://github.com/cubicdaiya/dtl.git dtl
 
 cd wxdap
 git checkout e5c7d35

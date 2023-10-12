@@ -90,7 +90,6 @@ libzmq
 lmdb
 lsb-release
 luajit
-lzip
 mdds
 muparser
 musepack

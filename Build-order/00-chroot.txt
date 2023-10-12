@@ -39,6 +39,8 @@ make
 ncurses
 readline
 bash
+lzip
+ed
 bc
 binutils
 bison
