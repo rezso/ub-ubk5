@@ -1,6 +1,6 @@
 diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
---- a/browser/app/profile/firefox.js	2023-08-03 16:46:53.000000000 +0200
-+++ b/browser/app/profile/firefox.js	2023-08-05 19:43:51.550808156 +0200
+--- a/browser/app/profile/firefox.js	2023-10-09 22:44:48.000000000 +0200
++++ b/browser/app/profile/firefox.js	2023-10-15 21:37:05.545240955 +0200
 @@ -19,6 +19,12 @@
    #endif
  #endif
@@ -24,16 +24,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  // Scopes to scan for changes at startup.
  pref("extensions.startupScanScopes", 0);
  
-@@ -135,7 +142,7 @@
- // should no longer be used directly. Instead, getAppUpdateAutoEnabled and
- // getAppUpdateAutoEnabled from UpdateUtils.sys.mjs should be used.
- #ifndef XP_WIN
--  pref("app.update.auto", true);
-+  pref("app.update.auto", false);
- #endif
- 
- // If set to true, the Update Service will apply updates in the background
-@@ -254,7 +261,7 @@
+@@ -266,7 +273,7 @@
  pref("browser.compactmode.show", false);
  
  // At startup, check if we're the default browser and prompt user if not.
@@ -42,7 +33,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  pref("browser.shell.shortcutFavicons",true);
  pref("browser.shell.mostRecentDateSetAsDefault", "");
  pref("browser.shell.skipDefaultBrowserCheckOnFirstRun", true);
-@@ -353,7 +360,7 @@
+@@ -365,7 +372,7 @@
  pref("browser.urlbar.accessibility.tabToSearch.announceResults", true);
  
  // Control autoFill behavior
@@ -51,28 +42,25 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  
  // Whether enabling adaptive history autofill.
  pref("browser.urlbar.autoFill.adaptiveHistory.enabled", false);
-@@ -498,7 +505,7 @@
+@@ -518,7 +525,7 @@
  // is longer than this.
  pref("browser.urlbar.maxCharsForSearchSuggestions", 100);
  
 -pref("browser.urlbar.trimURLs", true);
 +pref("browser.urlbar.trimURLs", false);
  
- // If changed to true, copying the entire URL from the location bar will put the
- // human readable (percent-decoded) URL on the clipboard.
-@@ -1099,9 +1106,9 @@
- // 0 goes Back/Forward
- // 1 act like PgUp/PgDown
+ pref("browser.urlbar.trimHttps", false);
+ 
+@@ -1151,7 +1158,7 @@
  // 2 and other values, nothing
--pref("browser.backspace_action", 2);
-+pref("browser.backspace_action", 0);
+ pref("browser.backspace_action", 2);
  
 -pref("intl.regional_prefs.use_os_locales", false);
 +pref("intl.regional_prefs.use_os_locales", true);
  
  // this will automatically enable inline spellchecking (if it is available) for
  // editable elements in HTML
-@@ -1869,10 +1876,8 @@
+@@ -1926,10 +1933,8 @@
  pref("dom.storage_access.frame_only", true);
  
  // Enable URL query stripping and strip on share in Nightly.
