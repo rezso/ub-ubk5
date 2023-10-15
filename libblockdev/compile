@@ -1,6 +1,4 @@
 #!/bin/sh -eux
 
 ub_compile \
-    --without-dmraid \
-    --without-python2 \
     --without-python3
