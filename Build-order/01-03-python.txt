@@ -47,7 +47,7 @@ python3-numpy
 python3-certifi
 python3-urllib3
 dbus-python
-sip
+python3-sip
 
 #csak-rd-t-nézni-mert-python3-setuptools-van-a-build-depends-ben
 
