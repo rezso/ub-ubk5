@@ -1,0 +1,12 @@
+diff -Naur a/third_party/material_color_utilities/src/cpp/palettes/tones.cc b/third_party/material_color_utilities/src/cpp/palettes/tones.cc
+--- a/third_party/material_color_utilities/src/cpp/palettes/tones.cc	2023-10-11 03:23:18.079993000 +0200
++++ b/third_party/material_color_utilities/src/cpp/palettes/tones.cc	2023-10-16 14:11:05.889295226 +0200
+@@ -19,6 +19,8 @@
+ #include "cpp/cam/cam.h"
+ #include "cpp/cam/hct.h"
+ 
++#include <cmath>
++
+ namespace material_color_utilities {
+ 
+ TonalPalette::TonalPalette(Argb argb) : key_color_(0.0, 0.0, 0.0) {

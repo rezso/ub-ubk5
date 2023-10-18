@@ -1,0 +1,80 @@
+https://chromium.googlesource.com/chromium/src/+/60e39e7dbe956ab78ef3745981cc05e16683d934
+author	Matt Reynolds <mattreynolds@google.com>	Tue Oct 03 20:02:58 2023
+committer	Chromium LUCI CQ <chromium-scoped@luci-project-accounts.iam.gserviceaccount.com>	Tue Oct 03 20:02:58 2023
+tree	3ed616ae73b7fd6b360383ee12d22ef787162bc2
+parent	5bccf363d1f5239d7135558e19d423f3cbdeffa2 [diff]
+
+gamepad: Check that the DocumentLoader is not null
+
+Gamepad timestamps are reported relative to the navigationStart
+timestamp, accessed from the DocumentLoader's DocumentLoadTiming.
+In some scenarios the document may have been detached before the
+NavigatorGamepad is initialized, causing the DocumentLoader to be
+nullptr.
+
+This CL checks that the DocumentLoader is non-null, and uses the
+current time in place of navigationStart if it is null.
+
+Bug: 1483777
+Change-Id: Ib3efcf3a612cd4c1c543218fa5fb8568c7129dcf
+Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/4899018
+Reviewed-by: Alvin Ji <alvinji@chromium.org>
+Commit-Queue: Matt Reynolds <mattreynolds@chromium.org>
+Cr-Commit-Position: refs/heads/main@{#1204813}
+
+--- a/third_party/blink/renderer/modules/gamepad/navigator_gamepad.cc
++++ b/third_party/blink/renderer/modules/gamepad/navigator_gamepad.cc
+
+@@ -300,12 +300,17 @@
+       PlatformEventController(*navigator.DomWindow()),
+       gamepad_dispatcher_(
+           MakeGarbageCollected<GamepadDispatcher>(*navigator.DomWindow())) {
+-  navigator.DomWindow()->RegisterEventListenerObserver(this);
++  LocalDOMWindow* window = navigator.DomWindow();
++  window->RegisterEventListenerObserver(this);
+ 
+   // Fetch |window.performance.timing.navigationStart|. Gamepad timestamps are
+   // reported relative to this value.
+-  auto& timing = DomWindow()->document()->Loader()->GetTiming();
+-  navigation_start_ = timing.NavigationStart();
++  DocumentLoader* loader = window->document()->Loader();
++  if (loader) {
++    navigation_start_ = loader->GetTiming().NavigationStart();
++  } else {
++    navigation_start_ = base::TimeTicks::Now();
++  }
+ 
+   vibration_actuators_.resize(device::Gamepads::kItemsLengthCap);
+ }
+
+--- /dev/null
++++ b/third_party/blink/web_tests/external/wpt/editing/crashtests/insertAdjacentElement-with-DOMSubtreeModified.html
+
+@@ -0,0 +1,26 @@
++<!DOCTYPE html>
++<head>
++<script src="../resources/js-test.js"></script>
++<script>
++function onLoad() {
++    const x1 = document.getElementById('x1');
++    x1.addEventListener('DOMSubtreeModified', () => {
++        const x2 = document.getElementById('x2');
++        x2.contentDocument;
++    });
++    x1.setAttribute('inputmode', 'url');
++}
++function insertAdjacent() {
++    const x2 = document.getElementById('x2');
++    const x3 = document.getElementById('x3');
++    document.onreadystatechange = insertAdjacent;
++    x3.insertAdjacentElement('beforebegin', x2);
++}
++</script>
++</head>
++<body onload="onLoad()">
++<div id="x1"></div>
++<object id="x2" data="invalid-url" onerror="insertAdjacent()"></object>
++<div id="x3"></div>
++</body>
++</html>
+
