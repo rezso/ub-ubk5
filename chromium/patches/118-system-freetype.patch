@@ -54,7 +54,7 @@ diff --git a/third_party/blink/renderer/platform/BUILD.gn b/third_party/blink/re
 index 591d2f939605b01..f6a2cd2168d1ee5 100644
 --- a/third_party/blink/renderer/platform/BUILD.gn
 +++ b/third_party/blink/renderer/platform/BUILD.gn
-@@ -1717,6 +1717,7 @@ component("platform") {
+@@ -1715,6 +1715,7 @@ component("platform") {
      "//services/viz/public/cpp/gpu",
      "//skia",
      "//skia:skcms",
