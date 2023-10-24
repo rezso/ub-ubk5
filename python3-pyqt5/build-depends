@@ -1,5 +1,5 @@
 dbus-dev
-dbus-python-dev
+dbus-python3-dev
 libxml2-dev
 libxslt-dev
 openssl-dev

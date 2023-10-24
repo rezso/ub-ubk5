@@ -1,5 +1,5 @@
 bluez-dev
-dbus-python-dev
+dbus-python3-dev
 gtk3-dev
 intltool
 iproute2-dev

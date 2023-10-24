@@ -1,4 +1,4 @@
-dbus-python-dev
+dbus-python3-dev
 gtksourceview4-dev
 itstool
 libpeas-dev

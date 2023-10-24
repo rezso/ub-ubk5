@@ -1,16 +1,21 @@
 #!/bin/sh -eux
 
+rm -f CMakeLists.txt
+
 ub_compile \
-	--enable-verbose-mode \
     --localstatedir=/var \
     --libexecdir=/usr/lib/dbus-1.0 \
-    --runstatedir=/run \
-    --with-console-auth-dir=/run/console/ \
-    --with-system-pid-file=/run/dbus/pid \
-    --with-system-socket=/run/dbus/system_bus_socket \
-    --with-systemdsystemunitdir=/usr/lib/systemd/system \
-    --enable-inotify \
-    --enable-systemd \
-    --enable-user-session \
-    --disable-asserts \
-    --disable-checks
+    -Dasserts=false \
+    -Dchecks=false \
+    -Dmodular_tests=disabled \
+    -Ddbus_user=messagebus \
+    -Dinotify=enabled \
+    -Druntime_dir=/run \
+    -Dsystem_pid_file=/run/dbus/pid \
+    -Dsystem_socket=/run/dbus/system_bus_socket \
+    -Dsystemd_system_unitdir=/usr/lib/systemd/system \
+    -Dsystemd=enabled \
+    -Dtools=true \
+    -Duser_session=true \
+    -Dverbose_mode=true \
+    -Dx11_autolaunch=enabled
