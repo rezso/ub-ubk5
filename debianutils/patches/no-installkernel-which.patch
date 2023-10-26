@@ -1,11 +1,11 @@
 diff -Naur a/Makefile.am b/Makefile.am
---- a/Makefile.am	2023-08-28 01:13:25.000000000 +0200
-+++ b/Makefile.am	2023-09-04 00:38:08.352827888 +0200
+--- a/Makefile.am	2023-10-10 18:33:54.000000000 +0200
++++ b/Makefile.am	2023-10-26 12:42:40.659233812 +0200
 @@ -9,11 +9,11 @@
  tempfile_SOURCES = tempfile.c
  ischroot_SOURCES = ischroot.c
  
--dist_bin_SCRIPTS = which savelog
+-dist_bin_SCRIPTS = which.debianutils savelog
 +dist_bin_SCRIPTS = savelog
  
 -dist_sbin_SCRIPTS = installkernel add-shell remove-shell update-shells
@@ -13,7 +13,7 @@ diff -Naur a/Makefile.am b/Makefile.am
  
  dist_man_MANS = run-parts.8 \
 -	   installkernel.8 savelog.8 \
--	   tempfile.1 which.1 add-shell.8 \
+-	   tempfile.1 which.debianutils.1 add-shell.8 \
 +	   savelog.8 \
 +	   tempfile.1 add-shell.8 \
  	   remove-shell.8 update-shells.8 ischroot.1
