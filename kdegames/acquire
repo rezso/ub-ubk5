@@ -75,6 +75,9 @@ kollision-${UB_VERSION}.tar.xz .
 konquest-${UB_VERSION}.tar.xz .
 	https://download.kde.org/stable/release-service/${UB_VERSION}/src/
 
+kpat-${UB_VERSION}.tar.xz .
+	https://download.kde.org/stable/release-service/${UB_VERSION}/src/
+
 kreversi-${UB_VERSION}.tar.xz .
 	https://download.kde.org/stable/release-service/${UB_VERSION}/src/
 

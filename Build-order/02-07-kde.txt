@@ -1,5 +1,5 @@
-libqalculate
-libdmtx
+libqalculate # plasma-workspace
+libdmtx # prison
 phonon
 qca
 libquazip
@@ -8,13 +8,16 @@ fonts-noto # plasma-integration
 socat # kwallet-pam
 mlt # kdenlive
 zxing-cpp # kitinerary
-vc
+vc # calligra
 plasma-wayland-protocols # kwayland
 xsettingsd # kde-gtk-settings
 kdsoap # kio-extras
 qtkeychain
 kcolorpicker # gwenview
 kimageannotator # gwenview
+pysol-cards # kdegames (kpat)
+freecell-solver # kdegames (kpat)
+black-hole-solver # kdegames (kpat)
 #
 attica
 breeze-icons

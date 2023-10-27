@@ -56,3 +56,12 @@ perl-encode-detect # spamassassin
 perl-gpg # spamassassin
 perl-ip-country # spamassassin
 perl-net-ident # spamassassin
+perl-appconfig # freecell-solver
+perl-template-toolkit # freecell-solver
+perl-class-method-modifiers # perl-moo/freecell-solver
+perl-role-tiny # perl-moo/freecell-solver
+perl-strictures # perl-moo/freecell-solver
+perl-sub-name # perl-moo/freecell-solver
+perl-sub-quote # perl-moo/freecell-solver
+perl-module-runtime # perl-moo/freecell-solver
+perl-moo # freecell-solver
