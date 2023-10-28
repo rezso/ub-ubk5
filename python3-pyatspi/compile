@@ -1,4 +1,3 @@
 #!/bin/sh -eux
 
-export PYTHON=python3
 ub_compile
