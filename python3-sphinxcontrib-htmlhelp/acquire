@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-sphinxcontrib-htmlhelp-${UB_VERSION}.tar.gz sphinxcontrib-htmlhelp-${UB_VERSION}/
-	https://files.pythonhosted.org/packages/source/s/sphinxcontrib-htmlhelp/
+${UB_VERSION}.tar.gz sphinxcontrib-htmlhelp-${UB_VERSION}/
+	https://github.com/sphinx-doc/sphinxcontrib-htmlhelp/archive/refs/tags/

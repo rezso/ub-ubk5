@@ -1,0 +1,42 @@
+From b3d928ff682dd63bf21bad984dfdb6047a5fe0c3 Mon Sep 17 00:00:00 2001
+From: rezso <rezso@rezso.net>
+Date: Sat, 28 Oct 2023 15:40:37 +0200
+Subject: remove /**/ from split
+
+
+diff --git a/src/common b/src/common
+index a8ae6b0..dbcc1e3 100644
+--- a/src/common
++++ b/src/common
+@@ -1,8 +1,6 @@
+ 
+ _myname="$(basename "$0")"
+ 
+-UHUBUILD_BASH="$(echo ${BASH_VERSION%%[^0-9.]*} | cut -d. -f-2 | sed -e 's/\.//g')"
+-
+ shopt -s nullglob
+ 
+ # színek ----------------------------------------------------------------------
+diff --git a/src/steps/split b/src/steps/split
+index 0405d54..fab011b 100755
+--- a/src/steps/split
++++ b/src/steps/split
+@@ -72,17 +72,11 @@ for pkg in $UB_PACKAGES; do
+ 			# *, /**/ és ? átalakítása regexppé
+ 
+ 			shopt -s extglob
+-			if [ $UHUBUILD_BASH -ge 43 ]; then
+-			shopt -s compat42 # bash 4.3 enélkül nem értelmezi a **-t
+-			fi
++
+ 			# ? -> [^/]
+ 			regex="${regex//\?/[^/]}"
+ 			# /+ -> /
+ 			regex="${regex//+(\/)//}"
+-			# (/**)+/ -> /**/
+-			regex="${regex//+(\/\*\*)\///**/}"
+-			# /**/ -> /(.+/)?
+-			regex="${regex//\/\*\*\///\(.+/\)?}"
+ 			# * -> [^/]*
+ 			regex="${regex//\*/[^/]*}"
+ 

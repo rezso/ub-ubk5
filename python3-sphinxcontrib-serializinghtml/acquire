@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-sphinxcontrib-serializinghtml-${UB_VERSION}.tar.gz sphinxcontrib-serializinghtml-${UB_VERSION}/
-	https://files.pythonhosted.org/packages/source/s/sphinxcontrib-serializinghtml/
+${UB_VERSION}.tar.gz sphinxcontrib-serializinghtml-${UB_VERSION}/
+	https://github.com/sphinx-doc/sphinxcontrib-serializinghtml/archive/refs/tags/
