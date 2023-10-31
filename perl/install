@@ -26,13 +26,3 @@ done
 
 # Fix up xsubpp
 ub_replace "^#!./miniperl" "#!/usr/bin/perl" "$UB_INSTALLDIR"/usr/bin/xsubpp
-
-# Fix the charset of manual pages
-for i in cn:GB2312 jp:EUC-JP ko:EUC-KR tw:BIG5; do
-	lang="${i%:*}"
-	charset="${i#*:}"
-	iconv -f $charset -t UTF-8 \
-	  <"$UB_INSTALLDIR"/usr/share/man/man1/perl$lang.1 \
-	  >"$UB_INSTALLDIR"/usr/share/man/man1/perl$lang.1.tmp
-	mv "$UB_INSTALLDIR"/usr/share/man/man1/perl$lang.1{.tmp,}
-done

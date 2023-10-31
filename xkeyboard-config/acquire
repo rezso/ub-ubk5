@@ -2,4 +2,3 @@
 
 xkeyboard-config-${UB_VERSION}.tar.xz xkeyboard-config-${UB_VERSION}/
 	https://www.x.org/releases/individual/data/xkeyboard-config/
-	https://ftp.osuosl.org/pub/blfs/conglomeration/xkeyboard-config/

@@ -9,9 +9,9 @@ lightdm
 lightdm-qt5-greeter
 extra-cmake-modules
 libv4l
+gpgme
 poppler
 sane-backends
-gpgme
 gmime
 polkit-qt
 sddm

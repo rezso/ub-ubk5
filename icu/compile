@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
-cd source
+cd icu4c/source
 ub_compile

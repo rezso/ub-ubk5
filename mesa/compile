@@ -5,15 +5,6 @@
 ub_compile \
 	-Dplatforms=x11,wayland \
 	-Ddri3=enabled \
-	-Dgallium-extra-hud=true \
-	-Dgallium-vdpau=enabled \
-	-Dgallium-va=enabled \
-	-Dgallium-xa=enabled \
-	-Dgallium-nine=true \
-	-Dgallium-opencl=icd \
-	-Dgallium-omx=bellagio \
-	-Dvulkan-drivers=amd,intel \
-	-Dvulkan-layers=device-select,intel-nullhw,overlay \
 	-Dgles1=disabled \
 	-Dgles2=enabled \
 	-Dgbm=enabled \
@@ -26,4 +17,5 @@ ub_compile \
 	-Dtools=all \
 	-Db_ndebug=true \
 	-Db_lto=true \
+	-Dgallium-drivers=auto \
 	-Dvideo-codecs=vc1dec,h264dec,h264enc,h265dec,h265enc
