@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz python-versioneer-${UB_VERSION}/
+	https://github.com/python-versioneer/python-versioneer/archive/refs/tags/

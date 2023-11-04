@@ -43,7 +43,6 @@ ebook-tools
 exempi
 gtk2-engines
 xmessage
-gstreamermm
 opusfile
 xdg-user-dirs
 xmlrpc-c
@@ -54,8 +53,6 @@ openvpn
 yelp-xsl
 yelp-tools
 alsa-utils
-clutter-gst
-clutter-gtk
 gtkspell
 scim
 sdl2-image
@@ -91,4 +88,19 @@ freerdp
 graphicsmagick
 ibus
 spice-protocol
+pavucontrol
+libde265
+libv4l
+mjpegtools
+openal
+mpg123
+srt
+wildmidi
+dav1d
+ffmpeg
+gstreamer
+gstreamermm
+clutter-gst
+clutter-gtk
+libcanberra
 pavucontrol

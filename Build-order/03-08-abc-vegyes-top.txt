@@ -26,7 +26,6 @@ wvstreams
 wvdial
 curlftpfs
 xman
-libfmt
 paps
 python3-fonttools
 fonts-liberation

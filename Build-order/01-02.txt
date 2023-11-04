@@ -62,7 +62,6 @@ python3-cairo
 slang
 enchant
 glew
-gstreamer
 libftdi1
 libical
 libnotify
@@ -152,7 +151,6 @@ libgtop2
 libmediaart
 libdbusmenu-gtk3
 sound-theme-freedesktop
-libcanberra
 ppp
 modemmanager
 mobile-broadband-provider-info

@@ -1,3 +1,8 @@
 alsa-lib-dev
+glu-dev
+json-c-dev
+libelf-dev
+libglvnd-dev
 libjpeg-turbo-dev
-qt5-dev
+libx11-dev
+systemd-dev

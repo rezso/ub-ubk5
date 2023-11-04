@@ -2,7 +2,7 @@ appstream-dev
 apt-dev
 bash-completion
 gobject-introspection-dev
-gst-plugins-base-dev
+gstreamer-dev
 gtk3-dev
 intltool
 libarchive-dev

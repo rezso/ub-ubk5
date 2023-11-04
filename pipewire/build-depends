@@ -3,6 +3,10 @@ dbus-dev
 ffmpeg-dev
 gstreamer-dev
 jack-dev
+libsndfile-dev
+libusb-dev
 libv4l-dev
-meson
+ncurses-dev
+readline-dev
 sbc-dev
+sdl2-dev
