@@ -1,5 +1,3 @@
-soundfont-fluid
-pnm2ppa
 alsa-tools
 gnuplot
 webp-pixbuf-loader

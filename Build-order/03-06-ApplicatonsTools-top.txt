@@ -23,7 +23,6 @@ botan3
 keepassxc
 antiword
 gkrellm-themes
-liblinebreak
 dmidecode
 tree
 multitail

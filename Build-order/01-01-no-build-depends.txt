@@ -61,10 +61,12 @@ libidn
 libinih
 libiniparser
 libiptcdata
+liblinebreak
 liblockfile
 libmad
 libmnl
 libmodplug
+libmspack
 libndp
 libnet
 libnfnetlink
@@ -84,6 +86,7 @@ liburcu
 libvidstab
 libvisual
 libx86
+libx86mu
 libyajl
 libytnef
 libzip
@@ -107,6 +110,7 @@ rinutils
 rpcsvc-proto
 sg3-utils
 smartmontools
+soundfont-fluid
 soundtouch
 taglib
 toolame

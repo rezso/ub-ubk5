@@ -9,9 +9,7 @@ pptpclient
 qstat
 fping
 sipcalc
-libsmi
 compface
-libgumbo
 claws-mail-themes
 ganyremote
 kanyremote

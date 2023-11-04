@@ -1,1 +1,0 @@
-sflist omxil omxil | splitver '^Bellagio ([0-9.]+)$' | sort -V | tail -n 1

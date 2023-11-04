@@ -8,9 +8,7 @@ convmv
 ddrescue
 ethtool
 hashalot
-libmspack
 lsof
-libx86mu
 lsscsi
 lrzsz
 minicom
