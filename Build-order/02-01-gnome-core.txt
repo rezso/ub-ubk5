@@ -12,16 +12,20 @@ libnma
 gsound
 totem-plparser
 gom
+evolution-data-server
 folks
 icon-theme-gnome-symbolic
 icon-theme-adwaita
 fonts-cantarell
+gssdp
+gupnp
+gupnp-dlna
+gupnp-av
 
 gnome-desktop
 cheese
 dconf-editor
 tracker
-evolution-data-server
 eog
 eog-plugins
 nautilus

@@ -15,6 +15,7 @@ kdsoap # kio-extras
 qtkeychain
 kcolorpicker # gwenview
 kimageannotator # gwenview
+opencv # digikam
 pysol-cards # kdegames (kpat)
 freecell-solver # kdegames (kpat)
 black-hole-solver # kdegames (kpat)
