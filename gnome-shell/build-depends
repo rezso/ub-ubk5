@@ -1,7 +1,5 @@
 asciidoc
 bash-completion
-docbook-dtds
-docbook-xsl
 folks-dev
 gcr4-dev
 gjs-dev
@@ -9,7 +7,6 @@ gnome-autoar-dev
 gnome-bluetooth-dev
 gnome-control-center
 gnome-desktop-dev
-gnome-menus-dev
 gobject-introspection-dev
 gstreamer-dev
 gtk3-dev

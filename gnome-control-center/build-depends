@@ -4,13 +4,10 @@ clutter-gst-dev
 clutter-gtk-dev
 colord-gtk-dev
 cups-dev
-docbook-dtds
-docbook-xsl
 gcr-dev
 geoclue-dev
 gnome-bluetooth-dev
 gnome-desktop-dev
-gnome-menus-dev
 gnome-online-accounts-dev
 gnome-settings-daemon-dev
 gnutls-dev

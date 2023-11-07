@@ -13,6 +13,7 @@ libxtst-dev
 lmsensors-dev
 lxqt-build-tools
 lxqt-globalkeys-dev
+lxqt-menu-data
 menu-cache-dev
 pulseaudio-dev
 solid-dev

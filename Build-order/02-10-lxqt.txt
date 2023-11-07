@@ -4,6 +4,7 @@ qtxdg-tools
 liblxqt
 compton-conf
 libsysstat
+lxqt-menu-data
 libfm-qt
 lxqt-themes
 obconf-qt
