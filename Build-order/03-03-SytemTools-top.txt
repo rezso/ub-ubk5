@@ -23,7 +23,6 @@ setuser
 v86d
 sysstat
 blktool
-iscsitarget
 open-isns
 open-iscsi
 tcpdump

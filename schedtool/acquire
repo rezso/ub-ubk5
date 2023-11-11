@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-schedtool-${UB_VERSION}.tar.gz schedtool-${UB_VERSION}/
+schedtool-${UB_VERSION}.tar.gz schedtool-schedtool-${UB_VERSION}/
 	https://github.com/freequaos/schedtool/archive/refs/tags/

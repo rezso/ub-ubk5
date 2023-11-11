@@ -124,7 +124,6 @@ xfsprogs
 udisks2
 gvfs
 libdbusmenu-qt
-openmpi
 python3-pyqt-builder
 python3-pyqt5
 python3-qtpy

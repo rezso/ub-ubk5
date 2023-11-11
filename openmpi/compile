@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-ub_configure \
-	--sysconfdir=/etc/openmpi \
-	--libdir=/usr/lib/openmpi \
-	--enable-static \
-	--enable-mpi=fortran=no
-
-ub_make

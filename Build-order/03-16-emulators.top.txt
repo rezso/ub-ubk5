@@ -1,8 +1,6 @@
 xa
 bin86
 iasl
-wine-gecko
-wine-mono
 icoutils
 z81
 libspectrum
