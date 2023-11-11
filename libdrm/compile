@@ -2,4 +2,8 @@
 
 ub_compile \
 	-Dintel=enabled \
+	-Dradeon=enabled \
+	-Damdgpu=enabled \
+	-Dnouveau=enabled \
+	-Dvmwgfx=enabled \
 	-Dudev=true
