@@ -80,7 +80,6 @@ libsigc++3
 libsoxr
 libspiro
 libtinyxml
-libuninameslist
 libupnp
 liburcu
 libvidstab
