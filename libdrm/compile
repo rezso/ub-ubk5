@@ -5,5 +5,9 @@ ub_compile \
 	-Dradeon=enabled \
 	-Damdgpu=enabled \
 	-Dnouveau=enabled \
-	-Dvmwgfx=enabled \
-	-Dudev=true
+    -Detnaviv=disabled \
+    -Dfreedreno=disabled \
+    -Dvc4=disabled \
+    -Dvalgrind=disabled \
+    -Dinstall-test-programs=true \
+	-Dudev=false

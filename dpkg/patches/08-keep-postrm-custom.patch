@@ -22,7 +22,7 @@ diff -Naur a/src/main/remove.c b/src/main/remove.c
      return;
  
    debug(dbg_stupidlyverbose, "removal_bulk info not postrm or list");
-@@ -676,6 +677,12 @@
+@@ -671,6 +671,12 @@
            filename);
      if (unlink(filename) && errno != ENOENT)
        ohshite(_("can't remove old postrm script"));
