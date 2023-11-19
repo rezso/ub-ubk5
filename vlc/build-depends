@@ -1,7 +1,7 @@
 aalib-dev
 db4-dev
 faad2
-ffmpeg-dev
+ffmpeg4.4-dev
 flac-dev
 fluidsynth-dev
 gstreamer-dev
