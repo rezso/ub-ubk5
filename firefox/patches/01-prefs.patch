@@ -1,6 +1,6 @@
 diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
---- a/browser/app/profile/firefox.js	2023-10-09 22:44:48.000000000 +0200
-+++ b/browser/app/profile/firefox.js	2023-10-15 21:37:05.545240955 +0200
+--- a/browser/app/profile/firefox.js	2023-11-16 18:42:50.000000000 +0100
++++ b/browser/app/profile/firefox.js	2023-11-20 23:39:23.528328945 +0100
 @@ -19,6 +19,12 @@
    #endif
  #endif
@@ -33,7 +33,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  pref("browser.shell.shortcutFavicons",true);
  pref("browser.shell.mostRecentDateSetAsDefault", "");
  pref("browser.shell.skipDefaultBrowserCheckOnFirstRun", true);
-@@ -365,7 +372,7 @@
+@@ -372,7 +379,7 @@
  pref("browser.urlbar.accessibility.tabToSearch.announceResults", true);
  
  // Control autoFill behavior
@@ -42,7 +42,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  
  // Whether enabling adaptive history autofill.
  pref("browser.urlbar.autoFill.adaptiveHistory.enabled", false);
-@@ -518,7 +525,7 @@
+@@ -516,7 +523,7 @@
  // is longer than this.
  pref("browser.urlbar.maxCharsForSearchSuggestions", 100);
  
@@ -51,7 +51,7 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  
  pref("browser.urlbar.trimHttps", false);
  
-@@ -1151,7 +1158,7 @@
+@@ -1158,7 +1165,7 @@
  // 2 and other values, nothing
  pref("browser.backspace_action", 2);
  
@@ -60,14 +60,15 @@ diff -Naur a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
  
  // this will automatically enable inline spellchecking (if it is available) for
  // editable elements in HTML
-@@ -1926,10 +1933,8 @@
+@@ -1916,10 +1923,8 @@
+ 
  pref("dom.storage_access.frame_only", true);
  
- // Enable URL query stripping and strip on share in Nightly.
+-// Enable URL query stripping in Nightly.
 -#ifdef NIGHTLY_BUILD
++// Enable URL query stripping.
  pref("privacy.query_stripping.enabled", true);
- pref("privacy.query_stripping.strip_on_share.enabled", true);
 -#endif
  
- pref("browser.contentblocking.cryptomining.preferences.ui.enabled", true);
- pref("browser.contentblocking.fingerprinting.preferences.ui.enabled", true);
+ // Enable Strip on Share by default on desktop
+ pref("privacy.query_stripping.strip_on_share.enabled", true);
