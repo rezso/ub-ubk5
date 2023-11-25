@@ -127,6 +127,7 @@ libdbusmenu-qt
 python3-pyqt-builder
 python3-pyqt5
 python3-qtpy
+libplacebo
 vlc
 texlive
 #kigyófeloldás
