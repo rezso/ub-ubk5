@@ -12,7 +12,6 @@ perl-net-ip
 perl-socket6
 perl-text-csv
 perl-version
-perl-net-libidn
 perl-net-ssleay
 perl-io-socket-ssl
 perl-event-rpc

@@ -57,7 +57,6 @@ libgme
 libgsl
 libgsm
 libid3tag
-libidn
 libinih
 libiniparser
 libiptcdata
