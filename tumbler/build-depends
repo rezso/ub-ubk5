@@ -1,5 +1,4 @@
 curl-dev
-cyrus-sasl2-dev
 dbus-glib-dev
 ffmpeg-thumbnailer-dev
 freetype2-dev
@@ -11,5 +10,4 @@ libjpeg-turbo-dev
 libpng-dev
 libtiff-dev
 libxfce4util-dev
-openjpeg-dev
 poppler-glib-dev

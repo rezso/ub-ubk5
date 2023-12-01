@@ -1,7 +1,7 @@
-diff -Nur orig/src/gst/parole-gst.c mod/src/gst/parole-gst.c
---- orig/src/gst/parole-gst.c	2018-03-01 04:00:32.000000000 +0100
-+++ mod/src/gst/parole-gst.c	2018-10-20 13:45:52.846098725 +0200
-@@ -1295,34 +1295,18 @@
+diff -Naur a/src/gst/parole-gst.c b/src/gst/parole-gst.c
+--- a/src/gst/parole-gst.c	2023-11-21 20:52:23.000000000 +0100
++++ b/src/gst/parole-gst.c	2023-12-01 03:26:30.134376947 +0100
+@@ -1336,34 +1336,18 @@
      dialog = GTK_MESSAGE_DIALOG(gtk_message_dialog_new_with_markup(
                              NULL,
                              GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
@@ -36,9 +36,9 @@ diff -Nur orig/src/gst/parole-gst.c mod/src/gst/parole-gst.c
                                               desc);
  
      return GTK_DIALOG(dialog);
-@@ -1414,7 +1398,6 @@
-     case GST_MESSAGE_ELEMENT:
-         if (gst_is_missing_plugin_message(msg)) {
+@@ -1457,7 +1441,6 @@
+             GstInstallPluginsReturn result;
+ 
              g_debug("Missing plugin\n");
 -            parole_gst_stop(gst);
              dialog = parole_gst_missing_codec_dialog(gst, msg);
