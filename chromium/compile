@@ -35,6 +35,10 @@ export NM=nm
 export CCACHE_CPP2=yes
 export CCACHE_SLOPPINESS=time_macros
 
+# qt5, qt6 path
+export PATH="$PATH:/usr/lib/qt5/bin"
+export PATH="$PATH:/usr/lib/qt6/libexec"
+
 _flags=("
 custom_toolchain=\"//build/toolchain/linux/unbundle:default\"
 host_toolchain=\"//build/toolchain/linux/unbundle:default\"
@@ -54,6 +58,7 @@ proprietary_codecs=true
 rtc_use_pipewire=true
 use_gold=false
 use_lld=true
+use_pulseaudio=true
 use_sysroot=false
 symbol_level=0
 enable_linux_installer=false
@@ -63,21 +68,47 @@ enable_hangout_services_extension=false
 enable_rust=false
 use_custom_libcxx=false
 use_kerberos=false
+use_system_freetype=true
+use_system_harfbuzz=true
+use_system_lcms2=true
+use_system_libdrm=true
 use_system_libffi=true
-gtk_version=3
+use_system_libjpeg=true
+use_system_libpng=true
+use_qt=true
+use_qt6=true
+moc_qt5_path=\"/usr/lib/qt5/bin/\"
+moc_qt6_path=\"/usr/lib/qt6/libexec/\"
+gtk_version=4
 icu_use_data_file=false
 ")
 
 # rendszerből használadó libek
 _syslibs=(
-    flac
-    icu
-    libdrm
-    libevent
-    libjpeg
-    libpng
-    libwebp
+	fontconfig
+	freetype
+	harfbuzz-ng
+	icu
+	libdrm
+	libevent
+	libjpeg
+	libpng
+	libwebp
+	libxml
+	libxslt
 )
+for _lib in $_syslibs libjpeg_turbo; do
+	find . -type f -path "*third_party/$_lib/*" \
+   	\! -path "*third_party/$_lib/chromium/*" \
+	\! -path "*third_party/$_lib/google/*" \
+	\! -path './base/third_party/icu/*' \
+	\! -path './third_party/libxml/*' \
+	\! -path './third_party/pdfium/third_party/freetype/include/pstables.h' \
+	\! -path './third_party/harfbuzz-ng/utils/hb_scoped.h' \
+	\! -path './third_party/crashpad/crashpad/third_party/zlib/zlib_crashpad.h' \
+   	\! -regex '.*\.\(gn\|gni\|isolate\|py\)' \
+	-delete
+done
 
 outdir="../object"
 
