@@ -1,0 +1,23 @@
+diff -Naur a/src/gtk/nautilusgtksidebarrow.c b/src/gtk/nautilusgtksidebarrow.c
+--- a/src/gtk/nautilusgtksidebarrow.c	2023-12-03 16:08:54.000000000 +0100
++++ b/src/gtk/nautilusgtksidebarrow.c	2023-12-05 23:12:57.446572091 +0100
+@@ -227,7 +227,9 @@
+       break;
+ 
+     case PROP_NAUTILUS_FILE:
++#ifdef HAVE_CLOUDPROVIDERS
+       ensure_connected_file (self);
++#endif
+       g_value_set_object (value, self->file);
+       break;
+ 
+@@ -350,7 +352,9 @@
+     case PROP_URI:
+       g_free (self->uri);
+       self->uri = g_strdup (g_value_get_string (value));
++#ifdef HAVE_CLOUDPROVIDERS
+       ensure_connected_file (self);
++#endif
+       break;
+ 
+     case PROP_DRIVE:
