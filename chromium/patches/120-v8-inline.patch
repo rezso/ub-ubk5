@@ -1,0 +1,12 @@
+diff -Naur a/v8/src/heap/heap-allocator-inl.h b/v8/src/heap/heap-allocator-inl.h
+--- a/v8/src/heap/heap-allocator-inl.h	2023-12-12 22:27:30.107630638 +0100
++++ b/v8/src/heap/heap-allocator-inl.h	2023-12-13 01:11:52.689112035 +0100
+@@ -65,7 +65,7 @@
+ }
+ 
+ template <AllocationType type>
+-V8_WARN_UNUSED_RESULT V8_INLINE AllocationResult HeapAllocator::AllocateRaw(
++V8_WARN_UNUSED_RESULT AllocationResult HeapAllocator::AllocateRaw(
+     int size_in_bytes, AllocationOrigin origin, AllocationAlignment alignment) {
+   DCHECK_EQ(heap_->gc_state(), Heap::NOT_IN_GC);
+   DCHECK(AllowHandleAllocation::IsAllowed());
