@@ -1,12 +1,12 @@
-diff -Naur orig/src/modules/dracut/main.py patched/src/modules/dracut/main.py
---- orig/src/modules/dracut/main.py	2019-07-06 00:52:35.000000000 +0200
-+++ patched/src/modules/dracut/main.py	2019-08-08 23:46:32.055599579 +0200
-@@ -33,7 +33,7 @@
- 
-     :return:
-     """
--    return target_env_call(['dracut', '-f'])
-+    return target_env_call(['mkinitrd-installedkernel'])
- 
- 
- def run():
+diff -Naur a/src/modules/dracut/main.py b/src/modules/dracut/main.py
+--- a/src/modules/dracut/main.py	2023-12-12 00:04:06.000000000 +0100
++++ b/src/modules/dracut/main.py	2023-12-17 00:00:16.711860781 +0100
+@@ -40,7 +40,7 @@
+         target_env_process_output(['dracut', '-f', initramfs_name])
+     except KeyError:
+         try:
+-            target_env_process_output(['dracut', '-f'])
++            target_env_process_output(['mkinitrd-installedkernel'])
+         except subprocess.CalledProcessError as cpe:
+             libcalamares.utils.warning(f"Dracut failed with output: {cpe.output}")
+             return cpe.returncode

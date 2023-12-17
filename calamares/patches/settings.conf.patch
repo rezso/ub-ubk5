@@ -1,26 +1,20 @@
-diff -Naur orig/settings.conf patched/settings.conf
---- orig/settings.conf	2021-12-11 13:23:23.000000000 +0100
-+++ patched/settings.conf	2022-01-03 17:38:34.660719834 +0100
-@@ -115,44 +115,30 @@
- sequence:
- - show:
-   - welcome
--#  - notesqml
-   - locale
-   - keyboard
+diff -Naur a/settings.conf b/settings.conf
+--- a/settings.conf	2023-12-12 00:04:06.000000000 +0100
++++ b/settings.conf	2023-12-17 00:36:19.903966483 +0100
+@@ -122,6 +122,7 @@
    - partition
    - users
--#  - tracking
+ #  - tracking
 +  - netinstall
    - summary
  - exec:
--#  - dummycpp
--#  - dummyprocess
--#  - dummypython
+ #  - dummycpp
+@@ -130,27 +131,30 @@
    - partition
--#  - zfs
+ #  - zfs
    - mount
 -  - unpackfs
++# - unpackfs
 +  - chrootcfg
 +  - networkcfg
 +  - packages
@@ -28,36 +22,38 @@ diff -Naur orig/settings.conf patched/settings.conf
    - fstab
    - locale
 -  - keyboard
++# - keyboard
    - localecfg
--#  - luksbootkeyfile
--#  - luksopenswaphookcfg
--#  - dracutlukscfg
--#  - plymouthcfg
+ #  - luksbootkeyfile
+ #  - luksopenswaphookcfg
+ #  - dracutlukscfg
+ #  - plymouthcfg
+ #  - zfshostid
 -  - initcpiocfg
 -  - initcpio
++#  - initcpiocfg
++#  - initcpio
    - users
    - displaymanager
 -  - networkcfg
++# - networkcfg
    - hwclock
 -  - services-systemd
 -#  - dracut
 -  - initramfs
 -#  - grubcfg
++# - services-systemd
 +  - dracut
++# - initramfs
 +  - grubcfg
    - bootloader
    - umount
  - show:
--#  - webview@owncloud
-   - finished
- 
- # A branding component is a directory, either in SHARE/calamares/branding or
-@@ -233,3 +219,8 @@
+@@ -234,3 +238,7 @@
  #
  #
  quit-at-end: false
-+#
-+#
++
 +packageOperations:
 +  -install
 +  -remove

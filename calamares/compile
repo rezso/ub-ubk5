@@ -5,6 +5,5 @@
 # msgfmt -o python.mo python.po
 # cd -
 ub_compile \
-	-DCMAKE_PREFIX_PATH=/usr/lib/qt5 \
 	-DCMAKE_BUILD_TYPE=Debug \
 	-DCMAKE_INSTALL_LIBDIR=/usr/lib
