@@ -8,7 +8,6 @@ git checkout e8b3be9
 cd -
 
 ub_compile \
-	-DCMAKE_PREFIX_PATH=/usr/lib/qt5 \
 	-USE=vst \
 	-DWANT_QT5=ON \
 	-DWANT_CARLA=OFF
