@@ -1,7 +1,7 @@
 diff -Nur orig/modules.d/98dracut-systemd/dracut-shutdown.service mod/modules.d/98dracut-systemd/dracut-shutdown.service
 --- orig/modules.d/98dracut-systemd/dracut-shutdown.service	2018-10-08 15:38:33.000000000 +0200
 +++ mod/modules.d/98dracut-systemd/dracut-shutdown.service	2019-10-07 13:25:35.000000000 +0200
-@@ -14,5 +14,5 @@
+@@ -11,5 +11,5 @@
  [Service]
  RemainAfterExit=yes
  Type=oneshot
@@ -11,7 +11,7 @@ diff -Nur orig/modules.d/98dracut-systemd/dracut-shutdown.service mod/modules.d/
 diff -Nur orig/modules.d/98dracut-systemd/emergency.service mod/modules.d/98dracut-systemd/emergency.service
 --- orig/modules.d/98dracut-systemd/emergency.service	2018-10-08 15:38:33.000000000 +0200
 +++ mod/modules.d/98dracut-systemd/emergency.service	2019-10-07 13:26:12.000000000 +0200
-@@ -15,7 +15,7 @@
+@@ -14,7 +14,7 @@
  Environment=DRACUT_SYSTEMD=1
  Environment=NEWROOT=/sysroot
  WorkingDirectory=/
