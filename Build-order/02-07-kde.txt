@@ -108,7 +108,7 @@ kdecoration
 breeze
 breeze-gtk
 kde-gtk-config
-kgamma5
+kgamma
 libkscreen
 kscreen
 kscreenlocker
