@@ -8,7 +8,6 @@ fonts-noto # plasma-integration
 socat # kwallet-pam
 mlt # kdenlive
 zxing-cpp # kitinerary
-vc # calligra
 plasma-wayland-protocols # kwayland
 xsettingsd # kde-gtk-settings
 kdsoap # kio-extras

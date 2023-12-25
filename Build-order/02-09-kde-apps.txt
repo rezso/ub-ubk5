@@ -33,7 +33,6 @@ ktorrent
 libkdegames
 kdegames
 falkon
-calligra
 digikam
 yaz
 tellico
