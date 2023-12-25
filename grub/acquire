@@ -1,10 +1,7 @@
 #!/usr/bin/env dl
 
-#grub-${UB_VERSION}.tar.xz grub-${UB_VERSION}/ :grub
-#	https://ftp.gnu.org/gnu/grub/
+grub-${UB_VERSION}.tar.xz grub-${UB_VERSION}/ :grub
+	https://ftp.gnu.org/gnu/grub/
 
-grub-${UB_VERSION}.tar.gz grub-7a994c8/ :grub
-    git://git.savannah.gnu.org/grub.git@7a994c8
-
-unifont-15.0.06.bdf.gz .
-	https://ftp.gnu.org/gnu/unifont/unifont-15.0.06/
+unifont-15.1.04.bdf.gz .
+	https://ftp.gnu.org/gnu/unifont/unifont-15.1.04/
