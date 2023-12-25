@@ -10,4 +10,5 @@ git clone https://github.com/containers/composefs.git
 NOCONFIGURE=1 ./autogen.sh
 ub_compile \
 	--with-curl \
-	--without-soup
+	--without-soup \
+	--without-composefs

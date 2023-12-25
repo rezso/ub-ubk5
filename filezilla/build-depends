@@ -4,7 +4,6 @@ dbus-dev
 gnutls-dev
 gtk3-dev
 libfilezilla-dev
-libidn-dev
 sqlite-dev
 wxwidgets-dev
 xdg-utils

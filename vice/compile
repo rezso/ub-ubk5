@@ -5,4 +5,10 @@ ub_compile \
 	--libdir=/usr/lib \
 	--enable-x64 \
 	--enable-arch=no \
-	--disable-pdf-docs
+	--disable-pdf-docs \
+	--with-lame \
+	--with-mpg123 \
+	--with-flac \
+	--with-vorbis \
+	--enable-gtk3ui \
+	--enable-desktop-files

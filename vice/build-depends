@@ -1,8 +1,16 @@
 alsa-lib-dev
+curl-dev
 dos2unix
+flac-dev
+glew-dev
+gtk3-dev
 libjpeg-turbo-dev
+liblame-dev
+libvorbis-dev
 libxaw-dev
+mpg123-dev
 pulseaudio-dev
 sdl2-image-dev
 xa
+xdg-utils
 x.org-font-utils
