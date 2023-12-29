@@ -22,14 +22,14 @@ jobs=$(($procs / 2))
 
 # gcc-vel sokkal gyorsabb a build, mivel használja a ccache-t
 # linkelni viszont az lld-vel kell (use_lld=true), a többi elszáll
-export CC=gcc
-export CXX=g++
-export AR=ar
-export NM=nm
-# export CC=clang
-# export CXX=clang++
-# export AR=llvm-ar
+# export CC=gcc
+# export CXX=g++
+# export AR=ar
 # export NM=nm
+export CC=clang
+export CXX=clang++
+export AR=llvm-ar
+export NM=nm
 
 # ccache
 export CCACHE_CPP2=yes
@@ -45,7 +45,7 @@ host_toolchain=\"//build/toolchain/linux/unbundle:default\"
 is_debug=false
 cc_wrapper=\"ccache\"
 clang_base_path=\"/usr\"
-is_clang=false
+is_clang=true
 is_cfi=false
 is_official_build=true
 clang_use_chrome_plugins=false
@@ -66,7 +66,7 @@ enable_nacl=false
 enable_widevine=true
 enable_hangout_services_extension=false
 enable_rust=false
-use_custom_libcxx=false
+use_custom_libcxx=true
 use_kerberos=false
 use_system_freetype=true
 use_system_harfbuzz=true
