@@ -1,6 +1,4 @@
 #!/usr/bin/env dl
 
-v4l-utils-${UB_VERSION}.tar.bz2 v4l-utils-${UB_VERSION}/
+v4l-utils-${UB_VERSION}.tar.xz v4l-utils-${UB_VERSION}/
 	https://linuxtv.org/downloads/v4l-utils/
-	https://people.fedoraproject.org/~jwrdegoede/
-	https://people.atrpms.net/~hdegoede/
