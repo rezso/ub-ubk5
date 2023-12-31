@@ -1,0 +1,4 @@
+!#/bin/bash
+
+systemctl enable plocate-updatedb.service
+systemctl enable plocate-updatedb.timer

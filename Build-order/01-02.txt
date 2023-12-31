@@ -133,6 +133,7 @@ libwmf
 clutter
 parted
 man-db
+plocate
 fltk
 openexr
 imagemagick

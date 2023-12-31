@@ -1,0 +1,4 @@
+!#/bin/bash
+
+systemctl disable plocate-updatedb.service
+systemctl disable plocate-updatedb.timer

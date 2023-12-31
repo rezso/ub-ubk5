@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+plocate-${UB_VERSION}.tar.gz plocate-${UB_VERSION}/
+	https://plocate.sesse.net/download/
