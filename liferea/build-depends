@@ -4,4 +4,5 @@ intltool
 json-glib-dev
 libnotify-dev
 libpeas-dev
+libxml2-dev
 webkit2gtk-4.1-dev

@@ -1,16 +1,16 @@
-diff -Naur orig/data/lightdm.conf patched/data/lightdm.conf
---- orig/data/lightdm.conf	2014-11-09 22:46:48.000000000 +0100
-+++ patched/data/lightdm.conf	2015-03-02 18:11:53.922382635 +0100
-@@ -26,7 +26,7 @@
+diff -Naur a/data/lightdm.conf b/data/lightdm.conf
+--- a/data/lightdm.conf	2022-07-18 05:42:33.000000000 +0200
++++ b/data/lightdm.conf	2024-01-02 12:59:55.149184730 +0100
+@@ -28,7 +28,7 @@
  #guest-account-script=guest-account
- #logind-check-graphical=false
+ #logind-check-graphical=true
  #log-directory=/var/log/lightdm
 -#run-directory=/var/run/lightdm
 +run-directory=/run/lightdm
  #cache-directory=/var/cache/lightdm
- #sessions-directory=/usr/share/lightdm/sessions:/usr/share/xsessions
+ #sessions-directory=/usr/share/lightdm/sessions:/usr/share/xsessions:/usr/share/wayland-sessions
  #remote-sessions-directory=/usr/share/lightdm/remote-sessions
-@@ -101,7 +101,7 @@
+@@ -108,7 +108,7 @@
  #allow-user-switching=true
  #allow-guest=true
  #guest-session=
@@ -19,9 +19,9 @@ diff -Naur orig/data/lightdm.conf patched/data/lightdm.conf
  #greeter-wrapper=
  #guest-wrapper=
  #display-setup-script=
-diff -Naur orig/data/users.conf patched/data/users.conf
---- orig/data/users.conf	2014-05-19 22:10:03.000000000 +0200
-+++ patched/data/users.conf	2015-03-02 18:12:10.950467073 +0100
+diff -Naur a/data/users.conf b/data/users.conf
+--- a/data/users.conf	2022-07-18 05:42:33.000000000 +0200
++++ b/data/users.conf	2024-01-02 13:00:22.581287219 +0100
 @@ -9,6 +9,6 @@
  # hidden-shells = Shells that indicate a user cannot login
  #
@@ -29,4 +29,4 @@ diff -Naur orig/data/users.conf patched/data/users.conf
 -minimum-uid=500
 +minimum-uid=1000
  hidden-users=nobody nobody4 noaccess
- hidden-shells=/bin/false /usr/sbin/nologin
+ hidden-shells=/bin/false /usr/sbin/nologin /sbin/nologin

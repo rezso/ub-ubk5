@@ -5,7 +5,6 @@ dbus-dev
 ffmpeg4.4-dev
 flac-dev
 fluidsynth-dev
-freerdp-dev
 fribidi-dev
 gnutls-dev
 gstreamer-dev
