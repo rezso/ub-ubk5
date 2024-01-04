@@ -8,7 +8,7 @@ export NINJAFLAGS=" -j$jobs "
 
 ub_compile \
     -G Ninja \
-	-DQT_QMAKE_TARGET_MKSPEC=linux-g++-64 \
+	-DQT_QMAKE_TARGET_MKSPEC=linux-g++ \
 	-DCMAKE_INSTALL_PREFIX=/usr \
     -DINSTALL_ARCHDATADIR=lib/qt6 \
     -DINSTALL_BINDIR=lib/qt6/bin \
@@ -26,11 +26,12 @@ ub_compile \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DBUILD_SHARED_LIBS=ON \
 	-DQT_USE_CCACHE=ON \
+    -DQT_FEATURE_rpath=OFF \
+    -DQT_FEATURE_clang=OFF \
 	-DBUILD_WITH_PCH=OFF \
 	-DINPUT_journald=yes \
 	-DINPUT_qml_debug=yes \
     -DINPUT_reduce_relocations=yes \
-    -DINPUT_rpath=no \
 	\
 	-DQT_BUILD_EXAMPLES=FALSE \
 	-DQT_BUILD_TESTS=FALSE \
