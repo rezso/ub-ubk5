@@ -1,4 +1,8 @@
-!#/bin/bash
+#!/bin/bash
 
-systemctl enable plocate-updatedb.service
-systemctl enable plocate-updatedb.timer
+systemctl preset plocate-updatedb.service
+systemctl preset plocate-updatedb.timer
+
+if systemctl is-enabled plocate-updatedb.timer &>/dev/null; then
+    systemctl start --no-block plocate-updatedb.timer plocate-updatedb.service || :
+fi
