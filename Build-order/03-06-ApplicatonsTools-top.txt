@@ -85,7 +85,6 @@ fbreader
 redshift
 synergy
 virt-manager
-catfish
 intel-gpu-tools
 gparted
 deb-gview
