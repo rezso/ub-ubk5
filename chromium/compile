@@ -35,10 +35,6 @@ export NM=nm
 export CCACHE_CPP2=yes
 export CCACHE_SLOPPINESS=time_macros
 
-# qt5, qt6 path
-export PATH="$PATH:/usr/lib/qt5/bin"
-export PATH="$PATH:/usr/lib/qt6/libexec"
-
 _flags=("
 custom_toolchain=\"//build/toolchain/linux/unbundle:default\"
 host_toolchain=\"//build/toolchain/linux/unbundle:default\"
