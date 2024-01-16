@@ -6,4 +6,5 @@
 # cd -
 ub_compile \
 	-DCMAKE_BUILD_TYPE=Debug \
+	-DCMAKE_INSTALL_BINDIR=/usr/sbin \
 	-DCMAKE_INSTALL_LIBDIR=/usr/lib
