@@ -7,13 +7,6 @@ fi
 
 ccache --max-size=12G
 
-# átpakolunk az /src alá mindent, mert
-# ott fogja keresni a letöltött forráscsomagokat
-# if [ ! -d src ]; then
-# mkdir src
-# fi
-# mv *.{gz,zip,bz2,xz} src/
-
 # ha van a distro-configs alatt megfelelő tartalmú .conf fájl, ekkor az
 # ./autogen.sh --with-distro=<conffile> is használható
 # a LibreOfficeUHU.conf fájlhoz
@@ -31,12 +24,12 @@ ccache --max-size=12G
     --with-lang="en-GB hu" \
     --with-vendor=ubk.hu \
     --with-help \
-    --with-fonts \
     --with-external-tar=src \
     --with-system-libs \
     --with-system-headers \
     --with-myspell-dicts \
     --with-external-dict-dir=/usr/share/hunspell \
+    --without-fonts \
     --without-java \
     --without-system-jars \
     --without-system-abseil \

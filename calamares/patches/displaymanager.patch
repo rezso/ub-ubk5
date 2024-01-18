@@ -1,6 +1,6 @@
 diff -Naur a/src/modules/displaymanager/displaymanager.conf b/src/modules/displaymanager/displaymanager.conf
---- a/src/modules/displaymanager/displaymanager.conf	2023-12-12 00:04:06.000000000 +0100
-+++ b/src/modules/displaymanager/displaymanager.conf	2023-12-16 23:38:01.345214873 +0100
+--- a/src/modules/displaymanager/displaymanager.conf	2024-01-15 19:54:01.000000000 +0100
++++ b/src/modules/displaymanager/displaymanager.conf	2024-01-18 05:01:37.016702958 +0100
 @@ -20,9 +20,7 @@
    - sddm
    - lightdm
@@ -12,8 +12,8 @@ diff -Naur a/src/modules/displaymanager/displaymanager.conf b/src/modules/displa
  # Enable the following settings to force a desktop environment
  # in your displaymanager configuration file. This will attempt
 diff -Naur a/src/modules/displaymanager/main.py b/src/modules/displaymanager/main.py
---- a/src/modules/displaymanager/main.py	2023-12-12 00:04:06.000000000 +0100
-+++ b/src/modules/displaymanager/main.py	2023-12-16 23:41:12.601654569 +0100
+--- a/src/modules/displaymanager/main.py	2024-01-15 19:54:01.000000000 +0100
++++ b/src/modules/displaymanager/main.py	2024-01-18 05:01:37.016702958 +0100
 @@ -199,6 +199,7 @@
      DesktopEnvironment('/usr/bin/cutefish-session', 'cutefish-xsession'),
      DesktopEnvironment('/usr/bin/river', 'river'),
@@ -22,7 +22,7 @@ diff -Naur a/src/modules/displaymanager/main.py b/src/modules/displaymanager/mai
  ]
  
  
-@@ -958,6 +959,8 @@
+@@ -961,6 +962,8 @@
              libcalamares.utils.debug("{!s} selected but not installed".format(dm))
              if dm in displaymanagers:
                  displaymanagers.remove(dm)
