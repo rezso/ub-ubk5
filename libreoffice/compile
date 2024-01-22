@@ -60,6 +60,7 @@ ccache --max-size=12G
     --without-system-poppler \
     --without-system-redland \
     --without-system-xmlsec \
+    --without-system-zxcvbn \
     --without-system-zxing \
     --disable-coinmp \
     --disable-dbgutil \
@@ -75,9 +76,7 @@ ccache --max-size=12G
     --enable-ext-nlpsolver \
     --enable-gio \
     --enable-gtk3 \
-    --enable-gtk3-kde5 \
     --enable-gtk4 \
-    --enable-kf5 \
     --enable-qt5 \
     --enable-qt6 \
     --disable-pdfimport \
