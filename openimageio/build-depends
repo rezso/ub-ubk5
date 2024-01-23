@@ -3,6 +3,7 @@ glew-dev
 glu-dev
 hdf5-dev
 libfmt-dev
+libheif-dev
 libpng-dev
 libraw-dev
 libtiff-dev

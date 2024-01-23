@@ -6,6 +6,7 @@ gstreamer-dev
 gtk3-dev
 itstool
 lcms2-dev
+libheif-dev
 librsvg-dev
 libtiff-dev
 wayland-dev

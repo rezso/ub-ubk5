@@ -98,6 +98,7 @@ srt
 wildmidi
 dav1d
 ffmpeg
+libheif
 gstreamer
 gstreamermm
 clutter-gst
