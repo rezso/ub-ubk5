@@ -1,6 +1,6 @@
 diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
---- a/build/config/compiler/BUILD.gn	2024-01-12 01:43:36.173853568 +0100
-+++ b/build/config/compiler/BUILD.gn	2024-01-12 01:45:05.186230304 +0100
+--- a/build/config/compiler/BUILD.gn	2024-01-22 19:41:38.049927500 +0100
++++ b/build/config/compiler/BUILD.gn	2024-01-23 23:01:10.562980028 +0100
 @@ -616,24 +616,6 @@
        }
      }
@@ -48,16 +48,13 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      }
  
      # TODO(https://crbug.com/1211155): investigate why this isn't effective on
-@@ -1876,12 +1850,6 @@
+@@ -1878,9 +1852,6 @@
  
            # TODO(crbug.com/1494809): Evaluate and possibly enable.
            "-Wno-vla-extension",
 -
 -          # TODO(https://crbug.com/1490607): Fix and re-enable.
 -          "-Wno-thread-safety-reference-return",
--
--          # TODO(crbug.com/1495100): Evaluate and possibly enable.
--          "-Wno-delayed-template-parsing-in-cxx20",
          ]
        }
      }
