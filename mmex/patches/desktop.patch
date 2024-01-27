@@ -1,7 +1,7 @@
 diff -Naur a/resources/dist/linux/share/applications/org.moneymanagerex.MMEX.desktop b/resources/dist/linux/share/applications/org.moneymanagerex.MMEX.desktop
---- a/resources/dist/linux/share/applications/org.moneymanagerex.MMEX.desktop	2023-06-20 17:23:24.000000000 +0200
-+++ b/resources/dist/linux/share/applications/org.moneymanagerex.MMEX.desktop	2023-06-29 11:13:35.036384029 +0200
-@@ -133,27 +133,4 @@
+--- a/resources/dist/linux/share/applications/org.moneymanagerex.MMEX.desktop	2023-12-26 19:40:55.000000000 +0100
++++ b/resources/dist/linux/share/applications/org.moneymanagerex.MMEX.desktop	2024-01-27 19:29:43.347916476 +0100
+@@ -137,28 +137,4 @@
  Terminal=false
  DocPath=mmex/help/index.html
  Categories=Finance;Office;
@@ -16,6 +16,7 @@ diff -Naur a/resources/dist/linux/share/applications/org.moneymanagerex.MMEX.des
 -Categories[hu]=Pénzügy;Iroda;
 -Categories[is]=Fjármál;Skrifstofa;
 -Categories[it]=Finanza;Ufficio;
+-Categories[kn]=ಹಣಕಾಸು;ಕಛೇರಿ;
 -Categories[ko]=재원;사무실;
 -Categories[lv]=Finanses;Birojs;
 -Categories[nl]=Financiën;Kantoor;
