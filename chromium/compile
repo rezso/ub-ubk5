@@ -90,8 +90,8 @@ _syslibs=(
 	libjpeg
 	libpng
 	libwebp
-	libxml
-	libxslt
+#	libxml
+#	libxslt
 )
 for _lib in $_syslibs libjpeg_turbo; do
 	find . -type f -path "*third_party/$_lib/*" \
