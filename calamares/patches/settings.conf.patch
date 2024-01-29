@@ -1,20 +1,26 @@
 diff -Naur a/settings.conf b/settings.conf
---- a/settings.conf	2023-12-12 00:04:06.000000000 +0100
-+++ b/settings.conf	2023-12-17 00:36:19.903966483 +0100
-@@ -122,6 +122,7 @@
+--- a/settings.conf	2024-01-15 19:54:01.000000000 +0100
++++ b/settings.conf	2024-01-29 03:37:45.841888037 +0100
+@@ -115,42 +115,28 @@
+ sequence:
+ - show:
+   - welcome
+-#  - notesqml
+-#  - packagechooserq@licenseq
+   - locale
+   - keyboard
    - partition
    - users
- #  - tracking
-+  - netinstall
+-#  - tracking
    - summary
  - exec:
- #  - dummycpp
-@@ -130,27 +131,30 @@
+-#  - dummycpp
+-#  - dummyprocess
+-#  - dummypython
    - partition
- #  - zfs
+-#  - zfs
    - mount
 -  - unpackfs
-+# - unpackfs
 +  - chrootcfg
 +  - networkcfg
 +  - packages
@@ -24,15 +30,13 @@ diff -Naur a/settings.conf b/settings.conf
 -  - keyboard
 +# - keyboard
    - localecfg
- #  - luksbootkeyfile
- #  - luksopenswaphookcfg
- #  - dracutlukscfg
- #  - plymouthcfg
- #  - zfshostid
+-#  - luksbootkeyfile
+-#  - luksopenswaphookcfg
+-#  - dracutlukscfg
+-#  - plymouthcfg
+-#  - zfshostid
 -  - initcpiocfg
 -  - initcpio
-+#  - initcpiocfg
-+#  - initcpio
    - users
    - displaymanager
 -  - networkcfg
@@ -42,14 +46,12 @@ diff -Naur a/settings.conf b/settings.conf
 -#  - dracut
 -  - initramfs
 -#  - grubcfg
-+# - services-systemd
 +  - dracut
-+# - initramfs
 +  - grubcfg
    - bootloader
    - umount
  - show:
-@@ -234,3 +238,7 @@
+@@ -234,3 +220,7 @@
  #
  #
  quit-at-end: false

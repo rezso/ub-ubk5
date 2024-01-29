@@ -44,7 +44,6 @@ mkdir -p "$cellibdir"/nvidia \
 	"$glvnddir" \
 	"$vdpaudir" \
 	"$firmwaredir" \
-    "systemdsystemdir" \
     "$celbindir" \
     "$profilesdir" \
     "$vulcanlayerdir"
