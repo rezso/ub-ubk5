@@ -1,10 +1,8 @@
-cppunit-dev
-doxygen
+alsa-lib-dev
 jack-dev
 ladspa-dev
 libarchive-dev
 liblrdf-dev
 libsndfile-dev
-portaudio-dev
+pulseaudio-dev
 qt5-dev
-tar
