@@ -1,8 +1,5 @@
 perl-db-file
-perl-dbi
 perl-digest-sha1
-perl-encode-detect
-perl-gpg
 perl-html-parser
 perl-io-socket-inet6
 perl-io-socket-ssl
@@ -10,6 +7,6 @@ perl-ip-country
 perl-libwww
 perl-mail-dkim
 perl-mail-spf
+perl-netaddr-ip
 perl-net-dns
-perl-net-ident
-razor
+wget

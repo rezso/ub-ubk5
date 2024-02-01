@@ -52,7 +52,6 @@ perl-archive-zip
 perl-path-tiny # fortune
 perl-db-file # spamassassin
 perl-encode-detect # spamassassin
-perl-gpg # spamassassin
 perl-ip-country # spamassassin
 perl-net-ident # spamassassin
 perl-appconfig # freecell-solver
