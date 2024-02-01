@@ -16,6 +16,7 @@ libva-dev
 libvdpau-dev
 libvpx-dev
 libwebp-dev
+libxfixes-dev
 libxft-dev
 libxinerama-dev
 libxml2-dev
@@ -25,7 +26,6 @@ openexr-dev
 opus-dev
 perl-xml-parser
 pulseaudio-dev
-qt5-dev
 texinfo
 xz-dev
 yasm
