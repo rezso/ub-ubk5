@@ -104,6 +104,7 @@ poppler-data
 potrace
 procmail
 qqwing
+qtilitools
 recode
 rinutils
 rpcsvc-proto
