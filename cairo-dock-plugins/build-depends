@@ -1,6 +1,5 @@
+alsa-lib-dev
 cairo-dock-dev
-cyrus-sasl2-dev
-evolution-data-server-dev
 fftw3-dev
 gnome-menus-dev
 gvfs
@@ -10,7 +9,9 @@ libetpan-dev
 libexif-dev
 libical-dev
 libindicator3-dev
+libx11-dev
 libxklavier-dev
+libxxf86vm-dev
 lmsensors-dev
 pulseaudio-dev
 python3-dev
