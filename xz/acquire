@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-xz-${UB_VERSION/~/}.tar.gz xz-${UB_VERSION/~/}/
-	https://tukaani.org/xz/
+v${UB_VERSION}.tar.gz xz-${UB_VERSION}/
+	https://github.com/tukaani-project/xz/archive/refs/tags/
