@@ -1,5 +1,0 @@
-extra-cmake-modules
-libv4l-dev
-phonon-dev
-qt5-dev
-vlc-dev

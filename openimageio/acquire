@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz OpenImageIO-${UB_VERSION}/
-	https://github.com/OpenImageIO/oiio/archive/refs/tags/
