@@ -15,7 +15,6 @@ libtorrent
 mp3info
 liboauth
 libraw
-lua52
 protobuf
 libpano13
 libtorrent-rasterbar
@@ -84,11 +83,9 @@ zeitgeist
 gtk-vnc
 vte
 xterm
-freerdp
 graphicsmagick
 ibus
 spice-protocol
-pavucontrol
 libde265
 libv4l
 mjpegtools
@@ -98,10 +95,13 @@ srt
 wildmidi
 dav1d
 ffmpeg
+ffmpeg4.4
 libheif
+imlib2
 gstreamer
 gstreamermm
 clutter-gst
 clutter-gtk
 libcanberra
 pavucontrol
+freerdp

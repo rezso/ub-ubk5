@@ -1,5 +1,4 @@
 perl-anyevent
-perl-dbi
 perl-digest-nilsimsa
 perl-digest-sha1
 perl-extutils-depends
@@ -33,7 +32,6 @@ perl-libxml
 perl-xml-namespacesupport
 perl-xml-sax-base
 perl-xml-sax
-perl-xml-libxml
 perl-xml-simple # icon-naming-utils
 perl-crypt-openssl-bignum
 perl-crypt-openssl-guess

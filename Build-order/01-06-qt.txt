@@ -1,9 +1,11 @@
 icon-naming-utils
-razor
+wget # -gpgme
 spamassassin
 nodejs
 libproxy
 glib-networking
+wpasupplicant
+iwd
 networkmanager
 libxmlb
 bind
@@ -95,12 +97,8 @@ libportal
 gcr4
 qt5
 qt6
-openimageio
-opencolorio
 appstream
 packagekit
-packagekit-qt5
-packagekit-qt5
 gpsd
 lightdm
 lightdm-qt5-greeter
@@ -111,7 +109,6 @@ flatpak
 poppler
 sane-backends
 gmime
-polkit-qt
 sddm
 volume-key
 btrfs-progs

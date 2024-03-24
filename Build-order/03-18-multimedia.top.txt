@@ -48,7 +48,6 @@ cinelerra
 mpv
 celluloid
 xawtv
-blender
 avidemux
 waylandpp
 kodi

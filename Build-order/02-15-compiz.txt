@@ -1,7 +1,5 @@
 compiz
 libcompizconfig
-compiz
-libcompizconfig
 compiz-bcop
 compizconfig-python
 compiz-plugins-main

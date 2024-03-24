@@ -1,5 +1,4 @@
 alsa-tools
 gnuplot
 webp-pixbuf-loader
-ffmpeg4.4
 xine-lib

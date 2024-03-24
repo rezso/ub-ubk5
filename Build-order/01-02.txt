@@ -1,3 +1,4 @@
+boost
 libusb-compat
 libesmtp
 librsync
@@ -49,7 +50,6 @@ speexdsp
 flac
 celt
 libmng
-python3-docutils
 mercurial
 scons
 tevent
@@ -66,7 +66,6 @@ libftdi1
 libical
 libnotify
 tdb
-wpasupplicant
 eigen3
 bluez
 newt
@@ -96,7 +95,7 @@ libiec61883
 liblqr
 libmms
 libmtp
-libsrtp
+libsrtp2
 x264
 x265
 xvid
@@ -120,13 +119,11 @@ libdc1394
 libgphoto2
 libusbmuxd
 libimobiledevice
-netpbm
+netpbm # lilypond build-depends
 djvulibre
 java-jre
 ndctl
 telepathy-glib
-imlib2
-libcaca
 libmpeg2
 cogl
 libwmf
@@ -155,3 +152,4 @@ sound-theme-freedesktop
 ppp
 modemmanager
 mobile-broadband-provider-info
+libdisplay-info

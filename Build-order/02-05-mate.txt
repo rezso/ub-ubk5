@@ -1,4 +1,6 @@
 gtk3-layer-shell
+libayatana-indicator
+libayatana-appindicator
 mate-polkit
 mate-desktop
 libmatekbd

@@ -5,8 +5,6 @@ eaglemode
 gentoo
 avfs
 worker
-fox1.6
-xfe
 mc
 ytree
 spacefm

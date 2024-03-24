@@ -1,5 +1,4 @@
 xa
-bin86
 iasl
 icoutils
 z81

@@ -3,7 +3,6 @@ dpkg-repack
 patchutils
 ltrace
 cgdb
-python3-future
 icon-slicer
 pugixml
 lucene++

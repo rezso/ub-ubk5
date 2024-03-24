@@ -1,7 +1,6 @@
 libei
 libdazzle
 libadwaita
-sysprof
 gjs
 libpeas
 libgweather
@@ -60,7 +59,6 @@ gnome-user-share
 grilo-plugins
 mousetweaks
 gnome-initial-setup
-gnome-software
 gnome-keyring
 orca
 seahorse

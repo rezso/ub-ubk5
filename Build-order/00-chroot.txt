@@ -46,7 +46,6 @@ bc
 binutils
 bison
 ccache
-sccache
 cpio
 diffutils
 docbook-dtds
@@ -179,6 +178,7 @@ xmlto
 opensp
 talloc
 dbus
+gobject-introspection
 glib
 dbus-glib
 krb5
@@ -192,7 +192,6 @@ gamin
 pkgconfig
 cairo
 graphite2
-gobject-introspection
 harfbuzz
 re2c
 asciidoc
@@ -204,6 +203,7 @@ python3-markupsafe
 python3-jinja2
 cmocka
 libssh
+argon2
 cryptsetup
 python3-lxml
 systemd
@@ -230,7 +230,6 @@ umockdev
 json-glib
 libgudev
 libgusb
-boost
 wayland
 wayland-protocols
 libunwind
@@ -362,8 +361,7 @@ glslang
 python3-six
 python3-beaker
 python3-mako
-python3-pygments
-python3-docutils
+lua
 mesa
 libxcvt
 x.org-server
@@ -379,7 +377,6 @@ desktop-file-utils
 libqrencode
 lvm
 dracut
-lua53
 audit
 itstool
 gd
