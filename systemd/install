@@ -1,0 +1,14 @@
+#!/bin/sh -eux
+
+ub_install
+
+# hiányzó csoportok helyettesítése
+for file in "$UB_INSTALLDIR"/usr/lib/udev/rules.d/*.rules; do
+	for group in cdrom dialout disk floppy input kmem render tape utmp uucp; do
+		sed -e "s/GROUP=\"$group\"/GROUP=\"media\"/g" -i "$file"
+	done
+	sed -e "s/GROUP=\"kvm\"/GROUP=\"users\"/g" -i "$file"
+done
+
+# /etc/initrd-release
+ln -s /etc/os-release "$UB_INSTALLDIR"/etc/initrd-release

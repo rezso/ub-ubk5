@@ -1,0 +1,12 @@
+extra-cmake-modules
+karchive-dev
+kconfig-dev
+kguiaddons-dev
+ki18n-dev
+kio-dev
+kparts-dev
+ktextwidgets-dev
+libgit2-dev
+qt6-dev
+sonnet-dev
+syntax-highlighting-dev

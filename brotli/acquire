@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz brotli-${UB_VERSION}/
+   https://github.com/google/brotli/archive/refs/tags/

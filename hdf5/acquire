@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+hdf5-${UB_VERSION//./_}.tar.gz hdf5-hdf5-${UB_VERSION//./_}/
+    https://github.com/HDFGroup/hdf5/archive/refs/tags/

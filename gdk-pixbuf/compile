@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+ub_compile \
+	-Ddocs=false \
+	-Dman=false \
+	-Dinstalled_tests=false

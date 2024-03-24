@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+hicolor-icon-theme-${UB_VERSION}.tar.xz hicolor-icon-theme-${UB_VERSION}/
+	https://icon-theme.freedesktop.org/releases/

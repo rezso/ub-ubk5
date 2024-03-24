@@ -1,0 +1,8 @@
+gsettings-desktop-schemas
+gtk2-dev
+gtk3-dev
+kdecoration-dev
+kf6-dev
+qt6-dev
+sassc
+xsettingsd

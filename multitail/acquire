@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz multitail-${UB_VERSION}/
+	https://github.com/folkertvanheusden/multitail/archive/refs/tags/

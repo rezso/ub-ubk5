@@ -1,0 +1,28 @@
+#!/bin/sh -eux
+
+ub_configure \
+    --with-lib-path=/lib:/usr/lib:/usr/local/lib \
+    --enable-cet \
+    --enable-default-execstack=no \
+    --enable-deterministic-archives \
+    --enable-gold \
+    --enable-ld=default \
+    --enable-pgo-build=lto \
+    --enable-plugins \
+    --enable-relro \
+    --enable-targets=x86_64-pep,bpf-unknown-none \
+    --enable-threads \
+    --disable-gdb \
+    --disable-gdbserver \
+    --disable-install-libiberty \
+    --disable-jansson \
+    --disable-libdecnumber \
+    --disable-readline \
+    --disable-sim \
+    --disable-werror \
+    --with-pic \
+    --with-system-zlib
+
+make configure-host
+make -e \
+	tooldir=/usr

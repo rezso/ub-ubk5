@@ -1,0 +1,15 @@
+avahi-dev
+dbus-glib-dev
+itstool
+libcanberra-dev
+libnotify-dev
+libsecret-dev
+libsm-dev
+libxslt-dev
+mate-desktop-dev
+mate-panel-dev
+openssl-dev
+upower-dev
+xcb-util-dev
+xmlto
+yelp-tools

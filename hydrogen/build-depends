@@ -1,0 +1,8 @@
+alsa-lib-dev
+jack-dev
+ladspa-dev
+libarchive-dev
+liblrdf-dev
+libsndfile-dev
+pulseaudio-dev
+qt5-dev

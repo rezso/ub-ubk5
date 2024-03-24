@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+chmod +x tuxcmd
+mv tuxcmd $UB_INSTALLDIR/usr/bin
+
+# patchelf
+patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 $UB_INSTALLDIR/usr/bin/tuxcmd

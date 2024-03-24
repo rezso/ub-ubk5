@@ -1,0 +1,9 @@
+gdbm-dev
+groff
+libffi-dev
+libxcrypt-dev
+libyaml-dev
+ncurses-dev
+openssl-dev
+readline-dev
+tk-dev

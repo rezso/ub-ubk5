@@ -1,0 +1,5 @@
+	/usr/include
+	/usr/lib/avogadro2/*.a
+	/usr/lib/avogadro2/*/*.a
+	/usr/lib/cmake
+@	/usr/lib/*.so

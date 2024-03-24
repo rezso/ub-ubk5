@@ -1,0 +1,7 @@
+gtk3-dev
+libdrm-dev
+libevdev-dev
+libpng-dev
+libxslt-dev
+pango-dev
+systemd-dev

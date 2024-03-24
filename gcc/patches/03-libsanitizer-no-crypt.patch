@@ -1,0 +1,96 @@
+diff -Naur a/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc b/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc
+--- a/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc	2023-05-08 14:14:42.385200851 +0200
++++ b/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc	2024-02-06 03:15:18.173645798 +0100
+@@ -9977,41 +9977,6 @@
+ #define INIT_GETRANDOM
+ #endif
+ 
+-#if SANITIZER_INTERCEPT_CRYPT
+-INTERCEPTOR(char *, crypt, char *key, char *salt) {
+-  void *ctx;
+-  COMMON_INTERCEPTOR_ENTER(ctx, crypt, key, salt);
+-  COMMON_INTERCEPTOR_READ_RANGE(ctx, key, internal_strlen(key) + 1);
+-  COMMON_INTERCEPTOR_READ_RANGE(ctx, salt, internal_strlen(salt) + 1);
+-  char *res = REAL(crypt)(key, salt);
+-  if (res != nullptr)
+-    COMMON_INTERCEPTOR_INITIALIZE_RANGE(res, internal_strlen(res) + 1);
+-  return res;
+-}
+-#define INIT_CRYPT COMMON_INTERCEPT_FUNCTION(crypt);
+-#else
+-#define INIT_CRYPT
+-#endif
+-
+-#if SANITIZER_INTERCEPT_CRYPT_R
+-INTERCEPTOR(char *, crypt_r, char *key, char *salt, void *data) {
+-  void *ctx;
+-  COMMON_INTERCEPTOR_ENTER(ctx, crypt_r, key, salt, data);
+-  COMMON_INTERCEPTOR_READ_RANGE(ctx, key, internal_strlen(key) + 1);
+-  COMMON_INTERCEPTOR_READ_RANGE(ctx, salt, internal_strlen(salt) + 1);
+-  char *res = REAL(crypt_r)(key, salt, data);
+-  if (res != nullptr) {
+-    COMMON_INTERCEPTOR_WRITE_RANGE(ctx, data,
+-                                   __sanitizer::struct_crypt_data_sz);
+-    COMMON_INTERCEPTOR_INITIALIZE_RANGE(res, internal_strlen(res) + 1);
+-  }
+-  return res;
+-}
+-#define INIT_CRYPT_R COMMON_INTERCEPT_FUNCTION(crypt_r);
+-#else
+-#define INIT_CRYPT_R
+-#endif
+-
+ #if SANITIZER_INTERCEPT_GETENTROPY
+ INTERCEPTOR(int, getentropy, void *buf, SIZE_T buflen) {
+   void *ctx;
+@@ -10521,8 +10486,6 @@
+   INIT_GETUSERSHELL;
+   INIT_SL_INIT;
+   INIT_GETRANDOM;
+-  INIT_CRYPT;
+-  INIT_CRYPT_R;
+   INIT_GETENTROPY;
+   INIT_QSORT;
+   INIT_QSORT_R;
+diff -Naur a/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h b/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h	2023-05-08 14:14:42.389200908 +0200
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_interceptors.h	2024-02-06 03:20:11.350400628 +0100
+@@ -568,8 +568,6 @@
+ #define SANITIZER_INTERCEPT_FDEVNAME SI_FREEBSD
+ #define SANITIZER_INTERCEPT_GETUSERSHELL (SI_POSIX && !SI_ANDROID)
+ #define SANITIZER_INTERCEPT_SL_INIT (SI_FREEBSD || SI_NETBSD)
+-#define SANITIZER_INTERCEPT_CRYPT (SI_POSIX && !SI_ANDROID)
+-#define SANITIZER_INTERCEPT_CRYPT_R (SI_LINUX && !SI_ANDROID)
+ 
+ #define SANITIZER_INTERCEPT_GETRANDOM \
+   ((SI_LINUX && __GLIBC_PREREQ(2, 25)) || SI_FREEBSD)
+diff -Naur a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cpp b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cpp
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cpp	2023-05-08 14:14:42.393200968 +0200
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.cpp	2024-02-06 03:06:38.680217885 +0100
+@@ -154,7 +154,6 @@
+ #include <linux/serial.h>
+ #include <sys/msg.h>
+ #include <sys/ipc.h>
+-#include <crypt.h>
+ #endif  // SANITIZER_ANDROID
+ 
+ #include <link.h>
+@@ -254,7 +253,6 @@
+   unsigned struct_ustat_sz = SIZEOF_STRUCT_USTAT;
+   unsigned struct_rlimit64_sz = sizeof(struct rlimit64);
+   unsigned struct_statvfs64_sz = sizeof(struct statvfs64);
+-  unsigned struct_crypt_data_sz = sizeof(struct crypt_data);
+ #endif // SANITIZER_LINUX && !SANITIZER_ANDROID
+ 
+ #if SANITIZER_LINUX && !SANITIZER_ANDROID
+diff -Naur a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h
+--- a/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h	2023-05-08 14:14:42.393200968 +0200
++++ b/libsanitizer/sanitizer_common/sanitizer_platform_limits_posix.h	2024-02-06 03:14:33.885533731 +0100
+@@ -298,7 +298,6 @@
+ extern unsigned struct_mq_attr_sz;
+ extern unsigned struct_timex_sz;
+ extern unsigned struct_statvfs_sz;
+-extern unsigned struct_crypt_data_sz;
+ #endif  // SANITIZER_LINUX && !SANITIZER_ANDROID
+ 
+ struct __sanitizer_iovec {

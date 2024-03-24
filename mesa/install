@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+ub_install
+
+# indirect rendering
+ln -s /usr/lib/libGLX_mesa.so.0 ${UB_INSTALLDIR}/usr/lib/libGLX_indirect.so.0

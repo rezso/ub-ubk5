@@ -1,0 +1,5 @@
+extra-cmake-modules
+libdmtx-dev
+libqrencode-dev
+qt6-dev
+zxing-cpp-dev

@@ -1,0 +1,16 @@
+diff -Naur a/utils/Makefile b/utils/Makefile
+--- a/utils/Makefile	2022-05-21 11:44:47.000000000 +0200
++++ b/utils/Makefile	2022-05-21 21:47:00.403060327 +0200
+@@ -108,9 +108,9 @@
+ ifndef DISABLE_JOYSTICK
+ 	install -d $(DESTDIR)$(PREFIX)/share/joystick
+ 	install extract filter ident $(DESTDIR)$(PREFIX)/share/joystick
+-	install -d $(DESTDIR)/lib/udev/rules.d
+-	install js-set-enum-leds $(DESTDIR)/lib/udev
+-	install -m 644 80-stelladaptor-joystick.rules $(DESTDIR)/lib/udev/rules.d
++	install -d $(DESTDIR)$(PREFIX)/lib/udev/rules.d
++	install js-set-enum-leds $(DESTDIR)$(PREFIX)/lib/udev
++	install -m 644 80-stelladaptor-joystick.rules $(DESTDIR)$(PREFIX)/lib/udev/rules.d
+ endif
+ 
+ .PHONY: compile clean distclean install

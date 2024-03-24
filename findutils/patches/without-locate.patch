@@ -1,0 +1,145 @@
+diff -Naur a/configure b/configure
+--- a/configure	2022-02-02 01:17:29.000000000 +0100
++++ b/configure	2023-12-31 17:21:24.573606674 +0100
+@@ -64080,7 +64080,7 @@
+ # Note that in the list below, po/Makefile.in should appear before
+ # po/Makefile, so that po/Makefile can be created even if po/Makefile.in
+ # starts off missing.
+-ac_config_files="$ac_config_files Makefile build-aux/Makefile doc/Makefile find/Makefile find/testsuite/Makefile gl/Makefile gl/lib/Makefile lib/Makefile locate/Makefile locate/testsuite/Makefile m4/Makefile po/Makefile.in po/Makefile gnulib-tests/Makefile xargs/Makefile xargs/testsuite/Makefile"
++ac_config_files="$ac_config_files Makefile build-aux/Makefile doc/Makefile find/Makefile find/testsuite/Makefile gl/Makefile gl/lib/Makefile lib/Makefile m4/Makefile po/Makefile.in po/Makefile gnulib-tests/Makefile xargs/Makefile xargs/testsuite/Makefile"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
+@@ -64911,8 +64911,6 @@
+     "gl/Makefile") CONFIG_FILES="$CONFIG_FILES gl/Makefile" ;;
+     "gl/lib/Makefile") CONFIG_FILES="$CONFIG_FILES gl/lib/Makefile" ;;
+     "lib/Makefile") CONFIG_FILES="$CONFIG_FILES lib/Makefile" ;;
+-    "locate/Makefile") CONFIG_FILES="$CONFIG_FILES locate/Makefile" ;;
+-    "locate/testsuite/Makefile") CONFIG_FILES="$CONFIG_FILES locate/testsuite/Makefile" ;;
+     "m4/Makefile") CONFIG_FILES="$CONFIG_FILES m4/Makefile" ;;
+     "po/Makefile.in") CONFIG_FILES="$CONFIG_FILES po/Makefile.in" ;;
+     "po/Makefile") CONFIG_FILES="$CONFIG_FILES po/Makefile" ;;
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2022-01-03 00:34:22.000000000 +0100
++++ b/configure.ac	2023-12-31 17:20:33.501428217 +0100
+@@ -309,8 +309,6 @@
+ gl/Makefile
+ gl/lib/Makefile
+ lib/Makefile
+-locate/Makefile
+-locate/testsuite/Makefile
+ m4/Makefile
+ po/Makefile.in
+ po/Makefile
+diff -Naur a/doc/Makefile.am b/doc/Makefile.am
+--- a/doc/Makefile.am	2022-02-02 00:27:31.000000000 +0100
++++ b/doc/Makefile.am	2023-12-31 17:44:33.910436693 +0100
+@@ -16,11 +16,11 @@
+ 
+ info_TEXINFOS = find.texi find-maint.texi
+ find_TEXINFOS = perm.texi parse-datetime.texi regexprops.texi fdl.texi
+-BUILT_SOURCES = dblocation.texi
+-nodist_find_TEXINFOS = dblocation.texi
++BUILT_SOURCES = 
++nodist_find_TEXINFOS = 
+ find_maint_TEXINFOS = fdl.texi
+ MOSTLYCLEANFILES = find.cps
+-CLEANFILES = find.txt find_mono.html findutils.texi_html_node.tar.gz dblocation.texi \
++CLEANFILES = find.txt find_mono.html findutils.texi_html_node.tar.gz \
+ 	find_mono.html findutils.texi_html_node.tar.gz \
+ 	find-info.tar.gz find.texi.tar.gz \
+ 	find.txt  tmp-doc-install find_mono.html.gz
+@@ -73,9 +73,6 @@
+ 	tar zcf $@ find.html
+ 
+ 
+-dblocation.texi: ../locate/dblocation.texi
+-	$(LN_S) ../locate/dblocation.texi $@
+-
+ find-info.tar.gz:
+ 	$(MKDIR_P) tmp-doc-install/info
+ 	$(MAKE) $(AM_MAKEFLAGS) \
+@@ -88,7 +85,7 @@
+ find.texi.tar.gz: $(TEXINFOS) $(find_TEXINFOS) $(nodist_find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  $(srcdir)/version.texi $(srcdir)/versionmaint.texi Makefile
+ 	$(MKDIR_P) tmp-doc-install/texi
+ 	for f in $(TEXINFOS) $(find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  version.texi versionmaint.texi ; \
+-	do cp $(srcdir)/"$$f" tmp-doc-install/texi/ || break; done && cp dblocation.texi tmp-doc-install/texi/
++	do cp $(srcdir)/"$$f" tmp-doc-install/texi/ || break; done
+ 	( cd tmp-doc-install/texi/ && tar -c -f - *.texi ) | GZIP=$(GZIP_ENV) gzip -c >| $@
+ 	rm -rf tmp-doc-install/texi
+ 	rmdir tmp-doc-install
+diff -Naur a/doc/Makefile.in b/doc/Makefile.in
+--- a/doc/Makefile.in	2022-02-02 01:17:32.000000000 +0100
++++ b/doc/Makefile.in	2023-12-31 17:44:14.302368821 +0100
+@@ -2023,11 +2023,11 @@
+ AM_CFLAGS = $(WARN_CFLAGS)
+ info_TEXINFOS = find.texi find-maint.texi
+ find_TEXINFOS = perm.texi parse-datetime.texi regexprops.texi fdl.texi
+-BUILT_SOURCES = dblocation.texi
+-nodist_find_TEXINFOS = dblocation.texi
++BUILT_SOURCES = 
++nodist_find_TEXINFOS = 
+ find_maint_TEXINFOS = fdl.texi
+ MOSTLYCLEANFILES = find.cps
+-CLEANFILES = find.txt find_mono.html findutils.texi_html_node.tar.gz dblocation.texi \
++CLEANFILES = find.txt find_mono.html findutils.texi_html_node.tar.gz \
+ 	find_mono.html findutils.texi_html_node.tar.gz \
+ 	find-info.tar.gz find.texi.tar.gz \
+ 	find.txt  tmp-doc-install find_mono.html.gz
+@@ -2564,9 +2564,6 @@
+ findutils.texi_html_node.tar.gz: find.html
+ 	tar zcf $@ find.html
+ 
+-dblocation.texi: ../locate/dblocation.texi
+-	$(LN_S) ../locate/dblocation.texi $@
+-
+ find-info.tar.gz:
+ 	$(MKDIR_P) tmp-doc-install/info
+ 	$(MAKE) $(AM_MAKEFLAGS) \
+@@ -2579,7 +2576,7 @@
+ find.texi.tar.gz: $(TEXINFOS) $(find_TEXINFOS) $(nodist_find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  $(srcdir)/version.texi $(srcdir)/versionmaint.texi Makefile
+ 	$(MKDIR_P) tmp-doc-install/texi
+ 	for f in $(TEXINFOS) $(find_TEXINFOS) $(info_TEXINFOS) $(find_maint_TEXINFOS)  version.texi versionmaint.texi ; \
+-	do cp $(srcdir)/"$$f" tmp-doc-install/texi/ || break; done && cp dblocation.texi tmp-doc-install/texi/
++	do cp $(srcdir)/"$$f" tmp-doc-install/texi/ || break; done
+ 	( cd tmp-doc-install/texi/ && tar -c -f - *.texi ) | GZIP=$(GZIP_ENV) gzip -c >| $@
+ 	rm -rf tmp-doc-install/texi
+ 	rmdir tmp-doc-install
+diff -Naur a/Makefile.am b/Makefile.am
+--- a/Makefile.am	2022-01-03 00:34:22.000000000 +0100
++++ b/Makefile.am	2023-12-31 17:34:39.396375304 +0100
+@@ -35,7 +35,7 @@
+ 
+ 
+ # "gnulib-tests" is the gnulib unit test dir.
+-SUBDIRS = gl build-aux lib find xargs locate doc po m4 gnulib-tests
++SUBDIRS = gl build-aux lib find xargs doc po m4 gnulib-tests
+ 
+ ALL_RECURSIVE_TARGETS =
+ 
+diff -Naur a/Makefile.in b/Makefile.in
+--- a/Makefile.in	2022-02-02 01:17:32.000000000 +0100
++++ b/Makefile.in	2023-12-31 17:36:06.344677255 +0100
+@@ -2247,11 +2247,11 @@
+ DISTCLEANFILES = tool-versions.txt
+ 
+ # "gnulib-tests" is the gnulib unit test dir.
+-SUBDIRS = gl build-aux lib find xargs locate doc po m4 gnulib-tests
++SUBDIRS = gl build-aux lib find xargs doc po m4 gnulib-tests
+ ALL_RECURSIVE_TARGETS = check-root
+ ACLOCAL_AMFLAGS = -I gl/m4 -I m4
+ TESTFILE_SUFFIXES = .exp .xo .xe .xi
+-built_programs = find xargs frcode locate updatedb
++built_programs = find xargs frcode
+ 
+ # Indirections required so that we'll still be able to know the
+ # complete list of our tests even if the user overrides TESTS
+@@ -2297,7 +2297,7 @@
+   PERL='$(PERL)'				\
+   SHELL='$(PREFERABLY_POSIX_SHELL)'		\
+   ; test -d /usr/xpg4/bin && PATH='/usr/xpg4/bin$(PATH_SEPARATOR)'"$$PATH"; \
+-  PATH='$(abs_top_builddir)/find$(PATH_SEPARATOR)$(abs_top_builddir)/locate$(PATH_SEPARATOR)$(abs_top_builddir)/xargs$(PATH_SEPARATOR)'"$$PATH" \
++  PATH='$(abs_top_builddir)/find$(PATH_SEPARATOR)$(abs_top_builddir)/xargs$(PATH_SEPARATOR)'"$$PATH" \
+   ; 9>&2
+ 
+ 

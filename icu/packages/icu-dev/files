@@ -1,0 +1,7 @@
+	/usr/bin/*-config
+	/usr/include
+	/usr/lib/icu
+	/usr/lib/pkgconfig
+@	/usr/lib/*.so
+	/usr/share/icu
+	/usr/share/man/man1/*-config.1*

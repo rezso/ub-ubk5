@@ -1,0 +1,11 @@
+cairo-dev
+emacs
+libice-dev
+libjpeg-turbo-dev
+libpng-dev
+libungif-dev
+lua-dev
+ncurses-dev
+pango-dev
+readline-dev
+wxwidgets-dev

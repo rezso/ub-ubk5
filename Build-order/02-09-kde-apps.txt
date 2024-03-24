@@ -1,0 +1,46 @@
+libkcddb
+ksanecore
+libksane
+filelight
+dragon
+gwenview
+elisa
+kcalc
+kcolorchooser
+khelpcenter
+konqueror
+spectacle
+kate
+konsole
+marble # kf5
+baloo-widgets
+ffmpegthumbs
+dolphin
+dolphin-plugins
+ark
+okular
+libkomparediff2
+kompare
+ksystemlog
+kdenlive
+k3b
+kolourpaint
+libkpmcore
+kpartitionmanager
+libktorrent
+ktorrent
+keditbookmarks
+libkdegames
+kdegames
+falkon
+skanlite
+kdiff3
+kde-apps
+kde
+#
+yaz
+tellico
+digikam
+#kaffeine # kf5, multimedia lejátszó
+#krusader # kf5
+#kshutdown # kf5

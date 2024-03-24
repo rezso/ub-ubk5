@@ -1,0 +1,13 @@
+acl-dev
+dbus-dev
+file-dev
+libarchive-dev
+libcap-dev
+libelf-dev
+libgcrypt-dev
+lua-dev
+nss-dev
+popt-dev
+python3-dev
+readline-dev
+sqlite-dev

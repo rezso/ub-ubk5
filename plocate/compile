@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dinstall_cron=true \
+    -Dinstall_systemd=true \
+    -Dlocategroup=root

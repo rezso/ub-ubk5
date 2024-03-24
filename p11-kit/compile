@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+git clone https://github.com/p11-glue/pkcs11-json.git subprojects/pkcs11-json
+
+ub_compile \
+	-Dmodule_path=/usr/lib/pkcs11 \
+	-Dtrust_paths=/etc/ssl/certs/ca-certificates.crt:/usr/share/ca-certificates

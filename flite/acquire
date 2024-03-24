@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz flite-${UB_VERSION}/
+	https://github.com/festvox/flite/archive/

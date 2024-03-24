@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz poetry-${UB_VERSION}/
+	https://github.com/python-poetry/poetry/archive/refs/tags/

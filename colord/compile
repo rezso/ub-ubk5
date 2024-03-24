@@ -1,0 +1,10 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dlibcolordcompat=true \
+    -Dvapi=true \
+    -Dprint_profiles=false \
+    -Ddaemon_user=colord \
+    -Dargyllcms_sensor=false \
+    -Dman=false \
+    -Ddocs=false

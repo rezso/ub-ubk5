@@ -1,0 +1,7 @@
+geoip-dev
+libgd-dev
+libxcrypt-dev
+libxslt-dev
+openssl-dev
+pcre-dev
+perl-dev

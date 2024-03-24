@@ -1,0 +1,7 @@
+dbus-glib-dev
+gobject-introspection-dev
+intltool
+meson
+polkit-dev
+systemd-dev
+vala-dev

@@ -1,0 +1,4 @@
+intltool
+python3-distutils-extra
+python3-pygobject-dev
+python3-setuptools

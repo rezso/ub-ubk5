@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libnma-${UB_VERSION}.tar.xz libnma-${UB_VERSION}/
+	https://download.gnome.org/sources/libnma/${UB_VERSION_HEAD2}/

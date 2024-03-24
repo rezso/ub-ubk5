@@ -1,0 +1,9 @@
+ffmpeg-dev
+kf6-dev
+libdrm-dev
+libepoxy-dev
+mesa-dev
+pipewire-dev
+plasma-wayland-protocols
+qt6-dev
+wayland-dev

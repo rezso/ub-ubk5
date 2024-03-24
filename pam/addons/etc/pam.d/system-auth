@@ -1,0 +1,14 @@
+#%PAM-1.0
+
+auth		required	pam_unix.so shadow nullok
+
+account		required	pam_unix.so
+
+password	required	pam_unix.so nullok shadow try_first_pass
+
+session     required    pam_unix.so
+session		required	pam_env.so
+session		required	pam_envfeed.so
+session		required	pam_limits.so
+session     required    pam_loginuid.so
+

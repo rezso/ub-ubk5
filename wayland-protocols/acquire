@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+wayland-protocols-${UB_VERSION}.tar.xz wayland-protocols-${UB_VERSION}/
+    https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/${UB_VERSION}/downloads/

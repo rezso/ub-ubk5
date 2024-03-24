@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION/+/-}.tar.gz muparser-${UB_VERSION/+/-}/
+	https://github.com/beltoforion/muparser/archive/refs/tags/

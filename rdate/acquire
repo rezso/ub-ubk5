@@ -1,0 +1,5 @@
+#!/usr/bin/env dl
+
+rdate-${UB_VERSION}.tar.gz rdate-${UB_VERSION}/
+	https://fossies.org/linux/misc/old/
+	https://www.sfr-fresh.com/linux/misc/

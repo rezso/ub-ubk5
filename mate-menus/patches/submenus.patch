@@ -1,0 +1,1186 @@
+diff -Naur a/desktop-directories/Makefile.am b/desktop-directories/Makefile.am
+--- a/desktop-directories/Makefile.am	2022-11-11 21:10:18.000000000 +0100
++++ b/desktop-directories/Makefile.am	2023-01-20 12:47:39.138438400 +0100
+@@ -10,17 +10,66 @@
+ 
+ directory_in_files = \
+ 	mate-audio-video.directory.in \
++	mate-audio-video-sub-audiovideoediting.directory.in \
++	mate-audio-video-sub-discburning.directory.in \
++	mate-audio-video-sub-midi.directory.in \
++	mate-audio-video-sub-mixer.directory.in \
++	mate-audio-video-sub-music.directory.in \
++	mate-audio-video-sub-player.directory.in \
++	mate-audio-video-sub-recorder.directory.in \
++	mate-audio-video-sub-sequencer.directory.in \
++	mate-audio-video-sub-tuner.directory.in \
++	mate-audio-video-sub-tv.directory.in \
+ 	mate-development.directory.in \
+ 	mate-education.directory.in \
+ 	mate-game.directory.in \
++	mate-game-sub-action.directory.in \
++	mate-game-sub-adventure.directory.in \
++	mate-game-sub-arcade.directory.in \
++	mate-game-sub-board.directory.in \
++	mate-game-sub-blocks.directory.in \
++	mate-game-sub-card.directory.in \
++	mate-game-sub-kids.directory.in \
++	mate-game-sub-logic.directory.in \
++	mate-game-sub-roleplaying.directory.in \
++	mate-game-sub-simulation.directory.in \
++	mate-game-sub-sports.directory.in \
++	mate-game-sub-strategy.directory.in \
+ 	mate-graphics.directory.in \
+ 	mate-network.directory.in \
++	mate-network-sub-chat.directory.in \
++	mate-network-sub-dialup.directory.in \
++	mate-network-sub-email.directory.in \
++	mate-network-sub-feed.directory.in \
++	mate-network-sub-filetransfer.directory.in \
++	mate-network-sub-hamradio.directory.in \
++	mate-network-sub-instantmessaging.directory.in \
++	mate-network-sub-ircclient.directory.in \
++	mate-network-sub-news.directory.in \
++	mate-network-sub-p2p.directory.in \
++	mate-network-sub-remoteaccess.directory.in \
++	mate-network-sub-telephony.directory.in \
++	mate-network-sub-videoconference.directory.in \
++	mate-network-sub-webbrowser.directory.in \
+ 	mate-office.directory.in \
+ 	mate-settings.directory.in \
+ 	mate-settings-system.directory.in \
+ 	mate-system-tools.directory.in \
++	mate-system-tools-sub-emulator.directory.in \
++	mate-system-tools-sub-filemanager.directory.in \
++	mate-system-tools-sub-filesystem.directory.in \
++	mate-system-tools-sub-monitor.directory.in \
++	mate-system-tools-sub-terminalemulator.directory.in \
+ 	mate-utility.directory.in \
+ 	mate-utility-accessibility.directory.in \
++	mate-utility-sub-archiving.directory.in \
++	mate-utility-sub-calculator.directory.in \
++	mate-utility-sub-clock.directory.in \
++	mate-utility-sub-compression.directory.in \
++	mate-utility-sub-filetool.directory.in \
++	mate-utility-sub-telephonytool.directory.in \
++	mate-utility-sub-texteditor.directory.in \
++	mate-utility-sub-texttool.directory.in \
+ 	mate-other.directory.in \
+ 	mate-menu-applications.directory.in \
+ 	mate-menu-system.directory.in \
+diff -Naur a/desktop-directories/Makefile.in b/desktop-directories/Makefile.in
+--- a/desktop-directories/Makefile.in	2022-11-11 21:11:49.000000000 +0100
++++ b/desktop-directories/Makefile.in	2023-01-20 12:45:11.974121855 +0100
+@@ -327,17 +325,66 @@
+ 
+ directory_in_files = \
+ 	mate-audio-video.directory.in \
++	mate-audio-video-sub-audiovideoediting.directory.in \
++	mate-audio-video-sub-discburning.directory.in \
++	mate-audio-video-sub-midi.directory.in \
++	mate-audio-video-sub-mixer.directory.in \
++	mate-audio-video-sub-music.directory.in \
++	mate-audio-video-sub-player.directory.in \
++	mate-audio-video-sub-recorder.directory.in \
++	mate-audio-video-sub-sequencer.directory.in \
++	mate-audio-video-sub-tuner.directory.in \
++	mate-audio-video-sub-tv.directory.in \
+ 	mate-development.directory.in \
+ 	mate-education.directory.in \
+ 	mate-game.directory.in \
++	mate-game-sub-action.directory.in \
++	mate-game-sub-adventure.directory.in \
++	mate-game-sub-arcade.directory.in \
++	mate-game-sub-board.directory.in \
++	mate-game-sub-blocks.directory.in \
++	mate-game-sub-card.directory.in \
++	mate-game-sub-kids.directory.in \
++	mate-game-sub-logic.directory.in \
++	mate-game-sub-roleplaying.directory.in \
++	mate-game-sub-simulation.directory.in \
++	mate-game-sub-sports.directory.in \
++	mate-game-sub-strategy.directory.in \
+ 	mate-graphics.directory.in \
+ 	mate-network.directory.in \
++	mate-network-sub-chat.directory.in \
++	mate-network-sub-dialup.directory.in \
++	mate-network-sub-email.directory.in \
++	mate-network-sub-feed.directory.in \
++	mate-network-sub-filetransfer.directory.in \
++	mate-network-sub-hamradio.directory.in \
++	mate-network-sub-instantmessaging.directory.in \
++	mate-network-sub-ircclient.directory.in \
++	mate-network-sub-news.directory.in \
++	mate-network-sub-p2p.directory.in \
++	mate-network-sub-remoteaccess.directory.in \
++	mate-network-sub-telephony.directory.in \
++	mate-network-sub-videoconference.directory.in \
++	mate-network-sub-webbrowser.directory.in \
+ 	mate-office.directory.in \
+ 	mate-settings.directory.in \
+ 	mate-settings-system.directory.in \
+ 	mate-system-tools.directory.in \
++	mate-system-tools-sub-emulator.directory.in \
++	mate-system-tools-sub-filemanager.directory.in \
++	mate-system-tools-sub-filesystem.directory.in \
++	mate-system-tools-sub-monitor.directory.in \
++	mate-system-tools-sub-terminalemulator.directory.in \
+ 	mate-utility.directory.in \
+ 	mate-utility-accessibility.directory.in \
++	mate-utility-sub-archiving.directory.in \
++	mate-utility-sub-calculator.directory.in \
++	mate-utility-sub-clock.directory.in \
++	mate-utility-sub-compression.directory.in \
++	mate-utility-sub-filetool.directory.in \
++	mate-utility-sub-telephonytool.directory.in \
++	mate-utility-sub-texteditor.directory.in \
++	mate-utility-sub-texttool.directory.in \
+ 	mate-other.directory.in \
+ 	mate-menu-applications.directory.in \
+ 	mate-menu-system.directory.in \
+diff -Naur a/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in b/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in
+--- a/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in	2023-01-20 12:47:39.138438400 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Sound & Video editing
++Name[hu]=Hang és videó szerkesztés
++Comment=Applications to edit audio/video files
++Comment[hu]=Hang/videó fájlokat szerkesztő alkalmazások
++Icon=video-x-generic
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-discburning.directory.in b/desktop-directories/mate-audio-video-sub-discburning.directory.in
+--- a/desktop-directories/mate-audio-video-sub-discburning.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-discburning.directory.in	2023-01-20 12:47:39.138438400 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Disc burning
++Name[hu]=Optikai lemez írás
++Comment=Applications to burn a disc
++Comment[hu]=Optikai lemez író alkalmazások
++Icon=drive-optical
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-midi.directory.in b/desktop-directories/mate-audio-video-sub-midi.directory.in
+--- a/desktop-directories/mate-audio-video-sub-midi.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-midi.directory.in	2023-01-20 12:47:39.138438400 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=MIDI
++Name[hu]=MIDI
++Comment=MIDI applications
++Comment[hu]=MIDI kezelő alkalmazások
++Icon=applications-multimedia
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-mixer.directory.in b/desktop-directories/mate-audio-video-sub-mixer.directory.in
+--- a/desktop-directories/mate-audio-video-sub-mixer.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-mixer.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=Mixer
++Name[hu]=Mixer
++Icon=multimedia-volume-control
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-music.directory.in b/desktop-directories/mate-audio-video-sub-music.directory.in
+--- a/desktop-directories/mate-audio-video-sub-music.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-music.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Music
++Name[hu]=Zene
++Comment=Musical software
++Comment[hu]=Zenei program
++Icon=audio-x-generic
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-player.directory.in b/desktop-directories/mate-audio-video-sub-player.directory.in
+--- a/desktop-directories/mate-audio-video-sub-player.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-player.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Player
++Name[hu]=Lejátszó
++Comment=Play audio/video files
++Comment[hu]=Hang/videó fájlok lejátszása
++Icon=video-x-generic
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-recorder.directory.in b/desktop-directories/mate-audio-video-sub-recorder.directory.in
+--- a/desktop-directories/mate-audio-video-sub-recorder.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-recorder.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Recorder
++Name[hu]=Felvevő
++Comment=Record audio/video files
++Comment[hu]=Hang/videó fájlokat felvevő alkalmazás
++Icon=media-record
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-sequencer.directory.in b/desktop-directories/mate-audio-video-sub-sequencer.directory.in
+--- a/desktop-directories/mate-audio-video-sub-sequencer.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-sequencer.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=Sequencer
++Name[hu]=Sequencer
++Icon=applications-multimedia
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-tuner.directory.in b/desktop-directories/mate-audio-video-sub-tuner.directory.in
+--- a/desktop-directories/mate-audio-video-sub-tuner.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-tuner.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=Tuner
++Name[hu]=Tuner
++Icon=applications-multimedia
++Type=Directory
+diff -Naur a/desktop-directories/mate-audio-video-sub-tv.directory.in b/desktop-directories/mate-audio-video-sub-tv.directory.in
+--- a/desktop-directories/mate-audio-video-sub-tv.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-audio-video-sub-tv.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=TV
++Name[hu]=TV
++Comment=TV applications
++Comment[hu]=TV alkalmazások
++Icon=video-display
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-action.directory.in b/desktop-directories/mate-game-sub-action.directory.in
+--- a/desktop-directories/mate-game-sub-action.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-action.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Action
++Name[hu]=Akció
++Comment=Action game
++Comment[hu]=Akciójáték
++Icon=weather-storm
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-adventure.directory.in b/desktop-directories/mate-game-sub-adventure.directory.in
+--- a/desktop-directories/mate-game-sub-adventure.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-adventure.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Adventure
++Name[hu]=Kaland
++Comment=Adventure style game
++Comment[hu]=Kalandjáték
++Icon=applications-games
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-arcade.directory.in b/desktop-directories/mate-game-sub-arcade.directory.in
+--- a/desktop-directories/mate-game-sub-arcade.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-arcade.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Arcade
++Name[hu]=Ügyességi
++Comment=Arcade style game
++Comment[hu]=Ügyességi játék
++Icon=package_games_arcade
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-blocks.directory.in b/desktop-directories/mate-game-sub-blocks.directory.in
+--- a/desktop-directories/mate-game-sub-blocks.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-blocks.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Blocks
++Name[hu]=Kirakós
++Comment=Falling blocks game
++Comment[hu]=Potyogó blokkok játék (pl. tetris)
++Icon=package_games_board
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-board.directory.in b/desktop-directories/mate-game-sub-board.directory.in
+--- a/desktop-directories/mate-game-sub-board.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-board.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Board
++Name[hu]=Táblás
++Comment=Board game
++Comment[hu]=Táblajáték
++Icon=package_games_board
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-card.directory.in b/desktop-directories/mate-game-sub-card.directory.in
+--- a/desktop-directories/mate-game-sub-card.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-card.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Card
++Name[hu]=Kártya
++Comment=Card game
++Comment[hu]=Kártyajáték
++Icon=package_games_card
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-kids.directory.in b/desktop-directories/mate-game-sub-kids.directory.in
+--- a/desktop-directories/mate-game-sub-kids.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-kids.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Kids
++Name[hu]=Gyerekeknek
++Comment=Game for kids
++Comment[hu]=Játék gyerekeknek
++Icon=face-smile
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-logic.directory.in b/desktop-directories/mate-game-sub-logic.directory.in
+--- a/desktop-directories/mate-game-sub-logic.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-logic.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Logic
++Name[hu]=Logikai
++Comment=Logic game
++Comment[hu]=Logikai játék
++Icon=system-run
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-roleplaying.directory.in b/desktop-directories/mate-game-sub-roleplaying.directory.in
+--- a/desktop-directories/mate-game-sub-roleplaying.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-roleplaying.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=Role playing
++Name[hu]=Szerepjáték
++Icon=avatar-default
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-simulation.directory.in b/desktop-directories/mate-game-sub-simulation.directory.in
+--- a/desktop-directories/mate-game-sub-simulation.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-simulation.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Simulation
++Name[hu]=Szimuláció
++Comment=Simulation game
++Comment[hu]=Szimulációs játék
++Icon=applications-games
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-sports.directory.in b/desktop-directories/mate-game-sub-sports.directory.in
+--- a/desktop-directories/mate-game-sub-sports.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-sports.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Sports
++Name[hu]=Sport
++Comment=Sports game
++Comment[hu]=Sport játék
++Icon=stock_scores
++Type=Directory
+diff -Naur a/desktop-directories/mate-game-sub-strategy.directory.in b/desktop-directories/mate-game-sub-strategy.directory.in
+--- a/desktop-directories/mate-game-sub-strategy.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-game-sub-strategy.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Strategy
++Name[hu]=Stratégia
++Comment=Strategy game
++Comment[hu]=Stratégiai játék
++Icon=package_games_strategy
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-chat.directory.in b/desktop-directories/mate-network-sub-chat.directory.in
+--- a/desktop-directories/mate-network-sub-chat.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-chat.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Chat
++Name[hu]=Chat
++Comment=Chat client
++Comment[hu]=Chat kliens
++Icon=user-available
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-dialup.directory.in b/desktop-directories/mate-network-sub-dialup.directory.in
+--- a/desktop-directories/mate-network-sub-dialup.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-dialup.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Dial-up
++Name[hu]=Tárcsázó
++Comment=Dial-up program
++Comment[hu]=Tárcsázó program
++Icon=modem
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-email.directory.in b/desktop-directories/mate-network-sub-email.directory.in
+--- a/desktop-directories/mate-network-sub-email.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-email.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Email
++Name[hu]=E-mail
++Comment=Email client
++Comment[hu]=E-mail kliens
++Icon=mail-send
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-feed.directory.in b/desktop-directories/mate-network-sub-feed.directory.in
+--- a/desktop-directories/mate-network-sub-feed.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-feed.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Feed
++Name[hu]=Hírforrások
++Comment=RSS, podcast and other subscription based contents
++Comment[hu]=RSS, podcast és más, feliratkozás-alapú tartalom
++Icon=applications-internet
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-filetransfer.directory.in b/desktop-directories/mate-network-sub-filetransfer.directory.in
+--- a/desktop-directories/mate-network-sub-filetransfer.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-filetransfer.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=File transfer
++Name[hu]=Fájlátvitel
++Comment=File transfer tool (e.g. FTP)
++Comment[hu]=Eszköz fájlátvitelhez (pl. FTP)
++Icon=emblem-downloads
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-hamradio.directory.in b/desktop-directories/mate-network-sub-hamradio.directory.in
+--- a/desktop-directories/mate-network-sub-hamradio.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-hamradio.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=HAM radio
++Name[hu]=Amatőr rádió
++Comment=HAM radio software
++Comment[hu]=Programok amatőr rádiózáshoz
++Icon=applications-internet
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-instantmessaging.directory.in b/desktop-directories/mate-network-sub-instantmessaging.directory.in
+--- a/desktop-directories/mate-network-sub-instantmessaging.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-instantmessaging.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Instant messaging
++Name[hu]=Azonnali üzenetküldő
++Comment=Instant messaging client
++Comment[hu]=Azonnali üzenetküldő kliens
++Icon=user-available
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-ircclient.directory.in b/desktop-directories/mate-network-sub-ircclient.directory.in
+--- a/desktop-directories/mate-network-sub-ircclient.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-ircclient.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=IRC client
++Name[hu]=IRC kliens
++Icon=user-available
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-news.directory.in b/desktop-directories/mate-network-sub-news.directory.in
+--- a/desktop-directories/mate-network-sub-news.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-news.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=News
++Name[hu]=Hírek
++Comment=News reader or news ticker
++Comment[hu]=Hírolvasó
++Icon=internet-news-reader
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-p2p.directory.in b/desktop-directories/mate-network-sub-p2p.directory.in
+--- a/desktop-directories/mate-network-sub-p2p.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-p2p.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=P2P
++Name[hu]=P2P
++Comment=P2P program
++Comment[hu]=P2P program
++Icon=emblem-downloads
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-remoteaccess.directory.in b/desktop-directories/mate-network-sub-remoteaccess.directory.in
+--- a/desktop-directories/mate-network-sub-remoteaccess.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-remoteaccess.directory.in	2023-01-20 12:47:39.142438408 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Remote access
++Name[hu]=Távoli elérés
++Comment=Tool to remotely manage your PC
++Comment[hu]=A számítógép távoli elérése
++Icon=preferences-desktop-remote-desktop
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-telephony.directory.in b/desktop-directories/mate-network-sub-telephony.directory.in
+--- a/desktop-directories/mate-network-sub-telephony.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-telephony.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Telephony
++Name[hu]=Telefonálás
++Comment=Telephony via PC
++Comment[hu]=Telefonálás számítógépen keresztül
++Icon=call-start
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-videoconference.directory.in b/desktop-directories/mate-network-sub-videoconference.directory.in
+--- a/desktop-directories/mate-network-sub-videoconference.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-videoconference.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Video conference
++Name[hu]=Videókonferencia
++Comment=Video conference software
++Comment[hu]=Videókonferencia program
++Icon=camera-web
++Type=Directory
+diff -Naur a/desktop-directories/mate-network-sub-webbrowser.directory.in b/desktop-directories/mate-network-sub-webbrowser.directory.in
+--- a/desktop-directories/mate-network-sub-webbrowser.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-network-sub-webbrowser.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=Web browser
++Name[hu]=Webböngésző
++Icon=web-browser
++Type=Directory
+diff -Naur a/desktop-directories/mate-system-tools-sub-emulator.directory.in b/desktop-directories/mate-system-tools-sub-emulator.directory.in
+--- a/desktop-directories/mate-system-tools-sub-emulator.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-system-tools-sub-emulator.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Emulator
++Name[hu]=Emulátor
++Comment=Emulator of another platform
++Comment[hu]=Más platform emulátora
++Icon=applications-system
++Type=Directory
+diff -Naur a/desktop-directories/mate-system-tools-sub-filemanager.directory.in b/desktop-directories/mate-system-tools-sub-filemanager.directory.in
+--- a/desktop-directories/mate-system-tools-sub-filemanager.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-system-tools-sub-filemanager.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=File manager
++Name[hu]=Fájlkezelő
++Icon=system-file-manager
++Type=Directory
+diff -Naur a/desktop-directories/mate-system-tools-sub-filesystem.directory.in b/desktop-directories/mate-system-tools-sub-filesystem.directory.in
+--- a/desktop-directories/mate-system-tools-sub-filesystem.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-system-tools-sub-filesystem.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Filesystem
++Name[hu]=Fájlrendszer
++Comment=Filesystem tool
++Comment[hu]=Fájlrendszer-kezelő eszköz
++Icon=applications-system
++Type=Directory
+diff -Naur a/desktop-directories/mate-system-tools-sub-monitor.directory.in b/desktop-directories/mate-system-tools-sub-monitor.directory.in
+--- a/desktop-directories/mate-system-tools-sub-monitor.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-system-tools-sub-monitor.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Monitor
++Name[hu]=Rendszerfigyelő
++Comment=Monitor application/applet that monitors some resource or activity
++Comment[hu]=Erőforrás vagy aktivitás figyelő alkalmazás
++Icon=utilities-system-monitor
++Type=Directory
+diff -Naur a/desktop-directories/mate-system-tools-sub-terminalemulator.directory.in b/desktop-directories/mate-system-tools-sub-terminalemulator.directory.in
+--- a/desktop-directories/mate-system-tools-sub-terminalemulator.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-system-tools-sub-terminalemulator.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Terminal emulator
++Name[hu]=Terminálemulátor
++Comment=Terminal emulator application
++Comment[hu]=Terminálemulátor alkalmazás
++Icon=utilities-terminal
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-archiving.directory.in b/desktop-directories/mate-utility-sub-archiving.directory.in
+--- a/desktop-directories/mate-utility-sub-archiving.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-archiving.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Archiving
++Name[hu]=Archiválás
++Comment=Tool to archive/backup data
++Comment[hu]=Adat archiváló/visszaállító eszköz
++Icon=package-x-generic
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-calculator.directory.in b/desktop-directories/mate-utility-sub-calculator.directory.in
+--- a/desktop-directories/mate-utility-sub-calculator.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-calculator.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=Calculator
++Name[hu]=Számológép
++Icon=accessories-calculator
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-clock.directory.in b/desktop-directories/mate-utility-sub-clock.directory.in
+--- a/desktop-directories/mate-utility-sub-clock.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-clock.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=Clock
++Name[hu]=Óra
++Icon=mate-panel-clock
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-compression.directory.in b/desktop-directories/mate-utility-sub-compression.directory.in
+--- a/desktop-directories/mate-utility-sub-compression.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-compression.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Compression
++Name[hu]=Tömörítés
++Comment=Tool to manage compressed data/archives
++Comment[hu]=Tömörített adatokat/archívumokat kezelő eszköz
++Icon=package-x-generic
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-filetool.directory.in b/desktop-directories/mate-utility-sub-filetool.directory.in
+--- a/desktop-directories/mate-utility-sub-filetool.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-filetool.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,5 @@
++[Desktop Entry]
++Name=File tool
++Name[hu]=Fájlkezelő eszköz
++Icon=system-file-manager
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-telephonytool.directory.in b/desktop-directories/mate-utility-sub-telephonytool.directory.in
+--- a/desktop-directories/mate-utility-sub-telephonytool.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-telephonytool.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Telephony tool
++Name[hu]=Segédeszköz telefonáláshoz
++Comment=Telephony tool, to dial a number, manage PBX, ...
++Comment[hu]=Segédeszköz telefonáláshoz; tárcsázás, PBX kezelése, ...
++Icon=call-start
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-texteditor.directory.in b/desktop-directories/mate-utility-sub-texteditor.directory.in
+--- a/desktop-directories/mate-utility-sub-texteditor.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-texteditor.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Text editor
++Name[hu]=Szövegszerkesztő
++Comment=Text editing
++Comment[hu]=Szöveg szerkesztése
++Icon=accessories-text-editor
++Type=Directory
+diff -Naur a/desktop-directories/mate-utility-sub-texttool.directory.in b/desktop-directories/mate-utility-sub-texttool.directory.in
+--- a/desktop-directories/mate-utility-sub-texttool.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/mate-utility-sub-texttool.directory.in	2023-01-20 12:47:39.146438417 +0100
+@@ -0,0 +1,7 @@
++[Desktop Entry]
++Name=Text tool
++Name[hu]=Szöveg kezelő
++Comment=Text tool utility
++Comment[hu]=Szöveg kezelő eszköz
++Icon=accessories-text-editor
++Type=Directory
+diff -Naur a/layout/mate-applications.menu b/layout/mate-applications.menu
+--- a/layout/mate-applications.menu	2022-11-11 21:10:18.000000000 +0100
++++ b/layout/mate-applications.menu	2023-01-20 12:47:39.146438417 +0100
+@@ -34,6 +34,72 @@
+         <Not><Category>System</Category></Not>
+       </And>
+     </Include>
++    <Exclude>
++        <Category>Archiving</Category>
++        <Category>Calculator</Category>
++        <Category>Clock</Category>
++        <Category>Compression</Category>
++        <Category>FileTools</Category>
++        <Category>TelephonyTools</Category>
++        <Category>TextEditor</Category>
++        <Category>TextTools</Category>
++    </Exclude>
++    <Menu>
++      <Name>Archiving</Name>
++      <Directory>mate-utility-sub-archiving.directory</Directory>
++      <Include>
++        <Category>Archiving</Category>
++      </Include>
++    </Menu>    
++    <Menu>
++      <Name>Calculator</Name>
++      <Directory>mate-utility-sub-calculator.directory</Directory>
++      <Include>
++        <Category>Calculator</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Clock</Name>
++      <Directory>mate-utility-sub-clock.directory</Directory>
++      <Include>
++        <Category>Clock</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Compression</Name>
++      <Directory>mate-utility-sub-compression.directory</Directory>
++      <Include>
++        <Category>Compression</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>File tools</Name>
++      <Directory>mate-utility-sub-filetool.directory</Directory>
++      <Include>
++        <Category>FileTools</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Telephony tools</Name>
++      <Directory>mate-utility-sub-telephonytool.directory</Directory>
++      <Include>
++        <Category>TelephonyTools</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Text editor</Name>
++      <Directory>mate-utility-sub-texteditor.directory</Directory>
++      <Include>
++        <Category>TextEditor</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Text tools</Name>
++      <Directory>mate-utility-sub-texttool.directory</Directory>
++      <Include>
++        <Category>TextTools</Category>
++      </Include>
++    </Menu>
+   </Menu> <!-- End Accessories -->
+ 
+   <!-- Accessibility submenu -->
+@@ -76,10 +142,108 @@
+     <Name>Games</Name>
+     <Directory>mate-game.directory</Directory>
+     <Include>
+-      <And>
+-        <Category>Game</Category>
+-      </And>
++		<And>
++			<Category>Game</Category>
++		</And>
+     </Include>
++    <Exclude>
++		<Category>ActionGame</Category>
++		<Category>AdventureGame</Category>
++		<Category>ArcadeGame</Category>
++		<Category>BoardGame</Category>
++		<Category>BlocksGame</Category>
++		<Category>CardGame</Category>
++		<Category>KidsGame</Category>
++		<Category>LogicGame</Category>
++		<Category>RolePlaying</Category>
++		<Category>Simulation</Category>
++		<Category>SportsGame</Category>
++		<Category>StrategyGame</Category>
++    </Exclude>
++    <Menu>
++      <Name>Action</Name>
++      <Directory>mate-game-sub-action.directory</Directory>
++      <Include>
++        <Category>ActionGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Adventure</Name>
++      <Directory>mate-game-sub-adventure.directory</Directory>
++      <Include>
++        <Category>AdventureGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Arcade</Name>
++      <Directory>mate-game-sub-arcade.directory</Directory>
++      <Include>
++        <Category>ArcadeGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Board</Name>
++      <Directory>mate-game-sub-board.directory</Directory>
++      <Include>
++        <Category>BoardGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Blocks</Name>
++      <Directory>mate-game-sub-blocks.directory</Directory>
++      <Include>
++        <Category>BlocksGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Cards</Name>
++      <Directory>mate-game-sub-card.directory</Directory>
++      <Include>
++        <Category>CardGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Kids</Name>
++      <Directory>mate-game-sub-kids.directory</Directory>
++      <Include>
++        <Category>KidsGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Logic</Name>
++      <Directory>mate-game-sub-logic.directory</Directory>
++      <Include>
++        <Category>LogicGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Role Playing</Name>
++      <Directory>mate-game-sub-roleplaying.directory</Directory>
++      <Include>
++        <Category>RolePlaying</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Simulation</Name>
++      <Directory>mate-game-sub-simulation.directory</Directory>
++      <Include>
++        <Category>Simulation</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Sports</Name>
++      <Directory>mate-game-sub-sports.directory</Directory>
++      <Include>
++        <Category>SportsGame</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Strategy</Name>
++      <Directory>mate-game-sub-strategy.directory</Directory>
++      <Include>
++        <Category>StrategyGame</Category>
++      </Include>
++    </Menu>
+   </Menu> <!-- End Games -->
+ 
+   <!-- Graphics -->
+@@ -102,6 +266,120 @@
+         <Category>Network</Category>
+       </And>
+     </Include>
++    <Exclude>
++        <Category>Chat</Category>
++        <Category>Dialup</Category>
++        <Category>Email</Category>
++        <Category>Feed</Category>
++        <Category>FileTransfer</Category>
++        <Category>HamRadio</Category>
++        <Category>InstantMessaging</Category>
++        <Category>IRCClient</Category>
++        <Category>News</Category>
++        <Category>P2P</Category>
++        <Category>RemoteAccess</Category>
++        <Category>Telephony</Category>
++        <Category>VideoConference</Category>
++        <Category>WebBrowser</Category>
++    </Exclude>
++    <Menu>
++      <Name>Chat</Name>
++      <Directory>mate-network-sub-chat.directory</Directory>
++      <Include>
++        <Category>Chat</Category>
++      </Include>
++    </Menu>    
++    <Menu>
++      <Name>Dial-up</Name>
++      <Directory>mate-network-sub-dialup.directory</Directory>
++      <Include>
++        <Category>Dialup</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Email</Name>
++      <Directory>mate-network-sub-email.directory</Directory>
++      <Include>
++        <Category>Email</Category>
++      </Include>
++    </Menu>  
++    <Menu>
++      <Name>Feed</Name>
++      <Directory>mate-network-sub-feed.directory</Directory>
++      <Include>
++        <Category>Feed</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>File transfer</Name>
++      <Directory>mate-network-sub-filetransfer.directory</Directory>
++      <Include>
++        <Category>FileTransfer</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Ham radio</Name>
++      <Directory>mate-network-sub-hamradio.directory</Directory>
++      <Include>
++        <Category>HamRadio</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Instant messaging</Name>
++      <Directory>mate-network-sub-instantmessaging.directory</Directory>
++      <Include>
++        <Category>InstantMessaging</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>IRC client</Name>
++      <Directory>mate-network-sub-ircclient.directory</Directory>
++      <Include>
++        <Category>IRCClient</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>News</Name>
++      <Directory>mate-network-sub-news.directory</Directory>
++      <Include>
++        <Category>News</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>P2P</Name>
++      <Directory>mate-network-sub-p2p.directory</Directory>
++      <Include>
++        <Category>P2P</Category>
++      </Include>
++    </Menu>    
++    <Menu>
++      <Name>Remote access</Name>
++      <Directory>mate-network-sub-remoteaccess.directory</Directory>
++      <Include>
++        <Category>RemoteAccess</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Telephony</Name>
++      <Directory>mate-network-sub-telephony.directory</Directory>
++      <Include>
++        <Category>telephony</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Video conference</Name>
++      <Directory>mate-network-sub-videoconference.directory</Directory>
++      <Include>
++        <Category>VideoConference</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Web browser</Name>
++      <Directory>mate-network-sub-webbrowser.directory</Directory>
++      <Include>
++        <Category>WebBrowser</Category>
++      </Include>
++    </Menu>
+   </Menu>   <!-- End Internet -->
+ 
+   <!-- Multimedia -->
+@@ -113,6 +391,88 @@
+         <Category>AudioVideo</Category>
+       </And>
+     </Include>
++    <Exclude>
++        <Category>AudioVideoEditing</Category>
++        <Category>DiscBurning</Category>
++        <Category>Midi</Category>
++        <Category>Mixer</Category>
++        <Category>Music</Category>
++        <Category>Player</Category>
++        <Category>Recorder</Category>
++        <Category>Sequencer</Category>
++        <Category>Tuner</Category>
++        <Category>TV</Category>
++    </Exclude>
++    <Menu>
++      <Name>Audio/Video editing</Name>
++      <Directory>mate-audio-video-sub-audiovideoediting.directory</Directory>
++      <Include>
++        <Category>AudioVideoEditing</Category>
++      </Include>
++    </Menu>    
++    <Menu>
++      <Name>Disc burning</Name>
++      <Directory>mate-audio-video-sub-discburning.directory</Directory>
++      <Include>
++        <Category>DiscBurning</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Midi</Name>
++      <Directory>mate-audio-video-sub-midi.directory</Directory>
++      <Include>
++        <Category>Midi</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Mixer</Name>
++      <Directory>mate-audio-video-sub-mixer.directory</Directory>
++      <Include>
++        <Category>Mixer</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Music</Name>
++      <Directory>mate-audio-video-sub-music.directory</Directory>
++      <Include>
++        <Category>Music</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Player</Name>
++      <Directory>mate-audio-video-sub-player.directory</Directory>
++      <Include>
++        <Category>Player</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Recorder</Name>
++      <Directory>mate-audio-video-sub-recorder.directory</Directory>
++      <Include>
++        <Category>Recorder</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Sequencer</Name>
++      <Directory>mate-audio-video-sequencer.directory</Directory>
++      <Include>
++        <Category>Sequencer</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Tuner</Name>
++      <Directory>mate-audio-video-sub-tuner.directory</Directory>
++      <Include>
++        <Category>Tuner</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>TV</Name>
++      <Directory>mate-audio-video-tv.directory</Directory>
++      <Include>
++        <Category>TV</Category>
++      </Include>
++    </Menu>
+   </Menu>   <!-- End Multimedia -->
+ 
+   <!-- Office -->
+@@ -133,9 +493,51 @@
+     <Include>
+       <And>
+         <Category>System</Category>
+-        <Not><Category>Settings</Category></Not>
+       </And>
+     </Include>
++    <Exclude>
++        <Category>Settings</Category>
++        <Category>Emulator</Category>
++        <Category>FileManager</Category>
++        <Category>Filesystem</Category>
++        <Category>Monitor</Category>
++        <Category>TerminalEmulator</Category>
++    </Exclude>
++    <Menu>
++      <Name>Emulator</Name>
++      <Directory>mate-system-tools-sub-emulator.directory</Directory>
++      <Include>
++        <Category>Emulator</Category>
++      </Include>
++    </Menu>    
++    <Menu>
++      <Name>Filemanager</Name>
++      <Directory>mate-system-tools-sub-filemanager.directory</Directory>
++      <Include>
++        <Category>FileManager</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Filesystem</Name>
++      <Directory>mate-system-tools-sub-filesystem.directory</Directory>
++      <Include>
++        <Category>Filesystem</Category>
++      </Include>
++    </Menu>   
++    <Menu>
++      <Name>Monitor</Name>
++      <Directory>mate-system-tools-sub-monitor.directory</Directory>
++      <Include>
++        <Category>Monitor</Category>
++      </Include>
++    </Menu>
++    <Menu>
++      <Name>Terminal</Name>
++      <Directory>mate-system-tools-sub-terminalemulator.directory</Directory>
++      <Include>
++        <Category>TerminalEmulator</Category>
++      </Include>
++    </Menu>      
+   </Menu>   <!-- End System Tools -->
+ 
+   <!-- Collection-->
+diff -Naur a/po/POTFILES.in b/po/POTFILES.in
+--- a/po/POTFILES.in	2022-11-11 21:10:18.000000000 +0100
++++ b/po/POTFILES.in	2023-01-20 12:47:39.146438417 +0100
+@@ -1,23 +1,72 @@
+ # List of source files containing translatable strings.
+ # Please keep this file sorted alphabetically.
+ desktop-directories/mate-audio-video.directory.in
++desktop-directories/mate-audio-video-sub-audiovideoediting.directory.in
++desktop-directories/mate-audio-video-sub-discburning.directory.in
++desktop-directories/mate-audio-video-sub-midi.directory.in
++desktop-directories/mate-audio-video-sub-mixer.directory.in
++desktop-directories/mate-audio-video-sub-music.directory.in
++desktop-directories/mate-audio-video-sub-player.directory.in
++desktop-directories/mate-audio-video-sub-recorder.directory.in
++desktop-directories/mate-audio-video-sub-sequencer.directory.in
++desktop-directories/mate-audio-video-sub-tuner.directory.in
++desktop-directories/mate-audio-video-sub-tv.directory.in
+ desktop-directories/mate-collection.directory.in
+ desktop-directories/mate-development.directory.in
+ desktop-directories/mate-education.directory.in
+ desktop-directories/mate-game.directory.in
++desktop-directories/mate-game-sub-action.directory.in
++desktop-directories/mate-game-sub-adventure.directory.in
++desktop-directories/mate-game-sub-arcade.directory.in
++desktop-directories/mate-game-sub-board.directory.in
++desktop-directories/mate-game-sub-blocks.directory.in
++desktop-directories/mate-game-sub-card.directory.in
++desktop-directories/mate-game-sub-kids.directory.in
++desktop-directories/mate-game-sub-logic.directory.in
++desktop-directories/mate-game-sub-roleplaying.directory.in
++desktop-directories/mate-game-sub-simulation.directory.in
++desktop-directories/mate-game-sub-sports.directory.in
++desktop-directories/mate-game-sub-strategy.directory.in
+ desktop-directories/mate-graphics.directory.in
+ desktop-directories/mate-hardware.directory.in
+ desktop-directories/mate-internet-and-network.directory.in
+ desktop-directories/mate-look-and-feel.directory.in
+ desktop-directories/mate-network.directory.in
++desktop-directories/mate-network-sub-chat.directory.in
++desktop-directories/mate-network-sub-dialup.directory.in
++desktop-directories/mate-network-sub-email.directory.in
++desktop-directories/mate-network-sub-feed.directory.in
++desktop-directories/mate-network-sub-filetransfer.directory.in
++desktop-directories/mate-network-sub-hamradio.directory.in
++desktop-directories/mate-network-sub-instantmessaging.directory.in
++desktop-directories/mate-network-sub-ircclient.directory.in
++desktop-directories/mate-network-sub-news.directory.in
++desktop-directories/mate-network-sub-p2p.directory.in
++desktop-directories/mate-network-sub-remoteaccess.directory.in
++desktop-directories/mate-network-sub-telephony.directory.in
++desktop-directories/mate-network-sub-videoconference.directory.in
++desktop-directories/mate-network-sub-webbrowser.directory.in
+ desktop-directories/mate-office.directory.in
+ desktop-directories/mate-personal.directory.in
+ desktop-directories/mate-settings-system.directory.in
+ desktop-directories/mate-settings.directory.in
+ desktop-directories/mate-system.directory.in
+ desktop-directories/mate-system-tools.directory.in
++desktop-directories/mate-system-tools-sub-emulator.directory.in
++desktop-directories/mate-system-tools-sub-filemanager.directory.in
++desktop-directories/mate-system-tools-sub-filesystem.directory.in
++desktop-directories/mate-system-tools-sub-monitor.directory.in
++desktop-directories/mate-system-tools-sub-terminalemulator.directory.in
+ desktop-directories/mate-utility-accessibility.directory.in
+ desktop-directories/mate-utility.directory.in
++desktop-directories/mate-utility-sub-archiving.directory.in
++desktop-directories/mate-utility-sub-calculator.directory.in
++desktop-directories/mate-utility-sub-clock.directory.in
++desktop-directories/mate-utility-sub-compression.directory.in
++desktop-directories/mate-utility-sub-filetool.directory.in
++desktop-directories/mate-utility-sub-telephonytool.directory.in
++desktop-directories/mate-utility-sub-texteditor.directory.in
++desktop-directories/mate-utility-sub-texttool.directory.in
+ desktop-directories/mate-menu-applications.directory.in
+ desktop-directories/mate-menu-system.directory.in
+ desktop-directories/mate-other.directory.in

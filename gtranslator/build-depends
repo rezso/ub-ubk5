@@ -1,0 +1,9 @@
+gsettings-desktop-schemas
+gtk4-dev
+gtksourceview5-dev
+intltool
+itstool
+json-glib-dev
+libadwaita-dev
+libgda-dev
+libsoup3-dev

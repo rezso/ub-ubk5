@@ -1,0 +1,5 @@
+#!/bin/sh -eux
+
+./make_configure
+LIB_CUPS="/usr/lib/cups" \
+ub_compile

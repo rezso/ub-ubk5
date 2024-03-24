@@ -1,0 +1,14 @@
+#!/bin/sh -eux
+
+ub_compile \
+	--sysconfdir=/etc/ssh \
+	--datadir=/usr/share/openssh \
+	--disable-strip \
+	--with-kerberos5=/usr \
+	--with-libedit \
+	--with-md5-passwords \
+	--with-pam \
+    --with-pid-dir=/run \
+    --with-ssl-engine \
+	--with-xauth=/usr/bin/xauth \
+	--without-zlib-version-check

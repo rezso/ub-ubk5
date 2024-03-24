@@ -1,0 +1,77 @@
+diff -Naur a/misc-utils/whereis.c b/misc-utils/whereis.c
+--- a/misc-utils/whereis.c	2022-01-06 14:52:17.000000000 +0100
++++ b/misc-utils/whereis.c	2022-07-16 16:43:39.624727281 +0200
+@@ -107,48 +107,21 @@
+ 	"/usr/local/lib/" MULTIARCHTRIPLET,
+ #endif
+ 	"/usr/lib",
+-	"/usr/lib32",
+-	"/usr/lib64",
+ 	"/etc",
+ 	"/usr/etc",
+ 	"/lib",
+-	"/lib32",
+-	"/lib64",
+ 	"/usr/games",
+ 	"/usr/games/bin",
+ 	"/usr/games/lib",
+-	"/usr/emacs/etc",
+-	"/usr/lib/emacs/*/etc",
+-	"/usr/TeX/bin",
+-	"/usr/tex/bin",
+-	"/usr/interviews/bin/LINUX",
+-
+-	"/usr/X11R6/bin",
+-	"/usr/X386/bin",
+-	"/usr/bin/X11",
+-	"/usr/X11/bin",
+-	"/usr/X11R5/bin",
+ 
+ 	"/usr/local/bin",
+ 	"/usr/local/sbin",
+ 	"/usr/local/etc",
+ 	"/usr/local/lib",
+ 	"/usr/local/games",
+-	"/usr/local/games/bin",
+-	"/usr/local/emacs/etc",
+-	"/usr/local/TeX/bin",
+-	"/usr/local/tex/bin",
+-	"/usr/local/bin/X11",
+-
+-	"/usr/contrib",
+-	"/usr/hosts",
++	
+ 	"/usr/include",
+ 
+-	"/usr/g++-include",
+-
+-	"/usr/ucb",
+-	"/usr/old",
+-	"/usr/new",
+ 	"/usr/local",
+ 	"/usr/libexec",
+ 	"/usr/share",
+@@ -158,23 +131,13 @@
+ };
+ 
+ static const char *mandirs[] = {
+-	"/usr/man/*",
+ 	"/usr/share/man/*",
+-	"/usr/X386/man/*",
+-	"/usr/X11/man/*",
+-	"/usr/TeX/man/*",
+-	"/usr/interviews/man/mann",
+ 	"/usr/share/info",
+ 	NULL
+ };
+ 
+ static const char *srcdirs[] = {
+ 	"/usr/src/*",
+-	"/usr/src/lib/libc/*",
+-	"/usr/src/lib/libc/net/*",
+-	"/usr/src/ucb/pascal",
+-	"/usr/src/ucb/pascal/utilities",
+-	"/usr/src/undoc",
+ 	NULL
+ };
+ 

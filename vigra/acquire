@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+Version-${UB_VERSION//./-}.tar.gz vigra-Version-${UB_VERSION//./-}/
+	https://github.com/ukoethe/vigra/archive/refs/tags/

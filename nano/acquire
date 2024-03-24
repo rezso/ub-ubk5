@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+nano-"$UB_VERSION".tar.gz nano-"$UB_VERSION"/
+	https://ftp.gnu.org/gnu/nano/

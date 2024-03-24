@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+pyhamcrest-${UB_VERSION}.tar.gz pyhamcrest-${UB_VERSION}/
+	https://pypi.python.org/packages/source/P/PyHamcrest/

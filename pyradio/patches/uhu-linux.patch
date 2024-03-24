@@ -1,0 +1,9 @@
+diff -Naur a/pyradio/config b/pyradio/config
+--- a/pyradio/config	2023-04-07 17:04:03.000000000 +0200
++++ b/pyradio/config	2023-04-19 12:52:41.050090826 +0200
+@@ -148,4 +148,4 @@
+ #
+ # Packagers must populate this paramater as needed!
+ #
+-distro = None
++distro = UHU-Linux

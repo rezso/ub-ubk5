@@ -1,0 +1,39 @@
+kf5-kwindowsystem
+kf5-kconfig # libkscreen5
+kf5-kwayland # libkscreen5
+kf5-kidletime # lxqt-powermanagement
+kf5-solid # lxqt-powermanagement, lxqt-panel
+libkscreen5 # lxqt-config
+polkit-qt5 # lxqt-policykit, liblxqt
+lxqt-build-tools
+libqtxdg
+qtxdg-tools
+liblxqt
+compton-conf
+libsysstat
+lxqt-menu-data
+libfm-qt
+lxqt-themes
+obconf-qt
+pavucontrol-qt
+qtermwidget
+lximage-qt
+lxqt-about
+lxqt-admin
+lxqt-archiver
+lxqt-config
+lxqt-globalkeys
+lxqt-notificationd
+lxqt-openssh-askpass
+lxqt-policykit
+lxqt-powermanagement
+lxqt-qtplugin
+lxqt-session
+lxqt-sudo
+pcmanfm-qt
+qterminal
+lxqt-runner
+libstatgrab
+lxqt-panel
+screengrab
+lxqt

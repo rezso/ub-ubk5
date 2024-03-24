@@ -1,0 +1,14 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dlibmpv=true \
+    -Dbuild-date=false \
+    -Dcdda=enabled \
+    -Ddvbin=enabled \
+    -Ddvdnav=enabled \
+    -Dlibarchive=enabled \
+    -Degl-wayland=enabled \
+    -Degl-x11=enabled \
+    -Dgl-x11=enabled \
+    -Dwayland=enabled \
+    -Dx11=enabled

@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+cd src
+
+# rm autogen.sh
+ub_compile

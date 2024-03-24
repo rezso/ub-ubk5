@@ -1,0 +1,22 @@
+diff -Naur a/libkonq/KonqConfig.cmake.in b/libkonq/KonqConfig.cmake.in
+--- a/libkonq/KonqConfig.cmake.in	2023-12-18 22:51:47.000000000 +0100
++++ b/libkonq/KonqConfig.cmake.in	2023-12-24 20:39:24.540583507 +0100
+@@ -1,11 +1,11 @@
+ @PACKAGE_INIT@
+ 
+ ​include(CMakeFindDependencyMacro)
+-find_dependency(KF${KF_MAJOR_VERSION}XmlGui)
+-find_dependency(KF${KF_MAJOR_VERSION}Config)
+-find_dependency(KF${KF_MAJOR_VERSION}KIO)
+-find_dependency(KF${KF_MAJOR_VERSION}CoreAddons)
+-find_dependency(KF${KF_MAJOR_VERSION}Service)
+-find_dependency(KF${KF_MAJOR_VERSION}Parts)
++find_dependency(KF6XmlGui)
++find_dependency(KF6Config)
++find_dependency(KF6KIO)
++find_dependency(KF6CoreAddons)
++find_dependency(KF6Service)
++find_dependency(KF6Parts)
+ 
+-include("${CMAKE_CURRENT_LIST_DIR}/KF${KF_MAJOR_VERSION}KonqTargets.cmake")
++include("${CMAKE_CURRENT_LIST_DIR}/KF6KonqTargets.cmake")

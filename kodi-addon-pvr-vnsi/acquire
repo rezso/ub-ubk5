@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}-Nexus.tar.gz pvr.vdr.vnsi-${UB_VERSION}-Nexus/
+    https://github.com/kodi-pvr/pvr.vdr.vnsi/archive/refs/tags/

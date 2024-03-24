@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+taglib-${UB_VERSION}.tar.gz taglib-${UB_VERSION}/
+	https://taglib.org/releases/

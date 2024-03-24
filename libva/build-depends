@@ -1,0 +1,6 @@
+libdrm-dev
+libglvnd-dev
+libx11-dev
+libxext-dev
+libxfixes-dev
+wayland-dev

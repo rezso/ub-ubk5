@@ -1,0 +1,118 @@
+diff -Nur orig/Makefile mod/Makefile
+--- orig/Makefile	2022-04-09 09:00:48.000000000 +0200
++++ mod/Makefile	2022-04-09 10:02:39.942299744 +0200
+@@ -7,7 +7,7 @@
+ # TBD: is this still true?
+ 
+ # External image lib to use: imagemagick, graphicsmagick, imlib2 or none
+-IMAGELIB = imagemagick
++IMAGELIB = graphicsmagick
+ 
+ 
+ # DO NOT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOU'RE DOING
+@@ -33,28 +33,32 @@
+ 
+ ### The directory environment:
+ 
+-VDRDIR = ../../..
+-LIBDIR = ../../lib
++# Use package data if installed...otherwise assume we're under the VDR source directory:
++PKGCFG = $(if $(VDRDIR),$(shell pkg-config --variable=$(1) $(VDRDIR)/vdr.pc),$(shell pkg-config --variable=$(1) vdr || pkg-config --variable=$(1) ../../../vdr.pc))
++LIBDIR = $(DESTDIR)$(call PKGCFG,libdir)
++LOCDIR = $(DESTDIR)$(call PKGCFG,locdir)
++#
+ TMPDIR = /tmp
+ 
+ ### Make sure that necessary options are included (VDR >= 1.7.13):
+ 
+--include $(VDRDIR)/Make.global
+-
+-### Allow user defined options to overwrite defaults:
+-
+--include $(VDRDIR)/Make.config
++export CFLAGS   = $(call PKGCFG,cflags)
++export CXXFLAGS = $(call PKGCFG,cxxflags)
+ 
+ ### The version number of VDR's plugin API (taken from VDR's "config.h"):
+ 
+-APIVERSION = $(shell sed -ne '/define APIVERSION/s/^.*"\(.*\)".*$$/\1/p' \
+-                         $(VDRDIR)/config.h)
++### The version number of VDR's plugin API:
++APIVERSION = $(call PKGCFG,apiversion)
+ 
+ ### The name of the distribution archive:
+ 
+ ARCHIVE = $(PLUGIN)-$(VERSION)
+ PACKAGE = vdr-$(ARCHIVE)
+ 
++### The name of the shared object file:
++
++SOFILE = libvdr-$(PLUGIN).so
++
+ ### The object files (add further files here):
+ 
+ OBJS = $(PLUGIN).o loader.o display.o render.o common.o bitmap.o \
+@@ -85,19 +89,19 @@
+ 	CXXFLAGS += -g -fno-inline
+ 	DEFINES += -DDEBUG
+ else
+-	CXXFLAGS += -O3
++	CXXFLAGS += -O2
+ ifdef BENCH
+ 	DEFINES += -DBENCH
+ endif
+ endif
+ 
+-INCLUDES += -I$(VDRDIR)/include -I.
++INCLUDES += -I.
+ 
+-DEFINES += -D_GNU_SOURCE -DPLUGIN_NAME_I18N='"$(PLUGIN)"'
++DEFINES += -DPLUGIN_NAME_I18N='"$(PLUGIN)"'
+ 
+ ### The main target:
+ 
+-all: libvdr-$(PLUGIN).so i18n
++all: $(SOFILE) i18n
+ 
+ ### Implicit rules:
+ 
+@@ -116,18 +120,16 @@
+ 
+ ### Internationalization (I18N):
+ 
+-PODIR     = po
+-LOCALEDIR = $(VDRDIR)/locale
+ I18Npo    = $(notdir $(wildcard $(PODIR)/*.po))
+ I18Npot   = $(PODIR)/$(PLUGIN).pot
+ 
+ $(I18Npot): $(wildcard *.c)
+ 	@echo GT $@
+-	$(Q)xgettext -C -cTRANSLATORS --no-wrap --no-location -k -ktr -ktrNOOP --package-name=vdr-$(PLUGIN) --package-version=$(VERSION) --msgid-bugs-address=http://projects.vdr-developer.org/projects/show/plg-text2skin -o $@ $^
++	$(Q)xgettext -C -cTRANSLATORS --no-wrap --no-location -k -ktr -ktrNOOP --package-name=vdr-$(PLUGIN) --package-version=$(VERSION) --msgid-bugs-address='<see README>' -o $@ `ls $^`
+ 
+ %.po: $(I18Npot)
+ 	@echo PO $@
+-	$(Q)msgmerge -U --no-wrap --no-location --backup=none -q $@ $<
++	$(Q)msgmerge -U --no-wrap --no-location --backup=none -q -N $@ $<
+ 	@touch $@
+ 
+ $(LOCALEDIR)/%/LC_MESSAGES/vdr-$(PLUGIN).mo: $(PODIR)/%.po
+@@ -140,12 +142,14 @@
+ 
+ ### Targets:
+ 
+-libvdr-$(PLUGIN).so: $(OBJS)
+-	@echo LD $@
++$(SOFILE): $(OBJS)
+ 	$(Q)$(CXX) $(CXXFLAGS) $(LDFLAGS) -shared $(OBJS) $(LIBS) -o $@
+ 	@echo IN $@ $(LIBDIR)/$@.$(APIVERSION)
+-	$(Q)cp --remove-destination $@ $(LIBDIR)/$@.$(APIVERSION)
+-	$(Q)$(STRIP) $(LIBDIR)/$@.$(APIVERSION)
++
++install-lib: $(SOFILE)
++	install -D $^ $(LIBDIR)/$^.$(APIVERSION)
++
++install: install-lib
+ 
+ dist: $(addprefix $(PODIR)/,$(I18Npo)) clean
+ 	@-rm -rf $(TMPDIR)/$(ARCHIVE)

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+tint2-${UB_VERSION}.tar.gz tint2-${UB_VERSION}/
+	https://gitlab.com/o9000/tint2/-/archive/${UB_VERSION}/

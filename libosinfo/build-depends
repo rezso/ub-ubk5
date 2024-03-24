@@ -1,0 +1,8 @@
+check-dev
+gobject-introspection-dev
+hwdata
+intltool
+libsoup3-dev
+libxslt-dev
+meson
+vala-dev

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+FileZilla_${UB_VERSION}_src.tar.xz filezilla-${UB_VERSION}/
+    https://download.filezilla-project.org/client/

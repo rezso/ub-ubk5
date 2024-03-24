@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libXScrnSaver-$UB_VERSION.tar.xz libXScrnSaver-$UB_VERSION/
+	https://www.x.org/releases/individual/lib/

@@ -1,0 +1,17 @@
+gdk-pixbuf-dev
+gobject-introspection-dev
+gssdp-dev
+gstreamer-dev
+gtk3-dev
+gupnp-av-dev
+gupnp-dev
+gupnp-dlna-dev
+intltool
+json-glib-dev
+libgee-dev
+libmediaart-dev
+libunwind-dev
+libxml2-dev
+meson
+tracker-dev
+vala-dev

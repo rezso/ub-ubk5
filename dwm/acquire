@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+dwm-${UB_VERSION}.tar.gz dwm-${UB_VERSION}/
+	https://dl.suckless.org/dwm/

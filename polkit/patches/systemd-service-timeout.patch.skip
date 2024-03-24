@@ -1,0 +1,8 @@
+diff -Naur a/data/polkit.service.in b/data/polkit.service.in
+--- a/data/polkit.service.in	2022-10-26 14:12:24.000000000 +0200
++++ b/data/polkit.service.in	2024-03-03 00:22:20.693251689 +0100
+@@ -6,3 +6,4 @@
+ Type=dbus
+ BusName=org.freedesktop.PolicyKit1
+ ExecStart=@libprivdir@/polkitd --no-debug
++TimeoutSec=60

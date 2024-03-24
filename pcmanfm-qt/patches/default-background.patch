@@ -1,0 +1,12 @@
+diff -Naur a/config/pcmanfm-qt/lxqt/settings.conf.in b/config/pcmanfm-qt/lxqt/settings.conf.in
+--- a/config/pcmanfm-qt/lxqt/settings.conf.in	2022-04-16 02:59:21.000000000 +0200
++++ b/config/pcmanfm-qt/lxqt/settings.conf.in	2022-04-17 18:52:35.722851747 +0200
+@@ -17,7 +17,7 @@
+ [Desktop]
+ DesktopShortcuts=Home, Trash, Computer, Network
+ WallpaperMode=stretch
+-Wallpaper=@LXQT_SHARE_DIR@/wallpapers/waves-logo.png
++Wallpaper=@LXQT_DATA_DIR@/backgrounds/UHU/uhu_linux_ubk.jpg
+ BgColor=#000000
+ FgColor=#ffffff
+ ShadowColor=#000000

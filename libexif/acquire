@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz libexif-${UB_VERSION}/
+	https://github.com/libexif/libexif/archive/refs/tags/

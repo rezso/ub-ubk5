@@ -1,0 +1,10 @@
+curl-dev
+db4-dev
+dpkg-dev
+fonts-x.org-ttf
+gnutls-dev
+liblz4-dev
+libxslt-dev
+po4a
+triehash
+xxhash-dev

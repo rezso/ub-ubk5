@@ -1,0 +1,12 @@
+diff -Naur a/meson.build b/meson.build
+--- a/meson.build	2023-09-16 08:21:58.000000000 +0200
++++ b/meson.build	2023-09-18 22:59:06.897266600 +0200
+@@ -41,7 +41,7 @@
+ gweather = dependency('gweather4', version: '>= 3.90.0')
+ geocodeglib = dependency('geocode-glib-2.0', version: '>= 3.15.2')
+ libportal = dependency('libportal')
+-shumate = dependency('shumate-1.0', version: '>= 1.1.beta')
++shumate = dependency('shumate-1.0', version: '>= 1.0.0')
+ 
+ libmaps_deps = [
+ 	shumate,

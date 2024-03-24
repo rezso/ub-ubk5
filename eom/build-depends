@@ -1,0 +1,15 @@
+exempi-dev
+gobject-introspection-dev
+gtk3-dev
+gtk3-layer-shell-dev
+itstool
+lcms2-dev
+libexif-dev
+libjpeg-turbo-dev
+libpeas-dev
+librsvg-dev
+libxml2-dev
+mate-desktop-dev
+mate-icon-theme
+util-linux-dev
+yelp-tools

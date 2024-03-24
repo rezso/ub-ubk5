@@ -1,0 +1,10 @@
+#!/bin/sh -eux
+
+ub_compile \
+	-Dgtk_doc=false \
+	-Dexamples=true \
+	-Dpolkitd_uid=216 \
+	-Dpolkitd_user=polkit \
+	-Dsession_tracking=libsystemd-login \
+	-Dpam_include=system-auth \
+	-Djs_engine=duktape

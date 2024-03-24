@@ -1,0 +1,11 @@
+acl-dev
+asciidoc
+attr-dev
+e2fsprogs-dev
+liblzo-dev
+python3-dev
+python3-setuptools
+systemd-dev
+util-linux-dev
+xmlto
+zstd-dev

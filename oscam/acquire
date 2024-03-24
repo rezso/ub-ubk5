@@ -1,0 +1,7 @@
+#!/usr/bin/env dl
+
+#oscam-${UB_VERSION}.tar.gz trunk-${UB_VERSION_TAIL1/*~/}/
+#	svn://streamboard.tv/svn/oscam/trunk@${UB_VERSION_TAIL1/*~r/}
+
+oscam-${UB_VERSION}.zip trunk/
+    https://trac.streamboard.tv/oscam/browser/trunk?rev=${UB_VERSION_TAIL1/*~r/}&format=zip

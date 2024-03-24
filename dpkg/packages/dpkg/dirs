@@ -1,0 +1,4 @@
+/var/lib/dpkg
+/var/lib/dpkg/info
+/var/lib/dpkg/methods
+/var/lib/dpkg/updates

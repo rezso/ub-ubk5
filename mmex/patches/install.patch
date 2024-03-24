@@ -1,0 +1,12 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2023-12-26 19:40:55.000000000 +0100
++++ b/CMakeLists.txt	2024-01-27 19:25:56.027335866 +0100
+@@ -679,7 +679,7 @@
+     execute_process(COMMAND appstreamcli news-to-metainfo --format=markdown ${PROJECT_SOURCE_DIR}/NEWS ${PROJECT_SOURCE_DIR}/resources/dist/linux/share/metainfo/org.moneymanagerex.MMEX.metainfo.xml.in org.moneymanagerex.MMEX.metainfo.xml
+ 	            COMMAND_ERROR_IS_FATAL ANY)
+     install(FILES
+-        org.moneymanagerex.MMEX.metainfo.xml
++        ${CMAKE_CURRENT_BINARY_DIR}/org.moneymanagerex.MMEX.metainfo.xml
+         DESTINATION share/metainfo)
+ endif()
+ 

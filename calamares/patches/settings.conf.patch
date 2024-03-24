@@ -1,0 +1,61 @@
+diff -Naur a/settings.conf b/settings.conf
+--- a/settings.conf	2024-01-15 19:54:01.000000000 +0100
++++ b/settings.conf	2024-01-29 03:37:45.841888037 +0100
+@@ -115,42 +115,28 @@
+ sequence:
+ - show:
+   - welcome
+-#  - notesqml
+-#  - packagechooserq@licenseq
+   - locale
+   - keyboard
+   - partition
+   - users
+-#  - tracking
+   - summary
+ - exec:
+-#  - dummycpp
+-#  - dummyprocess
+-#  - dummypython
+   - partition
+-#  - zfs
+   - mount
+-  - unpackfs
++  - chrootcfg
++  - networkcfg
++  - packages
+   - machineid
+   - fstab
+   - locale
+-  - keyboard
++# - keyboard
+   - localecfg
+-#  - luksbootkeyfile
+-#  - luksopenswaphookcfg
+-#  - dracutlukscfg
+-#  - plymouthcfg
+-#  - zfshostid
+-  - initcpiocfg
+-  - initcpio
+   - users
+   - displaymanager
+-  - networkcfg
++# - networkcfg
+   - hwclock
+-  - services-systemd
+-#  - dracut
+-  - initramfs
+-#  - grubcfg
++  - dracut
++  - grubcfg
+   - bootloader
+   - umount
+ - show:
+@@ -234,3 +220,7 @@
+ #
+ #
+ quit-at-end: false
++
++packageOperations:
++  -install
++  -remove

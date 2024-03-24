@@ -1,0 +1,12 @@
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2024-01-17 09:00:00.000000000 +0100
++++ b/configure.ac	2024-02-02 21:06:42.891813617 +0100
+@@ -777,7 +777,7 @@
+ 	modules/pam_access/Makefile \
+ 	modules/pam_canonicalize_user/Makefile \
+ 	modules/pam_debug/Makefile modules/pam_deny/Makefile \
+-	modules/pam_echo/Makefile modules/pam_env/Makefile \
++	modules/pam_echo/Makefile modules/pam_env/Makefile modules/pam_envfeed/Makefile \
+ 	modules/pam_faildelay/Makefile modules/pam_faillock/Makefile \
+ 	modules/pam_filter/Makefile modules/pam_filter/upperLOWER/Makefile \
+ 	modules/pam_ftp/Makefile modules/pam_group/Makefile \

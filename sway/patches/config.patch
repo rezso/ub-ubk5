@@ -1,0 +1,12 @@
+diff -Nur orig/config.in mod/config.in
+--- orig/config.in	2020-11-10 17:47:31.000000000 +0100
++++ mod/config.in	2021-09-03 17:11:22.320542145 +0200
+@@ -58,6 +58,8 @@
+ # You can get the names of your inputs by running: swaymsg -t get_inputs
+ # Read `man 5 sway-input` for more information about this section.
+ 
++input * xkb_layout "hu"
++
+ ### Key bindings
+ #
+ # Basics:

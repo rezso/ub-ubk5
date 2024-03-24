@@ -1,0 +1,5 @@
+	/usr/include
+	/usr/lib/*/gen
+	/usr/lib/*/include
+	/usr/lib/pkgconfig
+@	/usr/lib/*.so

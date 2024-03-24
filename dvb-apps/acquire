@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz dvb-apps-${UB_VERSION}/
+    https://github.com/Blockstream/dvb-apps/archive/refs/tags/

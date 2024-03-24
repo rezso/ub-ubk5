@@ -1,0 +1,14 @@
+gobject-introspection-dev
+gtk4-dev
+gtksourceview5-dev
+intltool
+itstool
+libadwaita-dev
+libgee-dev
+libhandy-dev
+libsoup3-dev
+libxml2-dev
+meson
+mpc-dev
+mpfr-dev
+vala-dev

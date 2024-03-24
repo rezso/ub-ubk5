@@ -1,0 +1,15 @@
+appstream-glib-dev
+db4-dev
+evolution-data-server-dev
+geoclue-dev
+geocode-glib-dev
+gnome-online-accounts-dev
+gsettings-desktop-schemas
+gtk4-dev
+intltool
+itstool
+libadwaita-dev
+libdazzle-dev
+libgweather-dev
+libhandy-dev
+libical-dev

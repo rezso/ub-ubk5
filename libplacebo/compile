@@ -1,0 +1,9 @@
+#!/bin/sh -eux
+
+git clone https://github.com/Dav1dde/glad 3rdparty/glad
+git clone https://github.com/fastfloat/fast_float.git 3rdparty/fast_float
+git clone https://github.com/KhronosGroup/Vulkan-Headers 3rdparty/Vulkan-Headers
+
+ub_compile \
+    -Ddemos=false \
+    -Dvulkan=disabled

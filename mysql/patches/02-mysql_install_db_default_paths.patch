@@ -1,0 +1,15 @@
+diff -Naur a/scripts/mysql_install_db.sh b/scripts/mysql_install_db.sh
+--- a/scripts/mysql_install_db.sh	2023-06-05 19:36:14.000000000 +0200
++++ b/scripts/mysql_install_db.sh	2023-07-18 11:33:31.829942278 +0200
+@@ -19,9 +19,9 @@
+ #
+ # All unrecognized arguments to this script are passed to mariadbd.
+ 
+-basedir=""
++basedir="/usr"
+ builddir=""
+-ldata="@localstatedir@"
++ldata="/var/lib/mysql"
+ langdir=""
+ srcdir=""
+ 

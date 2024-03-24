@@ -1,0 +1,13 @@
+diff -Naur a/Makefile.SH b/Makefile.SH
+--- a/Makefile.SH	2022-05-21 23:27:09.000000000 +0200
++++ b/Makefile.SH	2022-08-26 21:11:53.223535971 +0200
+@@ -82,6 +82,9 @@
+ 	netbsd*|freebsd[234]*|openbsd*|dragonfly*|bitrig*)
+ 		linklibperl="-L. -lperl"
+ 		;;
++	linux*)
++		shrpldflags="$shrpldflags $ldflags $perllibs $cryptlib"
++		;;
+ 	interix*)
+ 		linklibperl="-L. -lperl"
+ 		shrpldflags="$shrpldflags -Wl,--image-base,0x57000000"

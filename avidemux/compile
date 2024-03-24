@@ -1,0 +1,10 @@
+#!/bin/sh -eux
+
+sh bootStrap.bash \
+        --with-system-libass \
+        --with-system-libmad \
+        --with-system-liba52 \
+        --with-cli \
+        --with-core \
+        --with-plugins \
+        --enable-qt6

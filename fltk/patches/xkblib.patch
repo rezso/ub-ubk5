@@ -1,0 +1,59 @@
+diff -Naur a/src/Fl_x.cxx b/src/Fl_x.cxx
+--- a/src/Fl_x.cxx	2023-12-09 14:58:40.000000000 +0100
++++ b/src/Fl_x.cxx	2024-02-09 18:19:28.241068541 +0100
+@@ -47,7 +47,7 @@
+ #  include <X11/Xmd.h>
+ #  include <X11/Xlocale.h>
+ #  include <X11/Xlib.h>
+-#  include <X11/keysym.h>
++#  include <X11/XKBlib.h>
+ #  include "Xutf8.h"
+ #define USE_XRANDR (HAVE_DLSYM && HAVE_DLFCN_H) // means attempt to dynamically load libXrandr.so
+ #if USE_XRANDR
+@@ -1475,10 +1475,6 @@
+ #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+ #endif
+ 
+-static KeySym fl_KeycodeToKeysym(Display *d, KeyCode k, unsigned i) {
+-  return XKeycodeToKeysym(d, k, i);
+-}
+-
+ #if defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ > 5))
+ #pragma GCC diagnostic pop
+ #endif
+@@ -1958,7 +1954,7 @@
+ 	  len = XUtf8LookupString(fl_xim_ic, (XKeyPressedEvent *)&xevent.xkey,
+ 			     kp_buffer, kp_buffer_len, &keysym, &status);
+ 	}
+-	keysym = fl_KeycodeToKeysym(fl_display, keycode, 0);
++	keysym = XkbKeycodeToKeysym(fl_display, keycode, 0, 0);
+       } else {
+         //static XComposeStatus compose;
+         len = XLookupString((XKeyEvent*)&(xevent.xkey),
+@@ -1970,7 +1966,7 @@
+           if (len < 1) len = 1;
+           // ignore all effects of shift on the keysyms, which makes it a lot
+           // easier to program shortcuts and is Windoze-compatible:
+-          keysym = fl_KeycodeToKeysym(fl_display, keycode, 0);
++          keysym = XkbKeycodeToKeysym(fl_display, keycode, 0, 0);
+         }
+       }
+       kp_buffer[len] = 0;
+@@ -2013,7 +2009,7 @@
+       event = FL_KEYUP;
+       fl_key_vector[keycode/8] &= ~(1 << (keycode%8));
+       // keyup events just get the unshifted keysym:
+-      keysym = fl_KeycodeToKeysym(fl_display, keycode, 0);
++      keysym = XkbKeycodeToKeysym(fl_display, keycode, 0, 0);
+     }
+ #  ifdef __sgi
+     // You can plug a microsoft keyboard into an sgi but the extra shift
+@@ -2106,7 +2102,7 @@
+     if (keysym >= 0xff91 && keysym <= 0xff9f) {
+       // Map keypad keysym to character or keysym depending on
+       // numlock state...
+-      unsigned long keysym1 = fl_KeycodeToKeysym(fl_display, keycode, 1);
++      unsigned long keysym1 = XkbKeycodeToKeysym(fl_display, keycode, 1, 0);
+       if (keysym1 <= 0x7f || (keysym1 > 0xff9f && keysym1 <= FL_KP_Last))
+         Fl::e_original_keysym = (int)(keysym1 | FL_KP);
+       if ((xevent.xkey.state & Mod2Mask) &&

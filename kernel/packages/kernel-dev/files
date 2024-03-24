@@ -1,0 +1,3 @@
+	/usr/lib/modules/*/build
+	/usr/lib/modules/*/source
+	/usr/src

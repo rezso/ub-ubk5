@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+ub_compile \
+	--enable-wayland \
+	--enable-gtk4 \
+	--disable-gtk2 \
+	--disable-python2 \
+	--disable-tests

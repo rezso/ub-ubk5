@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+export LIBDIR=/usr/lib
+ub_install
+
+rm -rf ${UB_INSTALLDIR}/sbin

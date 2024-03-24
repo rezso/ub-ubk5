@@ -1,0 +1,11 @@
+#!/bin/sh -eux
+
+if [ ! -f .tarball-version ]; then
+echo $UB_VERSION > .tarball-version
+fi
+
+ub_compile \
+	--with-gphoto2 \
+	--with-snmp \
+	--enable-locking=no \
+	--enable-pthread

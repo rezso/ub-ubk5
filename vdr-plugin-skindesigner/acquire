@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+skindesigner-${UB_VERSION}.tar.gz skindesigner-${UB_VERSION}/
+	https://gitlab.com/kamel5/skindesigner/-/archive/${UB_VERSION}/

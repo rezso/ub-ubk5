@@ -1,0 +1,864 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2023-04-20 18:35:43.000000000 +0200
++++ b/CMakeLists.txt	2023-12-25 14:57:36.022543895 +0100
+@@ -16,7 +16,7 @@
+ include(ECMAddAppIcon)
+ include(ECMDeprecationSettings)
+ 
+-set(KJOTS_VERSION "5.1.1")
++set(KJOTS_VERSION "5.1.2")
+ 
+ set(AKONADINOTES_LIB_VERSION "5.22.80")
+ set(KDEPIMLIBS_LIB_VERSION "5.22.80")
+@@ -27,13 +27,13 @@
+ #Qt Packages
+ set(QT_REQUIRED_VERSION "5.15.2")
+ if (QT_MAJOR_VERSION STREQUAL "6")
+-    set(QT_REQUIRED_VERSION "6.4.0")
++    set(QT_REQUIRED_VERSION "6.6.0")
+     set(KF_MIN_VERSION "5.240.0")
+     set(KF_MAJOR_VERSION "6")
+-    set(KTEXTADDONS_MIN_VERSION "1.2.0")
++    set(KTEXTADDONS_MIN_VERSION "1.4.0")
+ else()
+     set(KF_MAJOR_VERSION "5")
+-    set(KTEXTADDONS_MIN_VERSION "1.1.0")
++    set(KTEXTADDONS_MIN_VERSION "1.4.0")
+ endif()
+ find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED DBus PrintSupport)
+ 
+@@ -41,9 +41,13 @@
+ find_package(KF${KF_MAJOR_VERSION}KCMUtils ${KF_VERSION} CONFIG REQUIRED)
+ find_package(KF${KF_MAJOR_VERSION}KIO ${KF_VERSION} CONFIG REQUIRED)
+ find_package(KF${KF_MAJOR_VERSION}Config ${KF_VERSION} CONFIG REQUIRED)
++find_package(KF${KF_MAJOR_VERSION}I18n ${KF_VERSION} CONFIG REQUIRED)
+ find_package(KF${KF_MAJOR_VERSION}Parts ${KF_VERSION} CONFIG REQUIRED)
+ find_package(KF${KF_MAJOR_VERSION}Bookmarks ${KF_VERSION} CONFIG REQUIRED)
+ find_package(KF${KF_MAJOR_VERSION}XmlGui ${KF_VERSION} CONFIG REQUIRED)
++if (QT_MAJOR_VERSION STREQUAL "6")
++find_package(KF${KF_MAJOR_VERSION}TextWidgets ${KF_VERSION} CONFIG REQUIRED)
++endif()
+ 
+ # PIM packages
+ find_package(KPim${KF_MAJOR_VERSION}Akonadi ${KDEPIMLIBS_LIB_VERSION} CONFIG REQUIRED)
+@@ -56,11 +60,14 @@
+     find_package(Grantlee5 ${GRANTLEE_VERSION} CONFIG REQUIRED)
+     set(MAIN_LIB Grantlee5::Templates Grantlee5::TextDocument)
+ else()
++    find_package(KF6TextCustomEditor ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
++    find_package(KF6TextAddonsWidgets ${KTEXTADDONS_MIN_VERSION} CONFIG REQUIRED)
+     find_package(KF6TextTemplate CONFIG REQUIRED)
+     set(MAIN_LIB KF6::TextTemplate)
+ endif()
+ 
+-ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.105.0)
++add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
++ecm_set_disabled_deprecation_versions(QT 6.6.0 KF 5.240.0)
+ 
+ find_package(KF${KF_MAJOR_VERSION}TextEditTextToSpeech ${KTEXTADDONS_MIN_VERSION} CONFIG)
+ set_package_properties(KF${KF_MAJOR_VERSION}TextEditTextToSpeech PROPERTIES DESCRIPTION
+diff -Naur a/data/kjots_config_misc.desktop b/data/kjots_config_misc.desktop
+--- a/data/kjots_config_misc.desktop	2023-04-20 18:35:43.000000000 +0200
++++ b/data/kjots_config_misc.desktop	1970-01-01 01:00:00.000000000 +0100
+@@ -1,74 +0,0 @@
+-[Desktop Entry]
+-Icon=preferences-other
+-Type=Service
+-X-KDE-ServiceTypes=KCModule
+-
+-X-KDE-Library=kcm_kjots
+-X-KDE-HasReadOnlyMode=false
+-X-KDE-ParentApp=kjots
+-X-KDE-ParentComponents=kjots,kontact_kjotsplugin
+-X-KDE-CfgDlgHierarchy=Notes
+-X-KDE-Weight=200
+-
+-Name=Misc
+-Name[ca]=Varis
+-Name[ca@valencia]=Miscelània
+-Name[cs]=Různé
+-Name[da]=Diverse
+-Name[de]=Verschiedenes
+-Name[el]=Διάφορα
+-Name[en_GB]=Misc
+-Name[es]=Diversos
+-Name[et]=Misc
+-Name[eu]=Hainbat
+-Name[fi]=Sekalaista
+-Name[fr]=Divers
+-Name[gl]=Varios
+-Name[ia]=Misc
+-Name[it]=Varie
+-Name[ka]=სხვანი
+-Name[ko]=기타
+-Name[nl]=Diversen
+-Name[pl]=Różne
+-Name[pt]=Diversos
+-Name[pt_BR]=Diversos
+-Name[ru]=Прочее
+-Name[sk]=Rôzne
+-Name[sl]=Razno
+-Name[sv]=Diverse
+-Name[tr]=Çeşitli
+-Name[uk]=Інше
+-Name[x-test]=xxMiscxx
+-Name[zh_CN]=基本
+-Name[zh_TW]=其他
+-Comment=Setup misc for KJots
+-Comment[ca]=Arranja els varis per al KJots
+-Comment[ca@valencia]=Establix els varis per a KJots
+-Comment[cs]=Různá nastavení KJots
+-Comment[da]=Opsætning af diverse til KJots
+-Comment[de]=Verschiedene Einstellungen für KJots
+-Comment[el]=Ρύθμιση διαφόρων για το KJots
+-Comment[en_GB]=Setup misc for KJots
+-Comment[es]=Configuración diversa par KJots
+-Comment[et]=KJotsi misci seadistamine
+-Comment[eu]=Kjots-en hainbaten ezarpena
+-Comment[fi]=Aseta sekalaiset KJots-asetukset
+-Comment[fr]=Configuration (divers) de KJots
+-Comment[gl]=Configurar varios aspectos de KJots.
+-Comment[ia]=Configura Misc pro KJots
+-Comment[it]=Impostazioni varie per KJots
+-Comment[ka]=სხვების მორგება KJots-სთვის
+-Comment[ko]=KJots 기타 설정
+-Comment[nl]=Overige instellingen voor KJots
+-Comment[pl]=Różne ustawienia dla KJots
+-Comment[pt]=Configuração diversa do KJots
+-Comment[pt_BR]=Configurações diversas do KJots
+-Comment[ru]=Дополнительные параметры KJots
+-Comment[sk]=Rôzne nastavenie pre KJots
+-Comment[sl]=Nastavitev raznega za KJots
+-Comment[sv]=Diverse inställningar för Kjots
+-Comment[tr]=KJots için çeşitli seçenekleri ayarla
+-Comment[uk]=Різноманітні налаштування Kjots
+-Comment[x-test]=xxSetup misc for KJotsxx
+-Comment[zh_CN]=设置 KJots 的杂项
+-Comment[zh_TW]=設定 KJots 的雜項
+diff -Naur a/data/kjotspart.desktop b/data/kjotspart.desktop
+--- a/data/kjotspart.desktop	2023-04-20 18:35:43.000000000 +0200
++++ b/data/kjotspart.desktop	1970-01-01 01:00:00.000000000 +0100
+@@ -1,37 +0,0 @@
+-[Desktop Entry]
+-Name=KJotsPart
+-Name[ca]=Part del KJots
+-Name[ca@valencia]=Part de KJots
+-Name[cs]=KJotsPart
+-Name[da]=KJotsPart
+-Name[de]=KJotsPart
+-Name[el]=KJotsPart
+-Name[en_GB]=KJotsPart
+-Name[es]=KJotsPart
+-Name[et]=KJotsi komponent
+-Name[eu]=KJotsPart
+-Name[fi]=KJots-osa
+-Name[fr]=KJotsPart
+-Name[gl]=KJotsPart
+-Name[ia]=KJotsPart
+-Name[it]=KJotsPart
+-Name[ka]=KJotsPart
+-Name[ko]=KJotsPart
+-Name[nl]=KJotsPart
+-Name[pl]=KJotsPart
+-Name[pt]=KJotsPart
+-Name[pt_BR]=KJotsPart
+-Name[ru]=KJotsPart
+-Name[sk]=KJotsPart
+-Name[sl]=KJotsPart
+-Name[sv]=Kjots-delprogram
+-Name[tr]=KJotsPart
+-Name[uk]=KJotsPart
+-Name[x-test]=xxKJotsPartxx
+-Name[zh_CN]=KJotsPart
+-Name[zh_TW]=KJotsPart
+-X-KDE-ServiceTypes=KParts/ReadOnlyPart
+-X-KDE-Library=kjotspart
+-Type=Service
+-Icon=kjots
+-
+diff -Naur a/data/org.kde.kjots.appdata.xml b/data/org.kde.kjots.appdata.xml
+--- a/data/org.kde.kjots.appdata.xml	2023-04-20 18:35:43.000000000 +0200
++++ b/data/org.kde.kjots.appdata.xml	2023-12-25 14:57:36.022543895 +0100
+@@ -10,6 +10,7 @@
+   <name xml:lang="de">KJots</name>
+   <name xml:lang="el">KJots</name>
+   <name xml:lang="en-GB">KJots</name>
++  <name xml:lang="eo">KJots</name>
+   <name xml:lang="es">KJots</name>
+   <name xml:lang="et">KJots</name>
+   <name xml:lang="eu">KJots</name>
+@@ -42,6 +43,7 @@
+   <summary xml:lang="de">Dienstprogramm zum Erstellen von Notizen</summary>
+   <summary xml:lang="el">Εργαλείο τήρησης σημειωμάτων</summary>
+   <summary xml:lang="en-GB">Note-taking utility</summary>
++  <summary xml:lang="eo">Notprena utilaĵo</summary>
+   <summary xml:lang="es">Utilidad para tomar notas</summary>
+   <summary xml:lang="et">Märkmete tegemise rakendus</summary>
+   <summary xml:lang="eu">Oharrak hartzeko erabilgarritasuna</summary>
+@@ -74,6 +76,7 @@
+     <p xml:lang="de">KJots sortiert alle Ihre Notizen in getrennte Bücher.</p>
+     <p xml:lang="el">Το KJots οργανώνει όλες τις σημειώσεις σας σε ξεχωριστά βιβλία.</p>
+     <p xml:lang="en-GB">KJots organises all of your notes into separate books.</p>
++    <p xml:lang="eo">KJots organizas ĉiujn viajn notojn en apartajn librojn.</p>
+     <p xml:lang="es">KJots organiza todas sus notas en libros separados.</p>
+     <p xml:lang="et">KJots paigutab kõik sinu märkmed eraldi raamatutesse.</p>
+     <p xml:lang="eu">Kjots-ek zure ohar guztiak liburu bereizietan antolatzen ditu.</p>
+@@ -103,6 +106,7 @@
+     <p xml:lang="de">Funktionen:</p>
+     <p xml:lang="el">Χαρακτηριστικά:</p>
+     <p xml:lang="en-GB">Features:</p>
++    <p xml:lang="eo">Trajtoj:</p>
+     <p xml:lang="es">Funciones:</p>
+     <p xml:lang="et">Omadused:</p>
+     <p xml:lang="eu">Ezaugarria:</p>
+@@ -135,6 +139,7 @@
+       <li xml:lang="de">Handhabung mehrerer Bücher</li>
+       <li xml:lang="el">Χειρισμός πολλών βιβλίων</li>
+       <li xml:lang="en-GB">Multiple books handled</li>
++      <li xml:lang="eo">Trakteblas pluraj libroj</li>
+       <li xml:lang="es">Manejo de múltiples libros</li>
+       <li xml:lang="et">Mitme raamatu kasutamise võimalus</li>
+       <li xml:lang="eu">Liburu anizkoitzak kudeatzen ditu</li>
+@@ -163,6 +168,7 @@
+       <li xml:lang="de">Jedes Buch hat viele benannte Seiten</li>
+       <li xml:lang="el">Κάθε βιβλίο έχει πολλές τιτλοφορημένες σελίδες</li>
+       <li xml:lang="en-GB">Each book has many named pages</li>
++      <li xml:lang="eo">Ĉiu libro havas multajn nomitajn paĝojn</li>
+       <li xml:lang="es">Cada libro puede contener numerosas páginas con nombre</li>
+       <li xml:lang="et">Igal raamatul palju nimega lehekülgi</li>
+       <li xml:lang="eu">Liburu bakoitzak izendatutako orri ugari ditu</li>
+@@ -191,6 +197,7 @@
+       <li xml:lang="de">Bücher und Seiten können per Ziehen und Ablegen sortiert werden</li>
+       <li xml:lang="el">Βιβλία και σελίδες μπορούν να αναδιαταχθούν με έλξη και εναπόθεση</li>
+       <li xml:lang="en-GB">Books and pages can be rearranged by drag-and-drop</li>
++      <li xml:lang="eo">Libroj kaj paĝoj povas esti rearanĝitaj per tren-kaj-falo</li>
+       <li xml:lang="es">Los libros y las páginas se pueden organizar y arrastrar</li>
+       <li xml:lang="et">Raamatuid ja lehekülgi võib lohistades ümber korraldada</li>
+       <li xml:lang="eu">Liburuak eta orriak arrastatu eta jareginda berrantolatu daitezke</li>
+@@ -219,6 +226,7 @@
+       <li xml:lang="de">Für viele Funktionen stehen Kurzbefehle zur Verfügung</li>
+       <li xml:lang="el">Συντομεύσεις πληκτρολογίου είναι διαθέσιμες για πολλές λειτουργίες</li>
+       <li xml:lang="en-GB">Keyboard shortcuts are available for many functions</li>
++      <li xml:lang="eo">Klavaraj ŝparvojoj estas havebla por multaj funkcioj</li>
+       <li xml:lang="es">Dispone de accesos rápidos de teclado para muchas funciones</li>
+       <li xml:lang="et">Paljusid toiminguid saab sooritada kiirklahvidega</li>
+       <li xml:lang="eu">Funtzio askoren teklatuko lasterbideak erabilgarri daude</li>
+@@ -247,6 +255,7 @@
+       <li xml:lang="de">Automatisches Speichern verhindert den Verlust von Notizen</li>
+       <li xml:lang="el">Αυτόματη αποθήκευση σημαίνει ότι οι σημειώσεις σας δεν διατρέχουν κίνδυνο απώλειας</li>
+       <li xml:lang="en-GB">Automatic saving means your notes are safe from loss</li>
++      <li xml:lang="eo">Aŭtomata konservado signifas ke viaj notoj sekuriĝas kontraŭ perdo</li>
+       <li xml:lang="es">Las notas se guardan automáticamente para evitar que se pierdan</li>
+       <li xml:lang="et">Automaatne salvestamine tähendab andmekao võimaluse puudumist</li>
+       <li xml:lang="eu">Gordetze automatikoari esker zure oharrak galtzetik salbu daude</li>
+diff -Naur a/data/org.kde.kjots.desktop b/data/org.kde.kjots.desktop
+--- a/data/org.kde.kjots.desktop	2023-04-20 18:35:43.000000000 +0200
++++ b/data/org.kde.kjots.desktop	2023-12-25 14:57:36.022543895 +0100
+@@ -7,6 +7,7 @@
+ Name[de]=KJots
+ Name[el]=KJots
+ Name[en_GB]=KJots
++Name[eo]=KJots
+ Name[es]=KJots
+ Name[et]=KJots
+ Name[eu]=KJots
+@@ -38,6 +39,7 @@
+ GenericName[de]=Notizblock
+ GenericName[el]=Πρόγραμμα τήρησης σημειωμάτων
+ GenericName[en_GB]=Note Taker
++GenericName[eo]=Notprenilo
+ GenericName[es]=Tomar notas
+ GenericName[et]=Märkmete tegemine
+ GenericName[eu]=Ohar hartzailea
+@@ -77,6 +79,7 @@
+ Comment[de]=Notizblock
+ Comment[el]=Πρόγραμμα τήρησης σημειωμάτων
+ Comment[en_GB]=Note Taker
++Comment[eo]=Notprenilo
+ Comment[es]=Tomar notas
+ Comment[et]=Märkmete tegemine
+ Comment[eu]=Ohar hartzailea
+diff -Naur a/.gitlab-ci.yml b/.gitlab-ci.yml
+--- a/.gitlab-ci.yml	2023-04-20 18:35:43.000000000 +0200
++++ b/.gitlab-ci.yml	2023-12-25 14:57:36.022543895 +0100
+@@ -2,8 +2,10 @@
+ # SPDX-License-Identifier: CC0-1.0
+ 
+ include:
+-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/linux.yml
+-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/freebsd.yml
+-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/linux-qt6.yml
++  - project: sysadmin/ci-utilities
++    file:
++      - /gitlab-templates/linux.yml
++      - /gitlab-templates/freebsd.yml
++      - /gitlab-templates/linux-qt6.yml
+ 
+-  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/freebsd-qt6.yml
++      - /gitlab-templates/freebsd-qt6.yml
+diff -Naur a/.kde-ci.yml b/.kde-ci.yml
+--- a/.kde-ci.yml	2023-04-20 18:35:43.000000000 +0200
++++ b/.kde-ci.yml	2023-12-25 14:57:36.022543895 +0100
+@@ -16,13 +16,13 @@
+     # most PIM projects use @same to get other PIM deps,
+     # but here we use @latest because kjots doesn't have a stable branch
+     # or follow the release schedule of other PIM projects
+-    'pim/akonadi': '@latest'
+-    'pim/kmime': '@latest'
+-    'pim/akonadi-notes': '@latest'
+-    'pim/kpimtextedit': '@latest'
+-    'pim/kontactinterface': '@latest'
++    'pim/akonadi': '@latest-kf6'
++    'pim/kmime': '@latest-kf6'
++    'pim/akonadi-notes': '@latest-kf6'
++    'pim/kpimtextedit': '@latest-kf6'
++    'pim/kontactinterface': '@latest-kf6'
+     'libraries/ktextaddons': '@latest-kf6'
+-    'libraries/ktexttemplate': '@stable'
++    'frameworks/ktexttemplate': '@stable'
+ 
+ - 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5']
+   'require':
+@@ -39,10 +39,10 @@
+     # most PIM projects use @same to get other PIM deps,
+     # but here we use @latest because kjots doesn't have a stable branch
+     # or follow the release schedule of other PIM projects
+-    'pim/akonadi': '@latest'
+-    'pim/kmime': '@latest'
+-    'pim/akonadi-notes': '@latest'
+-    'pim/kpimtextedit': '@latest'
+-    'pim/kontactinterface': '@latest'
+-    'libraries/ktextaddons': '@stable'
++    'pim/akonadi': '@stable'
++    'pim/kmime': '@stable'
++    'pim/akonadi-notes': '@stable'
++    'pim/kpimtextedit': '@stable'
++    'pim/kontactinterface': '@stable'
++    'libraries/ktextaddons': '@latest'
+ 
+diff -Naur a/src/CMakeLists.txt b/src/CMakeLists.txt
+--- a/src/CMakeLists.txt	2023-04-20 18:35:43.000000000 +0200
++++ b/src/CMakeLists.txt	2023-12-25 14:57:36.042543960 +0100
+@@ -64,6 +64,16 @@
+ if (TARGET KF${KF_MAJOR_VERSION}::TextEditTextToSpeech)
+     target_link_libraries(kjots_common KF${KF_MAJOR_VERSION}::TextEditTextToSpeech)
+ endif()
++if (TARGET KF${KF_MAJOR_VERSION}::TextAddonsWidgets)
++    target_link_libraries(kjots_common KF${KF_MAJOR_VERSION}::TextAddonsWidgets)
++endif()
++if (TARGET KF${KF_MAJOR_VERSION}::TextCustomEditor)
++    target_link_libraries(kjots_common KF${KF_MAJOR_VERSION}::TextCustomEditor)
++endif()
++if (QT_MAJOR_VERSION STREQUAL "6")
++    target_link_libraries(kjots_common KF6::BookmarksWidgets)
++endif()
++
+ #########################################################################
+ # D-Bus interface
+ #########################################################################
+@@ -81,6 +91,7 @@
+    main.cpp
+    KJotsMain.cpp
+    KJotsMain.h
++   kjots.qrc
+ )
+ 
+ file(GLOB ICONS_SRCS "${CMAKE_SOURCE_DIR}/icons/*-apps-kjots.png")
+@@ -98,9 +109,6 @@
+ install(FILES kjots.kcfg
+         DESTINATION ${KDE_INSTALL_KCFGDIR}
+ )
+-install(FILES kjotsui.rc
+-        DESTINATION ${KDE_INSTALL_KXMLGUIDIR}/kjots
+-)
+ 
+ ############## next target ##############
+ 
+@@ -116,9 +124,6 @@
+   KF${KF_MAJOR_VERSION}::Parts
+ )
+ 
+-install(FILES ${CMAKE_SOURCE_DIR}/data/kjotspart.desktop
+-        DESTINATION ${KDE_INSTALL_KSERVICESDIR}
+-)
+ install(TARGETS kjotspart
+         DESTINATION ${KDE_INSTALL_PLUGINDIR}
+ )
+@@ -140,7 +145,3 @@
+ install(TARGETS kcm_kjots
+         DESTINATION ${KDE_INSTALL_PLUGINDIR}
+ )
+-install(FILES ${CMAKE_SOURCE_DIR}/data/kjots_config_misc.desktop
+-        DESTINATION ${KDE_INSTALL_KSERVICESDIR}
+-)
+-
+diff -Naur a/src/kjotsbookmarks.cpp b/src/kjotsbookmarks.cpp
+--- a/src/kjotsbookmarks.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotsbookmarks.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -69,3 +69,5 @@
+     }
+ }
+ 
++
++#include "moc_kjotsbookmarks.cpp"
+diff -Naur a/src/kjotsbrowser.cpp b/src/kjotsbrowser.cpp
+--- a/src/kjotsbrowser.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotsbrowser.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -18,8 +18,13 @@
+ #include <TextEditTextToSpeech/TextToSpeechWidget>
+ #endif
+ 
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+ #include <KPIMTextEdit/RichTextEditFindBar>
+ #include <KPIMTextEdit/SlideContainer>
++#else
++#include <TextCustomEditor/RichTextEditFindBar>
++#include <TextAddonsWidgets/SlideContainer>
++#endif
+ 
+ #include <QHelpEvent>
+ #include <QToolTip>
+@@ -47,8 +52,13 @@
+     }
+ 
+     std::unique_ptr<KJotsBrowser> mBrowser;
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+     KPIMTextEdit::SlideContainer mSliderContainer;
+     KPIMTextEdit::RichTextEditFindBar mFindBar;
++#else
++    TextAddonsWidgets::SlideContainer mSliderContainer;
++    TextCustomEditor::RichTextEditFindBar mFindBar;
++#endif
+ #ifdef HAVE_TEXT_TO_SPEECH_SUPPORT
+     TextEditTextToSpeech::TextToSpeechWidget mTextToSpeechWidget;
+ #endif
+@@ -61,8 +71,11 @@
+     d->mBrowser->setParent(this);
+     d->mSliderContainer.setContent(&d->mFindBar);
+     d->mFindBar.setHideWhenClose(false);
+-
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+     connect(&d->mFindBar, &KPIMTextEdit::RichTextEditFindBar::hideFindBar, this, &KJotsBrowserWidget::slotHideFindBar);
++#else
++    connect(&d->mFindBar, &TextCustomEditor::RichTextEditFindBar::hideFindBar, this, &KJotsBrowserWidget::slotHideFindBar);
++#endif
+ #ifdef HAVE_TEXT_TO_SPEECH_SUPPORT
+     connect(d->mBrowser.get(), &KJotsBrowser::say, &d->mTextToSpeechWidget, &TextEditTextToSpeech::TextToSpeechWidget::say);
+ #endif
+@@ -138,7 +151,11 @@
+         return;
+     }
+     popup->addSeparator();
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+     popup->addAction(m_actionCollection->action(QString::fromLatin1(KStandardAction::name(KStandardAction::Find))));
++#else
++    popup->addAction(m_actionCollection->action(KStandardAction::name(KStandardAction::Find)));
++#endif
+ #ifdef HAVE_TEXT_TO_SPEECH_SUPPORT
+     popup->addSeparator();
+     if (!document()->isEmpty() && TextEditTextToSpeech::TextToSpeech::self()->isReady()) {
+@@ -210,3 +227,5 @@
+ }
+ 
+ /* ex: set tabstop=4 softtabstop=4 shiftwidth=4 expandtab: */
++
++#include "moc_kjotsbrowser.cpp"
+diff -Naur a/src/kjotsconfigdlg.cpp b/src/kjotsconfigdlg.cpp
+--- a/src/kjotsconfigdlg.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotsconfigdlg.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -15,9 +15,8 @@
+ KJotsConfigMisc::KJotsConfigMisc(QWidget *parent, const QVariantList &args)
+     : KCModule(parent, args)
+ #else
+-KJotsConfigMisc::KJotsConfigMisc(QObject *parent, const KPluginMetaData &data,
+-                                 const QVariantList &args)
+-    : KCModule(parent, data, args)
++KJotsConfigMisc::KJotsConfigMisc(QObject *parent, const KPluginMetaData &data)
++    : KCModule(parent, data)
+ #endif
+       ,
+       ui(new Ui::confPageMisc) {
+diff -Naur a/src/kjotsconfigdlg.h b/src/kjotsconfigdlg.h
+--- a/src/kjotsconfigdlg.h	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotsconfigdlg.h	2023-12-25 14:57:36.042543960 +0100
+@@ -22,8 +22,7 @@
+ #if KCMUTILS_VERSION < QT_VERSION_CHECK(5, 240, 0)
+   explicit KJotsConfigMisc(QWidget *parent, const QVariantList &args = {});
+ #else
+-  explicit KJotsConfigMisc(QObject *parent, const KPluginMetaData &data = {},
+-                           const QVariantList &args = {});
++  explicit KJotsConfigMisc(QObject *parent, const KPluginMetaData &data = {});
+ #endif
+ private:
+     std::unique_ptr<Ui::confPageMisc> ui;
+diff -Naur a/src/kjotsedit.cpp b/src/kjotsedit.cpp
+--- a/src/kjotsedit.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotsedit.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -501,3 +501,5 @@
+ }
+ 
+ /* ex: set tabstop=4 softtabstop=4 shiftwidth=4 expandtab: */
++
++#include "moc_kjotsedit.cpp"
+diff -Naur a/src/kjotslinkdialog.cpp b/src/kjotslinkdialog.cpp
+--- a/src/kjotslinkdialog.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotslinkdialog.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -86,3 +86,5 @@
+     }
+ }
+ 
++
++#include "moc_kjotslinkdialog.cpp"
+diff -Naur a/src/KJotsMain.cpp b/src/KJotsMain.cpp
+--- a/src/KJotsMain.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/KJotsMain.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -40,3 +40,5 @@
+ {
+     return component->queryClose();
+ }
++
++#include "moc_KJotsMain.cpp"
+diff -Naur a/src/kjotsmodel.cpp b/src/kjotsmodel.cpp
+--- a/src/kjotsmodel.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotsmodel.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -391,3 +391,5 @@
+     }
+     return result;
+ }
++
++#include "moc_kjotsmodel.cpp"
+diff -Naur a/src/kjotspart.cpp b/src/kjotspart.cpp
+--- a/src/kjotspart.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotspart.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -18,7 +18,7 @@
+ #include <KLocalizedString>
+ 
+ 
+-K_PLUGIN_FACTORY(KJotsPartFactory, registerPlugin<KJotsPart>();)
++K_PLUGIN_CLASS_WITH_JSON(KJotsPart, "kjotspart.json")
+ 
+ #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+ KJotsPart::KJotsPart(QWidget *parentWidget, QObject *parent, const QVariantList &)
+@@ -60,3 +60,5 @@
+ }
+ 
+ #include "kjotspart.moc"
++
++#include "moc_kjotspart.cpp"
+diff -Naur a/src/kjotspart.json b/src/kjotspart.json
+--- a/src/kjotspart.json	1970-01-01 01:00:00.000000000 +0100
++++ b/src/kjotspart.json	2023-12-25 14:57:36.042543960 +0100
+@@ -0,0 +1,31 @@
++{
++    "KPlugin": {
++        "Icon": "kjots",
++        "Name": "KJotsPart",
++        "Name[ca@valencia]": "KJotsPart",
++        "Name[ca]": "KJotsPart",
++        "Name[cs]": "KJotsPart",
++        "Name[de]": "KJotsPart",
++        "Name[eo]": "KJotsPart",
++        "Name[es]": "KJotsPart",
++        "Name[eu]": "KJotsPart",
++        "Name[fi]": "KJots-osa",
++        "Name[fr]": "KJotsPart",
++        "Name[gl]": "KJotsPart",
++        "Name[ia]": "KJotsPart",
++        "Name[it]": "KJotsPart",
++        "Name[ko]": "KJotsPart",
++        "Name[nl]": "KJotsPart",
++        "Name[pl]": "KJotsPart",
++        "Name[pt]": "KJotsPart",
++        "Name[pt_BR]": "KJotsPart",
++        "Name[sl]": "KJotsPart",
++        "Name[sv]": "Kjots-delprogram",
++        "Name[tr]": "KJots Kısmı",
++        "Name[uk]": "KJotsPart",
++        "Name[x-test]": "xxKJotsPartxx",
++        "ServiceTypes": [
++            "KParts/ReadOnlyPart"
++        ]
++    }
++}
+diff -Naur a/src/kjots.qrc b/src/kjots.qrc
+--- a/src/kjots.qrc	1970-01-01 01:00:00.000000000 +0100
++++ b/src/kjots.qrc	2023-12-25 14:57:36.042543960 +0100
+@@ -0,0 +1,6 @@
++<!DOCTYPE RCC>
++<RCC version="1.0">
++    <qresource prefix="/kxmlgui5/kjots">
++        <file>kjotsui.rc</file>
++    </qresource>
++</RCC>
+diff -Naur a/src/kjotswidget.cpp b/src/kjotswidget.cpp
+--- a/src/kjotswidget.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotswidget.cpp	2023-12-25 14:57:36.042543960 +0100
+@@ -77,7 +77,11 @@
+ #include <KIO/OpenUrlJob>
+ 
+ #include <KPIMTextEdit/RichTextComposerActions>
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+ #include <KPIMTextEdit/RichTextEditorWidget>
++#else
++#include <TextCustomEditor/RichTextEditorWidget>
++#endif
+ 
+ 
+ // KMime
+@@ -151,7 +155,7 @@
+ 
+     m_orderProxy = new EntityOrderProxyModel(this);
+     m_orderProxy->setSourceModel(m_collectionModel);
+-    KConfigGroup cfg(KSharedConfig::openConfig(), "KJotsEntityOrder");
++    KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("KJotsEntityOrder"));
+     m_orderProxy->setOrderConfig(cfg);
+ 
+     m_collectionView->setModel(m_orderProxy);
+@@ -248,7 +252,11 @@
+ 
+     // Editor
+     m_editor = new KJotsEdit(m_stackedWidget, m_xmlGuiClient->actionCollection());
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+     m_editorWidget = new KPIMTextEdit::RichTextEditorWidget(m_editor, m_stackedWidget);
++#else
++    m_editorWidget = new TextCustomEditor::RichTextEditorWidget(m_editor, m_stackedWidget);
++#endif
+     m_editor->setParent(m_editorWidget);
+     m_stackedWidget->addWidget(m_editorWidget);
+     connect(m_editor, &KJotsEdit::linkClicked, this, &KJotsWidget::openLink);
+@@ -270,13 +278,13 @@
+     {
+         auto saver = new ETMViewStateSaver;
+         saver->setView(m_collectionView);
+-        KConfigGroup cfg(KSharedConfig::openConfig(), "CollectionViewState");
++        KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("CollectionViewState"));
+         saver->restoreState(cfg);
+     }
+     {
+         auto saver = new ETMViewStateSaver;
+         saver->setView(m_itemView);
+-        KConfigGroup cfg(KSharedConfig::openConfig(), "ItemViewState");
++        KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("ItemViewState"));
+         saver->restoreState(cfg);
+     }
+ }
+@@ -286,14 +294,14 @@
+     {
+         ETMViewStateSaver saver;
+         saver.setView(m_collectionView);
+-        KConfigGroup cfg(KSharedConfig::openConfig(), "CollectionViewState");
++        KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("CollectionViewState"));
+         saver.saveState(cfg);
+         cfg.sync();
+     }
+     {
+         ETMViewStateSaver saver;
+         saver.setView(m_itemView);
+-        KConfigGroup cfg(KSharedConfig::openConfig(), "ItemViewState");
++        KConfigGroup cfg(KSharedConfig::openConfig(), QStringLiteral("ItemViewState"));
+         saver.saveState(cfg);
+         cfg.sync();
+     }
+@@ -408,7 +416,11 @@
+                 m_browserWidget->slotFindNext();
+             }
+         }, actionCollection);
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+     action = KStandardAction::replace(m_editorWidget, &KPIMTextEdit::RichTextEditorWidget::slotReplace, actionCollection);
++#else
++    action = KStandardAction::replace(m_editorWidget, &TextCustomEditor::RichTextEditorWidget::slotReplace, actionCollection);
++#endif
+     connect(m_stackedWidget, &QStackedWidget::currentChanged, this, [this, action](int index){
+             action->setEnabled(m_stackedWidget->widget(index) == m_editorWidget);
+         });
+@@ -421,13 +433,22 @@
+     bookmarkMenu->setText(i18n("&Bookmarks"));
+     auto bookmarks = new KJotsBookmarks(m_collectionView->selectionModel(), this);
+     connect(bookmarks, &KJotsBookmarks::openLink, this, &KJotsWidget::openLink);
+-    auto bmm = new KBookmarkMenu(
+-        KBookmarkManager::managerForFile(
+-            QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + QStringLiteral("/kjots/bookmarks.xml"),
+-            QStringLiteral("kjots")),
+-        bookmarks, bookmarkMenu->menu());
+-    // "Add bookmark" and "make text bold" actions have conflicting shortcuts (ctrl + b)
+-    // Make add_bookmark use ctrl+shift+b to resolve that.
++#if QT_VERSION_MAJOR < 6
++    m_bookmarkManager = KBookmarkManager::managerForFile(
++        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
++            QStringLiteral("/kjots/bookmarks.xml"), QStringLiteral("kjots"));
++        auto bmm = new KBookmarkMenu(m_bookmarkManager,
++                                     bookmarks, bookmarkMenu->menu());
++#else
++    m_bookmarkManager = new KBookmarkManager(
++        QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) +
++        QStringLiteral("/kjots/bookmarks.xml"), this);
++    auto bmm = new KBookmarkMenu(m_bookmarkManager, bookmarks,
++                                 bookmarkMenu->menu());
++#endif
++
++    // "Add bookmark" and "make text bold" actions have conflicting shortcuts
++    // (ctrl + b) Make add_bookmark use ctrl+shift+b to resolve that.
+     action = bmm->addBookmarkAction();
+     actionCollection->addAction(QStringLiteral("add_bookmark"), action);
+     actionCollection->setDefaultShortcut(action, Qt::CTRL | Qt::SHIFT | Qt::Key_B);
+@@ -503,8 +524,13 @@
+     KActionCollection *actionCollection = m_xmlGuiClient->actionCollection();
+ 
+     // Actions for a single item selection.
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+     anySelectionActions = { actionCollection->action(QString::fromLatin1(KStandardAction::name(KStandardAction::Find))),
+                             actionCollection->action(QString::fromLatin1(KStandardAction::name(KStandardAction::Print))),
++#else
++    anySelectionActions = { actionCollection->action(KStandardAction::name(KStandardAction::Find)),
++                            actionCollection->action(KStandardAction::name(KStandardAction::Print)),
++#endif
+                             actionCollection->action(QStringLiteral("save_to")) };
+ 
+     updateMenu();
+@@ -533,7 +559,11 @@
+ 
+     // Rename is available only when single something is selected
+     m_xmlGuiClient->actionCollection()
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+             ->action(QString::fromLatin1(KStandardAction::name(KStandardAction::RenameFile)))
++#else
++            ->action(KStandardAction::name(KStandardAction::RenameFile))
++#endif
+             ->setEnabled((itemsSelected == 1) || (m_collectionView->hasFocus() && collectionsSelected == 1));
+ 
+     // Actions available when at least something is shown
+@@ -786,3 +816,5 @@
+         job->start();
+     }
+ }
++
++#include "moc_kjotswidget.cpp"
+diff -Naur a/src/kjotswidget.h b/src/kjotswidget.h
+--- a/src/kjotswidget.h	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kjotswidget.h	2023-12-25 14:57:36.046543974 +0100
+@@ -18,6 +18,8 @@
+ #include <QAbstractItemDelegate>
+ #include <QPrinter>
+ 
++#include <KBookmarkManager>
++
+ #include <akonadi_version.h>
+ #include <Akonadi/Collection>
+ 
+@@ -63,7 +65,11 @@
+ class Engine;
+ }
+ 
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+ namespace KPIMTextEdit
++#else
++namespace TextCustomEditor
++#endif
+ {
+ class RichTextEditorWidget;
+ }
+@@ -154,7 +160,11 @@
+     Akonadi::EntityTreeView *m_collectionView = nullptr;
+     Akonadi::EntityTreeView *m_itemView = nullptr;
+     KJotsEdit      *m_editor = nullptr;
++#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+     KPIMTextEdit::RichTextEditorWidget *m_editorWidget = nullptr;
++#else
++    TextCustomEditor::RichTextEditorWidget *m_editorWidget = nullptr;
++#endif
+     KJotsBrowserWidget *m_browserWidget = nullptr;
+ 
+     // Models
+@@ -166,6 +176,7 @@
+     Akonadi::EntityOrderProxyModel *m_orderProxy = nullptr;
+ 
+     QTimer *m_autosaveTimer = nullptr;
++    KBookmarkManager *m_bookmarkManager;
+ };
+ 
+ #endif
+diff -Naur a/src/kontact_plugin/kjots_plugin.cpp b/src/kontact_plugin/kjots_plugin.cpp
+--- a/src/kontact_plugin/kjots_plugin.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kontact_plugin/kjots_plugin.cpp	2023-12-25 14:57:36.046543974 +0100
+@@ -62,3 +62,5 @@
+ }
+ #include "kjots_plugin.moc"
+ 
++
++#include "moc_kjots_plugin.cpp"
+diff -Naur a/src/kontact_plugin/kjotsplugin.json b/src/kontact_plugin/kjotsplugin.json
+--- a/src/kontact_plugin/kjotsplugin.json	2023-04-20 18:35:43.000000000 +0200
++++ b/src/kontact_plugin/kjotsplugin.json	2023-12-25 14:57:36.046543974 +0100
+@@ -6,17 +6,22 @@
+         "Description[cs]": "Modul KJots",
+         "Description[de]": "KJots-Modul",
+         "Description[en_GB]": "KJots Plugin",
++        "Description[eo]": "KJots-kromprogramo",
+         "Description[es]": "Complemento KJots",
+         "Description[eu]": "KJots plugina",
+         "Description[fi]": "KJots-liitännäinen",
+         "Description[fr]": "Module externe pour KJots",
++        "Description[gl]": "Complemento de KJots",
+         "Description[ia]": "Plugin de KJots",
+         "Description[it]": "Estensione di KJots",
++        "Description[ko]": "KJots 플러그인",
+         "Description[nl]": "KJots-plug-in",
+         "Description[pl]": "Wtyczka KJots",
+         "Description[pt]": "'Plugin' do KJots",
++        "Description[pt_BR]": "Plugin do KJots",
+         "Description[sk]": "Plugin KJots",
+         "Description[sl]": "Vtičnik za Kjots",
++        "Description[sv]": "Kjots-insticksprogram",
+         "Description[tr]": "KJots Eklentisi",
+         "Description[uk]": "Додаток до KJots",
+         "Description[x-test]": "xxKJots Pluginxx",
+@@ -30,17 +35,22 @@
+         "Name[cs]": "Poznámky",
+         "Name[de]": "Notizen",
+         "Name[en_GB]": "Notes",
++        "Name[eo]": "Notoj",
+         "Name[es]": "Notas",
+         "Name[eu]": "Oharrak",
+         "Name[fi]": "Muistiinpanot",
+         "Name[fr]": "Notes",
++        "Name[gl]": "Notas",
+         "Name[ia]": "Notas",
+         "Name[it]": "Note",
++        "Name[ko]": "메모",
+         "Name[nl]": "Notities",
+         "Name[pl]": "Notatki",
+         "Name[pt]": "Notas",
++        "Name[pt_BR]": "Notas",
+         "Name[sk]": "Poznámky",
+         "Name[sl]": "Beležke",
++        "Name[sv]": "Anteckningar",
+         "Name[tr]": "Notlar",
+         "Name[uk]": "Нотатки",
+         "Name[x-test]": "xxNotesxx",
+diff -Naur a/src/noteshared/notecreatorandselector.cpp b/src/noteshared/notecreatorandselector.cpp
+--- a/src/noteshared/notecreatorandselector.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/noteshared/notecreatorandselector.cpp	2023-12-25 14:57:36.046543974 +0100
+@@ -114,3 +114,5 @@
+     m_secondarySelectionModel->select(idx, QItemSelectionModel::ClearAndSelect | QItemSelectionModel::Rows);
+ }
+ 
++
++#include "moc_notecreatorandselector.cpp"
+diff -Naur a/src/noteshared/standardnoteactionmanager.cpp b/src/noteshared/standardnoteactionmanager.cpp
+--- a/src/noteshared/standardnoteactionmanager.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/noteshared/standardnoteactionmanager.cpp	2023-12-25 14:57:36.046543974 +0100
+@@ -715,3 +715,5 @@
+ {
+     d->mGenericManager->setCollectionPropertiesPageNames(names);
+ }
++
++#include "moc_standardnoteactionmanager.cpp"
+diff -Naur a/src/notesortproxymodel.cpp b/src/notesortproxymodel.cpp
+--- a/src/notesortproxymodel.cpp	2023-04-20 18:35:43.000000000 +0200
++++ b/src/notesortproxymodel.cpp	2023-12-25 14:57:36.046543974 +0100
+@@ -38,3 +38,5 @@
+ 
+     return QSortFilterProxyModel::lessThan(left, right);
+ }
++
++#include "moc_notesortproxymodel.cpp"

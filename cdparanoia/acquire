@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+cdparanoia-III-${UB_VERSION}.src.tgz cdparanoia-III-${UB_VERSION}/
+	https://downloads.xiph.org/releases/cdparanoia/

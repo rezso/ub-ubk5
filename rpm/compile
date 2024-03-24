@@ -1,0 +1,12 @@
+#!/bin/sh -eux
+
+mkdir -p build
+cd build
+cmake \
+	-DCMAKE_BUILD_TYPE=Release \
+	-DCMAKE_INSTALL_PREFIX="/usr" \
+	-DWITH_SELINUX=OFF \
+	-DWITH_INTERNAL_OPENPGP=ON \
+	-DENABLE_TESTSUITE=OFF \
+	..
+ub_make

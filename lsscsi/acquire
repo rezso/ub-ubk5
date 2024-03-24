@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+lsscsi-"$UB_VERSION".tar.xz .
+	https://sg.danny.cz/scsi/

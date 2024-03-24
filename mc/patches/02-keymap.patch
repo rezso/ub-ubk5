@@ -1,0 +1,18 @@
+diff -Naur a/misc/mc.default.keymap b/misc/mc.default.keymap
+--- a/misc/mc.default.keymap	2023-01-01 19:39:31.000000000 +0100
++++ b/misc/mc.default.keymap	2023-01-22 12:08:48.466499456 +0100
+@@ -123,10 +123,10 @@
+ # SortPrev =
+ # SortNext =
+ # SortReverse =
+-# SortByName =
+-# SortByExt =
+-# SortBySize =
+-# SortByMTime =
++SortByName = alt-shift-n
++SortByExt = alt-shift-e
++SortBySize = alt-shift-s
++SortByMTime = alt-shift-t
+ # Filter =
+ # ScrollLeft =
+ # ScrollRight =

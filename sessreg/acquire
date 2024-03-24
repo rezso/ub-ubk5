@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+sessreg-${UB_VERSION}.tar.xz sessreg-${UB_VERSION}/
+    https://www.x.org/releases/individual/app/

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz libxcrypt-${UB_VERSION}/
+	https://github.com/besser82/libxcrypt/archive/refs/tags/

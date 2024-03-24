@@ -1,0 +1,21 @@
+diff -Naur a/CMakeLists_Dependencies.cmake b/CMakeLists_Dependencies.cmake
+--- a/CMakeLists_Dependencies.cmake	2024-01-07 18:08:37.000000000 +0100
++++ b/CMakeLists_Dependencies.cmake	2024-03-24 18:01:38.509603180 +0100
+@@ -22,7 +22,7 @@
+ #>>PoDoFo for AI PDF import
+ 
+ #<<Poppler for PDF import
+-find_package(poppler REQUIRED)
++find_package(poppler)
+ if (poppler_FOUND)
+ 	set(HAVE_POPPLER ON)
+ 	message(STATUS "Found poppler")
+@@ -37,7 +37,7 @@
+ 		endif()
+ 	endif()
+ else()
+-	message(FATAL_ERROR "Could not find poppler library")
++	message("Could not find poppler library")
+ endif()
+ #>>Poppler for PDF import
+ 

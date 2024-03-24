@@ -1,0 +1,46 @@
+diff -Naur a/src/branding/default/branding.desc b/src/branding/default/branding.desc
+--- a/src/branding/default/branding.desc	2023-12-12 00:04:06.000000000 +0100
++++ b/src/branding/default/branding.desc	2023-12-16 23:34:03.712651831 +0100
+@@ -121,18 +121,16 @@
+ # are visible as buttons there if the corresponding *show* keys
+ # are set to "true" (they can also be overridden).
+ strings:
+-    productName:         "${NAME}"
+-    shortProductName:    Generic
+-    version:             2023.3 LTS
+-    shortVersion:        2023.3
+-    versionedName:       Fancy GNU/Linux 2023.3 LTS "Venomous Vole"
+-    shortVersionedName:  FancyGL 2023.3
+-    bootloaderEntryName: FancyGL
+-    productUrl:          https://calamares.io/
+-    supportUrl:          https://github.com/calamares/calamares/wiki
+-    knownIssuesUrl:      https://github.com/calamares/calamares/issues
+-    releaseNotesUrl:     https://calamares.io/news/
+-    donateUrl:           https://kde.org/community/donations/index.php
++    productName:         UHU-Linux
++    shortProductName:    UHU-Linux
++    version:             UBK5 (NG)
++    shortVersion:        UBK5
++    versionedName:       UHU-Linux UBK5 (NG)
++    shortVersionedName:  UHU-Linux UBK5
++    bootloaderEntryName: UHU-Linux
++    productUrl:          https://ubk.hu/
++    supportUrl:          https://github.com/uhulinux/ub-ubk5/issues
++    knownIssuesUrl:      https://github.com/uhulinux/ub-ubk5/issues
+ 
+ # These images are loaded from the branding module directory.
+ #
+@@ -163,10 +161,10 @@
+ # These filenames can also use substitutions from os-release (see above).
+ images:
+     # productBanner:       "banner.png"
+-    productIcon:         "squid.png"
+-    productLogo:         "squid.png"
++    productIcon:         "uhulogo.png"
++    productLogo:         "uhulogo.png"
+     # productWallpaper:    "wallpaper.png"
+-    productWelcome:      "languages.png"
++    productWelcome:      "uhu-192x192.png"
+ 
+ # Colors for text and background components.
+ #

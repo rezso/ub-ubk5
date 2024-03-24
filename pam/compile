@@ -1,0 +1,13 @@
+#!/bin/sh -eux
+
+cp -a modules/pam_envfeed/Makefile{,.in}
+
+CFLAGS="-fPIC -O2" \
+ub_compile \
+	--sbindir=/usr/sbin \
+	--libdir=/usr/lib \
+    --disable-db \
+	--disable-doc \
+	--disable-logind
+
+ub_make -C modules/pam_envfeed

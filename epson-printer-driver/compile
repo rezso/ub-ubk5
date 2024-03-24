@@ -1,0 +1,5 @@
+#!/bin/sh -eux
+
+aclocal
+ub_compile \
+	--disable-lsb

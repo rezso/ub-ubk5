@@ -1,0 +1,6 @@
+extra-cmake-modules
+kf5-kconfig-dev
+kf5-kwayland-dev
+plasma-wayland-protocols
+qt5-dev
+wayland-dev

@@ -1,0 +1,4 @@
+libdrm-dev
+libva-dev
+libx11-dev
+wayland-dev

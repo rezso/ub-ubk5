@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz udftools-${UB_VERSION}/
+	https://github.com/pali/udftools/archive/

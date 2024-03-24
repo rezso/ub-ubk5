@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+aoetools-${UB_VERSION}.tar.gz aoetools-aoetools-${UB_VERSION}/
+	https://github.com/OpenAoE/aoetools/archive/

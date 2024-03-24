@@ -1,0 +1,19 @@
+diff -Nur orig/opera.desktop mod/opera.desktop
+--- orig/opera.desktop	2021-08-07 14:09:47.254748522 +0200
++++ mod/opera.desktop	2021-08-07 14:20:32.375963126 +0200
+@@ -10,14 +10,3 @@
+ Type=Application
+ Categories=Network;WebBrowser;
+ MimeType=text/html;text/xml;application/xhtml_xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;application/x-opera-download;
+-Actions=new-window;new-private-window;
+-
+-[Desktop Action new-window]
+-Name=New Window
+-Exec=opera --new-window
+-TargetEnvironment=Unity
+-
+-[Desktop Action new-private-window]
+-Name=New Private Window
+-Exec=opera --incognito
+-TargetEnvironment=Unity
+\ Nincs új sor a fájl végén

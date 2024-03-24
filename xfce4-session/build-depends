@@ -1,0 +1,15 @@
+dbus-glib-dev
+intltool
+libwnck-dev
+libxfce4ui-dev
+libxfce4util-dev
+libxinerama-dev
+libxt-dev
+polkit-dev
+startup-notification-dev
+systemd-dev
+xfce4-panel-dev
+xfce4-polkit
+xfce4-screensaver
+xfconf-dev
+x.org-server-utils

@@ -1,0 +1,13 @@
+diff -Naur a/lib/access.c b/lib/access.c
+--- a/lib/access.c	2022-04-18 18:48:46.000000000 +0200
++++ b/lib/access.c	2022-08-10 19:08:08.685726004 +0200
+@@ -16,7 +16,8 @@
+ void
+ pci_scan_bus(struct pci_access *a)
+ {
+-  a->methods->scan(a);
++  if (a->methods)
++    a->methods->scan(a);
+ }
+ 
+ struct pci_dev *

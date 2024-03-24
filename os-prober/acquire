@@ -1,0 +1,6 @@
+#!/usr/bin/env dl
+
+os-prober_${UB_VERSION}.tar.xz os-prober-${UB_VERSION}/
+# os-prober_${UB_VERSION}.tar.xz os-prober/
+	https://ftp.debian.org/debian/pool/main/o/os-prober/
+	https://download.ubk.hu/src/os-prober/

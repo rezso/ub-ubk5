@@ -1,0 +1,12 @@
+diff -Naur a/prog/CMakeLists.txt b/prog/CMakeLists.txt
+--- a/prog/CMakeLists.txt	2024-01-03 01:03:10.000000000 +0100
++++ b/prog/CMakeLists.txt	2024-02-09 16:01:02.494971453 +0100
+@@ -12,7 +12,7 @@
+     if (BUILD_SHARED_LIBS)
+         target_compile_definitions  (${target} PRIVATE -DLIBLEPT_IMPORTS)
+     endif()
+-    target_link_libraries           (${target} leptonica)
++    target_link_libraries           (${target} leptonica m)
+     set_target_properties           (${target} PROPERTIES FOLDER prog)
+ endfunction(add_prog_target)
+ ########################################

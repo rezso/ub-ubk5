@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+GrimRipper-v${UB_VERSION}.tar.bz2 GrimRipper-v${UB_VERSION}/
+	https://gitlab.gnome.org/Salamandar/GrimRipper/-/archive/v${UB_VERSION}/

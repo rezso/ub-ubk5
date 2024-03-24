@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+# export CXXFLAGS="-std=c++14"
+
+ub_compile \
+	--enable-templates \
+	--enable-clipart

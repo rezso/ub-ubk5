@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libXau-$UB_VERSION.tar.xz libXau-$UB_VERSION/
+	https://www.x.org/releases/individual/lib/

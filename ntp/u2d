@@ -1,0 +1,1 @@
+urllist https://ntp.org/downloads | grep 'ntp-4' | grep 'tar.gz$' | sed -e 's/ntp-//' -e 's/\.tar\.gz//'

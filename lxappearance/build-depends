@@ -1,0 +1,4 @@
+dbus-glib-dev
+gtk3-dev
+intltool
+libx11-dev

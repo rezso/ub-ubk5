@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+ub_compile \
+	-DENABLE_GIO=ON \
+	-DENABLE_THUMBNAILER=ON \
+	-DHAVE_JPEG=ON \
+	-DHAVE_PNG=ON \
+	-DCMAKE_INSTALL_LIBDIR=/usr/lib

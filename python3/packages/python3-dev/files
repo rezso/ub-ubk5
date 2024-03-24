@@ -1,0 +1,8 @@
+	/usr/bin/*-config
+	/usr/include
+	/usr/lib/pkgconfig
+@	/usr/lib/python3*/*.so
+	/usr/lib/python*/config-*
+@	/usr/lib/*.so
+	/usr/share/aclocal
+	/usr/share/man/**/man3

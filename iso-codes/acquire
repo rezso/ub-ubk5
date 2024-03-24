@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+iso-codes-v${UB_VERSION}.tar.gz iso-codes-v${UB_VERSION}/
+    https://salsa.debian.org/iso-codes-team/iso-codes/-/archive/v${UB_VERSION}/

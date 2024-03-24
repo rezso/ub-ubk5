@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libXext-$UB_VERSION.tar.xz libXext-$UB_VERSION/
+	https://www.x.org/releases/individual/lib/

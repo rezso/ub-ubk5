@@ -1,0 +1,10 @@
+gobject-introspection-dev
+graphviz-dev
+intltool
+iso-codes
+json-glib-dev
+libsecret-dev
+libxml2-dev
+libxslt-dev
+sqlite-dev
+vala-dev

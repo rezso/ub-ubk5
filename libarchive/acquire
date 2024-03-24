@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libarchive-${UB_VERSION}.tar.gz libarchive-${UB_VERSION}/
+	https://www.libarchive.org/downloads/

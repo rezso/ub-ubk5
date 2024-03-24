@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz p7zip-${UB_VERSION}/
+	https://github.com/p7zip-project/p7zip/archive/refs/tags/

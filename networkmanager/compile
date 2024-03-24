@@ -1,0 +1,16 @@
+#!/bin/sh -eux
+
+ub_compile \
+	-Dudev_dir=/usr/lib/udev/ \
+	-Dkernel_firmware_dir=/usr/lib/firmware \
+	-Dconfig_dhcp_default=internal \
+	-Dsession_tracking=systemd \
+	-Difupdown=true \
+	-Dmodify_system=true \
+	-Dconcheck=true \
+	-Dselinux=false \
+	-Dnmtui=false \
+	-Debpf=false \
+	-Dqt=false \
+	-Dbluez5_dun=true \
+	-Dpolkit=false

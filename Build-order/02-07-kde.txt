@@ -1,0 +1,143 @@
+libqalculate
+libdmtx
+phonon
+qca
+qcoro
+libquazip
+fonts-hack # plasma-integration
+fonts-noto # plasma-integration
+socat # kwallet-pam
+opencv # mlt, kdenlive, digikam
+mlt # kdenlive
+zxing-cpp # kitinerary
+plasma-wayland-protocols # kwayland
+xsettingsd # kde-gtk-settings
+kdsoap # kio-extras, kdsoap-ws-discovery-client?
+qtkeychain
+polkit-qt # plasma-workspace
+pysol-cards # kdegames (kpat)
+freecell-solver # kdegames (kpat)
+black-hole-solver # kdegames (kpat)
+kcolorpicker # gwenview
+kimageannotator # gwenview
+#
+extra-cmake-modules
+attica
+breeze-icons
+bluez-qt
+karchive
+kcodecs
+kconfig
+kdbusaddons
+kdnssd
+kguiaddons
+kidletime
+kitemmodels
+kitemviews
+kplotting
+kwidgetsaddons
+kwayland
+kwindowsystem
+kstatusnotifieritem
+modemmanager-qt
+networkmanager-qt
+oxygen-icons
+prison
+solid
+sonnet
+threadweaver
+syntax-highlighting
+ki18n
+kholidays
+kirigami
+kquickcharts
+ktexttemplate
+#
+kcoreaddons
+kfilemetadata
+kunitconversion
+kpty
+kimageformats
+kauth
+kcompletion
+kcrash
+kdoctools
+kcalendarcore
+kservice
+kglobalaccel
+knotifications
+kjobwidgets
+kpackage
+kcontacts
+kpeople
+kdesu
+kcolorscheme
+kconfigwidgets
+kiconthemes
+kwallet
+ktextwidgets
+kxmlgui
+kbookmarks
+kio
+baloo
+syndication
+knewstuff
+knotifyconfig
+kparts
+ktexteditor
+kded
+frameworkintegration
+kdeclarative
+kcmutils
+qqc2-desktop-style
+ksvg
+purpose
+krunner
+kdav
+kf6-dev
+#
+kirigami-addons
+plasma-activities
+plasma-activities-stats
+libplasma
+kio-extras # apps
+kdegraphics-thumbnailers # apps
+kpipewire
+layer-shell-qt
+plasma-workspace-wallpapers
+kactivitymanagerd
+bluedevil
+kdecoration
+breeze
+breeze-gtk
+kde-gtk-config
+kgamma
+libkscreen
+kscreen
+kscreenlocker
+ksshaskpass
+libksysguard
+ksystemstats
+kwallet-pam
+kglobalacceld
+kwin
+milou
+ocean-sound-theme
+oxygen
+plasma-nm
+plasma-pa
+plasma-integration
+plasma5support
+plasma-workspace
+kde-cli-tools
+kdeplasma-addons
+kmenuedit
+plasma-desktop
+polkit-kde-agent-1
+powerdevil
+sddm-kcm
+systemsettings
+kinfocenter
+plasma-systemmonitor
+plasma-browser-integration
+plasma-disks

@@ -1,0 +1,5 @@
+#!/bin/sh -eux
+
+make allyesconfig
+ub_compile \
+    -DCS_CONFDIR=/etc/oscam

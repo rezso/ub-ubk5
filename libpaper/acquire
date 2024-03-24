@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz libpaper-${UB_VERSION}/
+	https://github.com/rrthomas/libpaper/archive/refs/tags/

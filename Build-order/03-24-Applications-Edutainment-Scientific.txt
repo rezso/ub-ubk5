@@ -1,0 +1,9 @@
+genius
+mathomatic
+socnetv
+librecad
+gtkdatabox
+klavaro
+xplanet
+calcmysky
+stellarium

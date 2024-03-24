@@ -1,0 +1,43 @@
+diff -Naur a/src/modules/packages/main.py b/src/modules/packages/main.py
+--- a/src/modules/packages/main.py	2022-08-24 21:38:31.000000000 +0200
++++ b/src/modules/packages/main.py	2023-02-15 12:18:42.698678350 +0100
+@@ -172,11 +172,13 @@
+         NOTE: exceptions are expected to leave this method, to indicate
+               failure of the installation.
+         """
+-        if all([isinstance(x, str) for x in package_list]):
+-            self.install(package_list, from_local=from_local)
+-        else:
+-            for package in package_list:
+-                self.install_package(package, from_local=from_local)
++        global completed_packages
++        
++        for package in entry[key]:
++            pkgman.install_package(package)
++            completed_packages = completed_packages + 1
++            libcalamares.job.setprogress(completed_packages * 1.0 / total_packages)
++            libcalamares.utils.debug(pretty_name())
+ 
+     def operation_try_install(self, package_list):
+         """
+@@ -194,7 +196,12 @@
+         """
+         # we make a separate package manager call for each package so a
+         # single failing package won't stop all of them
++        global completed_packages
++        
+         for package in package_list:
++            completed_packages = completed_packages + 1
++            libcalamares.job.setprogress(completed_packages * 1.0 / total_packages)
++            libcalamares.utils.debug(pretty_name())
+             try:
+                 self.install_package(package)
+             except subprocess.CalledProcessError:
+@@ -263,6 +270,7 @@
+ 
+     def install(self, pkgs, from_local=False):
+         check_target_env_call(["apt-get", "-q", "-y", "install"] + pkgs)
++        check_target_env_call(["apt-get", "clean"])
+ 
+     def remove(self, pkgs):
+         check_target_env_call(["apt-get", "--purge", "-q", "-y",

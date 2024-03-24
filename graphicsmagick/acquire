@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+GraphicsMagick-${UB_VERSION}.tar.xz GraphicsMagick-${UB_VERSION}/
+	https://downloads.sourceforge.net/graphicsmagick/

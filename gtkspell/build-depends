@@ -1,0 +1,5 @@
+enchant-dev
+gobject-introspection-dev
+gtk3-dev
+intltool
+vala-dev

@@ -1,0 +1,5 @@
+#!/usr/bin/env dl
+
+cksfv-${UB_VERSION}.tar.bz2 cksfv-${UB_VERSION}/
+	https://www.iki.fi/shd/foss/cksfv/files/
+	https://zakalwe.fi/~shd/foss/cksfv/files/

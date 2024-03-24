@@ -1,0 +1,10 @@
+dbus-dev
+dbus-glib-dev
+gstreamer-dev
+intltool
+libnotify-dev
+libsm-dev
+libxfce4ui-dev
+libxfce4util-dev
+taglib-dev
+xcb-util-dev

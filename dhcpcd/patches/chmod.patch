@@ -1,0 +1,14 @@
+diff -Naur a/Makefile.inc b/Makefile.inc
+--- a/Makefile.inc	2023-10-06 10:27:53.000000000 +0200
++++ b/Makefile.inc	2023-10-07 01:04:08.209252167 +0200
+@@ -2,8 +2,8 @@
+ 
+ PICFLAG?=	-fPIC
+ 
+-BINMODE?=	0555
+-NONBINMODE?=	0444
++BINMODE?=	0755
++NONBINMODE?=	0644
+ MANMODE?=	${NONBINMODE}
+ CONFMODE?=	0644
+ DBMODE?=	0750

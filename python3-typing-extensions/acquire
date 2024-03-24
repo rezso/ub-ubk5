@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+typing_extensions-${UB_VERSION}.tar.gz typing_extensions-${UB_VERSION}/
+	https://files.pythonhosted.org/packages/source/t/typing_extensions/

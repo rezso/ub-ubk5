@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libhandy-${UB_VERSION}.tar.xz libhandy-${UB_VERSION}/
+	https://download.gnome.org/sources/libhandy/${UB_VERSION_HEAD2}/

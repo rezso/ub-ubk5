@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz pyasn1-modules-${UB_VERSION}/
+	https://github.com/pyasn1/pyasn1-modules/archive/refs/tags/

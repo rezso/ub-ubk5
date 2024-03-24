@@ -1,0 +1,12 @@
+diff -Naur orig/SConscript patched/SConscript
+--- orig/SConscript	2021-01-09 03:35:30.000000000 +0100
++++ patched/SConscript	2021-03-19 13:29:33.896386383 +0100
+@@ -1564,8 +1564,6 @@
+             # follow FHS, put in /usr/local/libXX, not /usr/libXX
+             # may be lib, lib32 or lib64
+             python_libdir = polystr(python_libdir)
+-            python_libdir = python_libdir.replace("/usr/lib",
+-                                                  "/usr/local/lib")
+         python_module_dir = str(python_libdir) + os.sep
+         # Many systems can have a problem with the Python path
+         if 'PYTHONPATH' in os.environ:

@@ -1,0 +1,18 @@
+binutils
+bzip2
+coreutils
+diffutils
+dpkg >= 1.22.1
+file
+findutils
+grep
+gzip
+inetutils
+patch
+pkgconfig
+pretendroot
+sed
+sortdir
+tar
+uhubuild-common
+util-linux

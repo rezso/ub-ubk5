@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz gumbo-parser/
+	https://codeberg.org/grisha/gumbo-parser/archive/

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+shared-mime-info-${UB_VERSION}.tar.gz shared-mime-info-${UB_VERSION}/
+	https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/${UB_VERSION}/

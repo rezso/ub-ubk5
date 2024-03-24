@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+xkeyboard-config-${UB_VERSION}.tar.xz xkeyboard-config-${UB_VERSION}/
+	https://www.x.org/releases/individual/data/xkeyboard-config/

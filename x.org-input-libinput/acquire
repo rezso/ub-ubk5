@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+xf86-input-libinput-${UB_VERSION}.tar.xz xf86-input-libinput-${UB_VERSION}/
+    https://xorg.freedesktop.org/releases/individual/driver/

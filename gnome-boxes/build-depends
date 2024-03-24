@@ -1,0 +1,15 @@
+gobject-introspection-dev
+intltool
+itstool
+libarchive-dev
+libgudev-dev
+libhandy-dev
+libosinfo-dev
+libportal-dev
+libsoup3-dev
+libvirt-glib-dev
+libxslt-dev
+spice-gtk-dev
+vala-dev
+webkit2gtk-4.1-dev
+yelp-tools

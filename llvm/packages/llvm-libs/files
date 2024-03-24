@@ -1,0 +1,3 @@
+	/usr/lib/libclang*.so.*
+	/usr/lib/libc++*.so.*
+	/usr/lib/libLLVM-*.so

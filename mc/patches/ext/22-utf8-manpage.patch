@@ -1,0 +1,57 @@
+diff -Naur a/misc/ext.d/text.sh.in b/misc/ext.d/text.sh.in
+--- a/misc/ext.d/text.sh.in	2024-01-20 20:34:38.000000000 +0100
++++ b/misc/ext.d/text.sh.in	2024-01-27 18:42:46.893673769 +0100
+@@ -57,7 +57,7 @@
+             cat "${MC_EXT_FILENAME}"
+             ;;
+         *)
+-            MANROFFOPT=-c MAN_KEEP_FORMATTING=1 man -P cat "${MC_EXT_FILENAME}"
++            groff-utf8 -P-c -Tutf8 @MANDOC@ "${MC_EXT_FILENAME}"
+             ;;
+         esac
+         ;;
+@@ -65,10 +65,10 @@
+         pod2man "${MC_EXT_FILENAME}" | nroff @MAN_FLAGS@ @MANDOC@
+         ;;
+     nroff.me)
+-        nroff @MAN_FLAGS@ -me "${MC_EXT_FILENAME}"
++        groff-utf8 -P-c -Tutf8 -me "${MC_EXT_FILENAME}"
+         ;;
+     nroff.ms)
+-        nroff @MAN_FLAGS@ -ms "${MC_EXT_FILENAME}"
++        groff-utf8 -P-c -Tutf8 -ms "${MC_EXT_FILENAME}"
+         ;;
+     man.gz|man.bz|man.bz2|man.lz|man.lz4|man.lzma|man.lzo|man.xz|man.zst)
+         case "${MC_EXT_FILENAME}" in
+@@ -103,8 +103,7 @@
+             cat "${MC_EXT_FILENAME}"
+             ;;
+         *)
+-            { zsoelim "${MC_EXT_FILENAME}" 2>/dev/null || cat "${MC_EXT_FILENAME}"; } | \
+-                nroff @MAN_FLAGS@ @MANDOC@
++            groff-utf8 -P-c -Tutf8 @MANDOC@ "${MC_EXT_FILENAME}" | ${pager}
+             ;;
+         esac | ${pager}
+         ;;
+@@ -112,10 +111,10 @@
+         pod2man "${MC_EXT_FILENAME}" | nroff @MAN_FLAGS@ @MANDOC@ | ${pager}
+         ;;
+     nroff.me)
+-        nroff @MAN_FLAGS@ -me "${MC_EXT_FILENAME}" | ${pager}
++        groff-utf8 -P-c -Tutf8 -me "${MC_EXT_FILENAME}" | ${pager}
+         ;;
+     nroff.ms)
+-        nroff @MAN_FLAGS@ -ms "${MC_EXT_FILENAME}" | ${pager}
++        groff-utf8 -P-c -Tutf8 -ms "${MC_EXT_FILENAME}" | ${pager}
+         ;;
+     man.gz|man.bz|man.bz2|man.lz|man.lz4|man.lzma|man.lzo|man.xz|man.zst)
+         case "${MC_EXT_FILENAME}" in
+@@ -123,7 +122,7 @@
+             ${unpacker} "${MC_EXT_FILENAME}"
+             ;;
+         *)
+-            ${unpacker} "${MC_EXT_FILENAME}" | nroff @MAN_FLAGS@ @MANDOC@
++            ${unpacker} "${MC_EXT_FILENAME}" | groff-utf8 -P-c -Tutf8 @MANDOC@
+             ;;
+         esac | ${pager}
+         ;;

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+syslog-ng-${UB_VERSION}.tar.gz syslog-ng-${UB_VERSION}/
+	https://github.com/syslog-ng/syslog-ng/releases/download/syslog-ng-${UB_VERSION}/

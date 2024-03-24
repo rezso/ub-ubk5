@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libburn-"$UB_VERSION".tar.gz libburn-"$UB_VERSION"/
+	https://files.libburnia-project.org/releases/

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+xgamma-${UB_VERSION}.tar.xz xgamma-${UB_VERSION}/
+    https://www.x.org/releases/individual/app/

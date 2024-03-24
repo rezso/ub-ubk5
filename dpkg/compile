@@ -1,0 +1,15 @@
+#!/bin/sh -eux
+
+if [ ! -f .dist-version ]; then
+echo "$UB_VERSION" > .dist-version
+fi
+
+ub_compile \
+	--disable-shared \
+	--disable-dselect \
+	--enable-start-stop-daemon \
+	--enable-update-alternatives \
+	--enable-disk-preallocate
+
+rm -f po/hu.gmo
+msgfmt po/hu.po -o po/hu.gmo

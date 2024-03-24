@@ -1,0 +1,4 @@
+#!/bin/sh -eux
+
+qmake main.pro
+ub_compile

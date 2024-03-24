@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+ub_compile \
+	--with-pam \
+	--with-pam-login \
+	--with-sudoers-mode=0640

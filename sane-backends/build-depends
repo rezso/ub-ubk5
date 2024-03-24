@@ -1,0 +1,16 @@
+avahi-dev
+cups-dev
+curl-dev
+glib-dev
+libexif-dev
+libgphoto2-dev
+libjpeg-turbo-dev
+libnetsnmp-dev
+libnl-dev
+libpng-dev
+libtiff-dev
+libusb-dev
+libv4l-dev
+libxml2-dev
+poppler-glib-dev
+systemd-dev

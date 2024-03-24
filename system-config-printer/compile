@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+touch ChangeLog
+ub_compile \
+	--with-udev-rules \
+	--with-udevdir=/etc/udev \
+	--with-polkit-1 \
+	--with-cups-serverbin-dir=/usr/lib/cups

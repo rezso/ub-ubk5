@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz soundtouch/
+	https://codeberg.org/soundtouch/soundtouch/archive/

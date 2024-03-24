@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+wlroots-${UB_VERSION}.tar.bz2 wlroots-${UB_VERSION}/
+   https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/${UB_VERSION}/

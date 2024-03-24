@@ -1,0 +1,9 @@
+#!/usr/bin/env dl
+
+texlive-${UB_VERSION}-source.tar.xz texlive-${UB_VERSION}-source/
+    https://pi.kwarc.info/historic/systems/texlive/${UB_VERSION:0:4}/
+    https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/${UB_VERSION:0:4}/
+
+texlive-${UB_VERSION}-texmf.tar.xz texlive-${UB_VERSION}-texmf/
+    https://pi.kwarc.info/historic/systems/texlive/${UB_VERSION:0:4}/
+    https://ftp.tu-chemnitz.de/pub/tug/historic/systems/texlive/${UB_VERSION:0:4}/

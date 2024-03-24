@@ -1,0 +1,14 @@
+curl-dev
+gobject-introspection-dev
+gperf
+intltool
+itstool
+libxml2-dev
+libxmlb-dev
+libyaml-dev
+lmdb-dev
+meson
+protobuf-dev
+vala-dev
+xapian-dev
+xmlto

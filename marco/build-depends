@@ -1,0 +1,11 @@
+gtk3-dev
+itstool
+libcanberra-dev
+libgtop2-dev
+libsm-dev
+libxres-dev
+mate-desktop-dev
+startup-notification-dev
+xcb-util-dev
+yelp-tools
+zenity

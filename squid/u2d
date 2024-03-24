@@ -1,0 +1,2 @@
+vers=$(urllist https://www.squid-cache.org/Versions/ | grep ^[0-9] | sort -V | tail -n 1)
+u2d https://www.squid-cache.org/Versions/v6/

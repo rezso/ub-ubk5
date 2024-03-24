@@ -1,0 +1,5 @@
+	/usr/bin/*-config
+	/usr/include
+@	/usr/lib/apr-util-*/*.so
+	/usr/lib/pkgconfig
+@	/usr/lib/*.so

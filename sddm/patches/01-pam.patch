@@ -1,0 +1,43 @@
+diff -Naur a/services/sddm-autologin.pam b/services/sddm-autologin.pam
+--- a/services/sddm-autologin.pam	2023-06-23 14:28:38.000000000 +0200
++++ b/services/sddm-autologin.pam	2023-06-30 19:18:34.485968340 +0200
+@@ -3,11 +3,13 @@
+ auth        required    pam_faillock.so preauth
+ auth        required    pam_shells.so
+ auth        required    pam_nologin.so
++auth        [success=1 default=ignore]  pam_succeed_if.so user ingroup users
++auth        required    pam_unix.so
+ auth        required    pam_permit.so
+ -auth       optional    pam_gnome_keyring.so
+ -auth       optional    pam_kwallet5.so
+-account     include     system-local-login
+-password    include     system-local-login
+-session     include     system-local-login
++account     include     system-auth
++password    include     system-auth
++session     include     system-auth
+ -session    optional    pam_gnome_keyring.so auto_start
+ -session    optional    pam_kwallet5.so auto_start
+diff -Naur a/services/sddm.pam b/services/sddm.pam
+--- a/services/sddm.pam	2023-06-23 14:28:38.000000000 +0200
++++ b/services/sddm.pam	2023-06-30 19:16:55.449799110 +0200
+@@ -1,15 +1,15 @@
+ #%PAM-1.0
+ 
+-auth        include     system-login
++auth        include     system-auth
+ -auth       optional    pam_gnome_keyring.so
+ -auth       optional    pam_kwallet5.so
+ 
+-account     include     system-login
++account     include     system-auth
+ 
+-password    include     system-login
++password    include     system-auth
+ -password   optional    pam_gnome_keyring.so    use_authtok
+ 
+ session     optional    pam_keyinit.so          force revoke
+-session     include     system-login
++session     include     system-auth
+ -session    optional    pam_gnome_keyring.so    auto_start
+ -session    optional    pam_kwallet5.so         auto_start

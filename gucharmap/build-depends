@@ -1,0 +1,7 @@
+gobject-introspection-dev
+gtk3-dev
+intltool
+itstool
+pcre2-dev
+unzip
+vala-dev

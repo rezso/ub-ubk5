@@ -1,0 +1,16 @@
+#!/bin/sh -eux
+
+## Disables because of conflicts:
+# kill - procps
+# login, nologin, newgrp - shadow
+
+ub_compile \
+    -Dbuild-python=disabled \
+    \
+	-Dbuild-kill=disabled \
+	\
+	-Dbuild-login=disabled \
+	-Dbuild-nologin=disabled \
+	-Dbuild-newgrp=disabled \
+	-Dbuild-chfn-chsh=disabled \
+	-Dbuild-su=disabled

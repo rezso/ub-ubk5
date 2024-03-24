@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz harfbuzz-${UB_VERSION}/
+	https://github.com/harfbuzz/harfbuzz/archive/refs/tags/

@@ -1,0 +1,67 @@
+diff -Naur a/bfd/config.bfd b/bfd/config.bfd
+--- a/bfd/config.bfd	2023-01-14 01:00:00.000000000 +0100
++++ b/bfd/config.bfd	2023-01-22 17:16:27.256743422 +0100
+@@ -501,7 +501,7 @@
+     ;;
+ 
+ #ifdef BFD64
+-  bpf-*-none)
++  bpf-*-none | bpf-*)
+     targ_defvec=bpf_elf64_le_vec
+     targ_selvecs=bpf_elf64_be_vec
+     targ_underscore=yes
+@@ -1494,7 +1494,7 @@
+     ;;
+ 
+   *)
+-    echo 1>&2 "*** BFD does not support target ${targ}."
++    echo 1>&2 "*** BFD does not support target '${targ}'.  Honest."
+     echo 1>&2 "*** Look in bfd/config.bfd for supported targets."
+     exit 1
+     ;;
+diff -Naur a/gold/configure b/gold/configure
+--- a/gold/configure	2023-01-14 01:00:00.000000000 +0100
++++ b/gold/configure	2023-01-22 17:16:27.256743422 +0100
+@@ -5255,7 +5255,8 @@
+     . ${srcdir}/configure.tgt
+ 
+     if test "$targ_obj" = "UNKNOWN"; then
+-      as_fn_error $? "\"unsupported target $targ\"" "$LINENO" 5
++      { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: \"unsupported target $targ\"" >&5
++$as_echo "$as_me: WARNING: \"unsupported target $targ\"" >&2;}
+     else
+       targetobjs="$targetobjs ${targ_obj}.\$(OBJEXT)"
+       if test "$targ_extra_obj" != ""; then
+diff -Naur a/gold/configure.ac b/gold/configure.ac
+--- a/gold/configure.ac	2023-01-14 01:00:00.000000000 +0100
++++ b/gold/configure.ac	2023-01-22 17:16:27.256743422 +0100
+@@ -182,7 +182,7 @@
+     . ${srcdir}/configure.tgt
+ 
+     if test "$targ_obj" = "UNKNOWN"; then
+-      AC_MSG_ERROR("unsupported target $targ")
++      AC_MSG_WARN("unsupported target $targ")
+     else
+       targetobjs="$targetobjs ${targ_obj}.\$(OBJEXT)"
+       if test "$targ_extra_obj" != ""; then
+diff -Naur a/ld/configure.tgt b/ld/configure.tgt
+--- a/ld/configure.tgt	2023-01-14 01:00:00.000000000 +0100
++++ b/ld/configure.tgt	2023-01-22 17:16:27.256743422 +0100
+@@ -263,7 +263,7 @@
+ 			targ_extra_emuls="elf32bfin"
+ 			targ_extra_libpath=$targ_extra_emuls
+ 			;;
+-bpf-*-*)		targ_emul=elf64bpf
++bpf-* | bpf-*-*)	targ_emul=elf64bpf
+ 			;;
+ cr16-*-elf*)		targ_emul=elf32cr16
+ 			;;
+@@ -1088,7 +1088,7 @@
+ 			targ_extra_ofiles=
+ 			;;
+ *)
+-  echo 2>&1 "*** ld does not support target ${targ}"
++  echo 2>&1 "*** ld does not support target '${targ}' NO REALLY"
+   echo 2>&1 "*** see ld/configure.tgt for supported targets"
+   exit 1
+ 

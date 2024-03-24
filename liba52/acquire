@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+a52dec-v${UB_VERSION}.tar.gz a52dec-v${UB_VERSION}/
+	https://git.adelielinux.org/community/a52dec/-/archive/v${UB_VERSION}/

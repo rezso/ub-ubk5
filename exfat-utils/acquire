@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz exfatprogs-${UB_VERSION}/
+	https://github.com/exfatprogs/exfatprogs/archive/refs/tags/

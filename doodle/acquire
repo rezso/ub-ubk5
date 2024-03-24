@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+doodle-${UB_VERSION}.tar.gz doodle-${UB_VERSION}/
+	https://grothoff.org/christian/doodle/download/
