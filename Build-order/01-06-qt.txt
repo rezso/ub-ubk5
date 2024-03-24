@@ -4,6 +4,7 @@ spamassassin
 nodejs
 libproxy
 glib-networking
+wpasupplicant
 iwd
 networkmanager
 libxmlb
