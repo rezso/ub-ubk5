@@ -1,0 +1,12 @@
+diff -Naur a/meson.build b/meson.build
+--- a/meson.build	2024-03-27 12:46:53.000000000 +0100
++++ b/meson.build	2024-03-30 01:32:18.255290460 +0100
+@@ -949,7 +949,7 @@
+ subdir('libuuid')
+ subdir('liblastlog2')
+ subdir('libfdisk')
+-subdir('pam_lastlog2')
++#subdir('pam_lastlog2')
+ subdir('login-utils')
+ subdir('sys-utils')
+ subdir('disk-utils')

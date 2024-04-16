@@ -2,4 +2,3 @@
 
 libbluray-${UB_VERSION}.tar.bz2 libbluray-${UB_VERSION}/
 	https://download.videolan.org/pub/videolan/libbluray/${UB_VERSION}/
-	git://git.videolan.org/libbluray.git@tag:${UB_VERSION}

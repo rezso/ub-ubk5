@@ -1,7 +1,7 @@
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2022-07-16 15:40:43.015670947 +0200
-+++ b/src/useradd.c	2022-07-16 15:46:27.501004694 +0200
-@@ -2340,7 +2340,6 @@
+--- a/src/useradd.c	2024-03-31 01:47:49.919171743 +0100
++++ b/src/useradd.c	2024-03-31 01:56:59.197038239 +0100
+@@ -2357,7 +2357,6 @@
  		const char *spool;
  		char *file;
  		int fd;
@@ -9,7 +9,7 @@ diff -Naur a/src/useradd.c b/src/useradd.c
  		gid_t gid;
  		mode_t mode;
  
-@@ -2374,16 +2373,8 @@
+@@ -2391,16 +2390,8 @@
  			return;
  		}
  

@@ -57,5 +57,5 @@ telepathy-glib-dev
 tzdata
 udisks2-dev
 upower-dev
-vala-dev
+vala
 wayland-dev

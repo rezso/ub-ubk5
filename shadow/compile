@@ -11,7 +11,7 @@ ub_configure \
 	--disable-account-tools-setuid \
 	--enable-man \
 	--with-libcrack \
-	--with-libpam \
+	--without-libpam \
 	--without-selinux
 
 make CFLAGS=-fPIC

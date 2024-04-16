@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-${UB_VERSION}.tar.gz gpm-${UB_VERSION}/
-	https://github.com/telmich/gpm/archive/
+#${UB_VERSION}.tar.gz gpm-${UB_VERSION}/
+#	https://github.com/telmich/gpm/archive/
+
+${UB_VERSION}.tar.gz gpm-e82d1a6/
+	git+https://github.com/telmich/gpm.git@e82d1a6

@@ -13,4 +13,6 @@ ub_compile \
 	-Dbuild-nologin=disabled \
 	-Dbuild-newgrp=disabled \
 	-Dbuild-chfn-chsh=disabled \
-	-Dbuild-su=disabled
+	-Dbuild-su=disabled \
+	\
+	-Dbuild-pam-lastlog2=disabled

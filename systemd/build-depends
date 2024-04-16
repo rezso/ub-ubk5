@@ -1,8 +1,10 @@
 acl-dev
 attr-dev
--audit-dev
+audit-dev
 cryptsetup-dev
 dbus-dev
+docbook-dtds
+docbook-xsl
 glib-dev
 gnutls-dev
 gobject-introspection-dev
@@ -16,7 +18,6 @@ libidn2-dev
 liblz4-dev
 libqrencode-dev
 libtasn1-dev
-libxcrypt-dev
 libxkbcommon-dev
 libxslt
 lvm-dev

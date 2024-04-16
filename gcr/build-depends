@@ -5,4 +5,4 @@ intltool
 libsecret-dev
 libxslt-dev
 openssh
-vala-dev
+vala

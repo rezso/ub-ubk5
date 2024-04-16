@@ -18,6 +18,6 @@ meson
 startup-notification-dev
 systemd-dev
 tdb-dev
-vala-dev
+vala
 wayland-dev
 xcb-util-dev

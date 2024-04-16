@@ -4,4 +4,4 @@ intltool
 itstool
 meson
 python3-pygobject
-vala-dev
+vala

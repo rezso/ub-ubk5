@@ -9,5 +9,5 @@ iso-codes
 libdbusmenu-gtk3-dev
 libnotify-dev
 unicode-ucd
-vala-dev
+vala
 wayland-dev

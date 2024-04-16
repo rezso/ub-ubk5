@@ -5,4 +5,4 @@ intltool
 libgcrypt-dev
 libxslt
 meson
-vala-dev
+vala

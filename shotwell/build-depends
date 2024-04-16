@@ -10,5 +10,5 @@ libgudev-dev
 libportal-dev
 libraw-dev
 sqlite-dev
-vala-dev
+vala
 webkit2gtk-4.1-dev

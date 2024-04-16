@@ -2,4 +2,4 @@ curl-dev
 glib-dev
 gobject-introspection-dev
 gsettings-desktop-schemas
-vala-dev
+vala

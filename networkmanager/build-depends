@@ -24,5 +24,5 @@ python3-pygobject-dev
 readline-dev
 systemd-dev
 util-linux-dev
-vala-dev
+vala
 wireless-tools-dev

@@ -1,9 +1,3 @@
 #!/bin/sh -eux
 
-rm -f CMakeLists.txt
-
-ub_compile \
-	--disable-arts --disable-esd --disable-nas \
-	--enable-alsa --enable-pulseaudio-shared \
-	--enable-video-wayland \
-	--disable-rpath
+ub_compile

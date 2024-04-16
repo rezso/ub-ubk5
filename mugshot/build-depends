@@ -1,3 +1,9 @@
+accountsservice
+dbus-python3
+gtk3
 intltool
+python3-cairo
 python3-distutils-extra
+python3-pexpect
+python3-pygobject
 python3-setuptools

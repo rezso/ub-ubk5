@@ -13,4 +13,4 @@ libpeas-dev
 libsecret-dev
 meson
 python3-pygobject
-vala-dev
+vala

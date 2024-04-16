@@ -10,6 +10,6 @@ libsoup3-dev
 libvirt-glib-dev
 libxslt-dev
 spice-gtk-dev
-vala-dev
+vala
 webkit2gtk-4.1-dev
 yelp-tools

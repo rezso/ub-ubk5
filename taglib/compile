@@ -1,4 +1,7 @@
 #!/bin/sh -eux
 
+git clone https://github.com/nemtrif/utfcpp.git 3rdparty/utfcpp
+
+export CXXFLAGS=" -I${UB_COMPILEDIR}/3rdparty/utfcpp/source"
 ub_compile \
 	-DBUILD_SHARED_LIBS=ON

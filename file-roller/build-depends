@@ -1,12 +1,12 @@
-docbook-dtds
-docbook-xsl
+cpio
 file-dev
+gtk4-dev
 intltool
 itstool
 json-glib-dev
+libadwaita-dev
 libarchive-dev
-libhandy-dev
 libnotify-dev
+libportal-dev
 libsm-dev
-meson
 nautilus-dev

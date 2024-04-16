@@ -15,7 +15,6 @@ libtorrent
 mp3info
 liboauth
 libraw
-protobuf
 libpano13
 libtorrent-rasterbar
 libva-intel-driver

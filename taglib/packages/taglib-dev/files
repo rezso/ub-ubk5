@@ -1,4 +1,5 @@
 	/usr/bin/*-config
 	/usr/include
+	/usr/lib/cmake
 	/usr/lib/pkgconfig
 @	/usr/lib/*.so

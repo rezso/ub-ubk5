@@ -4,4 +4,4 @@ libsoup3-dev
 libtasn1-dev
 meson
 sqlite-dev
-vala-dev
+vala

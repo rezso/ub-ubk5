@@ -1,15 +1,6 @@
 diff -Naur a/etc/login.defs b/etc/login.defs
 --- a/etc/login.defs	2021-12-24 17:31:16.000000000 +0100
-+++ b/etc/login.defs	2024-02-02 19:31:12.432886335 +0100
-@@ -51,7 +51,7 @@
- #
- # Enable additional checks upon password changes.
- #
--OBSCURE_CHECKS_ENAB	yes
-+OBSCURE_CHECKS_ENAB	no
- 
- #
- # Enable checking of time restrictions specified in /etc/porttime.
++++ b/etc/login.defs	2022-07-16 15:31:22.189399349 +0200
 @@ -75,7 +75,7 @@
  # a ":" delimited list of device names.  Root logins will be allowed only
  # from these devices.

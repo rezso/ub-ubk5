@@ -7,4 +7,4 @@ libsecret-dev
 libxml2-dev
 libxslt-dev
 sqlite-dev
-vala-dev
+vala

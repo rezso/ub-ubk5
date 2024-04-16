@@ -24,5 +24,5 @@ startup-notification-dev
 systemd-dev
 tdb-dev
 totem-plparser-dev
-vala-dev
+vala
 xcb-util-dev

@@ -1,7 +1,7 @@
 dhcp-client
 dnsmasq
 iproute2
-iwd
 mobile-broadband-provider-info
 ntp
 python3-pygobject
+wpasupplicant

@@ -14,4 +14,4 @@ libunwind-dev
 libxml2-dev
 meson
 tracker-dev
-vala-dev
+vala

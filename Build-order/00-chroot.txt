@@ -372,9 +372,9 @@ libgsf
 libvdpau
 libvpx
 graphviz
-libaio
 desktop-file-utils
 libqrencode
+libaio
 lvm
 dracut
 audit

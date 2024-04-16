@@ -5,7 +5,7 @@ intltool
 itstool
 libadwaita-dev
 libgweather-dev
-libhandy-dev
 libportal-dev
+librsvg-dev
 libshumate-dev
 rest-dev

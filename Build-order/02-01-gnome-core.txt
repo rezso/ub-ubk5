@@ -1,6 +1,5 @@
 libei
 libdazzle
-libadwaita
 gjs
 libpeas
 libgweather

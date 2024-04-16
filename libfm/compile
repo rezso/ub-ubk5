@@ -5,13 +5,10 @@ export BOOTSTRAP=0
 
 if [ $BOOTSTRAP = "1" ]; then
 
-./autogen.sh
 ub_configure \
 	--with-extra-only
 
 else
-
-./autogen.sh
 ub_configure \
 	--enable-udisks \
 	--with-gnu-ld \

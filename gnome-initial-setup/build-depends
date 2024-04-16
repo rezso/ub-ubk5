@@ -27,5 +27,5 @@ polkit-dev
 rest-dev
 telepathy-glib-dev
 util-linux-dev
-vala-dev
+vala
 webkitgtk-6.0-dev

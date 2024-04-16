@@ -2,4 +2,4 @@ gobject-introspection-dev
 gtk3-dev
 intltool
 libarchive-dev
-vala-dev
+vala

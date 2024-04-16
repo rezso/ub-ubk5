@@ -10,7 +10,7 @@
 ub_compile \
     -Dmode=release \
    	-Dsplit-usr=false \
-   	-Dinitrd=true \
+  	-Dinitrd=true \
    	-Dstandalone-binaries=true \
    	-Ddefault-kill-user-processes=false \
 	-Dpamlibdir=/usr/lib/security \

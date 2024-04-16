@@ -11,4 +11,4 @@ libjpeg-turbo-dev
 sane-backends-dev
 sqlite-dev
 systemd-dev
-vala-dev
+vala

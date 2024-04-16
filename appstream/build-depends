@@ -9,6 +9,6 @@ libyaml-dev
 lmdb-dev
 meson
 protobuf-dev
-vala-dev
+vala
 xapian-dev
 xmlto

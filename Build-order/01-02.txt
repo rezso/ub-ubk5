@@ -117,6 +117,7 @@ fluidsynth
 libass
 libdc1394
 libgphoto2
+libimobiledevice-glue
 libusbmuxd
 libimobiledevice
 netpbm # lilypond build-depends

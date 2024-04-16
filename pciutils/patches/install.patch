@@ -1,6 +1,6 @@
 diff -Naur a/Makefile b/Makefile
---- a/Makefile	2022-04-18 18:48:46.000000000 +0200
-+++ b/Makefile	2022-08-10 19:05:12.737471684 +0200
+--- a/Makefile	2024-02-25 00:11:10.000000000 +0100
++++ b/Makefile	2024-03-30 01:38:30.876913642 +0100
 @@ -19,7 +19,7 @@
  DNS=
  
@@ -11,7 +11,7 @@ diff -Naur a/Makefile b/Makefile
  # Use libkmod to resolve kernel modules on Linux (yes/no, default: detect)
  LIBKMOD=
 @@ -32,9 +32,9 @@
- ABI_VERSION=.3
+ ABI_VERSION=3
  
  # Installation directories
 -PREFIX=/usr/local
@@ -22,12 +22,3 @@ diff -Naur a/Makefile b/Makefile
  SHAREDIR=$(PREFIX)/share
  IDSDIR=$(SHAREDIR)
  MANDIR:=$(shell if [ -d $(PREFIX)/share/man ] ; then echo $(PREFIX)/share/man ; else echo $(PREFIX)/man ; fi)
-@@ -128,7 +128,7 @@
- 
- distclean: clean
- 
--install: all
-+install: all install-lib
- # -c is ignored on Linux, but required on FreeBSD
- 	$(DIRINSTALL) -m 755 $(DESTDIR)$(BINDIR) $(DESTDIR)$(SBINDIR) $(DESTDIR)$(IDSDIR) $(DESTDIR)$(MANDIR)/man8 $(DESTDIR)$(MANDIR)/man7 $(DESTDIR)/$(MANDIR)/man5
- 	$(INSTALL) -c -m 755 $(STRIP) lspci$(EXEEXT) $(DESTDIR)$(LSPCIDIR)
