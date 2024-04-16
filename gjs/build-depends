@@ -2,5 +2,4 @@ dbus-glib-dev
 gobject-introspection-dev
 js115-dev
 readline-dev
-sysprof-dev
 valgrind-dev
