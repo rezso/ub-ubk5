@@ -1,0 +1,11 @@
+diff -Naur a/help/LINGUAS b/help/LINGUAS
+--- a/help/LINGUAS	2024-02-23 16:12:37.000000000 +0100
++++ b/help/LINGUAS	2024-04-16 22:10:29.106235553 +0200
+@@ -52,7 +52,6 @@
+ ig
+ is
+ it
+-ja
+ ka
+ kk
+ kn
