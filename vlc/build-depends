@@ -13,7 +13,6 @@ libarchive-dev
 libass-dev
 libavc1394-dev
 libbluray-dev
-libcaca-dev
 libcddb-dev
 libdc1394-dev
 libdca-dev
@@ -41,7 +40,7 @@ libupnp-dev
 libvdpau-dev
 libvpx-dev
 libxpm-dev
-lua52-dev
+lua-dev
 mpg123-dev
 musepack-dev
 ncurses-dev

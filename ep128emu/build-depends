@@ -8,7 +8,7 @@ libpng-dev
 libsndfile-dev
 libxft-dev
 libxinerama-dev
-lua53-dev
+lua-dev
 portaudio-dev
 scons
 sdl-dev

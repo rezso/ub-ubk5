@@ -2,5 +2,5 @@
 
 export UB_MAKE_PROCS=1
 ub_make \
-	  LUA_CFLAGS=$(pkg-config --cflags lua53) \
-	  LUA_LIBS=$(pkg-config --libs lua53)
+	  LUA_CFLAGS=$(pkg-config --cflags lua54) \
+	  LUA_LIBS=$(pkg-config --libs lua54)

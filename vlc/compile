@@ -5,7 +5,7 @@ export CXXFLAGS+=" -std=c++17"
 touch src/revision.txt
 
 ./bootstrap
-export LUAC=luac5.2
+export LUAC=luac5.4
 ub_compile \
 	--enable-flac \
 	--enable-faad \
