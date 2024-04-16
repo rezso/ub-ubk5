@@ -13,7 +13,6 @@ gnome-initial-setup >=
 gnome-logs >=
 gnome-screenshot >=
 gnome-shell-extensions >=
-gnome-software >=
 gnome-system-monitor >=
 gnome-terminal >=
 gnome-user-docs >=
