@@ -19,12 +19,12 @@ intltool
 iso-codes
 itstool
 jack-dev
+json-glib-dev
 ladspa-dev
 lcms2-dev
 liba52-dev
 libass-dev
 libavc1394-dev
-libcaca-dev
 libcdio-dev
 libdc1394-dev
 libdca-dev
@@ -56,7 +56,7 @@ libraw1394-dev
 librsvg-dev
 libsm-dev
 libsndfile-dev
-libsrtp
+libsrtp2-dev
 libssh2-dev
 libtheora-dev
 libunwind-dev
