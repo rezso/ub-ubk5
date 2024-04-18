@@ -27,7 +27,6 @@ libhandy
 yelp
 gnumeric
 rest
-gnome-online-accounts
 wxwidgets
 bigreqsproto
 uhu-pixmaps
@@ -80,6 +79,7 @@ python3-pyinotify
 ffmpeg-thumbnailer
 libconfig
 compton
+compton-conf
 xcursorgen
 numlockx
 xbindkeys
@@ -119,6 +119,8 @@ fuse-ntfs-3g
 mtools
 xfsprogs
 udisks2
+libadwaita
+gnome-online-accounts
 gvfs
 libdbusmenu-qt
 python3-pyqt-builder

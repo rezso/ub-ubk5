@@ -105,6 +105,7 @@ pkcs11-helper
 poppler-data
 potrace
 procmail
+protobuf
 qqwing
 qtilitools
 recode

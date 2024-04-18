@@ -1,4 +1,5 @@
 dleyna
+protobuf-c
 libgnome-games-support
 libmanette
 libshumate
