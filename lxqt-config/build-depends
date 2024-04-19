@@ -7,3 +7,4 @@ libxi-dev
 lxqt-build-tools
 lxqt-menu-data
 x.org-input-libinput-dev
+xsettingsd

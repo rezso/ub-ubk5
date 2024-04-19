@@ -1,4 +1,5 @@
 #!/bin/sh -eux
 
 ub_compile \
-	-DQCA_FEATURE_INSTALL_DIR=/usr/lib/qt5/mkspecs/features
+	-DBUILD_WITH_QT6=ON \
+	-DQCA_FEATURE_INSTALL_DIR=/usr/lib/qt6/mkspecs/features

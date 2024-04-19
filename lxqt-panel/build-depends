@@ -1,5 +1,6 @@
 alsa-lib-dev
-libdbusmenu-qt-dev
+layer-shell-qt-dev
+libdbusmenu-lxqt-dev
 liblxqt-dev
 libqtxdg-dev
 libstatgrab-dev

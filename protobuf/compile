@@ -5,7 +5,3 @@ git clone -b lts_2023_01_25 https://github.com/abseil/abseil-cpp.git third_party
 ub_compile \
     -Dprotobuf_BUILD_TESTS=OFF \
     -DBUILD_SHARED_LIBS=ON
-
-cd python
-export PROTOC=../build/protoc
-python3 setup.py build

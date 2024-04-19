@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-kgamma5-${UB_VERSION}.tar.xz kgamma-${UB_VERSION}/
-	https://download.kde.org/stable/plasma/${UB_VERSION_HEAD3}/
+kgamma-${UB_VERSION}.tar.xz kgamma-${UB_VERSION}/
+	https://download.kde.org/stable/plasma/${UB_VERSION}/

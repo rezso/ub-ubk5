@@ -10,4 +10,4 @@ kservice-dev
 kwindowsystem-dev
 libgcrypt-dev
 qca-dev
-qt5-dev
+qt6-dev
