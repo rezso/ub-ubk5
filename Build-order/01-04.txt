@@ -1,5 +1,4 @@
 libspectre
-libspnav
 libwpd
 libwpg
 libwps

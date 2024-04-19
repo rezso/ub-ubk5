@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-DUSE_QT5=On \
-	-DWITH_DOC=OFF \
-    -DCMAKE_INSTALL_LIBDIR=lib

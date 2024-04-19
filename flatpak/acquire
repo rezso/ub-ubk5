@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz flatpak-${UB_VERSION}/
-	https://github.com/flatpak/flatpak/archive/refs/tags/
