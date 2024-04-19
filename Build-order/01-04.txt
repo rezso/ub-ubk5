@@ -96,6 +96,7 @@ ffmpeg
 ffmpeg4.4
 libheif
 imlib2
+libcaca
 gstreamer
 gstreamermm
 clutter-gst
