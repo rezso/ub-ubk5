@@ -1,22 +1,24 @@
 diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/python.po
---- a/lang/python/hu/LC_MESSAGES/python.po	2023-12-12 00:04:06.000000000 +0100
-+++ b/lang/python/hu/LC_MESSAGES/python.po	2023-12-17 00:28:27.343105427 +0100
-@@ -76,25 +76,26 @@
+--- a/lang/python/hu/LC_MESSAGES/python.po	2024-02-19 19:23:21.000000000 +0100
++++ b/lang/python/hu/LC_MESSAGES/python.po	2024-02-20 14:29:00.447995038 +0100
+@@ -81,23 +81,22 @@
  
- #: src/modules/displaymanager/main.py:935
+ #: src/modules/displaymanager/main.py:938
  msgid "No display managers selected for the displaymanager module."
 -msgstr "Nincs kijelzőkezelő kiválasztva a kijelzőkezelő modulhoz."
 +msgstr "Nincs kiválasztott grafikus beléptetö a megfelelő modulhoz."
  
- #: src/modules/displaymanager/main.py:936
+ #: src/modules/displaymanager/main.py:939
  msgid ""
  "The displaymanagers list is empty or undefined in both globalstorage and "
  "displaymanager.conf."
 -msgstr ""
+-"A displaymanagers lista üres vagy nincs meghatározva mind a globalstorage, "
+-"mind a displaymanager.conf fájlban."
 +msgstr "A beléptetők listája üres, vagy nincs megadva a sem globalstorage-ben sem"
 +" a displaymanager.conf fájlban."
  
- #: src/modules/displaymanager/main.py:1023
+ #: src/modules/displaymanager/main.py:1026
  msgid "Display manager configuration was incomplete"
 -msgstr "A kijelzőkezelő konfigurációja hiányos volt"
 +msgstr "A grafikus beléptető konfigurációja hiányos volt"
@@ -28,21 +30,16 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/dracut/main.py:63
  msgid "Failed to run dracut"
--msgstr ""
-+msgstr "A dracut futtatása nem sikerült"
- 
- #: src/modules/dracut/main.py:64
- #, python-brace-format
-@@ -108,7 +109,7 @@
- #: src/modules/dummypython/main.py:37 src/modules/dummypython/main.py:91
- #: src/modules/dummypython/main.py:92
+@@ -116,7 +115,7 @@
+ #: src/modules/dummypython/main.py:37 src/modules/dummypython/main.py:104
+ #: src/modules/dummypython/main.py:105
  msgid "Dummy python step {}"
 -msgstr "Hamis {}. Python lépés"
 +msgstr "Hamis Python lépés: {}"
  
  #: src/modules/fstab/main.py:28
  msgid "Writing fstab."
-@@ -162,11 +163,11 @@
+@@ -171,11 +170,11 @@
  
  #: src/modules/initramfscfg/main.py:32
  msgid "Configuring initramfs."
@@ -56,7 +53,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/mkinitfs/main.py:27
  msgid "Creating initramfs with mkinitfs."
-@@ -289,7 +290,7 @@
+@@ -304,7 +303,7 @@
  
  #: src/modules/services-openrc/main.py:93
  msgid "Cannot modify service"
@@ -65,7 +62,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/services-openrc/main.py:94
  msgid ""
-@@ -340,11 +341,11 @@
+@@ -357,11 +356,11 @@
  
  #: src/modules/unpackfs/main.py:34
  msgid "Filling up filesystems."
@@ -79,29 +76,12 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/unpackfs/main.py:299
  msgid "Unpacking image {}/{}, file {}/{}"
-@@ -360,7 +361,7 @@
- 
- #: src/modules/unpackfs/main.py:430
- msgid "No mount point for root partition"
--msgstr "Nincs betöltési pont a root partíciónál"
-+msgstr "Nincs csatolási pont a root partícióhoz"
- 
- #: src/modules/unpackfs/main.py:431
- msgid "globalstorage does not contain a \"rootMountPoint\" key."
-@@ -368,7 +369,7 @@
- 
- #: src/modules/unpackfs/main.py:434
- msgid "Bad mount point for root partition"
--msgstr "Rossz betöltési pont a root partíciónál"
-+msgstr "Rossz csatolási pont a root partícióhoz"
- 
- #: src/modules/unpackfs/main.py:435
- msgid "rootMountPoint is \"{}\", which does not exist."
-@@ -397,6 +398,7 @@
+@@ -414,7 +413,7 @@
  "Failed to find unsquashfs, make sure you have the squashfs-tools package "
  "installed."
  msgstr ""
-+"Az unsquashfs nem található, a squashfs-tools csomag telepítve van?"
+-"Nem sikerült megtalálni az unsquashfs fájlt, ellenőrizze, hogy telepítve "
++"Nem sikerült megtalálni az unsquashfs programot, ellenőrizze, hogy telepítve "
+ "van-e a squashfs-tools csomag."
  
  #: src/modules/unpackfs/main.py:481
- msgid "The destination \"{}\" in the target system is not a directory"
