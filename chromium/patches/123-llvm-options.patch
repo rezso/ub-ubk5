@@ -1,7 +1,7 @@
 diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
---- a/build/config/compiler/BUILD.gn	2024-01-22 19:41:38.049927500 +0100
-+++ b/build/config/compiler/BUILD.gn	2024-01-23 23:01:10.562980028 +0100
-@@ -616,24 +616,6 @@
+--- a/build/config/compiler/BUILD.gn	2024-04-10 21:43:31.808662000 +0200
++++ b/build/config/compiler/BUILD.gn	2024-04-11 01:59:59.758188191 +0200
+@@ -613,24 +613,6 @@
        }
      }
  
@@ -26,7 +26,7 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      # TODO(crbug.com/1235145): Investigate why/if this should be needed.
      if (is_win) {
        cflags += [ "/clang:-ffp-contract=off" ]
-@@ -768,7 +750,6 @@
+@@ -765,7 +747,6 @@
        ldflags += [
          "/opt:lldltojobs=all",
          "-mllvm:-import-instr-limit=$import_instr_limit",
@@ -34,27 +34,24 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
        ]
      } else {
        ldflags += [ "-flto=thin" ]
-@@ -800,13 +781,6 @@
+@@ -797,10 +778,6 @@
        if (is_apple) {
          ldflags += [ "-Wcrl,object_path_lto" ]
        }
--      if (!is_chromeos) {
--        # TODO(https://crbug.com/972449): turn on for ChromeOS when that
--        # toolchain has this flag.
--        # We only use one version of LLVM within a build so there's no need to
--        # upgrade debug info, which can be expensive since it runs the verifier.
--        ldflags += [ "-Wl,-mllvm,-disable-auto-upgrade-debug-info" ]
--      }
+-
+-      # We only use one version of LLVM within a build so there's no need to
+-      # upgrade debug info, which can be expensive since it runs the verifier.
+-      ldflags += [ "-Wl,-mllvm,-disable-auto-upgrade-debug-info" ]
      }
  
      # TODO(https://crbug.com/1211155): investigate why this isn't effective on
-@@ -1878,9 +1852,6 @@
+@@ -1877,9 +1854,6 @@
  
-           # TODO(crbug.com/1494809): Evaluate and possibly enable.
-           "-Wno-vla-extension",
+         # TODO(crbug.com/1494809): Evaluate and possibly enable.
+         "-Wno-vla-extension",
 -
--          # TODO(https://crbug.com/1490607): Fix and re-enable.
--          "-Wno-thread-safety-reference-return",
-         ]
-       }
-     }
+-        # TODO(https://crbug.com/1490607): Fix and re-enable.
+-        "-Wno-thread-safety-reference-return",
+       ]
+ 
+       if (!is_nacl) {
