@@ -5,3 +5,4 @@ libice
 libproxy
 libsm
 libxi
+patchelf

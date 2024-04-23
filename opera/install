@@ -16,3 +16,6 @@ cp -r "$UB_INSTALLDIR"/usr/lib/x86_64-linux-gnu/opera "$UB_INSTALLDIR"/usr/lib/
 rm -Rf "$UB_INSTALLDIR"/usr/lib/x86_64-linux-gnu
 
 ln -sf /usr/lib/opera/opera "$UB_INSTALLDIR"/usr/bin/opera
+
+# patchelf
+find "${UB_INSTALLDIR}"/usr/lib/opera -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
