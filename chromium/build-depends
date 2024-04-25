@@ -39,7 +39,6 @@ pipewire-dev
 protobuf-dev
 pulseaudio-dev
 python3
--qt5-dev
 qt6-dev
 rust
 systemd-dev

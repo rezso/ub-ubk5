@@ -1,6 +1,6 @@
 diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
---- a/build/config/compiler/BUILD.gn	2024-04-10 21:43:31.808662000 +0200
-+++ b/build/config/compiler/BUILD.gn	2024-04-11 01:59:59.758188191 +0200
+--- a/build/config/compiler/BUILD.gn	2024-04-15 22:33:42.985039200 +0200
++++ b/build/config/compiler/BUILD.gn	2024-04-22 21:22:48.939578186 +0200
 @@ -613,24 +613,6 @@
        }
      }
@@ -45,7 +45,7 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      }
  
      # TODO(https://crbug.com/1211155): investigate why this isn't effective on
-@@ -1877,9 +1854,6 @@
+@@ -1890,22 +1867,12 @@
  
          # TODO(crbug.com/1494809): Evaluate and possibly enable.
          "-Wno-vla-extension",
@@ -54,4 +54,17 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
 -        "-Wno-thread-safety-reference-return",
        ]
  
-       if (!is_nacl) {
+       cflags_cc += [
+         # TODO(crbug.com/328490295): Fix and re-enable for C flags.
+         "-Wenum-compare-conditional",
+       ]
+-
+-      if (!is_nacl) {
+-        cflags_cc += [
+-          # TODO(https://crbug.com/1513724): Fix and re-enable.
+-          "-Wno-c++11-narrowing-const-reference",
+-        ]
+-      }
+     }
+ 
+     # Some builders, such as Cronet, use a different version of Clang than

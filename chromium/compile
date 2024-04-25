@@ -75,7 +75,6 @@ use_system_libjpeg=true
 use_system_libpng=true
 use_qt=true
 use_qt6=true
-moc_qt5_path=\"/usr/lib/qt5/bin/\"
 moc_qt6_path=\"/usr/lib/qt6/libexec/\"
 gtk_version=4
 icu_use_data_file=false
@@ -91,7 +90,7 @@ _syslibs=(
 	libevent
 	libjpeg
 	libpng
-	libwebp
+#	libwebp
 #	libxml
 #	libxslt
 )
