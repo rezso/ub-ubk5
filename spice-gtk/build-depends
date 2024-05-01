@@ -22,5 +22,5 @@ spice-protocol
 systemd-dev
 usbredir-dev
 usbutils
-vala-dev
+vala
 wayland-protocols

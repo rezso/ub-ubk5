@@ -9,4 +9,4 @@ libxml2-dev
 python3-pygobject-dev
 sqlite-dev
 tzdata
-vala-dev
+vala

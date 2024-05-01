@@ -8,5 +8,5 @@ intltool
 iso-codes
 libnotify-dev
 unicode-ucd
-vala-dev
+vala
 wayland-dev

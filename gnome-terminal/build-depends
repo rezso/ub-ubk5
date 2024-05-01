@@ -13,5 +13,5 @@ libsm-dev
 nautilus-dev
 nettle-dev
 pcre2-dev
-vala-dev
+vala
 vte-dev

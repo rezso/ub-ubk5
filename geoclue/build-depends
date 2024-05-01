@@ -6,4 +6,4 @@ json-glib-dev
 libsoup3-dev
 modemmanager-dev
 systemd-dev
-vala-dev
+vala

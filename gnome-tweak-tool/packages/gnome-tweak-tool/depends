@@ -1,4 +1,7 @@
 gnome-settings-daemon
-libhandy
+gsettings-desktop-schemas
+gtk4
+libadwaita
+libgudev
 nautilus
 python3-pygobject

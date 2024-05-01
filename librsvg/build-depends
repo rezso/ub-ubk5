@@ -5,4 +5,4 @@ harfbuzz-dev
 libxml2-dev
 pango-dev
 rust
-vala-dev
+vala

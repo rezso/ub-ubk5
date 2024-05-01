@@ -3,4 +3,4 @@ gobject-introspection-dev
 libgudev-dev
 libpcap-dev
 systemd-dev
-vala-dev
+vala

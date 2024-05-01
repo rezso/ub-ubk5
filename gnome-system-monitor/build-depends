@@ -1,11 +1,8 @@
-docbook-dtds
-docbook-xsl
-gtkmm3-dev
+gtkmm4-dev
 icon-theme-gnome
 intltool
 itstool
+libadwaita-dev
 libgtop2-dev
-libhandy-dev
 librsvg-dev
 libwnck-dev
-meson

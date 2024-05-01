@@ -7,5 +7,5 @@ libcanberra-dev
 libmanette-dev
 librsvg-dev
 meson
-vala-dev
+vala
 wayland-dev

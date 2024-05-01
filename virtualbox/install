@@ -1,5 +1,6 @@
 #!/bin/bash -eux
 
+KVER="$(</usr/lib/modules/version)"
 source ./env.sh
 
 # we install the kernel module
@@ -7,8 +8,8 @@ cd ./out/linux.amd64/release/bin/src
 make \
 	DESTDIR="$UB_INSTALLDIR" \
 	INSTALL_MOD_PATH="$UB_INSTALLDIR"/usr \
-	KERN_DIR="$(echo /usr/lib/modules/*.x86_64/build)" \
-	MODULE_DIR="${UB_INSTALLDIR}`ls -1d /usr/lib/modules/*.x86_64`/kernel/drivers/misc/" \
+	KERN_DIR="/usr/lib/modules/$KVER/build" \
+	MODULE_DIR="${UB_INSTALLDIR}/usr/lib/modules/$KVER/kernel/drivers/misc/" \
 	install
 
 # install the other files

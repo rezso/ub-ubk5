@@ -19,6 +19,6 @@ nspr-dev
 nss-dev
 openldap-dev
 sqlite-dev
-vala-dev
+vala
 webkit2gtk-4.1-dev
 webkitgtk-6.0-dev

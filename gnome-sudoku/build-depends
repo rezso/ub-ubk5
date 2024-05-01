@@ -8,4 +8,4 @@ libxml2-dev
 meson
 python3-pygobject
 qqwing-dev
-vala-dev
+vala

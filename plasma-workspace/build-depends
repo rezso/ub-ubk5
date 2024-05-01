@@ -7,7 +7,6 @@ kwayland-dev
 kwin-dev
 layer-shell-qt-dev
 libcanberra-dev
-libdbusmenu-qt-dev
 libdrm-dev
 libkscreen-dev
 libksysguard-dev

@@ -6,3 +6,4 @@ libxcursor-dev
 libxkbcommon-dev
 libxrandr-dev
 rust
+scdoc

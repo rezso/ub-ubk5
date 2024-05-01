@@ -4,5 +4,4 @@ intltool
 itstool
 libadwaita-dev
 libgtop2-dev
-libhandy-dev
-vala-dev
+vala

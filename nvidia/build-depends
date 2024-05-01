@@ -8,5 +8,6 @@ libvdpau-dev
 libxv-dev
 libxvmc-dev
 libxxf86vm-dev
+patchelf
 wayland-dev
 x.org-server-dev

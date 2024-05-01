@@ -10,4 +10,4 @@ ncurses-dev
 readline-dev
 telepathy-glib-dev
 util-linux-dev
-vala-dev
+vala

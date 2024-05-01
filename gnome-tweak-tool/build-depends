@@ -1,5 +1,7 @@
+gobject-introspection-dev
 gsettings-desktop-schemas
+gtk4-dev
 intltool
-libhandy-dev
-meson
-python3-pygobject
+libadwaita-dev
+libgudev-dev
+python3-pygobject-dev

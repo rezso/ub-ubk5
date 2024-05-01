@@ -6,5 +6,5 @@ libxkbfile-dev
 libxklavier-dev
 qt5-dev
 systemd-dev
-vala-dev
+vala
 yelp-tools

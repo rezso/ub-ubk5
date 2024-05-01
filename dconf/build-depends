@@ -3,4 +3,4 @@ dbus-dev
 intltool
 libxml2-dev
 libxslt
-vala-dev
+vala

@@ -15,5 +15,13 @@ cd yaml-cpp
 git checkout 1b50109
 cd ..
 
+cd cc-wrapper
+git checkout 6771344
+cd ..
+
+cd cc-wrapper/tinyjson
+git checkout a6b0d0d
+cd ../..
+
 ub_compile \
     -DCMAKE_INSTALL_LIBDIR=lib

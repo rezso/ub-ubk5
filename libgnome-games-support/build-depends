@@ -1,4 +1,4 @@
 gobject-introspection-dev
-gtk3-dev
+gtk4-dev
 libgee-dev
-vala-dev
+vala

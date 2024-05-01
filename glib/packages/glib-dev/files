@@ -1,4 +1,8 @@
 	/usr/bin/gdbus-codegen
+	/usr/bin/gi-compile-repository
+	/usr/bin/gi-decompile-typelib
+	/usr/bin/gi-inspect-typelib
+	/usr/bin/glib-compile-resources
 	/usr/bin/glib-genmarshal
 	/usr/bin/glib-gettextize
 	/usr/bin/glib-mkenums
@@ -10,6 +14,9 @@
 @	/usr/lib/*.so
 	/usr/share/aclocal
 	/usr/share/gdb/auto-load
+	/usr/share/gir-1.0
+	/usr/share/glib-2.0/codegen
+	/usr/share/glib-2.0/dtds
 	/usr/share/glib-2.0/gdb
 	/usr/share/glib-2.0/gettext
 	/usr/share/glib-2.0/schemas/gschema.dtd

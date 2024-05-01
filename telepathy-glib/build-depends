@@ -2,4 +2,4 @@ dbus-glib-dev
 gobject-introspection-dev
 intltool
 libxslt
-vala-dev
+vala

@@ -20,7 +20,6 @@ libxtst-dev
 mesa-dev
 pipewire-dev
 startup-notification-dev
-sysprof-dev
 upower-dev
 xcb-util-dev
 xkeyboard-config

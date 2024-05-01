@@ -19,5 +19,5 @@ libportal-dev
 libqrencode-dev
 librsvg-dev
 systemd-dev
-vala-dev
+vala
 wayland-dev

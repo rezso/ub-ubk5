@@ -16,4 +16,4 @@ sqlite-dev
 systemd-dev
 taglib-dev
 util-linux-dev
-vala-dev
+vala

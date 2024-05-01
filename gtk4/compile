@@ -9,12 +9,11 @@ ub_compile \
 	-Dwayland-backend=true \
 	-Dbroadway-backend=false \
 	-Dvulkan=disabled \
-	-Dmedia-ffmpeg=disabled \
 	-Dmedia-gstreamer=disabled \
-	-Dgtk_doc=false \
+	-Ddocumentation=false \
 	-Dman-pages=false \
-	-Ddemos=true \
 	-Dintrospection=enabled \
+	-Dbuild-demos=true \
 	-Dbuild-examples=false \
 	-Dbuild-tests=false \
 	-Dbuild-testsuite=false

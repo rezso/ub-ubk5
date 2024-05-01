@@ -2,5 +2,6 @@
 
 ub_compile \
 	-Ddocs=false \
+	-Dgtk_doc=false \
 	-Dman=false \
 	-Dinstalled_tests=false

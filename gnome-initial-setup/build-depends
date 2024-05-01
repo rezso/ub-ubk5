@@ -15,7 +15,6 @@ krb5-dev
 libadwaita-dev
 libgudev-dev
 libgweather-dev
-libhandy-dev
 libnma-dev
 libpwquality-dev
 librsvg-dev
@@ -27,5 +26,5 @@ polkit-dev
 rest-dev
 telepathy-glib-dev
 util-linux-dev
-vala-dev
+vala
 webkitgtk-6.0-dev

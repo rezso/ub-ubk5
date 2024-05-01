@@ -22,5 +22,5 @@ polkit-dev
 pulseaudio-dev
 sassc
 upower-dev
-vala-dev
+vala
 zenity

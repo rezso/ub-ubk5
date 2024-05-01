@@ -1,3 +1,5 @@
 #!/bin/sh -eux
 
+rm -f setup.py pyproject.toml
+
 ub_compile

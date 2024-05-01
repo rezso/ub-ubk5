@@ -31,7 +31,17 @@ ln -s "$bzimage-$VERSION" "$UB_OBJECTDIR/boot/$bzimage.$ARCH"
 make \
 	INSTALL_PATH="$UB_OBJECTDIR/boot" \
 	INSTALL_MOD_PATH="$UB_OBJECTDIR/usr" \
+	DEPMOD=/doesnt/exists \
 	modules_install
+
+depmod -a -b "$UB_OBJECTDIR"/usr "$VERSION"
+
+if [ -d "$UB_OBJECTDIR"/lib ]; then
+    mv -f "$UB_OBJECTDIR"/lib/modules/"$VERSION"/* "$UB_OBJECTDIR"/usr/lib/modules/"$VERSION"/
+    rm -Rf "$UB_OBJECTDIR"/lib
+fi
+
+cp version "$UB_OBJECTDIR"/usr/lib/modules/version
 
 # check module symbols
 if depmod -nea -b "$UB_OBJECTDIR" -F "$UB_OBJECTDIR"/boot/System.map "$VERSION" 2>&1 | grep "^WARNING:"; then

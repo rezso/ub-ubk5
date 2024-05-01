@@ -3,4 +3,4 @@ gobject-introspection-dev
 intltool
 itstool
 meson
-vala-dev
+vala

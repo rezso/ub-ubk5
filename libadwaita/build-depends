@@ -3,5 +3,5 @@ curl-dev
 gobject-introspection-dev
 gtk4-dev
 sassc
-vala-dev
+vala
 wayland-protocols

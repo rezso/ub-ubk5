@@ -8,4 +8,4 @@ libsoup3-dev
 libxml2-dev
 meson
 totem-plparser-dev
-vala-dev
+vala

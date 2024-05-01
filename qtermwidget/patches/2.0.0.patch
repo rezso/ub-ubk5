@@ -1,0 +1,1967 @@
+diff -Naur a/cmake/qtermwidget5-config.cmake.in b/cmake/qtermwidget5-config.cmake.in
+--- a/cmake/qtermwidget5-config.cmake.in	2023-11-05 13:12:32.000000000 +0100
++++ b/cmake/qtermwidget5-config.cmake.in	1970-01-01 01:00:00.000000000 +0100
+@@ -1,20 +0,0 @@
+-# - Find the QTermWidget include and library
+-#
+-# Typical usage:
+-#    find_package(QTermWidget5 REQUIRED)
+-#
+-#    add_executable(foo main.cpp)
+-#    target_link_libraries(foo qtermwidget5)
+-
+-@PACKAGE_INIT@
+-
+-if (CMAKE_VERSION VERSION_LESS 3.0.2)
+-    message(FATAL_ERROR \"qtermwidget requires at least CMake version 3.0.2\")
+-endif()
+-
+-if (NOT TARGET @QTERMWIDGET_LIBRARY_NAME@)
+-    if (POLICY CMP0024)
+-        cmake_policy(SET CMP0024 NEW)
+-    endif()
+-    include("${CMAKE_CURRENT_LIST_DIR}/@QTERMWIDGET_LIBRARY_NAME@-targets.cmake")
+-endif()
+diff -Naur a/cmake/qtermwidget6-config.cmake.in b/cmake/qtermwidget6-config.cmake.in
+--- a/cmake/qtermwidget6-config.cmake.in	1970-01-01 01:00:00.000000000 +0100
++++ b/cmake/qtermwidget6-config.cmake.in	2024-04-29 20:51:28.837872621 +0200
+@@ -0,0 +1,20 @@
++# - Find the QTermWidget include and library
++#
++# Typical usage:
++#    find_package(QTermWidget5 REQUIRED)
++#
++#    add_executable(foo main.cpp)
++#    target_link_libraries(foo qtermwidget5)
++
++@PACKAGE_INIT@
++
++if (CMAKE_VERSION VERSION_LESS 3.0.2)
++    message(FATAL_ERROR \"qtermwidget requires at least CMake version 3.0.2\")
++endif()
++
++if (NOT TARGET @QTERMWIDGET_LIBRARY_NAME@)
++    if (POLICY CMP0024)
++        cmake_policy(SET CMP0024 NEW)
++    endif()
++    include("${CMAKE_CURRENT_LIST_DIR}/@QTERMWIDGET_LIBRARY_NAME@-targets.cmake")
++endif()
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2023-11-05 13:12:32.000000000 +0100
++++ b/CMakeLists.txt	2024-04-29 20:51:28.837872621 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 3.1.0 FATAL_ERROR)
++cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
+ # CMP0000: Call the cmake_minimum_required() command at the beginning of the top-level
+ # CMakeLists.txt file even before calling the project() command.
+ # The cmake_minimum_required(VERSION) command implicitly invokes the cmake_policy(VERSION)
+@@ -21,8 +21,8 @@
+ 
+ # just change version for releases
+ # keep this in sync with the version in pyqt/pyproject.toml
+-set(QTERMWIDGET_VERSION_MAJOR "1")
+-set(QTERMWIDGET_VERSION_MINOR "4")
++set(QTERMWIDGET_VERSION_MAJOR "2")
++set(QTERMWIDGET_VERSION_MINOR "0")
+ set(QTERMWIDGET_VERSION_PATCH "0")
+ 
+ set(QTERMWIDGET_VERSION "${QTERMWIDGET_VERSION_MAJOR}.${QTERMWIDGET_VERSION_MINOR}.${QTERMWIDGET_VERSION_PATCH}")
+@@ -32,12 +32,12 @@
+ set(CMAKE_INCLUDE_CURRENT_DIR ON)
+ 
+ # Minimum Versions
+-set(QT_MINIMUM_VERSION "5.15.0")
+-set(LXQTBT_MINIMUM_VERSION "0.13.0")
++set(QT_MINIMUM_VERSION "6.6.0")
++set(LXQTBT_MINIMUM_VERSION "2.0.0")
+ 
+-find_package(Qt5Widgets "${QT_MINIMUM_VERSION}" REQUIRED)
+-find_package(Qt5LinguistTools "${QT_MINIMUM_VERSION}" REQUIRED)
+-find_package(lxqt-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
++find_package(Qt6Widgets "${QT_MINIMUM_VERSION}" REQUIRED)
++find_package(Qt6LinguistTools "${QT_MINIMUM_VERSION}" REQUIRED)
++find_package(lxqt2-build-tools ${LXQTBT_MINIMUM_VERSION} REQUIRED)
+ 
+ if(USE_UTF8PROC)
+     find_package(Utf8Proc REQUIRED)
+@@ -55,7 +55,7 @@
+     endif()
+ endif()
+ 
+-set(QTERMWIDGET_LIBRARY_NAME qtermwidget5)
++set(QTERMWIDGET_LIBRARY_NAME qtermwidget6)
+ 
+ 
+ # main library
+@@ -130,9 +130,9 @@
+ 
+ CHECK_FUNCTION_EXISTS(updwtmpx HAVE_UPDWTMPX)
+ 
+-qt5_wrap_cpp(MOCS ${HDRS})
+-qt5_wrap_ui(UI_SRCS ${UI})
+-set(PKG_CONFIG_REQ "Qt5Widgets")
++qt6_wrap_cpp(MOCS ${HDRS})
++qt6_wrap_ui(UI_SRCS ${UI})
++set(PKG_CONFIG_REQ "Qt6Widgets")
+ 
+ lxqt_translate_ts(QTERMWIDGET_QM
+     TRANSLATION_DIR "lib/translations"
+@@ -147,7 +147,7 @@
+ )
+ 
+ add_library(${QTERMWIDGET_LIBRARY_NAME} SHARED ${SRCS} ${MOCS} ${UI_SRCS} ${QTERMWIDGET_QM})
+-target_link_libraries(${QTERMWIDGET_LIBRARY_NAME} Qt5::Widgets)
++target_link_libraries(${QTERMWIDGET_LIBRARY_NAME} Qt6::Widgets)
+ set_target_properties( ${QTERMWIDGET_LIBRARY_NAME} PROPERTIES
+                        SOVERSION ${QTERMWIDGET_VERSION_MAJOR}
+                        VERSION ${QTERMWIDGET_VERSION}
+diff -Naur a/examples/cpp/main.cpp b/examples/cpp/main.cpp
+--- a/examples/cpp/main.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/examples/cpp/main.cpp	2024-04-29 20:51:28.845872647 +0200
+@@ -36,12 +36,12 @@
+     QMenuBar *menuBar = new QMenuBar(mainWindow);
+     QMenu *actionsMenu = new QMenu(QStringLiteral("Actions"), menuBar);
+     menuBar->addMenu(actionsMenu);
+-    actionsMenu->addAction(QStringLiteral("Find..."), console, &QTermWidget::toggleShowSearchBar,
+-                           QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_F));
+-    actionsMenu->addAction(QStringLiteral("Copy"), console, &QTermWidget::copyClipboard,
+-                           QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_C));
+-    actionsMenu->addAction(QStringLiteral("Paste"), console, &QTermWidget::pasteClipboard,
+-                           QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_V));
++    actionsMenu->addAction(QStringLiteral("Find..."), QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_F), 
++        console, &QTermWidget::toggleShowSearchBar);
++    actionsMenu->addAction(QStringLiteral("Copy"), QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), 
++        console, &QTermWidget::copyClipboard);
++    actionsMenu->addAction(QStringLiteral("Paste"), QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_V), 
++        console, &QTermWidget::pasteClipboard);
+     actionsMenu->addAction(QStringLiteral("About Qt"), &app, &QApplication::aboutQt);
+     mainWindow->setMenuBar(menuBar);
+ 
+diff -Naur a/lib/ColorScheme.cpp b/lib/ColorScheme.cpp
+--- a/lib/ColorScheme.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/ColorScheme.cpp	2024-04-29 20:51:28.845872647 +0200
+@@ -339,7 +339,7 @@
+     bool ok = false;
+     // XXX: Undocumented(?) QSettings behavior: values with commas are parsed
+     // as QStringList and others QString
+-    if (colorValue.type() == QVariant::StringList)
++    if (colorValue.typeId() == QVariant::StringList)
+     {
+         QStringList rgbList = colorValue.toStringList();
+         colorStr = rgbList.join(QLatin1Char(','));
+@@ -364,9 +364,9 @@
+         if (hexColorPattern.match(colorStr).hasMatch())
+         {
+             // Parsing is always ok as already matched by the regexp
+-            r = colorStr.midRef(1, 2).toInt(nullptr, 16);
+-            g = colorStr.midRef(3, 2).toInt(nullptr, 16);
+-            b = colorStr.midRef(5, 2).toInt(nullptr, 16);
++            r = colorStr.mid(1, 2).toInt(nullptr, 16);
++            g = colorStr.mid(3, 2).toInt(nullptr, 16);
++            b = colorStr.mid(5, 2).toInt(nullptr, 16);
+             ok = true;
+         }
+     }
+diff -Naur a/lib/Emulation.cpp b/lib/Emulation.cpp
+--- a/lib/Emulation.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Emulation.cpp	2024-04-29 20:51:28.845872647 +0200
+@@ -33,15 +33,12 @@
+ #include <QClipboard>
+ #include <QHash>
+ #include <QKeyEvent>
+-#include <QRegExp>
++#include <QRegularExpression>
+ #include <QTextStream>
+ #include <QThread>
+ 
+ #include <QTime>
+ 
+-// KDE
+-//#include <kdebug.h>
+-
+ // Konsole
+ #include "KeyboardTranslator.h"
+ #include "Screen.h"
+@@ -52,25 +49,24 @@
+ 
+ Emulation::Emulation() :
+   _currentScreen(nullptr),
+-  _codec(nullptr),
+-  _decoder(nullptr),
+   _keyTranslator(nullptr),
+   _usesMouse(false),
+-  _bracketedPasteMode(false)
++  _bracketedPasteMode(false),
++  _fromUtf8(QStringEncoder::Utf16)
+ {
+   // create screens with a default size
+   _screen[0] = new Screen(40,80);
+   _screen[1] = new Screen(40,80);
+   _currentScreen = _screen[0];
+ 
+-  QObject::connect(&_bulkTimer1, SIGNAL(timeout()), this, SLOT(showBulk()) );
+-  QObject::connect(&_bulkTimer2, SIGNAL(timeout()), this, SLOT(showBulk()) );
++  QObject::connect(&_bulkTimer1, &QTimer::timeout, this, &Konsole::Emulation::showBulk);
++  QObject::connect(&_bulkTimer2, &QTimer::timeout, this, &Konsole::Emulation::showBulk);
+ 
+   // listen for mouse status changes
+-  connect(this , SIGNAL(programUsesMouseChanged(bool)) ,
+-           SLOT(usesMouseChanged(bool)));
+-  connect(this , SIGNAL(programBracketedPasteModeChanged(bool)) ,
+-           SLOT(bracketedPasteModeChanged(bool)));
++  connect(this, &Konsole::Emulation::programUsesMouseChanged,
++          this, &Konsole::Emulation::usesMouseChanged);
++  connect(this, &Konsole::Emulation::programBracketedPasteModeChanged,
++          this, &Konsole::Emulation::bracketedPasteModeChanged);
+ 
+   connect(this, &Emulation::cursorChanged, this, [this] (KeyboardCursorShape cursorShape, bool blinkingCursorEnabled) {
+     emit titleChanged( 50, QString(QLatin1String("CursorShape=%1;BlinkingCursorEnabled=%2"))
+@@ -104,11 +100,11 @@
+     window->setScreen(_currentScreen);
+     _windows << window;
+ 
+-    connect(window , SIGNAL(selectionChanged()),
+-            this , SLOT(bufferedUpdate()));
++    connect(window, &Konsole::ScreenWindow::selectionChanged,
++            this, &Konsole::Emulation::bufferedUpdate);
+ 
+-    connect(this , SIGNAL(outputChanged()),
+-            window , SLOT(notifyOutputChanged()) );
++    connect(this, &Konsole::Emulation::outputChanged,
++            window, &Konsole::ScreenWindow::notifyOutputChanged);
+ 
+     connect(this, &Emulation::handleCommandFromKeyboard,
+             window, &ScreenWindow::handleCommandFromKeyboard);
+@@ -129,7 +125,6 @@
+ 
+   delete _screen[0];
+   delete _screen[1];
+-  delete _decoder;
+ }
+ 
+ void Emulation::setScreen(int n)
+@@ -139,7 +134,7 @@
+   if (_currentScreen != old)
+   {
+      // tell all windows onto this emulation to switch to the newly active screen
+-     for(ScreenWindow* window : qAsConst(_windows))
++     for(ScreenWindow* window : std::as_const(_windows))
+          window->setScreen(_currentScreen);
+   }
+ }
+@@ -160,27 +155,6 @@
+   return _screen[0]->getScroll();
+ }
+ 
+-void Emulation::setCodec(const QTextCodec * qtc)
+-{
+-  if (qtc)
+-      _codec = qtc;
+-  else
+-     setCodec(LocaleCodec);
+-
+-  delete _decoder;
+-  _decoder = _codec->makeDecoder();
+-
+-  emit useUtf8Request(utf8());
+-}
+-
+-void Emulation::setCodec(EmulationCodec codec)
+-{
+-    if ( codec == Utf8Codec )
+-        setCodec( QTextCodec::codecForName("utf8") );
+-    else if ( codec == LocaleCodec )
+-        setCodec( QTextCodec::codecForLocale() );
+-}
+-
+ void Emulation::setKeyBindings(const QString& name)
+ {
+   _keyTranslator = KeyboardTranslatorManager::instance()->findTranslator(name);
+@@ -250,8 +224,9 @@
+      * U+10FFFF
+      * https://unicodebook.readthedocs.io/unicode_encodings.html#surrogates
+      */
+-    QString utf16Text = _decoder->toUnicode(text,length);
+-    std::wstring unicodeText = utf16Text.toStdWString();
++    QString str = QString::fromUtf8(text, length);
++    auto encoded = _fromUtf8(str);
++    std::wstring unicodeText = encoded.data.toStdWString(); 
+ 
+     //send characters to terminal emulator
+     for (size_t i=0;i<unicodeText.length();i++)
+@@ -332,9 +307,6 @@
+     return _currentScreen->getLines() + _currentScreen->getHistLines();
+ }
+ 
+-#define BULK_TIMEOUT1 10
+-#define BULK_TIMEOUT2 40
+-
+ void Emulation::showBulk()
+ {
+     _bulkTimer1.stop();
+@@ -348,6 +320,9 @@
+ 
+ void Emulation::bufferedUpdate()
+ {
++    static const int BULK_TIMEOUT1 = 10;
++    static const int BULK_TIMEOUT2 = 40;
++
+    _bulkTimer1.setSingleShot(true);
+    _bulkTimer1.start(BULK_TIMEOUT1);
+    if (!_bulkTimer2.isActive())
+diff -Naur a/lib/Emulation.h b/lib/Emulation.h
+--- a/lib/Emulation.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Emulation.h	2024-04-29 20:51:28.845872647 +0200
+@@ -29,9 +29,9 @@
+ // Qt
+ #include <QKeyEvent>
+ //#include <QPointer>
+-#include <QTextCodec>
+ #include <QTextStream>
+ #include <QTimer>
++#include <QStringEncoder>
+ 
+ #include "qtermwidget_export.h"
+ #include "KeyboardTranslator.h"
+@@ -190,20 +190,6 @@
+    */
+   virtual void writeToStream(TerminalCharacterDecoder* decoder,int startLine,int endLine);
+ 
+-  /** Returns the codec used to decode incoming characters.  See setCodec() */
+-  const QTextCodec* codec() const { return _codec; }
+-  /** Sets the codec used to decode incoming characters.  */
+-  void setCodec(const QTextCodec*);
+-
+-  /**
+-   * Convenience method.
+-   * Returns true if the current codec used to decode incoming
+-   * characters is UTF-8
+-   */
+-  bool utf8() const
+-  { Q_ASSERT(_codec); return _codec->mibEnum() == 106; }
+-
+-
+   /** TODO Document me */
+   virtual char eraseChar() const;
+ 
+@@ -483,10 +469,6 @@
+                             //                      scrollbars are not enabled in this mode )
+ 
+ 
+-  //decodes an incoming C-style character stream into a unicode QString using
+-  //the current text codec.  (this allows for rendering of non-ASCII characters in text files etc.)
+-  const QTextCodec* _codec;
+-  QTextDecoder* _decoder;
+   const KeyboardTranslator* _keyTranslator; // the keyboard layout
+ 
+ protected slots:
+@@ -510,9 +492,9 @@
+ private:
+   bool _usesMouse;
+   bool _bracketedPasteMode;
+-  QTimer _bulkTimer1;
+-  QTimer _bulkTimer2;
+-
++  QTimer _bulkTimer1{this};
++  QTimer _bulkTimer2{this};
++  QStringEncoder _fromUtf8;
+ };
+ 
+ }
+diff -Naur a/lib/Filter.cpp b/lib/Filter.cpp
+--- a/lib/Filter.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Filter.cpp	2024-04-29 20:51:28.845872647 +0200
+@@ -338,11 +338,11 @@
+     return _capturedTexts;
+ }
+ 
+-void RegExpFilter::setRegExp(const QRegExp& regExp)
++void RegExpFilter::setRegExp(const QRegularExpression& regExp)
+ {
+     _searchText = regExp;
+ }
+-QRegExp RegExpFilter::regExp() const
++QRegularExpression RegExpFilter::regExp() const
+ {
+     return _searchText;
+ }
+@@ -352,7 +352,6 @@
+ }*/
+ void RegExpFilter::process()
+ {
+-    int pos = 0;
+     const QString* text = buffer();
+ 
+     Q_ASSERT( text );
+@@ -360,35 +359,41 @@
+     // ignore any regular expressions which match an empty string.
+     // otherwise the while loop below will run indefinitely
+     static const QString emptyString;
+-    if ( _searchText.exactMatch(emptyString) )
+-        return;
+-
+-    while(pos >= 0)
++    auto match = _searchText.match(emptyString, 0, 
++        QRegularExpression::NormalMatch, QRegularExpression::AnchorAtOffsetMatchOption); 
++    if (match.hasMatch())
+     {
+-        pos = _searchText.indexIn(*text,pos);
++        return;
++    }
+ 
+-        if ( pos >= 0 )
+-        {
+-            int startLine = 0;
+-            int endLine = 0;
+-            int startColumn = 0;
+-            int endColumn = 0;
+-
+-            getLineColumn(pos,startLine,startColumn);
+-            getLineColumn(pos + _searchText.matchedLength(),endLine,endColumn);
+-
+-            RegExpFilter::HotSpot* spot = newHotSpot(startLine,startColumn,
+-                                           endLine,endColumn);
+-            spot->setCapturedTexts(_searchText.capturedTexts());
+-
+-            addHotSpot( spot );
+-            pos += _searchText.matchedLength();
+-
+-            // if matchedLength == 0, the program will get stuck in an infinite loop
+-            if ( _searchText.matchedLength() == 0 )
+-                pos = -1;
++    match = _searchText.match(*text);
++    while (match.hasMatch()) {
++        int startLine = 0;
++        int endLine = 0;
++        int startColumn = 0;
++        int endColumn = 0;
++
++        QStringList captureList;
++        for (int i = 0; i <= match.lastCapturedIndex(); i++) {
++            QString text = match.captured(i);
++            captureList.append(text);
+         }
+-    }
++        
++        getLineColumn(match.capturedStart(), startLine, startColumn);
++        getLineColumn(match.capturedEnd(), endLine, endColumn);
++
++        RegExpFilter::HotSpot* spot = newHotSpot(startLine, startColumn, endLine, endColumn);
++        spot->setCapturedTexts(captureList);
++
++        addHotSpot(spot);
++
++        // if capturedLength == 0, the program will get stuck in an infinite loop
++        if (match.capturedLength() == 0) {
++            break;
++        }
++
++        match = _searchText.match(*text, match.capturedEnd());
++    }	
+ }
+ 
+ RegExpFilter::HotSpot* RegExpFilter::newHotSpot(int startLine,int startColumn,
+@@ -417,9 +422,9 @@
+ {
+     QString url = capturedTexts().constFirst();
+ 
+-    if ( FullUrlRegExp.exactMatch(url) )
++    if ( FullUrlRegExp.match(url).hasMatch() )
+         return StandardUrl;
+-    else if ( EmailAddressRegExp.exactMatch(url) )
++    else if ( EmailAddressRegExp.match(url).hasMatch() )
+         return Email;
+     else
+         return Unknown;
+@@ -465,13 +470,13 @@
+ //regexp matches:
+ // full url:
+ // protocolname:// or www. followed by anything other than whitespaces, <, >, ' or ", and ends before whitespaces, <, >, ', ", ], !, comma and dot
+-const QRegExp UrlFilter::FullUrlRegExp(QLatin1String("(www\\.(?!\\.)|[a-z][a-z0-9+.-]*://)[^\\s<>'\"]+[^!,\\.\\s<>'\"\\]]"));
++const QRegularExpression UrlFilter::FullUrlRegExp(QLatin1String("(www\\.(?!\\.)|[a-z][a-z0-9+.-]*://)[^\\s<>'\"]+[^!,\\.\\s<>'\"\\]]"));
+ // email address:
+ // [word chars, dots or dashes]@[word chars, dots or dashes].[word chars]
+-const QRegExp UrlFilter::EmailAddressRegExp(QLatin1String("\\b(\\w|\\.|-)+@(\\w|\\.|-)+\\.\\w+\\b"));
++const QRegularExpression UrlFilter::EmailAddressRegExp(QLatin1String("\\b(\\w|\\.|-)+@(\\w|\\.|-)+\\.\\w+\\b"));
+ 
+ // matches full url or email address
+-const QRegExp UrlFilter::CompleteUrlRegExp(QLatin1Char('(')+FullUrlRegExp.pattern()+QLatin1Char('|')+
++const QRegularExpression UrlFilter::CompleteUrlRegExp(QLatin1Char('(')+FullUrlRegExp.pattern()+QLatin1Char('|')+
+                                             EmailAddressRegExp.pattern()+QLatin1Char(')'));
+ 
+ UrlFilter::UrlFilter()
+diff -Naur a/lib/Filter.h b/lib/Filter.h
+--- a/lib/Filter.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Filter.h	2024-04-29 20:51:28.845872647 +0200
+@@ -26,7 +26,7 @@
+ #include <QObject>
+ #include <QStringList>
+ #include <QHash>
+-#include <QRegExp>
++#include <QRegularExpression>
+ 
+ // Local
+ #include "qtermwidget_export.h"
+@@ -214,9 +214,9 @@
+      * Regular expressions which match the empty string are treated as not matching
+      * anything.
+      */
+-    void setRegExp(const QRegExp& text);
++    void setRegExp(const QRegularExpression& text);
+     /** Returns the regular expression which the filter searches for in blocks of text */
+-    QRegExp regExp() const;
++    QRegularExpression regExp() const;
+ 
+     /**
+      * Reimplemented to search the filter's text buffer for text matching regExp()
+@@ -235,7 +235,7 @@
+                                     int endLine,int endColumn);
+ 
+ private:
+-    QRegExp _searchText;
++    QRegularExpression _searchText;
+ };
+ 
+ class FilterObject;
+@@ -287,11 +287,11 @@
+ 
+ private:
+ 
+-    static const QRegExp FullUrlRegExp;
+-    static const QRegExp EmailAddressRegExp;
++    static const QRegularExpression FullUrlRegExp;
++    static const QRegularExpression EmailAddressRegExp;
+ 
+     // combined OR of FullUrlRegExp and EmailAddressRegExp
+-    static const QRegExp CompleteUrlRegExp;
++    static const QRegularExpression CompleteUrlRegExp;
+ signals:
+     void activated(const QUrl& url, bool fromContextMenu);
+ };
+diff -Naur a/lib/HistorySearch.cpp b/lib/HistorySearch.cpp
+--- a/lib/HistorySearch.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/HistorySearch.cpp	2024-04-29 20:51:28.845872647 +0200
+@@ -24,7 +24,7 @@
+ #include "Emulation.h"
+ #include "HistorySearch.h"
+ 
+-HistorySearch::HistorySearch(EmulationPtr emulation, const QRegExp& regExp,
++HistorySearch::HistorySearch(EmulationPtr emulation, const QRegularExpression& regExp,
+         bool forwards, int startColumn, int startLine,
+         QObject* parent) :
+ QObject(parent),
+@@ -41,7 +41,7 @@
+ void HistorySearch::search() {
+     bool found = false;
+ 
+-    if (! m_regExp.isEmpty())
++    if (! m_regExp.pattern().isEmpty())
+     {
+         if (m_forwards) {
+             found = search(m_startColumn, m_startLine, -1, m_emulation->lineCount()) || search(0, 0, m_startColumn, m_startLine);
+@@ -104,22 +104,23 @@
+ 
+         // So now we can log for m_regExp in the string between startColumn and endPosition
+         int matchStart;
++	QRegularExpressionMatch match;
+         if (m_forwards)
+         {
+-            matchStart = string.indexOf(m_regExp, startColumn);
++            matchStart = string.indexOf(m_regExp, startColumn, &match);
+             if (matchStart >= endPosition)
+                 matchStart = -1;
+         }
+         else
+         {
+-            matchStart = string.lastIndexOf(m_regExp, endPosition - 1);
++            matchStart = string.lastIndexOf(m_regExp, endPosition - 1, &match);
+             if (matchStart < startColumn)
+                 matchStart = -1;
+         }
+ 
+         if (matchStart > -1)
+         {
+-            int matchEnd = matchStart + m_regExp.matchedLength() - 1;
++            int matchEnd = matchStart + match.capturedLength() - 1;
+             qDebug() << "Found in string from" << matchStart << "to" << matchEnd;
+ 
+             // Translate startPos and endPos to startColum, startLine, endColumn and endLine in history.
+diff -Naur a/lib/HistorySearch.h b/lib/HistorySearch.h
+--- a/lib/HistorySearch.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/HistorySearch.h	2024-04-29 20:51:28.845872647 +0200
+@@ -22,6 +22,7 @@
+ #include <QObject>
+ #include <QPointer>
+ #include <QMap>
++#include <QRegularExpression>
+ 
+ #include <Session.h>
+ #include <ScreenWindow.h>
+@@ -38,7 +39,7 @@
+     Q_OBJECT
+ 
+ public:
+-    explicit HistorySearch(EmulationPtr emulation, const QRegExp& regExp, bool forwards,
++    explicit HistorySearch(EmulationPtr emulation, const QRegularExpression& regExp, bool forwards,
+                            int startColumn, int startLine, QObject* parent);
+ 
+     ~HistorySearch() override;
+@@ -55,7 +56,7 @@
+ 
+ 
+     EmulationPtr m_emulation;
+-    QRegExp m_regExp;
++    QRegularExpression m_regExp;
+     bool m_forwards = false;
+     int m_startColumn = 0;
+     int m_startLine = 0;
+diff -Naur a/lib/kb-layouts/default.keytab b/lib/kb-layouts/default.keytab
+--- a/lib/kb-layouts/default.keytab	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/kb-layouts/default.keytab	2024-04-29 20:51:28.869872728 +0200
+@@ -71,6 +71,8 @@
+ key Down  +Shift+AppScreen             : "\E[1;*B"
+ key Left  +Shift+AppScreen             : "\E[1;*D"
+ key Right +Shift+AppScreen             : "\E[1;*C"
++key PgUp    +Shift+AppScreen           : "\E[5;2~"                                                                                                                                                                                                                   
++key PgDown  +Shift+AppScreen           : "\E[6;2~"  
+ 
+ # Keypad keys with NumLock ON
+ # (see "Numeric Keypad" section at http://www.nw.com/nw/WWW/products/wizcon/vt100.html )
+diff -Naur a/lib/KeyboardTranslator.cpp b/lib/KeyboardTranslator.cpp
+--- a/lib/KeyboardTranslator.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/KeyboardTranslator.cpp	2024-04-29 20:51:28.853872674 +0200
+@@ -34,6 +34,7 @@
+ #include <QKeySequence>
+ #include <QDir>
+ #include <QtDebug>
++#include <QRegularExpression>
+ 
+ #include "tools.h"
+ 
+@@ -353,11 +354,11 @@
+     KeyboardTranslator::States tempFlags = flags;
+     KeyboardTranslator::States tempFlagMask = flagMask;
+ 
+-    for ( int i = 0 ; i < text.count() ; i++ )
++    for ( int i = 0 ; i < text.size() ; i++ )
+     {
+         const QChar& ch = text[i];
+         bool isFirstLetter = i == 0;
+-        bool isLastLetter = ( i == text.count()-1 );
++        bool isLastLetter = ( i == text.size()-1 );
+         endOfItem = true;
+         if ( ch.isLetterOrNumber() )
+         {
+@@ -453,7 +454,7 @@
+     QKeySequence sequence = QKeySequence::fromString(item);
+     if ( !sequence.isEmpty() )
+     {
+-        keyCode = sequence[0];
++        keyCode = sequence[0].toCombined();
+ 
+         if ( sequence.count() > 1 )
+         {
+@@ -539,10 +540,10 @@
+     text = text.simplified();
+ 
+     // title line: keyboard "title"
+-    static QRegExp title(QLatin1String("keyboard\\s+\"(.*)\""));
++    static QRegularExpression title(QLatin1String("keyboard\\s+\"(.*)\""));
+     // key line: key KeySequence : "output"
+     // key line: key KeySequence : command
+-    static QRegExp key(QLatin1String("key\\s+([\\w\\+\\s\\-\\*\\.]+)\\s*:\\s*(\"(.*)\"|\\w+)"));
++    static QRegularExpression key(QLatin1String("key\\s+([\\w\\+\\s\\-\\*\\.]+)\\s*:\\s*(\"(.*)\"|\\w+)"));
+ 
+     QList<Token> list;
+     if ( text.isEmpty() )
+@@ -550,30 +551,33 @@
+         return list;
+     }
+ 
+-    if ( title.exactMatch(text) )
++    const auto titleMatch = title.match(text);
++    const auto keyMatch = key.match(text);
++
++    if ( titleMatch.hasMatch() )
+     {
+         Token titleToken = { Token::TitleKeyword , QString() };
+-        Token textToken = { Token::TitleText , title.capturedTexts().at(1) };
++        Token textToken = { Token::TitleText , titleMatch.captured(1) };
+ 
+         list << titleToken << textToken;
+     }
+-    else if  ( key.exactMatch(text) )
++    else if  ( keyMatch.hasMatch() )
+     {
+         Token keyToken = { Token::KeyKeyword , QString() };
+-        Token sequenceToken = { Token::KeySequence , key.capturedTexts().value(1).remove(QLatin1Char(' ')) };
++        Token sequenceToken = { Token::KeySequence , keyMatch.captured(1).remove(QLatin1Char(' ')) };
+ 
+         list << keyToken << sequenceToken;
+ 
+-        if ( key.capturedTexts().at(3).isEmpty() )
++        if ( keyMatch.captured(3).isEmpty() )
+         {
+             // capturedTexts()[2] is a command
+-            Token commandToken = { Token::Command , key.capturedTexts().at(2) };
++            Token commandToken = { Token::Command , keyMatch.captured(2) };
+             list << commandToken;
+         }
+         else
+         {
+             // capturedTexts()[3] is the output string
+-           Token outputToken = { Token::OutputText , key.capturedTexts().at(3) };
++           Token outputToken = { Token::OutputText , keyMatch.captured(3) };
+            list << outputToken;
+         }
+     }
+@@ -654,7 +658,7 @@
+ {
+     QByteArray result(text(expandWildCards,modifiers));
+ 
+-    for ( int i = 0 ; i < result.count() ; i++ )
++    for ( int i = 0 ; i < result.size() ; i++ )
+     {
+         char ch = result[i];
+         char replacement = 0;
+@@ -676,7 +680,9 @@
+ 
+         if ( replacement == 'x' )
+         {
+-            result.replace(i,1,"\\x"+QByteArray(1,ch).toHex());
++            QByteArray escaped("\\x");
++            escaped += QByteArray(1,ch).toHex();
++            result.replace(i, 1, QByteArrayView(escaped));
+         } else if ( replacement != 0 )
+         {
+             result.remove(i,1);
+@@ -691,10 +697,10 @@
+ {
+     QByteArray result(input);
+ 
+-    for ( int i = 0 ; i < result.count()-1 ; i++ )
++    for ( int i = 0 ; i < result.size()-1 ; i++ )
+     {
+ 
+-        QByteRef ch = result[i];
++        char ch = result[i];
+         if ( ch == '\\' )
+         {
+            char replacement[2] = {0,0};
+@@ -716,9 +722,9 @@
+                     // with the corresponding character value
+                     char hexDigits[3] = {0};
+ 
+-                    if ( (i < result.count()-2) && isxdigit(result[i+2]) )
++                    if ( (i < result.size()-2) && isxdigit(result[i+2]) )
+                             hexDigits[0] = result[i+2];
+-                    if ( (i < result.count()-3) && isxdigit(result[i+3]) )
++                    if ( (i < result.size()-3) && isxdigit(result[i+3]) )
+                             hexDigits[1] = result[i+3];
+ 
+                     unsigned charValue = 0;
+diff -Naur a/lib/kprocess.h b/lib/kprocess.h
+--- a/lib/kprocess.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/kprocess.h	2024-04-29 20:51:28.869872728 +0200
+@@ -327,8 +327,6 @@
+ 
+ private:
+     // hide those
+-    using QProcess::setReadChannelMode;
+-    using QProcess::readChannelMode;
+     using QProcess::setProcessChannelMode;
+     using QProcess::processChannelMode;
+ };
+diff -Naur a/lib/kpty.cpp b/lib/kpty.cpp
+--- a/lib/kpty.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/kpty.cpp	2024-04-29 20:51:28.869872728 +0200
+@@ -511,7 +511,7 @@
+ #ifdef HAVE_UTEMPTER
+     Q_D(KPty);
+ 
+-    addToUtmp(d->ttyName.constData(), remotehost, d->masterFd);
++    utempter_add_record(d->masterFd, remotehost);
+     Q_UNUSED(user)
+ #else
+ # ifdef HAVE_UTMPX
+@@ -597,7 +597,7 @@
+ #ifdef HAVE_UTEMPTER
+     Q_D(KPty);
+ 
+-    removeLineFromUtmp(d->ttyName.constData(), d->masterFd);
++    utempter_remove_record(d->masterFd);
+ #else
+     Q_D(KPty);
+ 
+diff -Naur a/lib/kptyprocess.cpp b/lib/kptyprocess.cpp
+--- a/lib/kptyprocess.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/kptyprocess.cpp	2024-04-29 20:51:28.869872728 +0200
+@@ -40,6 +40,9 @@
+ KPtyProcess::KPtyProcess(QObject *parent) :
+     KPtyProcess(-1, parent)
+ {
++    setChildProcessModifier([this](){ 
++        onSetupChildProcess();
++    });
+ }
+ 
+ KPtyProcess::KPtyProcess(int ptyMasterFd, QObject *parent) :
+@@ -121,7 +124,7 @@
+     return d->pty.get();
+ }
+ 
+-void KPtyProcess::setupChildProcess()
++void KPtyProcess::onSetupChildProcess()
+ {
+     Q_D(KPtyProcess);
+ 
+@@ -139,8 +142,6 @@
+ 
+     if (d->ptyChannels & StderrChannel)
+         dup2(d->pty->slaveFd(), 2);
+-
+-    KProcess::setupChildProcess();
+ }
+ 
+ //#include "kptyprocess.moc"
+diff -Naur a/lib/kptyprocess.h b/lib/kptyprocess.h
+--- a/lib/kptyprocess.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/kptyprocess.h	2024-04-29 20:51:28.869872728 +0200
+@@ -143,9 +143,9 @@
+ 
+ protected:
+     /**
+-     * @reimp
++     * Child process configuration
+      */
+-    void setupChildProcess() override;
++    virtual void onSetupChildProcess();
+ 
+ private:
+     std::unique_ptr<KPtyProcessPrivate> const d_ptr;
+diff -Naur a/lib/Pty.cpp b/lib/Pty.cpp
+--- a/lib/Pty.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Pty.cpp	2024-04-29 20:51:28.853872674 +0200
+@@ -300,7 +300,7 @@
+ void Pty::dataReceived()
+ {
+      QByteArray data = pty()->readAll();
+-    emit receivedData(data.constData(),data.count());
++    emit receivedData(data.constData(),data.size());
+ }
+ 
+ void Pty::lockPty(bool lock)
+@@ -326,9 +326,9 @@
+     return 0;
+ }
+ 
+-void Pty::setupChildProcess()
++void Pty::onSetupChildProcess()
+ {
+-    KPtyProcess::setupChildProcess();
++    KPtyProcess::onSetupChildProcess();
+ 
+     // reset all signal handlers
+     // this ensures that terminal applications respond to
+diff -Naur a/lib/Pty.h b/lib/Pty.h
+--- a/lib/Pty.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Pty.h	2024-04-29 20:51:28.853872674 +0200
+@@ -189,7 +189,7 @@
+     void receivedData(const char* buffer, int length);
+ 
+   protected:
+-      void setupChildProcess() override;
++      void onSetupChildProcess() override;
+ 
+   private slots:
+     // called when data is received from the terminal process
+diff -Naur a/lib/qtermwidget.cpp b/lib/qtermwidget.cpp
+--- a/lib/qtermwidget.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/qtermwidget.cpp	2024-04-29 20:51:28.869872728 +0200
+@@ -21,6 +21,7 @@
+ #include <QtDebug>
+ #include <QDir>
+ #include <QMessageBox>
++#include <QRegularExpression>
+ 
+ #include "ColorTables.h"
+ #include "Session.h"
+@@ -91,8 +92,6 @@
+     session->setArguments(args);
+     session->setAutoClose(true);
+ 
+-    session->setCodec(QTextCodec::codecForName("UTF-8"));
+-
+     session->setFlowControlEnabled(true);
+     session->setHistoryType(HistoryTypeBuffer(1000));
+ 
+@@ -167,9 +166,13 @@
+     //qDebug() << "current selection starts at: " << startColumn << startLine;
+     //qDebug() << "current cursor position: " << m_impl->m_terminalDisplay->screenWindow()->cursorPosition();
+ 
+-    QRegExp regExp(m_searchBar->searchText());
+-    regExp.setPatternSyntax(m_searchBar->useRegularExpression() ? QRegExp::RegExp : QRegExp::FixedString);
+-    regExp.setCaseSensitivity(m_searchBar->matchCase() ? Qt::CaseSensitive : Qt::CaseInsensitive);
++    QRegularExpression regExp;
++    if (m_searchBar->useRegularExpression()) {
++        regExp.setPattern(m_searchBar->searchText());
++    } else {
++        regExp.setPattern(QRegularExpression::escape(m_searchBar->searchText()));
++    }
++    regExp.setPatternOptions(m_searchBar->matchCase() ? QRegularExpression::NoPatternOption : QRegularExpression::CaseInsensitiveOption);
+ 
+     HistorySearch *historySearch =
+             new HistorySearch(m_impl->m_session->emulation(), regExp, forwards, startColumn, startLine, this);
+@@ -266,7 +269,7 @@
+ void QTermWidget::init(int startnow)
+ {
+     m_layout = new QVBoxLayout();
+-    m_layout->setMargin(0);
++    m_layout->setContentsMargins(0,0,0,0);
+     setLayout(m_layout);
+ 
+     // translations
+@@ -281,7 +284,7 @@
+ 
+     m_translator = new QTranslator(this);
+ 
+-    for (const QString& dir : qAsConst(dirs)) {
++    for (const QString& dir : std::as_const(dirs)) {
+         //qDebug() << "Trying to load translation file from dir" << dir;
+         if (m_translator->load(QLocale::system(), QLatin1String("qtermwidget"), QLatin1String(QLatin1String("_")), dir)) {
+             qApp->installTranslator(m_translator);
+@@ -428,13 +431,6 @@
+     m_impl->m_session->setArguments(args);
+ }
+ 
+-void QTermWidget::setTextCodec(QTextCodec *codec)
+-{
+-    if (!m_impl->m_session)
+-        return;
+-    m_impl->m_session->setCodec(codec);
+-}
+-
+ void QTermWidget::setColorScheme(const QString& origName)
+ {
+     const ColorScheme *cs = nullptr;
+@@ -826,6 +822,17 @@
+     m_impl->m_terminalDisplay->setTrimPastedTrailingNewlines(trimPastedTrailingNewlines);
+ }
+ 
++QString QTermWidget::wordCharacters() const
++{
++    return m_impl->m_terminalDisplay->wordCharacters();
++}
++
++void QTermWidget::setWordCharacters(const QString& chars)
++{
++    m_impl->m_terminalDisplay->setWordCharacters(chars);
++}
++
++
+ QTermWidgetInterface* QTermWidget::createWidget(int startnow) const
+ {
+    return new QTermWidget(startnow);
+diff -Naur a/lib/qtermwidget.h b/lib/qtermwidget.h
+--- a/lib/qtermwidget.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/qtermwidget.h	2024-04-29 20:51:28.869872728 +0200
+@@ -100,9 +100,6 @@
+     // Shell program args, default is none
+     void setArgs(const QStringList & args) override;
+ 
+-    //Text codec, default is UTF-8
+-    void setTextCodec(QTextCodec * codec) override;
+-
+     /** @brief Sets the color scheme, default is white on black
+      *
+      * @param[in] name The name of the color scheme, either returned from
+@@ -258,6 +255,9 @@
+     void setConfirmMultilinePaste(bool confirmMultilinePaste) override;
+     void setTrimPastedTrailingNewlines(bool trimPastedTrailingNewlines) override;
+ 
++    QString wordCharacters() const override;
++    void setWordCharacters(const QString& chars) override;
++
+     QTermWidgetInterface *createWidget(int startnow) const override;
+ signals:
+     void finished();
+diff -Naur a/lib/qtermwidget_interface.h b/lib/qtermwidget_interface.h
+--- a/lib/qtermwidget_interface.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/qtermwidget_interface.h	2024-04-29 20:51:28.869872728 +0200
+@@ -56,7 +56,6 @@
+    virtual void setWorkingDirectory(const QString & dir) = 0;
+    virtual QString workingDirectory() = 0;
+    virtual void setArgs(const QStringList & args) = 0;
+-   virtual void setTextCodec(QTextCodec * codec) = 0;
+    virtual void setColorScheme(const QString & name) = 0;
+    virtual QStringList getAvailableColorSchemes() = 0;
+    virtual void setHistorySize(int lines) = 0;
+@@ -99,9 +98,11 @@
+    virtual void setBoldIntense(bool boldIntense) = 0;
+    virtual void setConfirmMultilinePaste(bool confirmMultilinePaste) = 0;
+    virtual void setTrimPastedTrailingNewlines(bool trimPastedTrailingNewlines) = 0;
++   virtual QString wordCharacters() const = 0;
++   virtual void setWordCharacters(const QString& chars) = 0;
+    virtual QTermWidgetInterface* createWidget(int startnow) const = 0;
+ };
+ 
+-#define QTermWidgetInterface_iid "lxqt.qtermwidget.QTermWidgetInterface/1.0"
++#define QTermWidgetInterface_iid "lxqt.qtermwidget.QTermWidgetInterface/1.5"
+ 
+ Q_DECLARE_INTERFACE(QTermWidgetInterface, QTermWidgetInterface_iid)
+diff -Naur a/lib/Screen.cpp b/lib/Screen.cpp
+--- a/lib/Screen.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Screen.cpp	2024-04-29 20:51:28.853872674 +0200
+@@ -43,10 +43,6 @@
+ 
+ using namespace Konsole;
+ 
+-//FIXME: this is emulation specific. Use false for xterm, true for ANSI.
+-//FIXME: see if we can get this from terminfo.
+-#define BS_CLEARS false
+-
+ //Macro to convert x,y position on screen to position within an image.
+ //
+ //Originally the image was stored as one large contiguous block of
+@@ -607,9 +603,6 @@
+ 
+     if (screenLines[cuY].size() < cuX+1)
+         screenLines[cuY].resize(cuX+1);
+-
+-    if (BS_CLEARS)
+-        screenLines[cuY][cuX].character = ' ';
+ }
+ 
+ void Screen::tab(int n)
+diff -Naur a/lib/SearchBar.cpp b/lib/SearchBar.cpp
+--- a/lib/SearchBar.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/SearchBar.cpp	2024-04-29 20:51:28.853872674 +0200
+@@ -18,7 +18,6 @@
+ */
+ #include <QMenu>
+ #include <QAction>
+-#include <QRegExp>
+ #include <QDebug>
+ 
+ #include "SearchBar.h"
+diff -Naur a/lib/SearchBar.h b/lib/SearchBar.h
+--- a/lib/SearchBar.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/SearchBar.h	2024-04-29 20:51:28.853872674 +0200
+@@ -19,7 +19,7 @@
+ #ifndef _SEARCHBAR_H
+ #define	_SEARCHBAR_H
+ 
+-#include <QRegExp>
++#include <QRegularExpression>
+ 
+ #include "ui_SearchBar.h"
+ #include "HistorySearch.h"
+diff -Naur a/lib/Session.cpp b/lib/Session.cpp
+--- a/lib/Session.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Session.cpp	2024-04-29 20:51:28.853872674 +0200
+@@ -30,13 +30,12 @@
+ 
+ // Qt
+ #include <QApplication>
+-#include <QByteRef>
+ #include <QDir>
+ #include <QFile>
+-#include <QRegExp>
+ #include <QStringList>
+ #include <QFile>
+ #include <QtDebug>
++#include <QRegularExpression>
+ 
+ #include "Pty.h"
+ //#include "kptyprocess.h"
+@@ -103,7 +102,7 @@
+             this, &Session::cursorChanged);
+ 
+     //connect teletype to emulation backend
+-    _shellProcess->setUtf8Mode(_emulation->utf8());
++    _shellProcess->setUtf8Mode(true);
+ 
+     connect( _shellProcess,SIGNAL(receivedData(const char *,int)),this,
+              SLOT(onReceiveBlock(const char *,int)) );
+@@ -143,11 +142,6 @@
+     return _shellProcess->state() == QProcess::Running;
+ }
+ 
+-void Session::setCodec(QTextCodec * codec) const
+-{
+-    emulation()->setCodec(codec);
+-}
+-
+ void Session::setProgram(const QString & program)
+ {
+     _program = ShellCommand::expand(program);
+@@ -381,7 +375,7 @@
+ 
+     if (what == 31) {
+         QString cwd=caption;
+-        cwd=cwd.replace( QRegExp(QLatin1String("^~")), QDir::homePath() );
++        cwd=cwd.replace( QRegularExpression(QLatin1String("^~")), QDir::homePath() );
+         emit openUrlRequest(cwd);
+     }
+ 
+diff -Naur a/lib/Session.h b/lib/Session.h
+--- a/lib/Session.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Session.h	2024-04-29 20:51:28.853872674 +0200
+@@ -340,9 +340,6 @@
+      */
+     void setSize(const QSize & size);
+ 
+-    /** Sets the text codec used by this session's terminal emulation. */
+-    void setCodec(QTextCodec * codec) const;
+-
+     /**
+      * Sets whether the session has a dark background or not.  The session
+      * uses this information to set the COLORFGBG variable in the process's
+diff -Naur a/lib/ShellCommand.cpp b/lib/ShellCommand.cpp
+--- a/lib/ShellCommand.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/ShellCommand.cpp	2024-04-29 20:51:28.853872674 +0200
+@@ -38,10 +38,10 @@
+ 
+     QString builder;
+ 
+-    for ( int i = 0 ; i < fullCommand.count() ; i++ ) {
++    for ( int i = 0 ; i < fullCommand.size() ; i++ ) {
+         QChar ch = fullCommand[i];
+ 
+-        const bool isLastChar = ( i == fullCommand.count() - 1 );
++        const bool isLastChar = ( i == fullCommand.size() - 1 );
+         const bool isQuote = ( ch == QLatin1Char('\'') || ch == QLatin1Char('\"') );
+ 
+         if ( !isLastChar && isQuote ) {
+@@ -51,7 +51,7 @@
+                 builder.append(ch);
+             }
+ 
+-            if ( (ch.isSpace() && !inQuotes) || ( i == fullCommand.count()-1 ) ) {
++            if ( (ch.isSpace() && !inQuotes) || ( i == fullCommand.size()-1 ) ) {
+                 _arguments << builder;
+                 builder.clear();
+             }
+diff -Naur a/lib/TerminalCharacterDecoder.cpp b/lib/TerminalCharacterDecoder.cpp
+--- a/lib/TerminalCharacterDecoder.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/TerminalCharacterDecoder.cpp	2024-04-29 20:51:28.853872674 +0200
+@@ -75,7 +75,7 @@
+ 
+     if (_recordLinePositions && _output->string())
+     {
+-        int pos = _output->string()->count();
++        int pos = _output->string()->size();
+         _linePositions << pos;
+     }
+ 
+diff -Naur a/lib/TerminalDisplay.cpp b/lib/TerminalDisplay.cpp
+--- a/lib/TerminalDisplay.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/TerminalDisplay.cpp	2024-04-29 20:51:28.861872701 +0200
+@@ -275,13 +275,7 @@
+ {
+   QFont font = f;
+ 
+-  // This was originally set for OS X only:
+-  //     mac uses floats for font width specification.
+-  //     this ensures the same handling for all platforms
+-  // but then there was revealed that various Linux distros
+-  // have this problem too...
+-  font.setStyleStrategy(QFont::ForceIntegerMetrics);
+-
++  // Check if font is not fixed pitch and print a warning
+   if ( !QFontInfo(font).fixedPitch() )
+   {
+       qDebug() << "Using a variable-width font in the terminal.  This may cause performance degradation and display/alignment errors.";
+@@ -293,10 +287,19 @@
+       font.setStyleStrategy( QFont::NoAntialias );
+ 
+   // experimental optimization.  Konsole assumes that the terminal is using a
+-  // mono-spaced font, in which case kerning information should have an effect.
++  // mono-spaced font, in which case kerning information should have no effect.
+   // Disabling kerning saves some computation when rendering text.
+   font.setKerning(false);
+ 
++  // QFont::ForceIntegerMetrics has been removed.
++  // Set full hinting instead to ensure the letters are aligned properly.
++  font.setHintingPreference(QFont::PreferFullHinting);
++
++  // "Draw intense colors in bold font" feature needs to use different font weights. StyleName
++  // property, when set, doesn't allow weight changes. Since all properties (weight, stretch,
++  // italic, etc) are stored in QFont independently, in almost all cases styleName is not needed.
++  font.setStyleName(QString());
++
+   QWidget::setFont(font);
+   fontChange(font);
+ }
+@@ -1619,7 +1622,7 @@
+   QFontMetrics fm(font());
+   int result = 0;
+   for (int column = 0; column < length; column++) {
+-    result += fm.horizontalAdvance(_image[loc(startColumn + column, line)].character);
++    result += fm.horizontalAdvance(QChar(static_cast<ushort>(_image[loc(startColumn + column, line)].character)));
+   }
+   return result;
+ }
+@@ -2126,8 +2129,8 @@
+ 
+ //   int distance = KGlobalSettings::dndEventDelay();
+    int distance = QApplication::startDragDistance();
+-   if ( ev->x() > dragInfo.start.x() + distance || ev->x() < dragInfo.start.x() - distance ||
+-        ev->y() > dragInfo.start.y() + distance || ev->y() < dragInfo.start.y() - distance)
++   if ( ev->position().x() > dragInfo.start.x() + distance || ev->position().x() < dragInfo.start.x() - distance ||
++        ev->position().y() > dragInfo.start.y() + distance || ev->position().y() < dragInfo.start.y() - distance)
+    {
+       // we've left the drag square, we can start a real drag operation now
+       emit isBusySelecting(false); // Ok.. we can breath again.
+@@ -2221,9 +2224,9 @@
+     QPoint left = left_not_right ? here : _iPntSelCorr;
+     i = loc(left.x(),left.y());
+     if (i>=0 && i<=_imageSize) {
+-      selClass = charClass(_image[i].character);
++      selClass = charClass(QChar(static_cast<ushort>(_image[i].character)));
+       while ( ((left.x()>0) || (left.y()>0 && (_lineProperties[left.y()-1] & LINE_WRAPPED) ))
+-                      && charClass(_image[i-1].character) == selClass )
++                      && charClass(QChar(static_cast<ushort>(_image[i-1].character))) == selClass )
+       { i--; if (left.x()>0) left.rx()--; else {left.rx()=_usedColumns-1; left.ry()--;} }
+     }
+ 
+@@ -2231,9 +2234,9 @@
+     QPoint right = left_not_right ? _iPntSelCorr : here;
+     i = loc(right.x(),right.y());
+     if (i>=0 && i<=_imageSize) {
+-      selClass = charClass(_image[i].character);
++      selClass = charClass(QChar(static_cast<ushort>(_image[i].character)));
+       while( ((right.x()<_usedColumns-1) || (right.y()<_usedLines-1 && (_lineProperties[right.y()] & LINE_WRAPPED) ))
+-                      && charClass(_image[i+1].character) == selClass )
++                      && charClass(QChar(static_cast<ushort>(_image[i-1].character))) == selClass )
+       { i++; if (right.x()<_usedColumns-1) right.rx()++; else {right.rx()=0; right.ry()++; } }
+     }
+ 
+@@ -2303,7 +2306,7 @@
+     {
+       i = loc(right.x(),right.y());
+       if (i>=0 && i<=_imageSize) {
+-        selClass = charClass(_image[i-1].character);
++        selClass = charClass(QChar(static_cast<ushort>(_image[i-1].character)));
+        /* if (selClass == ' ')
+         {
+           while ( right.x() < _usedColumns-1 && charClass(_image[i+1].character) == selClass && (right.y()<_usedLines-1) &&
+@@ -2491,12 +2494,12 @@
+   _wordSelectionMode = true;
+ 
+   // find word boundaries...
+-  QChar selClass = charClass(_image[i].character);
++  QChar selClass = charClass(QChar(static_cast<ushort>(_image[i].character)));
+   {
+      // find the start of the word
+      int x = bgnSel.x();
+      while ( ((x>0) || (bgnSel.y()>0 && (_lineProperties[bgnSel.y()-1] & LINE_WRAPPED) ))
+-                     && charClass(_image[i-1].character) == selClass )
++                     && charClass(QChar(static_cast<ushort>(_image[i-1].character))) == selClass )
+      {
+        i--;
+        if (x>0)
+@@ -2515,7 +2518,7 @@
+      i = loc( endSel.x(), endSel.y() );
+      x = endSel.x();
+      while( ((x<_usedColumns-1) || (endSel.y()<_usedLines-1 && (_lineProperties[endSel.y()] & LINE_WRAPPED) ))
+-                     && charClass(_image[i+1].character) == selClass )
++                     && charClass(QChar(static_cast<ushort>(_image[i+1].character))) == selClass )
+      {
+          i++;
+          if (x<_usedColumns-1)
+@@ -2624,13 +2627,13 @@
+   if (_tripleClickMode == SelectForwardsFromCursor) {
+     // find word boundary start
+     int i = loc(_iPntSel.x(),_iPntSel.y());
+-    QChar selClass = charClass(_image[i].character);
++    QChar selClass = charClass(QChar(static_cast<ushort>(_image[i].character)));
+     int x = _iPntSel.x();
+ 
+     while ( ((x>0) ||
+              (_iPntSel.y()>0 && (_lineProperties[_iPntSel.y()-1] & LINE_WRAPPED) )
+             )
+-            && charClass(_image[i-1].character) == selClass )
++            && charClass(QChar(static_cast<ushort>(_image[i-1].character))) == selClass )
+     {
+         i--;
+         if (x>0)
+@@ -3320,6 +3323,7 @@
+ 
+     QMouseEvent mouseEvent(    QEvent::MouseMove,
+                               widget()->mapFromGlobal(QCursor::pos()),
++			      QCursor::pos(),
+                               Qt::NoButton,
+                               Qt::LeftButton,
+                               Qt::NoModifier);
+diff -Naur a/lib/tools.cpp b/lib/tools.cpp
+--- a/lib/tools.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/tools.cpp	2024-04-29 20:51:28.877872754 +0200
+@@ -89,7 +89,7 @@
+     }
+ #endif
+ 
+-    for (const QString& custom_dir : qAsConst(custom_color_schemes_dirs))
++    for (const QString& custom_dir : std::as_const(custom_color_schemes_dirs))
+     {
+         d.setPath(custom_dir);
+         if (d.exists())
+diff -Naur a/lib/translations/qtermwidget_bg.ts b/lib/translations/qtermwidget_bg.ts
+--- a/lib/translations/qtermwidget_bg.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_bg.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Сесия „%1“ приключи с код %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_cs.ts b/lib/translations/qtermwidget_cs.ts
+--- a/lib/translations/qtermwidget_cs.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_cs.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Sezení &apos;%1&apos; bylo ukončeno s kódem %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_el.ts b/lib/translations/qtermwidget_el.ts
+--- a/lib/translations/qtermwidget_el.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_el.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Η συνεδρία «%1» τερματίστηκε με τον κωδικό %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_es.ts b/lib/translations/qtermwidget_es.ts
+--- a/lib/translations/qtermwidget_es.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_es.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>La sesión &apos;%1&apos; ha finalizado con el código %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_et.ts b/lib/translations/qtermwidget_et.ts
+--- a/lib/translations/qtermwidget_et.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_et.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Sessioon „%1“ lõppes koodiga %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+@@ -112,7 +112,7 @@
+     <message>
+         <location filename="../qtermwidget.cpp" line="470"/>
+         <source>Cannot load color scheme: %1</source>
+-        <translation>Värvikombinatsiooni laadimine ei õnnestu: %1</translation>
++        <translation>Värvikombinatsiooni laadimine ei õnnestunud: %1</translation>
+     </message>
+ </context>
+ <context>
+diff -Naur a/lib/translations/qtermwidget_fi.ts b/lib/translations/qtermwidget_fi.ts
+--- a/lib/translations/qtermwidget_fi.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_fi.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Istunto &apos;%1&apos; päättyi koodilla %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_gl.ts b/lib/translations/qtermwidget_gl.ts
+--- a/lib/translations/qtermwidget_gl.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_gl.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Saíuse da sesión &apos;%1&apos; co código %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_he.ts b/lib/translations/qtermwidget_he.ts
+--- a/lib/translations/qtermwidget_he.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_he.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>ההפעלה ‚%1’ הסתיימה עם הקוד %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_hr.ts b/lib/translations/qtermwidget_hr.ts
+--- a/lib/translations/qtermwidget_hr.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_hr.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Sesija „%1“ je prekinuta s kodom %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_ko.ts b/lib/translations/qtermwidget_ko.ts
+--- a/lib/translations/qtermwidget_ko.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_ko.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>&apos;%1&apos; 세션이 %2 코드로 종료되었습니다.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_lg.ts b/lib/translations/qtermwidget_lg.ts
+--- a/lib/translations/qtermwidget_lg.ts	1970-01-01 01:00:00.000000000 +0100
++++ b/lib/translations/qtermwidget_lg.ts	2024-04-29 20:51:28.877872754 +0200
+@@ -0,0 +1,166 @@
++<?xml version="1.0" encoding="utf-8"?>
++<!DOCTYPE TS>
++<TS version="2.1" language="lg">
++<context>
++    <name>Konsole::Session</name>
++    <message>
++        <location filename="../Session.cpp" line="454"/>
++        <source>Bell in session &apos;%1&apos;</source>
++        <translation>Akade kavugenga mu lutuula lwa mu katimbe &apos;%1&apos;</translation>
++    </message>
++    <message>
++        <location filename="../Session.cpp" line="606"/>
++        <source>Session &apos;%1&apos; exited with code %2.</source>
++        <translation>Ennamba y&apos;emmala ey&apos;olutuula lwa mu katimbe &apos;%1&apos; eri %2.</translation>
++    </message>
++    <message>
++        <location filename="../Session.cpp" line="608"/>
++        <source>Session &apos;%1&apos; crashed.</source>
++        <translation>Olutuula lwa mu katimbe &apos;%1&apos; lutabuse.</translation>
++    </message>
++    <message>
++        <location filename="../Session.cpp" line="613"/>
++        <source>Session &apos;%1&apos; exited unexpectedly.</source>
++        <translation>Olutuula lwa mu katimbe &apos;%1&apos; lumaze nga ssi kigenderere.</translation>
++    </message>
++</context>
++<context>
++    <name>Konsole::TerminalDisplay</name>
++    <message>
++        <location filename="../TerminalDisplay.cpp" line="1275"/>
++        <source>Size: XXX x XXX</source>
++        <translation>Obunene: XXX x XXX</translation>
++    </message>
++    <message>
++        <location filename="../TerminalDisplay.cpp" line="1287"/>
++        <source>Size: %1 x %2</source>
++        <translation>Obunene: %1 x %2</translation>
++    </message>
++    <message>
++        <location filename="../TerminalDisplay.cpp" line="2787"/>
++        <source>Paste multiline text</source>
++        <translation>Paatiika ebigambo ebiri ku nnyiriri ezisukka mu lumu</translation>
++    </message>
++    <message>
++        <location filename="../TerminalDisplay.cpp" line="2788"/>
++        <source>Are you sure you want to paste this text?</source>
++        <translation>Ddala oyagala kupaatiika ebigambo bino?</translation>
++    </message>
++    <message>
++        <location filename="../TerminalDisplay.cpp" line="3258"/>
++        <source>&lt;qt&gt;Output has been &lt;a href=&quot;http://en.wikipedia.org/wiki/Flow_control&quot;&gt;suspended&lt;/a&gt; by pressing Ctrl+S.  Press &lt;b&gt;Ctrl+Q&lt;/b&gt; to resume.&lt;/qt&gt;</source>
++        <translation>&lt;qt&gt;Amapeesa Ctrl+S ganyigidwa ne &lt;a href=&quot;http://en.wikipedia.org/wiki/Flow_control&quot;&gt;kiyimiriza&lt;/a&gt; omulimu.  Okugusumulula gweyongere mu maaso nyiga &lt;b&gt;Ctrl+Q&lt;/b&gt;.&lt;/qt&gt;</translation>
++    </message>
++</context>
++<context>
++    <name>Konsole::Vt102Emulation</name>
++    <message>
++        <location filename="../Vt102Emulation.cpp" line="1121"/>
++        <source>No keyboard translator available.  The information needed to convert key presses into characters to send to the terminal is missing.</source>
++        <translation>Tewali kivvuunula ebiva ku mapeesa. Kubulako ekikwataganya amapeesa aganyigibwa n&apos;obubonero obuba busindikibwa mu kiwandikiro.</translation>
++    </message>
++</context>
++<context>
++    <name>QMessageBox</name>
++    <message>
++        <location filename="../TerminalDisplay.cpp" line="2794"/>
++        <source>Show Details...</source>
++        <translation>Laga ebisingawo...</translation>
++    </message>
++</context>
++<context>
++    <name>QObject</name>
++    <message>
++        <location filename="../ColorScheme.cpp" line="275"/>
++        <location filename="../ColorScheme.cpp" line="290"/>
++        <source>Un-named Color Scheme</source>
++        <translation>Olulyo lwa langi telutumidwa linnya</translation>
++    </message>
++    <message>
++        <location filename="../ColorScheme.cpp" line="461"/>
++        <source>Accessible Color Scheme</source>
++        <translation>Olulyo lwa langi ezitegeereka bonna</translation>
++    </message>
++    <message>
++        <location filename="../Filter.cpp" line="515"/>
++        <source>Open Link</source>
++        <translation>Goberera nyunzi</translation>
++    </message>
++    <message>
++        <location filename="../Filter.cpp" line="516"/>
++        <source>Copy Link Address</source>
++        <translation>Koppa endagiriro enyunzi kw&apos;egguka</translation>
++    </message>
++    <message>
++        <location filename="../Filter.cpp" line="520"/>
++        <source>Send Email To...</source>
++        <translation>Sindika yimeero ewa...</translation>
++    </message>
++    <message>
++        <location filename="../Filter.cpp" line="521"/>
++        <source>Copy Email Address</source>
++        <translation>Koppa yimeero</translation>
++    </message>
++</context>
++<context>
++    <name>QTermWidget</name>
++    <message>
++        <location filename="../qtermwidget.cpp" line="469"/>
++        <source>Color Scheme Error</source>
++        <translation>Olulyo lwa langi luliko kiremya</translation>
++    </message>
++    <message>
++        <location filename="../qtermwidget.cpp" line="470"/>
++        <source>Cannot load color scheme: %1</source>
++        <translation>Nemedwa okukozesa olulyo lwa langi: %1</translation>
++    </message>
++</context>
++<context>
++    <name>SearchBar</name>
++    <message>
++        <location filename="../SearchBar.cpp" line="40"/>
++        <source>Match case</source>
++        <translation>Yawula mu nnukuta nnene n&apos;entono</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.cpp" line="46"/>
++        <source>Regular expression</source>
++        <translation>Emboozi enoonya zinne wayo</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.cpp" line="50"/>
++        <source>Highlight all matches</source>
++        <translation>Tangaaza buli ekizuulidwa</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.ui" line="14"/>
++        <source>SearchBar</source>
++        <translation>Kabaawo ka bya kunoonya</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.ui" line="20"/>
++        <source>X</source>
++        <translation>X</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.ui" line="32"/>
++        <source>Find:</source>
++        <translation>Noonya:</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.ui" line="42"/>
++        <source>&lt;</source>
++        <translation>&lt;</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.ui" line="54"/>
++        <source>&gt;</source>
++        <translation>&gt;</translation>
++    </message>
++    <message>
++        <location filename="../SearchBar.ui" line="66"/>
++        <source>...</source>
++        <translation>...</translation>
++    </message>
++</context>
++</TS>
+diff -Naur a/lib/translations/qtermwidget_pt_BR.ts b/lib/translations/qtermwidget_pt_BR.ts
+--- a/lib/translations/qtermwidget_pt_BR.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_pt_BR.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>A sessão &apos;%1&apos; terminou com código %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_pt.ts b/lib/translations/qtermwidget_pt.ts
+--- a/lib/translations/qtermwidget_pt.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_pt.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>A sessão &apos;%1&apos; terminou com o código %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_ru.ts b/lib/translations/qtermwidget_ru.ts
+--- a/lib/translations/qtermwidget_ru.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_ru.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Сеанс «%1» завершился с кодом %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+@@ -44,7 +44,7 @@
+     <message>
+         <location filename="../TerminalDisplay.cpp" line="2788"/>
+         <source>Are you sure you want to paste this text?</source>
+-        <translation>Вы уверены, что хотите вставить этот текст?</translation>
++        <translation>Уверены, что хотите вставить этот текст?</translation>
+     </message>
+     <message>
+         <location filename="../TerminalDisplay.cpp" line="3258"/>
+diff -Naur a/lib/translations/qtermwidget_sk.ts b/lib/translations/qtermwidget_sk.ts
+--- a/lib/translations/qtermwidget_sk.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_sk.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Relácia &apos;%1&apos; bola ukončená s kódom %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_tr.ts b/lib/translations/qtermwidget_tr.ts
+--- a/lib/translations/qtermwidget_tr.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_tr.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -6,7 +6,7 @@
+     <message>
+         <location filename="../Session.cpp" line="454"/>
+         <source>Bell in session &apos;%1&apos;</source>
+-        <translation>&apos;%1&apos;. oturumda zil</translation>
++        <translation>&apos;%1&apos; oturumunda zil çal</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+@@ -65,7 +65,7 @@
+     <message>
+         <location filename="../TerminalDisplay.cpp" line="2794"/>
+         <source>Show Details...</source>
+-        <translation>Detayları göster...</translation>
++        <translation>Detayları Göster...</translation>
+     </message>
+ </context>
+ <context>
+diff -Naur a/lib/translations/qtermwidget_uk.ts b/lib/translations/qtermwidget_uk.ts
+--- a/lib/translations/qtermwidget_uk.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_uk.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>Сеанс &apos;%1&apos; завершено з кодом %2.</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_zh_CN.ts b/lib/translations/qtermwidget_zh_CN.ts
+--- a/lib/translations/qtermwidget_zh_CN.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_zh_CN.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -11,7 +11,7 @@
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>会话 &apos;%1&apos; 退出代码为 %2。</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+diff -Naur a/lib/translations/qtermwidget_zh_TW.ts b/lib/translations/qtermwidget_zh_TW.ts
+--- a/lib/translations/qtermwidget_zh_TW.ts	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/translations/qtermwidget_zh_TW.ts	2024-04-29 20:51:28.885872781 +0200
+@@ -6,12 +6,12 @@
+     <message>
+         <location filename="../Session.cpp" line="454"/>
+         <source>Bell in session &apos;%1&apos;</source>
+-        <translation>在會話中響鈴 &apos;%1&apos;</translation>
++        <translation>在工作階段中響鈴 &apos;%1&apos;</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="606"/>
+         <source>Session &apos;%1&apos; exited with code %2.</source>
+-        <translation type="unfinished"></translation>
++        <translation>工作階段 &apos;％1&apos; 以代碼 &apos;％2&apos; 退出。</translation>
+     </message>
+     <message>
+         <location filename="../Session.cpp" line="608"/>
+@@ -49,7 +49,7 @@
+     <message>
+         <location filename="../TerminalDisplay.cpp" line="3258"/>
+         <source>&lt;qt&gt;Output has been &lt;a href=&quot;http://en.wikipedia.org/wiki/Flow_control&quot;&gt;suspended&lt;/a&gt; by pressing Ctrl+S.  Press &lt;b&gt;Ctrl+Q&lt;/b&gt; to resume.&lt;/qt&gt;</source>
+-        <translation>&lt;qt&gt;輸出已被Ctrl+S&lt;a href=&quot;http://en.wikipedia.org/wiki/Flow_control&quot;&gt;暫停&lt;/a&gt;。按&lt;b&gt;Ctrl+Q&lt;/b&gt;復原。&lt;/qt&gt;</translation>
++        <translation>輸出已被Ctrl+S暫停。按Ctrl+Q復原。</translation>
+     </message>
+ </context>
+ <context>
+diff -Naur a/lib/Vt102Emulation.cpp b/lib/Vt102Emulation.cpp
+--- a/lib/Vt102Emulation.cpp	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Vt102Emulation.cpp	2024-04-29 20:51:28.861872701 +0200
+@@ -24,20 +24,6 @@
+ #include "Vt102Emulation.h"
+ #include "tools.h"
+ 
+-// XKB
+-//#include <config-konsole.h>
+-
+-// this allows konsole to be compiled without XKB and XTEST extensions
+-// even though it might be available on a particular system.
+-#if defined(AVOID_XKB)
+-    #undef HAVE_XKB
+-#endif
+-
+-#if defined(HAVE_XKB)
+-    void scrolllock_set_off();
+-    void scrolllock_set_on();
+-#endif
+-
+ // Standard
+ #include <cstdio>
+ #include <unistd.h>
+@@ -45,13 +31,8 @@
+ // Qt
+ #include <QEvent>
+ #include <QKeyEvent>
+-#include <QByteRef>
+ #include <QDebug>
+ 
+-// KDE
+-//#include <kdebug.h>
+-//#include <klocale.h>
+-
+ // Konsole
+ #include "KeyboardTranslator.h"
+ #include "Screen.h"
+@@ -63,10 +44,12 @@
+     : Emulation(),
+      prevCC(0),
+      _titleUpdateTimer(new QTimer(this)),
+-     _reportFocusEvents(false)
++     _reportFocusEvents(false),
++     _toUtf8(QStringEncoder::Utf8)
+ {
+   _titleUpdateTimer->setSingleShot(true);
+-  QObject::connect(_titleUpdateTimer , SIGNAL(timeout()) , this , SLOT(updateTitle()));
++  QObject::connect(_titleUpdateTimer, &QTimer::timeout,
++          this, &Konsole::Vt102Emulation::updateTitle);
+ 
+   initTokenizer();
+   reset();
+@@ -89,7 +72,6 @@
+   _screen[0]->reset();
+   resetCharset(1);
+   _screen[1]->reset();
+-  setCodec(LocaleCodec);
+ 
+   bufferedUpdate();
+ }
+@@ -529,8 +511,8 @@
+     case TY_ESC_CS('+', 'A') :      setCharset           (3,    'A'); break; //VT100
+     case TY_ESC_CS('+', 'B') :      setCharset           (3,    'B'); break; //VT100
+ 
+-    case TY_ESC_CS('%', 'G') :      setCodec             (Utf8Codec   ); break; //LINUX
+-    case TY_ESC_CS('%', '@') :      setCodec             (LocaleCodec ); break; //LINUX
++    case TY_ESC_CS('%', 'G') :      /*No longer updating codec*/      break; //LINUX
++    case TY_ESC_CS('%', '@') :      /*No longer updating codec*/      break; //LINUX
+ 
+     case TY_ESC_DE('3'      ) : /* Double height line, top half    */
+                                 _currentScreen->setLineProperty( LINE_DOUBLEWIDTH , true );
+@@ -971,8 +953,8 @@
+             // coordinate+32, no matter what the locale is. We could easily
+             // convert manually, but QString can also do it for us.
+             QChar coords[2];
+-            coords[0] = cx + 0x20;
+-            coords[1] = cy + 0x20;
++            coords[0] = QChar(cx + 0x20);
++            coords[1] = QChar(cy + 0x20);
+             QString coordsStr = QString(coords, 2);
+             QByteArray utf8 = coordsStr.toUtf8();
+             snprintf(command, sizeof(command), "\033[M%c%s", cb + 0x20, utf8.constData());
+@@ -1091,7 +1073,9 @@
+         }
+         else if ( !entry.text().isEmpty() )
+         {
+-            textToSend += _codec->fromUnicode(QString::fromUtf8(entry.text(true,modifiers)));
++	    QString str = QString::fromUtf8(entry.text(true,modifiers));
++	    QByteArray bytes = _toUtf8(str);
++	    textToSend += bytes;
+         }
+         else if((modifiers & KeyboardTranslator::CTRL_MOD) && event->key() >= 0x40 && event->key() < 0x5f) {
+             textToSend += (event->key() & 0x1f);
+@@ -1106,7 +1090,8 @@
+             textToSend += "\033[6~";
+         }
+         else {
+-            textToSend += _codec->fromUnicode(event->text());
++	    QByteArray bytes = _toUtf8(event->text());
++	    textToSend += bytes;
+         }
+ 
+         if (!fromPaste && textToSend.length()) {
+@@ -1123,7 +1108,7 @@
+                                          "into characters to send to the terminal "
+                                          "is missing.");
+         reset();
+-        receiveData( translatorError.toUtf8().constData() , translatorError.count() );
++        receiveData( translatorError.toUtf8().constData() , translatorError.size() );
+     }
+ }
+ 
+@@ -1359,7 +1344,7 @@
+                                             Qt::Key_Backspace,
+                                             Qt::NoModifier,
+                                             KeyboardTranslator::NoState);
+-  if ( entry.text().count() > 0 )
++  if ( entry.text().size() > 0 )
+       return entry.text().at(0);
+   else
+       return '\b';
+diff -Naur a/lib/Vt102Emulation.h b/lib/Vt102Emulation.h
+--- a/lib/Vt102Emulation.h	2023-11-05 13:12:32.000000000 +0100
++++ b/lib/Vt102Emulation.h	2024-04-29 20:51:28.861872701 +0200
+@@ -193,7 +193,9 @@
+   QHash<int,QString> _pendingTitleUpdates;
+   QTimer* _titleUpdateTimer;
+ 
+-    bool _reportFocusEvents;
++  bool _reportFocusEvents;
++
++  QStringEncoder _toUtf8;
+ };
+ 
+ }
+diff -Naur a/pyqt/project.py b/pyqt/project.py
+--- a/pyqt/project.py	2023-11-05 13:12:32.000000000 +0100
++++ b/pyqt/project.py	2024-04-29 20:51:28.885872781 +0200
+@@ -11,5 +11,5 @@
+         self._project = project
+ 
+     def apply_user_defaults(self, tool):
+-        self.libraries.append('qtermwidget5')
++        self.libraries.append('qtermwidget6')
+         super().apply_user_defaults(tool)
+diff -Naur a/pyqt/pyproject.toml b/pyqt/pyproject.toml
+--- a/pyqt/pyproject.toml	2023-11-05 13:12:32.000000000 +0100
++++ b/pyqt/pyproject.toml	2024-04-29 20:51:28.885872781 +0200
+@@ -6,5 +6,5 @@
+ 
+ [tool.sip.metadata]
+ name = "QTermWidget"
+-version = "1.4.0"
+-requires-dist = ["PyQt5"]
++version = "2.0.0"
++requires-dist = ["PyQt6"]
+diff -Naur a/pyqt/sip/qtermwidget.sip b/pyqt/sip/qtermwidget.sip
+--- a/pyqt/sip/qtermwidget.sip	2023-11-05 13:12:32.000000000 +0100
++++ b/pyqt/sip/qtermwidget.sip	2024-04-29 20:51:28.885872781 +0200
+@@ -47,7 +47,6 @@
+     void setWorkingDirectory(const QString & dir);
+     QString workingDirectory();
+     void setArgs(QStringList & args);
+-    void setTextCodec(QTextCodec *codec);
+     void setColorScheme(const QString & name);
+     QStringList getAvailableColorSchemes();
+     static QStringList availableColorSchemes();
+diff -Naur a/README.md b/README.md
+--- a/README.md	2023-11-05 13:12:32.000000000 +0100
++++ b/README.md	2024-04-29 20:51:28.837872621 +0200
+@@ -2,7 +2,7 @@
+ 
+ ## Overview
+ 
+-A terminal emulator widget for Qt 5.
++A terminal emulator widget for Qt 6.
+ 
+ QTermWidget is an open-source project originally based on the KDE4 Konsole application, but it took its own direction later on.
+ The main goal of this project is to provide a Unicode-enabled, embeddable Qt widget for using as a built-in console (or terminal emulation widget).
+@@ -45,10 +45,10 @@
+ 
+ ### Compiling sources
+ 
+-The only runtime dependency is qtbase ≥ 5.12.0.
++The only runtime dependency is qtbase ≥ 6.6.0.
+ Build dependencies are as follows:
+-- CMake ≥ 3.1.0 serves as the build system and therefore needs to be present to compile.
+-- The latest [lxqt-build-tools](https://github.com/lxqt/lxqt-build-tools/) is also needed for compilation.
++- CMake ≥ 3.16.0 serves as the build system and therefore needs to be present to compile.
++- [lxqt-build-tools](https://github.com/lxqt/lxqt-build-tools/) ≥ 2.0.0 is also needed for compilation.
+ - Git is needed to optionally pull latest VCS checkouts.
+ 
+ Code configuration is handled by CMake. CMake variable `CMAKE_INSTALL_PREFIX` will normally have to be set to `/usr`, depending on the way library paths are dealt with on 64bit systems. Variables like `CMAKE_INSTALL_LIBDIR` may have to be set as well.
+@@ -92,6 +92,7 @@
+ * sizeHint : const QSize
+ * terminalSizeHint : bool
+ * title : const QString
++* wordCharacters : QString
+ * workingDirectory : QString
+ 
+ ### Public Functions
+@@ -123,7 +124,6 @@
+ void | setTerminalFont(QFont &_font_)
+ void | setTerminalOpacity(qreal _level_)
+ void | setTerminalSizeHint(bool _enabled_)
+-void | setTextCodec(QTextCodec *_codec_)
+ void | setWorkingDirectory(const QString &_dir_)
+ void | startShellProgram()
+ void | startTerminalTeletype()
+@@ -230,6 +230,10 @@
+ <!--**title : const QString**\-->
+ <!--**workingDirectory : QString**\-->
+ 
++**wordCharacters : QString**\
++When selecting text by word, consider these characters to be word characters in addition to
++alphanumeric characters, default is `:@-./_~`.
++
+ ### Member Function Documentation
+ <!--__void activity()__\-->
+ <!--__void bell(const QString &_message_)__\-->
+@@ -320,9 +324,6 @@
+ __void setTerminalSizeHint(bool _enabled_)__\
+ Exposes TerminalDisplay::TerminalSizeHint.
+ 
+-__void setTextCodec(QTextCodec *_codec_)__\
+-Sets text codec, default is UTF-8.
+-
+ <!--__void setWorkingDirectory(const QString &_dir_)__\-->
+ <!--__void silence()__\-->
+ 

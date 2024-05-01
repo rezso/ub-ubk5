@@ -5,4 +5,4 @@ intltool
 libsoup3-dev
 libxslt-dev
 meson
-vala-dev
+vala

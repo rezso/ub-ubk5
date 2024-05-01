@@ -8,4 +8,4 @@ libsm-dev
 polkit-dev
 startup-notification-dev
 systemd-dev
-vala-dev
+vala

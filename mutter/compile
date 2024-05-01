@@ -2,6 +2,5 @@
 
 ub_compile \
 	-Dremote_desktop=true \
-	-Degl_device=false \
-	-Dwayland_eglstream=false \
+	-Dprofiler=false \
 	-Dtests=false

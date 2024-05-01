@@ -2,12 +2,11 @@ accountsservice-dev
 check-dev
 dbus-glib-dev
 dconf
-docbook-dtds
-docbook-xsl
 gobject-introspection-dev
 intltool
 iso-codes
 itstool
+json-glib-dev
 libcanberra-dev
 libgudev-dev
 libsm-dev

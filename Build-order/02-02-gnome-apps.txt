@@ -1,6 +1,7 @@
 dleyna
 protobuf-c
 libgnome-games-support
+libgnome-games-support1
 libmanette
 libshumate
 tali

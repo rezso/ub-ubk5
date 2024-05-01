@@ -7,7 +7,6 @@ gstreamer-dev
 intltool
 libadwaita-dev
 libexif-dev
-libhandy-dev
 libnotify-dev
 libportal-dev
 libseccomp-dev

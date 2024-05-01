@@ -3,4 +3,4 @@ intltool
 itstool
 librsvg-dev
 meson
-vala-dev
+vala

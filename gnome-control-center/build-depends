@@ -4,7 +4,7 @@ clutter-gst-dev
 clutter-gtk-dev
 colord-gtk-dev
 cups-dev
-gcr-dev
+gcr4-dev
 geoclue-dev
 gnome-bluetooth-dev
 gnome-desktop-dev
@@ -28,7 +28,6 @@ libcanberra-dev
 libgee-dev
 libgtop2-dev
 libgudev-dev
-libhandy-dev
 libjpeg-turbo-dev
 libnma-dev
 libnotify-dev
@@ -36,6 +35,7 @@ libpwquality-dev
 librsvg-dev
 libseccomp-dev
 libsecret-dev
+libsoup3-dev
 libwacom-dev
 libxkbfile-dev
 libxshmfence-dev
@@ -56,5 +56,5 @@ telepathy-glib-dev
 tzdata
 udisks2-dev
 upower-dev
-vala-dev
+vala
 wayland-dev

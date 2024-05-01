@@ -1,7 +1,5 @@
 dbus-glib-dev
 dconf-dev
-docbook-dtds
-docbook-xsl
 gnome-desktop-dev
 gtk3-dev
 intltool

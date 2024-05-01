@@ -1,5 +1,3 @@
-docbook-dtds
-docbook-xsl
 gnome-settings-daemon-dev
 gtk3-dev
 intltool
@@ -10,6 +8,5 @@ libnotify-dev
 libpwquality-dev
 libsecret-dev
 libxslt
-meson
 systemd-dev
 udisks2-dev

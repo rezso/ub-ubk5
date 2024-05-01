@@ -10,4 +10,4 @@ meson
 polkit-dev
 sqlite-dev
 systemd-dev
-vala-dev
+vala

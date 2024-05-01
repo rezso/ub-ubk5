@@ -6,4 +6,4 @@ json-glib-dev
 raptor2-dev
 sqlite-dev
 telepathy-glib-dev
-vala-dev
+vala

@@ -166,5 +166,8 @@ ln -s libEGL_nvidia.so.${UB_VERSION} libEGL_nvidia.so.0
 ln -s libvdpau_nvidia.so.${UB_VERSION} vdpau/libvdpau_nvidia.so.1
 ln -s libvdpau_nvidia.so.1 vdpau/libvdpau_nvidia.so
 
+# patchelf
+find "${UB_INSTALLDIR}"/usr/bin -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
+
 # Támogatott chipekhez a verzió beillesztése a csomag leírásába
 sed "s/version/${UB_VERSION}/g" -i ${UB_SRCDIR}/packages/nvidia/description/hu

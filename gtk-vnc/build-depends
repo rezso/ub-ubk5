@@ -7,4 +7,4 @@ libunistring-dev
 meson
 pulseaudio-dev
 systemd-dev
-vala-dev
+vala

@@ -3,4 +3,4 @@
 ub_compile \
     -Dwith_shared_components=false \
 	-Dremote_desktop=true \
-	-Degl_device=false
+	-Dprofiler=false

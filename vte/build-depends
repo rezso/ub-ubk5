@@ -4,5 +4,6 @@ gperf
 gtk3-dev
 gtk4-dev
 intltool
+liblz4-dev
 pcre2-dev
-vala-dev
+vala

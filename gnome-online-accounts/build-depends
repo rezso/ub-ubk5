@@ -1,11 +1,12 @@
-gcr-dev
+gcr4-dev
 geoclue-dev
 gobject-introspection-dev
 gstreamer-dev
-gtk3-dev
+gtk4-dev
 intltool
 json-glib-dev
 krb5-dev
+libadwaita-dev
 libjpeg-turbo-dev
 libnotify-dev
 libsecret-dev
@@ -17,5 +18,4 @@ rest-dev
 sqlite-dev
 systemd-dev
 telepathy-glib-dev
-vala-dev
-webkit2gtk-4.1-dev
+vala

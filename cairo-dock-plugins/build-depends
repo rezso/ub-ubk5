@@ -16,7 +16,7 @@ lmsensors-dev
 pulseaudio-dev
 python3-dev
 upower-dev
-vala-dev
+vala
 vte-dev
 wayland-dev
 zeitgeist-dev

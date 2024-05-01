@@ -1,7 +1,12 @@
 #!/bin/bash -eux
 
+# patchelf for build
+find kBuild/bin/linux.amd64 -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
+
 sed -i "s/blend/k8/g" configure
 sed -i "s/lib64/lib/g" configure
+
+KVER="$(</usr/lib/modules/version)"
 
 cat <<'EOF'>> LocalConfig.kmk
 VBOX_WITH_TESTCASES :=
@@ -26,7 +31,7 @@ EOF
 # --disable-vmmraw: disable building 32-bit guest additions iso
 ./configure \
 	--target-arch=amd64 \
-	--with-linux="$(echo /usr/lib/modules/*.x86_64/build/)" \
+	--with-linux="/usr/lib/modules/$KVER/build/" \
 	--disable-hardening \
 	--disable-java \
 	--disable-docs \
@@ -41,4 +46,4 @@ cd ./out/linux.amd64/release/bin/src
 # The variable KERN_DIR must be a kernel build folder and
 # end with /build without a trailing slash, or KERN_VER must be set.
 ub_make \
-	KERN_DIR="$(echo /usr/lib/modules/*.x86_64/build)"
+	KERN_DIR="/usr/lib/modules/$KVER/build"
