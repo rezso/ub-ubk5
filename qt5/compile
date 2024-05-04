@@ -37,6 +37,7 @@ $UB_COMPILEDIR/configure \
 	\
 	-nomake examples    \
 	-nomake tests		\
+	-skip qtwebengine   \
 	\
 	-accessibility      \
 	\
@@ -70,9 +71,6 @@ $UB_COMPILEDIR/configure \
 	-evdev				\
 	-mtdev				\
 	-libinput			\
-	-tslib              \
-	\
-	-system-webengine-icu \
-#	-system-ffmpeg
+	-tslib
 
 ub_make

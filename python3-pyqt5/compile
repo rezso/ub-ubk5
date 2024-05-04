@@ -7,6 +7,7 @@ sip-build \
 	--verbose \
 	--no-designer-plugin \
 	--target-dir /usr/lib/python$pythonver/site-packages \
+	--pep484-pyi \
 	--no-make
 
 cd build

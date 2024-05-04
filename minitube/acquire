@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-${UB_VERSION}.tar.gz minitube-${UB_VERSION}/
-	https://github.com/flaviotordini/minitube/archive/refs/tags/
+#${UB_VERSION}.tar.gz minitube-${UB_VERSION}/
+#	https://github.com/flaviotordini/minitube/archive/refs/tags/
+
+${UB_VERSION}.tar.gz minitube-6bca336/
+	git+https://github.com/flaviotordini/minitube.git@6bca336

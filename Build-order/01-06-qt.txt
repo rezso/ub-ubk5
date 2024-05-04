@@ -78,8 +78,6 @@ fluxbox
 python3-pyinotify
 ffmpeg-thumbnailer
 libconfig
-compton
-compton-conf
 xcursorgen
 numlockx
 xbindkeys

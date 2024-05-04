@@ -4,12 +4,15 @@ if [ -d .git ]; then
 git submodule init
 git submodule update
 else
-git clone https://github.com/flaviotordini/idle lib/idle
-git clone https://github.com/flaviotordini/media lib/media
 git clone https://github.com/flaviotordini/http lib/http
-git clone https://github.com/flaviotordini/updater lib/updater
+git clone https://github.com/flaviotordini/idle lib/idle
 git clone https://github.com/flaviotordini/js lib/js
+git clone https://github.com/flaviotordini/media lib/media
 git clone https://github.com/flaviotordini/promises lib/promises
+git clone https://github.com/flaviotordini/qt-reusable-widgets lib/qt-reusable-widgets
+git clone https://github.com/flaviotordini/updater lib/updater
+git clone https://github.com/flaviotordini/yt lib/yt
+git clone https://github.com/itay-grudev/SingleApplication lib/singleapplication
 fi
 
 qmake
