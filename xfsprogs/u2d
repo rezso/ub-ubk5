@@ -1,1 +1,1 @@
-urllist https://git.kernel.org/pub/scm/fs/xfs/xfsprogs-dev.git/ | grep -E '^\?h=v([0-9.]+)$' | sed s/.*v//g | sort -V | tail -n 1
+u2d https://mirrors.edge.kernel.org/pub/linux/utils/fs/xfs/xfsprogs/ xfsprogs-

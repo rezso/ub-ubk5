@@ -1,6 +1,6 @@
 diff -Naur a/Modules/Compiler/Absoft-Fortran.cmake b/Modules/Compiler/Absoft-Fortran.cmake
---- a/Modules/Compiler/Absoft-Fortran.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/Absoft-Fortran.cmake	2024-01-03 20:36:38.079340196 +0100
+--- a/Modules/Compiler/Absoft-Fortran.cmake	2024-04-11 16:12:19.000000000 +0200
++++ b/Modules/Compiler/Absoft-Fortran.cmake	2024-05-04 20:27:12.896283330 +0200
 @@ -1,7 +1,7 @@
  string(APPEND CMAKE_Fortran_FLAGS_INIT " ")
  string(APPEND CMAKE_Fortran_FLAGS_DEBUG_INIT " -g")
@@ -11,8 +11,8 @@ diff -Naur a/Modules/Compiler/Absoft-Fortran.cmake b/Modules/Compiler/Absoft-For
  set(CMAKE_Fortran_MODDIR_FLAG "-YMOD_OUT_DIR=")
  set(CMAKE_Fortran_MODPATH_FLAG "-p")
 diff -Naur a/Modules/Compiler/G95-Fortran.cmake b/Modules/Compiler/G95-Fortran.cmake
---- a/Modules/Compiler/G95-Fortran.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/G95-Fortran.cmake	2024-01-03 20:36:38.083340211 +0100
+--- a/Modules/Compiler/G95-Fortran.cmake	2024-04-11 16:12:19.000000000 +0200
++++ b/Modules/Compiler/G95-Fortran.cmake	2024-05-04 20:27:12.896283330 +0200
 @@ -1,7 +1,7 @@
  string(APPEND CMAKE_Fortran_FLAGS_INIT " ")
  string(APPEND CMAKE_Fortran_FLAGS_DEBUG_INIT " -g")
@@ -23,32 +23,20 @@ diff -Naur a/Modules/Compiler/G95-Fortran.cmake b/Modules/Compiler/G95-Fortran.c
  set(CMAKE_Fortran_MODDIR_FLAG "-fmod=")
  set(CMAKE_Fortran_VERBOSE_FLAG "-v")
 diff -Naur a/Modules/Compiler/GNU.cmake b/Modules/Compiler/GNU.cmake
---- a/Modules/Compiler/GNU.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/GNU.cmake	2024-01-03 20:36:38.083340211 +0100
-@@ -102,7 +102,7 @@
+--- a/Modules/Compiler/GNU.cmake	2024-04-11 16:12:19.000000000 +0200
++++ b/Modules/Compiler/GNU.cmake	2024-05-04 20:28:00.544375934 +0200
+@@ -110,7 +110,7 @@
    string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
    string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g")
-   string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -Os -DNDEBUG")
--  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O3 -DNDEBUG")
-+  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O2 -DNDEBUG")
-   string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -O2 -g -DNDEBUG")
-   set(CMAKE_${lang}_CREATE_PREPROCESSED_SOURCE "<CMAKE_${lang}_COMPILER> <DEFINES> <INCLUDES> <FLAGS> -E <SOURCE> > <PREPROCESSED_SOURCE>")
-   set(CMAKE_${lang}_CREATE_ASSEMBLY_SOURCE "<CMAKE_${lang}_COMPILER> <DEFINES> <INCLUDES> <FLAGS> -S <SOURCE> -o <ASSEMBLY_SOURCE>")
-diff -Naur a/Modules/Compiler/GNU-Fortran.cmake b/Modules/Compiler/GNU-Fortran.cmake
---- a/Modules/Compiler/GNU-Fortran.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/GNU-Fortran.cmake	2024-01-03 20:36:38.083340211 +0100
-@@ -19,7 +19,7 @@
- 
- # No -DNDEBUG for Fortran.
- string(APPEND CMAKE_Fortran_FLAGS_MINSIZEREL_INIT " -Os")
--string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O3")
-+string(APPEND CMAKE_Fortran_FLAGS_RELEASE_INIT " -O2")
- 
- # No -isystem for Fortran because it will not find .mod files.
- unset(CMAKE_INCLUDE_SYSTEM_FLAG_Fortran)
+   string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -Os")
+-  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O3")
++  string(APPEND CMAKE_${lang}_FLAGS_RELEASE_INIT " -O2")
+   string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -O2 -g")
+   if(NOT "x${lang}" STREQUAL "xFortran")
+     string(APPEND CMAKE_${lang}_FLAGS_MINSIZEREL_INIT " -DNDEBUG")
 diff -Naur a/Modules/Compiler/Intel.cmake b/Modules/Compiler/Intel.cmake
---- a/Modules/Compiler/Intel.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/Intel.cmake	2024-01-03 20:36:38.083340211 +0100
+--- a/Modules/Compiler/Intel.cmake	2024-04-11 16:12:19.000000000 +0200
++++ b/Modules/Compiler/Intel.cmake	2024-05-04 20:27:12.900283338 +0200
 @@ -27,7 +27,7 @@
      string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
      string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g")
@@ -59,8 +47,8 @@ diff -Naur a/Modules/Compiler/Intel.cmake b/Modules/Compiler/Intel.cmake
  
      if("${lang}" STREQUAL "CXX")
 diff -Naur a/Modules/Compiler/NVIDIA.cmake b/Modules/Compiler/NVIDIA.cmake
---- a/Modules/Compiler/NVIDIA.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/NVIDIA.cmake	2024-01-03 20:38:41.815826804 +0100
+--- a/Modules/Compiler/NVIDIA.cmake	2024-04-11 16:12:19.000000000 +0200
++++ b/Modules/Compiler/NVIDIA.cmake	2024-05-04 20:27:12.900283338 +0200
 @@ -127,7 +127,7 @@
      set(CMAKE_SHARED_LIBRARY_${lang}_FLAGS -fPIC)
      string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
@@ -71,8 +59,8 @@ diff -Naur a/Modules/Compiler/NVIDIA.cmake b/Modules/Compiler/NVIDIA.cmake
      string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -O2 -g -DNDEBUG")
    endif()
 diff -Naur a/Modules/Compiler/PathScale.cmake b/Modules/Compiler/PathScale.cmake
---- a/Modules/Compiler/PathScale.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/PathScale.cmake	2024-01-03 20:36:38.083340211 +0100
+--- a/Modules/Compiler/PathScale.cmake	2024-04-11 16:12:19.000000000 +0200
++++ b/Modules/Compiler/PathScale.cmake	2024-05-04 20:27:12.900283338 +0200
 @@ -16,6 +16,6 @@
    string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
    string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g -O0")
@@ -82,8 +70,8 @@ diff -Naur a/Modules/Compiler/PathScale.cmake b/Modules/Compiler/PathScale.cmake
    string(APPEND CMAKE_${lang}_FLAGS_RELWITHDEBINFO_INIT " -g -O2")
  endmacro()
 diff -Naur a/Modules/Compiler/PGI.cmake b/Modules/Compiler/PGI.cmake
---- a/Modules/Compiler/PGI.cmake	2023-12-14 16:47:27.000000000 +0100
-+++ b/Modules/Compiler/PGI.cmake	2024-01-03 20:36:38.083340211 +0100
+--- a/Modules/Compiler/PGI.cmake	2024-04-11 16:12:19.000000000 +0200
++++ b/Modules/Compiler/PGI.cmake	2024-05-04 20:27:12.900283338 +0200
 @@ -18,7 +18,7 @@
    string(APPEND CMAKE_${lang}_FLAGS_INIT " ")
    string(APPEND CMAKE_${lang}_FLAGS_DEBUG_INIT " -g -O0")

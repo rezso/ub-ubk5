@@ -26,5 +26,6 @@ rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/tex/lualatex/bezierplot/bezierplot.l
 rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/tex/latex/greek-fontenc/lgr2licr.lua
 # snobol4
 rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/scripts/texaccents/texaccents.sno
+rm -f "$UB_INSTALLDIR"/usr/bin/texaccents
 # ruby
 rm -f "$UB_INSTALLDIR"/usr/share/texmf-dist/source/fonts/japanese-otf/script/otf-hangul.rb

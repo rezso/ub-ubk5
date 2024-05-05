@@ -3,7 +3,6 @@ curl-dev
 cyrus-sasl2-dev
 gmp-dev
 json-c-dev
-libidn-dev
 libmspack-dev
 libxml2-dev
 ncurses-dev

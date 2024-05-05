@@ -1,0 +1,40 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2023-10-30 18:09:56.000000000 +0100
++++ b/CMakeLists.txt	2024-05-05 02:44:04.502142525 +0200
+@@ -143,14 +143,9 @@
+ # install the bin
+ install(TARGETS multitail DESTINATION bin)
+ # install the config file
+-install(FILES multitail.conf DESTINATION etc RENAME multitail.conf.new)
++install(FILES multitail.conf DESTINATION etc)
+ # install the manual files
+ install(FILES multitail.1 DESTINATION share/man/man1)
+-# install doc files
+-install(FILES manual.html DESTINATION share/doc/multitail-${VERSION})
+-install(FILES LICENSE DESTINATION share/doc/multitail-${VERSION})
+-install(FILES readme.txt DESTINATION share/doc/multitail-${VERSION})
+-install(FILES thanks.txt DESTINATION share/doc/multitail-${VERSION})
+ # cp conversion-scripts/* etc/multitail/
+ install(DIRECTORY conversion-scripts DESTINATION etc/multitail)
+ 
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	2023-10-30 18:09:56.000000000 +0100
++++ b/Makefile	2024-05-05 02:45:45.342458895 +0200
+@@ -9,7 +9,7 @@
+ 
+ UTF8_SUPPORT:=yes
+ DESTDIR=
+-PREFIX=/usr/local
++PREFIX=/usr
+ CONFIG_FILE=$(DESTDIR)$(PREFIX)/etc/multitail.conf
+ 
+ CC?=gcc
+@@ -57,7 +57,7 @@
+ 	### YOURSELF WITH THE NEW FILE
+ 	#
+ 	mkdir -p $(DESTDIR)$(PREFIX)/etc/multitail/
+-	cp multitail.conf $(CONFIG_FILE).new
++	cp multitail.conf $(CONFIG_FILE)
+ 	cp conversion-scripts/* $(DESTDIR)$(PREFIX)/etc/multitail/
+ #rm -f $(DESTDIR)$(PREFIX)/share/man/man1/multitail.1.gz
+ #gzip -9 $(DESTDIR)$(PREFIX)/share/man/man1/multitail.1

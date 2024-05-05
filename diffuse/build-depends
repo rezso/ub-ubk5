@@ -1,2 +1,2 @@
-meson
-python3-setuptools
+glib-dev
+python3-pygobject-dev
