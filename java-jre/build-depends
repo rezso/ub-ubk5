@@ -13,4 +13,5 @@ libxrender-dev
 libxt-dev
 libxtst-dev
 libzip-dev
+patchelf
 zip

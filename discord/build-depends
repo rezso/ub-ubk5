@@ -9,4 +9,5 @@ libxtst
 mesa
 nspr
 nss
+patchelf
 wget
