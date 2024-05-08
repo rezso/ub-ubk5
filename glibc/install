@@ -12,20 +12,19 @@ make \
 	install_root="$UB_INSTALLDIR" \
 	localedata/install-locales
 
-mv "$UB_INSTALLDIR"/sbin/{ldconfig,sln} "$UB_INSTALLDIR"/usr/sbin
-rm -rf "$UB_INSTALLDIR"/sbin
-
 cp -p "$UB_COMPILEDIR"/nscd/nscd.conf    "$UB_INSTALLDIR"/etc/
 cp -p "$UB_COMPILEDIR"/nss/nsswitch.conf "$UB_INSTALLDIR"/etc/
 cp -p "$UB_COMPILEDIR"/posix/gai.conf    "$UB_INSTALLDIR"/etc/
-
-rm -f "$UB_INSTALLDIR"/etc/ld.so.cache
-rm -f "$UB_INSTALLDIR"/usr/libexec/pt_chown
 
 # install nscd init scripts
 mkdir -p "$UB_INSTALLDIR"/usr/lib/tmpfiles.d/
 install -m 644 "$UB_COMPILEDIR"/nscd/nscd.tmpfiles "$UB_INSTALLDIR"/usr/lib/tmpfiles.d/nscd.conf
 install -m 644 "$UB_COMPILEDIR"/nscd/nscd.service "$UB_INSTALLDIR"/usr/lib/systemd/system
 
+# remove generated /etc/ld.so.cache
+rm -f "$UB_INSTALLDIR"/etc/ld.so.cache
+
+rm -f "$UB_INSTALLDIR"/var/lib/nss_db/Makefile
+
 # compat symlink
-ln -s usr/lib "$UB_INSTALLDIR"/lib64
+# ln -s usr/lib "$UB_INSTALLDIR"/lib64

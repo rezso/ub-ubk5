@@ -2,25 +2,29 @@
 
 cd "$UB_OBJECTDIR"
 
-# The glibc 2.32 supports kernel versions 3.2.0 and above only.
+# The glibc supports kernel versions 3.2.0 and above only.
 # Sun RPC is removed, use libtirpc + rpcsvc-proto
 # nsl removed, use libnsl
+# libcrypt removed, use libxcrypt
+
+echo "slibdir=/usr/lib" >> configparms
+echo "rtlddir=/usr/lib" >> configparms
+echo "sbindir=/usr/bin" >> configparms
+echo "rootsbindir=/usr/sbin" >> configparms
 
 UB_CONFIGURE_DIR="$UB_COMPILEDIR" ub_configure \
+    --libexecdir=/usr/lib \
 	--with-headers=/usr/include \
-	--with-tls \
-	--enable-add-ons \
-	--enable-kernel=5.4.40 \
-	--disable-werror \
-	--disable-timezone-tools \
 	--enable-bind-now \
 	--enable-cet \
-	--disable-profile \
+	--enable-crypt \
+	--enable-fortify-source \
+	--enable-kernel=5.4.40 \
 	--enable-lock-elision \
 	--enable-stack-protector=strong \
-	--enable-crypt \
-	libc_cv_slibdir=/usr/lib \
-	libc_cv_rtlddir=/usr/lib
+	--disable-profile \
+	--disable-werror \
+	--disable-timezone-tools
 
 ub_make \
 	CFLAGS="-O2 -mtune=generic" \
