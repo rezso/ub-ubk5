@@ -3,9 +3,6 @@
 # headerdir /usr/lib/qt5/include
 # libdir /usr/lib/qt5/lib
 
-# remove catapult
-rm -r qtwebengine/src/3rdparty/chromium/third_party/catapult
-
 cd $UB_OBJECTDIR
 
 procs=$(grep ^processor /proc/cpuinfo | wc -l)
