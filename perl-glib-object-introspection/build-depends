@@ -1,5 +1,6 @@
 cairo-dev
 gobject-introspection-dev
+perl-dev
 perl-extutils-depends
 perl-extutils-pkgconfig
 perl-glib

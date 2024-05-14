@@ -3,3 +3,4 @@ libgd-dev
 libxslt-dev
 openssl-dev
 pcre-dev
+perl-dev

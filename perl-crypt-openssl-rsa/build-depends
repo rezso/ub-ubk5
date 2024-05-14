@@ -1,3 +1,4 @@
 openssl-dev
 perl-crypt-openssl-guess
 perl-crypt-openssl-random
+perl-dev
