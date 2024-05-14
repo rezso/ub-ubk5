@@ -34,7 +34,7 @@ make \
 	DEPMOD=/doesnt/exists \
 	modules_install
 
-depmod -a -b "$UB_OBJECTDIR"/usr "$VERSION"
+depmod -a -b "$UB_OBJECTDIR" "$VERSION"
 
 if [ -d "$UB_OBJECTDIR"/lib ]; then
     mv -f "$UB_OBJECTDIR"/lib/modules/"$VERSION"/* "$UB_OBJECTDIR"/usr/lib/modules/"$VERSION"/
