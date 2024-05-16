@@ -31,7 +31,6 @@ rpm
 fontforge
 libnsl
 postfix
-waf
 apr-util
 apache
 aspell

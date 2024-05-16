@@ -7,4 +7,3 @@ libsamplerate-dev
 libsndfile-dev
 opus-dev
 readline-dev
-waf
