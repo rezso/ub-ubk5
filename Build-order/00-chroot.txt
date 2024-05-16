@@ -312,7 +312,7 @@ xscope
 xset
 x.org-server-utils
 sassc
-at-spi2-core
+atk
 fribidi
 pango
 libungif

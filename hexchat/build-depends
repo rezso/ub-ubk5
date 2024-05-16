@@ -6,7 +6,7 @@ libnotify-dev
 libproxy-dev
 luajit-dev
 openssl-dev
-perl-dev
 pciutils-dev
+perl-dev
 python3-cffi
 python3-dev
