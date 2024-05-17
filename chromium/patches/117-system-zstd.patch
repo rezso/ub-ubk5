@@ -1,6 +1,6 @@
 diff -Naur a/build/linux/unbundle/replace_gn_files.py b/build/linux/unbundle/replace_gn_files.py
---- a/build/linux/unbundle/replace_gn_files.py	2024-01-10 01:13:24.106604600 +0100
-+++ b/build/linux/unbundle/replace_gn_files.py	2024-01-12 00:10:46.917969868 +0100
+--- a/build/linux/unbundle/replace_gn_files.py	2024-05-14 01:34:55.865031200 +0200
++++ b/build/linux/unbundle/replace_gn_files.py	2024-05-16 13:24:18.126076490 +0200
 @@ -79,6 +79,7 @@
    'vulkan_memory_allocator' : 'third_party/vulkan_memory_allocator/BUILD.gn',
    'woff2': 'third_party/woff2/BUILD.gn',
@@ -11,7 +11,7 @@ diff -Naur a/build/linux/unbundle/replace_gn_files.py b/build/linux/unbundle/rep
  
 diff -Naur a/build/linux/unbundle/zstd.gn b/build/linux/unbundle/zstd.gn
 --- a/build/linux/unbundle/zstd.gn	1970-01-01 01:00:00.000000000 +0100
-+++ b/build/linux/unbundle/zstd.gn	2024-01-11 22:08:12.713822740 +0100
++++ b/build/linux/unbundle/zstd.gn	2024-05-16 13:26:16.461248288 +0200
 @@ -0,0 +1,25 @@
 +import("//build/config/linux/pkg_config.gni")
 +import("//build/shim_headers.gni")

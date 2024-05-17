@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-# patchset: https://gitlab.com/Matt.Jolly/chromium-patches
+# gcc patchset: https://gitlab.com/Matt.Jolly/chromium-patches
 
 freespace=$((`stat -f -c "%a" .`*`stat -f -c "%s" .`/(1024*1024*1024)))
 
