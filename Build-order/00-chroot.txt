@@ -100,7 +100,6 @@ libffi
 libidn2
 libjpeg-turbo
 libpng
-libsigsegv
 libtool
 licenses
 m4
