@@ -1,7 +1,7 @@
 diff -Naur a/build/linux/unbundle/replace_gn_files.py b/build/linux/unbundle/replace_gn_files.py
 --- a/build/linux/unbundle/replace_gn_files.py	2024-05-14 01:34:55.865031200 +0200
 +++ b/build/linux/unbundle/replace_gn_files.py	2024-05-16 13:24:18.126076490 +0200
-@@ -79,6 +79,7 @@
+@@ -80,6 +80,7 @@
    'vulkan_memory_allocator' : 'third_party/vulkan_memory_allocator/BUILD.gn',
    'woff2': 'third_party/woff2/BUILD.gn',
    'zlib': 'third_party/zlib/BUILD.gn',

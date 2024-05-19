@@ -1,11 +1,11 @@
 diff -Naur a/chrome/browser/devtools/BUILD.gn b/chrome/browser/devtools/BUILD.gn
---- a/chrome/browser/devtools/BUILD.gn	2024-05-14 01:35:00.045469800 +0200
-+++ b/chrome/browser/devtools/BUILD.gn	2024-05-16 23:53:20.001154136 +0200
-@@ -113,6 +113,7 @@
+--- a/chrome/browser/devtools/BUILD.gn	2024-05-15 23:46:00.436881300 +0200
++++ b/chrome/browser/devtools/BUILD.gn	2024-05-17 23:45:50.278152744 +0200
+@@ -115,6 +115,7 @@
      "//chrome/browser/autofill:autofill",
      "//components/autofill/content/browser:browser",
      "//components/autofill/core/browser:browser",
 +    "//components/enterprise/buildflags",
      "//components/paint_preview/buildflags:buildflags",
-     "//content/public/browser",
-     "//net",
+     "//components/variations/service:service",
+     "//components/webapps/common:common",

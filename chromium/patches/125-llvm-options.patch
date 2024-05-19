@@ -1,7 +1,7 @@
 diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
---- a/build/config/compiler/BUILD.gn	2024-04-15 22:33:42.985039200 +0200
-+++ b/build/config/compiler/BUILD.gn	2024-04-22 21:22:48.939578186 +0200
-@@ -613,24 +613,6 @@
+--- a/build/config/compiler/BUILD.gn	2024-05-15 23:45:50.383964300 +0200
++++ b/build/config/compiler/BUILD.gn	2024-05-17 23:43:32.365642966 +0200
+@@ -610,24 +610,6 @@
        }
      }
  
@@ -26,7 +26,7 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      # TODO(crbug.com/1235145): Investigate why/if this should be needed.
      if (is_win) {
        cflags += [ "/clang:-ffp-contract=off" ]
-@@ -765,7 +747,6 @@
+@@ -785,7 +767,6 @@
        ldflags += [
          "/opt:lldltojobs=all",
          "-mllvm:-import-instr-limit=$import_instr_limit",
@@ -34,7 +34,7 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
        ]
      } else {
        ldflags += [ "-flto=thin" ]
-@@ -797,10 +778,6 @@
+@@ -817,10 +798,6 @@
        if (is_apple) {
          ldflags += [ "-Wcrl,object_path_lto" ]
        }
@@ -45,7 +45,7 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      }
  
      # TODO(https://crbug.com/1211155): investigate why this isn't effective on
-@@ -1890,22 +1867,12 @@
+@@ -1914,22 +1891,12 @@
  
          # TODO(crbug.com/1494809): Evaluate and possibly enable.
          "-Wno-vla-extension",
