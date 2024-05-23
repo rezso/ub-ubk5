@@ -1,5 +1,5 @@
 gstreamer-dev
-gtk3-dev
+gtk4-dev
 intltool
 jansson-dev
 libass-dev

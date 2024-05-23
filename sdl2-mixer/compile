@@ -1,5 +1,8 @@
 #!/bin/sh -eux
 
-export CFLAGS+="-I/usr/include/libmodplug"
-
-ub_compile
+ub_compile \
+    -DSDL2MIXER_MOD_MODPLUG=ON \
+    -DSDL2MIXER_MOD_MODPLUG_SHARED=ON \
+    -DSDL2MIXER_MOD_XMP=OFF \
+    -DSDL2MIXER_MOD_XMP_LITE=OFF \
+    -DSDL2MIXER_MOD_XMP_SHARED=OFF

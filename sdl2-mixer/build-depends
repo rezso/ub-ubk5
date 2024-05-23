@@ -5,3 +5,4 @@ libmodplug-dev
 libvorbis-dev
 opusfile-dev
 sdl2-dev
+wavpack-dev
