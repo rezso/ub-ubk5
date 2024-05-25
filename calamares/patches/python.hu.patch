@@ -1,6 +1,6 @@
 diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/python.po
---- a/lang/python/hu/LC_MESSAGES/python.po	2024-02-19 19:23:21.000000000 +0100
-+++ b/lang/python/hu/LC_MESSAGES/python.po	2024-02-20 14:29:00.447995038 +0100
+--- a/lang/python/hu/LC_MESSAGES/python.po	2024-04-16 15:46:09.000000000 +0200
++++ b/lang/python/hu/LC_MESSAGES/python.po	2024-05-25 20:44:47.496144198 +0200
 @@ -81,23 +81,22 @@
  
  #: src/modules/displaymanager/main.py:938
@@ -37,7 +37,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
 -msgstr "Hamis {}. Python lépés"
 +msgstr "Hamis Python lépés: {}"
  
- #: src/modules/fstab/main.py:28
+ #: src/modules/fstab/main.py:29
  msgid "Writing fstab."
 @@ -171,11 +170,11 @@
  

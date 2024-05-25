@@ -1,0 +1,26 @@
+diff -Naur a/src/Gui/Annotations/AnnotationDocument.cpp b/src/Gui/Annotations/AnnotationDocument.cpp
+--- a/src/Gui/Annotations/AnnotationDocument.cpp	2024-05-17 05:00:43.000000000 +0200
++++ b/src/Gui/Annotations/AnnotationDocument.cpp	2024-05-24 22:32:09.455792767 +0200
+@@ -7,7 +7,6 @@
+ #include "AnnotationDocument.h"
+ #include "EffectUtils.h"
+ #include "Geometry.h"
+-#include "DebugUtils.h"
+ 
+ #include <QGuiApplication>
+ #include <QPainter>
+@@ -72,13 +71,7 @@
+ void AnnotationDocument::setCanvas(const QRectF &rect, qreal dpr)
+ {
+     // Don't allow an invalid canvas rect or device pixel ratio.
+-    if (rect.isEmpty()) {
+-        Log::warning() << std::format("`{}`:\n\t`rect` is empty. This should not happen.",
+-                                      std::source_location::current().function_name());
+-        return;
+-    } else if (dpr <= 0) {
+-        Log::warning() << std::format("`{}`:\n\t`dpr` <= 0. This should not happen.",
+-                                      std::source_location::current().function_name());
++    if (rect.isEmpty() || dpr <= 0) {
+         return;
+     }
+     const bool posChanged = m_canvasRect.topLeft() != rect.topLeft();
