@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-cd build_unix
-UB_CONFIGURE_DIR=../dist \
-ub_configure \
-	--disable-java \
-	--enable-cxx \
-	--enable-static
-make

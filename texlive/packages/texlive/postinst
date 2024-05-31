@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# texconfig rehash
-mktexlsr
-fmtutil-sys --all
-# mtxrun --generate

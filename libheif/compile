@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    -DWITH_DAV1D=ON \
-    -DWITH_FFMPEG_DECODER=ON \
-    -DWITH_FFMPEG_DECODER_PLUGIN=ON

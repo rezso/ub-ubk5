@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-lzop-${UB_VERSION/~/}.tar.gz lzop-${UB_VERSION/~/}/
-	https://www.lzop.org/download/

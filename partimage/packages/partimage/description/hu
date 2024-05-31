@@ -1,3 +1,0 @@
-Fájlrendszerszintű partíciómentő program. Ajánlatos egész partíciók, vagy
-merevlemezek tükrözésére használni. Jóval gyorsabb, mint ha egy szektorszintű
-tükrözőprogramot használnánk.

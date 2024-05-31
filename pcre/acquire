@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-pcre-${UB_VERSION}.tar.gz pcre-${UB_VERSION}/
-	https://downloads.sourceforge.net/pcre/

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-ply-${UB_VERSION}.tar.gz ply-${UB_VERSION}/
-	https://www.dabeaz.com/ply/

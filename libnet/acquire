@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libnet-${UB_VERSION}.tar.gz libnet-${UB_VERSION}/
-	https://downloads.sourceforge.net/libnet-dev/

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-newt-${UB_VERSION}.tar.gz newt-${UB_VERSION}/
-	https://releases.pagure.org/newt/

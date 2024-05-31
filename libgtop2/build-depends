@@ -1,6 +1,0 @@
-gobject-introspection-dev
-intltool
-libsm-dev
-libx11-dev
-libxau-dev
-popt-dev

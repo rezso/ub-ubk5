@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-cp Makefile.sharedlibrary Makefile
-ub_make INSTALL_PREFIX=/usr

@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    --with-kali=no \
-    --with-baratinoo=no \
-    --with-ibmtts=no \
-    --with-voxin=no

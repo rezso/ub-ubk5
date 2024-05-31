@@ -1,2 +1,0 @@
-"rewriteSystem" "http://docbook.sourceforge.net/release/xsl/current" "file:///usr/share/sgml/docbook/xsl-stylesheets"
-"rewriteURI"    "http://docbook.sourceforge.net/release/xsl/current" "file:///usr/share/sgml/docbook/xsl-stylesheets"

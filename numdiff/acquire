@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-numdiff-${UB_VERSION}.tar.gz ./numdiff-${UB_VERSION}/
-	https://savannah.nongnu.org/download/numdiff/

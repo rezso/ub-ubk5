@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-# hülye windows CRLF
-#sed  's/\r//g' -i script/scons-configure-cache
-
-python3 setup.py build

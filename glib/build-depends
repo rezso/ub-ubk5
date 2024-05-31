@@ -1,6 +1,0 @@
-gobject-introspection-dev
-libelf-dev
-libffi-dev
-pcre2-dev
-python3-packaging
-util-linux-dev

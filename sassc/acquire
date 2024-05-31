@@ -1,7 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz sassc-${UB_VERSION}/
-    https://github.com/sass/sassc/archive/
-
-libsass-3.6.5.tar.gz libsass-3.6.5/ :libsass
-    https://github.com/sass/libsass/archive/3.6.5.tar.gz

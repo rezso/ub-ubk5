@@ -1,9 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Spectemu
-Comment=ZX Spectrum 48k emulator
-Comment[hu]=ZX Spectrum 48k emulátor
-Exec=xspect
-Icon=/usr/share/pixmaps/spectemu2.png
-Terminal=true
-Categories=Game;Emulator;

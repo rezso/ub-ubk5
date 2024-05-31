@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-./bootstrap
-ub_configure
-ub_make

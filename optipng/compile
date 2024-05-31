@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-./configure \
-	-prefix=/usr \
-	-mandir=/usr/share/man \
-	-with-system-libpng
-ub_make

@@ -1,1 +1,0 @@
-sflist linuxconsole | parsever | sort -V | tail -n 1

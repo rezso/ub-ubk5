@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-keyutils-${UB_VERSION}.tar.gz keyutils-${UB_VERSION}/
-	https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/

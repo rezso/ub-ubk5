@@ -1,5 +1,0 @@
-	/usr/bin/gpgme-config
-	/usr/include
-	/usr/lib/pkgconfig
-@	/usr/lib/*.so
-	/usr/share/aclocal

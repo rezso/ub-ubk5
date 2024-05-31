@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-rm -f SConstruct
-
-export CFLAGS=" -fPIC"
-export CXXFLAGS=" -fPIC"
-
-ub_compile \
-	-DBUILD_SHARED_LIBS=OFF

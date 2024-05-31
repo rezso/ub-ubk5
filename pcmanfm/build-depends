@@ -1,9 +1,0 @@
-dbus-glib-dev
-gamin-dev
-intltool
-libfm-dev
-libsm-dev
-lxmenu-data
-menu-cache-dev
-startup-notification-dev
-xcb-util-dev

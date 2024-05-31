@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-st-$UB_VERSION.tar.gz st-$UB_VERSION/
-	https://dl.suckless.org/st/

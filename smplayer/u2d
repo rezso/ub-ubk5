@@ -1,1 +1,0 @@
-sflist smplayer SMPlayer | grep -E '^[0-9]' | sort -V | tail -n 1

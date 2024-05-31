@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--enable-debug \
-	--enable-ipv6 \
-	--with-gnutls \
-	--without-openssl

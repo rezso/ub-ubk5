@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-export TERM=xterm
-ub_configure
-./make build

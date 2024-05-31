@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    -DPHONON_BUILD_QT5=OFF \
-	-DPHONON_BUILD_DESIGNER_PLUGIN=OFF \
-	-Wno-dev

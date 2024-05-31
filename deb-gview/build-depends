@@ -1,8 +1,0 @@
-atk-dev
-debhelper
-glib-dev
-gtk3-dev
-gvfs
-intltool
-libarchive-dev
-libxslt-dev

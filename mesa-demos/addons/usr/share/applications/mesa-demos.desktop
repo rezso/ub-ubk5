@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Mesa-Demos
-Name[hu]=Mesa demók
-Exec=mesa-demos
-Type=Application
-Categories=Amusement;
-Icon=mesa-demos
-Terminal=true

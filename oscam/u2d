@@ -1,1 +1,0 @@
-urllist https://git.streamboard.tv/common/oscam/-/tags | grep -E '^[0-9]\.' | sort -V | tail -n1

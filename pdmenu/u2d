@@ -1,1 +1,0 @@
-urllist https://joeyh.name/code/pdmenu/ | grep version_ | sed s/version_// | sort -V | tail -n 1

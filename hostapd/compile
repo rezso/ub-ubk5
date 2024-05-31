@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-cd hostapd
-cp defconfig .config
-ub_compile

@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-export CFLAGS="-fPIC"
-ub_compile \
-    -DBUILD_SHARED_LIBS=ON

@@ -1,9 +1,0 @@
-diff -Naur a/lib/menu.in b/lib/menu.in
---- a/lib/menu.in	2023-05-18 09:29:44.000000000 +0200
-+++ b/lib/menu.in	2023-05-21 18:01:05.201836170 +0200
-@@ -12,4 +12,4 @@
- prog Gimp gimp gimp
- includeprog icewm-menu-fdo --sep-before --no-sep-others
- menufile Programs folder programs
--menufile Tool_bar folder toolbar
-+menufile Tálca folder toolbar

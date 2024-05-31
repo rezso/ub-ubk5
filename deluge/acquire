@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-deluge-${UB_VERSION}.tar.xz deluge-${UB_VERSION}/
-	https://download.deluge-torrent.org/source/2.0/

@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-cd lsscsi*
-ub_install
-cp AUTHORS ChangeLog COPYING CREDITS README ../

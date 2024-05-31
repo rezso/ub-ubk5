@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-# conflicts w/ mkfontdir
-rm -f $UB_INSTALLDIR/usr/bin/mkfontdir
-rm -f $UB_INSTALLDIR/usr/share/man/man1/mkfontdir.1

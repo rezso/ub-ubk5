@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-cd build64
-ub_make

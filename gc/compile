@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-rm -f CMakeLists.txt
-./autogen.sh
-ub_compile \
-    --enable-cplusplus

@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-export CC=gcc
-export CXX=g++
-
-ub_compile \
-	--disable-debian-menu

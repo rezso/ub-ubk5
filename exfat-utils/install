@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-# for kpmcore
-ln -s mkfs.exfat ${UB_INSTALLDIR}/usr/sbin/mkexfatfs

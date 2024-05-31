@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    --enable-a4 \
-    --enable-metric \
-    --with-libpotrace

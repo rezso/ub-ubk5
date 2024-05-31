@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-DUSE_QT_VERSION=6 \
-	-DBUILD_SHARED_LIBS=ON \
-	-DQCORO_BUILD_EXAMPLES=OFF \
-	-DBUILD_TESTING=OFF

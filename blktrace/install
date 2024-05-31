@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-make prefix=${UB_INSTALLDIR}/usr mandir=${UB_INSTALLDIR}/usr/share/man install

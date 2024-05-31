@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-rm -Rf locate
-
-autoreconf -vif
-ub_compile

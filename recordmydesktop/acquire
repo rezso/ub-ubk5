@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-recordmydesktop-${UB_VERSION}.tar.gz recordmydesktop-${UB_VERSION}/
-	https://downloads.sourceforge.net/recordmydesktop/

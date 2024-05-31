@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libxslt-${UB_VERSION}.tar.xz libxslt-${UB_VERSION}/
-    https://download.gnome.org/sources/libxslt/${UB_VERSION_HEAD2}/

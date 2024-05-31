@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-spectemu-${UB_VERSION}.tar.gz spectemu-${UB_VERSION}/
-	https://downloads.sourceforge.net/spectemu/

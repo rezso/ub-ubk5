@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-cd "$UB_OBJECTDIR"
-
-ub_install
-
-make \
-	DESTDIR="$UB_INSTALLDIR" \
-	install-libs

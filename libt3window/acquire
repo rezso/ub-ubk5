@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libt3window-${UB_VERSION}.tar.bz2 libt3window-${UB_VERSION}/
-	https://os.ghalkes.nl/dist/

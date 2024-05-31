@@ -1,5 +1,0 @@
-	/usr/include
-	/usr/lib/cmake
-	/usr/lib/*/include
-	/usr/lib/pkgconfig
-@	/usr/lib/*.so

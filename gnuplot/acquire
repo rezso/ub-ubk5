@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-gnuplot-"$UB_VERSION".tar.gz gnuplot-"$UB_VERSION"/
-	https://downloads.sourceforge.net/gnuplot/

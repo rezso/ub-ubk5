@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-make \
-	DESTDIR="$UB_INSTALLDIR" \
-	PREFIX=/usr \
-	QMAKE=qmake \
-	LRELEASE=/usr/lib/qt5/bin/lrelease \
-install
-rm -rf ${UB_INSTALLDIR}/usr/share/doc/packages

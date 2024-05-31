@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-mc-${UB_VERSION}.tar.xz mc-${UB_VERSION}/
-	https://ftp.midnight-commander.org/

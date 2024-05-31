@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-systemctl -f enable optimus-manager.service

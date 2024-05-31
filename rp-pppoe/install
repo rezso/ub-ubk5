@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-cd src
-make \
-	PLUGIN_DIR="/usr/lib/rp-pppoe" \
-	DESTDIR="$UB_INSTALLDIR" \
-	install
-
-rm -rf "$UB_INSTALLDIR"/usr/doc

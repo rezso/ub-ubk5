@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--with-keyring \
-	--enable-pixbuf \
-	--enable-introspection \
-	--enable-comics

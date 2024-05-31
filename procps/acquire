@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-procps-ng-${UB_VERSION}.tar.xz procps-ng-${UB_VERSION}/
-	https://downloads.sourceforge.net/procps-ng/

@@ -1,7 +1,0 @@
-appstream-dev
-curl-dev
-gobject-introspection-dev
-gtk4-dev
-sassc
-vala
-wayland-protocols

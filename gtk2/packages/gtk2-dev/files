@@ -1,7 +1,0 @@
-	/usr/bin/gtk-builder-convert
-	/usr/include
-	/usr/lib/gtk-2.0/include
-	/usr/lib/pkgconfig
-@	/usr/lib/*.so
-	/usr/share/aclocal
-	/usr/share/gir-1.0

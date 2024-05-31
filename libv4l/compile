@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    -Dlibdvbv5=enabled \
-    -Dgconv=disabled \
-	-Dudevdir=/usr/lib/udev

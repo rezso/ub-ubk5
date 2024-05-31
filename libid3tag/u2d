@@ -1,1 +1,0 @@
-sflist mad libid3tag | sort -V | tail -n 1

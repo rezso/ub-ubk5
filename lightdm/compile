@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--disable-tests \
-	--with-greeter-user='lightdm' \
-	--libexecdir="/usr/lib/lightdm" \
-	--with-greeter-session='lightdm-gtk-greeter'

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-dbus-${UB_VERSION}.tar.xz dbus-${UB_VERSION}/
-	https://www.freedesktop.org/software/dbus/releases/dbus/

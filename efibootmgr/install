@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-export EFIDIR="/boot/EFI"
-ub_install

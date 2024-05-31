@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-configdir="$UB_INSTALLDIR"/etc/vdr/plugins/streamdev-server
-mkdir -p "$configdir"
-cp streamdev-server/streamdevhosts.conf "$configdir"/

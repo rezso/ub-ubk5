@@ -1,1 +1,0 @@
-sflist qpdf qpdf | sort -V | tail -n 1

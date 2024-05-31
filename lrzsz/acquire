@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-lrzsz-${UB_VERSION}.tar.gz lrzsz-${UB_VERSION}/
-	https://www.ohse.de/uwe/releases/

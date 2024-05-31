@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-#A -O3 veszélyes
-
-ub_replace -O3 -O2 configure
-ub_replace -O3 -O2 configure.ac
-
-ub_compile \
-	--with-dbm-type=gdbm_compat

@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-./bootstrap.sh
-ub_compile

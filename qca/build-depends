@@ -1,6 +1,0 @@
-ca-certificates
-gpg
-libgcrypt-dev
-nss-dev
-openssl-dev
-qt6-dev

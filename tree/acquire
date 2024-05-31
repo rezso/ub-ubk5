@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-unix-tree-${UB_VERSION}.tar.gz unix-tree-${UB_VERSION}/
-	https://gitlab.com/OldManProgrammer/unix-tree/-/archive/${UB_VERSION}/

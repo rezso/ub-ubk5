@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-LIBS="$(wx-config --libs all)"
-export LIBS
-ub_compile

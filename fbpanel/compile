@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-./configure \
-	--prefix=/usr \
-	--datadir=/usr/share \
-	--libdir=/usr/lib
-ub_make

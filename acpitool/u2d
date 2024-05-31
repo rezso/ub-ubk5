@@ -1,2 +1,0 @@
-sflist acpitool acpitool | sort -V | tail -n 1
-

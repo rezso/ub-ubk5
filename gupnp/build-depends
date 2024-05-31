@@ -1,8 +1,0 @@
-gobject-introspection-dev
-gssdp-dev
-libsoup3-dev
-libtasn1-dev
-libxml2-dev
-sqlite-dev
-util-linux-dev
-vala

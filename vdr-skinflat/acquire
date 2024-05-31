@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz vdr-plugin-skinflat-${UB_VERSION}/
-	https://github.com/vdr-projects/vdr-plugin-skinflat/archive/

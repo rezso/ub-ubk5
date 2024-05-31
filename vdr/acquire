@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz vdr-${UB_VERSION}/
-	https://github.com/vdr-projects/vdr/archive/refs/tags/

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz sddm-conf-${UB_VERSION}/
-	https://github.com/qtilities/sddm-conf/archive/refs/tags/

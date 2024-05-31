@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-v${UB_VERSION}.tar.gz encfs-${UB_VERSION}/
-	https://github.com/vgough/encfs/archive/

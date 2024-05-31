@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--libexecdir=/usr/lib/genius \
-	--disable-update-mimedb \
-	--disable-extra-gcc-optimization \
-	--enable-compile-warnings=minimum

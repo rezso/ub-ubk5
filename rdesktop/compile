@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-./bootstrap
-ub_compile \
-    --enable-smartcard \
-    --with-ipv6

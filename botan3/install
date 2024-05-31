@@ -1,3 +1,0 @@
-#!/bin/sh -eux
-
-DESTDIR=$UB_INSTALLDIR ub_make install

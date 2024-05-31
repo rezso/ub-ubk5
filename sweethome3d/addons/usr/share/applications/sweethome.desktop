@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=SweetHome3D
-Comment=An interior design application
-Comment[hu]=Lakberendező program
-Exec=sweethome3d
-Icon=SweetHome3DIcon
-Type=Application
-Terminal=false
-Categories=Java;Graphics;3DGraphics;

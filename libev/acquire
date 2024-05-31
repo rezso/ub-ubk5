@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libev-${UB_VERSION}.tar.gz libev-${UB_VERSION}/
-	https://dist.schmorp.de/libev/

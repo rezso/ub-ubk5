@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libmng-${UB_VERSION}.tar.gz libmng-${UB_VERSION}/
-	https://downloads.sourceforge.net/libmng/

@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-rm -f CMakeLists.txt
-rm -f configure*
-
-ub_compile
