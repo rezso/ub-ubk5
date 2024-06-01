@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-pyzmq-${UB_VERSION}.tar.gz pyzmq-${UB_VERSION}/
-	https://pypi.org/packages/source/p/pyzmq/

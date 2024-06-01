@@ -23,7 +23,6 @@ gnome-robots
 gnome-taquin
 gnome-sound-recorder
 gnome-todo
-accerciser
 bijiben
 gnome-maps
 quadrapassel

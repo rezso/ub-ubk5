@@ -26,7 +26,6 @@ python3-gnupg
 python3-idna
 python3-imagesize
 python3-incremental
-python3-ipython-genutils
 python3-mutagen
 python3-nose
 python3-parso
@@ -88,7 +87,6 @@ python3-iniconfig
 python3-py
 python3-pylibacl
 python3-setproctitle
-python3-pyzmq
 python3-babel
 python3-pyatspi
 python3-automat
@@ -107,7 +105,6 @@ python3-fastjsonschema
 python3-jsonschema
 python3-nbformat
 python3-matplotlib-inline
-python3-ipython
 python3-multidict
 python3-rencode
 python3-future

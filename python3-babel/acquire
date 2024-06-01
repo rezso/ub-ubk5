@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-Babel-${UB_VERSION}.tar.gz Babel-${UB_VERSION}/
-	https://pypi.org/packages/source/B/Babel/
+v${UB_VERSION}.tar.gz babel-${UB_VERSION}/
+	https://github.com/python-babel/babel/archive/refs/tags/

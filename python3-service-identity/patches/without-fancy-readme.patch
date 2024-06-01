@@ -1,6 +1,6 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2023-06-14 09:54:35.000000000 +0200
-+++ b/pyproject.toml	2023-06-20 20:14:31.751220656 +0200
+--- a/pyproject.toml	2024-01-14 08:05:19.000000000 +0100
++++ b/pyproject.toml	2024-03-14 23:24:49.353316098 +0100
 @@ -1,5 +1,5 @@
  [build-system]
 -requires = ["hatchling", "hatch-vcs", "hatch-fancy-pypi-readme"]
@@ -17,7 +17,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  
  [project.optional-dependencies]
  idna = ["idna"]
-@@ -52,35 +52,6 @@
+@@ -54,35 +54,6 @@
  source = "vcs"
  raw-options = { local_scheme = "no-local-version" }
  
@@ -47,7 +47,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -text = """
 -----
 -
--[→ Complete Changelog](https://service-identity.readthedocs.io/en/stable/changelog.html)
+-[Complete Changelog →](https://service-identity.readthedocs.io/en/stable/changelog.html)
 -"""
 -
  
