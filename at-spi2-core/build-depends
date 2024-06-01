@@ -1,8 +1,0 @@
-dbus-glib-dev
-glib-dev
-gobject-introspection-dev
-intltool
-libx11-dev
-libxi-dev
-libxml2-dev
-libxtst-dev

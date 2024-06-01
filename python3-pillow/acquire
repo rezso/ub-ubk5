@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz Pillow-${UB_VERSION}/
-	https://github.com/python-pillow/Pillow/archive/refs/tags/

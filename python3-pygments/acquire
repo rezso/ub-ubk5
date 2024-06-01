@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz pygments-${UB_VERSION}/
-	https://github.com/pygments/pygments/archive/refs/tags/

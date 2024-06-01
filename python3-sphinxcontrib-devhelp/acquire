@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz sphinxcontrib-devhelp-${UB_VERSION}/
-	https://github.com/sphinx-doc/sphinxcontrib-devhelp/archive/refs/tags/

@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz sphinxcontrib-applehelp-${UB_VERSION}/
-	https://github.com/sphinx-doc/sphinxcontrib-applehelp/archive/refs/tags/
