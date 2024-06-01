@@ -1,9 +1,0 @@
-glib-dev
-libglvnd-dev
-libxcb-dev
-libxkbcommon-dev
-qt6-linguist
-xcb-util-image-dev
-xcb-util-keysyms-dev
-xcb-util-renderutil-dev
-xcb-util-wm-dev

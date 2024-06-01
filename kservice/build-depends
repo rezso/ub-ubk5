@@ -1,8 +1,0 @@
-extra-cmake-modules
-kconfig-dev
-kcoreaddons-dev
-kcrash-dev
-kdbusaddons-dev
-kdoctools
-ki18n-dev
-qt6-dev

@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-export SPOOL_DIR="/var/spool/cron/tabs"
-ub_compile \
-	--enable-anacron \
-	--with-pam \
-	--with-inotify

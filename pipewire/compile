@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    -Dudevrulesdir=/usr/lib/udev/rules.d \
-    -Dexamples=disabled \
-    -Dtests=disabled

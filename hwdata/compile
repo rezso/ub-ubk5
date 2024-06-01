@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-./configure \
-	--datadir=/usr/share \
-	--sysconfdir=/etc

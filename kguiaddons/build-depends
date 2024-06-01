@@ -1,6 +1,0 @@
-extra-cmake-modules
-libxfixes-dev
-plasma-wayland-protocols
-qt6-dev
-wayland-dev
-xcb-util-keysyms-dev

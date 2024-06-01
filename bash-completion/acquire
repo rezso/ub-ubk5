@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-bash-completion-${UB_VERSION}.tar.xz bash-completion-${UB_VERSION}/
-    https://github.com/scop/bash-completion/releases/download/${UB_VERSION}/

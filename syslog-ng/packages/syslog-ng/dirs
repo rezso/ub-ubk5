@@ -1,4 +1,0 @@
-/etc/syslog-ng
-/etc/syslog-ng/conf.d
-/etc/syslog-ng/patterndb.d
-/var/lib/syslog-ng

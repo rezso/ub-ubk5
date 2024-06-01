@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-qmake fet.pro
-ub_make

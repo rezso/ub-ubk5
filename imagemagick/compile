@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--with-perl=yes \
-	--enable-hdri \
-	--with-rsvg

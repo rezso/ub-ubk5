@@ -1,9 +1,0 @@
-extra-cmake-modules
-kcodecs-dev
-kconfig-dev
-kcoreaddons-dev
-kwindowsystem-dev
-libcanberra-dev
-libdbusmenu-qt-dev
-phonon-dev
-qt6-dev

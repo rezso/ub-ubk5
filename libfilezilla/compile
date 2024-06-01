@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-export GMP_CFLAGS='-I/usr/include'
-export GMP_LIBS='-L/usr/lib'
-ub_compile

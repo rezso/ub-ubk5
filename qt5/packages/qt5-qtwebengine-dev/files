@@ -1,6 +1,0 @@
-	/usr/include/qt5/QtWebEngine*
-	/usr/lib/cmake/Qt5WebEngine*
-	/usr/lib/libQt5WebEngine*.prl
-@	/usr/lib/libQt5WebEngine*.so
-	/usr/lib/pkgconfig/Qt5WebEngine*.pc
-	/usr/lib/qt5/mkspecs/modules/qt_lib_webengine*.pri

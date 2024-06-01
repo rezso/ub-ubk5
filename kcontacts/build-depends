@@ -1,7 +1,0 @@
-extra-cmake-modules
-iso-codes
-kcodecs-dev
-kconfig-dev
-kcoreaddons-dev
-ki18n-dev
-qt6-dev
