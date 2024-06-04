@@ -8,6 +8,7 @@ iperf
 pptpclient
 qstat
 fping
+trurl
 sipcalc
 compface
 claws-mail-themes
