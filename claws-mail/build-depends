@@ -22,6 +22,7 @@ libnotify-dev
 liboauth-dev
 librsvg-dev
 libsm-dev
+libxcrypt-dev
 libxshmfence-dev
 libxslt-dev
 libytnef-dev

@@ -3,6 +3,7 @@ db4-dev
 gdbm-dev
 groff
 krb5-dev
+libxcrypt-dev
 openslp-dev
 openssl-dev
 perl-dev

@@ -1,4 +1,5 @@
 libnl-dev
+libxcrypt-dev
 ncurses-dev
 openssl-dev
 pcre-dev
