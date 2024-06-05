@@ -14,7 +14,7 @@ diff -Naur a/ui/qt/BUILD.gn b/ui/qt/BUILD.gn
        args = rebase_path(inputs + outputs, root_build_dir)
        if (invoker.moc_qt_path != "") {
          args += [
-@@ -57,10 +57,10 @@
+@@ -57,10 +57,11 @@
      }
    }
  
@@ -24,6 +24,7 @@ diff -Naur a/ui/qt/BUILD.gn b/ui/qt/BUILD.gn
 -      "Qt" + invoker.qt_version + "Core",
 -      "Qt" + invoker.qt_version + "Widgets",
 +      "Qt6Core",
++      "Qt6Gui",
 +      "Qt6Widgets",
      ]
    }
