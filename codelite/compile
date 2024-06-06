@@ -8,7 +8,7 @@ git clone https://github.com/eranif/tinyjson.git cc-wrapper/tinyjson
 git clone https://github.com/cubicdaiya/dtl.git dtl
 
 cd wxdap
-git checkout e5c7d35
+git checkout 10f57bb
 cd ..
 
 cd yaml-cpp
