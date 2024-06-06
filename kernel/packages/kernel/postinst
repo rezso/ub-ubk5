@@ -1,3 +1,4 @@
 #!/bin/sh
 
+depmod -a
 exec mkinitrd-installedkernel

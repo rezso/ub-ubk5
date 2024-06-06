@@ -11,6 +11,7 @@ libidl2-dev
 libpng-dev
 libvpx-dev
 libxcomposite-dev
+libxcrypt-dev
 libxcursor-dev
 libxinerama-dev
 libxmu-dev
