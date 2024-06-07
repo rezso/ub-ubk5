@@ -1,6 +1,6 @@
 #!/bin/sh
 
-depmod -a
+depmod -a -F /boot/System.map-$(uname -r)
 
 # ha valaki szabályos libglx.so fájlt rakott, akkor elmentjük
 if [ ! -L /usr/lib/xorg/modules/extensions/libglx.so ] && [ -f /usr/lib/xorg/modules/extensions/libglx.so ]; then

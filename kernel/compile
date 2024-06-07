@@ -110,9 +110,6 @@ find "$UB_OBJECTDIR/usr/src/linux-$VERSION/" -name "*.cmd" -print0 | xargs -r0 r
 # remove mISDN headers
 rm -f "$UB_OBJECTDIR"/usr/src/linux/include/linux/mISDN*
 
-# System.map
-cp -a System.map "$UB_OBJECTDIR/usr/lib/modules/$VERSION/"
-
 # bzImage symlink
 ln -s "$bzimage.$ARCH" "$UB_OBJECTDIR/boot/$bzimage"
 
