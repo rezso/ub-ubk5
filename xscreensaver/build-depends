@@ -3,6 +3,7 @@ gtk3-dev
 intltool
 libglvnd-dev
 libjpeg-turbo-dev
+libxcrypt-dev
 libxi-dev
 libxml2-dev
 libxmu-dev
