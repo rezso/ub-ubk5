@@ -1,0 +1,43 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	2024-02-19 02:01:50.000000000 +0100
++++ b/Makefile	2024-06-15 22:40:02.176481647 +0200
+@@ -14,7 +14,7 @@
+ TAR = tar
+ INSTALL = install
+ 
+-PREFIX = /usr/local
++PREFIX = /usr
+ BINDIR = $(PREFIX)/bin
+ INCDIR = $(PREFIX)/include
+ LIBDIR = $(PREFIX)/lib
+@@ -64,13 +64,12 @@
+ LDLIBS=libgif.a -lm
+ 
+ MANUAL_PAGES = \
+-	doc/gif2rgb.xml \
+-	doc/gifbuild.xml \
+-	doc/gifclrmp.xml \
+-	doc/giffix.xml \
+-	doc/giflib.xml \
+-	doc/giftext.xml \
+-	doc/giftool.xml
++	doc/gif2rgb.1 \
++	doc/gifbuild.1 \
++	doc/gifclrmp.1 \
++	doc/giffix.1 \
++	doc/giftext.1 \
++	doc/giftool.1
+ 
+ SOEXTENSION	= so
+ LIBGIFSO	= libgif.$(SOEXTENSION)
+@@ -88,10 +87,6 @@
+ endif
+ 
+ all: $(LIBGIFSO) libgif.a $(LIBUTILSO) libutil.a $(UTILS)
+-ifeq ($(UNAME), Darwin)
+-else
+-	$(MAKE) -C doc
+-endif
+ 
+ $(UTILS):: libgif.a libutil.a
+ 
