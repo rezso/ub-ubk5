@@ -1,5 +1,4 @@
 perl-anyevent
-perl-digest-nilsimsa
 perl-digest-sha1
 perl-extutils-depends
 perl-extutils-pkgconfig
@@ -19,7 +18,6 @@ perl-test-requires
 perl-module-scandeps
 perl-par-dist
 perl-file-homedir
-perl-module-install
 perl-glib
 perl-cairo
 perl-pango
@@ -45,13 +43,10 @@ perl-lwp-protocol-https
 perl-mailtools
 perl-mail-dkim
 perl-mail-spf
-perl-class-inspector
 perl-archive-zip
 perl-path-tiny # fortune
 perl-db-file # spamassassin
-perl-encode-detect # spamassassin
 perl-ip-country # spamassassin
-perl-net-ident # spamassassin
 perl-appconfig # freecell-solver
 perl-template-toolkit # freecell-solver
 perl-class-method-modifiers # perl-moo/freecell-solver
