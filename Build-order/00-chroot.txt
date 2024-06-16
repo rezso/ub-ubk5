@@ -348,7 +348,6 @@ libinput
 pinentry
 libsecret
 net-snmp
-check
 pcre2
 swig
 sysfsutils
@@ -379,7 +378,6 @@ dracut
 audit
 itstool
 gd
-gtest
 kbd
 rdfind
 linux-firmware

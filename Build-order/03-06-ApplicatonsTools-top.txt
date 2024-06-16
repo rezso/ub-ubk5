@@ -81,7 +81,6 @@ mugshot
 mailutils
 fbreader
 redshift
-synergy
 virt-manager
 intel-gpu-tools
 gparted
