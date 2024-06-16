@@ -13,37 +13,26 @@ python3-traitlets
 python3-asn1crypto
 python3-async-timeout
 python3-attrs
-python3-backcall
 python3-chardet
 python3-constantly
 python3-dateutil
-python3-decorator
 python3-distro
 python3-distutils-extra
-python3-pip
 python3-dnspython
 python3-gnupg
 python3-idna
-python3-imagesize
 python3-incremental
 python3-mutagen
-python3-nose
 python3-parso
-python3-pathlib2
-python3-pickleshare
 python3-ply
 python3-pyasn1
 python3-pycparser
 python3-pyxdg
 python3-rich
 python3-semantic-version
-python3-simplegeneric
-python3-testpath
-python3-tornado
 python3-wcwidth
 python3-xlib
 python3-zope.fixers
-python3-importlib-resources
 python3-configobj
 python3-cython
 python3-numpy
@@ -51,7 +40,6 @@ python3-certifi
 python3-urllib3
 dbus-python3
 python3-sip
-python3-pygments
 
 #csak-rd-t-nézni-mert-python3-setuptools-van-a-build-depends-ben
 
@@ -59,8 +47,6 @@ python3-pygobject
 python3-charset-normalizer
 python3-graphviz
 python3-random2
-python3-jedi
-python3-prompt-toolkit
 python3-yarl
 python3-frozenlist
 python3-aiohttp
@@ -87,7 +73,6 @@ python3-iniconfig
 python3-py
 python3-pylibacl
 python3-setproctitle
-python3-babel
 python3-pyatspi
 python3-automat
 python3-webencodings
@@ -98,13 +83,10 @@ python3-cryptography
 python3-pyopenssl
 python3-service-identity
 python3-twisted
-python3-pytest
 python3-pyrsistent
 python3-jupyter-core
 python3-fastjsonschema
 python3-jsonschema
-python3-nbformat
-python3-matplotlib-inline
 python3-multidict
 python3-rencode
 python3-future
