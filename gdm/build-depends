@@ -1,5 +1,4 @@
 accountsservice-dev
-check-dev
 dbus-glib-dev
 dconf
 gobject-introspection-dev

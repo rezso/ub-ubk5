@@ -3,6 +3,7 @@
 ub_compile \
     -DBYTECODE_RUNTIME=none \
     -DENABLE_EXTERNAL_MSPACK=ON \
-    -DDATABASE_DIRECTORY=/var/lib/clamav \
     -DENABLE_MILTER=OFF \
+    -DENABLE_TESTS=OFF \
+    -DDATABASE_DIRECTORY=/var/lib/clamav \
     -DAPP_CONFIG_DIRECTORY=/etc/clamav
