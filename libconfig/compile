@@ -1,5 +1,0 @@
-#!/bin/sh -eux
-
-# a cmake-val hiányos lesz
-rm -f CMakeLists.txt
-ub_compile

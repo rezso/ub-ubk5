@@ -75,7 +75,6 @@ keybinder3
 fluxbox
 python3-pyinotify
 ffmpeg-thumbnailer
-libconfig
 xcursorgen
 numlockx
 xbindkeys

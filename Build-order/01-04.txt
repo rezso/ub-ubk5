@@ -69,7 +69,6 @@ radeontool
 vbetool
 mesa-demos
 xdg-utils
-gdk-pixbuf-xlib
 xscreensaver
 dconf
 exiv2

@@ -1,7 +1,5 @@
 fuse-dev
-gdk-pixbuf-xlib-dev
 gtk3-dev
--gtkmm3-dev
 libdrm-dev
 libice-dev
 libmspack-dev
