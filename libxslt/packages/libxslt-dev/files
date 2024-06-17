@@ -3,5 +3,6 @@
 	/usr/lib/cmake
 	/usr/lib/pkgconfig
 @	/usr/lib/*.so
+	/usr/lib/xsltConf.sh
 	/usr/share/aclocal
 	/usr/share/man/man3

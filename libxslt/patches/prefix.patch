@@ -1,0 +1,21 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2024-03-17 15:13:14.000000000 +0100
++++ b/CMakeLists.txt	2024-06-17 02:31:09.436202879 +0200
+@@ -524,7 +524,7 @@
+ file(RELATIVE_PATH PACKAGE_RELATIVE_PATH "${CMAKE_INSTALL_FULL_LIBDIR}/pkgconfig" "${CMAKE_INSTALL_PREFIX}")
+ string(REGEX REPLACE "/$" "" PACKAGE_RELATIVE_PATH "${PACKAGE_RELATIVE_PATH}")
+ 
+-set(prefix "\${pcfiledir}/${PACKAGE_RELATIVE_PATH}")
++set(prefix "${CMAKE_INSTALL_PREFIX}")
+ set(exec_prefix "\${prefix}")
+ set(libdir "\${prefix}/${CMAKE_INSTALL_LIBDIR}")
+ set(includedir "\${prefix}/${CMAKE_INSTALL_INCLUDEDIR}")
+@@ -533,7 +533,7 @@
+ configure_file(libexslt.pc.in libexslt.pc @ONLY)
+ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/libexslt.pc DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig COMPONENT development)
+ 
+-set(prefix "\$(cd \"\$(dirname \"\$0\")\"; pwd -P)/..")
++set(prefix "${CMAKE_INSTALL_PREFIX}")
+ configure_file(xslt-config.in xslt-config @ONLY)
+ install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/xslt-config DESTINATION ${CMAKE_INSTALL_BINDIR} COMPONENT development)
+ 
