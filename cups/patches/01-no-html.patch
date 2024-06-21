@@ -1,0 +1,12 @@
+diff -Naur a/man/Makefile b/man/Makefile
+--- a/man/Makefile	2024-06-18 13:11:05.000000000 +0200
++++ b/man/Makefile	2024-06-19 23:53:57.926636218 +0200
+@@ -197,7 +197,7 @@
+ # Local programs (not built when cross-compiling...)
+ #
+ 
+-local:	html
++local:
+ 
+ 
+ #

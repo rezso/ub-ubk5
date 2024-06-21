@@ -1,4 +1,3 @@
--         -          755  /usr/lib/cups/backend/ncp
 lp        root      1700  /var/spool/cups/tmp
 lp        root       700  /var/spool/cups
 lp        root       711  /etc/cups/certs

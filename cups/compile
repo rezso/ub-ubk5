@@ -6,17 +6,15 @@ export CFLAGS='-fcond-mismatch'
 ub_compile \
 	--exec_prefix=/usr \
 	--libdir=/usr/lib \
-	--disable-pam \
 	--with-logdir=/var/log/cups \
 	--with-docdir=/usr/share/cups/doc \
 	--with-rundir=/run/cups \
 	--with-cupsd-file-perm=0755 \
-	--with-log-file-perm=0600 \
+    --with-cups-user=4 \
+    --with-cups-group=7 \
+	--disable-pam \
+	--enable-sync_on_close \
 	--enable-raw-printing \
-	--enable-ssl=yes \
-	--enable-threads \
-	--enable-avahi\
 	--enable-libpaper \
-	--enable-gnutls \
 	--enable-webif \
 	--enable-relro

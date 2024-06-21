@@ -1,5 +1,9 @@
 avahi-dev
+dbus-dev
 gnutls-dev
 libpaper-dev
 libtiff-dev
 libusb-dev
+libxcrypt-dev
+systemd-dev
+xdg-utils

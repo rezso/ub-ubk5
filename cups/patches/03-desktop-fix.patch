@@ -1,6 +1,6 @@
-diff -Naur orig/desktop/cups.desktop.in mod/desktop/cups.desktop.in
---- orig/desktop/cups.desktop.in	2019-08-23 17:19:38.000000000 +0200
-+++ mod/desktop/cups.desktop.in	2019-08-25 20:02:16.410534153 +0200
+diff -Naur a/desktop/cups.desktop.in b/desktop/cups.desktop.in
+--- a/desktop/cups.desktop.in	2024-06-18 13:11:05.000000000 +0200
++++ b/desktop/cups.desktop.in	2024-06-20 00:19:11.810116583 +0200
 @@ -1,6 +1,6 @@
  [Desktop Entry]
  Categories=System;Printing;HardwareSettings;X-Red-Hat-Base;
