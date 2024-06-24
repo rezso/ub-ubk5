@@ -1,1 +1,1 @@
-u2d http://www.andre-simon.de/zip/download.html highlight-
+urllist https://gitlab.com/saalen/highlight/-/tags | grep -E '^v[0-9]\.' | sed -e 's/v//' | sort -V | tail -n 1

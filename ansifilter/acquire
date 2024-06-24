@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 ansifilter-${UB_VERSION}.tar.bz2 ansifilter-${UB_VERSION}/
-	http://www.andre-simon.de/zip/
+	https://gitlab.com/saalen/ansifilter/-/archive/${UB_VERSION}/
