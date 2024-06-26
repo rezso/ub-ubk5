@@ -15,6 +15,7 @@ xsettingsd # kde-gtk-settings
 kdsoap # kio-extras, kdsoap-ws-discovery-client?
 qtkeychain
 polkit-qt # plasma-workspace
+pulseaudio-qt # plasma-pa
 pysol-cards # kdegames (kpat)
 freecell-solver # kdegames (kpat)
 black-hole-solver # kdegames (kpat)
@@ -36,7 +37,6 @@ kitemmodels
 kitemviews
 kplotting
 kwidgetsaddons
-kwayland
 kwindowsystem
 kstatusnotifieritem
 modemmanager-qt
@@ -120,6 +120,7 @@ libksysguard
 ksystemstats
 kwallet-pam
 kglobalacceld
+kwayland
 kwin
 milou
 ocean-sound-theme

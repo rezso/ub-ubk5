@@ -1,6 +1,7 @@
 gpsd-dev
 iso-codes
 kf6-dev
+kirigami-addons
 kpipewire-dev
 kscreenlocker-dev
 kwayland-dev
@@ -13,6 +14,7 @@ libksysguard-dev
 libplasma-dev
 libqalculate-dev
 libsm-dev
+libxcrypt-dev
 libxcursor-dev
 libxft-dev
 libxtst-dev
@@ -24,6 +26,7 @@ plasma-activities-dev
 plasma-activities-stats-dev
 plasma-wayland-protocols
 polkit-qt-dev
+qcoro-dev
 qt6-dev
 qtkeychain-dev
 wayland-dev

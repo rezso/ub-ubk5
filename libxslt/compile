@@ -3,4 +3,5 @@
 pythonver=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
 
 ub_compile \
+    -DLIBXSLT_WITH_TESTS=OFF \
     -DLIBXSLT_PYTHON_INSTALL_DIR=/usr/lib/python$pythonver/site-packages
