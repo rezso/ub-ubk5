@@ -1,5 +1,4 @@
 #!/usr/bin/env dl
 
-alien_${UB_VERSION}.tar.xz alien-${UB_VERSION}/
+alien_${UB_VERSION}.tar.xz alien/
 	https://ftp.debian.org/debian/pool/main/a/alien/
-	https://download.ubk.hu/src/debian/alien/

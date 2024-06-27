@@ -1,4 +1,5 @@
 #!/usr/bin/env dl
 
 highlight-${UB_VERSION}.tar.bz2 highlight-${UB_VERSION}/
-	https://gitlab.com/saalen/highlight/-/archive/v${UB_VERSION}/
+    http://www.andre-simon.de/zip/
+#	https://gitlab.com/saalen/highlight/-/archive/v${UB_VERSION}/
