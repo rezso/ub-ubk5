@@ -68,6 +68,7 @@ libvorbis-dev
 libvpx-dev
 libwebp-dev
 libx11-dev
+libxcrypt-dev
 libxml2-dev
 libxv-dev
 mesa-dev
