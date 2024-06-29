@@ -2,6 +2,7 @@ db4-dev
 expat-dev
 gdbm-dev
 libffi-dev
+libxcrypt-dev
 libxt-dev
 ncurses-dev
 openssl-dev
