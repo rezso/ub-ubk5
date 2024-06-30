@@ -1,1 +1,1 @@
-u2d https://gitlab.com/kamel5/skindesigner/-/tags
+urllist https://gitlab.com/kamel5/skindesigner/-/tags | grep -E '^[0-9]+\.' | sort -V | tail -n 1

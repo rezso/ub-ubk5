@@ -1,1 +1,1 @@
-u2d https://gitlab.com/graphviz/graphviz/-/tags/ graphviz-stable_release_
+urllist https://gitlab.com/graphviz/graphviz/-/tags/ | grep -E '^[0-9]+\.' | sort -V | tail -n 1
