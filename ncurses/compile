@@ -6,6 +6,8 @@ ub_compile \
 	--with-shared \
 	--with-cxx-binding \
 	--with-cxx-shared \
+	--without-normal \
+	--without-debug \
 	--disable-termcap \
 	--enable-widec \
 	--enable-pc-files \

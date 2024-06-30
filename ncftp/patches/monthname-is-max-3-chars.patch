@@ -1,16 +1,16 @@
-diff -Naurd ncftp-3.1.8.orig/ncftp/ls.c ncftp-3.1.8/ncftp/ls.c
---- ncftp-3.1.8.orig/ncftp/ls.c	2004-01-06 22:39:38.000000000 +0100
-+++ ncftp-3.1.8/ncftp/ls.c	2005-09-06 18:41:29.390401513 +0200
-@@ -51,7 +51,7 @@
+diff -Naur a/ncftp/ls.c b/ncftp/ls.c
+--- a/ncftp/ls.c	2017-12-16 21:47:57.000000000 +0100
++++ b/ncftp/ls.c	2024-06-30 22:12:04.342071188 +0200
+@@ -55,7 +55,7 @@
  void InitLsMonths(void)
  {
  	struct tm lt;
 -	int i;
 +	int i, j, k;
  
+ 	memset(gLsMon, 0, sizeof(gLsMon));
  	(void) Localtime(0, &lt);
- 	lt.tm_mday = 15;
-@@ -59,6 +59,13 @@
+@@ -64,6 +64,13 @@
  	for (i=0; i<12; i++) {
  		lt.tm_mon = i;
  		(void) strftime(gLsMon[i], sizeof(gLsMon[i]) - 1, "%b", &lt);

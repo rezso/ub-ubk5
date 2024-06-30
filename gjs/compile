@@ -1,5 +1,9 @@
 #!/bin/sh -eux
 
 ub_compile \
+	-Dcairo=enabled \
+	-Dreadline=enabled \
+	-Dprofiler=disabled \
 	-Dinstalled_tests=false \
-	-Dprofiler=disabled
+	-Dskip_dbus_tests=true \
+	-Dskip_gtk_tests=true

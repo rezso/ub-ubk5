@@ -2,5 +2,6 @@ fribidi-dev
 gdbm-dev
 gnutls-dev
 krb5-dev
+libxcrypt-dev
 ncurses-dev
 readline-dev

@@ -26,11 +26,9 @@ dmidecode
 tree
 multitail
 nload
-pcspk
 pfqueue
 qshutdown
 tack
-urlview
 vbindiff
 ncdu
 renameutils

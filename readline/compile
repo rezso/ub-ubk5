@@ -1,5 +1,6 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--enable-static \
+    --with-curses \
+    --with-shared-termcap-library \
 	--disable-install-examples

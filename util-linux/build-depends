@@ -3,6 +3,7 @@ cryptsetup-dev
 file-dev
 libcap-ng-dev
 libuser-dev
+libxcrypt-dev
 ncurses-dev
 readline-dev
 systemd-dev

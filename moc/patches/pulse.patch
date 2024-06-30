@@ -1,6 +1,6 @@
-diff -Naur orig/audio.c patched/audio.c
---- orig/audio.c	2014-08-30 04:32:32.000000000 +0200
-+++ patched/audio.c	2015-04-05 22:47:34.305369810 +0200
+diff -Naur a/audio.c b/audio.c
+--- a/audio.c	2024-06-28 12:31:14.000000000 +0200
++++ b/audio.c	2024-07-01 00:12:01.247471305 +0200
 @@ -32,6 +32,9 @@
  #include "log.h"
  #include "lists.h"
@@ -11,7 +11,7 @@ diff -Naur orig/audio.c patched/audio.c
  #ifdef HAVE_OSS
  # include "oss.h"
  #endif
-@@ -890,6 +893,15 @@
+@@ -884,6 +887,15 @@
  			if (funcs->init(&hw_caps))
  				return;
  		}
@@ -27,10 +27,10 @@ diff -Naur orig/audio.c patched/audio.c
  #endif
  
  #ifdef HAVE_OSS
-diff -Naur orig/configure.in patched/configure.in
---- orig/configure.in	2014-08-30 04:32:27.000000000 +0200
-+++ patched/configure.in	2015-04-05 22:50:19.626189592 +0200
-@@ -258,10 +258,24 @@
+diff -Naur a/configure.in b/configure.in
+--- a/configure.in	2024-06-28 12:31:14.000000000 +0200
++++ b/configure.in	2024-07-01 00:12:01.251471320 +0200
+@@ -226,10 +226,24 @@
  			  [true])
  fi
  
@@ -57,10 +57,10 @@ diff -Naur orig/configure.in patched/configure.in
  esac
  
  AC_ARG_ENABLE(debug, AS_HELP_STRING([--enable-debug],
-diff -Naur orig/main.c patched/main.c
---- orig/main.c	2014-08-30 04:31:51.000000000 +0200
-+++ patched/main.c	2015-04-05 22:47:34.305369810 +0200
-@@ -267,6 +267,9 @@
+diff -Naur a/main.c b/main.c
+--- a/main.c	2024-06-28 12:31:14.000000000 +0200
++++ b/main.c	2024-07-01 00:12:01.251471320 +0200
+@@ -348,6 +348,9 @@
  #ifdef HAVE_JACK
  	printf (" JACK");
  #endif
@@ -70,10 +70,10 @@ diff -Naur orig/main.c patched/main.c
  #ifndef NDEBUG
  	printf (" DEBUG");
  #endif
-diff -Naur orig/Makefile.am patched/Makefile.am
---- orig/Makefile.am	2014-08-30 04:23:50.000000000 +0200
-+++ patched/Makefile.am	2015-04-05 22:47:34.305369810 +0200
-@@ -76,6 +76,8 @@
+diff -Naur a/Makefile.am b/Makefile.am
+--- a/Makefile.am	2024-06-28 12:31:14.000000000 +0200
++++ b/Makefile.am	2024-07-01 00:12:01.251471320 +0200
+@@ -75,6 +75,8 @@
  		     oss.h \
  		     alsa.c \
  		     alsa.h \
@@ -82,10 +82,10 @@ diff -Naur orig/Makefile.am patched/Makefile.am
  		     io_curl.c \
  		     io_curl.h \
  		     jack.c \
-diff -Naur orig/options.c patched/options.c
---- orig/options.c	2014-08-30 04:32:32.000000000 +0200
-+++ patched/options.c	2015-04-05 22:52:23.318802951 +0200
-@@ -571,11 +571,11 @@
+diff -Naur a/options.c b/options.c
+--- a/options.c	2024-06-28 12:31:14.000000000 +0200
++++ b/options.c	2024-07-01 00:12:01.251471320 +0200
+@@ -574,11 +574,11 @@
  	add_str  ("HTTPProxy", NULL, CHECK_NONE);
  
  #ifdef OPENBSD
@@ -101,9 +101,9 @@ diff -Naur orig/options.c patched/options.c
  #endif
  
  	add_str  ("JackClientName", "moc", CHECK_NONE);
-diff -Naur orig/pulse.c patched/pulse.c
---- orig/pulse.c	1970-01-01 01:00:00.000000000 +0100
-+++ patched/pulse.c	2015-04-05 22:47:34.309369830 +0200
+diff -Naur a/pulse.c b/pulse.c
+--- a/pulse.c	1970-01-01 01:00:00.000000000 +0100
++++ b/pulse.c	2024-07-01 00:12:01.251471320 +0200
 @@ -0,0 +1,705 @@
 +/*
 + * MOC - music on console
@@ -810,9 +810,9 @@ diff -Naur orig/pulse.c patched/pulse.c
 +	funcs->toggle_mixer_channel = pulse_toggle_mixer_channel;
 +	funcs->get_mixer_channel_name = pulse_get_mixer_channel_name;
 +}
-diff -Naur orig/pulse.h patched/pulse.h
---- orig/pulse.h	1970-01-01 01:00:00.000000000 +0100
-+++ patched/pulse.h	2015-04-05 22:47:34.309369830 +0200
+diff -Naur a/pulse.h b/pulse.h
+--- a/pulse.h	1970-01-01 01:00:00.000000000 +0100
++++ b/pulse.h	2024-07-01 00:12:01.251471320 +0200
 @@ -0,0 +1,14 @@
 +#ifndef PULSE_H
 +#define PULSE_H

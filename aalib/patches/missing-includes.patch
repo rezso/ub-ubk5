@@ -1,87 +1,94 @@
-diff -Naur orig/src/aafire.c patched/src/aafire.c
---- orig/src/aafire.c	2001-04-26 17:30:03.000000000 +0200
-+++ patched/src/aafire.c	2018-08-26 01:28:37.715064390 +0200
-@@ -1,4 +1,5 @@
- #include <stdio.h>
+diff -Naur a/src/aafire.c b/src/aafire.c
+--- a/src/aafire.c	2001-04-26 17:30:03.000000000 +0200
++++ b/src/aafire.c	2024-06-30 11:53:47.626991998 +0200
+@@ -1,3 +1,4 @@
 +#include <stdlib.h>
+ #include <stdio.h>
  #include "aalib.h"
  
- #define XSIZ aa_imgwidth(context)
-diff -Naur orig/src/aainfo.c patched/src/aainfo.c
---- orig/src/aainfo.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aainfo.c	2018-08-26 01:27:04.673775394 +0200
-@@ -1,4 +1,4 @@
--
+diff -Naur a/src/aainfo.c b/src/aainfo.c
+--- a/src/aainfo.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aainfo.c	2024-06-30 11:53:47.626991998 +0200
+@@ -1,3 +1,4 @@
 +#include <stdlib.h>
+ 
  #include "aalib.h"
  #include "aaint.h"
- int main(int argc, char **argv)
-diff -Naur orig/src/aakbdreg.c patched/src/aakbdreg.c
---- orig/src/aakbdreg.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aakbdreg.c	2018-08-26 01:25:54.220783857 +0200
-@@ -1,4 +1,6 @@
- #include <malloc.h>
-+#include <stdio.h>
+diff -Naur a/src/aakbdreg.c b/src/aakbdreg.c
+--- a/src/aakbdreg.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aakbdreg.c	2024-06-30 11:53:47.630992018 +0200
+@@ -1,3 +1,4 @@
 +#include <string.h>
+ #include <malloc.h>
  #include "config.h"
  #include "aalib.h"
- #include "aaint.h"
-diff -Naur orig/src/aalib.c patched/src/aalib.c
---- orig/src/aalib.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aalib.c	2018-08-26 01:22:23.209816846 +0200
-@@ -1,5 +1,6 @@
+diff -Naur a/src/aalib.c b/src/aalib.c
+--- a/src/aalib.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aalib.c	2024-06-30 11:53:47.626991998 +0200
+@@ -1,3 +1,4 @@
++#include <stdlib.h>
  #include <stdio.h>
  #include <string.h>
-+#include <stdlib.h>
  #include <malloc.h>
- #include "aalib.h"
- #include "aaint.h"
-diff -Naur orig/src/aalinuxkbd.c patched/src/aalinuxkbd.c
---- orig/src/aalinuxkbd.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aalinuxkbd.c	2018-08-26 01:21:40.085211759 +0200
-@@ -12,6 +12,7 @@
- #include <sys/time.h>
- #include <sys/types.h>
- #include <unistd.h>
+diff -Naur a/src/aalinuxkbd.c b/src/aalinuxkbd.c
+--- a/src/aalinuxkbd.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aalinuxkbd.c	2024-06-30 11:53:47.638992058 +0200
+@@ -1,3 +1,4 @@
 +#include <stdlib.h>
- #include <stdio.h>
- #include <fcntl.h>
- #include <signal.h>
-diff -Naur orig/src/aamoureg.c patched/src/aamoureg.c
---- orig/src/aamoureg.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aamoureg.c	2018-08-26 01:26:21.125162783 +0200
-@@ -1,4 +1,6 @@
- #include <malloc.h>
-+#include <stdio.h>
+ /* Raw keyboard mode driver for linux console by Jan Hubicka.
+  * This driver is based on:
+  * librawkey v0.21 - (c) 1994, 1995 Russell Marks
+@@ -200,7 +201,7 @@
+ static int rawmode_init(void)
+ {
+     if (!closed)
+-	return;
++	return 0;
+     mypid = getpid();
+     if (tty_fd == -1) {
+ 	tty_fd = fileno(stdin);
+diff -Naur a/src/aamoureg.c b/src/aamoureg.c
+--- a/src/aamoureg.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aamoureg.c	2024-06-30 11:53:47.630992018 +0200
+@@ -1,3 +1,4 @@
 +#include <string.h>
+ #include <malloc.h>
  #include "config.h"
  #include "aalib.h"
- #include "aaint.h"
-diff -Naur orig/src/aaregist.c patched/src/aaregist.c
---- orig/src/aaregist.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aaregist.c	2018-08-26 01:25:22.960343737 +0200
-@@ -1,4 +1,6 @@
- #include <malloc.h>
-+#include <stdio.h>
+diff -Naur a/src/aaregist.c b/src/aaregist.c
+--- a/src/aaregist.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aaregist.c	2024-06-30 11:53:47.634992038 +0200
+@@ -1,3 +1,5 @@
 +#include <string.h>
++#include <stdlib.h>
+ #include <malloc.h>
  #include "config.h"
  #include "aalib.h"
- #include "aaint.h"
-diff -Naur orig/src/aasavefont.c patched/src/aasavefont.c
---- orig/src/aasavefont.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aasavefont.c	2018-08-26 01:29:11.871537877 +0200
+diff -Naur a/src/aasavefont.c b/src/aasavefont.c
+--- a/src/aasavefont.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aasavefont.c	2024-06-30 11:53:47.630992018 +0200
 @@ -1,3 +1,4 @@
 +#include <stdlib.h>
  #include "aalib.h"
  int main(int argc, char **argv)
  {
-diff -Naur orig/src/aatest.c patched/src/aatest.c
---- orig/src/aatest.c	2001-04-26 16:37:31.000000000 +0200
-+++ patched/src/aatest.c	2018-08-26 01:56:49.081418627 +0200
-@@ -1,3 +1,6 @@
-+#include <stdlib.h>
-+#include <stdio.h>
+diff -Naur a/src/aatest.c b/src/aatest.c
+--- a/src/aatest.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aatest.c	2024-06-30 11:53:47.630992018 +0200
+@@ -1,3 +1,5 @@
 +#include <string.h>
++#include <stdlib.h>
  #include "aalib.h"
  int main(int argc, char **argv)
  {
+diff -Naur a/src/aaxkbd.c b/src/aaxkbd.c
+--- a/src/aaxkbd.c	2001-04-26 16:37:31.000000000 +0200
++++ b/src/aaxkbd.c	2024-06-30 11:53:47.638992058 +0200
+@@ -4,6 +4,7 @@
+ #include <stdio.h>
+ #include "config.h"
+ #ifdef X11_KBDDRIVER
++#include <X11/Xutil.h>
+ #include <X11/Xlib.h>
+ #include <X11/keysymdef.h>
+ #include <X11/keysym.h>
