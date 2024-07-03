@@ -115,6 +115,7 @@ libadwaita
 gnome-online-accounts
 gvfs
 python3-pyqt-builder
+python3-pyqt5-sip
 python3-pyqt5
 python3-qtpy
 libplacebo
