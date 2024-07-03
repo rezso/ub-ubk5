@@ -1,4 +1,5 @@
 #!/usr/bin/env dl
 
-alien_${UB_VERSION}.tar.xz alien/
-	https://ftp.debian.org/debian/pool/main/a/alien/
+alien-debian-${UB_VERSION}.tar.gz alien-debian-${UB_VERSION}/
+	https://salsa.debian.org/debian/alien/-/archive/debian/${UB_VERSION}/
+	https://salsa.debian.org/debian/alien/-/archive/${UB_VERSION}/
