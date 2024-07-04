@@ -1,7 +1,7 @@
 diff -urN graphviz-2.36.0.orig/configure.ac graphviz-2.36.0/configure.ac
 --- graphviz-2.36.0.orig/configure.ac	2014-01-11 23:59:44.000000000 +0100
 +++ graphviz-2.36.0/configure.ac	2014-02-25 12:25:10.330615124 +0100
-@@ -807,8 +807,8 @@
+@@ -663,8 +663,8 @@
            /usr/lib${LIBPOSTFIX}/jvm/java/include/linux \
            /usr/lib${LIBPOSTFIX}/jvm/default-java/include \
            /usr/lib${LIBPOSTFIX}/jvm/default-java/include/linux \
