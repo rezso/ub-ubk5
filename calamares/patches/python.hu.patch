@@ -1,24 +1,24 @@
 diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/python.po
---- a/lang/python/hu/LC_MESSAGES/python.po	2024-04-16 15:46:09.000000000 +0200
-+++ b/lang/python/hu/LC_MESSAGES/python.po	2024-05-25 20:44:47.496144198 +0200
-@@ -81,23 +81,22 @@
+--- a/lang/python/hu/LC_MESSAGES/python.po	2024-07-03 23:05:30.000000000 +0200
++++ b/lang/python/hu/LC_MESSAGES/python.po	2024-07-04 17:00:15.108609714 +0200
+@@ -81,23 +81,23 @@
  
- #: src/modules/displaymanager/main.py:938
+ #: src/modules/displaymanager/main.py:940
  msgid "No display managers selected for the displaymanager module."
 -msgstr "Nincs kijelzőkezelő kiválasztva a kijelzőkezelő modulhoz."
 +msgstr "Nincs kiválasztott grafikus beléptetö a megfelelő modulhoz."
  
- #: src/modules/displaymanager/main.py:939
+ #: src/modules/displaymanager/main.py:941
  msgid ""
  "The displaymanagers list is empty or undefined in both globalstorage and "
  "displaymanager.conf."
--msgstr ""
+ msgstr ""
 -"A displaymanagers lista üres vagy nincs meghatározva mind a globalstorage, "
 -"mind a displaymanager.conf fájlban."
-+msgstr "A beléptetők listája üres, vagy nincs megadva a sem globalstorage-ben sem"
++"A beléptetők listája üres, vagy nincs megadva a sem globalstorage-ben, sem"
 +" a displaymanager.conf fájlban."
  
- #: src/modules/displaymanager/main.py:1026
+ #: src/modules/displaymanager/main.py:1028
  msgid "Display manager configuration was incomplete"
 -msgstr "A kijelzőkezelő konfigurációja hiányos volt"
 +msgstr "A grafikus beléptető konfigurációja hiányos volt"
@@ -30,7 +30,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/dracut/main.py:63
  msgid "Failed to run dracut"
-@@ -116,7 +115,7 @@
+@@ -116,7 +116,7 @@
  #: src/modules/dummypython/main.py:37 src/modules/dummypython/main.py:104
  #: src/modules/dummypython/main.py:105
  msgid "Dummy python step {}"
@@ -39,7 +39,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/fstab/main.py:29
  msgid "Writing fstab."
-@@ -171,11 +170,11 @@
+@@ -171,11 +171,11 @@
  
  #: src/modules/initramfscfg/main.py:32
  msgid "Configuring initramfs."
@@ -53,7 +53,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/mkinitfs/main.py:27
  msgid "Creating initramfs with mkinitfs."
-@@ -304,7 +303,7 @@
+@@ -304,7 +304,7 @@
  
  #: src/modules/services-openrc/main.py:93
  msgid "Cannot modify service"
@@ -62,7 +62,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/services-openrc/main.py:94
  msgid ""
-@@ -357,11 +356,11 @@
+@@ -357,11 +357,11 @@
  
  #: src/modules/unpackfs/main.py:34
  msgid "Filling up filesystems."
@@ -76,7 +76,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/unpackfs/main.py:299
  msgid "Unpacking image {}/{}, file {}/{}"
-@@ -414,7 +413,7 @@
+@@ -414,7 +414,7 @@
  "Failed to find unsquashfs, make sure you have the squashfs-tools package "
  "installed."
  msgstr ""
