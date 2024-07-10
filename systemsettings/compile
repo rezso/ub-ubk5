@@ -1,7 +1,5 @@
 #!/bin/sh -eux
 
-rm -Rf build
-
 ub_compile \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON \
 	-DBUILD_TESTING=OFF
