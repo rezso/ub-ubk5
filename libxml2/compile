@@ -1,5 +1,7 @@
 #!/bin/sh -eux
 
+rm -f meson.build meson_options.txt
+
 pythonver=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
 
 ub_compile \

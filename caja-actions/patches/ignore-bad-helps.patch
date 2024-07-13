@@ -1,0 +1,24 @@
+diff -Naur a/docs/help/Makefile.am b/docs/help/Makefile.am
+--- a/docs/help/Makefile.am	2024-02-21 21:41:41.000000000 +0100
++++ b/docs/help/Makefile.am	2024-07-11 00:59:12.322728964 +0200
+@@ -63,7 +63,7 @@
+ 
+ HELP_MEDIA = $(patsubst $(srcdir)/C/%,%,$(shell \ls -1 $(srcdir)/C/figures/*.png))
+ 
+-IGNORE_HELP_LINGUAS = ko
++IGNORE_HELP_LINGUAS = da ko
+ HELP_LINGUAS = $(if $(IGNORE_HELP_LINGUAS), \
+ 	$(filter-out $(IGNORE_HELP_LINGUAS),$(subst /,,$(dir $(wildcard */*.po)))), \
+ 	$(subst /,,$(dir $(wildcard */*.po))) )
+diff -Naur a/docs/help/Makefile.in b/docs/help/Makefile.in
+--- a/docs/help/Makefile.in	2024-02-21 21:45:20.000000000 +0100
++++ b/docs/help/Makefile.in	2024-07-11 00:59:43.438801564 +0200
+@@ -386,7 +386,7 @@
+     legalnotice.xml
+ 
+ HELP_MEDIA = $(patsubst $(srcdir)/C/%,%,$(shell \ls -1 $(srcdir)/C/figures/*.png))
+-IGNORE_HELP_LINGUAS = ko
++IGNORE_HELP_LINGUAS = da ko
+ HELP_LINGUAS = $(if $(IGNORE_HELP_LINGUAS), \
+ 	$(filter-out $(IGNORE_HELP_LINGUAS),$(subst /,,$(dir $(wildcard */*.po)))), \
+ 	$(subst /,,$(dir $(wildcard */*.po))) )
