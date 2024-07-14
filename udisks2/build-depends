@@ -6,7 +6,7 @@ libatasmart-dev
 libblockdev-dev
 libbytesize-dev
 libgudev-dev
-libxslt
+libxslt-dev
 ndctl-dev
 polkit-dev
 systemd-dev

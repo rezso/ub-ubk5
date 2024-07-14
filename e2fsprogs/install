@@ -1,9 +1,16 @@
 #!/bin/sh -eux
 
-cd "$UB_OBJECTDIR"
-
 ub_install
 
 make \
-	DESTDIR="$UB_INSTALLDIR" \
+	DESTDIR=${UB_INSTALLDIR} \
 	install-libs
+
+# remove static libs
+rm -f ${UB_INSTALLDIR}/usr/lib/*.a
+
+sed -i -e 's/^AWK=.*/AWK=awk/' ${UB_INSTALLDIR}/usr/bin/compile_et
+
+# remove references to build directory
+sed -i -e 's#^DIR=.*#DIR="/usr/share/ss"#' ${UB_INSTALLDIR}/usr/bin/mk_cmds
+sed -i -e 's#^DIR=.*#DIR="/usr/share/et"#' ${UB_INSTALLDIR}/usr/bin/compile_et

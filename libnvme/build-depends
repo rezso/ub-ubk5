@@ -1,1 +1,4 @@
+dbus-dev
+json-c-dev
+keyutils-dev
 openssl-dev
