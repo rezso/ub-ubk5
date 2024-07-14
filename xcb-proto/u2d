@@ -1,1 +1,1 @@
-u2d https://gitlab.freedesktop.org/xorg/proto/xcbproto/-/tags
+urllist https://gitlab.freedesktop.org/xorg/proto/xcbproto/-/tags | grep -E '^xcb-proto-[0-9]+\.' | sed -e 's/xcb-proto-//' | sort -V | tail -n 1
