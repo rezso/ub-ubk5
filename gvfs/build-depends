@@ -1,5 +1,4 @@
 avahi-dev
-dbus-dev
 fuse-dev
 gcr4-dev
 glib-dev
@@ -21,4 +20,5 @@ libusb-dev
 libxml2-dev
 polkit-dev
 samba-dev
+systemd-dev
 udisks2-dev
