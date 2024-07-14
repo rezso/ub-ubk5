@@ -1,3 +1,4 @@
 #!/bin/sh -eux
 
+echo "${UB_VERSION}" > .tarball-version
 ub_compile

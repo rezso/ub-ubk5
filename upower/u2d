@@ -1,1 +1,1 @@
-urllist https://gitlab.freedesktop.org/upower/upower/-/tags/ | grep "upower-v" | grep "gz" | sed -e 's/upower-v//' -e 's/\.tar\.gz//' | sort -V | tail -n1
+urllist https://gitlab.freedesktop.org/upower/upower/-/tags/ | grep -E '^v[0-9]\.' | sed -e 's/v//' | sort -V | tail -n 1
