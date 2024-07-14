@@ -1,10 +1,9 @@
 #!/bin/sh -eux
 
 rm -f CMakeLists.txt
-export CXXFLAGS="-fpermissive"
 ub_compile \
-	--enable-qt5 \
-	--with-qt-dir=/usr/lib/qt5 \
-	--with-qt-includes=/usr/lib/qt5/include \
-	--with-qt-libraries=/usr/lib/qt5/lib \
+    --enable-qt6 \
+	--with-qt-dir=/usr/lib/qt6 \
+	--with-qt-includes=/usr/include/qt6 \
+	--with-qt-libraries=/usr/lib/qt6 \
 	--without-included-mythes

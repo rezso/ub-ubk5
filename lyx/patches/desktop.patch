@@ -1,8 +1,8 @@
-diff -Naur orig/lib/lyx.desktop.in patched/lib/lyx.desktop.in
---- orig/lib/lyx.desktop.in	2019-06-10 21:12:32.000000000 +0200
-+++ patched/lib/lyx.desktop.in	2020-01-01 16:25:24.076539514 +0100
+diff -Naur a/lib/lyx.desktop.in b/lib/lyx.desktop.in
+--- a/lib/lyx.desktop.in	2024-07-02 21:17:53.000000000 +0200
++++ b/lib/lyx.desktop.in	2024-07-14 14:07:20.262095016 +0200
 @@ -4,6 +4,7 @@
- Name=LyX
+ Name=LyX@program_suffix@
  GenericName=Document Processor
  Comment=High level LaTeX frontend
 +Comment[hu]=LaTeX fejlesztői környezet

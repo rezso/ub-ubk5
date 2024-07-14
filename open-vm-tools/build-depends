@@ -5,6 +5,7 @@ libice-dev
 libmspack-dev
 libsm-dev
 libtirpc-dev
+libxcrypt-dev
 libxtst-dev
 openssl-dev
 procps-dev
