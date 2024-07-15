@@ -2,4 +2,5 @@
 
 ub_compile \
 	-Dlibnma_gtk4=true \
+	-Dgcr=false \
     -Dgtk_doc=false

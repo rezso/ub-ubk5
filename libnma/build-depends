@@ -1,5 +1,5 @@
-gcr-dev
 gobject-introspection-dev
+gtk3-dev
 gtk4-dev
 iso-codes
 mobile-broadband-provider-info
