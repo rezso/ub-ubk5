@@ -9,6 +9,7 @@
     --enable-vp8 \
     --enable-vp9 \
     --enable-vp9-highbitdepth \
+    --disable-examples \
     --disable-install-docs \
     --disable-install-srcs \
     --enable-ssse3 \
