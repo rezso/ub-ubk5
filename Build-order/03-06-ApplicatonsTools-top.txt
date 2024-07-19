@@ -48,7 +48,6 @@ units
 tmux
 h5utils
 dateutils
-ifuse
 vdpauinfo
 fonts-terminus
 nfoview

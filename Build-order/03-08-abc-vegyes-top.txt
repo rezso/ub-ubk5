@@ -24,7 +24,6 @@ xfsdump
 linuxconsole
 wvstreams
 wvdial
-curlftpfs
 xman
 paps
 python3-fonttools
