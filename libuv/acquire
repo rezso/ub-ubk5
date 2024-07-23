@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz libuv-${UB_VERSION}/
+	https://github.com/libuv/libuv/archive/refs/tags/

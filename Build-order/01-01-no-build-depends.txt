@@ -83,6 +83,7 @@ libspiro
 libtinyxml
 libupnp
 liburcu
+libuv
 libvidstab
 libvisual
 libx86
