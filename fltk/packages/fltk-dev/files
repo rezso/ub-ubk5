@@ -3,7 +3,10 @@
 	/usr/include
 	/usr/lib/*.a
 @	/usr/lib/*.so
-	/usr/share/cmake
+	/usr/share/applications
+	/usr/share/fltk
+	/usr/share/icons
 	/usr/share/man/man1/fltk-config.1
 	/usr/share/man/man1/fluid.1
 	/usr/share/man/man3
+	/usr/share/mime
