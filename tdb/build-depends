@@ -1,4 +1,2 @@
-docbook-dtds
-docbook-xsl
-libxslt
+libxslt-dev
 python3-dev

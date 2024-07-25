@@ -26,7 +26,6 @@ vorbis-tools
 dvgrab
 lilypond
 libmp3splt
-transmageddon
 radiotray
 radiotray-qt
 python3-netifaces

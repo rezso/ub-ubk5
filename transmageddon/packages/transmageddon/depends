@@ -1,9 +1,0 @@
-gdk-pixbuf >=
-glib >=
-gstreamer >=
-gtk3 >=
-libnotify >=
-python3
-python3-pygobject
-systemd >=
-xdg-user-dirs-gtk >=

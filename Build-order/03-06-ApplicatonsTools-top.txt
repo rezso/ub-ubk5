@@ -89,7 +89,6 @@ mencfsm
 bclock
 tint2
 blueman
-bashstyle-ng
 recoll
 workrave
 kitty

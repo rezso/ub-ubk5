@@ -1,9 +1,9 @@
-db4-dev
+bzip2-dev
 expat-dev
 gdbm-dev
 libffi-dev
+libnsl-dev
 libxcrypt-dev
-libxt-dev
 ncurses-dev
 openssl-dev
 readline-dev
