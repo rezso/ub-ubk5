@@ -1,0 +1,45 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2024-02-07 21:20:07.000000000 +0100
++++ b/CMakeLists.txt	2024-07-28 17:10:03.214068971 +0200
+@@ -467,25 +467,6 @@
+   set_target_properties(uv PROPERTIES OUTPUT_NAME "uv")
+ endif()
+ 
+-add_library(uv_a STATIC ${uv_sources})
+-target_compile_definitions(uv_a PRIVATE ${uv_defines})
+-target_compile_options(uv_a PRIVATE ${uv_cflags})
+-target_include_directories(uv_a
+-  PUBLIC
+-    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+-    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+-  PRIVATE
+-    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/src>)
+-if(CMAKE_SYSTEM_NAME STREQUAL "OS390")
+-  target_include_directories(uv_a PUBLIC $<BUILD_INTERFACE:${ZOSLIB_DIR}/include>)
+-  set_target_properties(uv_a PROPERTIES LINKER_LANGUAGE CXX)
+-endif()
+-target_link_libraries(uv_a ${uv_libraries})
+-set_target_properties(uv_a PROPERTIES OUTPUT_NAME "uv")
+-if(WIN32)
+-  set_target_properties(uv_a PROPERTIES PREFIX "lib")
+-endif()
+-
+ if(LIBUV_BUILD_TESTS)
+   # Small hack: use ${uv_test_sources} now to get the runner skeleton,
+   # before the actual tests are added.
+@@ -750,15 +731,8 @@
+ set(includedir ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_INCLUDEDIR})
+ set(libdir ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR})
+ set(prefix ${CMAKE_INSTALL_PREFIX})
+-configure_file(libuv-static.pc.in libuv-static.pc @ONLY)
+ 
+ install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+-install(FILES LICENSE DESTINATION ${CMAKE_INSTALL_DOCDIR})
+-install(FILES LICENSE-extra DESTINATION ${CMAKE_INSTALL_DOCDIR})
+-install(FILES ${PROJECT_BINARY_DIR}/libuv-static.pc
+-        DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+-install(TARGETS uv_a EXPORT libuvConfig
+-        ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR})
+ install(EXPORT libuvConfig
+ 	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/libuv
+ 	NAMESPACE libuv::)
