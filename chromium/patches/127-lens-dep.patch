@@ -1,0 +1,67 @@
+diff -Naur a/chrome/browser/ui/lens/BUILD.gn b/chrome/browser/ui/lens/BUILD.gn
+--- a/chrome/browser/ui/lens/BUILD.gn	2024-07-24 02:23:27.959920600 +0200
++++ b/chrome/browser/ui/lens/BUILD.gn	2024-07-26 18:21:11.222212654 +0200
+@@ -249,41 +249,3 @@
+   ]
+ }
+ 
+-source_set("unit_tests") {
+-  testonly = true
+-  sources = [
+-    "lens_overlay_image_helper_unittest.cc",
+-    "lens_overlay_proto_converter_unittest.cc",
+-    "lens_overlay_query_controller_unittest.cc",
+-    "lens_overlay_request_id_generator_unittest.cc",
+-    "lens_overlay_side_panel_navigation_throttle_unittest.cc",
+-    "lens_overlay_url_builder_unittest.cc",
+-  ]
+-  deps = [
+-    ":lens",
+-    "//base",
+-    "//base/test:test_support",
+-    "//chrome/browser",
+-    "//chrome/browser:browser_process",
+-    "//chrome/browser/lens/core/mojom:mojo_bindings",
+-    "//chrome/browser/themes",
+-    "//chrome/test:test_support",
+-    "//components/endpoint_fetcher",
+-    "//components/lens:features",
+-    "//content/public/browser",
+-    "//content/test:test_support",
+-    "//google_apis/common",
+-    "//net",
+-    "//net/traffic_annotation",
+-    "//testing/gtest",
+-    "//third_party/icu:icui18n",
+-    "//third_party/icu:icuuc_public",
+-    "//third_party/lens_server_proto:lens_overlay_proto",
+-    "//third_party/omnibox_proto",
+-    "//third_party/zlib/google:compression_utils",
+-    "//ui/gfx",
+-    "//ui/gfx/codec",
+-    "//ui/gfx/geometry",
+-    "//url",
+-  ]
+-}
+diff -Naur a/chrome/test/BUILD.gn b/chrome/test/BUILD.gn
+--- a/chrome/test/BUILD.gn	2024-07-24 02:23:28.960017400 +0200
++++ b/chrome/test/BUILD.gn	2024-07-26 18:20:26.942171853 +0200
+@@ -8546,7 +8546,6 @@
+       "//chrome/browser/ui/actions:unit_tests",
+       "//chrome/browser/ui/color:color_headers",
+       "//chrome/browser/ui/color:mixers",
+-      "//chrome/browser/ui/lens:unit_tests",
+       "//chrome/browser/ui/webui/cr_components/theme_color_picker",
+       "//chrome/browser/ui/webui/discards:mojo_bindings",
+       "//chrome/browser/ui/webui/downloads:mojo_bindings",
+diff -Naur a/components/BUILD.gn b/components/BUILD.gn
+--- a/components/BUILD.gn	2024-07-24 02:23:31.528266200 +0200
++++ b/components/BUILD.gn	2024-07-26 18:19:58.158146674 +0200
+@@ -240,7 +240,6 @@
+     "//components/language/core/browser:unit_tests",
+     "//components/language/core/common:unit_tests",
+     "//components/language/core/language_model:unit_tests",
+-    "//components/lens:unit_tests",
+     "//components/leveldb_proto:unit_tests",
+     "//components/local_state:unit_tests",
+     "//components/lookalikes/core:unit_tests",

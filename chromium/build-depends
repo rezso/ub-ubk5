@@ -41,6 +41,7 @@ pulseaudio-dev
 python3
 qt6-dev
 rust
+rust-bindgen
 systemd-dev
 xcb-proto
 yasm

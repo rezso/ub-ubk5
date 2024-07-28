@@ -4,8 +4,10 @@
 
 freespace=$((`stat -f -c "%a" .`*`stat -f -c "%s" .`/(1024*1024*1024)))
 
-rm -Rf third_party/llvm* # 1400M
-rm -Rf third_party/rust-src # 3600M
+rm -Rf third_party/llvm* # 1.9G
+rm -Rf third_party/rust-src # 4.4G
+rm -Rf third_party/rust-toolchain # 1.3G
+rm -Rf third_party/instrumented_libs # 2.2G
 
 if [ -d third_party/rust-src -a -d third_party/llvm ]; then
     if [ $freespace -lt 23 ]; then
@@ -46,9 +48,9 @@ clang_base_path=\"/usr\"
 clang_use_chrome_plugins=false
 clang_version=\"$_clang_version\"
 rust_sysroot_absolute=\"/usr\"
+rust_bindgen_root=\"/usr\"
 rustc_version=\"$(rustc --version)\"
 chrome_pgo_phase=0
-use_gold=false
 use_lld=true
 is_clang=true
 is_cfi=false
@@ -117,9 +119,10 @@ sed "s|//third_party/usb_ids/usb.ids|/usr/share/hwdata/usb.ids|g" -i services/de
 
 python3 build/linux/unbundle/replace_gn_files.py --system-libraries "${_syslibs[@]}"
 
-# node
-mkdir -p third_party/node/linux/node-linux-x64/bin
-ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/node
+# Link to system tools required by the build
+rm third_party/node/linux/node-linux-x64/bin/node # precompiled binary
+ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
+ln -s /usr/bin/java third_party/jdk/current/bin/
 
 # gn a buildhoz
 # tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "

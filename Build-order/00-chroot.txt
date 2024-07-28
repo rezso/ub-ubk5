@@ -209,6 +209,7 @@ systemd
 autoconf2.13
 patchelf
 rust
+rust-bindgen
 double-conversion
 python3-psutil
 duktape
