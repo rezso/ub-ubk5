@@ -32,7 +32,6 @@ python3-xlib
 python3-zope.fixers
 python3-configobj
 python3-cython
-python3-numpy
 python3-certifi
 python3-urllib3
 dbus-python3

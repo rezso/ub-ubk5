@@ -60,7 +60,6 @@ vigra
 libodfgen
 alsa-plugins
 timidity
-python3-pygame
 less
 libseccomp
 gtksourceview4

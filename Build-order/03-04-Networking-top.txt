@@ -26,7 +26,6 @@ grsync
 libfilezilla
 speedtest-cli
 irssi
-deluge
 stunnel
 gftp
 mtr
