@@ -9,5 +9,6 @@ libxv-dev
 libxvmc-dev
 libxxf86vm-dev
 patchelf
+vulkan-headers
 wayland-dev
 x.org-server-dev
