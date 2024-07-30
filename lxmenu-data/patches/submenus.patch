@@ -1,6 +1,6 @@
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in b/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-audiovideoediting.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Sound Video editing
@@ -9,9 +9,9 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-audiovideoediting.direc
 +Comment[hu]=Hang/videó fájlokat szerkesztő alkalmazások
 +Icon=video-x-generic
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-discburning.directory.in patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-discburning.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-discburning.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-discburning.directory.in b/desktop-directories/lxde-audio-video-sub-discburning.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-discburning.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-discburning.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Disc burning
@@ -20,9 +20,9 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-discburning.directory.i
 +Comment[hu]=Optikai lemez író alkalmazások
 +Icon=drive-optical
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-midi.directory.in patched/desktop-directories/lxde-audio-video-sub-midi.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-midi.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-midi.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-midi.directory.in b/desktop-directories/lxde-audio-video-sub-midi.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-midi.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-midi.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=MIDI
@@ -31,18 +31,18 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-midi.directory.in patch
 +Comment[hu]=MIDI kezelő alkalmazások
 +Icon=applications-multimedia
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-mixer.directory.in patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-mixer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-mixer.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-mixer.directory.in b/desktop-directories/lxde-audio-video-sub-mixer.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-mixer.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-mixer.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Mixer
 +Name[hu]=Mixer
 +Icon=multimedia-volume-control
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-music.directory.in patched/desktop-directories/lxde-audio-video-sub-music.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-music.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-music.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-music.directory.in b/desktop-directories/lxde-audio-video-sub-music.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-music.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-music.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Music
@@ -51,9 +51,9 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-music.directory.in patc
 +Comment[hu]=Zenei programok
 +Icon=audio-x-generic
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-player.directory.in patched/desktop-directories/lxde-audio-video-sub-player.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-player.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-player.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-player.directory.in b/desktop-directories/lxde-audio-video-sub-player.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-player.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-player.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Player
@@ -62,9 +62,9 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-player.directory.in pat
 +Comment[hu]=Hang/videó fájlok lejátszása
 +Icon=video-x-generic
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-recorder.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-recorder.directory.in b/desktop-directories/lxde-audio-video-sub-recorder.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-recorder.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-recorder.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Recorder
@@ -73,27 +73,27 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-recorder.directory.in p
 +Comment[hu]=Hang/videó fájlokat felvevő alkalmazás
 +Icon=media-record
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-sequencer.directory.in patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-sequencer.directory.in b/desktop-directories/lxde-audio-video-sub-sequencer.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-sequencer.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Sequencer
 +Name[hu]=Sequencer
 +Icon=applications-multimedia
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-tuner.directory.in patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-tuner.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-tuner.directory.in	2015-05-03 20:03:29.236060803 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-tuner.directory.in b/desktop-directories/lxde-audio-video-sub-tuner.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-tuner.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-tuner.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Tuner
 +Name[hu]=Tuner
 +Icon=applications-multimedia
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-audio-video-sub-tv.directory.in patched/desktop-directories/lxde-audio-video-sub-tv.directory.in
---- orig/desktop-directories/lxde-audio-video-sub-tv.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-audio-video-sub-tv.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-audio-video-sub-tv.directory.in b/desktop-directories/lxde-audio-video-sub-tv.directory.in
+--- a/desktop-directories/lxde-audio-video-sub-tv.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-audio-video-sub-tv.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=TV
@@ -102,9 +102,9 @@ diff -Naur orig/desktop-directories/lxde-audio-video-sub-tv.directory.in patched
 +Comment[hu]=TV alkalmazások
 +Icon=video-display
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-action.directory.in patched/desktop-directories/lxde-game-sub-action.directory.in
---- orig/desktop-directories/lxde-game-sub-action.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-action.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-action.directory.in b/desktop-directories/lxde-game-sub-action.directory.in
+--- a/desktop-directories/lxde-game-sub-action.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-action.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Action
@@ -113,9 +113,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-action.directory.in patched/de
 +Comment[hu]=Akciójáték
 +Icon=weather-storm
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-adventure.directory.in patched/desktop-directories/lxde-game-sub-adventure.directory.in
---- orig/desktop-directories/lxde-game-sub-adventure.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-adventure.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-adventure.directory.in b/desktop-directories/lxde-game-sub-adventure.directory.in
+--- a/desktop-directories/lxde-game-sub-adventure.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-adventure.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Adventure
@@ -124,9 +124,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-adventure.directory.in patched
 +Comment[hu]=Kalandjáték
 +Icon=applications-games
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-arcade.directory.in patched/desktop-directories/lxde-game-sub-arcade.directory.in
---- orig/desktop-directories/lxde-game-sub-arcade.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-arcade.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-arcade.directory.in b/desktop-directories/lxde-game-sub-arcade.directory.in
+--- a/desktop-directories/lxde-game-sub-arcade.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-arcade.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Arcade
@@ -135,9 +135,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-arcade.directory.in patched/de
 +Comment[hu]=Ügyességi játék
 +Icon=gnome-joystick
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-blocks.directory.in patched/desktop-directories/lxde-game-sub-blocks.directory.in
---- orig/desktop-directories/lxde-game-sub-blocks.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-blocks.directory.in	2015-05-03 20:13:56.007168793 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-blocks.directory.in b/desktop-directories/lxde-game-sub-blocks.directory.in
+--- a/desktop-directories/lxde-game-sub-blocks.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-blocks.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Blocks
@@ -146,9 +146,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-blocks.directory.in patched/de
 +Comment[hu]=Potyogó blokkok játék (pl. tetris)
 +Icon=gnome-gnometris
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-board.directory.in patched/desktop-directories/lxde-game-sub-board.directory.in
---- orig/desktop-directories/lxde-game-sub-board.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-board.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-board.directory.in b/desktop-directories/lxde-game-sub-board.directory.in
+--- a/desktop-directories/lxde-game-sub-board.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-board.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Board
@@ -157,9 +157,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-board.directory.in patched/des
 +Comment[hu]=Táblajáték
 +Icon=applications-boardgames
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-card.directory.in patched/desktop-directories/lxde-game-sub-card.directory.in
---- orig/desktop-directories/lxde-game-sub-card.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-card.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-card.directory.in b/desktop-directories/lxde-game-sub-card.directory.in
+--- a/desktop-directories/lxde-game-sub-card.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-card.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Card
@@ -168,9 +168,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-card.directory.in patched/desk
 +Comment[hu]=Kártyajáték
 +Icon=applications-cardgames
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-kids.directory.in patched/desktop-directories/lxde-game-sub-kids.directory.in
---- orig/desktop-directories/lxde-game-sub-kids.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-kids.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-kids.directory.in b/desktop-directories/lxde-game-sub-kids.directory.in
+--- a/desktop-directories/lxde-game-sub-kids.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-kids.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Kids
@@ -179,9 +179,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-kids.directory.in patched/desk
 +Comment[hu]=Játék gyerekeknek
 +Icon=gnome-amusements
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-logic.directory.in patched/desktop-directories/lxde-game-sub-logic.directory.in
---- orig/desktop-directories/lxde-game-sub-logic.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-logic.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-logic.directory.in b/desktop-directories/lxde-game-sub-logic.directory.in
+--- a/desktop-directories/lxde-game-sub-logic.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-logic.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Logic
@@ -190,18 +190,18 @@ diff -Naur orig/desktop-directories/lxde-game-sub-logic.directory.in patched/des
 +Comment[hu]=Logikai játék
 +Icon=system-run
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-roleplaying.directory.in patched/desktop-directories/lxde-game-sub-roleplaying.directory.in
---- orig/desktop-directories/lxde-game-sub-roleplaying.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-roleplaying.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-roleplaying.directory.in b/desktop-directories/lxde-game-sub-roleplaying.directory.in
+--- a/desktop-directories/lxde-game-sub-roleplaying.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-roleplaying.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Role playing
 +Name[hu]=Szerepjáték
 +Icon=stock_person
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-simulation.directory.in patched/desktop-directories/lxde-game-sub-simulation.directory.in
---- orig/desktop-directories/lxde-game-sub-simulation.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-simulation.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-simulation.directory.in b/desktop-directories/lxde-game-sub-simulation.directory.in
+--- a/desktop-directories/lxde-game-sub-simulation.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-simulation.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Simulation
@@ -210,9 +210,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-simulation.directory.in patche
 +Comment[hu]=Szimulációs játék
 +Icon=applications-games
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-sports.directory.in patched/desktop-directories/lxde-game-sub-sports.directory.in
---- orig/desktop-directories/lxde-game-sub-sports.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-sports.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-sports.directory.in b/desktop-directories/lxde-game-sub-sports.directory.in
+--- a/desktop-directories/lxde-game-sub-sports.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-sports.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Sports
@@ -221,9 +221,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-sports.directory.in patched/de
 +Comment[hu]=Sport játék
 +Icon=stock_scores
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-game-sub-strategy.directory.in patched/desktop-directories/lxde-game-sub-strategy.directory.in
---- orig/desktop-directories/lxde-game-sub-strategy.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-game-sub-strategy.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-game-sub-strategy.directory.in b/desktop-directories/lxde-game-sub-strategy.directory.in
+--- a/desktop-directories/lxde-game-sub-strategy.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-game-sub-strategy.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Strategy
@@ -232,9 +232,9 @@ diff -Naur orig/desktop-directories/lxde-game-sub-strategy.directory.in patched/
 +Comment[hu]=Stratégiai játék
 +Icon=applications-games
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-chat.directory.in patched/desktop-directories/lxde-network-sub-chat.directory.in
---- orig/desktop-directories/lxde-network-sub-chat.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-chat.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-chat.directory.in b/desktop-directories/lxde-network-sub-chat.directory.in
+--- a/desktop-directories/lxde-network-sub-chat.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-chat.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Chat
@@ -243,9 +243,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-chat.directory.in patched/d
 +Comment[hu]=Chat kliens
 +Icon=user-available
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-dialup.directory.in patched/desktop-directories/lxde-network-sub-dialup.directory.in
---- orig/desktop-directories/lxde-network-sub-dialup.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-dialup.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-dialup.directory.in b/desktop-directories/lxde-network-sub-dialup.directory.in
+--- a/desktop-directories/lxde-network-sub-dialup.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-dialup.directory.in	2024-07-30 23:06:12.341011592 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Dial-up
@@ -254,9 +254,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-dialup.directory.in patched
 +Comment[hu]=Tárcsázó program
 +Icon=modem
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-email.directory.in patched/desktop-directories/lxde-network-sub-email.directory.in
---- orig/desktop-directories/lxde-network-sub-email.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-email.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-email.directory.in b/desktop-directories/lxde-network-sub-email.directory.in
+--- a/desktop-directories/lxde-network-sub-email.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-email.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Email
@@ -265,9 +265,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-email.directory.in patched/
 +Comment[hu]=Email kliens
 +Icon=mail-send
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-feed.directory.in patched/desktop-directories/lxde-network-sub-feed.directory.in
---- orig/desktop-directories/lxde-network-sub-feed.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-feed.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-feed.directory.in b/desktop-directories/lxde-network-sub-feed.directory.in
+--- a/desktop-directories/lxde-network-sub-feed.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-feed.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Feed
@@ -276,9 +276,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-feed.directory.in patched/d
 +Comment[hu]=RSS, podcast és más, feliratkozás-alapú tartalom
 +Icon=applications-internet
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-filetransfer.directory.in patched/desktop-directories/lxde-network-sub-filetransfer.directory.in
---- orig/desktop-directories/lxde-network-sub-filetransfer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-filetransfer.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-filetransfer.directory.in b/desktop-directories/lxde-network-sub-filetransfer.directory.in
+--- a/desktop-directories/lxde-network-sub-filetransfer.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-filetransfer.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=File transfer
@@ -287,9 +287,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-filetransfer.directory.in p
 +Comment[hu]=Eszköz fájlátvitelhez (pl. FTP)
 +Icon=emblem-downloads
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-hamradio.directory.in patched/desktop-directories/lxde-network-sub-hamradio.directory.in
---- orig/desktop-directories/lxde-network-sub-hamradio.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-hamradio.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-hamradio.directory.in b/desktop-directories/lxde-network-sub-hamradio.directory.in
+--- a/desktop-directories/lxde-network-sub-hamradio.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-hamradio.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=HAM radio
@@ -298,9 +298,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-hamradio.directory.in patch
 +Comment[hu]=Programok amatőr rádiózáshoz
 +Icon=applications-internet
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-instantmessaging.directory.in patched/desktop-directories/lxde-network-sub-instantmessaging.directory.in
---- orig/desktop-directories/lxde-network-sub-instantmessaging.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-instantmessaging.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-instantmessaging.directory.in b/desktop-directories/lxde-network-sub-instantmessaging.directory.in
+--- a/desktop-directories/lxde-network-sub-instantmessaging.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-instantmessaging.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Instant messaging
@@ -309,9 +309,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-instantmessaging.directory.
 +Comment[hu]=Azonnali üzenetküldő kliens
 +Icon=user-available
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-ircclient.directory.in patched/desktop-directories/lxde-network-sub-ircclient.directory.in
---- orig/desktop-directories/lxde-network-sub-ircclient.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-ircclient.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-ircclient.directory.in b/desktop-directories/lxde-network-sub-ircclient.directory.in
+--- a/desktop-directories/lxde-network-sub-ircclient.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-ircclient.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=IRC client
@@ -320,9 +320,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-ircclient.directory.in patc
 +Comment[hu]=IRC kliens program
 +Icon=user-available
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-news.directory.in patched/desktop-directories/lxde-network-sub-news.directory.in
---- orig/desktop-directories/lxde-network-sub-news.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-news.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-news.directory.in b/desktop-directories/lxde-network-sub-news.directory.in
+--- a/desktop-directories/lxde-network-sub-news.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-news.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=News
@@ -331,9 +331,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-news.directory.in patched/d
 +Comment[hu]=Hírolvasó
 +Icon=internet-news-reader
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-p2p.directory.in patched/desktop-directories/lxde-network-sub-p2p.directory.in
---- orig/desktop-directories/lxde-network-sub-p2p.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-p2p.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-p2p.directory.in b/desktop-directories/lxde-network-sub-p2p.directory.in
+--- a/desktop-directories/lxde-network-sub-p2p.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-p2p.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=P2P
@@ -342,9 +342,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-p2p.directory.in patched/de
 +Comment[hu]=P2P program
 +Icon=emblem-downloads
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-remoteaccess.directory.in patched/desktop-directories/lxde-network-sub-remoteaccess.directory.in
---- orig/desktop-directories/lxde-network-sub-remoteaccess.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-remoteaccess.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-remoteaccess.directory.in b/desktop-directories/lxde-network-sub-remoteaccess.directory.in
+--- a/desktop-directories/lxde-network-sub-remoteaccess.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-remoteaccess.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Remote access
@@ -353,9 +353,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-remoteaccess.directory.in p
 +Comment[hu]=A számítógép távoli elérése
 +Icon=preferences-desktop-remote-desktop
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-telephony.directory.in patched/desktop-directories/lxde-network-sub-telephony.directory.in
---- orig/desktop-directories/lxde-network-sub-telephony.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-telephony.directory.in	2015-05-03 20:03:29.240060823 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-telephony.directory.in b/desktop-directories/lxde-network-sub-telephony.directory.in
+--- a/desktop-directories/lxde-network-sub-telephony.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-telephony.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony
@@ -364,9 +364,9 @@ diff -Naur orig/desktop-directories/lxde-network-sub-telephony.directory.in patc
 +Comment[hu]=Telefonálás számítógépen keresztül
 +Icon=call-start
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-videoconference.directory.in patched/desktop-directories/lxde-network-sub-videoconference.directory.in
---- orig/desktop-directories/lxde-network-sub-videoconference.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-videoconference.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-videoconference.directory.in b/desktop-directories/lxde-network-sub-videoconference.directory.in
+--- a/desktop-directories/lxde-network-sub-videoconference.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-videoconference.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Video conference
@@ -375,18 +375,18 @@ diff -Naur orig/desktop-directories/lxde-network-sub-videoconference.directory.i
 +Comment[hu]=Videókonferencia program
 +Icon=camera-web
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-network-sub-webbrowser.directory.in patched/desktop-directories/lxde-network-sub-webbrowser.directory.in
---- orig/desktop-directories/lxde-network-sub-webbrowser.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-network-sub-webbrowser.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-network-sub-webbrowser.directory.in b/desktop-directories/lxde-network-sub-webbrowser.directory.in
+--- a/desktop-directories/lxde-network-sub-webbrowser.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-network-sub-webbrowser.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Web browser
 +Name[hu]=Webböngésző
 +Icon=web-browser
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in
---- orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-emulator.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-system-sub-emulator.directory.in b/desktop-directories/lxde-system-sub-emulator.directory.in
+--- a/desktop-directories/lxde-system-sub-emulator.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-system-sub-emulator.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Emulator
@@ -395,18 +395,18 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-emulator.directory.in 
 +Comment[hu]=Más platform emulátora
 +Icon=applications-system
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-system-tools-sub-filemanager.directory.in patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in
---- orig/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-filemanager.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-system-sub-filemanager.directory.in b/desktop-directories/lxde-system-sub-filemanager.directory.in
+--- a/desktop-directories/lxde-system-sub-filemanager.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-system-sub-filemanager.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=File manager
 +Name[hu]=Fájlkezelő
 +Icon=system-file-manager
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.in patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in
---- orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-filesystem.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-system-sub-filesystem.directory.in b/desktop-directories/lxde-system-sub-filesystem.directory.in
+--- a/desktop-directories/lxde-system-sub-filesystem.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-system-sub-filesystem.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Filesystem
@@ -415,9 +415,9 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-filesystem.directory.i
 +Comment[hu]=Fájlrendszer-kezelő eszköz
 +Icon=applications-system
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in
---- orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-monitor.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-system-sub-monitor.directory.in b/desktop-directories/lxde-system-sub-monitor.directory.in
+--- a/desktop-directories/lxde-system-sub-monitor.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-system-sub-monitor.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Monitor
@@ -426,9 +426,9 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-monitor.directory.in p
 +Comment[hu]=Erőforrás vagy aktivitás figyelő alkalmazás
 +Icon=utilities-system-monitor
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in
---- orig/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-system-tools-sub-terminalemulator.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-system-sub-terminalemulator.directory.in b/desktop-directories/lxde-system-sub-terminalemulator.directory.in
+--- a/desktop-directories/lxde-system-sub-terminalemulator.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-system-sub-terminalemulator.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Terminal emulator
@@ -437,9 +437,9 @@ diff -Naur orig/desktop-directories/lxde-system-tools-sub-terminalemulator.direc
 +Comment[hu]=Terminálemulátor alkalmazás
 +Icon=utilities-terminal
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-archiving.directory.in patched/desktop-directories/lxde-utility-sub-archiving.directory.in
---- orig/desktop-directories/lxde-utility-sub-archiving.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-archiving.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-archiving.directory.in b/desktop-directories/lxde-utility-sub-archiving.directory.in
+--- a/desktop-directories/lxde-utility-sub-archiving.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-archiving.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Archiving
@@ -448,27 +448,27 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-archiving.directory.in patc
 +Comment[hu]=Adat archiváló/visszaállító eszköz
 +Icon=package-x-generic
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-calculator.directory.in patched/desktop-directories/lxde-utility-sub-calculator.directory.in
---- orig/desktop-directories/lxde-utility-sub-calculator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-calculator.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-calculator.directory.in b/desktop-directories/lxde-utility-sub-calculator.directory.in
+--- a/desktop-directories/lxde-utility-sub-calculator.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-calculator.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Calculator
 +Name[hu]=Számológép
 +Icon=accessories-calculator
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-clock.directory.in patched/desktop-directories/lxde-utility-sub-clock.directory.in
---- orig/desktop-directories/lxde-utility-sub-clock.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-clock.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-clock.directory.in b/desktop-directories/lxde-utility-sub-clock.directory.in
+--- a/desktop-directories/lxde-utility-sub-clock.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-clock.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Clock
 +Name[hu]=Óra
 +Icon=mate-panel-clock
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-compression.directory.in patched/desktop-directories/lxde-utility-sub-compression.directory.in
---- orig/desktop-directories/lxde-utility-sub-compression.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-compression.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-compression.directory.in b/desktop-directories/lxde-utility-sub-compression.directory.in
+--- a/desktop-directories/lxde-utility-sub-compression.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-compression.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Compression
@@ -477,9 +477,9 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-compression.directory.in pa
 +Comment[hu]=Tömörített adatokat/archívumokat kezelő eszköz
 +Icon=package-x-generic
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-filetool.directory.in patched/desktop-directories/lxde-utility-sub-filetool.directory.in
---- orig/desktop-directories/lxde-utility-sub-filetool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-filetool.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-filetool.directory.in b/desktop-directories/lxde-utility-sub-filetool.directory.in
+--- a/desktop-directories/lxde-utility-sub-filetool.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-filetool.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=File tool
@@ -488,9 +488,9 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-filetool.directory.in patch
 +Comment[hu]=Fájlkezelő eszköz
 +Icon=system-file-manager
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in
---- orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-telephonytool.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-telephonytool.directory.in b/desktop-directories/lxde-utility-sub-telephonytool.directory.in
+--- a/desktop-directories/lxde-utility-sub-telephonytool.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-telephonytool.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony tool
@@ -499,9 +499,9 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-telephonytool.directory.in 
 +Comment[hu]=Segédeszköz telefonáláshoz; tárcsázás, PBX kezelése, ...
 +Icon=call-start
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-texteditor.directory.in patched/desktop-directories/lxde-utility-sub-texteditor.directory.in
---- orig/desktop-directories/lxde-utility-sub-texteditor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-texteditor.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-texteditor.directory.in b/desktop-directories/lxde-utility-sub-texteditor.directory.in
+--- a/desktop-directories/lxde-utility-sub-texteditor.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-texteditor.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text editor
@@ -510,9 +510,9 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-texteditor.directory.in pat
 +Comment[hu]=Szöveg szerkesztése
 +Icon=accessories-text-editor
 +Type=Directory
-diff -Naur orig/desktop-directories/lxde-utility-sub-texttool.directory.in patched/desktop-directories/lxde-utility-sub-texttool.directory.in
---- orig/desktop-directories/lxde-utility-sub-texttool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ patched/desktop-directories/lxde-utility-sub-texttool.directory.in	2015-05-03 20:03:29.244060842 +0200
+diff -Naur a/desktop-directories/lxde-utility-sub-texttool.directory.in b/desktop-directories/lxde-utility-sub-texttool.directory.in
+--- a/desktop-directories/lxde-utility-sub-texttool.directory.in	1970-01-01 01:00:00.000000000 +0100
++++ b/desktop-directories/lxde-utility-sub-texttool.directory.in	2024-07-30 23:06:12.345011604 +0200
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text tool
@@ -521,13 +521,13 @@ diff -Naur orig/desktop-directories/lxde-utility-sub-texttool.directory.in patch
 +Comment[hu]=Szövegkezelő eszköz
 +Icon=accessories-text-editor
 +Type=Directory
-diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Makefile.am
---- orig/desktop-directories/Makefile.am	2014-09-12 13:41:16.000000000 +0200
-+++ patched/desktop-directories/Makefile.am	2015-05-03 20:41:22.111331383 +0200
-@@ -4,9 +4,31 @@
+diff -Naur a/desktop-directories/Makefile.am b/desktop-directories/Makefile.am
+--- a/desktop-directories/Makefile.am	2024-07-29 14:16:34.000000000 +0200
++++ b/desktop-directories/Makefile.am	2024-07-30 23:13:30.238256957 +0200
+@@ -3,18 +3,67 @@
  directorydir = $(datadir)/desktop-directories
  directory_in_files =				\
- 	lxde-audio-video.directory.in		\
+ 	lxde-audio-video.directory.in           \
 +	lxde-audio-video-sub-audiovideoediting.directory.in \
 +	lxde-audio-video-sub-discburning.directory.in \
 +	lxde-audio-video-sub-midi.directory.in \
@@ -538,9 +538,9 @@ diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Make
 +	lxde-audio-video-sub-sequencer.directory.in \
 +	lxde-audio-video-sub-tuner.directory.in \
 +	lxde-audio-video-sub-tv.directory.in \
- 	lxde-development.directory.in		\
- 	lxde-education.directory.in		\
- 	lxde-game.directory.in			\
+ 	lxde-development.directory.in           \
+ 	lxde-education.directory.in             \
+ 	lxde-game.directory.in                  \
 +	lxde-game-sub-action.directory.in \
 +	lxde-game-sub-adventure.directory.in \
 +	lxde-game-sub-arcade.directory.in \
@@ -553,13 +553,9 @@ diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Make
 +	lxde-game-sub-simulation.directory.in \
 +	lxde-game-sub-sports.directory.in \
 +	lxde-game-sub-strategy.directory.in \
- 	lxde-graphics.directory.in		\
- 	lxde-hardware.directory.in		\
- 	lxde-internet-and-network.directory.in	\
-@@ -14,6 +36,20 @@
- 	lxde-menu-applications.directory.in	\
- 	lxde-menu-system.directory.in		\
- 	lxde-network.directory.in		\
+ 	lxde-graphics.directory.in              \
+ 	lxde-menu-applications.directory.in     \
+ 	lxde-network.directory.in               \
 +	lxde-network-sub-chat.directory.in \
 +	lxde-network-sub-dialup.directory.in \
 +	lxde-network-sub-email.directory.in \
@@ -574,20 +570,17 @@ diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Make
 +	lxde-network-sub-telephony.directory.in \
 +	lxde-network-sub-videoconference.directory.in \
 +	lxde-network-sub-webbrowser.directory.in \
- 	lxde-office.directory.in		\
- 	lxde-other.directory.in			\
- 	lxde-personal.directory.in		\
-@@ -22,8 +58,21 @@
- 	lxde-settings-system.directory.in	\
- 	lxde-system.directory.in		\
- 	lxde-system-tools.directory.in		\
-+	lxde-system-tools-sub-emulator.directory.in \
-+	lxde-system-tools-sub-filemanager.directory.in \
-+	lxde-system-tools-sub-filesystem.directory.in \
-+	lxde-system-tools-sub-monitor.directory.in \
-+	lxde-system-tools-sub-terminalemulator.directory.in \
- 	lxde-utility-accessibility.directory.in	\
- 	lxde-utility.directory.in		\
+ 	lxde-office.directory.in                \
+ 	lxde-other.directory.in                 \
+ 	lxde-science.directory.in               \
+ 	lxde-settings.directory.in              \
+ 	lxde-system.directory.in                \
++	lxde-system-sub-emulator.directory.in \
++	lxde-system-sub-filemanager.directory.in \
++	lxde-system-sub-filesystem.directory.in \
++	lxde-system-sub-monitor.directory.in \
++	lxde-system-sub-terminalemulator.directory.in \
+ 	lxde-utility.directory.in               \
 +	lxde-utility-sub-archiving.directory.in \
 +	lxde-utility-sub-calculator.directory.in \
 +	lxde-utility-sub-clock.directory.in \
@@ -596,14 +589,14 @@ diff -Naur orig/desktop-directories/Makefile.am patched/desktop-directories/Make
 +	lxde-utility-sub-telephonytool.directory.in \
 +	lxde-utility-sub-texteditor.directory.in \
 +	lxde-utility-sub-texttool.directory.in \
+ 	lxde-utility-accessibility.directory.in \
  	$(NULL)
  
- directory_DATA = $(directory_in_files:.directory.in=.directory)
-diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.menu
---- orig/layout/lxde-applications.menu	2014-09-12 13:41:16.000000000 +0200
-+++ patched/layout/lxde-applications.menu	2015-05-03 20:43:35.279991730 +0200
-@@ -28,6 +28,72 @@
- 				<Not><Category>System</Category></Not>
+diff -Naur a/layout/lxde-applications.menu b/layout/lxde-applications.menu
+--- a/layout/lxde-applications.menu	2024-07-29 14:16:34.000000000 +0200
++++ b/layout/lxde-applications.menu	2024-07-30 23:27:06.700651657 +0200
+@@ -24,6 +24,72 @@
+ 				<Not><Category>Accessibility</Category></Not>
  			</And>
  		</Include>
 +		<Exclude>
@@ -616,7 +609,7 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +        	<Category>TextEditor</Category>
 +        	<Category>TextTools</Category>
 +        </Exclude>
-+    	<Menu>
++       	<Menu>
 +      		<Name>Archiving</Name>
 +      		<Directory>lxde-utility-sub-archiving.directory</Directory>
 +      		<Include>
@@ -672,12 +665,12 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +				<Category>TextTools</Category>
 +			</Include>
 +		</Menu>
- 	</Menu> <!-- End Accessories -->
+ 	</Menu>
  
- 	<!-- Accessibility submenu -->
-@@ -74,6 +140,104 @@
- 				<Category>Game</Category>
- 			</And>
+ 	<Menu>
+@@ -59,6 +125,104 @@
+ 		<Include>
+ 			<Category>Game</Category>
  		</Include>
 +		<Exclude>
 +			<Category>ActionGame</Category>
@@ -726,7 +719,7 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +			<Directory>lxde-game-sub-blocks.directory</Directory>
 +			<Include>
 +				<Category>BlocksGame</Category>
-+			</Include>
++    		</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>Cards</Name>
@@ -777,12 +770,12 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +				<Category>StrategyGame</Category>
 +			</Include>
 +		</Menu>
- 	</Menu> <!-- End Games -->
+ 	</Menu>
  
- 	<!-- Graphics -->
-@@ -97,6 +261,120 @@
- 				<Category>Network</Category>
- 			</And>
+ 	<Menu>
+@@ -75,6 +239,120 @@
+ 		<Include>
+ 			<Category>Network</Category>
  		</Include>
 +		<Exclude>
 +			<Category>Chat</Category>
@@ -898,12 +891,12 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +				<Category>WebBrowser</Category>
 +			</Include>
 +		</Menu>
- 	</Menu>	 <!-- End Internet -->
+ 	</Menu>
  
- 	<!-- Multimedia -->
-@@ -108,6 +386,88 @@
- 				<Category>AudioVideo</Category>
- 			</And>
+ 	<Menu>
+@@ -85,6 +363,88 @@
+ 			<Category>Audio</Category>
+ 			<Category>Video</Category>
  		</Include>
 +		<Exclude>
 +			<Category>AudioVideoEditing</Category>
@@ -987,10 +980,10 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +				<Category>TV</Category>
 +			</Include>
 +		</Menu>
- 	</Menu>	 <!-- End Multimedia -->
+ 	</Menu>
  
- 	<!-- Office -->
-@@ -132,6 +492,48 @@
+ 	<Menu>
+@@ -113,6 +473,48 @@
  				<Not><Category>PackageManager</Category></Not>
  			</And>
  		</Include>
@@ -1003,39 +996,39 @@ diff -Naur orig/layout/lxde-applications.menu patched/layout/lxde-applications.m
 +		</Exclude>
 +		<Menu>
 +			<Name>Emulator</Name>
-+			<Directory>lxde-system-tools-sub-emulator.directory</Directory>
++			<Directory>lxde-system-sub-emulator.directory</Directory>
 +			<Include>
 +				<Category>Emulator</Category>
 +			</Include>
 +		</Menu>    
 +		<Menu>
 +			<Name>Filemanager</Name>
-+			<Directory>lxde-system-tools-sub-filemanager.directory</Directory>
++			<Directory>lxde-system-sub-filemanager.directory</Directory>
 +			<Include>
 +				<Category>FileManager</Category>
 +			</Include>
 +		</Menu>   
 +		<Menu>
 +			<Name>Filesystem</Name>
-+			<Directory>lxde-system-tools-sub-filesystem.directory</Directory>
++			<Directory>lxde-system-sub-filesystem.directory</Directory>
 +			<Include>
 +				<Category>Filesystem</Category>
 +			</Include>
 +		</Menu>   
 +		<Menu>
 +			<Name>Monitor</Name>
-+			<Directory>lxde-system-tools-sub-monitor.directory</Directory>
++			<Directory>lxde-system-sub-monitor.directory</Directory>
 +			<Include>
 +				<Category>Monitor</Category>
 +			</Include>
 +		</Menu>
 +		<Menu>
 +			<Name>Terminal</Name>
-+			<Directory>lxde-system-tools-sub-terminalemulator.directory</Directory>
++			<Directory>lxde-system-sub-terminalemulator.directory</Directory>
 +			<Include>
 +				<Category>TerminalEmulator</Category>
 +			</Include>
 +		</Menu>
- 	</Menu>	 <!-- End System Tools -->
+ 	</Menu>
  
- 	<!-- Other -->
+ 	<Menu>

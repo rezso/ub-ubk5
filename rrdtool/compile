@@ -1,9 +1,9 @@
 #!/bin/sh -eux
 
-ub_configure \
+export RRDDOCDIR="/usr/share/doc/Packages/rrdtool"
+ub_compile \
 	--disable-tcl-site \
 	--disable-perl \
 	--disable-python \
 	--disable-ruby \
 	--disable-examples
-ub_make LIBS+="-lglib-2.0"
