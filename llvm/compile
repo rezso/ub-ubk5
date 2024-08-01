@@ -26,3 +26,7 @@ ub_compile \
 	-DLLVM_ENABLE_EXPENSIVE_CHECKS=OFF \
 	-DLLVM_INCLUDE_EXAMPLES=OFF \
 	-DLLVM_INCLUDE_TESTS=OFF
+
+cd -
+cd libclc
+ub_compile

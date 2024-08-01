@@ -1,18 +1,6 @@
 diff -Naur a/src/amd/llvm/ac_llvm_helper.cpp b/src/amd/llvm/ac_llvm_helper.cpp
 --- a/src/amd/llvm/ac_llvm_helper.cpp	2023-09-28 23:11:25.000000000 +0200
 +++ b/src/amd/llvm/ac_llvm_helper.cpp	2024-05-26 11:55:22.226422857 +0200
-@@ -250,7 +250,11 @@
-    TargetMachine *TM = reinterpret_cast<TargetMachine *>(tm);
- 
-    if (TM->addPassesToEmitFile(p->passmgr, p->ostream, nullptr,
-+#if LLVM_VERSION_MAJOR >= 18
-+                               CodeGenFileType::ObjectFile)) {
-+#else
-                                CGFT_ObjectFile)) {
-+#endif
-       fprintf(stderr, "amd: TargetMachine can't emit a file of this type!\n");
-       delete p;
-       return NULL;
 @@ -295,17 +299,12 @@
      */
     unwrap(passmgr)->add(createBarrierNoopPass());
@@ -31,18 +19,3 @@ diff -Naur a/src/amd/llvm/ac_llvm_helper.cpp b/src/amd/llvm/ac_llvm_helper.cpp
     unwrap(passmgr)->add(createLICMPass());
     unwrap(passmgr)->add(createCFGSimplificationPass());
     /* This is recommended by the instruction combining pass. */
-diff -Naur a/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp b/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp
---- a/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp	2023-09-28 23:11:25.000000000 +0200
-+++ b/src/gallium/auxiliary/gallivm/lp_bld_misc.cpp	2024-05-26 12:03:38.564632121 +0200
-@@ -366,7 +366,11 @@
-    builder.setEngineKind(EngineKind::JIT)
-           .setErrorStr(&Error)
-           .setTargetOptions(options)
-+#if LLVM_VERSION_MAJOR >= 18
-+          .setOptLevel((CodeGenOptLevel)OptLevel);
-+#else
-           .setOptLevel((CodeGenOpt::Level)OptLevel);
-+#endif
- 
- #if DETECT_OS_WINDOWS
-     /*
