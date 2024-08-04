@@ -43,4 +43,4 @@ tellico
 digikam
 #kaffeine # kf5, multimedia lejátszó
 #krusader # kf5
-#kshutdown # kf5
+kshutdown # kf5 + patch
