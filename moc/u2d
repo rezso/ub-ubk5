@@ -1,1 +1,7 @@
-_geturl https://moc.daper.net/ | grep Stable: | sed 's/.*Stable: //'
+stable=$(urllist https://ftp.daper.net/pub/soft/moc/stable/ | grep 'moc-' | grep 'tar' | sed -e 's/moc-//' -e 's/.tar.*//' | sort -V | tail -n1 | tr '-' '~')
+unstable=$(urllist https://ftp.daper.net/pub/soft/moc/unstable/ | grep 'moc-' | grep 'tar' | sed -e 's/moc-//' -e 's/.tar.*//' | sort -V | tail -n1 | tr '-' '~')
+if [[ "$unstable" > "$stable" ]]; then
+echo "$unstable"
+else
+echo "$stable"
+fi
