@@ -1,1 +1,1 @@
-urllist https://ftp.gnu.org/gnu/libcdio/ | splitver '^libcdio-paranoia-([0-9.+]+).tar.(gz|bz2)$' | sort -V | tail -n 1
+urllist https://github.com/rocky/libcdio-paranoia/tags | splitver '^release-([0-9.+]+).tar.(gz|bz2|xz)$' | sort -V | tail -n 1
