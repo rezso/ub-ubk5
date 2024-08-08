@@ -2,14 +2,12 @@
 
 # luajit kell
 
-# profile: release, debug, dev
-export CFLAGS+=' -fvisibility=hidden'
 ub_compile \
 	-Dwl=true \
 	-Dfb=true \
 	-Dbuild-examples=false \
 	-Dbuild-tests=false \
-	-Devas-loaders-disabler=json,avif,heif \
+	-Devas-loaders-disabler=json,avif,heif,jxl \
     -Ddrm=true
 
 for size in 16 24 32 48 64; do
