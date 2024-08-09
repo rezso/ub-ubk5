@@ -68,6 +68,7 @@ mplayer
 libmatroska
 libvncserver
 x11vnc
+freerdp
 lxmenu-data
 lxpolkit
 keybinder3
