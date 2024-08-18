@@ -102,4 +102,3 @@ clutter-gst
 clutter-gtk
 libcanberra
 pavucontrol
-freerdp

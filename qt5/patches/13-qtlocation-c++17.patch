@@ -1,0 +1,12 @@
+diff -Naur a/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro b/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro
+--- a/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro	2024-05-08 07:14:45.000000000 +0200
++++ b/qtlocation/src/3rdparty/mapbox-gl-native/mapbox-gl-native.pro	2024-08-17 23:15:22.568520216 +0200
+@@ -2,7 +2,7 @@
+ 
+ load(qt_helper_lib)
+ 
+-CONFIG += qt c++14 exceptions warn_off staticlib object_parallel_to_source
++CONFIG += qt c++17 exceptions warn_off staticlib object_parallel_to_source
+ CONFIG -= c++1z
+ 
+ QT += network-private \
