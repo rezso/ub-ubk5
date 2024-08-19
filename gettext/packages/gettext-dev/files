@@ -1,0 +1,12 @@
+	/usr/bin
+	/usr/include
+@	/usr/lib/*.so
+	/usr/share/aclocal
+	/usr/share/gettext/ABOUT-NLS
+	/usr/share/gettext/archive.dir.tar.xz
+	/usr/share/gettext/config.rpath
+	/usr/share/gettext/gettext.h
+	/usr/share/gettext/po
+	/usr/share/gettext/projects
+	/usr/share/man/man1
+	/usr/share/man/man3
