@@ -1,1 +1,2 @@
-u2d https://www.wireshark.org/download.html wireshark-
+urllist https://gitlab.com/wireshark/wireshark/-/tags | grep -E '^v[0-9]+\.[0-9]+(\.[0-9.])?$' | sed 's/v//' | sort -V | tail -n 1
+# u2d https://www.wireshark.org/download.html wireshark-

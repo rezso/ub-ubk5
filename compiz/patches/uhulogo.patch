@@ -1,6 +1,6 @@
 diff -Naur a/metadata/cube.xml.in b/metadata/cube.xml.in
 --- a/metadata/cube.xml.in	2020-04-04 20:24:41.000000000 +0200
-+++ b/metadata/cube.xml.in	2023-05-01 22:04:53.036278319 +0200
++++ b/metadata/cube.xml.in	2024-08-20 04:42:13.339892818 +0200
 @@ -96,9 +96,9 @@
  		    <short>Cube Color</short>
  		    <long>Color of top and bottom sides of the cube</long>
