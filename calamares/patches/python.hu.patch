@@ -1,14 +1,14 @@
 diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/python.po
---- a/lang/python/hu/LC_MESSAGES/python.po	2024-07-03 23:05:30.000000000 +0200
-+++ b/lang/python/hu/LC_MESSAGES/python.po	2024-07-04 17:00:15.108609714 +0200
+--- a/lang/python/hu/LC_MESSAGES/python.po	2024-08-13 22:00:50.000000000 +0200
++++ b/lang/python/hu/LC_MESSAGES/python.po	2024-08-20 02:42:32.449385963 +0200
 @@ -81,23 +81,23 @@
  
- #: src/modules/displaymanager/main.py:940
+ #: src/modules/displaymanager/main.py:956
  msgid "No display managers selected for the displaymanager module."
 -msgstr "Nincs kijelzőkezelő kiválasztva a kijelzőkezelő modulhoz."
 +msgstr "Nincs kiválasztott grafikus beléptetö a megfelelő modulhoz."
  
- #: src/modules/displaymanager/main.py:941
+ #: src/modules/displaymanager/main.py:957
  msgid ""
  "The displaymanagers list is empty or undefined in both globalstorage and "
  "displaymanager.conf."
@@ -18,7 +18,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
 +"A beléptetők listája üres, vagy nincs megadva a sem globalstorage-ben, sem"
 +" a displaymanager.conf fájlban."
  
- #: src/modules/displaymanager/main.py:1028
+ #: src/modules/displaymanager/main.py:1044
  msgid "Display manager configuration was incomplete"
 -msgstr "A kijelzőkezelő konfigurációja hiányos volt"
 +msgstr "A grafikus beléptető konfigurációja hiányos volt"

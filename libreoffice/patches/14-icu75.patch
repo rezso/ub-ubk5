@@ -1,0 +1,28 @@
+diff -Naur a/configure b/configure
+--- a/configure	2024-08-08 23:02:32.000000000 +0200
++++ b/configure	2024-08-20 03:21:46.030920181 +0200
+@@ -35310,8 +35310,8 @@
+     BUILD_TYPE="$BUILD_TYPE SANE"
+ fi
+ 
+-ICU_MAJOR=74
+-ICU_MINOR=2
++ICU_MAJOR=75
++ICU_MINOR=1
+ ICU_CFLAGS_internal="-I${WORKDIR}/UnpackedTarball/icu/source/i18n -I${WORKDIR}/UnpackedTarball/icu/source/common"
+ ICU_LIBS_internal="-L${WORKDIR}/UnpackedTarball/icu/source/lib"
+ 
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2024-08-08 22:59:54.000000000 +0200
++++ b/configure.ac	2024-08-20 03:21:07.862773486 +0200
+@@ -11026,8 +11026,8 @@
+ dnl ===================================================================
+ dnl Check for system icu
+ dnl ===================================================================
+-ICU_MAJOR=74
+-ICU_MINOR=2
++ICU_MAJOR=75
++ICU_MINOR=1
+ ICU_CFLAGS_internal="-I${WORKDIR}/UnpackedTarball/icu/source/i18n -I${WORKDIR}/UnpackedTarball/icu/source/common"
+ ICU_LIBS_internal="-L${WORKDIR}/UnpackedTarball/icu/source/lib"
+ libo_CHECK_SYSTEM_MODULE([icu],[ICU],[icu-i18n >= 66])

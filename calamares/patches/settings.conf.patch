@@ -1,6 +1,6 @@
 diff -Naur a/settings.conf b/settings.conf
---- a/settings.conf	2024-01-15 19:54:01.000000000 +0100
-+++ b/settings.conf	2024-01-29 03:37:45.841888037 +0100
+--- a/settings.conf	2024-08-13 22:00:50.000000000 +0200
++++ b/settings.conf	2024-08-20 20:45:03.479069039 +0200
 @@ -115,42 +115,28 @@
  sequence:
  - show:
@@ -25,14 +25,14 @@ diff -Naur a/settings.conf b/settings.conf
 +  - networkcfg
 +  - packages
    - machineid
-   - fstab
    - locale
 -  - keyboard
-+# - keyboard
++#  - keyboard
    - localecfg
 -#  - luksbootkeyfile
 -#  - luksopenswaphookcfg
 -#  - dracutlukscfg
+   - fstab
 -#  - plymouthcfg
 -#  - zfshostid
 -  - initcpiocfg
@@ -40,7 +40,7 @@ diff -Naur a/settings.conf b/settings.conf
    - users
    - displaymanager
 -  - networkcfg
-+# - networkcfg
++#  - networkcfg
    - hwclock
 -  - services-systemd
 -#  - dracut
