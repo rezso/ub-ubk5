@@ -1,6 +1,6 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2023-12-31 07:20:03.000000000 +0100
-+++ b/pyproject.toml	2024-03-14 20:21:42.437478135 +0100
+--- a/pyproject.toml	2024-08-06 16:27:33.000000000 +0200
++++ b/pyproject.toml	2024-08-21 02:35:23.878305398 +0200
 @@ -1,7 +1,7 @@
  # SPDX-License-Identifier: MIT
  
@@ -10,7 +10,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  build-backend = "hatchling.build"
  
  
-@@ -26,7 +26,7 @@
+@@ -27,7 +27,7 @@
    "Typing :: Typed",
  ]
  dependencies = ["importlib_metadata;python_version<'3.8'"]
@@ -19,7 +19,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  
  [project.optional-dependencies]
  tests-mypy = [
-@@ -77,47 +77,6 @@
+@@ -84,66 +84,6 @@
  [tool.hatch.build.targets.wheel]
  packages = ["src/attr", "src/attrs"]
  
@@ -55,19 +55,38 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -
 ----
 -
--[Full changelog](https://www.attrs.org/en/stable/changelog.html)
+-[Full changelog →](https://www.attrs.org/en/stable/changelog.html)
 -"""
 -
 -# Point sponsor image URLs to versions.
 -[[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
--pattern = '\/latest\/_static/sponsors'
--replacement = '/$HFPR_VERSION/_static/sponsors'
+-pattern = 'docs\/_static\/sponsors'
+-replacement = 'https://www.attrs.org/en/$HFPR_VERSION/_static/sponsors'
 -
+-[[tool.sponcon.sponsors]]
+-title = "Variomedia AG"
+-url = "https://www.variomedia.de/"
+-img = "Variomedia.svg"
 -
+-[[tool.sponcon.sponsors]]
+-title = "Tidelift"
+-url = "https://tidelift.com/?utm_source=lifter&utm_medium=referral&utm_campaign=hynek"
+-img = "Tidelift.svg"
+-
+-[[tool.sponcon.sponsors]]
+-title = "Klaviyo"
+-url = "https://klaviyo.com/"
+-img = "Klaviyo.svg"
+-
+-[[tool.sponcon.sponsors]]
+-title = "FilePreviews"
+-url = "https://filepreviews.io/"
+-img = "FilePreviews.svg"
+-
+ 
  [tool.pytest.ini_options]
  addopts = ["-ra", "--strict-markers", "--strict-config"]
- xfail_strict = true
-@@ -239,35 +198,6 @@
+@@ -269,35 +209,6 @@
  known-first-party = ["attr", "attrs"]
  
  
@@ -101,5 +120,5 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -
 -
  [tool.mypy]
+ pretty = true
  disallow_untyped_defs = true
- check_untyped_defs = true

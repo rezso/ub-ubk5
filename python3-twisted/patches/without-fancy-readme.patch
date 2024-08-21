@@ -1,17 +1,17 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2023-08-28 14:18:41.000000000 +0200
-+++ b/pyproject.toml	2023-10-28 17:19:00.231041848 +0200
+--- a/pyproject.toml	2024-08-08 09:42:43.000000000 +0200
++++ b/pyproject.toml	2024-08-21 02:38:34.115136295 +0200
 @@ -1,7 +1,6 @@
  [build-system]
  requires = [
      "hatchling >= 1.10.0",
 -    "hatch-fancy-pypi-readme >= 22.5.0",
-     "incremental >= 22.10.0",
+     "incremental >= 24.7.0",
  ]
  build-backend = "hatchling.build"
-@@ -173,20 +172,6 @@
- path = "src/twisted/__init__.py"
- search-paths = ["src"]
+@@ -160,20 +159,6 @@
+ [tool.hatch.version]
+ source = "incremental"
  
 -[tool.hatch.metadata.hooks.fancy-pypi-readme]
 -content-type = "text/x-rst"
