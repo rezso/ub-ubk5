@@ -1,3 +1,12 @@
 	/usr/bin/msg*
+	/usr/bin/recode-sr-latin
+	/usr/bin/xgettext
+	/usr/lib/gettext
+	/usr/lib/libgettextpo.so.*
+	/usr/lib/libgettext*-*.so
+	/usr/share/gettext/projects
+	/usr/share/gettext/styles
 	/usr/share/locale/*/LC_MESSAGES/gettext-tools.mo
 	/usr/share/man/man1/msg*.1
+	/usr/share/man/man1/recode-sr-latin.1
+	/usr/share/man/man1/xgettext.1
