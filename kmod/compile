@@ -7,4 +7,5 @@ ub_compile \
 	--with-module-directory=/usr/lib/modules \
 	--with-zlib \
 	--with-xz \
-	--with-zstd
+	--with-zstd \
+	--disable-manpages
