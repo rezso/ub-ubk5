@@ -10,6 +10,7 @@ kcalutils-dev
 kf6-dev
 kidentitymanagement-dev
 kimap-dev
+kldap-dev
 kmime-dev
 kontactinterface-dev
 kpimtextedit-dev
