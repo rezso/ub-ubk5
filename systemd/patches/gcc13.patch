@@ -1,15 +1,13 @@
 diff -Naur a/src/shared/install.c b/src/shared/install.c
 --- a/src/shared/install.c	2022-10-31 19:59:18.000000000 +0100
-+++ b/src/shared/install.c	2024-08-22 01:09:27.588918151 +0200
-@@ -339,7 +339,11 @@
++++ b/src/shared/install.c	2024-08-22 21:36:05.792567129 +0200
+@@ -339,7 +339,8 @@
          assert(verb || r >= 0);
  
          for (size_t i = 0; i < n_changes; i++) {
-+                /* This tries to tell the compiler that it's safe to use 'verb' in a string format if there
-+                 * was an error, but the compiler doesn't care and fails anyway, so strna(verb) is used
-+                 * too. */
-                 assert(verb || changes[i].type >= 0);
-+                verb = strna(verb);
+-                assert(verb || changes[i].type >= 0);
++                if (changes[i].type < 0)
++                        assert(verb);
  
                  /* When making changes here, make sure to also change install_error() in dbus-manager.c. */
  
