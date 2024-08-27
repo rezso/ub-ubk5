@@ -284,6 +284,8 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 llvm
+spirv-llvm-translator
+libclc
 ghostscript
 groff
 yasm
@@ -334,6 +336,7 @@ shared-mime-info
 unixodbc
 json-c
 python3-pyyaml
+python3-ply
 nasm
 glu
 freeglut

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz SPIRV-LLVM-Translator-${UB_VERSION}/
+	https://github.com/KhronosGroup/SPIRV-LLVM-Translator/archive/refs/tags/

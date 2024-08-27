@@ -3,8 +3,4 @@
 cd llvm
 ub_install
 
-cd -
-cd libclc
-ub_install
-
 rm -Rf "$UB_INSTALLDIR"/usr/share/doc/{clang,clang-tools,llvm,lld,libclc}

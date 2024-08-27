@@ -22,7 +22,6 @@ python3-gnupg
 python3-idna
 python3-incremental
 python3-mutagen
-python3-ply
 python3-pyasn1
 python3-pycparser
 python3-pyxdg
