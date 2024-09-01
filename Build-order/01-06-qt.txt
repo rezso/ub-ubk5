@@ -86,11 +86,9 @@ libetonyek
 libvirt
 libvirt-python3
 libvirt-glib
-vulkan-headers
 nvidia
 pipewire
 libportal
-gcr4
 qt5
 qt6
 appstream

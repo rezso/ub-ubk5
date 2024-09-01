@@ -1,6 +1,4 @@
-diffstat
 dpkg-repack
-patchutils
 ltrace
 cgdb
 icon-slicer

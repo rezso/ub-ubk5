@@ -131,6 +131,7 @@ curl
 libarchive
 cmake
 db4
+libnsl
 python3
 python3-flit-core
 python3-installer
@@ -349,6 +350,7 @@ openssh
 gcr
 libwacom
 libinput
+gcr4
 pinentry
 libsecret
 net-snmp

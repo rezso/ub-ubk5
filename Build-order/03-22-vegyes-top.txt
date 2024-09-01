@@ -9,5 +9,4 @@ grub-customizer
 systemd-ui
 nvidia-470
 synapse
-ckbcomp
 calamares

@@ -29,7 +29,6 @@ libetpan
 libxklavier
 rpm
 fontforge
-libnsl
 postfix
 apr-util
 apache
