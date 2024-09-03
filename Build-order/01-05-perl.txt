@@ -4,11 +4,13 @@ perl-extutils-depends
 perl-extutils-pkgconfig
 perl-file-which
 perl-libintl
+perl-module-build-tiny
 perl-mozilla-ca
 perl-netaddr-ip
 perl-net-ip
 perl-socket6
 perl-text-csv
+perl-timedate
 perl-version
 perl-net-ssleay
 perl-io-socket-ssl

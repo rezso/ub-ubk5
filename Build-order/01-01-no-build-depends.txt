@@ -9,6 +9,8 @@ ansifilter
 antiword
 aoetools
 apr
+argon2
+autoconf2.13
 at
 audiofile
 barcode
@@ -28,6 +30,7 @@ ckbcomp
 cksfv
 cldr-emoji-annotation
 cmark
+cmocka
 compface
 convmv
 corkscrew
@@ -39,7 +42,9 @@ detox
 diffstat
 dmidecode
 dos2unix
+dosfstools
 dotconf
+double-conversion
 dvd+rw-tools
 emoji
 enscript
@@ -145,6 +150,7 @@ muparser
 musepack
 neofetch
 nomarch
+nspr
 numdiff
 opencore-amr
 opus

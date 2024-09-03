@@ -11,7 +11,6 @@ zstd
 gcc
 sgml-common
 libyaml
-ruby
 kmod
 inetutils
 pciutils
@@ -49,7 +48,6 @@ ccache
 cpio
 diffutils
 docbook-dtds
-dosfstools
 expat
 file
 findutils
@@ -60,10 +58,8 @@ perl-module-build
 perl-extutils-config
 perl-extutils-helpers
 perl-extutils-installpaths
-perl-module-build-tiny
 perl-xml-parser
 perl-locale-gettext
-perl-timedate
 perl-http-date
 perl-file-listing
 perl-html-tagset
@@ -103,7 +99,6 @@ libpng
 libtool
 licenses
 m4
-nspr
 openslp
 openssl
 patch
@@ -155,7 +150,6 @@ doxygen
 libpaper
 openjpeg
 gc
-guile2.2
 gdb
 valgrind
 libdrm
@@ -175,8 +169,6 @@ bash-completion
 git
 lcms2
 xmlto
-opensp
-talloc
 dbus
 gobject-introspection
 glib
@@ -188,7 +180,6 @@ triehash
 xxhash
 gnutls
 apt
-gamin
 pkgconfig
 cairo
 graphite2
@@ -201,20 +192,14 @@ util-linux
 quota
 python3-markupsafe
 python3-jinja2
-cmocka
 libssh
-argon2
 cryptsetup
 python3-lxml
 systemd
-autoconf2.13
 patchelf
 rust
-rust-bindgen
-double-conversion
 python3-psutil
 duktape
-js115
 polkit
 e2fsprogs
 fonts-dejavu
@@ -223,8 +208,6 @@ efibootmgr
 fuse
 grub
 libedit
-gyp
-nss
 vala
 libpcap
 umockdev
@@ -278,13 +261,13 @@ libxaw
 libxrender
 libxres
 libxtst
-libdmx
 xcb-util
 xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 llvm
+glslang # for spirv-tools
 spirv-llvm-translator
 libclc
 ghostscript
@@ -293,7 +276,6 @@ yasm
 libxcomposite
 libxft
 libxrandr
-libxpresent
 libepoxy
 xkbcomp
 xkbutils
@@ -326,11 +308,11 @@ gtk3
 gtk2
 nss-mdns
 avahi
-guile
 liblzo
 nettle
 libtasn1
 p11-kit
+xdg-utils
 cups
 icon-theme-hicolor
 shared-mime-info
@@ -347,7 +329,6 @@ libassuan
 libksba
 gpg
 openssh
-gcr
 libwacom
 libinput
 gcr4
@@ -355,13 +336,11 @@ pinentry
 libsecret
 net-snmp
 pcre2
-swig
 sysfsutils
 rrdtool
 lmsensors
 libva
 libglvnd
-glslang
 python3-six
 python3-beaker
 python3-mako
@@ -370,11 +349,8 @@ mesa
 libxcvt
 x.org-server
 egl-wayland
-x.org-xwayland
 x.org-input-libinput
-libgsf
 libvdpau
-libvpx
 graphviz
 desktop-file-utils
 libqrencode
@@ -383,7 +359,6 @@ lvm
 dracut
 audit
 itstool
-gd
 kbd
 rdfind
 linux-firmware

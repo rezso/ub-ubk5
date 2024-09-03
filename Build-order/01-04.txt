@@ -7,6 +7,7 @@ cairomm1.0
 cairomm
 libcacard
 libdbi
+opensp
 libofx
 libpwquality
 libstroke
@@ -68,7 +69,6 @@ colord-gtk
 radeontool
 vbetool
 mesa-demos
-xdg-utils
 xscreensaver
 dconf
 exiv2

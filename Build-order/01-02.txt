@@ -50,6 +50,7 @@ celt
 libmng
 mercurial
 scons
+talloc
 tevent
 gsettings-desktop-schemas
 libmbim
@@ -60,6 +61,7 @@ python3-cairo
 slang
 enchant
 glew
+swig
 libftdi1
 libical
 libnotify
@@ -79,6 +81,7 @@ pulseaudio
 sdl2
 sdl
 libtheora
+gamin
 ldb
 samba
 ladspa
