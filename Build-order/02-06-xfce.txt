@@ -1,5 +1,5 @@
 xfce4-dev-tools
-libxfce4windowing
+libxfce4windowing # budgie-desktop
 libxfce4util
 xfconf
 libxfce4ui

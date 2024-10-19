@@ -22,7 +22,7 @@ gnome-klotski
 gnome-robots
 gnome-taquin
 gnome-sound-recorder
-gnome-todo
+gnome-todo # endeavour
 bijiben
 gnome-maps
 quadrapassel
@@ -33,6 +33,7 @@ gnome-calendar
 gnome-color-manager
 gnome-music
 editorconfig
+libspelling
 gnome-text-editor
 libgit2
 libgit2-glib

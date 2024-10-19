@@ -1,0 +1,4 @@
+	/etc/xdg/autostart/lxpolkit.desktop
+	/usr/bin/lxpolkit
+	/usr/share/lxsession/ui/lxpolkit.ui
+	/usr/share/man/man1/lxpolkit.1

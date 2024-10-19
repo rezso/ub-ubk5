@@ -5,10 +5,8 @@ adduser
 agedu
 alien
 alsa-lib
-ansifilter
 antiword
 aoetools
-apr
 argon2
 autoconf2.13
 at
@@ -50,7 +48,7 @@ emoji
 enscript
 exfat-utils
 faac
-faad2
+libfaad2
 ffnvcodec-headers
 fftw3
 flite
