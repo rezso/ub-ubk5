@@ -13,6 +13,5 @@ lxsession
 lxpanel
 xmms2
 lxmusic
-lxpolkit
 lxde
 fluxbox
