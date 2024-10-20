@@ -3,6 +3,9 @@ layer-shell-qt-dev
 libkscreen-dev
 plasma-activities-dev
 plasma-activities-stats-dev
+plasma-wayland-protocols
 plasma-workspace-dev
+qcoro-dev
 qt6-dev
 systemd-dev
+wayland-dev

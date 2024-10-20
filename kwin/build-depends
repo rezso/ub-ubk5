@@ -7,6 +7,7 @@ kglobalacceld-dev
 kscreenlocker-dev
 kwayland-dev
 lcms2-dev
+libcanberra-dev
 libdisplay-info-dev
 libei-dev
 libepoxy-dev
