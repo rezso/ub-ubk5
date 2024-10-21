@@ -1,12 +1,12 @@
 autoconf2.13
 bzip2-dev
+cbindgen
 double-conversion
 icu-dev
 libedit-dev
 libffi-dev
 libpng-dev
 llvm
-llvm-libs
 nspr-dev
 nss-dev
 python3-psutil
