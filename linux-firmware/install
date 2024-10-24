@@ -1,6 +1,7 @@
 #!/bin/bash -eux
 
 make -C linux-firmware DESTDIR=${UB_INSTALLDIR} FIRMWAREDIR=/usr/lib/firmware install
+make -C linux-firmware DESTDIR=${UB_INSTALLDIR} FIRMWAREDIR=/usr/lib/firmware dedup
 
 cp -a dvb-firmware/* ${UB_INSTALLDIR}/usr/lib/firmware
 

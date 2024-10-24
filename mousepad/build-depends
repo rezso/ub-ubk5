@@ -4,5 +4,6 @@ gspell-dev
 gtksourceview4-dev
 intltool
 libsm-dev
+libxfce4ui-dev
 startup-notification-dev
 xcb-util-dev
