@@ -1,1 +1,1 @@
-polkit    216  216  -d / -s /bin/nologin
+polkit    216  216  -d / -s /usr/sbin/nologin
