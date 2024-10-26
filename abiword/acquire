@@ -3,5 +3,5 @@
 #abiword-${UB_VERSION}.tar.gz abiword-${UB_VERSION}/
 #	https://www.abisource.com/downloads/abiword/${UB_VERSION}/source/
 
-abiword-${UB_VERSION}.tar.gz AbiWord-2a06be6a/
-    git+https://gitlab.gnome.org/World/AbiWord.git@2a06be6a
+abiword-${UB_VERSION}.tar.gz AbiWord-86cfe26d/
+    git+https://gitlab.gnome.org/World/AbiWord.git@86cfe26d
