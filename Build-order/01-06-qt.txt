@@ -50,7 +50,6 @@ x.org-utils
 xmldiff
 sox
 espeak
-speechd
 libpst
 bogofilter
 highlight

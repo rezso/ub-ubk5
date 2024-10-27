@@ -15,7 +15,6 @@ ocrad
 pdmenu
 bleachbit
 lrzip
-doodle
 qt5ct
 odt2txt
 pdfminer

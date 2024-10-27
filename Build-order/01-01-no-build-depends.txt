@@ -51,7 +51,6 @@ faac
 libfaad2
 ffnvcodec-headers
 fftw3
-flite
 fping
 freepats
 ganyremote
