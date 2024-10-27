@@ -10,7 +10,6 @@ esound-dev
 faac-dev
 ffmpeg-dev
 flac-dev
-flite-dev
 fluidsynth-dev
 gobject-introspection-dev
 graphene-dev

@@ -1,8 +1,6 @@
 #!/bin/sh -eux
 
 rm -Rf texmf-dist/doc
-# rm -Rf texmf-dist/source
-# rm -Rf texmf-dist/fonts/source
 rm -Rf texmf-dist/scripts/context/stubs/{mswin,source,win64}
 
 mkdir build
@@ -40,4 +38,4 @@ cd build
 #	--disable-psutils \
 #	--disable-t1utils
 
-UB_MAKE_PROCS=1 ub_make
+ub_make
