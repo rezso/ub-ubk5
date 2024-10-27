@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-Mako-${UB_VERSION}.tar.gz Mako-${UB_VERSION}/
-	https://pypi.org/packages/source/M/Mako/
+rel_${UB_VERSION//./_}.tar.gz mako-rel_${UB_VERSION//./_}/
+	https://github.com/sqlalchemy/mako/archive/refs/tags/
