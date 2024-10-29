@@ -1,6 +1,6 @@
 diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/python.po
---- a/lang/python/hu/LC_MESSAGES/python.po	2024-08-13 22:00:50.000000000 +0200
-+++ b/lang/python/hu/LC_MESSAGES/python.po	2024-08-20 02:42:32.449385963 +0200
+--- a/lang/python/hu/LC_MESSAGES/python.po	2024-10-22 21:24:23.000000000 +0200
++++ b/lang/python/hu/LC_MESSAGES/python.po	2024-10-29 16:05:04.770591136 +0100
 @@ -81,23 +81,23 @@
  
  #: src/modules/displaymanager/main.py:956
@@ -13,8 +13,8 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  "The displaymanagers list is empty or undefined in both globalstorage and "
  "displaymanager.conf."
  msgstr ""
--"A displaymanagers lista üres vagy nincs meghatározva mind a globalstorage, "
--"mind a displaymanager.conf fájlban."
+-"A displaymanagers lista üres vagy nincs meghatározva a globalstorage vagy a "
+-"displaymanager.conf fájl egyikében."
 +"A beléptetők listája üres, vagy nincs megadva a sem globalstorage-ben, sem"
 +" a displaymanager.conf fájlban."
  
@@ -25,7 +25,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/dracut/main.py:29
  msgid "Creating initramfs with dracut."
--msgstr "initramfs létrehozása ezzel: dracut."
+-msgstr "Az initramfs létrehozása a dracuttal."
 +msgstr "initramfs létrehozása a dracut programmal."
  
  #: src/modules/dracut/main.py:63
@@ -39,30 +39,16 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/fstab/main.py:29
  msgid "Writing fstab."
-@@ -171,11 +171,11 @@
- 
- #: src/modules/initramfscfg/main.py:32
- msgid "Configuring initramfs."
--msgstr "initramfs konfigurálása."
-+msgstr "Az initramfs konfigurálása."
+@@ -176,7 +176,7 @@
  
  #: src/modules/localecfg/main.py:31
  msgid "Configuring locales."
--msgstr "nyelvi értékek konfigurálása."
-+msgstr "Nyelvi beállítások."
+-msgstr "Az területi beállítások konfigurálása."
++msgstr "A területi beállítások konfigurálása."
  
  #: src/modules/mkinitfs/main.py:27
  msgid "Creating initramfs with mkinitfs."
-@@ -304,7 +304,7 @@
- 
- #: src/modules/services-openrc/main.py:93
- msgid "Cannot modify service"
--msgstr "a szolgáltatást nem lehet módosítani"
-+msgstr "A szolgáltatást nem lehet módosítani"
- 
- #: src/modules/services-openrc/main.py:94
- msgid ""
-@@ -357,11 +357,11 @@
+@@ -363,7 +363,7 @@
  
  #: src/modules/unpackfs/main.py:34
  msgid "Filling up filesystems."
@@ -71,12 +57,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
  
  #: src/modules/unpackfs/main.py:254
  msgid "rsync failed with error code {}."
--msgstr "az rsync elhalt a(z) {} hibakóddal"
-+msgstr "Az rsync elhalt a(z) {} hibakóddal"
- 
- #: src/modules/unpackfs/main.py:299
- msgid "Unpacking image {}/{}, file {}/{}"
-@@ -414,7 +414,7 @@
+@@ -420,7 +420,7 @@
  "Failed to find unsquashfs, make sure you have the squashfs-tools package "
  "installed."
  msgstr ""
