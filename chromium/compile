@@ -9,14 +9,9 @@ rm -Rf third_party/rust-src # 4.4G
 rm -Rf third_party/rust-toolchain # 1.3G
 rm -Rf third_party/instrumented_libs # 2.2G
 
-if [ -d third_party/rust-src -a -d third_party/llvm ]; then
-    if [ $freespace -lt 23 ]; then
-	    echo "At least 23 GB free space is required!"
-	    exit 1
-	fi
-elif [ $freespace -lt 18 ]; then
-	echo "At least 18 GB free space is required!"
-	exit 1
+if [ $freespace -lt 25 ]; then
+    echo "At least 25 GB free space is required!"
+    exit 1
 fi
 
 procs=$(grep ^processor /proc/cpuinfo | wc -l)
