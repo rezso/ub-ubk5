@@ -11,4 +11,4 @@ for file in "$UB_INSTALLDIR"/usr/lib/udev/rules.d/*.rules; do
 done
 
 # /etc/initrd-release
-ln -s /etc/os-release "$UB_INSTALLDIR"/etc/initrd-release
+touch "$UB_INSTALLDIR"/etc/initrd-release

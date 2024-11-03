@@ -5,4 +5,4 @@
 	/usr/sbin/slap*
 	/usr/share/man/man5/slap*
 	/usr/share/man/man8/slap*
-	/var/lib/openldap
+	/var/lib/openldap-data

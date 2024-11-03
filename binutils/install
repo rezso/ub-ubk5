@@ -22,7 +22,7 @@ echo 'INPUT( /usr/lib/libbfd.a -liberty -lz -ldl )' > "$UB_INSTALLDIR"/usr/lib/l
 echo 'INPUT( /usr/lib/libopcodes.a -lbfd )' > "$UB_INSTALLDIR"/usr/lib/libopcodes.so
 
 # Create a "host" named link like in gcc
-host="x86_64-unknown-linux-gnu"
+host=$(gcc -dumpmachine)
 ln -sf ar "$UB_INSTALLDIR"/usr/bin/"$host"-ar
 ln -sf as "$UB_INSTALLDIR"/usr/bin/"$host"-as
 ln -sf nm "$UB_INSTALLDIR"/usr/bin/"$host"-nm
