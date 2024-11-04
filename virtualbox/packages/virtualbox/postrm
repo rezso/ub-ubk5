@@ -1,3 +1,0 @@
-#!/bin/bash
-
-depmod -a -F /boot/System.map-$(uname -r)
