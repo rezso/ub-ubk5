@@ -1,5 +1,7 @@
 #!/bin/bash -eux
 
+# ARCH="x86_64"
+ARCH=$(<localversion.20-arch)
 VERSION=$(<version)
 
 export KBUILD_BUILD_TIMESTAMP="$(LC_ALL=C LANG=C date)"
@@ -42,3 +44,8 @@ install -Dm 755 cpupower.systemd "$UB_INSTALLDIR/usr/lib/systemd/scripts/cpupowe
 
 install -Dm 644 lib/cpupower.h "$UB_INSTALLDIR/usr/include/"
 rm -rf ${UB_INSTALLDIR}/usr/share/doc/packages
+
+# update kernel config
+cp -f ${UB_COMPILEDIR}/.config "$UB_SRCDIR"/config/config"$ARCH"
+# postinst
+sed -i "s/@@VERSION@@/$VERSION/" ${UB_SRCDIR}/packages/kernel/postinst
