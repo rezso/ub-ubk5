@@ -16,4 +16,5 @@ lxqt-menu-data
 menu-cache-dev
 pulseaudio-dev
 solid-dev
+wayland-dev
 xcb-util-dev
