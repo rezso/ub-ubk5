@@ -1,7 +1,6 @@
 #!/bin/sh -eux
 
-export CC=gcc
-export CXX=g++
-
 ub_compile \
-	--disable-debian-menu
+    -DUSE_GTK3=ON \
+    -DUSE_QT6=OFF \
+    -DUSE_DEBIANMENU=OFF
