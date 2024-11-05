@@ -9,6 +9,7 @@ fonts-noto # plasma-integration
 socat # kwallet-pam
 opencv # mlt, kdenlive, digikam
 mlt # kdenlive
+yaz # tellico
 zxing-cpp # kitinerary
 plasma-wayland-protocols # kwayland
 xsettingsd # kde-gtk-settings
@@ -37,7 +38,6 @@ kitemmodels
 kitemviews
 kplotting
 kwidgetsaddons
-kwayland
 kwindowsystem
 kstatusnotifieritem
 modemmanager-qt
@@ -100,6 +100,7 @@ kf6-dev
 kirigami-addons
 plasma-activities
 plasma-activities-stats
+kwayland
 libplasma
 kio-extras # apps
 kdegraphics-thumbnailers # apps

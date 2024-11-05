@@ -1,5 +1,4 @@
 extra-cmake-modules
-kwayland-dev
 libxfixes-dev
 plasma-wayland-protocols
 qt6-dev
