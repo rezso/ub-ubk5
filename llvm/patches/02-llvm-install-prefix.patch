@@ -12,7 +12,7 @@ diff -Naur a/clang/cmake/modules/ClangConfig.cmake.in b/clang/cmake/modules/Clan
 diff -Naur a/llvm/cmake/modules/LLVMConfig.cmake.in b/llvm/cmake/modules/LLVMConfig.cmake.in
 --- a/llvm/cmake/modules/LLVMConfig.cmake.in	2023-11-28 09:52:28.000000000 +0100
 +++ b/llvm/cmake/modules/LLVMConfig.cmake.in	2024-01-04 04:58:01.311717212 +0100
-@@ -117,6 +117,7 @@
+@@ -112,6 +112,7 @@
  
  set(LLVM_LIBDIR_SUFFIX @LLVM_LIBDIR_SUFFIX@)
  
