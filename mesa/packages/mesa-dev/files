@@ -1,4 +1,5 @@
 	/usr/include
+	/usr/lib/*.a
 @	/usr/lib/d3d/*.so
 	/usr/lib/pkgconfig
 @	/usr/lib/*.so

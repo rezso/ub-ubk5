@@ -20,16 +20,12 @@ libxshmfence-dev
 libxv-dev
 libxvmc-dev
 libxxf86vm-dev
-llvm
 lmsensors-dev
 lua-dev
-meson
+ncurses-dev
 python3-dev
 python3-mako
 python3-setuptools
 systemd-dev
 wayland-dev
 wayland-protocols
-xcb-util-keysyms-dev
-x.org-proto-dev
-zstd-dev
