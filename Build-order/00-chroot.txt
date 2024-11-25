@@ -42,6 +42,7 @@ bash
 lzip
 ed
 bc
+mold
 binutils
 bison
 ccache
