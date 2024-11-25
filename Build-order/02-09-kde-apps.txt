@@ -40,6 +40,6 @@ kde
 #
 tellico
 digikam
-#kaffeine # kf5, multimedia lejátszó
+kaffeine # kf6: git, multimedia lejátszó
 krusader # kf5 + patch
 kshutdown # kf5 + patch
