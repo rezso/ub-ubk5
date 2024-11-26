@@ -1,1 +1,1 @@
-u2d https://pkgs.fedoraproject.org/repo/pkgs/ncdu/
+urllist https://pkgs.fedoraproject.org/repo/pkgs/ncdu/ | grep -E '^ncdu-1.([0-9.]+).tar.gz$' | parsever | sort -V | tail -n 1
