@@ -2,7 +2,6 @@ avahi-dev
 cpupower-dev
 gobject-introspection-dev
 gstreamer-dev
-gtksourceview4-dev
 itstool
 libgtop2-dev
 libmateweather-dev
