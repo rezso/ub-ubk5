@@ -1,0 +1,11 @@
+diff -Naur a/src/playlist_dialog.c b/src/playlist_dialog.c
+--- a/src/playlist_dialog.c	2016-08-30 17:31:39.000000000 +0200
++++ b/src/playlist_dialog.c	2024-12-02 20:14:31.904307347 +0100
+@@ -581,6 +581,7 @@
+     {
+         case GTK_RESPONSE_OK:
+             write_button_clicked (ET_PLAYLIST_DIALOG (dialog));
++            gtk_widget_hide (GTK_WIDGET (dialog));
+             break;
+         case GTK_RESPONSE_CANCEL:
+             gtk_widget_hide (GTK_WIDGET (dialog));

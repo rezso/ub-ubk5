@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
+git clone https://github.com/nemtrif/utfcpp.git 3rdparty/utfcpp
+
 ub_compile \
-	-DWITH_ASF:BOOL=ON \
-	-DWITH_MP4:BOOL=ON \
 	-DBUILD_SHARED_LIBS=ON
