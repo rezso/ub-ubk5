@@ -2,12 +2,12 @@
 
 # gcc patchset: https://gitlab.com/Matt.Jolly/chromium-patches
 
-freespace=$((`stat -f -c "%a" .`*`stat -f -c "%s" .`/(1024*1024*1024)))
-
 rm -Rf third_party/llvm* # 1.9G
 rm -Rf third_party/rust-src # 4.4G
 rm -Rf third_party/rust-toolchain # 1.3G
 rm -Rf third_party/instrumented_libs # 2.2G
+
+freespace=$((`stat -f -c "%a" .`*`stat -f -c "%s" .`/(1024*1024*1024)))
 
 if [ $freespace -lt 25 ]; then
     echo "At least 25 GB free space is required!"

@@ -1,6 +1,6 @@
 diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
---- a/build/config/compiler/BUILD.gn	2024-10-26 08:59:45.820987500 +0200
-+++ b/build/config/compiler/BUILD.gn	2024-10-29 20:21:28.682788784 +0100
+--- a/build/config/compiler/BUILD.gn	2024-11-19 23:47:50.179168500 +0100
++++ b/build/config/compiler/BUILD.gn	2024-12-05 00:36:10.746172399 +0100
 @@ -584,24 +584,6 @@
        }
      }
@@ -45,20 +45,20 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      }
  
      if (!optimize_for_size) {
-@@ -1955,9 +1932,6 @@
- 
-         # TODO(crbug.com/40286317): Evaluate and possibly enable.
-         "-Wno-vla-extension",
+@@ -1952,33 +1929,12 @@
+       cflags += [
+         # TODO(crbug.com/330524456): -Wcast-function-type is under -Wextra now.
+         "-Wno-cast-function-type",
 -
 -        # TODO(crbug.com/40284799): Fix and re-enable.
 -        "-Wno-thread-safety-reference-return",
        ]
  
        cflags_cc += [
-@@ -1965,18 +1939,6 @@
+         # TODO(crbug.com/328490295): Fix and re-enable for C flags.
          "-Wenum-compare-conditional",
        ]
- 
+-
 -      if (!is_nacl) {
 -        cflags_cc += [
 -          # TODO(crbug.com/41486292): Fix and re-enable.
@@ -70,6 +70,11 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
 -
 -        # TODO(crbug.com/356172342): Fix and re-enable.
 -        cflags_cc += [ "-Wno-dangling-assignment-gsl" ]
+-
+-        if (llvm_force_head_revision) {
+-          # TODO(crbug.com/373130005): Fix and re-enable.
+-          cflags_cc += [ "-Wno-deprecated-literal-operator" ]
+-        }
 -      }
      }
  
