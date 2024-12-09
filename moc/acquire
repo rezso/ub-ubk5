@@ -1,7 +1,7 @@
 #!/usr/bin/env dl
 
-#moc-${UB_VERSION}.tar.bz2 moc-${UB_VERSION}/
-#	https://ftp.daper.net/pub/soft/moc/stable/
+#${UB_VERSION/~/-}-p3.tar.gz moc-${UB_VERSION/~/-}-p3/
+#    https://github.com/xdch47/moc/archive/refs/tags/
 
-${UB_VERSION/~/-}-p3.tar.gz moc-${UB_VERSION/~/-}-p3/
-    https://github.com/xdch47/moc/archive/refs/tags/
+${UB_VERSION}.tar.gz mocp-${UB_VERSION}/
+    https://github.com/rezso/mocp/archive/refs/tags/

@@ -1,7 +1,7 @@
 alsa-lib-dev
 curl-dev
-cyrus-sasl2-dev
 db4-dev
+dbus-dev
 ffmpeg-dev
 file-dev
 flac-dev
@@ -12,11 +12,12 @@ libogg-dev
 libsamplerate-dev
 libsndfile-dev
 libvorbis-dev
+mpg123-dev
 musepack-dev
 ncurses-dev
+opusfile-dev
 popt-dev
 pulseaudio-dev
 systemd-dev
 taglib-dev
-util-linux-dev
 wavpack-dev
