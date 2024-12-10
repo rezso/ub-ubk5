@@ -132,5 +132,6 @@ wget
 inkscape
 rust-bindgen
 guile # gnucash
+libdecor
 x.org-xwayland
 libxpresent # metacity, xfwm4, mpv

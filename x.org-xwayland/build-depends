@@ -1,5 +1,6 @@
 dbus-dev
 egl-wayland-dev
+libdecor-dev
 libdrm-dev
 libepoxy-dev
 libglvnd-dev
