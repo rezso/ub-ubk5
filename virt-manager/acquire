@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-virt-manager-${UB_VERSION}.tar.gz virt-manager-${UB_VERSION}/
+virt-manager-${UB_VERSION}.tar.xz virt-manager-${UB_VERSION}/
 	https://releases.pagure.org/virt-manager/
