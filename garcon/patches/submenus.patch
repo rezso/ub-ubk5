@@ -1,10 +1,10 @@
 diff -Naur a/data/xfce/Makefile.am b/data/xfce/Makefile.am
---- a/data/xfce/Makefile.am	2022-10-30 11:45:03.000000000 +0100
-+++ b/data/xfce/Makefile.am	2022-12-15 17:14:39.357532028 +0100
+--- a/data/xfce/Makefile.am	2024-03-31 10:55:08.000000000 +0200
++++ b/data/xfce/Makefile.am	2024-12-15 19:28:17.467460591 +0100
 @@ -24,20 +24,68 @@
  directorydir = $(datadir)/desktop-directories
  directory_in_files =							\
- 	xfce-accessories.directory.in					\
+ 	xfce-accessories.desktop.in					\
 +	xfce-accessories-sub-archiving.directory.in			\
 +	xfce-accessories-sub-calculator.directory.in			\
 +	xfce-accessories-sub-clock.directory.in				\
@@ -13,9 +13,9 @@ diff -Naur a/data/xfce/Makefile.am b/data/xfce/Makefile.am
 +	xfce-accessories-sub-telephonytool.directory.in			\
 +	xfce-accessories-sub-texteditor.directory.in			\
 +	xfce-accessories-sub-texttool.directory.in			\
- 	xfce-development.directory.in					\
- 	xfce-education.directory.in					\
- 	xfce-games.directory.in						\
+ 	xfce-development.desktop.in					\
+ 	xfce-education.desktop.in					\
+ 	xfce-games.desktop.in						\
 +	xfce-games-sub-action.directory.in				\
 +	xfce-games-sub-adventure.directory.in				\
 +	xfce-games-sub-arcade.directory.in				\
@@ -28,9 +28,9 @@ diff -Naur a/data/xfce/Makefile.am b/data/xfce/Makefile.am
 +	xfce-games-sub-simulation.directory.in				\
 +	xfce-games-sub-sports.directory.in				\
 +	xfce-games-sub-strategy.directory.in				\
- 	xfce-graphics.directory.in					\
- 	xfce-hardware.directory.in					\
- 	xfce-multimedia.directory.in					\
+ 	xfce-graphics.desktop.in					\
+ 	xfce-hardware.desktop.in					\
+ 	xfce-multimedia.desktop.in					\
 +	xfce-multimedia-sub-audiovideoediting.directory.in		\
 +	xfce-multimedia-sub-discburning.directory.in			\
 +	xfce-multimedia-sub-midi.directory.in				\
@@ -41,7 +41,7 @@ diff -Naur a/data/xfce/Makefile.am b/data/xfce/Makefile.am
 +	xfce-multimedia-sub-sequencer.directory.in			\
 +	xfce-multimedia-sub-tuner.directory.in				\
 +	xfce-multimedia-sub-tv.directory.in				\
- 	xfce-network.directory.in					\
+ 	xfce-network.desktop.in					\
 +	xfce-network-sub-chat.directory.in				\
 +	xfce-network-sub-dialup.directory.in				\
 +	xfce-network-sub-feed.directory.in				\
@@ -55,29 +55,29 @@ diff -Naur a/data/xfce/Makefile.am b/data/xfce/Makefile.am
 +	xfce-network-sub-telephony.directory.in				\
 +	xfce-network-sub-videoconference.directory.in			\
 +	xfce-network-sub-webbrowser.directory.in			\
- 	xfce-office.directory.in					\
- 	xfce-other.directory.in						\
- 	xfce-personal.directory.in					\
- 	xfce-science.directory.in					\
- 	xfce-screensavers.directory.in					\
- 	xfce-settings.directory.in					\
--	xfce-system.directory.in
-+	xfce-system.directory.in					\
+ 	xfce-office.desktop.in					\
+ 	xfce-other.desktop.in						\
+ 	xfce-personal.desktop.in					\
+ 	xfce-science.desktop.in					\
+ 	xfce-screensavers.desktop.in					\
+ 	xfce-settings.desktop.in					\
+-	xfce-system.desktop.in
++	xfce-system.desktop.in						\
 +	xfce-system-sub-emulator.directory.in				\
 +	xfce-system-sub-filemanager.directory.in			\
 +	xfce-system-sub-filesystem.directory.in				\
 +	xfce-system-sub-monitor.directory.in				\
 +	xfce-system-sub-terminalemulator.directory.in
  
- directory_DATA = $(directory_in_files:.directory.in=.directory)
- @INTLTOOL_DIRECTORY_RULE@
+ directory_DATA = $(directory_in_files:.desktop.in=.directory)
+ 
 diff -Naur a/data/xfce/Makefile.in b/data/xfce/Makefile.in
---- a/data/xfce/Makefile.in	2022-12-15 09:41:19.000000000 +0100
-+++ b/data/xfce/Makefile.in	2022-12-15 17:18:22.514134283 +0100
-@@ -376,20 +376,69 @@
+--- a/data/xfce/Makefile.in	2024-12-15 09:09:16.000000000 +0100
++++ b/data/xfce/Makefile.in	2024-12-15 19:32:41.603800713 +0100
+@@ -381,20 +381,69 @@
  directorydir = $(datadir)/desktop-directories
  directory_in_files = \
- 	xfce-accessories.directory.in					\
+ 	xfce-accessories.desktop.in					\
 +	xfce-accessories-sub-archiving.directory.in			\
 +	xfce-accessories-sub-calculator.directory.in			\
 +	xfce-accessories-sub-clock.directory.in				\
@@ -86,9 +86,9 @@ diff -Naur a/data/xfce/Makefile.in b/data/xfce/Makefile.in
 +	xfce-accessories-sub-telephonytool.directory.in			\
 +	xfce-accessories-sub-texteditor.directory.in		\
 +	xfce-accessories-sub-texttool.directory.in		\
- 	xfce-development.directory.in					\
- 	xfce-education.directory.in					\
- 	xfce-games.directory.in						\
+ 	xfce-development.desktop.in					\
+ 	xfce-education.desktop.in					\
+ 	xfce-games.desktop.in						\
 +	xfce-games-sub-action.directory.in				\
 +	xfce-games-sub-adventure.directory.in			\
 +	xfce-games-sub-arcade.directory.in				\
@@ -101,9 +101,9 @@ diff -Naur a/data/xfce/Makefile.in b/data/xfce/Makefile.in
 +	xfce-games-sub-simulation.directory.in			\
 +	xfce-games-sub-sports.directory.in				\
 +	xfce-games-sub-strategy.directory.in			\
- 	xfce-graphics.directory.in					\
- 	xfce-hardware.directory.in					\
- 	xfce-multimedia.directory.in					\
+ 	xfce-graphics.desktop.in					\
+ 	xfce-hardware.desktop.in					\
+ 	xfce-multimedia.desktop.in					\
 +	xfce-multimedia-sub-audiovideoediting.directory.in		\
 +	xfce-multimedia-sub-discburning.directory.in			\
 +	xfce-multimedia-sub-midi.directory.in				\
@@ -114,7 +114,7 @@ diff -Naur a/data/xfce/Makefile.in b/data/xfce/Makefile.in
 +	xfce-multimedia-sub-sequencer.directory.in			\
 +	xfce-multimedia-sub-tuner.directory.in				\
 +	xfce-multimedia-sub-tv.directory.in				\
- 	xfce-network.directory.in					\
+ 	xfce-network.desktop.in					\
 +	xfce-network-sub-chat.directory.in				\
 +	xfce-network-sub-dialup.directory.in				\
 +	xfce-network-sub-email.directory.in				\
@@ -129,25 +129,25 @@ diff -Naur a/data/xfce/Makefile.in b/data/xfce/Makefile.in
 +	xfce-network-sub-telephony.directory.in				\
 +	xfce-network-sub-videoconference.directory.in			\
 +	xfce-network-sub-webbrowser.directory.in			\
- 	xfce-office.directory.in					\
- 	xfce-other.directory.in						\
- 	xfce-personal.directory.in					\
- 	xfce-science.directory.in					\
- 	xfce-screensavers.directory.in					\
- 	xfce-settings.directory.in					\
--	xfce-system.directory.in
-+	xfce-system.directory.in					\
+ 	xfce-office.desktop.in					\
+ 	xfce-other.desktop.in						\
+ 	xfce-personal.desktop.in					\
+ 	xfce-science.desktop.in					\
+ 	xfce-screensavers.desktop.in					\
+ 	xfce-settings.desktop.in					\
+-	xfce-system.desktop.in
++	xfce-system.desktop.in                      \
 +	xfce-system-sub-emulator.directory.in				\
 +	xfce-system-sub-filemanager.directory.in			\
 +	xfce-system-sub-filesystem.directory.in				\
 +	xfce-system-sub-monitor.directory.in				\
 +	xfce-system-sub-terminalemulator.directory.in
  
- directory_DATA = $(directory_in_files:.directory.in=.directory)
+ directory_DATA = $(directory_in_files:.desktop.in=.directory)
  EXTRA_DIST = \
 diff -Naur a/data/xfce/xfce-accessories-sub-archiving.directory.in b/data/xfce/xfce-accessories-sub-archiving.directory.in
 --- a/data/xfce/xfce-accessories-sub-archiving.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-archiving.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-archiving.directory.in	2024-12-15 19:25:00.339214756 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Archiving
@@ -158,7 +158,7 @@ diff -Naur a/data/xfce/xfce-accessories-sub-archiving.directory.in b/data/xfce/x
 +Type=Directory
 diff -Naur a/data/xfce/xfce-accessories-sub-calculator.directory.in b/data/xfce/xfce-accessories-sub-calculator.directory.in
 --- a/data/xfce/xfce-accessories-sub-calculator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-calculator.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-calculator.directory.in	2024-12-15 19:25:00.339214756 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Calculator
@@ -167,7 +167,7 @@ diff -Naur a/data/xfce/xfce-accessories-sub-calculator.directory.in b/data/xfce/
 +Type=Directory
 diff -Naur a/data/xfce/xfce-accessories-sub-clock.directory.in b/data/xfce/xfce-accessories-sub-clock.directory.in
 --- a/data/xfce/xfce-accessories-sub-clock.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-clock.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-clock.directory.in	2024-12-15 19:25:00.339214756 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Clock
@@ -176,7 +176,7 @@ diff -Naur a/data/xfce/xfce-accessories-sub-clock.directory.in b/data/xfce/xfce-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-accessories-sub-compression.directory.in b/data/xfce/xfce-accessories-sub-compression.directory.in
 --- a/data/xfce/xfce-accessories-sub-compression.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-compression.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-compression.directory.in	2024-12-15 19:25:00.339214756 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Compression
@@ -187,7 +187,7 @@ diff -Naur a/data/xfce/xfce-accessories-sub-compression.directory.in b/data/xfce
 +Type=Directory
 diff -Naur a/data/xfce/xfce-accessories-sub-filetool.directory.in b/data/xfce/xfce-accessories-sub-filetool.directory.in
 --- a/data/xfce/xfce-accessories-sub-filetool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-filetool.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-filetool.directory.in	2024-12-15 19:25:00.339214756 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=File tool
@@ -196,7 +196,7 @@ diff -Naur a/data/xfce/xfce-accessories-sub-filetool.directory.in b/data/xfce/xf
 +Type=Directory
 diff -Naur a/data/xfce/xfce-accessories-sub-telephonytool.directory.in b/data/xfce/xfce-accessories-sub-telephonytool.directory.in
 --- a/data/xfce/xfce-accessories-sub-telephonytool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-telephonytool.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-telephonytool.directory.in	2024-12-15 19:25:00.339214756 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony tool
@@ -207,7 +207,7 @@ diff -Naur a/data/xfce/xfce-accessories-sub-telephonytool.directory.in b/data/xf
 +Type=Directory
 diff -Naur a/data/xfce/xfce-accessories-sub-texteditor.directory.in b/data/xfce/xfce-accessories-sub-texteditor.directory.in
 --- a/data/xfce/xfce-accessories-sub-texteditor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-texteditor.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-texteditor.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text editor
@@ -218,7 +218,7 @@ diff -Naur a/data/xfce/xfce-accessories-sub-texteditor.directory.in b/data/xfce/
 +Type=Directory
 diff -Naur a/data/xfce/xfce-accessories-sub-texttool.directory.in b/data/xfce/xfce-accessories-sub-texttool.directory.in
 --- a/data/xfce/xfce-accessories-sub-texttool.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-accessories-sub-texttool.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-accessories-sub-texttool.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Text tool
@@ -228,8 +228,8 @@ diff -Naur a/data/xfce/xfce-accessories-sub-texttool.directory.in b/data/xfce/xf
 +Icon=accessories-text-editor
 +Type=Directory
 diff -Naur a/data/xfce/xfce-applications.menu b/data/xfce/xfce-applications.menu
---- a/data/xfce/xfce-applications.menu	2022-10-30 11:45:03.000000000 +0100
-+++ b/data/xfce/xfce-applications.menu	2022-12-15 17:11:06.917147141 +0100
+--- a/data/xfce/xfce-applications.menu	2023-08-04 09:54:02.000000000 +0200
++++ b/data/xfce/xfce-applications.menu	2024-12-15 19:25:00.343214761 +0100
 @@ -33,6 +33,9 @@
          <Include>
              <Category>Settings</Category>
@@ -703,7 +703,7 @@ diff -Naur a/data/xfce/xfce-applications.menu b/data/xfce/xfce-applications.menu
      <Menu>
 diff -Naur a/data/xfce/xfce-games-sub-action.directory.in b/data/xfce/xfce-games-sub-action.directory.in
 --- a/data/xfce/xfce-games-sub-action.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-action.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-action.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Action
@@ -714,7 +714,7 @@ diff -Naur a/data/xfce/xfce-games-sub-action.directory.in b/data/xfce/xfce-games
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-adventure.directory.in b/data/xfce/xfce-games-sub-adventure.directory.in
 --- a/data/xfce/xfce-games-sub-adventure.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-adventure.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-adventure.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Adventure
@@ -725,7 +725,7 @@ diff -Naur a/data/xfce/xfce-games-sub-adventure.directory.in b/data/xfce/xfce-ga
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-arcade.directory.in b/data/xfce/xfce-games-sub-arcade.directory.in
 --- a/data/xfce/xfce-games-sub-arcade.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-arcade.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-arcade.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Arcade
@@ -736,7 +736,7 @@ diff -Naur a/data/xfce/xfce-games-sub-arcade.directory.in b/data/xfce/xfce-games
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-blocks.directory.in b/data/xfce/xfce-games-sub-blocks.directory.in
 --- a/data/xfce/xfce-games-sub-blocks.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-blocks.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-blocks.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Blocks
@@ -747,7 +747,7 @@ diff -Naur a/data/xfce/xfce-games-sub-blocks.directory.in b/data/xfce/xfce-games
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-board.directory.in b/data/xfce/xfce-games-sub-board.directory.in
 --- a/data/xfce/xfce-games-sub-board.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-board.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-board.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Board
@@ -758,7 +758,7 @@ diff -Naur a/data/xfce/xfce-games-sub-board.directory.in b/data/xfce/xfce-games-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-card.directory.in b/data/xfce/xfce-games-sub-card.directory.in
 --- a/data/xfce/xfce-games-sub-card.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-card.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-card.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Card
@@ -769,7 +769,7 @@ diff -Naur a/data/xfce/xfce-games-sub-card.directory.in b/data/xfce/xfce-games-s
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-kids.directory.in b/data/xfce/xfce-games-sub-kids.directory.in
 --- a/data/xfce/xfce-games-sub-kids.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-kids.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-kids.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Kids
@@ -780,7 +780,7 @@ diff -Naur a/data/xfce/xfce-games-sub-kids.directory.in b/data/xfce/xfce-games-s
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-logic.directory.in b/data/xfce/xfce-games-sub-logic.directory.in
 --- a/data/xfce/xfce-games-sub-logic.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-logic.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-logic.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Logic
@@ -791,7 +791,7 @@ diff -Naur a/data/xfce/xfce-games-sub-logic.directory.in b/data/xfce/xfce-games-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-roleplaying.directory.in b/data/xfce/xfce-games-sub-roleplaying.directory.in
 --- a/data/xfce/xfce-games-sub-roleplaying.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-roleplaying.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-roleplaying.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Role playing
@@ -800,7 +800,7 @@ diff -Naur a/data/xfce/xfce-games-sub-roleplaying.directory.in b/data/xfce/xfce-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-simulation.directory.in b/data/xfce/xfce-games-sub-simulation.directory.in
 --- a/data/xfce/xfce-games-sub-simulation.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-simulation.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-simulation.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Simulation
@@ -811,7 +811,7 @@ diff -Naur a/data/xfce/xfce-games-sub-simulation.directory.in b/data/xfce/xfce-g
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-sports.directory.in b/data/xfce/xfce-games-sub-sports.directory.in
 --- a/data/xfce/xfce-games-sub-sports.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-sports.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-sports.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Sports
@@ -822,7 +822,7 @@ diff -Naur a/data/xfce/xfce-games-sub-sports.directory.in b/data/xfce/xfce-games
 +Type=Directory
 diff -Naur a/data/xfce/xfce-games-sub-strategy.directory.in b/data/xfce/xfce-games-sub-strategy.directory.in
 --- a/data/xfce/xfce-games-sub-strategy.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-games-sub-strategy.directory.in	2022-12-15 17:11:06.917147141 +0100
++++ b/data/xfce/xfce-games-sub-strategy.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Strategy
@@ -833,7 +833,7 @@ diff -Naur a/data/xfce/xfce-games-sub-strategy.directory.in b/data/xfce/xfce-gam
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-audiovideoediting.directory.in b/data/xfce/xfce-multimedia-sub-audiovideoediting.directory.in
 --- a/data/xfce/xfce-multimedia-sub-audiovideoediting.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-audiovideoediting.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-audiovideoediting.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Sound & Video editing
@@ -844,7 +844,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-audiovideoediting.directory.in b/data
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-discburning.directory.in b/data/xfce/xfce-multimedia-sub-discburning.directory.in
 --- a/data/xfce/xfce-multimedia-sub-discburning.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-discburning.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-discburning.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Disc burning
@@ -855,7 +855,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-discburning.directory.in b/data/xfce/
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-midi.directory.in b/data/xfce/xfce-multimedia-sub-midi.directory.in
 --- a/data/xfce/xfce-multimedia-sub-midi.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-midi.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-midi.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=MIDI
@@ -866,7 +866,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-midi.directory.in b/data/xfce/xfce-mu
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-mixer.directory.in b/data/xfce/xfce-multimedia-sub-mixer.directory.in
 --- a/data/xfce/xfce-multimedia-sub-mixer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-mixer.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-mixer.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Mixer
@@ -875,7 +875,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-mixer.directory.in b/data/xfce/xfce-m
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-music.directory.in b/data/xfce/xfce-multimedia-sub-music.directory.in
 --- a/data/xfce/xfce-multimedia-sub-music.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-music.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-music.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Music
@@ -886,7 +886,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-music.directory.in b/data/xfce/xfce-m
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-player.directory.in b/data/xfce/xfce-multimedia-sub-player.directory.in
 --- a/data/xfce/xfce-multimedia-sub-player.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-player.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-player.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Player
@@ -897,7 +897,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-player.directory.in b/data/xfce/xfce-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-recorder.directory.in b/data/xfce/xfce-multimedia-sub-recorder.directory.in
 --- a/data/xfce/xfce-multimedia-sub-recorder.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-recorder.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-recorder.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Recorder
@@ -908,7 +908,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-recorder.directory.in b/data/xfce/xfc
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-sequencer.directory.in b/data/xfce/xfce-multimedia-sub-sequencer.directory.in
 --- a/data/xfce/xfce-multimedia-sub-sequencer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-sequencer.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-sequencer.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Sequencer
@@ -917,7 +917,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-sequencer.directory.in b/data/xfce/xf
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-tuner.directory.in b/data/xfce/xfce-multimedia-sub-tuner.directory.in
 --- a/data/xfce/xfce-multimedia-sub-tuner.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-tuner.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-tuner.directory.in	2024-12-15 19:25:00.343214761 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Tuner
@@ -926,7 +926,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-tuner.directory.in b/data/xfce/xfce-m
 +Type=Directory
 diff -Naur a/data/xfce/xfce-multimedia-sub-tv.directory.in b/data/xfce/xfce-multimedia-sub-tv.directory.in
 --- a/data/xfce/xfce-multimedia-sub-tv.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-multimedia-sub-tv.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-multimedia-sub-tv.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=TV
@@ -937,7 +937,7 @@ diff -Naur a/data/xfce/xfce-multimedia-sub-tv.directory.in b/data/xfce/xfce-mult
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-chat.directory.in b/data/xfce/xfce-network-sub-chat.directory.in
 --- a/data/xfce/xfce-network-sub-chat.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-chat.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-chat.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Chat
@@ -948,7 +948,7 @@ diff -Naur a/data/xfce/xfce-network-sub-chat.directory.in b/data/xfce/xfce-netwo
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-dialup.directory.in b/data/xfce/xfce-network-sub-dialup.directory.in
 --- a/data/xfce/xfce-network-sub-dialup.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-dialup.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-dialup.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Dial-up
@@ -959,7 +959,7 @@ diff -Naur a/data/xfce/xfce-network-sub-dialup.directory.in b/data/xfce/xfce-net
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-email.directory.in b/data/xfce/xfce-network-sub-email.directory.in
 --- a/data/xfce/xfce-network-sub-email.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-email.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-email.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Email
@@ -970,7 +970,7 @@ diff -Naur a/data/xfce/xfce-network-sub-email.directory.in b/data/xfce/xfce-netw
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-feed.directory.in b/data/xfce/xfce-network-sub-feed.directory.in
 --- a/data/xfce/xfce-network-sub-feed.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-feed.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-feed.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Feed
@@ -981,7 +981,7 @@ diff -Naur a/data/xfce/xfce-network-sub-feed.directory.in b/data/xfce/xfce-netwo
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-filetransfer.directory.in b/data/xfce/xfce-network-sub-filetransfer.directory.in
 --- a/data/xfce/xfce-network-sub-filetransfer.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-filetransfer.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-filetransfer.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=File transfer
@@ -992,7 +992,7 @@ diff -Naur a/data/xfce/xfce-network-sub-filetransfer.directory.in b/data/xfce/xf
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-hamradio.directory.in b/data/xfce/xfce-network-sub-hamradio.directory.in
 --- a/data/xfce/xfce-network-sub-hamradio.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-hamradio.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-hamradio.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=HAM radio
@@ -1003,7 +1003,7 @@ diff -Naur a/data/xfce/xfce-network-sub-hamradio.directory.in b/data/xfce/xfce-n
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-instantmessaging.directory.in b/data/xfce/xfce-network-sub-instantmessaging.directory.in
 --- a/data/xfce/xfce-network-sub-instantmessaging.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-instantmessaging.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-instantmessaging.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Instant messaging
@@ -1014,7 +1014,7 @@ diff -Naur a/data/xfce/xfce-network-sub-instantmessaging.directory.in b/data/xfc
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-ircclient.directory.in b/data/xfce/xfce-network-sub-ircclient.directory.in
 --- a/data/xfce/xfce-network-sub-ircclient.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-ircclient.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-ircclient.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=IRC client
@@ -1023,7 +1023,7 @@ diff -Naur a/data/xfce/xfce-network-sub-ircclient.directory.in b/data/xfce/xfce-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-news.directory.in b/data/xfce/xfce-network-sub-news.directory.in
 --- a/data/xfce/xfce-network-sub-news.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-news.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-news.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=News
@@ -1034,7 +1034,7 @@ diff -Naur a/data/xfce/xfce-network-sub-news.directory.in b/data/xfce/xfce-netwo
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-p2p.directory.in b/data/xfce/xfce-network-sub-p2p.directory.in
 --- a/data/xfce/xfce-network-sub-p2p.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-p2p.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-p2p.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=P2P
@@ -1045,7 +1045,7 @@ diff -Naur a/data/xfce/xfce-network-sub-p2p.directory.in b/data/xfce/xfce-networ
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-remoteaccess.directory.in b/data/xfce/xfce-network-sub-remoteaccess.directory.in
 --- a/data/xfce/xfce-network-sub-remoteaccess.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-remoteaccess.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-remoteaccess.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Remote access
@@ -1056,7 +1056,7 @@ diff -Naur a/data/xfce/xfce-network-sub-remoteaccess.directory.in b/data/xfce/xf
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-telephony.directory.in b/data/xfce/xfce-network-sub-telephony.directory.in
 --- a/data/xfce/xfce-network-sub-telephony.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-telephony.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-telephony.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Telephony
@@ -1067,7 +1067,7 @@ diff -Naur a/data/xfce/xfce-network-sub-telephony.directory.in b/data/xfce/xfce-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-videoconference.directory.in b/data/xfce/xfce-network-sub-videoconference.directory.in
 --- a/data/xfce/xfce-network-sub-videoconference.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-videoconference.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-videoconference.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Video conference
@@ -1078,7 +1078,7 @@ diff -Naur a/data/xfce/xfce-network-sub-videoconference.directory.in b/data/xfce
 +Type=Directory
 diff -Naur a/data/xfce/xfce-network-sub-webbrowser.directory.in b/data/xfce/xfce-network-sub-webbrowser.directory.in
 --- a/data/xfce/xfce-network-sub-webbrowser.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-network-sub-webbrowser.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-network-sub-webbrowser.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=Web browser
@@ -1087,7 +1087,7 @@ diff -Naur a/data/xfce/xfce-network-sub-webbrowser.directory.in b/data/xfce/xfce
 +Type=Directory
 diff -Naur a/data/xfce/xfce-system-sub-emulator.directory.in b/data/xfce/xfce-system-sub-emulator.directory.in
 --- a/data/xfce/xfce-system-sub-emulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-system-sub-emulator.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-system-sub-emulator.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Emulator
@@ -1098,7 +1098,7 @@ diff -Naur a/data/xfce/xfce-system-sub-emulator.directory.in b/data/xfce/xfce-sy
 +Type=Directory
 diff -Naur a/data/xfce/xfce-system-sub-filemanager.directory.in b/data/xfce/xfce-system-sub-filemanager.directory.in
 --- a/data/xfce/xfce-system-sub-filemanager.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-system-sub-filemanager.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-system-sub-filemanager.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,5 @@
 +[Desktop Entry]
 +_Name=File manager
@@ -1107,7 +1107,7 @@ diff -Naur a/data/xfce/xfce-system-sub-filemanager.directory.in b/data/xfce/xfce
 +Type=Directory
 diff -Naur a/data/xfce/xfce-system-sub-filesystem.directory.in b/data/xfce/xfce-system-sub-filesystem.directory.in
 --- a/data/xfce/xfce-system-sub-filesystem.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-system-sub-filesystem.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-system-sub-filesystem.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Filesystem
@@ -1118,7 +1118,7 @@ diff -Naur a/data/xfce/xfce-system-sub-filesystem.directory.in b/data/xfce/xfce-
 +Type=Directory
 diff -Naur a/data/xfce/xfce-system-sub-monitor.directory.in b/data/xfce/xfce-system-sub-monitor.directory.in
 --- a/data/xfce/xfce-system-sub-monitor.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-system-sub-monitor.directory.in	2022-12-15 17:11:06.921147150 +0100
++++ b/data/xfce/xfce-system-sub-monitor.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Monitor
@@ -1129,7 +1129,7 @@ diff -Naur a/data/xfce/xfce-system-sub-monitor.directory.in b/data/xfce/xfce-sys
 +Type=Directory
 diff -Naur a/data/xfce/xfce-system-sub-terminalemulator.directory.in b/data/xfce/xfce-system-sub-terminalemulator.directory.in
 --- a/data/xfce/xfce-system-sub-terminalemulator.directory.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/data/xfce/xfce-system-sub-terminalemulator.directory.in	2022-12-15 17:11:06.925147159 +0100
++++ b/data/xfce/xfce-system-sub-terminalemulator.directory.in	2024-12-15 19:25:00.347214766 +0100
 @@ -0,0 +1,7 @@
 +[Desktop Entry]
 +_Name=Terminal emulator
@@ -1139,10 +1139,10 @@ diff -Naur a/data/xfce/xfce-system-sub-terminalemulator.directory.in b/data/xfce
 +Icon=utilities-terminal
 +Type=Directory
 diff -Naur a/po/POTFILES.in b/po/POTFILES.in
---- a/po/POTFILES.in	2022-10-30 11:45:04.000000000 +0100
-+++ b/po/POTFILES.in	2022-12-15 17:22:58.958907349 +0100
+--- a/po/POTFILES.in	2024-03-31 10:55:09.000000000 +0200
++++ b/po/POTFILES.in	2024-12-15 19:36:29.000103692 +0100
 @@ -1,11 +1,55 @@
- data/xfce/xfce-accessories.directory.in
+ data/xfce/xfce-accessories.desktop.in
 +data/xfce/xfce-accessories-sub-archiving.directory.in
 +data/xfce/xfce-accessories-sub-calculator.directory.in
 +data/xfce/xfce-accessories-sub-clock.directory.in
@@ -1151,9 +1151,9 @@ diff -Naur a/po/POTFILES.in b/po/POTFILES.in
 +data/xfce/xfce-accessories-sub-telephonytool.directory.in
 +data/xfce/xfce-accessories-sub-texteditor.directory.in
 +data/xfce/xfce-accessories-sub-texttool.directory.in
- data/xfce/xfce-development.directory.in
- data/xfce/xfce-education.directory.in
- data/xfce/xfce-games.directory.in
+ data/xfce/xfce-development.desktop.in
+ data/xfce/xfce-education.desktop.in
+ data/xfce/xfce-games.desktop.in
 +data/xfce/xfce-games-sub-action.directory.in	
 +data/xfce/xfce-games-sub-adventure.directory.in	
 +data/xfce/xfce-games-sub-arcade.directory.in	
@@ -1167,9 +1167,9 @@ diff -Naur a/po/POTFILES.in b/po/POTFILES.in
 +data/xfce/xfce-games-sub-simulation.directory.in	
 +data/xfce/xfce-games-sub-sports.directory.in	
 +data/xfce/xfce-games-sub-strategy.directory.in
- data/xfce/xfce-graphics.directory.in
- data/xfce/xfce-hardware.directory.in
- data/xfce/xfce-multimedia.directory.in
+ data/xfce/xfce-graphics.desktop.in
+ data/xfce/xfce-hardware.desktop.in
+ data/xfce/xfce-multimedia.desktop.in
 +data/xfce/xfce-multimedia-sub-audiovideoediting.directory.in
 +data/xfce/xfce-multimedia-sub-discburning.directory.in
 +data/xfce/xfce-multimedia-sub-midi.directory.in	
@@ -1180,7 +1180,7 @@ diff -Naur a/po/POTFILES.in b/po/POTFILES.in
 +data/xfce/xfce-multimedia-sub-sequencer.directory.in
 +data/xfce/xfce-multimedia-sub-tuner.directory.in	
 +data/xfce/xfce-multimedia-sub-tv.directory.in	
- data/xfce/xfce-network.directory.in
+ data/xfce/xfce-network.desktop.in
 +data/xfce/xfce-network-sub-chat.directory.in	
 +data/xfce/xfce-network-sub-dialup.directory.in	
 +data/xfce/xfce-network-sub-feed.directory.in	
@@ -1194,13 +1194,13 @@ diff -Naur a/po/POTFILES.in b/po/POTFILES.in
 +data/xfce/xfce-network-sub-telephony.directory.in	
 +data/xfce/xfce-network-sub-videoconference.directory.in
 +data/xfce/xfce-network-sub-webbrowser.directory.in
- data/xfce/xfce-office.directory.in
- data/xfce/xfce-other.directory.in
- data/xfce/xfce-personal.directory.in
+ data/xfce/xfce-office.desktop.in
+ data/xfce/xfce-other.desktop.in
+ data/xfce/xfce-personal.desktop.in
 @@ -13,6 +57,11 @@
- data/xfce/xfce-screensavers.directory.in
- data/xfce/xfce-settings.directory.in
- data/xfce/xfce-system.directory.in
+ data/xfce/xfce-screensavers.desktop.in
+ data/xfce/xfce-settings.desktop.in
+ data/xfce/xfce-system.desktop.in
 +data/xfce/xfce-system-sub-emulator.directory.in	
 +data/xfce/xfce-system-sub-filemanager.directory.in
 +data/xfce/xfce-system-sub-filesystem.directory.in	

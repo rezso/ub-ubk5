@@ -11,5 +11,6 @@ libx11-dev
 libxext-dev
 libxfce4ui-dev
 libxfce4util-dev
+libxfce4windowing-dev
 pango-dev
 xfconf-dev
