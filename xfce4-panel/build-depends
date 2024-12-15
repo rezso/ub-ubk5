@@ -3,6 +3,7 @@ garcon-dev
 gdk-pixbuf-dev
 gobject-introspection-dev
 gtk3-dev
+gtk3-layer-shell-dev
 intltool
 libdbusmenu-gtk3-dev
 libexo-dev
