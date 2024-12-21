@@ -1,1 +1,1 @@
-u2dpypi docutils
+sflist docutils docutils | sort -V | tail -n1

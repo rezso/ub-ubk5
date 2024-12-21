@@ -1,1 +1,1 @@
-u2dpypi bsddb3
+urllist https://www.jcea.es/programacion/pybsddb.htm | grep -E '^[0-9]+\.[0-9]+\.+' | sort -V | tail -n1
