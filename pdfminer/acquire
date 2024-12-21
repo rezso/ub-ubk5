@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-pdfminer-${UB_VERSION}.tar.gz pdfminer-${UB_VERSION}/
-	https://pypi.org/packages/source/p/pdfminer/
+${UB_VERSION}.tar.gz pdfminer.six-${UB_VERSION}/
+	https://github.com/pdfminer/pdfminer.six/archive/refs/tags/
