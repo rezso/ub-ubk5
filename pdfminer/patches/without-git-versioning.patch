@@ -1,0 +1,14 @@
+diff -Naur a/setup.py b/setup.py
+--- a/setup.py	2024-07-06 15:47:18.000000000 +0200
++++ b/setup.py	2024-12-21 18:37:46.602838247 +0100
+@@ -19,10 +19,6 @@
+ 
+ setup(
+     name="pdfminer.six",
+-    setuptools_git_versioning={
+-        "enabled": True,
+-    },
+-    setup_requires=["setuptools-git-versioning<3"],
+     packages=["pdfminer"],
+     package_data={"pdfminer": ["cmap/*.pickle.gz", "py.typed"]},
+     install_requires=[
