@@ -130,7 +130,6 @@ pcmanfm
 libextractor
 wget
 inkscape
-rust-bindgen
 guile # gnucash
 libdecor
 x.org-xwayland

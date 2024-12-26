@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz pyproject-hooks-${UB_VERSION}/
+	https://github.com/pypa/pyproject-hooks/archive/refs/tags/
