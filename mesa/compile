@@ -4,14 +4,13 @@
 
 ub_compile \
 	-Dplatforms=x11,wayland \
-	-Ddri3=enabled \
 	-Dgles1=disabled \
 	-Dgles2=enabled \
 	-Dgbm=enabled \
 	-Dglx=dri \
 	-Degl=enabled \
 	-Dgallium-drivers=auto \
-	-Dglvnd=true \
+	-Dglvnd=enabled \
 	-Dvulkan-drivers=amd,intel \
 	-Dvulkan-layers=device-select,intel-nullhw,overlay \
 	-Dllvm=enabled \

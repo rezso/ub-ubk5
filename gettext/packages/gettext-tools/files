@@ -4,6 +4,7 @@
 	/usr/lib/gettext
 	/usr/lib/libgettextpo.so.*
 	/usr/lib/libgettext*-*.so
+	/usr/lib/libtextstyle.so.*
 	/usr/share/gettext/projects
 	/usr/share/gettext/styles
 	/usr/share/locale/*/LC_MESSAGES/gettext-tools.mo

@@ -16,5 +16,6 @@ ub_replace -O3 -O2 Configure
 	zlib-dynamic \
 	-Wa,--noexecstack
 
+# ub_make generate_doc_buildinfo
 ub_make depend
 ub_make

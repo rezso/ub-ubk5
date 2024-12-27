@@ -7,6 +7,7 @@ ub_compile \
 	--sbindir=/usr/sbin \
 	--libdir=/usr/lib \
 	--disable-doc \
-	--disable-nis
+	--disable-nis \
+	--disable-Werror
 
 ub_make -C modules/pam_envfeed

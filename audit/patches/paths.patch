@@ -1,6 +1,6 @@
 diff -Naur a/audisp/plugins/remote/au-remote.conf b/audisp/plugins/remote/au-remote.conf
---- a/audisp/plugins/remote/au-remote.conf	2023-04-27 19:26:56.000000000 +0200
-+++ b/audisp/plugins/remote/au-remote.conf	2023-04-29 21:03:33.351126838 +0200
+--- a/audisp/plugins/remote/au-remote.conf	2024-08-08 19:40:19.000000000 +0200
++++ b/audisp/plugins/remote/au-remote.conf	2024-12-25 00:29:21.501859355 +0100
 @@ -5,7 +5,7 @@
  
  active = no
@@ -11,8 +11,8 @@ diff -Naur a/audisp/plugins/remote/au-remote.conf b/audisp/plugins/remote/au-rem
  #args =
  format = string
 diff -Naur a/audisp/plugins/zos-remote/audispd-zos-remote.conf b/audisp/plugins/zos-remote/audispd-zos-remote.conf
---- a/audisp/plugins/zos-remote/audispd-zos-remote.conf	2023-04-27 19:26:56.000000000 +0200
-+++ b/audisp/plugins/zos-remote/audispd-zos-remote.conf	2023-04-29 20:59:57.186437610 +0200
+--- a/audisp/plugins/zos-remote/audispd-zos-remote.conf	2024-08-08 19:40:19.000000000 +0200
++++ b/audisp/plugins/zos-remote/audispd-zos-remote.conf	2024-12-25 00:30:13.106022674 +0100
 @@ -8,7 +8,7 @@
  
  active = no
@@ -22,12 +22,53 @@ diff -Naur a/audisp/plugins/zos-remote/audispd-zos-remote.conf b/audisp/plugins/
  type = always 
  args = /etc/audit/zos-remote.conf
  format = string
-diff -Naur a/init.d/auditd.restart b/init.d/auditd.restart
---- a/init.d/auditd.restart	2023-04-27 19:26:56.000000000 +0200
-+++ b/init.d/auditd.restart	2023-04-29 21:04:11.699227516 +0200
-@@ -6,8 +6,8 @@
+diff -Naur a/init.d/auditd.condrestart b/init.d/auditd.condrestart
+--- a/init.d/auditd.condrestart	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.condrestart	2024-12-25 00:33:12.162590075 +0100
+@@ -4,8 +4,8 @@
  
- /usr/libexec/initscripts/legacy-actions/auditd/stop
+ state=$(systemctl status auditd | awk '/Active:/ { print $2 }')
+ if [ "$state" = "active" ] ; then
+-	/sbin/auditctl --signal stop
+-	/bin/systemctl start auditd
++	/usr/sbin/auditctl --signal stop
++	/usr/bin/systemctl start auditd
+ 	RETVAL="$?"
+ 	exit $RETVAL
+ fi
+diff -Naur a/init.d/auditd.cron b/init.d/auditd.cron
+--- a/init.d/auditd.cron	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.cron	2024-12-25 00:33:33.506657786 +0100
+@@ -5,7 +5,7 @@
+ # based on time instead of log size.
+ ##########
+ 
+-/sbin/auditctl --signal usr1
++/usr/sbin/auditctl --signal usr1
+ EXITVALUE=$?
+ if [ $EXITVALUE != 0 ]; then
+     /usr/bin/logger -t auditd "ALERT auditctl exited abnormally with [$EXITVALUE] while rotating the logs"
+diff -Naur a/init.d/auditd.reload b/init.d/auditd.reload
+--- a/init.d/auditd.reload	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.reload	2024-12-25 00:33:42.754687128 +0100
+@@ -6,7 +6,7 @@
+ test "$(id -u)" = "0"  ||  exit 4
+ 
+ printf "Reconfiguring auditd: "
+-/sbin/auditctl --signal reload
++/usr/sbin/auditctl --signal reload
+ RETVAL=$?
+ echo
+ exit $RETVAL
+diff -Naur a/init.d/auditd.restart b/init.d/auditd.restart
+--- a/init.d/auditd.restart	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.restart	2024-12-25 00:31:09.166200201 +0100
+@@ -4,10 +4,10 @@
+ 
+ test -f /etc/audit/auditd.conf  || exit 6
+ 
+-/sbin/auditctl --signal stop
++/usr/sbin/auditctl --signal stop
  sleep 1
 -echo "Redirecting start to /bin/systemctl start auditd.service"
 -/bin/systemctl start auditd.service
@@ -36,27 +77,68 @@ diff -Naur a/init.d/auditd.restart b/init.d/auditd.restart
  RETVAL="$?"
  
  exit $RETVAL
-diff -Naur a/init.d/auditd.service b/init.d/auditd.service
---- a/init.d/auditd.service	2023-04-27 19:26:56.000000000 +0200
-+++ b/init.d/auditd.service	2023-04-29 21:00:41.542597562 +0200
-@@ -20,11 +20,11 @@
+diff -Naur a/init.d/auditd.resume b/init.d/auditd.resume
+--- a/init.d/auditd.resume	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.resume	2024-12-25 00:33:56.406730448 +0100
+@@ -6,7 +6,7 @@
+ test "$(id -u)" = "0"  ||  exit 4
+ 
+ printf "Resuming logging: "
+-/sbin/auditctl --signal resume
++/usr/sbin/auditctl --signal resume
+ RETVAL=$?
+ echo
+ exit $RETVAL
+diff -Naur a/init.d/auditd.rotate b/init.d/auditd.rotate
+--- a/init.d/auditd.rotate	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.rotate	2024-12-25 00:34:04.026754632 +0100
+@@ -6,7 +6,7 @@
+ test "$(id -u)" = "0"  ||  exit 4
+ 
+ printf "Rotating logs: "
+-/sbin/auditctl --signal rotate
++/usr/sbin/auditctl --signal rotate
+ RETVAL=$?
+ echo
+ exit $RETVAL
+diff -Naur a/init.d/auditd.state b/init.d/auditd.state
+--- a/init.d/auditd.state	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.state	2024-12-25 00:34:18.642801019 +0100
+@@ -9,7 +9,7 @@
+ state_file="/var/run/auditd.state"
+ 
+ printf "Getting auditd internal state: "
+-/sbin/auditctl --signal state
++/usr/sbin/auditctl --signal state
+ RETVAL=$?
+ sleep 1
+ if [ $RETVAL -eq 0 ] ; then
+diff -Naur a/init.d/auditd.stop b/init.d/auditd.stop
+--- a/init.d/auditd.stop	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/auditd.stop	2024-12-25 00:34:27.666829664 +0100
+@@ -6,5 +6,5 @@
+ test "$(id -u)" = "0"  ||  exit 4
+ 
+ echo "Stopping logging: "
+-/sbin/auditctl --signal stop
++/usr/sbin/auditctl --signal stop
+ exit $?
+diff -Naur a/init.d/audit-rules.service b/init.d/audit-rules.service
+--- a/init.d/audit-rules.service	2024-08-08 19:41:04.000000000 +0200
++++ b/init.d/audit-rules.service	2024-12-25 00:32:19.662423598 +0100
+@@ -11,7 +11,7 @@
+ 
  [Service]
- Type=forking
- PIDFile=/run/auditd.pid
--ExecStart=/sbin/auditd
-+ExecStart=/usr/sbin/auditd
- ## To not use augenrules, copy this file to /etc/systemd/system/auditd.service
- ## and comment/delete the next line and uncomment the auditctl line.
- ## NOTE: augenrules expect any rules to be added to /etc/audit/rules.d/
--ExecStartPost=-/sbin/augenrules --load
-+ExecStartPost=-/usr/sbin/augenrules --load
- #ExecStartPost=-/sbin/auditctl -R /etc/audit/audit.rules
- # By default we don't clear the rules on exit. To enable this, uncomment
- # the next line after copying the file to /etc/systemd/system/auditd.service
+ Type=oneshot
+-ExecStart=/usr/local/sbin/augenrules --load
++ExecStart=/usr/sbin/augenrules --load
+ 
+ # By default we don't clear the rules on exit. To enable this, uncomment the
+ # next line after copying the file to /etc/systemd/system/audit-rules.service
 diff -Naur a/init.d/augenrules b/init.d/augenrules
---- a/init.d/augenrules	2023-04-27 19:26:56.000000000 +0200
-+++ b/init.d/augenrules	2023-04-29 21:02:43.582997171 +0200
-@@ -39,7 +39,7 @@
+--- a/init.d/augenrules	2024-08-08 19:40:19.000000000 +0200
++++ b/init.d/augenrules	2024-12-25 00:35:28.763023670 +0100
+@@ -40,7 +40,7 @@
  
  try_load() {
  	if [ $LoadRules -eq 1 ] ; then
@@ -65,7 +147,7 @@ diff -Naur a/init.d/augenrules b/init.d/augenrules
  		RETVAL=$?
  	fi
  }
-@@ -74,7 +74,7 @@
+@@ -83,7 +83,7 @@
  #   - the last processed -e directive is emitted as the last line
  umask 0137
  echo "## This file is automatically generated from $SourceRulesDir" >> "${TmpRules}"
@@ -74,17 +156,3 @@ diff -Naur a/init.d/augenrules b/init.d/augenrules
  	cat ${SourceRulesDir}/"${rules}"
  done | awk '
  BEGIN   {
-diff -Naur a/src/auditd.c b/src/auditd.c
---- a/src/auditd.c	2023-04-27 19:26:56.000000000 +0200
-+++ b/src/auditd.c	2023-04-29 21:05:11.895386877 +0200
-@@ -67,8 +67,8 @@
- /* Local data */
- static int fd = -1, pipefds[2] = {-1, -1};
- static struct daemon_conf config;
--static const char *pidfile = "/var/run/auditd.pid";
--static const char *state_file = "/var/run/auditd.state";
-+static const char *pidfile = "/run/auditd.pid";
-+static const char *state_file = "/run/auditd.state";
- static int init_pipe[2];
- static int do_fork = 1, opt_aggregate_only = 0, config_dir_set = 0;
- static struct auditd_event *cur_event = NULL, *reconfig_ev = NULL;

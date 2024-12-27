@@ -3,12 +3,12 @@
 # https://github.com/KhronosGroup/glslang/blob/master/known_good.json
 git clone https://github.com/KhronosGroup/SPIRV-Tools.git External/spirv-tools
 cd External/spirv-tools
-git checkout 40f5bf59c6acb4754a0bffd3c53a715732883a12
+git checkout 4d2f0b40bfe290dea6c6904dafdf7fd8328ba346
 cd ../../
 
 git clone https://github.com/KhronosGroup/SPIRV-Headers External/spirv-tools/external/spirv-headers
 cd External/spirv-tools/external/spirv-headers
-git checkout 1d31a100405cf8783ca7a31e31cdd727c9fc54c3
+git checkout 3f17b2af6784bfa2c5aa5dbb8e0e74a607dd8b3b
 cd -
 
 ub_compile \
