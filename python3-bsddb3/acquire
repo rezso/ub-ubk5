@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-bsddb3-${UB_VERSION}.tar.gz bsddb3-${UB_VERSION}/
-	https://files.pythonhosted.org/packages/source/b/bsddb3/
+berkeleydb-${UB_VERSION}.tar.gz berkeleydb-${UB_VERSION}/
+	https://files.pythonhosted.org/packages/66/0c/81d2961ce845a2451ee723f9af64b79ae1f69c4566618effa7572cc0d0ad/

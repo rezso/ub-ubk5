@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz pyproject-metadata-${UB_VERSION}/
+	https://github.com/pypa/pyproject-metadata/archive/refs/tags/

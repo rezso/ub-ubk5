@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-fltk-${UB_VERSION/~/-}-source.tar.gz fltk-${UB_VERSION/~/-}/
-	https://fltk.org/pub/fltk/${UB_VERSION%~*}/
+release-${UB_VERSION/~/-}.tar.gz fltk-release-${UB_VERSION}/
+	https://github.com/fltk/fltk/archive/refs/tags/

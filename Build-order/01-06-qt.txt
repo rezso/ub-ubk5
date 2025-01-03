@@ -131,6 +131,5 @@ libextractor
 wget
 inkscape
 guile # gnucash
-libdecor
 x.org-xwayland
 libxpresent # metacity, xfwm4, mpv

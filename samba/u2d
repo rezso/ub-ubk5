@@ -1,2 +1,1 @@
-urllist https://ftp.samba.org/pub/samba/stable/ | grep -E '^samba-[0-9.]+[02468]\.+[0-9].tar.gz$' | parsever | sort -V | tail -n 1
-# u2d https://ftp.samba.org/pub/samba/stable/
+u2d https://ftp.samba.org/pub/samba/stable/

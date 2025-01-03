@@ -38,6 +38,9 @@ python3-sip
 
 #csak-rd-t-nézni-mert-python3-setuptools-van-a-build-depends-ben
 
+python3-pyproject-metadata
+meson-python
+python3-cairo
 python3-pygobject
 python3-charset-normalizer
 python3-graphviz
@@ -78,8 +81,6 @@ python3-twisted
 python3-multidict
 python3-rencode
 python3-future
-
-python3-docutils
 
 #electrumcucc
 

@@ -58,7 +58,6 @@ libmbim
 libqrtr-glib
 libqmi
 ntp
-python3-cairo
 slang
 enchant
 glew
@@ -78,6 +77,8 @@ jack
 portaudio
 sbc
 lirc
+python3-docutils
+bluez
 pulseaudio
 sdl2
 sdl
@@ -136,6 +137,7 @@ clutter
 parted
 man-db
 plocate
+libdecor
 fltk
 openexr
 imagemagick

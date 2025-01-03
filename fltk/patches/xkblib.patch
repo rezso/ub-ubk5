@@ -1,16 +1,16 @@
 diff -Naur a/src/Fl_x.cxx b/src/Fl_x.cxx
---- a/src/Fl_x.cxx	2023-12-09 14:58:40.000000000 +0100
-+++ b/src/Fl_x.cxx	2024-07-29 11:17:41.206271496 +0200
-@@ -47,7 +47,7 @@
+--- a/src/Fl_x.cxx	2024-12-12 18:45:50.000000000 +0100
++++ b/src/Fl_x.cxx	2024-12-28 22:45:48.679241978 +0100
+@@ -55,7 +55,7 @@
  #  include <X11/Xmd.h>
  #  include <X11/Xlocale.h>
  #  include <X11/Xlib.h>
 -#  include <X11/keysym.h>
 +#  include <X11/XKBlib.h>
  #  include "Xutf8.h"
- #define USE_XRANDR (HAVE_DLSYM && HAVE_DLFCN_H) // means attempt to dynamically load libXrandr.so
- #if USE_XRANDR
-@@ -1453,40 +1453,6 @@
+ 
+ #if FLTK_USE_CAIRO
+@@ -1170,40 +1170,6 @@
    return (long)total;
  }
  
@@ -19,7 +19,7 @@ diff -Naur a/src/Fl_x.cxx b/src/Fl_x.cxx
 -  This way we get at most one warning. The option to use XkbKeycodeToKeysym()
 -  instead would not help much - see STR #2913 for more information.
 -
--  Update (July 22, 2022): disable "deprecated declaration" warnings in
+-  Update (Jan 31, 2020): disable "deprecated declaration" warnings in
 -  this function for GCC >= 4.6 and clang (all versions) to get rid of
 -  these warnings at least for current GCC and clang compilers.
 -
@@ -48,19 +48,19 @@ diff -Naur a/src/Fl_x.cxx b/src/Fl_x.cxx
 -#pragma clang diagnostic pop
 -#endif
 -
- int fl_handle(const XEvent& thisevent)
- {
-   XEvent xevent = thisevent;
-@@ -1958,7 +1924,7 @@
- 	  len = XUtf8LookupString(fl_xim_ic, (XKeyPressedEvent *)&xevent.xkey,
- 			     kp_buffer, kp_buffer_len, &keysym, &status);
- 	}
--	keysym = fl_KeycodeToKeysym(fl_display, keycode, 0);
-+	keysym = XkbKeycodeToKeysym(fl_display, keycode, 0, 0);
+ #if USE_XRANDR
+ static void react_to_screen_reconfiguration() {
+ #if USE_XFT
+@@ -1840,7 +1806,7 @@
+           len = XUtf8LookupString(Fl_X11_Screen_Driver::xim_ic, (XKeyPressedEvent *)&xevent.xkey,
+                              kp_buffer, kp_buffer_len, &keysym, &status);
+         }
+-        keysym = fl_KeycodeToKeysym(fl_display, keycode, 0);
++        keysym = XkbKeycodeToKeysym(fl_display, keycode, 0, 0);
        } else {
          //static XComposeStatus compose;
          len = XLookupString((XKeyEvent*)&(xevent.xkey),
-@@ -1970,7 +1936,7 @@
+@@ -1852,7 +1818,7 @@
            if (len < 1) len = 1;
            // ignore all effects of shift on the keysyms, which makes it a lot
            // easier to program shortcuts and is Windoze-compatible:
@@ -69,7 +69,7 @@ diff -Naur a/src/Fl_x.cxx b/src/Fl_x.cxx
          }
        }
        kp_buffer[len] = 0;
-@@ -2013,7 +1979,7 @@
+@@ -1895,7 +1861,7 @@
        event = FL_KEYUP;
        fl_key_vector[keycode/8] &= ~(1 << (keycode%8));
        // keyup events just get the unshifted keysym:
@@ -78,7 +78,7 @@ diff -Naur a/src/Fl_x.cxx b/src/Fl_x.cxx
      }
  #  ifdef __sgi
      // You can plug a microsoft keyboard into an sgi but the extra shift
-@@ -2106,7 +2072,7 @@
+@@ -1997,7 +1963,7 @@
      if (keysym >= 0xff91 && keysym <= 0xff9f) {
        // Map keypad keysym to character or keysym depending on
        // numlock state...
