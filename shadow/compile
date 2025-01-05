@@ -10,7 +10,7 @@ ub_configure \
 	--with-gnu-ld \
 	--disable-account-tools-setuid \
 	--enable-man \
-	--with-libcrack \
+	--without-libcrack \
 	--without-libpam \
 	--without-selinux
 
