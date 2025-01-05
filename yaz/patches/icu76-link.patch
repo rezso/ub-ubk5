@@ -1,0 +1,47 @@
+diff -Naur a/configure b/configure
+--- a/configure	2024-09-19 16:28:50.000000000 +0200
++++ b/configure	2025-01-04 00:38:33.062179480 +0100
+@@ -15701,15 +15701,15 @@
+ fi
+ 
+ 		  if test -x $pkgconfigpath; then
+-		      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for icu-i18n via pkg-config" >&5
+-printf %s "checking for icu-i18n via pkg-config... " >&6; }
+-		      if $pkgconfigpath --exists icu-i18n; then
++		      { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for icu-i18n icu-uc via pkg-config" >&5
++printf %s "checking for icu-i18n icu-uc via pkg-config... " >&6; }
++		      if $pkgconfigpath --exists icu-i18n icu-uc; then
+ 			  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: found" >&5
+ printf "%s\n" "found" >&6; }
+-			  ICU_VERSION=`$pkgconfigpath --modversion icu-i18n`
++			  ICU_VERSION=`$pkgconfigpath --modversion icu-i18n icu-uc`
+ 			  ICU_CPPFLAGS=""
+-			  ICU_CFLAGS=`$pkgconfigpath --cflags icu-i18n`
+-			  ICU_LIBS=`$pkgconfigpath --libs icu-i18n`
++			  ICU_CFLAGS=`$pkgconfigpath --cflags icu-i18n icu-uc`
++			  ICU_LIBS=`$pkgconfigpath --libs icu-i18n icu-uc`
+ 		      else
+ 			  { printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: not found" >&5
+ printf "%s\n" "not found" >&6; }
+diff -Naur a/m4/ac_check_icu.m4 b/m4/ac_check_icu.m4
+--- a/m4/ac_check_icu.m4	2024-06-18 19:51:35.000000000 +0200
++++ b/m4/ac_check_icu.m4	2025-01-04 00:37:13.185864702 +0100
+@@ -20,13 +20,13 @@
+ 	      if test "$icudir" = "yes" -o "$icudir" = "default"; then
+ 		  AC_PATH_TOOL([pkgconfigpath], [pkg-config], [NONE])
+ 		  if test -x $pkgconfigpath; then
+-		      AC_MSG_CHECKING([for icu-i18n via pkg-config])
+-		      if $pkgconfigpath --exists icu-i18n; then
++		      AC_MSG_CHECKING([for icu-i18n icu-uc via pkg-config])
++		      if $pkgconfigpath --exists icu-i18n icu-uc; then
+ 			  AC_MSG_RESULT([found])
+-			  ICU_VERSION=`$pkgconfigpath --modversion icu-i18n`
++			  ICU_VERSION=`$pkgconfigpath --modversion icu-i18n icu-uc`
+ 			  ICU_CPPFLAGS=""
+-			  ICU_CFLAGS=`$pkgconfigpath --cflags icu-i18n`
+-			  ICU_LIBS=`$pkgconfigpath --libs icu-i18n`
++			  ICU_CFLAGS=`$pkgconfigpath --cflags icu-i18n icu-uc`
++			  ICU_LIBS=`$pkgconfigpath --libs icu-i18n icu-uc`
+ 		      else
+ 			  AC_MSG_RESULT([not found])
+ 		      fi

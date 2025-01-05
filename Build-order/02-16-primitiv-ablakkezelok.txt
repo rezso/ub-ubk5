@@ -4,7 +4,6 @@ pekwm-themes
 confuse
 libev
 scdoc
-ftmenu
 bmpanel2
 fbpanel
 menumaker
@@ -18,8 +17,6 @@ dwm
 pekwm
 i3status
 i3lock
-jwm
-jwm-settings-manager
 icewm
 i3-wm
 libseat

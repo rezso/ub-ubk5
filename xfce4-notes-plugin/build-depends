@@ -1,6 +1,7 @@
 dbus-glib-dev
 gobject-introspection-dev
 gtk3-dev
+gtksourceview4-dev
 intltool
 libsm-dev
 libxfce4ui-dev

@@ -1,8 +1,9 @@
 gsound-dev
-gtk3-dev
+gtk4-dev
 intltool
 itstool
+libadwaita-dev
 libcanberra-dev
-libgnome-games-support1-dev
+libgnome-games-support-dev
 librsvg-dev
-vala
+rust

@@ -12,7 +12,7 @@ konqueror
 spectacle
 kate
 konsole
-marble # kf5
+marble
 baloo-widgets
 ffmpegthumbs
 dolphin
@@ -40,6 +40,6 @@ kde
 #
 tellico
 digikam
+krusader
 kaffeine # kf6: git, multimedia lejátszó
-krusader # kf5 + patch
 kshutdown # kf5 + patch

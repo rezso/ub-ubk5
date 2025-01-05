@@ -35,9 +35,6 @@ gnome-music
 editorconfig
 libspelling
 gnome-text-editor
-libgit2
-libgit2-glib
-gitg
 brasero
 libgda
 rygel
