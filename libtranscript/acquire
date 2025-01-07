@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-libtranscript-${UB_VERSION}.tar.bz2 libtranscript-${UB_VERSION}/
-	https://os.ghalkes.nl/dist/

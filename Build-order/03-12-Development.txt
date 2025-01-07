@@ -5,7 +5,6 @@ icon-slicer
 pugixml
 lucene++
 poedit
-codelite
 a2b
 duff
 help2info

@@ -11,13 +11,13 @@ nrpe
 ytalk
 grsync
 libfilezilla
+filezilla
 speedtest-cli
 irssi
 stunnel
 gftp
 mtr
 gufw
-qbittorrent
 fwbuilder
 transmission
 google-earth
@@ -27,8 +27,10 @@ bluefish
 discord
 lftp
 anyremote
-filezilla
 mutt
+libtorrent-rasterbar
+qbittorrent
+libtorrent
 rtorrent
 rdesktop
 ettercap

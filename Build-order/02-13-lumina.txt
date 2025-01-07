@@ -1,5 +1,0 @@
-acpi
-xbacklight
-lumina
-lumina-calculator
-lumina-pdf

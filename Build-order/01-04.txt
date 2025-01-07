@@ -12,12 +12,10 @@ opensp
 libofx
 libpwquality
 libstroke
-libtorrent
 mp3info
 liboauth
 libraw
 libpano13
-libtorrent-rasterbar
 libva-intel-driver
 libva-vdpau-driver
 glibmm2.4
