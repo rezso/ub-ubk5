@@ -1,3 +1,6 @@
 #!/bin/sh -eux
 
-ub_compile
+ub_compile \
+    --disable-pinentry-gnome3 \
+    --disable-pinentry-qt5 \
+    --disable-pinentry-curses

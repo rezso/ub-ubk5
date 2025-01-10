@@ -122,6 +122,7 @@ libspiro
 libtinyxml
 libupnp
 liburcu
+libutf8proc
 libuv
 libvidstab
 libvisual

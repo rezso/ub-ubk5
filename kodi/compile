@@ -1,7 +1,5 @@
 #!/bin/sh -eux
 
-pythonver=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
-
 ub_compile \
 	-DCMAKE_INSTALL_PREFIX=/usr \
 	-DVERBOSE=ON \
@@ -18,7 +16,7 @@ ub_compile \
 	-DENABLE_INTERNAL_FLATBUFFERS=ON \
 	-DENABLE_INTERNAL_CROSSGUID=ON \
 	-DENABLE_INTERNAL_RapidJSON=ON \
-	-DENABLE_INTERNAL_FFMPEG=OFF \
+	-DENABLE_INTERNAL_FFMPEG=ON \
 	-DENABLE_INTERNAL_GTEST=OFF \
 	-DENABLE_INTERNAL_SPDLOG=ON \
 	-DENABLE_INTERNAL_DAV1D=OFF \

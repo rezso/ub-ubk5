@@ -1,0 +1,18 @@
+diff -Naur a/lib/igt_aux.c b/lib/igt_aux.c
+--- a/lib/igt_aux.c	2024-12-13 14:51:06.000000000 +0100
++++ b/lib/igt_aux.c	2025-01-07 03:36:23.154971277 +0100
+@@ -1358,10 +1358,10 @@
+ 	prcs->comm = NULL;
+ 	prcs->stack = procps_pids_get(prcs->info, PIDS_FETCH_TASKS_ONLY);
+ 	if (prcs->stack) {
+-		prcs->tid = PIDS_VAL(EU_PID, s_int, prcs->stack, prcs->info);
+-		prcs->euid = PIDS_VAL(EU_EUID, s_int, prcs->stack, prcs->info);
+-		prcs->egid = PIDS_VAL(EU_EGID, s_int, prcs->stack, prcs->info);
+-		prcs->comm = PIDS_VAL(EU_CMD, str, prcs->stack, prcs->info);
++		prcs->tid = PIDS_VAL(EU_PID, s_int, prcs->stack);
++		prcs->euid = PIDS_VAL(EU_EUID, s_int, prcs->stack);
++		prcs->egid = PIDS_VAL(EU_EGID, s_int, prcs->stack);
++		prcs->comm = PIDS_VAL(EU_CMD, str, prcs->stack);
+ 	}
+ #endif
+ 	return prcs->tid != 0;

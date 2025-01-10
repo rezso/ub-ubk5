@@ -1,8 +1,8 @@
 diff -Naur a/src/modules/unpackfs/unpackfs.conf b/src/modules/unpackfs/unpackfs.conf
---- a/src/modules/unpackfs/unpackfs.conf	2024-11-05 15:53:24.000000000 +0100
-+++ b/src/modules/unpackfs/unpackfs.conf	2024-11-07 00:02:44.122049039 +0100
-@@ -104,13 +104,6 @@
- #        condition: exampleGlobalStorageVariable.subkey
+--- a/src/modules/unpackfs/unpackfs.conf	2024-12-31 21:44:40.000000000 +0100
++++ b/src/modules/unpackfs/unpackfs.conf	2025-01-09 23:23:33.260781134 +0100
+@@ -116,13 +116,6 @@
+ #        optional: true
  
  unpack:
 -    -   source: ../CHANGES

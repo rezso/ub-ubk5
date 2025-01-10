@@ -1,7 +1,7 @@
 diff -Naur a/lang/calamares_hu.ts b/lang/calamares_hu.ts
 --- a/lang/calamares_hu.ts	2024-10-22 21:24:23.000000000 +0200
 +++ b/lang/calamares_hu.ts	2024-10-29 15:26:29.864723503 +0100
-@@ -4039,7 +4039,7 @@
+@@ -4068,7 +4068,7 @@
      <message>
        <location filename="../src/modules/partition/jobs/SetPartitionFlagsJob.cpp" line="149"/>
        <source>The installer failed to set flags on partition %1.</source>
@@ -10,7 +10,7 @@ diff -Naur a/lang/calamares_hu.ts b/lang/calamares_hu.ts
      </message>
    </context>
    <context>
-@@ -4047,7 +4047,7 @@
+@@ -4076,7 +4076,7 @@
      <message>
        <location filename="../src/modules/users/SetPasswordJob.cpp" line="38"/>
        <source>Set password for user %1</source>

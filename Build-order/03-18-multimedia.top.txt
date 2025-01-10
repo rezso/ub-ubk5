@@ -53,6 +53,7 @@ minitube
 mp3splt
 mp3splt-gtk
 hydrogen
+xmms2
 oscam
 w-scan
 dvb-apps

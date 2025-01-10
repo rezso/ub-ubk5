@@ -7,6 +7,7 @@ jack-dev
 liblame-dev
 libsamplerate-dev
 libsndfile-dev
+libxcursor-dev
 libxft-dev
 libxinerama-dev
 portaudio-dev

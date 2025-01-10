@@ -4,6 +4,8 @@ glu-dev
 jack-dev
 libjpeg-turbo-dev
 libsndfile-dev
+libxcursor-dev
+libxfixes-dev
 libxft-dev
 libxinerama-dev
 lua-dev

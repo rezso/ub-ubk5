@@ -125,7 +125,6 @@ menu-cache
 libfm #+menu-cache
 menu-cache
 #kígyófeloldásvég
-lxmenu-data
 pcmanfm
 libextractor
 wget

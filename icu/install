@@ -1,3 +1,5 @@
 #!/bin/sh -eux
 
 ub_install -C icu4c/source install
+
+sed -i -e 's/Requires.private/Requires/' ${UB_INSTALLDIR}/usr/lib/pkgconfig/icu-i18n.pc

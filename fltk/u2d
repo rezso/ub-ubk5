@@ -1,1 +1,2 @@
-u2d https://github.com/fltk/fltk/tags release-
+noupdate: 1.4 nem kompatíbilis az 1.3-mal
+# u2d https://github.com/fltk/fltk/tags release-

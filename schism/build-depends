@@ -1,4 +1,5 @@
 alsa-lib-dev
+libutf8proc-dev
 libx11-dev
 libxv-dev
 sdl2-dev

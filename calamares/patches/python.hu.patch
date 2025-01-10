@@ -1,6 +1,6 @@
 diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/python.po
---- a/lang/python/hu/LC_MESSAGES/python.po	2024-10-22 21:24:23.000000000 +0200
-+++ b/lang/python/hu/LC_MESSAGES/python.po	2024-10-29 16:05:04.770591136 +0100
+--- a/lang/python/hu/LC_MESSAGES/python.po	2024-12-31 21:44:40.000000000 +0100
++++ b/lang/python/hu/LC_MESSAGES/python.po	2025-01-09 23:24:51.505201851 +0100
 @@ -81,23 +81,23 @@
  
  #: src/modules/displaymanager/main.py:956
@@ -55,7 +55,7 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
 -msgstr "Fájlrendszerek betöltése."
 +msgstr "Fájlrendszerek átmásolása."
  
- #: src/modules/unpackfs/main.py:254
+ #: src/modules/unpackfs/main.py:255
  msgid "rsync failed with error code {}."
 @@ -420,7 +420,7 @@
  "Failed to find unsquashfs, make sure you have the squashfs-tools package "
@@ -65,4 +65,4 @@ diff -Naur a/lang/python/hu/LC_MESSAGES/python.po b/lang/python/hu/LC_MESSAGES/p
 +"Nem sikerült megtalálni az unsquashfs programot, ellenőrizze, hogy telepítve "
  "van-e a squashfs-tools csomag."
  
- #: src/modules/unpackfs/main.py:481
+ #: src/modules/unpackfs/main.py:516

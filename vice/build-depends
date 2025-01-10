@@ -4,6 +4,7 @@ dos2unix
 flac-dev
 glew-dev
 gtk3-dev
+libevdev-dev
 libjpeg-turbo-dev
 liblame-dev
 libvorbis-dev

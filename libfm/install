@@ -2,5 +2,6 @@
 
 ub_install
 
-# rm -rf "$UB_INSTALLDIR"/usr/include/libfm
-# mv "$UB_INSTALLDIR"/usr/include/libfm-1.0/ "$UB_INSTALLDIR"/usr/include/libfm
+rm -f "$UB_INSTALLDIR"/usr/bin/lxshortcut
+rm -f "$UB_INSTALLDIR"/usr/share/applications/lxshortcut.desktop
+rm -f "$UB_INSTALLDIR"/usr/share/man/man1/lxshortcut.1

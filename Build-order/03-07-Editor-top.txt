@@ -1,7 +1,6 @@
 nano
 tcsh
 vim
-libtranscript
 qemacs
 yudit
 texstudio
