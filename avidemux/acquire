@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-avidemux_${UB_VERSION}.tar.gz avidemux_${UB_VERSION}/
-	https://downloads.sourceforge.net/avidemux/
+${UB_VERSION}.tar.gz avidemux2-08860c2/
+    git+https://github.com/mean00/avidemux2.git@08860c2
+
+#avidemux_${UB_VERSION}.tar.gz avidemux_${UB_VERSION}/
+#	https://downloads.sourceforge.net/avidemux/

@@ -1,21 +1,25 @@
-diff -Nur orig/bootStrap.bash mod/bootStrap.bash
---- orig/bootStrap.bash	2017-01-06 08:30:06.000000000 +0100
-+++ mod/bootStrap.bash	2017-01-21 12:54:30.042734305 +0100
-@@ -66,7 +66,7 @@
-         fi
-         cd $BUILDDIR 
-         cmake $COMPILER $PKG $FAKEROOT $QT_FLAVOR -DCMAKE_EDIT_COMMAND=vim $INSTALL_PREFIX $EXTRA $BUILD_QUIRKS $ASAN $DEBUG -G "$BUILDER" $SOURCEDIR || fail cmakeZ
--        make  $PARAL >& /tmp/log$BUILDDIR || fail "make, result in /tmp/log$BUILDDIR"
-+        make  $PARAL
- 	if  [ "x$PKG" != "x" ] ; then
-           $FAKEROOT_COMMAND make package DESTDIR=$FAKEROOT_DIR/tmp || fail package
- 	fi
-@@ -263,7 +263,7 @@
- 
- export TOP=$PWD
- export POSTFIX=""
--export FAKEROOT_DIR=$PWD/install
-+export FAKEROOT_DIR=$UB_INSTALLDIR
- export PARAL="$O_PARAL"
- if [ "x$external_libass" = "x1" ]; then
-     export EXTRA_CMAKE_DEFS="-DUSE_EXTERNAL_LIBASS=true $EXTRA_CMAKE_DEFS"
+diff -Naur a/bootStrap.bash b/bootStrap.bash
+--- a/bootStrap.bash	2025-01-11 02:27:26.000000000 +0100
++++ b/bootStrap.bash	2025-01-11 02:56:37.468107442 +0100
+@@ -88,10 +88,10 @@
+     $ASAN \
+     $DEBUG \
+     -G "$BUILDER" \
+-    "$SOURCEDIR" >&/tmp/logCmake$BASE || fail "cmake,result in /tmp/logCmake$BASE"
++    "$SOURCEDIR"
+   $ADATE
+   echo "   $BASE:Build started..."
+-  ${MAKER} >&/tmp/log$BASE || fail "${MAKER}, result in /tmp/log$BASE"
++  ${MAKER}
+   if [ "x$PKG" != "x" ]; then
+     DESTDIR="${FAKEROOT_DIR}/tmp" $FAKEROOT_COMMAND ${MAKER} package || fail "packaging"
+   fi
+@@ -296,7 +296,7 @@
+ fi
+ SRCTOP=$(cd $(dirname "$0") && pwd)
+ POSTFIX=""
+-FAKEROOT_DIR="${BUILDTOP}/install"
++FAKEROOT_DIR="${UB_INSTALLDIR}"
+ if [ "x$external_liba52" = "x1" ]; then
+   EXTRA_CMAKE_DEFS="-DUSE_EXTERNAL_LIBA52=true $EXTRA_CMAKE_DEFS"
+ fi

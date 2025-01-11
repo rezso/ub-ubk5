@@ -1,10 +1,12 @@
 #!/bin/sh -eux
 
+if [ -d .git ]; then
+    git clone https://github.com/mean00/avidemux2_i18n.git avidemux/qt4/i18n
+fi
+
 sh bootStrap.bash \
-        --with-system-libass \
         --with-system-libmad \
         --with-system-liba52 \
         --with-cli \
         --with-core \
-        --with-plugins \
-        --enable-qt6
+        --with-plugins
