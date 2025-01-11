@@ -12,7 +12,6 @@ ncdu
 renameutils
 vacation
 ocrad
-pdmenu
 bleachbit
 lrzip
 qt5ct
