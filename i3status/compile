@@ -1,4 +1,0 @@
-#!/bin/sh -eux
-
-export CPPFLAGS+="-U_FORTIFY_SOURCE"
-ub_compile
