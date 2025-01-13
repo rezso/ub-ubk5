@@ -44,8 +44,6 @@ xca
 mount-gtk
 arandr
 clamtk
-trend
-ploticus
 testdisk
 lesspipe
 easystroke

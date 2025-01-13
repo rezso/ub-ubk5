@@ -5,12 +5,10 @@ icon-slicer
 pugixml
 lucene++
 poedit
-a2b
 duff
 help2info
 xdelta
 translate-toolkit
-a2png
 diffuse
 git-extras
 graphviz-gui

@@ -55,7 +55,6 @@ bogofilter
 highlight
 guile2.2
 autogen
-bodr
 gtk-stock-icons
 vigra
 libodfgen

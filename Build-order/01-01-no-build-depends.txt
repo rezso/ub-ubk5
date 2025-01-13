@@ -25,7 +25,6 @@ chkrootkit
 chmlib
 chrpath
 ckbcomp
-cksfv
 cldr-emoji-annotation
 cmark
 cmocka
@@ -181,9 +180,7 @@ sg3-utils
 sipcalc
 sleuthkit
 smartmontools
-soundfont-fluid
 soundtouch
-statifier
 supercat
 symlinks
 sysklogd
