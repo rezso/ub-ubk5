@@ -82,7 +82,7 @@ _syslibs=(
 	fontconfig
 	freetype
 	harfbuzz-ng
-	icu
+#	icu
 	libdrm
 	libevent
 	libjpeg

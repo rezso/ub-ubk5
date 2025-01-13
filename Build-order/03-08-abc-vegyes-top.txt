@@ -1,3 +1,4 @@
+icewm
 fish
 fonts-libertine
 htop
@@ -42,3 +43,15 @@ fortune-hu
 perl-class-xsaccessor
 perl-app-docmake
 fortune
+funny-manpages
+aspell-dict-english
+aspell-dict-german
+aspell-dict-hungarian
+media-player-info
+lightdm-gtk-greeter-settings
+sddm-config-editor
+grub-customizer
+systemd-ui
+nvidia-470
+synapse
+calamares
