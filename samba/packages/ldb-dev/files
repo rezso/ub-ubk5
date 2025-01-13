@@ -1,0 +1,3 @@
+	/usr/include/samba*/ldb*
+@	/usr/lib/libldb*.so
+	/usr/lib/pkgconfig/ldb.pc

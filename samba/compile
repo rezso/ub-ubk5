@@ -8,7 +8,8 @@
 	--without-ad-dc \
 	--without-gpgme \
 	--systemd-install-services \
-	--bundled-libraries=!tdb,!talloc,!pytalloc-util,!tevent,!popt,!ldb,!pyldb-util \
+	--private-libraries='!ldb' \
+	--bundled-libraries='!tdb,!talloc,!pytalloc-util,!tevent,!popt,!pyldb-util' \
 	--destdir="$UB_INSTALLDIR" \
 	--prefix="/usr"             \
 	--sysconfdir="/etc"         \

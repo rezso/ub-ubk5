@@ -84,7 +84,6 @@ sdl2
 sdl
 libtheora
 gamin
-ldb
 samba
 ladspa
 aom

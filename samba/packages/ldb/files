@@ -1,0 +1,4 @@
+	/usr/bin/ldb*
+	/usr/lib/libldb*.so.*
+	/usr/lib/python*/site-packages/_ldb*.py
+	/usr/lib/python*/site-packages/ldb*.so
