@@ -1,0 +1,13 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz icewm-${UB_VERSION}/
+	https://github.com/bbidulock/icewm/archive/
+
+1.2.tar.gz icewm-extra-themes-1.2/data/ :data
+    https://github.com/bbidulock/icewm-extra-themes/archive/
+
+microsoft-windows-95-sky-af3uv92q59fm3bs5.jpg
+        https://mrwallpaper.com/images/file/
+
+windows-xp-bliss-4k-lu.jpg
+    https://images.hdqwalls.com/wallpapers/
