@@ -2,13 +2,6 @@
 
 ub_install DESTDIR="$UB_INSTALLDIR"
 
-# systemd
-cd packaging/systemd
-mkdir "$UB_INSTALLDIR"/usr/lib/tmpfiles.d
-cp -a samba.conf.tmp "$UB_INSTALLDIR"/usr/lib/tmpfiles.d/samba.conf
-cp -a samba.sysconfig "$UB_INSTALLDIR"/etc/sysconfig/samba
-cd -
-
 cd docs/manpages
 for i in *; do
 	m="${i##*.}"

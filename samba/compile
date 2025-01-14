@@ -8,6 +8,7 @@
 	--without-ad-dc \
 	--without-gpgme \
 	--systemd-install-services \
+	--disable-rpath-install \
 	--private-libraries='!ldb' \
 	--bundled-libraries='!tdb,!talloc,!pytalloc-util,!tevent,!popt,!pyldb-util' \
 	--destdir="$UB_INSTALLDIR" \
