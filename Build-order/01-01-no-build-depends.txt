@@ -97,7 +97,6 @@ libgsm
 libgumbo
 libid3tag
 libinih
-libiniparser
 libiptcdata
 liblinebreak
 liblockfile
@@ -127,7 +126,6 @@ libvidstab
 libvisual
 libx86
 libx86mu
-libyajl
 libytnef
 libzip
 libzmq

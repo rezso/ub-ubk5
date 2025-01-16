@@ -18,7 +18,6 @@ xkbevd
 xvinfo
 esound
 xcb-util-cursor
-xcb-util-xrm
 xdpyinfo
 xdriinfo
 libxaw3d
@@ -125,7 +124,6 @@ libimobiledevice
 netpbm # lilypond build-depends
 djvulibre
 java-jre
-ndctl
 telepathy-glib
 libmpeg2
 cogl

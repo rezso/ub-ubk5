@@ -1,7 +1,9 @@
 alsa-lib-dev
+bison
 curl-dev
 dos2unix
 flac-dev
+flex
 glew-dev
 gtk3-dev
 libevdev-dev
@@ -11,7 +13,6 @@ libvorbis-dev
 libxaw-dev
 mpg123-dev
 pulseaudio-dev
-sdl2-image-dev
 xa
 xdg-utils
 x.org-font-utils

@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-    -DBUILD_SHARED_LIBS=ON \
-    -DBUILD_STATIC_LIBS=OFF \
-    -DBUILD_DOCS=OFF \
-    -DBUILD_EXAMPLES=OFF \
-    -DBUILD_TESTING=OFF
