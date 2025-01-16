@@ -1,10 +1,13 @@
 bash-completion
+bison
 cryptsetup-dev
 file-dev
+flex
 libcap-ng-dev
 libuser-dev
 libxcrypt-dev
 ncurses-dev
+pam-dev
 readline-dev
 sqlite-dev
 systemd-dev

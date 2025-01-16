@@ -10,6 +10,7 @@ libxcb-dev
 libxkbfile-dev
 libxrandr-dev
 libxxf86vm-dev
+pam-dev
 polkit-dev
 pulseaudio-dev
 upower-dev

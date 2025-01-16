@@ -7,7 +7,6 @@ libblockdev-dev
 libbytesize-dev
 libgudev-dev
 libxslt-dev
-ndctl-dev
 polkit-dev
 systemd-dev
 util-linux-dev

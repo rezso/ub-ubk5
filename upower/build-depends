@@ -1,12 +1,10 @@
 dbus-glib-dev
-docbook-dtds
-docbook-xsl
 gobject-introspection-dev
 intltool
 libgudev-dev
 libimobiledevice-dev
 libunistring-dev
 libusb-dev
-libxslt
+libxslt-dev
 polkit-dev
 systemd-dev
