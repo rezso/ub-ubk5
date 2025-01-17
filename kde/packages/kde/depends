@@ -8,7 +8,6 @@ kde-cli-tools
 kdecoration
 kde-gtk-config
 kdeplasma-addons
-kgamma
 kinfocenter
 kmenuedit
 konsole
@@ -16,7 +15,6 @@ kscreen
 kscreenlocker
 ksshaskpass
 ksystemstats
-kwallet-pam
 kwayland
 kwin
 milou

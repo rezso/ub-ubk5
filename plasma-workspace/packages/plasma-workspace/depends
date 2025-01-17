@@ -1,6 +1,7 @@
 iso-codes
+kded >=
 kirigami-addons >=
-ocean-sound-theme
+ocean-sound-theme >=
 xdg-user-dirs
 xmessage
 x.org-xwayland

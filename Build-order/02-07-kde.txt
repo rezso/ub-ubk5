@@ -6,14 +6,12 @@ qcoro
 libquazip
 fonts-hack # plasma-integration
 fonts-noto # plasma-integration
-socat # kwallet-pam
 opencv # mlt, kdenlive, digikam
 mlt # kdenlive
 yaz # tellico
 zxing-cpp # kitinerary
 plasma-wayland-protocols # kwayland
 xsettingsd # kde-gtk-settings
-kdsoap # kio-extras, kdsoap-ws-discovery-client?
 qtkeychain
 polkit-qt # plasma-workspace
 pulseaudio-qt # plasma-pa
@@ -51,14 +49,12 @@ syntax-highlighting
 ki18n
 kholidays
 kirigami
-kquickcharts
 ktexttemplate
 #
 kcoreaddons
 kfilemetadata
 kunitconversion
 kpty
-kimageformats
 kauth
 kcompletion
 kcrash
@@ -70,7 +66,6 @@ knotifications
 kjobwidgets
 kpackage
 kcontacts
-kpeople
 kdesu
 kcolorscheme
 kconfigwidgets
@@ -79,6 +74,7 @@ kwallet
 ktextwidgets
 kxmlgui
 kbookmarks
+kded
 kio
 baloo
 syndication
@@ -86,7 +82,6 @@ knewstuff
 knotifyconfig
 kparts
 ktexteditor
-kded
 frameworkintegration
 kdeclarative
 kcmutils
@@ -96,7 +91,9 @@ purpose
 krunner
 kdav
 kf6-dev
-#
+
+# plasma
+
 kirigami-addons
 plasma-activities
 plasma-activities-stats
@@ -107,20 +104,17 @@ kdegraphics-thumbnailers # apps
 kpipewire
 layer-shell-qt
 plasma-workspace-wallpapers
-kactivitymanagerd
 bluedevil
 kdecoration
 breeze
 breeze-gtk
 kde-gtk-config
-kgamma
 libkscreen
 kscreen
 kscreenlocker
 ksshaskpass
 libksysguard
 ksystemstats
-kwallet-pam
 kglobalacceld
 kwin
 milou
@@ -143,3 +137,51 @@ kinfocenter
 plasma-systemmonitor
 plasma-browser-integration
 plasma-disks
+
+# apps
+
+libkcddb
+ksanecore
+libksane
+filelight
+dragon
+gwenview
+elisa
+kcalc
+kcolorchooser
+khelpcenter
+konqueror
+spectacle
+kate
+konsole
+marble
+baloo-widgets
+ffmpegthumbs
+dolphin
+dolphin-plugins
+ark
+okular
+libkomparediff2
+kompare
+ksystemlog
+kdenlive
+k3b
+kolourpaint
+libkpmcore
+kpartitionmanager
+libktorrent
+ktorrent
+keditbookmarks
+libkdegames
+kdegames
+falkon
+skanlite
+kdiff3
+kde-apps
+kde
+#
+tellico
+digikam
+krusader
+kaffeine # kf6: git, multimedia lejátszó
+kshutdown # kf5 + patch

@@ -1,5 +1,6 @@
 gpsd-dev
 iso-codes
+kded-dev
 kf6-dev
 kirigami-addons-dev
 kpipewire-dev
@@ -19,6 +20,7 @@ libxcursor-dev
 libxft-dev
 libxtst-dev
 mpfr-dev
+ocean-sound-theme
 phonon-dev
 pipewire-dev
 plasma5support-dev
