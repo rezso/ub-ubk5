@@ -15,6 +15,7 @@ ub_compile \
 	-Dpamlibdir=/usr/lib/security \
 	-Ddefault-dnssec=no \
 	-Dlink-udev-shared=true \
+	-Daudit=false \
 	-Dlibcurl=false \
 	-Dmicrohttpd=false \
 	-Dcoredump=true \

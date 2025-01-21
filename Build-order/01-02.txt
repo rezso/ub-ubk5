@@ -28,6 +28,7 @@ gyp
 nss
 libetpan
 libxklavier
+rpm-sequoia
 rpm
 fontforge
 postfix

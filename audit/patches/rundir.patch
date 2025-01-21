@@ -1,0 +1,14 @@
+diff -Naur a/src/auditd.c b/src/auditd.c
+--- a/src/auditd.c	2024-07-29 21:35:23.000000000 +0200
++++ b/src/auditd.c	2025-01-18 01:34:59.374231587 +0100
+@@ -70,8 +70,8 @@
+ /* Local data */
+ static int fd = -1, pipefds[2] = {-1, -1};
+ static struct daemon_conf config;
+-static const char *pidfile = "/var/run/auditd.pid";
+-static const char *state_file = "/var/run/auditd.state";
++static const char *pidfile = "/run/auditd.pid";
++static const char *state_file = "/run/auditd.state";
+ static int init_pipe[2];
+ static int do_fork = 1, opt_aggregate_only = 0, config_dir_set = 0;
+ static struct auditd_event *cur_event = NULL, *reconfig_ev = NULL;

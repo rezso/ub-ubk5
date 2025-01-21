@@ -7,11 +7,13 @@ if [ -f meson.build ]; then
 ub_compile \
 	-Dudev_dir=/usr/lib/udev/ \
 	-Dconfig_dhcp_default=internal \
+	-Dsession_tracking_consolekit=false \
 	-Dsession_tracking=systemd \
 	-Difupdown=true \
 	-Dmodify_system=true \
 	-Dconcheck=true \
 	-Dselinux=false \
+	-Dlibaudit=no \
 	-Dnmtui=false \
 	-Dqt=false \
 	-Dbluez5_dun=true \

@@ -1,6 +1,5 @@
 acl-dev
 attr-dev
-audit-dev
 cryptsetup-dev
 dbus-dev
 glib-dev

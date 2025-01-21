@@ -2,6 +2,7 @@
 
 ub_compile \
 	--disable-tests \
+	--disable-libaudit \
 	--with-greeter-user='lightdm' \
 	--libexecdir="/usr/lib/lightdm" \
 	--with-greeter-session='lightdm-gtk-greeter'
