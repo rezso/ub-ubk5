@@ -3,5 +3,7 @@ inetutils
 krb5-dev
 libedit-dev
 libx11-dev
+libxcrypt-dev
 openssl-dev
+pam-dev
 procps-dev

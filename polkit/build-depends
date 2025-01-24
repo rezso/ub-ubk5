@@ -4,5 +4,6 @@ expat-dev
 gobject-introspection-dev
 intltool
 libffi-dev
-libxslt
+libxslt-dev
+pam-dev
 systemd-dev

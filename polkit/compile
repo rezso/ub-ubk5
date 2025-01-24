@@ -5,4 +5,4 @@ ub_compile \
 	-Dpolkitd_user=polkit \
 	-Dsession_tracking=logind \
 	-Dpam_include=polkit-1 \
-	-Djs_engine=duktape
+	-Dprivileged_group=root

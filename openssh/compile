@@ -6,7 +6,6 @@ ub_compile \
 	--disable-strip \
 	--with-kerberos5=/usr \
 	--with-libedit \
-	--with-md5-passwords \
 	--with-pam \
     --with-pid-dir=/run \
     --with-ssl-engine \

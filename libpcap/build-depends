@@ -1,3 +1,5 @@
+bison
 dbus-dev
+flex
 libnl-dev
 openssl-dev

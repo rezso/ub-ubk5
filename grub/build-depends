@@ -1,3 +1,5 @@
+bison
+flex
 fonts-dejavu
 freetype2-dev
 fuse-dev

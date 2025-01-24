@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-cp -a modules/pam_envfeed/Makefile{,.in}
+# cp -a modules/pam_envfeed/Makefile{,.in}
 
 CFLAGS="-fPIC -O2" \
 ub_compile \
