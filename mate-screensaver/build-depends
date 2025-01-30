@@ -4,6 +4,7 @@ libglvnd-dev
 libmatekbd-dev
 libnotify-dev
 libsm-dev
+libxcrypt-dev
 libxext-dev
 libxi-dev
 libxkbfile-dev

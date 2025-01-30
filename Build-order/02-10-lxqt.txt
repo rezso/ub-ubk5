@@ -1,3 +1,9 @@
+libfm # -menu-cache
+menu-cache
+#újra
+libfm # +menu-cache
+menu-cache
+#
 libdbusmenu-lxqt
 lxqt-build-tools
 libqtxdg

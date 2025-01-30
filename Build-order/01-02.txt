@@ -67,7 +67,6 @@ libical
 libnotify
 tdb
 eigen3
-bluez
 newt
 usermode
 lame

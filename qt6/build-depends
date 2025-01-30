@@ -1,7 +1,9 @@
 alsa-lib-dev
+bison
 cups-dev
 dbus-dev
 double-conversion
+flex
 gperf
 gstreamer-dev
 gtk3-dev

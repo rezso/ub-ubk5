@@ -1,6 +1,6 @@
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2024-12-16 07:26:35.000000000 +0100
-+++ b/pyproject.toml	2024-12-28 23:51:33.602018346 +0100
+--- a/pyproject.toml	2025-01-25 12:23:36.000000000 +0100
++++ b/pyproject.toml	2025-01-25 17:00:12.350116647 +0100
 @@ -1,7 +1,7 @@
  # SPDX-License-Identifier: MIT
  
@@ -19,7 +19,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  
  [project.optional-dependencies]
  tests-mypy = [
-@@ -79,76 +79,6 @@
+@@ -79,81 +79,6 @@
  [tool.hatch.build.targets.wheel]
  packages = ["src/attr", "src/attrs"]
  
@@ -89,6 +89,11 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -img = "FilePreviews.svg"
 -
 -[[tool.sponcon.sponsors]]
+-title = "Privacy Solutions"
+-url = "https://privacy-solutions.org/"
+-img = "Privacy-Solutions.svg"
+-
+-[[tool.sponcon.sponsors]]
 -title = "Polar"
 -url = "https://polar.sh/"
 -img = "Polar.svg"
@@ -96,7 +101,7 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  
  [tool.pytest.ini_options]
  addopts = ["-ra", "--strict-markers", "--strict-config"]
-@@ -260,35 +190,6 @@
+@@ -265,35 +190,6 @@
  lines-after-imports = 2
  
  

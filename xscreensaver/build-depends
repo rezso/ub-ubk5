@@ -8,6 +8,6 @@ libxi-dev
 libxml2-dev
 libxmu-dev
 libxpm-dev
-pam
+pam-dev
 systemd-dev
 xdg-utils

@@ -2,6 +2,7 @@ aalib-dev
 alsa-lib-dev
 aom-dev
 bash-completion
+bison
 bluez-dev
 cdparanoia-dev
 curl-dev
@@ -10,6 +11,7 @@ esound-dev
 faac-dev
 ffmpeg-dev
 flac-dev
+flex
 fluidsynth-dev
 gobject-introspection-dev
 graphene-dev

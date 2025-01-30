@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 berkeleydb-${UB_VERSION}.tar.gz berkeleydb-${UB_VERSION}/
-	https://files.pythonhosted.org/packages/66/0c/81d2961ce845a2451ee723f9af64b79ae1f69c4566618effa7572cc0d0ad/
+	https://files.pythonhosted.org/packages/62/2d/afd9072a414ce0accc0a831c887ac0381e2b569f09dd6f08cf62aa69f6b8/

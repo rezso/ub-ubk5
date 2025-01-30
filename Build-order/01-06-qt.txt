@@ -59,7 +59,6 @@ gtk-stock-icons
 vigra
 libodfgen
 alsa-plugins
-timidity
 less
 libseccomp
 gtksourceview4
@@ -117,14 +116,6 @@ python3-qtpy
 libplacebo
 vlc
 texlive
-#kigyófeloldás
-libfm #-menu-cache
-menu-cache
-#újra
-libfm #+menu-cache
-menu-cache
-#kígyófeloldásvég
-pcmanfm
 libextractor
 wget
 inkscape

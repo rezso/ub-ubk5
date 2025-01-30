@@ -6,3 +6,4 @@ libtasn1-dev
 libxslt-dev
 openssh
 p11-kit-dev
+pam-dev

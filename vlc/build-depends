@@ -1,9 +1,11 @@
 alsa-lib-dev
 aom-dev
+bison
 dav1d-dev
 dbus-dev
 ffmpeg4.4-dev
 flac-dev
+flex
 fluidsynth-dev
 fribidi-dev
 gnutls-dev

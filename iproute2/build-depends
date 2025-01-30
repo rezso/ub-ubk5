@@ -1,3 +1,5 @@
+bison
+flex
 iptables-dev
 libcap-dev
 libmnl-dev

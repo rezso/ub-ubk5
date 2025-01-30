@@ -9,7 +9,7 @@ antiword
 aoetools
 argon2
 autoconf2.13
-at
+at # bison, flex
 audiofile
 barcode
 bchunk
@@ -32,9 +32,8 @@ compface
 convmv
 corkscrew
 cppunit
-cron
+cron # pam
 ddrescue
-detox
 detox
 diffstat
 dmidecode
@@ -51,7 +50,6 @@ libfaad2
 ffnvcodec-headers
 fftw3
 fping
-freepats
 ganyremote
 geoip
 glm
