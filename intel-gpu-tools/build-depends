@@ -1,6 +1,8 @@
 alsa-lib-dev
+bison
 cairo-dev
 curl-dev
+flex
 kmod-dev
 libdrm-dev
 libelf-dev

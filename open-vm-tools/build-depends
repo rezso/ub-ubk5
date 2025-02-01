@@ -8,6 +8,7 @@ libtirpc-dev
 libxcrypt-dev
 libxtst-dev
 openssl-dev
+pam-dev
 procps-dev
 rpcsvc-proto
 systemd-dev

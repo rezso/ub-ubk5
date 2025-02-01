@@ -1,3 +1,5 @@
+bison
 expat-dev
+flex
 graphviz-dev
 qt5-dev

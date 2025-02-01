@@ -1,9 +1,11 @@
 alsa-lib-dev
 alsa-utils
 audiofile-dev
+bison
 cups-dev
 dbus-dev
 esound-dev
+flex
 fontconfig-dev
 freetype2-dev
 glib-dev
