@@ -2,7 +2,8 @@
 
 # gcc patchset: https://gitlab.com/Matt.Jolly/chromium-patches
 
-rm -Rf third_party/llvm* # 1.9G
+rm -Rf third_party/llvm # 1.9G
+rm -Rf third_party/llvm-build{,-tools}
 rm -Rf third_party/rust-src # 4.4G
 rm -Rf third_party/rust-toolchain # 1.3G
 rm -Rf third_party/instrumented_libs # 2.2G
@@ -56,7 +57,7 @@ disable_fieldtrial_testing_config=true
 blink_enable_generated_code_formatting=false
 ffmpeg_branding=\"Chrome\"
 proprietary_codecs=true
-rtc_use_pipewire=true
+rtc_use_pipewire=false
 use_pulseaudio=true
 enable_nacl=false
 enable_widevine=true
@@ -66,7 +67,6 @@ use_kerberos=false
 use_system_freetype=true
 use_system_harfbuzz=true
 use_system_lcms2=true
-use_system_libdrm=true
 use_system_libffi=true
 use_system_libjpeg=true
 use_system_libpng=true
@@ -83,8 +83,6 @@ _syslibs=(
 	freetype
 	harfbuzz-ng
 #	icu
-	libdrm
-	libevent
 	libjpeg
 	libpng
 #	libwebp

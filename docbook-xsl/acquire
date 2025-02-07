@@ -1,7 +1,7 @@
 #!/usr/bin/env dl
 
-docbook-xsl-${UB_VERSION}.tar.bz2 docbook-xsl-${UB_VERSION}/
-	https://ftp.osuosl.org/pub/blfs/conglomeration/docbook-xsl/
+docbook-xsl-${UB_VERSION}.tar.gz docbook-xsl-${UB_VERSION}/
+	https://github.com/docbook/xslt10-stylesheets/releases/download/release%2F${UB_VERSION}/
 
-docbook-xsl-doc-${UB_VERSION}.tar.bz2 docbook-xsl-${UB_VERSION}/
-	https://ftp.osuosl.org/pub/blfs/conglomeration/docbook-xsl/
+docbook-xsl-nons-${UB_VERSION}.tar.gz docbook-xsl-nons-${UB_VERSION}/ :nons
+	https://github.com/docbook/xslt10-stylesheets/releases/download/release%2F${UB_VERSION}/

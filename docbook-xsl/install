@@ -1,3 +1,21 @@
 #!/bin/sh -eux
 
-make DESTDIR="$UB_INSTALLDIR"/usr/share/sgml/docbook/xsl-stylesheets install
+pkgroot="$UB_INSTALLDIR/usr/share/xml/docbook/xsl-stylesheets-$UB_VERSION"
+shopt -s nullglob  # ignore missing files
+for fn in assembly common eclipse epub epub3 fo highlighting html \
+    htmlhelp javahelp lib manpages params profiling roundtrip template \
+    website xhtml xhtml-1_1 xhtml5
+do
+install -Dt "$UB_INSTALLDIR/usr/share/xml/docbook/xsl-stylesheets-${UB_VERSION}/$fn" -m644 $fn/*.{xml,xsl,dtd,ent}
+done
+ln -s xsl-stylesheets-$UB_VERSION "$UB_INSTALLDIR"/usr/share/xml/docbook/xsl-stylesheets
+
+pkgroot="$UB_INSTALLDIR/usr/share/xml/docbook/xsl-stylesheets-$UB_VERSION-nons"
+shopt -s nullglob  # ignore missing files
+for fn in assembly common eclipse epub epub3 fo highlighting html \
+    htmlhelp javahelp lib manpages params profiling roundtrip template \
+    website xhtml xhtml-1_1 xhtml5
+do
+install -Dt "$UB_INSTALLDIR/usr/share/xml/docbook/xsl-stylesheets-${UB_VERSION}-nons/$fn" -m644 nons/$fn/*.{xml,xsl,dtd,ent}
+done
+ln -s xsl-stylesheets-$UB_VERSION-nons "$UB_INSTALLDIR"/usr/share/xml/docbook/xsl-stylesheets-nons

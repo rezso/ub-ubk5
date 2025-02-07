@@ -9,7 +9,6 @@ xz
 liblz4
 zstd
 gcc
-sgml-common
 libyaml
 kmod
 inetutils
@@ -47,7 +46,6 @@ bison
 ccache
 cpio
 diffutils
-docbook-dtds
 expat
 file
 findutils
@@ -145,6 +143,7 @@ python3-pyparsing
 meson
 intltool
 gawk
+docbook-xml
 docbook-xsl
 doxygen
 libpaper

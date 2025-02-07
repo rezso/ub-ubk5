@@ -13,8 +13,6 @@ hwdata
 icu-dev
 java-jre
 lcms2-dev
-libdrm-dev
-libevent-dev
 libffi-dev
 libglvnd-dev
 libva-dev

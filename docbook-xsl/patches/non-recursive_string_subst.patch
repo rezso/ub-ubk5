@@ -1,0 +1,52 @@
+diff -Naur a/lib/lib.xsl b/lib/lib.xsl
+--- a/lib/lib.xsl	2016-12-09 23:41:39.000000000 +0100
++++ b/lib/lib.xsl	2025-02-01 20:34:26.971364281 +0100
+@@ -6,7 +6,11 @@
+ 
+      This module implements DTD-independent functions
+ 
+-     ******************************************************************** --><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
++     ******************************************************************** -->
++<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
++                xmlns:str="http://exslt.org/strings"
++                exclude-result-prefixes="str"
++                version="1.0">
+ 
+ <xsl:template name="dot.count">
+   <!-- Returns the number of "." characters in a string -->
+@@ -52,6 +56,9 @@
+   <xsl:param name="replacement"/>
+ 
+   <xsl:choose>
++    <xsl:when test="function-available('str:replace')">
++      <xsl:value-of select="str:replace($string, string($target), string($replacement))"/>
++    </xsl:when>
+     <xsl:when test="contains($string, $target)">
+       <xsl:variable name="rest">
+         <xsl:call-template name="string.subst">
+diff -Naur a/nons/lib/lib.xsl b/nons/lib/lib.xsl
+--- a/nons/lib/lib.xsl	2016-12-09 23:47:31.000000000 +0100
++++ b/nons/lib/lib.xsl	2025-02-01 20:35:13.791556204 +0100
+@@ -6,7 +6,11 @@
+ 
+      This module implements DTD-independent functions
+ 
+-     ******************************************************************** --><xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
++     ******************************************************************** -->
++<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
++                xmlns:str="http://exslt.org/strings"
++                exclude-result-prefixes="str"
++                version="1.0">
+ 
+ <xsl:template name="dot.count">
+   <!-- Returns the number of "." characters in a string -->
+@@ -52,6 +56,9 @@
+   <xsl:param name="replacement"/>
+ 
+   <xsl:choose>
++    <xsl:when test="function-available('str:replace')">
++      <xsl:value-of select="str:replace($string, string($target), string($replacement))"/>
++    </xsl:when>
+     <xsl:when test="contains($string, $target)">
+       <xsl:variable name="rest">
+         <xsl:call-template name="string.subst">
