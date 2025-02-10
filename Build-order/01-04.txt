@@ -10,6 +10,7 @@ libcacard
 libdbi
 opensp
 libofx
+cracklib
 libpwquality
 mp3info
 liboauth
