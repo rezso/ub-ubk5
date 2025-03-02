@@ -1,1 +1,2 @@
-u2d https://github.com/libsdl-org/SDL_ttf/tags release-
+urllist https://github.com/libsdl-org/SDL_ttf/tags | grep '^release-2.' | splitver | sort -V | tail -n1
+# u2d https://github.com/libsdl-org/SDL_ttf/tags release-
