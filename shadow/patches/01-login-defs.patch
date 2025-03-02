@@ -1,6 +1,6 @@
 diff -Naur a/etc/login.defs b/etc/login.defs
---- a/etc/login.defs	2021-12-24 17:31:16.000000000 +0100
-+++ b/etc/login.defs	2022-07-16 15:31:22.189399349 +0200
+--- a/etc/login.defs	2025-01-11 16:34:29.000000000 +0100
++++ b/etc/login.defs	2025-02-11 20:09:19.786308354 +0100
 @@ -75,7 +75,7 @@
  # a ":" delimited list of device names.  Root logins will be allowed only
  # from these devices.
@@ -48,7 +48,7 @@ diff -Naur a/etc/login.defs b/etc/login.defs
  PASS_WARN_AGE	7
  
  #
-@@ -396,7 +396,7 @@
+@@ -391,7 +391,7 @@
  # Should login be allowed if we can't cd to the home directory?
  # Default is no.
  #
@@ -57,7 +57,7 @@ diff -Naur a/etc/login.defs b/etc/login.defs
  
  #
  # The pwck(8) utility emits a warning for any system account with a home
-@@ -426,7 +426,7 @@
+@@ -421,7 +421,7 @@
  #
  # This also enables userdel(8) to remove user groups if no members exist.
  #
@@ -66,7 +66,7 @@ diff -Naur a/etc/login.defs b/etc/login.defs
  
  #
  # If set to a non-zero number, the shadow utilities will make sure that
-@@ -445,7 +445,7 @@
+@@ -440,7 +440,7 @@
  # This option is overridden with the -M or -m flags on the useradd(8)
  # command-line.
  #
@@ -75,7 +75,7 @@ diff -Naur a/etc/login.defs b/etc/login.defs
  
  #
  # Force use shadow, even if shadow passwd & shadow group files are
-@@ -465,7 +465,7 @@
+@@ -460,7 +460,7 @@
  # Set to "yes" to prevent for all accounts
  # Set to "superuser" to prevent for UID 0 / root (default)
  # Set to "no" to not prevent for any account (dangerous, historical default)

@@ -1,1 +1,2 @@
-u2d https://ftp.debian.org/debian/pool/main/s/sane-frontends/ sane-frontends_ .orig
+urllist https://gitlab.com/sane-project/frontends/-/tags | grep RELEASE_ | sed -e 's/RELEASE_//' -e 's/_/./g' | sort -V | tail -n1
+# u2d https://ftp.debian.org/debian/pool/main/s/sane-frontends/ sane-frontends_ .orig

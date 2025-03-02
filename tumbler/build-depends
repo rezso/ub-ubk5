@@ -4,7 +4,6 @@ ffmpeg-thumbnailer-dev
 freetype2-dev
 gdk-pixbuf-dev
 gstreamer-dev
-intltool
 libgsf-dev
 libjpeg-turbo-dev
 libpng-dev

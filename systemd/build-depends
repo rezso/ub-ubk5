@@ -6,7 +6,6 @@ glib-dev
 gnutls-dev
 gobject-introspection-dev
 gperf
-intltool
 kbd
 kmod-dev
 libcap-dev
@@ -18,6 +17,7 @@ libtasn1-dev
 libxkbcommon-dev
 libxslt-dev
 lvm-dev
+pam-dev
 pcre2-dev
 procps
 python3-jinja2

@@ -1,8 +1,6 @@
 apache-dev
 dconf-dev
-docbook-dtds
 docbook-xsl
-intltool
 itstool
 libcanberra-dev
 libnotify-dev

@@ -5,7 +5,6 @@ dhcp-client
 dnsmasq
 expat-dev
 gobject-introspection-dev
-intltool
 iptables
 jansson-dev
 libgudev-dev

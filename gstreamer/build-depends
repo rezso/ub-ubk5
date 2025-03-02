@@ -16,7 +16,6 @@ fluidsynth-dev
 gobject-introspection-dev
 graphene-dev
 gtk3-dev
-intltool
 iso-codes
 itstool
 jack-dev

@@ -1,6 +1,6 @@
+docbook-xsl
 gnome-settings-daemon-dev
 gtk3-dev
-intltool
 libcanberra-dev
 libdvdread-dev
 libhandy-dev

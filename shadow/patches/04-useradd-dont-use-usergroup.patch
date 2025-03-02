@@ -1,7 +1,7 @@
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2022-07-16 15:46:27.501004694 +0200
-+++ b/src/useradd.c	2022-07-16 15:51:20.838084132 +0200
-@@ -145,7 +145,7 @@
+--- a/src/useradd.c	2025-02-11 20:31:31.011928122 +0100
++++ b/src/useradd.c	2025-02-11 20:35:17.452297118 +0100
+@@ -168,7 +168,7 @@
      lflg = false,		/* do not add user to lastlog/faillog databases */
      mflg = false,		/* create user's home directory if it doesn't exist */
      Mflg = false,		/* do not create user's home directory even if CREATE_HOME is set */

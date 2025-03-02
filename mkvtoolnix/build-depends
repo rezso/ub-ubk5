@@ -1,6 +1,7 @@
 boost-dev
 cmark-dev
 curl-dev
+docbook-xsl
 expat-dev
 file-dev
 flac-dev

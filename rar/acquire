@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-rar_${UB_VERSION}.orig-amd64.tar.gz rar/
+rar_${UB_VERSION}.orig.tar.gz rar/
 	http://deb.debian.org/debian/pool/non-free/r/rar/

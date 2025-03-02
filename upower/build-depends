@@ -1,6 +1,6 @@
 dbus-glib-dev
+docbook-xsl
 gobject-introspection-dev
-intltool
 libgudev-dev
 libimobiledevice-dev
 libunistring-dev

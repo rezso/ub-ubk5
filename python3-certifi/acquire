@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-certifi-${UB_VERSION}.tar.gz certifi-${UB_VERSION}/
-	https://pypi.org/packages/source/c/certifi/
+${UB_VERSION}.tar.gz python-certifi-${UB_VERSION}/
+	https://github.com/certifi/python-certifi/archive/refs/tags/

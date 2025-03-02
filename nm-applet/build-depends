@@ -2,7 +2,6 @@ dbus-glib-dev
 gcr-dev
 gobject-introspection-dev
 gtk3-dev
-intltool
 iso-codes
 jansson-dev
 libgudev-dev

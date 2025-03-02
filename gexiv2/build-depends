@@ -1,6 +1,5 @@
 exiv2-dev
 gobject-introspection-dev
-intltool
 itstool
 meson
 python3-pygobject

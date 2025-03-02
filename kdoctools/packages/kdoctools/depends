@@ -1,3 +1,5 @@
+docbook-xml
+docbook-xsl
 karchive-dev
 kdoctools-lib >=
 ki18n-dev

@@ -1,8 +1,8 @@
 dbus-glib-dev
 dconf-dev
+docbook-xsl
 gnome-desktop-dev
 gtk3-dev
-intltool
 json-glib-dev
 libglvnd-dev
 librsvg-dev

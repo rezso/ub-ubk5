@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-v${UB_VERSION}-Omega.tar.gz xbmc-${UB_VERSION}-Omega/
+${UB_VERSION}-Omega.tar.gz xbmc-${UB_VERSION}-Omega/
 	https://github.com/xbmc/xbmc/archive/refs/tags/

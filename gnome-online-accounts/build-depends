@@ -1,9 +1,9 @@
+docbook-xsl
 gcr4-dev
 geoclue-dev
 gobject-introspection-dev
 gstreamer-dev
 gtk4-dev
-intltool
 json-glib-dev
 keyutils-dev
 krb5-dev

@@ -1,6 +1,8 @@
 #!/bin/sh -eux
 
 ub_compile \
+    -Dothers=enabled \
+    -Dbuiltin_loaders=all \
 	-Ddocs=false \
 	-Dgtk_doc=false \
 	-Dman=false \

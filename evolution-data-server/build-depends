@@ -7,7 +7,6 @@ gobject-introspection-dev
 gperf
 gtk3-dev
 gtk4-dev
-intltool
 libcanberra-dev
 libgcrypt-dev
 libgweather-dev

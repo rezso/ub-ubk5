@@ -1,6 +1,6 @@
 bash-completion
 dbus-dev
-intltool
+docbook-xsl
 libxml2-dev
 libxslt-dev
 vala

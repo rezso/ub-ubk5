@@ -1,25 +1,31 @@
 #!/bin/bash
 
-_xmlcatalog() {
-  xmlcatalog --noout "$@" etc/xml/catalog
-}
+if [ ! -d /etc/xml ]; then
+mkdir -p /etc/xml
+fi
 
-[[ -f etc/xml/catalog ]] || _xmlcatalog --create
+if [ ! -f /etc/xml/catalog ]; then
+xmlcatalog --noout --create /etc/xml/catalog
+fi
 
 new=${1%-*}
 
 for ver in $new current; do
   for x in rewriteSystem rewriteURI; do
-    _xmlcatalog --add $x http://cdn.docbook.org/release/xsl/$ver \
-      /usr/share/xml/docbook/xsl-stylesheets-$new
+    xmlcatalog --noout --add $x http://cdn.docbook.org/release/xsl/$ver \
+      /usr/share/xml/docbook/xsl-stylesheets-$new \
+      /etc/xml/catalog
 
-    _xmlcatalog --add $x http://cdn.docbook.org/release/xsl-nons/$ver \
-      /usr/share/xml/docbook/xsl-stylesheets-$new-nons
+    xmlcatalog --noout --add $x http://cdn.docbook.org/release/xsl-nons/$ver \
+      /usr/share/xml/docbook/xsl-stylesheets-$new-nons \
+      /etc/xml/catalog
 
-    _xmlcatalog --add $x http://docbook.sourceforge.net/release/xsl-ns/$ver \
-      /usr/share/xml/docbook/xsl-stylesheets-$new
+    xmlcatalog --noout --add $x http://docbook.sourceforge.net/release/xsl-ns/$ver \
+      /usr/share/xml/docbook/xsl-stylesheets-$new \
+      /etc/xml/catalog
 
-    _xmlcatalog --add $x http://docbook.sourceforge.net/release/xsl/$ver \
-      /usr/share/xml/docbook/xsl-stylesheets-$new-nons
+    xmlcatalog --noout --add $x http://docbook.sourceforge.net/release/xsl/$ver \
+      /usr/share/xml/docbook/xsl-stylesheets-$new-nons \
+      /etc/xml/catalog
   done
 done

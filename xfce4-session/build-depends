@@ -1,6 +1,5 @@
 dbus-glib-dev
 gtk3-layer-shell-dev
-intltool
 libwnck-dev
 libxfce4ui-dev
 libxfce4util-dev

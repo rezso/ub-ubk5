@@ -7,7 +7,6 @@ gnome-desktop-dev
 gnutls-dev
 gsettings-desktop-schemas
 gtk4-dev
-intltool
 jansson-dev
 json-glib-dev
 lcms2-dev

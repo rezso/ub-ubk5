@@ -1,15 +1,15 @@
 diff -Naur a/src/groupadd.c b/src/groupadd.c
---- a/src/groupadd.c	2022-01-03 01:46:53.000000000 +0100
-+++ b/src/groupadd.c	2022-07-16 16:08:15.496861961 +0200
-@@ -103,6 +103,7 @@
+--- a/src/groupadd.c	2024-12-06 06:34:19.000000000 +0100
++++ b/src/groupadd.c	2025-02-11 20:45:18.641969133 +0100
+@@ -112,6 +112,7 @@
  	(void) fputs (_("  -o, --non-unique              allow to create groups with duplicate\n"
  	                "                                (non-unique) GID\n"), usageout);
  	(void) fputs (_("  -p, --password PASSWORD       use this encrypted password for the new group\n"), usageout);
 +	(void) fputs (_("  -q, --quiet                   succeed quietly if user+uid already exists\n"), usageout);
  	(void) fputs (_("  -r, --system                  create a system account\n"), usageout);
  	(void) fputs (_("  -R, --root CHROOT_DIR         directory to chroot into\n"), usageout);
- 	(void) fputs (_("  -P, --prefix PREFIX_DI        directory prefix\n"), usageout);
-@@ -381,6 +382,7 @@
+ 	(void) fputs (_("  -P, --prefix PREFIX_DIR       directory prefix\n"), usageout);
+@@ -389,6 +390,7 @@
  		{"key",        required_argument, NULL, 'K'},
  		{"non-unique", no_argument,       NULL, 'o'},
  		{"password",   required_argument, NULL, 'p'},
@@ -17,7 +17,7 @@ diff -Naur a/src/groupadd.c b/src/groupadd.c
  		{"system",     no_argument,       NULL, 'r'},
  		{"root",       required_argument, NULL, 'R'},
  		{"prefix",     required_argument, NULL, 'P'},
-@@ -388,7 +390,7 @@
+@@ -396,7 +398,7 @@
  		{NULL, 0, NULL, '\0'}
  	};
  
@@ -26,7 +26,7 @@ diff -Naur a/src/groupadd.c b/src/groupadd.c
  		                 long_options, NULL)) != -1) {
  		switch (c) {
  		case 'f':
-@@ -440,6 +442,9 @@
+@@ -446,6 +448,9 @@
  			pflg = true;
  			group_passwd = optarg;
  			break;
@@ -37,9 +37,9 @@ diff -Naur a/src/groupadd.c b/src/groupadd.c
  			rflg = true;
  			break;
 diff -Naur a/src/groupdel.c b/src/groupdel.c
---- a/src/groupdel.c	2022-01-03 01:46:53.000000000 +0100
-+++ b/src/groupdel.c	2022-07-16 16:03:21.748450469 +0200
-@@ -302,17 +302,20 @@
+--- a/src/groupdel.c	2024-08-23 05:46:33.000000000 +0200
++++ b/src/groupdel.c	2025-02-11 20:45:18.641969133 +0100
+@@ -301,17 +301,20 @@
  	static struct option long_options[] = {
  		{"help", no_argument,       NULL, 'h'},
  		{"force", no_argument,      NULL, 'f'},
@@ -62,9 +62,9 @@ diff -Naur a/src/groupdel.c b/src/groupdel.c
  			break;
  		case 'P': /* no-op, handled in process_prefix_flag () */
 diff -Naur a/src/userdel.c b/src/userdel.c
---- a/src/userdel.c	2022-01-03 01:46:53.000000000 +0100
-+++ b/src/userdel.c	2022-07-16 16:06:28.944697355 +0200
-@@ -1015,6 +1015,7 @@
+--- a/src/userdel.c	2024-12-25 14:53:10.000000000 +0100
++++ b/src/userdel.c	2025-02-11 20:45:18.641969133 +0100
+@@ -982,6 +982,7 @@
  		static struct option long_options[] = {
  			{"force",        no_argument,       NULL, 'f'},
  			{"help",         no_argument,       NULL, 'h'},
@@ -72,7 +72,7 @@ diff -Naur a/src/userdel.c b/src/userdel.c
  			{"remove",       no_argument,       NULL, 'r'},
  			{"root",         required_argument, NULL, 'R'},
  			{"prefix",       required_argument, NULL, 'P'},
-@@ -1025,9 +1026,9 @@
+@@ -992,9 +993,9 @@
  		};
  		while ((c = getopt_long (argc, argv,
  #ifdef WITH_SELINUX
@@ -84,7 +84,7 @@ diff -Naur a/src/userdel.c b/src/userdel.c
  #endif				/* !WITH_SELINUX */
  		                         long_options, NULL)) != -1) {
  			switch (c) {
-@@ -1037,6 +1038,9 @@
+@@ -1004,6 +1005,9 @@
  			case 'h':
  				usage (E_SUCCESS);
  				break;

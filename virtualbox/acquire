@@ -1,6 +1,6 @@
 #!/usr/bin/env dl
 
-VirtualBox-${UB_VERSION}.tar.bz2 VirtualBox-${UB_VERSION}/
+VirtualBox-${UB_VERSION}a.tar.bz2 VirtualBox-${UB_VERSION}/
 	https://download.virtualbox.org/virtualbox/${UB_VERSION}/
 
 Oracle_VirtualBox_Extension_Pack.vbox-extpack

@@ -1,6 +1,5 @@
 ffmpeg-dev
 gtk3-dev
-intltool
 libgsl-dev
 libpng-dev
 libusb-dev

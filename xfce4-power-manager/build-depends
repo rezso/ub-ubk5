@@ -1,6 +1,5 @@
 dbus-dev
 dbus-glib-dev
-intltool
 libnotify-dev
 libsm-dev
 libxcb-dev

@@ -11,6 +11,7 @@ ub_make clean
 
 # regenerate old moc files
 cd PrinterUtility
+export PATH=/usr/lib/qt5/bin:$PATH
 for file in EPUMaintenanceGuideView.h EPUMainView.h EPUMainWindow.h EPUOperationView.h EPUPrinterListDialog.h EPUView.h; do
 moc $file -o moc_${file/.h/}.cpp
 done

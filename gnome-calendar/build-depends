@@ -6,7 +6,6 @@ geocode-glib-dev
 gnome-online-accounts-dev
 gsettings-desktop-schemas
 gtk4-dev
-intltool
 itstool
 libadwaita-dev
 libdazzle-dev

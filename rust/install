@@ -14,5 +14,5 @@ cp -r share/doc ${UB_INSTALLDIR}/usr/share
 cp -r share/man ${UB_INSTALLDIR}/usr/share
 
 # patchelf
-find ${UB_INSTALLDIR}/usr/bin -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
-find ${UB_INSTALLDIR}/usr/lib -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
+# find ${UB_INSTALLDIR}/usr/bin -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;
+# find ${UB_INSTALLDIR}/usr/lib -type f -exec patchelf --set-interpreter /usr/lib/ld-linux-x86-64.so.2 &> /dev/null {} \;

@@ -2,7 +2,6 @@ gcr-dev
 gexiv2-dev
 gstreamer-dev
 gtk3-dev
-intltool
 itstool
 json-glib-dev
 libgee-dev

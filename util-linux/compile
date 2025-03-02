@@ -2,10 +2,11 @@
 
 ## Disables because of conflicts:
 # kill - procps
-# login, nologin, newgrp - shadow
+# login, nologin, newgrp, su - shadow
 
 ub_compile \
     -Dbuild-python=disabled \
+    -Dbuild-liblastlog2=disabled \
     \
 	-Dbuild-kill=disabled \
 	\

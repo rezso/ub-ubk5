@@ -5,7 +5,6 @@ gsettings-desktop-schemas
 gspell-dev
 gtk3-dev
 icon-theme-adwaita
-intltool
 itstool
 libgxps-dev
 libhandy-dev

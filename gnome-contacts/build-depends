@@ -1,6 +1,5 @@
 cheese-dev
 db4-dev
-docbook-dtds
 docbook-xsl
 evolution-data-server-dev
 folks-dev
@@ -9,7 +8,6 @@ gnome-desktop-dev
 gnome-online-accounts-dev
 gobject-introspection-dev
 gstreamer-dev
-intltool
 itstool
 libadwaita-dev
 libcap-dev

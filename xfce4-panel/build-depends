@@ -4,7 +4,6 @@ gdk-pixbuf-dev
 gobject-introspection-dev
 gtk3-dev
 gtk3-layer-shell-dev
-intltool
 libdbusmenu-gtk3-dev
 libexo-dev
 libwnck-dev
@@ -14,4 +13,5 @@ libxfce4ui-dev
 libxfce4util-dev
 libxfce4windowing-dev
 pango-dev
+xfce4-dev-tools
 xfconf-dev

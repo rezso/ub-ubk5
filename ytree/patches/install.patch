@@ -1,0 +1,31 @@
+diff -Naur a/Makefile b/Makefile
+--- a/Makefile	2025-02-12 18:23:25.000000000 +0100
++++ b/Makefile	2025-02-27 00:03:41.879208171 +0100
+@@ -11,13 +11,14 @@
+ # ADD_CFLAGS: Add -DVI_KEYS if you want vi-cursor-keys
+ #
+ 
+-DESTDIR     = /usr
++DESTDIR     =
++PREFIX      = /usr
+ 
+ ADD_CFLAGS  = # -DVI_KEYS
+ 
+-BINDIR      = $(DESTDIR)/bin
+-MANDIR      = $(DESTDIR)/share/man/man1
+-MANESDIR    = $(DESTDIR)/share/man/es/man1
++BINDIR      = $(DESTDIR)$(PREFIX)/bin
++MANDIR      = $(DESTDIR)$(PREFIX)/share/man/man1
++MANESDIR    = $(DESTDIR)$(PREFIX)/share/man/es/man1
+ 
+ 
+ # Uncomment the lines for your system (default is linux)
+@@ -29,7 +30,7 @@
+ #CLOCK	    = -DCLOCK_SUPPORT # Experimental!
+ READLINE    = -DREADLINE_SUPPORT
+ CFLAGS      += -D_GNU_SOURCE $(COLOR) $(CLOCK) $(READLINE) $(ADD_CFLAGS)
+-LDFLAGS     += -lncurses -ltinfo -lreadline
++LDFLAGS     += -lncursesw -lreadline
+ 
+ ###########################
+ # LINUX with Wide character support (tested with ncurses 6)

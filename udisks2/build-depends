@@ -1,7 +1,7 @@
 acl-dev
+docbook-xsl
 expat-dev
 gobject-introspection-dev
-intltool
 libatasmart-dev
 libblockdev-dev
 libbytesize-dev

@@ -1,5 +1,10 @@
 #!/bin/sh -eux
 
+git clone https://github.com/zherczeg/sljit.git deps/sljit
+cd deps/sljit
+git checkout 8481dde
+cd -
+
 ./autogen.sh
 ub_configure \
 	--enable-pcre2-16 \

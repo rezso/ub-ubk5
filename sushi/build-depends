@@ -4,7 +4,6 @@ evince-dev
 gjs-dev
 gobject-introspection-dev
 gtksourceview4-dev
-intltool
 itstool
 libcap-dev
 libgudev-dev

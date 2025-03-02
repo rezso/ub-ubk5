@@ -1,7 +1,6 @@
 brotli-dev
 glib-networking
 gobject-introspection-dev
-intltool
 krb5-dev
 libnghttp2-dev
 libpsl-dev

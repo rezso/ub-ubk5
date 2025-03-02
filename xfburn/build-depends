@@ -1,6 +1,5 @@
 dbus-glib-dev
 gstreamer-dev
-intltool
 libburn-dev
 libexo-dev
 libisofs-dev

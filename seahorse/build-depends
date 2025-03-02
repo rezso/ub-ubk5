@@ -4,7 +4,6 @@ gobject-introspection-dev
 gpg
 gpgme-dev
 gtk3-dev
-intltool
 itstool
 libhandy-dev
 libpwquality-dev

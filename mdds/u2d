@@ -1,1 +1,2 @@
-u2d https://dev-www.libreoffice.org/src/ mdds-
+urllist https://gitlab.com/mdds/mdds/-/tags | grep '^2\.' | sort -V | tail -n1
+# u2d https://dev-www.libreoffice.org/src/ mdds-

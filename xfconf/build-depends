@@ -1,5 +1,4 @@
 dbus-glib-dev
-intltool
 libxfce4util-dev
 perl-extutils-depends
 perl-extutils-pkgconfig

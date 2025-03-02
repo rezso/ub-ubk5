@@ -1,6 +1,5 @@
 dbus-dev
 gobject-introspection-dev
-intltool
 json-glib-dev
 libgcrypt-dev
 libsoup3-dev

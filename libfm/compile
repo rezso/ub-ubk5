@@ -5,16 +5,16 @@ export BOOTSTRAP=0
 
 if [ $BOOTSTRAP = "1" ]; then
 
-ub_configure \
+ub_compile \
 	--with-extra-only
+exit 0
 
 else
-ub_configure \
+ub_compile \
 	--enable-udisks \
 	--with-gnu-ld \
 	--with-html-dir=/usr/share/doc/libfm/html \
 	--with-gtk=3
 
+exit 0
 fi
-
-ub_make

@@ -1,12 +1,10 @@
 cpupower-dev
 dbus-glib-dev
-docbook-dtds
 docbook-xsl
 gnome-panel-dev
 gnome-settings-daemon-dev
 gucharmap-dev
 icon-theme-adwaita
-intltool
 itstool
 libgcrypt-dev
 libgtop2-dev

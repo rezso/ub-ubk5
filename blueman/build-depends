@@ -1,7 +1,6 @@
 bluez-dev
 dbus-python3-dev
 gtk3-dev
-intltool
 iproute2-dev
 networkmanager-dev
 pulseaudio-dev

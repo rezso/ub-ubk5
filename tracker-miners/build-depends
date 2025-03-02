@@ -1,7 +1,6 @@
 dbus-dev
 gobject-introspection-dev
 gstreamer-dev
-intltool
 libexif-dev
 libgxps-dev
 libosinfo-dev

@@ -5,7 +5,6 @@ dbus-glib-dev
 gobject-introspection-dev
 gstreamer-dev
 gtk3-dev
-intltool
 json-glib-dev
 libcacard-dev
 libdrm-dev

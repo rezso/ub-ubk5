@@ -1,5 +1,4 @@
 dbus-glib-dev
-intltool
 libexif-dev
 libexo-dev
 libgudev-dev

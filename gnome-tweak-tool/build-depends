@@ -1,7 +1,6 @@
 gobject-introspection-dev
 gsettings-desktop-schemas
 gtk4-dev
-intltool
 libadwaita-dev
 libgudev-dev
 python3-pygobject-dev

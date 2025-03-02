@@ -1,5 +1,5 @@
 #!/usr/bin/env dl
 
 mdds-${UB_VERSION}.tar.bz2 mdds-${UB_VERSION}/
-	https://kohei.us/files/mdds/src/
+	https://gitlab.com/mdds/mdds/-/archive/${UB_VERSION}/
 	https://dev-www.libreoffice.org/src/

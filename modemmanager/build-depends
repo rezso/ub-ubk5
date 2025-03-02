@@ -1,6 +1,5 @@
 dbus-glib-dev
 gobject-introspection-dev
-intltool
 libgudev-dev
 libmbim-dev
 libqmi-dev

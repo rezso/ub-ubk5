@@ -1,30 +1,30 @@
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2022-07-16 15:40:43.015670947 +0200
-+++ b/src/useradd.c	2022-07-16 15:46:27.501004694 +0200
-@@ -2340,7 +2340,6 @@
- 		const char *spool;
- 		char *file;
- 		int fd;
--		struct group *gr;
- 		gid_t gid;
- 		mode_t mode;
+--- a/src/useradd.c	2025-02-11 20:13:24.186219074 +0100
++++ b/src/useradd.c	2025-02-11 20:31:31.011928122 +0100
+@@ -2358,7 +2358,6 @@
+ 	gid_t         gid;
+ 	mode_t        mode;
+ 	const char    *spool;
+-	struct group  *gr;
  
-@@ -2374,16 +2373,8 @@
- 			return;
- 		}
+ 	if (strcasecmp(create_mail_spool, "yes") != 0)
+ 		return;
+@@ -2394,16 +2393,8 @@
+ 		return;
+ 	}
  
--		gr = prefix_getgrnam ("mail"); /* local, no need for xgetgrnam */
--		if (NULL == gr) {
--			fputs (_("Group 'mail' not found. Creating the user mailbox file with 0600 mode.\n"),
--			       stderr);
--			gid = user_gid;
--			mode = 0600;
--		} else {
--			gid = gr->gr_gid;
--			mode = 0660;
--		}
-+		gid = user_gid;
-+		mode = 0600;
+-	gr = prefix_getgrnam("mail"); /* local, no need for xgetgrnam */
+-	if (NULL == gr) {
+-		fputs(_("Group 'mail' not found. Creating the user mailbox file with 0600 mode.\n"),
+-		       stderr);
+-		gid = user_gid;
+-		mode = 0600;
+-	} else {
+-		gid = gr->gr_gid;
+-		mode = 0660;
+-	}
++	gid = user_gid;
++	mode = 0600;
  
- 		if (   (fchown (fd, user_id, gid) != 0)
- 		    || (fchmod (fd, mode) != 0)) {
+ 	if (fchown(fd, user_id, gid) != 0
+ 	 || fchmod(fd, mode) != 0)

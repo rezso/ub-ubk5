@@ -1,7 +1,6 @@
 dbus-dev
 dbus-glib-dev
 gstreamer-dev
-intltool
 libnotify-dev
 libsm-dev
 libxfce4ui-dev

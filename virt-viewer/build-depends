@@ -3,7 +3,6 @@ glib-dev
 gnutls-dev
 gtk3-dev
 gtk-vnc-dev
-intltool
 libvirt-glib-dev
 libxml2-dev
 spice-gtk-dev

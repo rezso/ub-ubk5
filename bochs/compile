@@ -15,7 +15,6 @@ ub_compile \
     --with-sdl2 \
     --without-wx \
     --enable-cpu-level=6 \
-    --enable-disasm \
     --enable-e1000 \
     --enable-x86-64 \
     --enable-smp

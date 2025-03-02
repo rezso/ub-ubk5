@@ -6,7 +6,6 @@ gtk3-dev
 gupnp-av-dev
 gupnp-dev
 gupnp-dlna-dev
-intltool
 json-glib-dev
 libgee-dev
 libmediaart-dev

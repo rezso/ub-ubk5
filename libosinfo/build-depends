@@ -1,6 +1,5 @@
 gobject-introspection-dev
 hwdata
-intltool
 libsoup3-dev
 libxslt-dev
 meson

@@ -5,7 +5,6 @@ clutter-gtk-dev
 gobject-introspection-dev
 grilo-dev
 gstreamer-dev
-intltool
 itstool
 json-glib-dev
 libcap-dev

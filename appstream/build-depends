@@ -1,7 +1,6 @@
 curl-dev
 gobject-introspection-dev
 gperf
-intltool
 itstool
 libxml2-dev
 libxmlb-dev

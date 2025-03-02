@@ -1,6 +1,5 @@
 gstreamer-dev
 gtk4-dev
-intltool
 jansson-dev
 libass-dev
 libgudev-dev

@@ -1,6 +1,5 @@
 dbus-glib-dev
 gtk3-layer-shell-dev
-intltool
 libexo-dev
 libjpeg-turbo-dev
 libnotify-dev

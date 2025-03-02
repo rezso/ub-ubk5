@@ -1,6 +1,5 @@
 boost-dev
 guile-dev
-intltool
 libdbi-dev
 libofx-dev
 libunistring-dev

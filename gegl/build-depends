@@ -7,7 +7,6 @@ gdk-pixbuf-dev
 gexiv2-dev
 gobject-introspection-dev
 graphviz-dev
-intltool
 json-glib-dev
 lcms2-dev
 libgsf-dev

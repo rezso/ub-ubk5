@@ -4,7 +4,6 @@ bluez-dev
 db4-dev
 fftw3-dev
 gdbm-dev
-intltool
 jack-dev
 json-c-dev
 libasyncns-dev
@@ -18,6 +17,7 @@ lirc-dev
 meson
 openssl-dev
 orc-dev
+perl-xml-parser
 sbc-dev
 speexdsp-dev
 systemd-dev

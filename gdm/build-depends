@@ -2,7 +2,6 @@ accountsservice-dev
 dconf-dev
 gobject-introspection-dev
 gtk3-dev
-intltool
 itstool
 json-glib-dev
 keyutils-dev

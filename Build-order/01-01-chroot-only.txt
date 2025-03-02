@@ -135,7 +135,6 @@ lsof
 lsscsi
 luajit
 man-pages
-mdds
 memtest86+
 mpage
 mtx

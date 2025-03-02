@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
-qmake fet.pro
+qmake6 fet.pro
 ub_make

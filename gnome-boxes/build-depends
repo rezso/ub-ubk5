@@ -1,5 +1,4 @@
 gobject-introspection-dev
-intltool
 itstool
 libarchive-dev
 libgudev-dev

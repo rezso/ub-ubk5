@@ -1,5 +1,6 @@
 #!/bin/sh -eux
 
+export PATH=/usr/lib/qt6/bin:$PATH
 lrelease qpdfview.pro
 qmake qpdfview.pro
 make

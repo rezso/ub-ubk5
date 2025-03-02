@@ -78,6 +78,7 @@ xinit
 libxml++3
 upower
 icon-theme-gnome
+mdds
 libetonyek
 libvirt
 libvirt-python3

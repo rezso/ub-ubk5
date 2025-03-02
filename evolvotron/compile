@@ -1,4 +1,4 @@
 #!/bin/sh -eux
 
-qmake main.pro
+qmake6 main.pro
 ub_compile

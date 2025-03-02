@@ -3,7 +3,6 @@ bash-completion
 dbus-dev
 gobject-introspection-dev
 icu-dev
-intltool
 jansson-dev
 json-glib-dev
 libpng-dev

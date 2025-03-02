@@ -1,3 +1,4 @@
 #!/bin/sh -eux
 
+rm -Rf subprojects
 ub_compile

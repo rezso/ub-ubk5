@@ -1,6 +1,6 @@
 dbus-glib-dev
+docbook-xsl
 gcr-dev
-intltool
 libgcrypt-dev
 libtasn1-dev
 libxslt-dev

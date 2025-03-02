@@ -3,7 +3,6 @@ gdk-pixbuf-dev
 gobject-introspection-dev
 gperf
 gtk3-dev
-intltool
 itstool
 json-glib-dev
 libarchive-dev

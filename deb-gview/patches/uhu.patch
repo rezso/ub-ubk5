@@ -1,6 +1,6 @@
 diff -Naur a/desktop/deb-gview.desktop.in.in b/desktop/deb-gview.desktop.in.in
 --- a/desktop/deb-gview.desktop.in.in	2024-10-17 17:44:01.000000000 +0200
-+++ b/desktop/deb-gview.desktop.in.in	2024-10-23 00:18:13.498245514 +0200
++++ b/desktop/deb-gview.desktop.in.in	2025-02-28 12:16:07.340070866 +0100
 @@ -2,8 +2,10 @@
  _Name=Debian Package Viewer
  _Comment=Debian package file viewer
@@ -15,19 +15,31 @@ diff -Naur a/desktop/deb-gview.desktop.in.in b/desktop/deb-gview.desktop.in.in
  Type=Application
 diff -Naur a/Makefile.am b/Makefile.am
 --- a/Makefile.am	2024-10-17 17:44:01.000000000 +0200
-+++ b/Makefile.am	2024-10-23 00:17:24.366244015 +0200
-@@ -5,7 +5,7 @@
++++ b/Makefile.am	2025-02-28 12:17:22.000173103 +0100
+@@ -1,20 +1,5 @@
+ SUBDIRS = src . po desktop
  
- man_MANS=$(PACKAGE).1
- 
+-$(PACKAGE).1: $(PACKAGE).1.xml
+-	$(XP) $(DB2MAN) $<
+-
+-man_MANS=$(PACKAGE).1
+-
 -DB2MAN = /usr/share/sgml/docbook/stylesheet/xsl/nwalsh/manpages/docbook.xsl
-+DB2MAN = /usr/share/sgml/docbook/xsl-stylesheets/manpages/docbook.xsl
- XP = xsltproc -''-nonet -''-param man.charmap.use.subset "0"
- 
- deb_gviewdocdir = ${prefix}/share/doc/deb-gview
+-XP = xsltproc -''-nonet -''-param man.charmap.use.subset "0"
+-
+-deb_gviewdocdir = ${prefix}/share/doc/deb-gview
+-deb_gviewdoc_DATA = \
+- ChangeLog \
+- README \
+- NEWS \
+- TODO
+-
+ deb-gview.pot: Makefile
+ 	${RM} -f po/deb-gview.pot
+ 	${MAKE} -C po deb-gview.pot
 diff -Naur a/src/callbacks.c b/src/callbacks.c
 --- a/src/callbacks.c	2024-10-17 17:44:01.000000000 +0200
-+++ b/src/callbacks.c	2024-10-23 00:15:56.290241327 +0200
++++ b/src/callbacks.c	2025-02-28 12:16:07.340070866 +0100
 @@ -64,6 +64,11 @@
  			"/var/cache/apt/archives");
  	}
@@ -42,7 +54,7 @@ diff -Naur a/src/callbacks.c b/src/callbacks.c
  		"*.deb");
 diff -Naur a/src/dvarchive.c b/src/dvarchive.c
 --- a/src/dvarchive.c	2024-10-17 17:44:01.000000000 +0200
-+++ b/src/dvarchive.c	2024-10-23 00:15:56.290241327 +0200
++++ b/src/dvarchive.c	2025-02-28 12:16:07.340070866 +0100
 @@ -188,6 +188,23 @@
  				dv_new_window (debfile);
  			}

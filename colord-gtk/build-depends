@@ -2,6 +2,5 @@ colord-dev
 gobject-introspection-dev
 gtk3-dev
 gtk4-dev
-intltool
 lcms2-dev
 vala

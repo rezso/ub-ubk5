@@ -1,6 +1,5 @@
 gobject-introspection-dev
 gtk3-dev
-intltool
 itstool
 libarchive-dev
 liboauth-dev

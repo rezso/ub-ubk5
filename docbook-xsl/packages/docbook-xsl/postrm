@@ -1,10 +1,10 @@
 #!/bin/bash
 
-_xmlcatalog() {
-  xmlcatalog --noout "$@" etc/xml/catalog
-}
-
 old=${1%-*}
 
-_xmlcatalog --del /usr/share/xml/docbook/xsl-stylesheets-$old
-_xmlcatalog --del /usr/share/xml/docbook/xsl-stylesheets-$old-nons
+xmlcatalog --noout --del /usr/share/xml/docbook/xsl-stylesheets-$old /etc/xml/catalog
+xmlcatalog --noout --del /usr/share/xml/docbook/xsl-stylesheets-$old-nons /etc/xml/catalog
+
+if [ -d /etc/xml ]; then
+rm -Rf /etc/xml
+fi

@@ -1,7 +1,6 @@
 bash-completion
 dbus-dev
 gobject-introspection-dev
-intltool
 lcms2-dev
 libgudev-dev
 libgusb-dev

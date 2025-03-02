@@ -3,7 +3,6 @@ gobject-introspection-dev
 grilo-dev
 grilo-plugins
 gtk4-dev
-intltool
 itstool
 libadwaita-dev
 libdazzle-dev

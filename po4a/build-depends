@@ -1,5 +1,6 @@
+docbook-xml
 docbook-xsl
-libxslt
+libxslt-dev
 perl-locale-gettext
 perl-module-build
 perl-pod-parser

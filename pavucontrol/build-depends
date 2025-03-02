@@ -1,5 +1,4 @@
 gtkmm4-dev
-intltool
 json-glib-dev
 libcanberra-dev
 libsigc++3-dev

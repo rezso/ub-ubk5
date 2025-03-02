@@ -1,5 +1,4 @@
 compface
-docbook-dtds
 docbook-xsl
 gmime-dev
 gnutls-dev
@@ -8,7 +7,6 @@ gpgme-dev
 gtk3-dev
 gtksourceview4-dev
 gtkspell-dev
-intltool
 krb5-dev
 libcanberra-dev
 libesmtp-dev

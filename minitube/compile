@@ -15,6 +15,7 @@ git clone https://github.com/flaviotordini/yt lib/yt
 git clone https://github.com/itay-grudev/SingleApplication lib/singleapplication
 fi
 
+export PATH=/usr/lib/qt5/bin:$PATH
 qmake
 ub_replace -O3 -O2 Makefile
 ub_compile

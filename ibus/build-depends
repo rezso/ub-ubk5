@@ -5,7 +5,6 @@ emoji
 gobject-introspection-dev
 gtk3-dev
 gtk4-dev
-intltool
 iso-codes
 libnotify-dev
 unicode-ucd

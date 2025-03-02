@@ -3,7 +3,6 @@ gobject-introspection-dev
 grilo-dev
 gstreamer-dev
 gtk3-dev
-intltool
 itstool
 libhandy-dev
 libpeas-dev

@@ -1,13 +1,11 @@
 clutter-gst-dev
 clutter-gtk-dev
 dbus-glib-dev
-docbook-dtds
 docbook-xsl
 gnome-desktop-dev
 gnome-video-effects
 gobject-introspection-dev
 gstreamer-dev
-intltool
 itstool
 libcanberra-dev
 libgudev-dev

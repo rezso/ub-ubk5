@@ -4,7 +4,6 @@ gnome-autoar-dev
 gnome-desktop-dev
 gobject-introspection-dev
 gstreamer-dev
-intltool
 libadwaita-dev
 libexif-dev
 libnotify-dev
