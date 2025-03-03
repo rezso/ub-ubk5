@@ -104,11 +104,13 @@ kdegraphics-thumbnailers # apps
 kpipewire
 layer-shell-qt
 plasma-workspace-wallpapers
+kactivitymanagerd
 bluedevil
 kdecoration
 breeze
 breeze-gtk
 kde-gtk-config
+kgamma
 libkscreen
 kscreen
 kscreenlocker

@@ -1,10 +1,12 @@
 gpsd-dev
 iso-codes
+kactivitymanagerd
 kded-dev
 kf6-dev
 kirigami-addons-dev
 kpipewire-dev
 kscreenlocker-dev
+ksystemstats
 kwayland-dev
 kwin-dev
 layer-shell-qt-dev
