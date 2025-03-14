@@ -9,17 +9,13 @@ cd "$UB_OBJECTDIR"
 
 echo "slibdir=/usr/lib" >> configparms
 echo "rtlddir=/usr/lib" >> configparms
-echo "sbindir=/usr/bin" >> configparms
-echo "rootsbindir=/usr/sbin" >> configparms
 
 UB_CONFIGURE_DIR="$UB_COMPILEDIR" ub_configure \
     --libexecdir=/usr/lib \
 	--with-headers=/usr/include \
-	--enable-bind-now \
-	--enable-cet \
+	--without-nscd \
 	--enable-fortify-source \
 	--enable-kernel=5.4.40 \
-	--enable-lock-elision \
 	--enable-stack-protector=strong \
 	--disable-profile \
 	--disable-werror \
