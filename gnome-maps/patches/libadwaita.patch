@@ -1,0 +1,12 @@
+diff -Naur a/meson.build b/meson.build
+--- a/meson.build	2025-03-15 09:17:51.000000000 +0100
++++ b/meson.build	2025-03-15 15:54:01.079198160 +0100
+@@ -38,7 +38,7 @@
+ girepository = dependency('gobject-introspection-1.0', version: '>= 0.10.1')
+ gtk4 = dependency('gtk4', version: '>= 4.10')
+ geoclue2 = dependency('libgeoclue-2.0', version: '>= 0.12.99')
+-libadwaita = dependency('libadwaita-1', version: '>= 1.7.alpha')
++libadwaita = dependency('libadwaita-1', version: '>= 1.6.0')
+ gweather = dependency('gweather4', version: '>= 3.90.0')
+ geocodeglib = dependency('geocode-glib-2.0', version: '>= 3.15.2')
+ libportal = dependency('libportal')
