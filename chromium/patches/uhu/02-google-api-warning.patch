@@ -1,7 +1,7 @@
 diff -Naur a/chrome/browser/ui/startup/infobar_utils.cc b/chrome/browser/ui/startup/infobar_utils.cc
---- a/chrome/browser/ui/startup/infobar_utils.cc	2024-06-14 01:28:50.259266100 +0200
-+++ b/chrome/browser/ui/startup/infobar_utils.cc	2024-06-16 11:27:02.324116885 +0200
-@@ -16,7 +16,6 @@
+--- a/chrome/browser/ui/startup/infobar_utils.cc	2025-03-25 22:32:50.000000000 +0100
++++ b/chrome/browser/ui/startup/infobar_utils.cc	2025-04-06 21:57:16.376613904 +0200
+@@ -15,7 +15,6 @@
  #include "chrome/browser/ui/startup/automation_infobar_delegate.h"
  #include "chrome/browser/ui/startup/bad_flags_prompt.h"
  #include "chrome/browser/ui/startup/bidding_and_auction_consented_debugging_infobar_delegate.h"
@@ -9,7 +9,7 @@ diff -Naur a/chrome/browser/ui/startup/infobar_utils.cc b/chrome/browser/ui/star
  #include "chrome/browser/ui/startup/obsolete_system_infobar_delegate.h"
  #include "chrome/browser/ui/startup/startup_browser_creator.h"
  #include "chrome/browser/ui/startup/startup_types.h"
-@@ -26,7 +25,6 @@
+@@ -25,7 +24,6 @@
  #include "components/infobars/content/content_infobar_manager.h"
  #include "components/prefs/pref_service.h"
  #include "content/public/common/content_switches.h"
@@ -17,7 +17,7 @@ diff -Naur a/chrome/browser/ui/startup/infobar_utils.cc b/chrome/browser/ui/star
  #include "services/network/public/cpp/network_switches.h"
  
  #if !BUILDFLAG(IS_CHROMEOS) && !BUILDFLAG(IS_ANDROID)
-@@ -154,10 +152,6 @@
+@@ -156,10 +154,6 @@
      infobars::ContentInfoBarManager* infobar_manager =
          infobars::ContentInfoBarManager::FromWebContents(web_contents);
  

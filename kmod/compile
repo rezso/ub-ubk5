@@ -1,11 +1,9 @@
 #!/bin/sh -eux
 
 ub_compile \
-    --bindir=/usr/bin \
-    --libdir=/usr/lib \
-	--with-rootlibdir=/usr/lib \
-	--with-module-directory=/usr/lib/modules \
-	--with-zlib \
-	--with-xz \
-	--with-zstd \
-	--disable-manpages
+	-Dmoduledir=/usr/lib/modules \
+	-Dopenssl=disabled \
+	-Dzlib=enabled \
+	-Dxz=enabled \
+	-Dzstd=enabled \
+	-Dmanpages=false

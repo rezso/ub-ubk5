@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-dbus-python-${UB_VERSION}.tar.gz dbus-python-${UB_VERSION}/
+dbus-python-${UB_VERSION}.tar.xz dbus-python-${UB_VERSION}/
 	https://dbus.freedesktop.org/releases/dbus-python/

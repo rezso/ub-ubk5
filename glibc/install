@@ -3,26 +3,25 @@
 cd "$UB_OBJECTDIR"
 
 touch "$UB_INSTALLDIR"/etc/ld.so.conf
-
 make \
 	install_root="$UB_INSTALLDIR" \
 	install
 make \
 	install_root="$UB_INSTALLDIR" \
 	localedata/install-locales
-	
+
 mv "$UB_INSTALLDIR"/sbin/{ldconfig,sln} "$UB_INSTALLDIR"/usr/sbin
 rm -rf "$UB_INSTALLDIR"/sbin
 
-cp -p "$UB_COMPILEDIR"/nscd/nscd.conf    "$UB_INSTALLDIR"/etc/
 cp -p "$UB_COMPILEDIR"/nss/nsswitch.conf "$UB_INSTALLDIR"/etc/
 cp -p "$UB_COMPILEDIR"/posix/gai.conf    "$UB_INSTALLDIR"/etc/
 
-# remove generated /etc/ld.so.cache
 rm -f "$UB_INSTALLDIR"/etc/ld.so.cache
+rm -f "$UB_INSTALLDIR"/usr/libexec/pt_chown
 
-rm -f "$UB_INSTALLDIR"/var/lib/nss_db/Makefile
+# compat symlink
+# ln -s usr/lib "$UB_INSTALLDIR"/lib64
 
-# forcing libxcrypt in other codes
+# force using libxcrypt in other codes
 rm -f "$UB_INSTALLDIR"/usr/include/crypt.h
 rm -f "$UB_INSTALLDIR"/usr/lib/libcrypt.{a,so}

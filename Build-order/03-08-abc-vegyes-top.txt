@@ -29,6 +29,8 @@ syslog-ng
 system-config-printer
 synaptic
 hplip
+libcupsfilters
+libppd
 cups-filters
 foomatic-db
 foomatic-db-engine

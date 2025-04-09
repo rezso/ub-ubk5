@@ -2,7 +2,7 @@
 
 cd "$UB_OBJECTDIR"
 
-# The glibc supports kernel versions 3.2.0 and above only.
+# The glibc 2.32 supports kernel versions 3.2.0 and above only.
 # Sun RPC is removed, use libtirpc + rpcsvc-proto
 # nsl removed, use libnsl
 # libcrypt removed, use libxcrypt
@@ -11,15 +11,13 @@ echo "slibdir=/usr/lib" >> configparms
 echo "rtlddir=/usr/lib" >> configparms
 
 UB_CONFIGURE_DIR="$UB_COMPILEDIR" ub_configure \
-    --libexecdir=/usr/lib \
 	--with-headers=/usr/include \
-	--without-nscd \
-	--enable-fortify-source \
 	--enable-kernel=5.4.40 \
-	--enable-stack-protector=strong \
-	--disable-profile \
 	--disable-werror \
-	--disable-timezone-tools
+	--disable-timezone-tools \
+	--disable-nscd \
+	--disable-profile \
+	--enable-stack-protector=strong
 
 ub_make \
 	CFLAGS="-O2 -mtune=generic" \

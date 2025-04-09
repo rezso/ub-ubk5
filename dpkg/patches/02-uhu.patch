@@ -1,6 +1,6 @@
 diff -Naur a/lib/dpkg/dpkg.h b/lib/dpkg/dpkg.h
---- a/lib/dpkg/dpkg.h	2023-10-30 04:22:04.000000000 +0100
-+++ b/lib/dpkg/dpkg.h	2023-11-20 23:27:34.051239558 +0100
+--- a/lib/dpkg/dpkg.h	2025-03-09 19:01:08.000000000 +0100
++++ b/lib/dpkg/dpkg.h	2025-03-18 02:02:56.940144721 +0100
 @@ -52,7 +52,7 @@
  #define MAXCONFFILENAME     1000
  #define MAXDIVERTFILENAME   1024
@@ -11,9 +11,9 @@ diff -Naur a/lib/dpkg/dpkg.h b/lib/dpkg/dpkg.h
                             DPKGTEMPEXT, DPKGNEWEXT, DPKGOLDEXT, DPKGDISTEXT
  
 diff -Naur a/po/hu.po b/po/hu.po
---- a/po/hu.po	2023-10-30 04:22:04.000000000 +0100
-+++ b/po/hu.po	2023-11-20 23:28:09.215345565 +0100
-@@ -4506,8 +4506,8 @@
+--- a/po/hu.po	2025-03-09 19:01:08.000000000 +0100
++++ b/po/hu.po	2025-03-18 02:02:56.948144756 +0100
+@@ -4598,8 +4598,8 @@
  msgstr "--%s --recursive legalább 1 ösvény argumentumot vár"
  
  #: src/main/archives.c
@@ -25,9 +25,9 @@ diff -Naur a/po/hu.po b/po/hu.po
  #: src/main/archives.c
  #, c-format
 diff -Naur a/src/main/archives.c b/src/main/archives.c
---- a/src/main/archives.c	2023-10-30 04:22:04.000000000 +0100
-+++ b/src/main/archives.c	2023-11-20 23:30:44.335726334 +0100
-@@ -1556,7 +1556,7 @@
+--- a/src/main/archives.c	2025-03-09 19:01:08.000000000 +0100
++++ b/src/main/archives.c	2025-03-18 02:02:56.948144756 +0100
+@@ -1546,7 +1546,7 @@
      }
  
      if (!nfiles)

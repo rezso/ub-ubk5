@@ -1,5 +1,5 @@
 #!/usr/bin/env dl
 
 mesa-${UB_VERSION}.tar.xz mesa-${UB_VERSION}/
-	https://mesa.freedesktop.org/archive/
-	https://mesa.freedesktop.org/archive/older-versions/${UB_VERSION_HEAD1}.x/${UB_VERSION}/
+	https://archive.mesa3d.org/
+	https://archive.mesa3d.org/older-versions/${UB_VERSION_HEAD1}.x/${UB_VERSION}/

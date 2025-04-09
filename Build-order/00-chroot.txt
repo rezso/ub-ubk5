@@ -363,6 +363,7 @@ kbd
 rdfind
 linux-firmware
 libtirpc
+cargo-c
 librsvg
 iso-codes
 graphene

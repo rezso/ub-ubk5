@@ -70,7 +70,7 @@ use_system_lcms2=true
 use_system_libffi=true
 use_system_libjpeg=true
 use_system_libpng=true
-use_qt=true
+use_qt5=false
 use_qt6=true
 moc_qt6_path=\"/usr/lib/qt6/libexec/\"
 gtk_version=4
@@ -113,9 +113,21 @@ sed "s|//third_party/usb_ids/usb.ids|/usr/share/hwdata/usb.ids|g" -i services/de
 python3 build/linux/unbundle/replace_gn_files.py --system-libraries "${_syslibs[@]}"
 
 # Link to system tools required by the build
-rm third_party/node/linux/node-linux-x64/bin/node # precompiled binary
+if [ -f third_party/node/linux/node-linux-x64/bin/node ]; then
+    rm third_party/node/linux/node-linux-x64/bin/node # precompiled binary
+fi
+if [ ! -d third_party/node/linux/node-linux-x64/bin ]; then
+    mkdir -p third_party/node/linux/node-linux-x64/bin
+fi
 ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
 ln -s /usr/bin/java third_party/jdk/current/bin/
+
+# rust adler/adler2
+if ! find /usr/lib/rustlib | grep -q adler2; then
+    # Rust 1.86 ships adler2 but we need to change it to adler when
+    # using older Rust versions (idea for this borrowed from Gentoo)
+    sed -i 's/adler2/adler/' build/rust/std/BUILD.gn
+fi
 
 # gn a buildhoz
 # tools/gn/bootstrap/bootstrap.py --build-path=$outdir --gn-gen-args=" ${_flags[@]} "
@@ -125,7 +137,7 @@ export LDFLAGS+="-Wl,-rpath,/usr/lib/chromium/ -Wl,--no-keep-memory"
 
 # build options: az --args utáni sorok nem kezdődhetnek tab karakterrel!
 # $outdir/gn gen $outdir -v --args=" ${_flags[@]} " --script-executable=/usr/bin/python3
-gn gen $outdir -v --args=" ${_flags[@]} " --script-executable=/usr/bin/python3
+gn gen $outdir --args="${_flags[*]}"
 
 # gn args list - kihagyható, de segít a lehetséges opciók megadásához
 # $outdir/gn args --list $UB_COMPILEDIR/$outdir > $UB_COMPILEDIR/$outdir/gn-args-full.list

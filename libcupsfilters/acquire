@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libcupsfilters-${UB_VERSION}.tar.xz libcupsfilters-${UB_VERSION}/
+    https://github.com/OpenPrinting/libcupsfilters/releases/download/${UB_VERSION}/

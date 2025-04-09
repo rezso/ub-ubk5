@@ -2,4 +2,4 @@
 
 ub_compile \
     -DQT_VERSION=6 \
-    -DUSE_GRAPHICSMAGICK=ON
+    -DUSE_GRAPHICSMAGICK=OFF

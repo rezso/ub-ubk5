@@ -1,2 +1,2 @@
-noupdate
-# u2d https://ftp.gnu.org/gnu/glibc/
+u2d https://ftp.gnu.org/gnu/glibc/
+noupdate full rebuild esetén frissíthető csak

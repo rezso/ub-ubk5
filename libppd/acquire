@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+libppd-${UB_VERSION}.tar.xz libppd-${UB_VERSION}/
+    https://github.com/OpenPrinting/libppd/releases/download/${UB_VERSION}/

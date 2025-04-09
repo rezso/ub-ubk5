@@ -1,0 +1,11 @@
+diff -Naur a/src/daemon/open_console.c b/src/daemon/open_console.c
+--- a/src/daemon/open_console.c	2012-10-26 23:21:38.000000000 +0200
++++ b/src/daemon/open_console.c	2025-03-21 21:44:17.041038632 +0100
+@@ -22,6 +22,7 @@
+ #include <fcntl.h>                  /* open and co.      */
+ #include <sys/stat.h>               /* stat()            */
+ #include <sys/ioctl.h>              /* ioctl             */
++#include <sys/sysmacros.h>          /* major() w/ glibc 2.28 */
+ 
+ /* Linux specific (to be outsourced in gpm2 */
+ #include <linux/serial.h>           /* for serial console check */

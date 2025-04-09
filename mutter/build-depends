@@ -21,6 +21,7 @@ libxtst-dev
 mesa-dev
 pango-dev
 pipewire-dev
+python3-docutils
 startup-notification-dev
 upower-dev
 wayland-dev

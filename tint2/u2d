@@ -1,1 +1,0 @@
-urllist https://gitlab.com/o9000/tint2/-/tags/ | grep -E '^v[0-9]+\.' | sed 's/v//' | sort -V | tail -n 1

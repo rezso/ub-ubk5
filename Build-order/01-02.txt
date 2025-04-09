@@ -141,7 +141,6 @@ imagemagick
 libisofs
 libmythes
 libopusenc
-libept
 libgee
 libindicator3
 liblangtag

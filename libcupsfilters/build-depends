@@ -1,0 +1,12 @@
+cups-dev
+dbus-dev
+fontconfig-dev
+fonts-dejavu
+ghostscript-dev
+lcms2-dev
+libexif-dev
+libjpeg-turbo-dev
+libpng-dev
+libtiff-dev
+poppler-dev
+qpdf-dev

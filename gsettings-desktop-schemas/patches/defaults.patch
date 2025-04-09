@@ -1,0 +1,54 @@
+diff -Naur a/schemas/org.gnome.desktop.background.gschema.xml.in b/schemas/org.gnome.desktop.background.gschema.xml.in
+--- a/schemas/org.gnome.desktop.background.gschema.xml.in	2025-03-17 13:36:02.000000000 +0100
++++ b/schemas/org.gnome.desktop.background.gschema.xml.in	2025-03-21 22:04:52.461275806 +0100
+@@ -11,7 +11,7 @@
+       </description>
+     </key>
+     <key name="picture-uri" type="s">
+-      <default>'file://@datadir@/backgrounds/gnome/adwaita-l.jpg'</default>
++      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
+       <summary>Picture URI</summary>
+       <description>
+         URI to use for the background image. Note that the backend only supports
+@@ -19,7 +19,7 @@
+       </description>
+     </key>
+     <key name="picture-uri-dark" type="s">
+-      <default>'file://@datadir@/backgrounds/gnome/adwaita-d.jpg'</default>
++      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
+       <summary>Picture URI (dark)</summary>
+       <description>
+         URI to use for the background image. Note that the backend only supports
+@@ -57,7 +57,7 @@
+       </description>
+     </key>
+     <key name="show-desktop-icons" type="b">
+-      <default>false</default>
++      <default>true</default>
+       <summary>Have file manager handle the desktop</summary>
+       <description>
+         If set to true, then file manager will draw the icons on the desktop.
+diff -Naur a/schemas/org.gnome.desktop.input-sources.gschema.xml.in b/schemas/org.gnome.desktop.input-sources.gschema.xml.in
+--- a/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2025-03-17 13:36:02.000000000 +0100
++++ b/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2025-03-21 22:06:13.017564845 +0100
+@@ -15,7 +15,7 @@
+       </description>
+     </key>
+     <key name="sources" type="a(ss)">
+-      <default>[]</default>
++      <default>[('xkb', 'hu'), ('xkb', 'us')]</default>
+       <summary>List of input sources</summary>
+       <description>
+         List of input source identifiers available. Each source is
+diff -Naur a/schemas/org.gnome.desktop.screensaver.gschema.xml.in b/schemas/org.gnome.desktop.screensaver.gschema.xml.in
+--- a/schemas/org.gnome.desktop.screensaver.gschema.xml.in	2025-03-17 13:36:02.000000000 +0100
++++ b/schemas/org.gnome.desktop.screensaver.gschema.xml.in	2025-03-21 22:03:13.972920059 +0100
+@@ -95,7 +95,7 @@
+       </description>
+     </key>
+     <key name="picture-uri" type="s">
+-      <default>'file://@datadir@/backgrounds/gnome/adwaita-timed.xml'</default>
++      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
+       <summary>Picture URI</summary>
+       <description>
+         URI to use for the background image. Note that the backend only supports

@@ -1,4 +1,5 @@
 dbus-glib-dev
+docbook-xml
 docbook-xsl
 gcr-dev
 libgcrypt-dev

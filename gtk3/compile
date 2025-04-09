@@ -1,5 +1,7 @@
 #!/bin/sh -eux
 
+rm -Rf subprojects
+
 ub_compile \
     -Dx11_backend=true \
     -Dwayland_backend=true \

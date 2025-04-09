@@ -5,3 +5,4 @@ itstool
 libcanberra-dev
 libnotify-dev
 libsm-dev
+rust

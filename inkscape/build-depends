@@ -7,10 +7,8 @@ gtksourceview4-dev
 libgsl-dev
 libjpeg-turbo-dev
 libpotrace-dev
-libsigc++2-dev
-libsoup3-dev
 libvisio-dev
 libwpg-dev
 libxslt-dev
-poppler-glib-dev
+-poppler-glib-dev
 readline-dev

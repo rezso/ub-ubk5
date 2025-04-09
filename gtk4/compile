@@ -2,7 +2,7 @@
 
 # vulkan: requires glslang
 
-rm -f subprojects/gtk-doc.wrap
+rm -Rf subprojects
 
 ub_compile \
     -Dx11-backend=true \
@@ -13,7 +13,7 @@ ub_compile \
 	-Ddocumentation=false \
 	-Dman-pages=false \
 	-Dintrospection=enabled \
-	-Dbuild-demos=true \
+	-Dbuild-demos=false \
 	-Dbuild-examples=false \
 	-Dbuild-tests=false \
 	-Dbuild-testsuite=false

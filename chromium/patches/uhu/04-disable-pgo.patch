@@ -1,7 +1,7 @@
 diff -Naur a/build/config/compiler/pgo/pgo.gni b/build/config/compiler/pgo/pgo.gni
---- a/build/config/compiler/pgo/pgo.gni	2024-04-10 21:43:31.808662000 +0200
-+++ b/build/config/compiler/pgo/pgo.gni	2024-04-11 22:58:44.245827488 +0200
-@@ -21,16 +21,6 @@
+--- a/build/config/compiler/pgo/pgo.gni	2025-03-25 22:32:50.000000000 +0100
++++ b/build/config/compiler/pgo/pgo.gni	2025-04-06 23:01:26.687402313 +0200
+@@ -24,15 +24,6 @@
    # to think some code is hotter than it actually is, potentially causing very
    # bad compile times.
    chrome_pgo_phase = 0
@@ -11,8 +11,7 @@ diff -Naur a/build/config/compiler/pgo/pgo.gni b/build/config/compiler/pgo/pgo.g
 -      # obsolete.
 -      (is_high_end_android || is_win || is_mac || is_fuchsia ||
 -       (is_linux && !is_castos) ||
--       (is_ios && use_blink && target_environment == "device") ||
--       (is_chromeos_lacros && is_chromeos_device))) {
+-       (is_ios && use_blink && target_environment == "device"))) {
 -    chrome_pgo_phase = 2
 -  }
  

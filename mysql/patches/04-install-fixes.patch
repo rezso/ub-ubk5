@@ -1,7 +1,7 @@
 diff -Naur a/support-files/CMakeLists.txt b/support-files/CMakeLists.txt
---- a/support-files/CMakeLists.txt	2023-06-05 19:36:18.000000000 +0200
-+++ b/support-files/CMakeLists.txt	2023-07-18 11:42:52.171339087 +0200
-@@ -64,7 +64,7 @@
+--- a/support-files/CMakeLists.txt	2024-11-11 08:18:46.000000000 +0100
++++ b/support-files/CMakeLists.txt	2025-03-18 02:24:20.582427930 +0100
+@@ -66,7 +66,7 @@
  
  IF(UNIX AND NOT WITHOUT_SERVER)
    SET(prefix ${CMAKE_INSTALL_PREFIX})
@@ -10,7 +10,7 @@ diff -Naur a/support-files/CMakeLists.txt b/support-files/CMakeLists.txt
    IF(WITH_WSREP)
      SET(SCRIPTS ${SCRIPTS} wsrep_notify)
    ENDIF()
-@@ -77,35 +77,6 @@
+@@ -79,35 +79,6 @@
  
    IF(INSTALL_SUPPORTFILESDIR)
      INSTALL(FILES magic DESTINATION ${inst_location} COMPONENT SupportFiles)
@@ -46,7 +46,7 @@ diff -Naur a/support-files/CMakeLists.txt b/support-files/CMakeLists.txt
    ENDIF()
  
    CONFIGURE_FILE(mariadb.pc.in ${CMAKE_CURRENT_BINARY_DIR}/mariadb.pc @ONLY)
-@@ -130,10 +101,12 @@
+@@ -132,10 +103,12 @@
    ELSE()
      SET(sysconf2dir "${sysconfdir}/mysql")
    ENDIF()
@@ -59,7 +59,7 @@ diff -Naur a/support-files/CMakeLists.txt b/support-files/CMakeLists.txt
  
    IF(HAVE_SYSTEMD)
      CONFIGURE_FILE(mariadb.service.in
-@@ -243,11 +216,5 @@
+@@ -248,11 +221,5 @@
                COMPONENT IniFiles)
      ENDIF()
  

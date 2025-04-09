@@ -1,6 +1,5 @@
 #!/bin/sh -eux
 
 rm -f pyproject.toml
-rm -Rf subprojects
 
 ub_compile

@@ -1,5 +1,6 @@
 alsa-lib-dev
 audiofile-dev
+flex
 glib-dev
 gnutls-dev
 gtk3-dev
@@ -9,5 +10,6 @@ libspectrum-dev
 libx11-dev
 libxext-dev
 libxml2-dev
+pulseaudio-dev
 sdl-dev
 zlib-dev

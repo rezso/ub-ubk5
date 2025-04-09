@@ -60,7 +60,6 @@ recordmydesktop
 gencfsm
 mencfsm
 bclock
-tint2
 blueman
 recoll
 workrave

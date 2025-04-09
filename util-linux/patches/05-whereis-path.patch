@@ -1,7 +1,7 @@
 diff -Naur a/misc-utils/whereis.c b/misc-utils/whereis.c
---- a/misc-utils/whereis.c	2022-01-06 14:52:17.000000000 +0100
-+++ b/misc-utils/whereis.c	2022-07-16 16:43:39.624727281 +0200
-@@ -107,48 +107,21 @@
+--- a/misc-utils/whereis.c	2025-02-26 13:27:07.000000000 +0100
++++ b/misc-utils/whereis.c	2025-03-18 23:35:27.730734413 +0100
+@@ -111,48 +111,21 @@
  	"/usr/local/lib/" MULTIARCHTRIPLET,
  #endif
  	"/usr/lib",
@@ -51,10 +51,10 @@ diff -Naur a/misc-utils/whereis.c b/misc-utils/whereis.c
  	"/usr/local",
  	"/usr/libexec",
  	"/usr/share",
-@@ -158,23 +131,13 @@
+@@ -162,23 +135,13 @@
  };
  
- static const char *mandirs[] = {
+ static const char *const mandirs[] = {
 -	"/usr/man/*",
  	"/usr/share/man/*",
 -	"/usr/X386/man/*",
@@ -65,7 +65,7 @@ diff -Naur a/misc-utils/whereis.c b/misc-utils/whereis.c
  	NULL
  };
  
- static const char *srcdirs[] = {
+ static const char *const srcdirs[] = {
  	"/usr/src/*",
 -	"/usr/src/lib/libc/*",
 -	"/usr/src/lib/libc/net/*",

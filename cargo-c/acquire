@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz cargo-c-${UB_VERSION}/
+	https://github.com/lu-zero/cargo-c/archive/refs/tags/

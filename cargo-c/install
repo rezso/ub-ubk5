@@ -1,0 +1,3 @@
+#!/bin/sh -eux
+
+mv target/release/cargo-* "$UB_INSTALLDIR"/usr/bin/

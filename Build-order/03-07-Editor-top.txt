@@ -7,4 +7,3 @@ texstudio
 lyx
 texmaker
 qxmledit
-ispell

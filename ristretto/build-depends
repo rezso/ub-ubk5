@@ -1,6 +1,7 @@
 dbus-glib-dev
 file-dev
 libexif-dev
+libexo-dev
 libxfce4ui-dev
 libxfce4util-dev
 xfconf-dev

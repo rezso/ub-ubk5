@@ -2,10 +2,6 @@
 
 ub_install
 
-for cmd in depmod insmod modinfo modprobe rmmod lsmod; do
-	ln -s /usr/bin/kmod "${UB_INSTALLDIR}/usr/sbin/${cmd}"
-done
-
-mkdir -p ${UB_INSTALLDIR}/usr/share/man/man{5,8}
-cp man/*.5 ${UB_INSTALLDIR}/usr/share/man/man5/
-cp man/*.8 ${UB_INSTALLDIR}/usr/share/man/man8/
+# for cmd in depmod insmod modinfo modprobe rmmod lsmod; do
+#	ln -s /usr/bin/kmod "${UB_INSTALLDIR}/usr/sbin/${cmd}"
+# done
