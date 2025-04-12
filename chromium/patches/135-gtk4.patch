@@ -1,24 +1,7 @@
-From 737f345a7fce1e5e646b71b661301065cd4e58c9 Mon Sep 17 00:00:00 2001
-From: LN Liberda <lauren@selfisekai.rocks>
-Date: Thu, 20 Mar 2025 23:03:50 -0700
-Subject: [PATCH] GTK: Define missing GSK_RENDER_NODE_MAX_VALUE for GTK4
-
-Bug: 403871216
-Change-Id: I51ad4f80b0d2ec8f6cbc1715028d8a533c0ff511
-Reviewed-on: https://chromium-review.googlesource.com/c/chromium/src/+/6376945
-Reviewed-by: Thomas Anderson <thomasanderson@chromium.org>
-Reviewed-by: Lei Zhang <thestig@chromium.org>
-Commit-Queue: Lei Zhang <thestig@chromium.org>
-Cr-Commit-Position: refs/heads/main@{#1435878}
----
- ui/gtk/gtk_types.h | 3 +++
- 1 file changed, 3 insertions(+)
-
-diff --git a/ui/gtk/gtk_types.h b/ui/gtk/gtk_types.h
-index 6c3b820fab09bf..89acd5507af73a 100644
---- a/ui/gtk/gtk_types.h
-+++ b/ui/gtk/gtk_types.h
-@@ -103,6 +103,9 @@ struct _GdkColor {
+diff -Naur a/ui/gtk/gtk_types.h b/ui/gtk/gtk_types.h
+--- a/ui/gtk/gtk_types.h	2025-04-07 23:52:40.000000000 +0200
++++ b/ui/gtk/gtk_types.h	2025-04-09 19:41:14.847418005 +0200
+@@ -108,6 +108,9 @@
    guint16 blue;
  };
  

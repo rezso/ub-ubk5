@@ -1,6 +1,6 @@
 diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
---- a/build/config/compiler/BUILD.gn	2025-03-25 22:32:50.000000000 +0100
-+++ b/build/config/compiler/BUILD.gn	2025-04-06 21:52:44.592098579 +0200
+--- a/build/config/compiler/BUILD.gn	2025-04-07 23:52:40.000000000 +0200
++++ b/build/config/compiler/BUILD.gn	2025-04-09 19:38:50.710896056 +0200
 @@ -601,24 +601,6 @@
        }
      }
@@ -45,17 +45,19 @@ diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
      }
  
      if (!optimize_for_size) {
-@@ -1964,9 +1941,6 @@
+@@ -1963,28 +1940,12 @@
+       cflags += [
          # TODO(crbug.com/330524456): -Wcast-function-type is under -Wextra now.
          "-Wno-cast-function-type",
- 
+-
 -        # TODO(crbug.com/40284799): Fix and re-enable.
 -        "-Wno-thread-safety-reference-return",
 -
-         # TODO(crbug.com/376641662): Fix and re-enable.
-         "-Wno-nontrivial-memcall",
+-        # TODO(crbug.com/376641662): Fix and re-enable.
+-        "-Wno-nontrivial-memcall",
        ]
-@@ -1975,16 +1949,6 @@
+ 
+       cflags_cc += [
          # TODO(crbug.com/328490295): Fix and re-enable for C flags.
          "-Wenum-compare-conditional",
        ]

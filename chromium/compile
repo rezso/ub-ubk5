@@ -120,7 +120,6 @@ if [ ! -d third_party/node/linux/node-linux-x64/bin ]; then
     mkdir -p third_party/node/linux/node-linux-x64/bin
 fi
 ln -s /usr/bin/node third_party/node/linux/node-linux-x64/bin/
-ln -s /usr/bin/java third_party/jdk/current/bin/
 
 # rust adler/adler2
 if ! find /usr/lib/rustlib | grep -q adler2; then
