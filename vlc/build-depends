@@ -44,7 +44,6 @@ libvpx-dev
 libxpm-dev
 lua-dev
 mpg123-dev
-musepack-dev
 ncurses-dev
 opus-dev
 pulseaudio-dev

@@ -2,3 +2,4 @@
 
 x265_${UB_VERSION}.tar.gz x265_${UB_VERSION}/
 	https://bitbucket.org/multicoreware/x265_git/downloads/
+	https://ftp2.osuosl.org/pub/blfs/conglomeration/x265/

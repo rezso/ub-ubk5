@@ -139,7 +139,6 @@ memtest86+
 mpage
 mtx
 muparser
-musepack
 neofetch
 nomarch
 nspr

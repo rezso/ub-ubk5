@@ -11,4 +11,5 @@ ub_compile \
     -Dtls=disabled \
     -Dorc-source=system \
     -Dtests=disabled \
-    -Dexamples=disabled
+    -Dexamples=disabled \
+    -Dgst-plugins-good:soup-version=3
