@@ -1,12 +1,6 @@
-avahi-dev
-gtk2-dev
+gtk3-dev
 lcms2-dev
-libgphoto2-dev
 libjpeg-turbo-dev
 libpng-dev
 libtiff-dev
-libusb-dev
-libv4l-dev
-libxext-dev
-libxt-dev
 sane-backends-dev

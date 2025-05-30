@@ -73,6 +73,7 @@ extlibs="
 	--enable-opengl \
   "
 
+export CFLAGS='-Wno-error=incompatible-pointer-types'
 ./configure \
 	$configopts \
 	$licensing \

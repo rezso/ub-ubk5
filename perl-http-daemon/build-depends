@@ -1,2 +1,4 @@
+perl-http-date
 perl-http-message
-perl-module-build
+perl-lwp-mediatypes
+perl-module-build-tiny

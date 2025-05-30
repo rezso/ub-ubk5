@@ -1,7 +1,10 @@
 #!/bin/sh -eux
 
-ub_compile \
-	-DCMAKE_SYSTEM_PROCESSOR=i386 \
-	-DWITH_WINETRIKS=ON \
-	-DUSE_BZIP2=ON \
-	-DLIBS_ENTRY_PATH=/usr/lib/q4wine .
+cmake \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX="/usr" \
+    -DLIBS_ENTRY_PATH=/usr/lib/q4wine \
+    -DWITH_SYSTEM_SINGLEAPP=OFF \
+    -DWITH_ICOUTILS=ON \
+    -DUSE_GZIP=ON \
+    -DRELEASE=ON .

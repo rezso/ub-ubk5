@@ -1,9 +1,7 @@
 #!/bin/sh -eux
 
-export PYTHON=/usr/bin/python3
-make DESTDIR="${UB_INSTALLDIR}" PREFIX="/usr" install
+python -m installer -d ${UB_INSTALLDIR} dist/*.whl
+make -C contrib/chg DESTDIR=${UB_INSTALLDIR} PREFIX=/usr install
 
-mkdir -p "${UB_INSTALLDIR}/usr/share/mercurial"
-cp -a hgweb.cgi "${UB_INSTALLDIR}/usr/share/mercurial"
-
-cp -a hgeditor "${UB_INSTALLDIR}/usr/bin"
+install -Dm755 contrib/hg-ssh ${UB_INSTALLDIR}/usr/bin
+install -Dm755 contrib/hgk ${UB_INSTALLDIR}/usr/bin

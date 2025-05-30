@@ -7,6 +7,7 @@ ub_compile \
 	-Dfb=true \
 	-Dbuild-examples=false \
 	-Dbuild-tests=false \
+	-Decore-imf-loaders-disabler=ibus,scim \
 	-Devas-loaders-disabler=json,avif,heif,jxl \
     -Ddrm=true \
     -Dlua-interpreter=luajit

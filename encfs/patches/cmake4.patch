@@ -1,0 +1,80 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2018-04-27 10:52:22.000000000 +0200
++++ b/CMakeLists.txt	2025-04-27 15:13:49.891864868 +0200
+@@ -1,7 +1,7 @@
+ set(CMAKE_LEGACY_CYGWIN_WIN32 0)
+ 
+ # 3.0.2 preferred, but we can often get by with 2.8.
+-cmake_minimum_required(VERSION 2.8)
++cmake_minimum_required(VERSION 3.5)
+ if (${CMAKE_MAJOR_VERSION}.${CMAKE_MINOR_VERSION}.${CMAKE_PATCH_VERSION} LESS 3.0.2)
+   message(WARNING "You should use cmake 3.0.2 or newer for configuration to run correctly.")
+ endif()
+diff -Naur a/vendor/github.com/google/benchmark/CMakeLists.txt b/vendor/github.com/google/benchmark/CMakeLists.txt
+--- a/vendor/github.com/google/benchmark/CMakeLists.txt	2018-04-27 10:52:22.000000000 +0200
++++ b/vendor/github.com/google/benchmark/CMakeLists.txt	2025-04-27 15:14:24.975976202 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required (VERSION 2.8.12)
++cmake_minimum_required (VERSION 3.5)
+ 
+ project (benchmark)
+ 
+diff -Naur a/vendor/github.com/google/googletest/CMakeLists.txt b/vendor/github.com/google/googletest/CMakeLists.txt
+--- a/vendor/github.com/google/googletest/CMakeLists.txt	2018-04-27 10:52:22.000000000 +0200
++++ b/vendor/github.com/google/googletest/CMakeLists.txt	2025-04-27 15:14:41.904029797 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6.2)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project( googletest-distribution )
+ 
+diff -Naur a/vendor/github.com/google/googletest/googlemock/CMakeLists.txt b/vendor/github.com/google/googletest/googlemock/CMakeLists.txt
+--- a/vendor/github.com/google/googletest/googlemock/CMakeLists.txt	2018-04-27 10:52:22.000000000 +0200
++++ b/vendor/github.com/google/googletest/googlemock/CMakeLists.txt	2025-04-27 15:15:01.272091021 +0200
+@@ -38,7 +38,7 @@
+ # ${gmock_BINARY_DIR}.
+ # Language "C" is required for find_package(Threads).
+ project(gmock CXX C)
+-cmake_minimum_required(VERSION 2.6.2)
++cmake_minimum_required(VERSION 3.5)
+ 
+ if (COMMAND set_up_hermetic_build)
+   set_up_hermetic_build()
+diff -Naur a/vendor/github.com/google/googletest/googletest/CMakeLists.txt b/vendor/github.com/google/googletest/googletest/CMakeLists.txt
+--- a/vendor/github.com/google/googletest/googletest/CMakeLists.txt	2018-04-27 10:52:22.000000000 +0200
++++ b/vendor/github.com/google/googletest/googletest/CMakeLists.txt	2025-04-27 15:15:24.196163351 +0200
+@@ -45,7 +45,7 @@
+ # ${gtest_BINARY_DIR}.
+ # Language "C" is required for find_package(Threads).
+ project(gtest CXX C)
+-cmake_minimum_required(VERSION 2.6.2)
++cmake_minimum_required(VERSION 3.5)
+ 
+ if (COMMAND set_up_hermetic_build)
+   set_up_hermetic_build()
+diff -Naur a/vendor/github.com/leethomason/tinyxml2/CMakeLists.txt b/vendor/github.com/leethomason/tinyxml2/CMakeLists.txt
+--- a/vendor/github.com/leethomason/tinyxml2/CMakeLists.txt	2018-04-27 10:52:22.000000000 +0200
++++ b/vendor/github.com/leethomason/tinyxml2/CMakeLists.txt	2025-04-27 17:15:47.452350649 +0200
+@@ -5,11 +5,8 @@
+     ENDIF()
+     RETURN()
+ ENDIF(BIICODE)
+-cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+-cmake_policy(VERSION 2.6)
+-if(POLICY CMP0063)
+-	cmake_policy(SET CMP0063 OLD)
+-endif()
++cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
++cmake_policy(VERSION 3.5)
+ 
+ project(tinyxml2)
+ include(GNUInstallDirs)
+diff -Naur a/vendor/github.com/muflihun/easyloggingpp/CMakeLists.txt b/vendor/github.com/muflihun/easyloggingpp/CMakeLists.txt
+--- a/vendor/github.com/muflihun/easyloggingpp/CMakeLists.txt	2018-04-27 10:52:22.000000000 +0200
++++ b/vendor/github.com/muflihun/easyloggingpp/CMakeLists.txt	2025-04-27 15:16:34.088382990 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(Easyloggingpp CXX)
+ 

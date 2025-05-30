@@ -1,10 +1,11 @@
 libfstrcmp
 fmtools
 fonts-ghostscript-std
+libdispatch
+deadbeef
 devede
 smplayer
 lsdvd
-recmpeg
 youtube-dl
 mp3wrap
 pavumeter
@@ -32,12 +33,10 @@ pyradio
 subtitleeditor
 tvtime
 lmms
-deadbeef
 qmmp
 mkvtoolnix
 audacious
 xine-ui
-lives
 cmus
 moc
 transcode

@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-setuser-${UB_VERSION}.tar.gz setuser-${UB_VERSION}/
-	http://download.ubk.hu/src/uhu/setuser/
+${UB_VERSION}.tar.gz setuser-${UB_VERSION}/
+	https://github.com/uhulinux/setuser/archive/refs/tags/

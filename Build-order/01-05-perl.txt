@@ -1,10 +1,10 @@
 perl-anyevent
 perl-digest-sha1
+perl-exporter-tiny
 perl-extutils-depends
 perl-extutils-pkgconfig
 perl-file-which
 perl-libintl
-perl-module-build-tiny
 perl-mozilla-ca
 perl-netaddr-ip
 perl-net-ip
@@ -28,6 +28,7 @@ perl-gtk2-ex-formfactory
 perl-net-dns
 perl-event-execflow
 perl-io-socket-inet6
+perl-list-moreutils
 perl-libxml
 perl-xml-namespacesupport
 perl-xml-sax-base

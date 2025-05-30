@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-cp -r third-party/miniupnp/miniupnpc/* third-party/miniupnpc/
-
-ub_compile \
-    -DENABLE_TESTS=OFF

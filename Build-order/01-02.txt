@@ -16,7 +16,6 @@ setxkbmap
 xev
 xkbevd
 xvinfo
-esound
 xcb-util-cursor
 xdpyinfo
 xdriinfo
@@ -82,7 +81,6 @@ pulseaudio
 sdl2
 sdl
 libtheora
-gamin
 samba
 ladspa
 aom
@@ -113,7 +111,6 @@ vcdimager
 zvbi
 libbluray
 libofa
-aalib
 fluidsynth
 libass
 libdc1394

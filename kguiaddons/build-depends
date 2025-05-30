@@ -3,4 +3,5 @@ libxfixes-dev
 plasma-wayland-protocols
 qt6-dev
 wayland-dev
+wayland-protocols
 xcb-util-keysyms-dev

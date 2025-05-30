@@ -1,9 +1,10 @@
 #!/bin/sh -eux
 
 cd build_unix
-UB_CONFIGURE_DIR=../dist \
-ub_configure \
-	--disable-java \
-	--enable-cxx \
-	--enable-static
-make
+CFLAGS=-Wno-error=implicit-function-declaration \
+../dist/configure --prefix=/usr \
+    --enable-compat185 \
+    --enable-shared \
+    --disable-static \
+    --enable-cxx
+make LIBSO_LIBS=-lpthread

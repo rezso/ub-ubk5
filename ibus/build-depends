@@ -10,3 +10,4 @@ libnotify-dev
 unicode-ucd
 vala
 wayland-dev
+wayland-protocols

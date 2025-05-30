@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-NetworkManager-${UB_VERSION}.tar.xz NetworkManager-${UB_VERSION}/
-	https://download.gnome.org/sources/NetworkManager/${UB_VERSION_HEAD2}/
+NetworkManager-${UB_VERSION}.tar.gz NetworkManager-${UB_VERSION}/
+	https://gitlab.freedesktop.org/NetworkManager/NetworkManager/-/archive/${UB_VERSION}/

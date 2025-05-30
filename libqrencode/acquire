@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-qrencode-${UB_VERSION}.tar.gz qrencode-${UB_VERSION}/
-	https://fukuchi.org/works/qrencode/
+v${UB_VERSION}.tar.gz libqrencode-${UB_VERSION}/
+	https://github.com/fukuchi/libqrencode/archive/refs/tags/

@@ -1,7 +1,0 @@
-#!/bin/sh -eux
-
-qmake-qt5 librecad.pro
-make qmake all
-
-sed -i '/INCPATH/s|-isystem /usr/include ||' librecad/src/Makefile
-ub_make

@@ -2,4 +2,4 @@
 
 ub_install
 
-install -m644 jpegint.h "${UB_INSTALLDIR}/usr/include"
+install -vDm644 src/jpegint.h "${UB_INSTALLDIR}/usr/include"

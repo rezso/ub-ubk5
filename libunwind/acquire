@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-libunwind-${UB_VERSION}.tar.gz libunwind-${UB_VERSION}/
-	https://download-mirror.savannah.gnu.org/releases/libunwind/
+v${UB_VERSION}.tar.gz libunwind-${UB_VERSION}/
+	https://github.com/libunwind/libunwind/archive/refs/tags/

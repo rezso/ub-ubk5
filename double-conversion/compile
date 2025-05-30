@@ -2,8 +2,6 @@
 
 rm -f SConstruct
 
-export CFLAGS=" -fPIC"
-export CXXFLAGS=" -fPIC"
-
 ub_compile \
-	-DBUILD_SHARED_LIBS=OFF
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+	-DBUILD_SHARED_LIBS=ON

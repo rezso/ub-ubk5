@@ -14,7 +14,7 @@ totem-plparser
 gom
 evolution-data-server
 folks
-icon-theme-gnome-symbolic
+icon-theme-adwaita-legacy
 icon-theme-adwaita
 fonts-cantarell
 gssdp

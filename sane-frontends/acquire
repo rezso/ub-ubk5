@@ -1,7 +1,7 @@
 #!/usr/bin/env dl
 
-frontends-${UB_VERSION}.tar.gz frontends-${UB_VERSION}/
-    https://gitlab.com/sane-project/frontends/-/archive/${UB_VERSION}/
+#frontends-${UB_VERSION}.tar.gz frontends-${UB_VERSION}/
+#   https://gitlab.com/sane-project/frontends/-/archive/${UB_VERSION}/
 
-#sane-frontends_${UB_VERSION}.orig.tar.gz ./sane-frontends-${UB_VERSION}/
-#	https://ftp.debian.org/debian/pool/main/s/sane-frontends/
+${UB_VERSION}.tar.gz frontends-5c148771/
+    git+https://gitlab.com/sane-project/frontends.git@5c148771

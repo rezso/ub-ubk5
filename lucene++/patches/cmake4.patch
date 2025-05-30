@@ -1,0 +1,19 @@
+diff -Naur a/cmake/cotire.cmake b/cmake/cotire.cmake
+--- a/cmake/cotire.cmake	2024-02-18 19:18:26.000000000 +0100
++++ b/cmake/cotire.cmake	2025-04-28 00:01:43.900701554 +0200
+@@ -37,7 +37,7 @@
+ if (NOT CMAKE_SCRIPT_MODE_FILE)
+ 	cmake_policy(PUSH)
+ endif()
+-cmake_minimum_required(VERSION 2.8.12)
++cmake_minimum_required(VERSION 3.5)
+ if (NOT CMAKE_SCRIPT_MODE_FILE)
+ 	cmake_policy(POP)
+ endif()
+@@ -4187,4 +4187,4 @@
+ 
+ 	message (STATUS "cotire ${COTIRE_CMAKE_MODULE_VERSION} loaded.")
+ 
+-endif()
+\ Nincs új sor a fájl végén
++endif()

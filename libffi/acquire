@@ -2,4 +2,3 @@
 
 libffi-${UB_VERSION}.tar.gz libffi-${UB_VERSION}/
     https://github.com/libffi/libffi/releases/download/v${UB_VERSION}/
-	https://www.mirrorservice.org/sites/sourceware.org/pub/libffi/

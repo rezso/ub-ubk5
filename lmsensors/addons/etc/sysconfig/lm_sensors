@@ -1,9 +1,0 @@
-#
-# /etc/sysconfig/lm_sensors
-#
-
-#Specify the bus kernel modules
-BUS_MODULES=""
-
-#Specify the hardware kernel modules
-HWMON_MODULES=""

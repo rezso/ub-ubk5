@@ -1,0 +1,6 @@
+#!/bin/sh -eux
+
+export CC=clang
+export CXX=clang
+
+ub_compile

@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+List-MoreUtils-${UB_VERSION}.tar.gz List-MoreUtils-${UB_VERSION}/
+	https://cpan.metacpan.org/authors/id/R/RE/REHSACK/

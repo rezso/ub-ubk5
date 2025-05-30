@@ -1,0 +1,144 @@
+diff -Naur a/Functions/Calendar/calendar_add b/Functions/Calendar/calendar_add
+--- a/Functions/Calendar/calendar_add	2017-12-04 15:09:35.000000000 +0100
++++ b/Functions/Calendar/calendar_add	2025-05-01 14:11:55.417321988 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh
++#!/usr/bin/zsh
+ # All arguments are joined with spaces and inserted into the calendar
+ # file at the appropriate point.
+ #
+diff -Naur a/Functions/Example/cat b/Functions/Example/cat
+--- a/Functions/Example/cat	2017-12-04 15:09:35.000000000 +0100
++++ b/Functions/Example/cat	2025-05-01 14:11:41.001285088 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh -f
++#!/usr/bin/zsh -f
+ 
+ local file
+ 
+diff -Naur a/Functions/Example/zless b/Functions/Example/zless
+--- a/Functions/Example/zless	2017-12-04 15:09:35.000000000 +0100
++++ b/Functions/Example/zless	2025-05-01 14:11:48.309303799 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh -f
++#!/usr/bin/zsh -f
+ #
+ # zsh function script to run less on various inputs, decompressing as required.
+ # Author: Phil Pennock.  zsh-hacks@athenaeum.demon.co.uk
+diff -Naur a/Functions/Misc/checkmail b/Functions/Misc/checkmail
+--- a/Functions/Misc/checkmail	2017-12-04 15:09:35.000000000 +0100
++++ b/Functions/Misc/checkmail	2025-05-01 14:11:23.501240268 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh
++#!/usr/bin/zsh
+ #
+ # This autoloadable function checks the folders specified as arguments
+ # for new mails.  The arguments are interpreted in exactly the same way
+diff -Naur a/Functions/Misc/run-help b/Functions/Misc/run-help
+--- a/Functions/Misc/run-help	2022-05-08 08:18:22.000000000 +0200
++++ b/Functions/Misc/run-help	2025-05-01 14:11:08.097200773 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh
++#!/usr/bin/zsh
+ #
+ # Figure out where to get the best help, and get it.
+ #
+diff -Naur a/Functions/Misc/run-help-ip b/Functions/Misc/run-help-ip
+--- a/Functions/Misc/run-help-ip	2022-05-08 08:18:22.000000000 +0200
++++ b/Functions/Misc/run-help-ip	2025-05-01 14:10:45.733143379 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh -f
++#!/usr/bin/zsh -f
+ #
+ # Install this function by placing it in your FPATH and then
+ # adding to your .zshrc the line if you use run-help function:
+diff -Naur a/Functions/Misc/sticky-note b/Functions/Misc/sticky-note
+--- a/Functions/Misc/sticky-note	2017-12-04 15:09:36.000000000 +0100
++++ b/Functions/Misc/sticky-note	2025-05-01 14:10:53.113162325 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh -fi
++#!/usr/bin/zsh -fi
+ # A zsh sticky-note ("post-it") application.  Load this file as a function:
+ #    autoload -Uz sticky-note
+ #
+diff -Naur a/Functions/Misc/zcalc b/Functions/Misc/zcalc
+--- a/Functions/Misc/zcalc	2017-12-04 15:09:36.000000000 +0100
++++ b/Functions/Misc/zcalc	2025-05-01 14:11:15.029218550 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh -i
++#!/usr/bin/zsh -i
+ #
+ # Zsh calculator.  Understands most ordinary arithmetic expressions.
+ # Line editing and history are available. A blank line or `q' quits.
+diff -Naur a/Functions/Misc/zed b/Functions/Misc/zed
+--- a/Functions/Misc/zed	2022-05-08 08:18:22.000000000 +0200
++++ b/Functions/Misc/zed	2025-05-01 14:10:38.257124178 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh
++#!/usr/bin/zsh
+ # zed
+ #
+ # No other shell could do this.
+diff -Naur a/Functions/Misc/zkbd b/Functions/Misc/zkbd
+--- a/Functions/Misc/zkbd	2017-12-04 15:09:36.000000000 +0100
++++ b/Functions/Misc/zkbd	2025-05-01 14:11:00.425181091 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh -f
++#!/usr/bin/zsh -f
+ 
+ [[ -o interactive ]] && {
+     local -hi ARGC		# local is a no-op outside of a function
+diff -Naur a/Functions/VCS_Info/test-repo-git-rebase-apply b/Functions/VCS_Info/test-repo-git-rebase-apply
+--- a/Functions/VCS_Info/test-repo-git-rebase-apply	2022-05-08 08:18:22.000000000 +0200
++++ b/Functions/VCS_Info/test-repo-git-rebase-apply	2025-05-01 14:12:04.773345917 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/zsh -f
++#!/usr/bin/zsh -f
+ #
+ # This script creates a test repository for testing the git backend's behaviour during rebase-apply operations.
+ #
+diff -Naur a/Functions/VCS_Info/test-repo-git-rebase-merge b/Functions/VCS_Info/test-repo-git-rebase-merge
+--- a/Functions/VCS_Info/test-repo-git-rebase-merge	2022-05-08 08:18:22.000000000 +0200
++++ b/Functions/VCS_Info/test-repo-git-rebase-merge	2025-05-01 14:12:12.169364827 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/zsh -f
++#!/usr/bin/zsh -f
+ #
+ # This script creates a test repository for testing the git backend's behaviour during rebase-apply operations.
+ #
+diff -Naur a/Misc/globtests b/Misc/globtests
+--- a/Misc/globtests	2017-12-04 15:09:36.000000000 +0100
++++ b/Misc/globtests	2025-05-01 14:10:25.413091166 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/zsh -f
++#!/usr/bin/zsh -f
+ 
+ setopt extendedglob badpattern
+ unsetopt kshglob
+diff -Naur a/Misc/globtests.ksh b/Misc/globtests.ksh
+--- a/Misc/globtests.ksh	2017-12-04 15:09:36.000000000 +0100
++++ b/Misc/globtests.ksh	2025-05-01 14:10:16.245067591 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/zsh -f
++#!/usr/bin/zsh -f
+ 
+ setopt kshglob extendedglob
+ 
+diff -Naur a/Util/check-tmux-state b/Util/check-tmux-state
+--- a/Util/check-tmux-state	2017-12-04 15:09:36.000000000 +0100
++++ b/Util/check-tmux-state	2025-05-01 14:12:36.129426028 +0200
+@@ -1,4 +1,4 @@
+-#!/bin/zsh -f
++#!/usr/bin/zsh -f
+ 
+ # Tmux has lots of options and sub-commands. It's very tedious to manually
+ # check if the actual command's idea of all this matches the completion
+diff -Naur a/Util/reporter b/Util/reporter
+--- a/Util/reporter	2017-12-04 15:09:36.000000000 +0100
++++ b/Util/reporter	2025-05-01 14:12:29.105408093 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/zsh
++#!/usr/bin/zsh
+ #
+ # NAME:
+ #	reporter

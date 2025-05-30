@@ -24,6 +24,7 @@ python3-incremental
 python3-mutagen
 python3-pyasn1
 python3-pycparser
+python3-pyinotify
 python3-pyxdg
 python3-rich
 python3-semantic-version
@@ -79,7 +80,6 @@ python3-pyopenssl
 python3-service-identity
 python3-twisted
 python3-multidict
-python3-rencode
 python3-future
 
 #electrumcucc

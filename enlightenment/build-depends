@@ -1,7 +1,6 @@
 efl-dev
 libdrm-dev
 libexif-dev
-libunwind-dev
 pam-dev
 pulseaudio-dev
 wayland-dev

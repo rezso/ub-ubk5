@@ -1,0 +1,96 @@
+diff -Naur a/data/appdata/glabels-3.appdata.xml.in b/data/appdata/glabels-3.appdata.xml.in
+--- a/data/appdata/glabels-3.appdata.xml.in	2018-03-31 15:23:30.000000000 +0200
++++ b/data/appdata/glabels-3.appdata.xml.in	2025-04-24 08:05:58.925424367 +0200
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2013 Jim Evins <evins@snaught.com> -->
+ <component type="desktop">
+-  <id>glabels-3.0.desktop</id>
++  <id>glabels-3.desktop</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0+</project_license>
+   <_name>gLabels</_name>
+@@ -24,13 +24,13 @@
+   </description>
+   <screenshots>
+     <screenshot height="640" width="881" type="default">
+-      <image>http://glabels.org/images/320-screenshot-main.png</image>
++      <image>https://github.com/jimevins/glabels/blob/master/help/C/figures/introduction-glabels-main-window.png?raw=true</image>
+     </screenshot>
+   </screenshots>
+-  <url type="homepage">http://glabels.org/</url>
+-  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=glabels</url>
+-  <url type="donation">http://www.gnome.org/friends/</url>
++  <url type="homepage">https://github.com/jimevins/glabels</url>
++  <url type="bugtracker">https://github.com/jimevins/glabels/issues</url>
+   <url type="help">https://help.gnome.org/users/glabels/stable/</url>
++  <url type="vcs-browser">https://github.com/jimevins/glabels</url>
+   <update_contact>evins_at_snaught.com</update_contact>
+   <project_group>GNOME</project_group>
+   <translation type="gettext">glabels-3.0</translation>
+diff -Naur a/data/appdata/Makefile.am b/data/appdata/Makefile.am
+--- a/data/appdata/Makefile.am	2016-01-24 03:06:17.000000000 +0100
++++ b/data/appdata/Makefile.am	2025-04-24 08:05:58.925424367 +0200
+@@ -5,7 +5,7 @@
+ APPDATA_IN_FILES = glabels-3.appdata.xml.in
+ APPDATA_FILES =$(APPDATA_IN_FILES:.appdata.xml.in=.appdata.xml)
+ 
+-appdatadir = $(datadir)/appdata
++appdatadir = $(datadir)/metainfo
+ appdata_DATA = $(APPDATA_FILES)
+ 
+ EXTRA_DIST = $(APPDATA_IN_FILES)
+diff -Naur a/data/desktop/glabels-3.0.desktop.in b/data/desktop/glabels-3.0.desktop.in
+--- a/data/desktop/glabels-3.0.desktop.in	2018-04-14 23:38:11.000000000 +0200
++++ b/data/desktop/glabels-3.0.desktop.in	1970-01-01 01:00:00.000000000 +0100
+@@ -1,11 +0,0 @@
+-[Desktop Entry]
+-_Name=gLabels Label Designer 3
+-_Comment=Create labels, business cards and media covers
+-_Keywords=label;card;print;office;barcode;
+-Exec=glabels-3 %F
+-Icon=glabels-3.0
+-Terminal=false
+-Type=Application
+-Categories=Office;GTK;
+-StartupNotify=true
+-MimeType=application/x-glabels;
+diff -Naur a/data/desktop/glabels-3.desktop.in b/data/desktop/glabels-3.desktop.in
+--- a/data/desktop/glabels-3.desktop.in	1970-01-01 01:00:00.000000000 +0100
++++ b/data/desktop/glabels-3.desktop.in	2025-04-24 08:05:58.929424373 +0200
+@@ -0,0 +1,11 @@
++[Desktop Entry]
++_Name=gLabels Label Designer 3
++_Comment=Create labels, business cards and media covers
++_Keywords=label;card;print;office;barcode;
++Exec=glabels-3 %F
++Icon=glabels-3.0
++Terminal=false
++Type=Application
++Categories=Office;GTK;
++StartupNotify=true
++MimeType=application/x-glabels;
+diff -Naur a/data/desktop/Makefile.am b/data/desktop/Makefile.am
+--- a/data/desktop/Makefile.am	2016-01-24 03:06:17.000000000 +0100
++++ b/data/desktop/Makefile.am	2025-04-24 08:05:58.929424373 +0200
+@@ -2,7 +2,7 @@
+ 
+ @INTLTOOL_DESKTOP_RULE@
+ 
+-DESKTOP_IN_FILES = $(GLABELS_BRANCH).desktop.in
++DESKTOP_IN_FILES = glabels-3.desktop.in
+ DESKTOP_FILES =$(DESKTOP_IN_FILES:.desktop.in=.desktop)
+ 
+ desktopdir = $(datadir)/applications
+diff -Naur a/data/desktop/Makefile.in b/data/desktop/Makefile.in
+--- a/data/desktop/Makefile.in	2018-04-15 20:29:19.000000000 +0200
++++ b/data/desktop/Makefile.in	2025-04-24 08:09:55.289578118 +0200
+@@ -351,7 +351,7 @@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-DESKTOP_IN_FILES = $(GLABELS_BRANCH).desktop.in
++DESKTOP_IN_FILES = glabels-3.desktop.in
+ DESKTOP_FILES = $(DESKTOP_IN_FILES:.desktop.in=.desktop)
+ desktopdir = $(datadir)/applications
+ desktop_DATA = $(DESKTOP_FILES)

@@ -1,6 +1,7 @@
 gperf
 kf6-dev
 libmtp-dev
+libproxy-dev
 libssh-dev
 openslp-dev
 phonon-dev

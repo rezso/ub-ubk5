@@ -1,0 +1,21 @@
+diff -Naur a/apt-pkg/acquire-item.cc b/apt-pkg/acquire-item.cc
+--- a/apt-pkg/acquire-item.cc	2024-11-22 17:17:41.000000000 +0100
++++ b/apt-pkg/acquire-item.cc	2025-05-12 21:03:52.320100204 +0200
+@@ -1787,7 +1787,7 @@
+ 	 return _error->Error("%s", errmsg.c_str());
+       }
+    }
+-
++  /*
+    if (TransactionManager->MetaIndexParser->GetNotBefore() > 0)
+    {
+       time_t const invalid_for = TransactionManager->MetaIndexParser->GetNotBefore() - time(nullptr);
+@@ -1806,7 +1806,7 @@
+ 	 return _error->Error("%s", errmsg.c_str());
+       }
+    }
+-
++  */
+    /* Did we get a file older than what we have? This is a last minute IMS hit and doubles
+       as a prevention of downgrading us to older (still valid) files */
+    if (TransactionManager->IMSHit == false && TransactionManager->LastMetaIndexParser != NULL &&

@@ -1,7 +1,7 @@
 diff -Naur a/mesonbuild/coredata.py b/mesonbuild/coredata.py
---- a/mesonbuild/coredata.py	2024-07-26 02:23:53.000000000 +0200
-+++ b/mesonbuild/coredata.py	2024-08-23 11:48:08.791323845 +0200
-@@ -523,7 +523,7 @@
+--- a/mesonbuild/coredata.py	2025-04-03 19:13:56.000000000 +0200
++++ b/mesonbuild/coredata.py	2025-05-22 16:05:18.833214602 +0200
+@@ -529,7 +529,7 @@
              opt = '2'
              debug = True
          elif value == 'release':
@@ -10,7 +10,7 @@ diff -Naur a/mesonbuild/coredata.py b/mesonbuild/coredata.py
              debug = False
          elif value == 'minsize':
              opt = 's'
-@@ -552,7 +552,7 @@
+@@ -558,7 +558,7 @@
              opt = '2'
              debug = True
          elif value == 'release':
@@ -20,9 +20,9 @@ diff -Naur a/mesonbuild/coredata.py b/mesonbuild/coredata.py
          elif value == 'minsize':
              opt = 's'
 diff -Naur a/mesonbuild/options.py b/mesonbuild/options.py
---- a/mesonbuild/options.py	2024-07-26 02:23:53.000000000 +0200
-+++ b/mesonbuild/options.py	2024-08-23 11:50:25.695646039 +0200
-@@ -428,7 +428,7 @@
+--- a/mesonbuild/options.py	2025-04-03 19:13:56.000000000 +0200
++++ b/mesonbuild/options.py	2025-05-22 16:06:27.785475287 +0200
+@@ -636,7 +636,7 @@
      (OptionKey('errorlogs'),       BuiltinOption(UserBooleanOption, "Whether to print the logs from failing tests", True)),
      (OptionKey('install_umask'),   BuiltinOption(UserUmaskOption, 'Default umask to apply on permissions of installed files', '022')),
      (OptionKey('layout'),          BuiltinOption(UserComboOption, 'Build directory layout', 'mirror', choices=['mirror', 'flat'])),

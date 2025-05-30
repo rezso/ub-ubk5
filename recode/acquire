@@ -3,5 +3,5 @@
 # v${UB_VERSION}.tar.gz Recode-${UB_VERSION}/
 #	https://github.com/pinard/Recode/archive/
 
-master.zip Recode-master/
-    https://github.com/pinard/Recode/archive/
+v${UB_VERSION}.tar.gz recode-${UB_VERSION}/
+    https://github.com/rrthomas/recode/archive/refs/tags/

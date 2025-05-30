@@ -18,5 +18,4 @@ polkit-dev
 sqlite-dev
 systemd-dev
 upower-dev
-wireless-tools-dev
 xcb-util-dev

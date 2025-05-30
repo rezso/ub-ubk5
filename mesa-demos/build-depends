@@ -5,6 +5,5 @@ glew-dev
 glu-dev
 libdrm-dev
 libglvnd-dev
-libunwind-dev
 systemd-dev
 wayland-dev

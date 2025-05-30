@@ -3,7 +3,6 @@ gstreamer-dev
 gtk3-dev
 intltool
 itstool
-libunwind-dev
 libv4l-dev
 libxml2-dev
 lirc-dev

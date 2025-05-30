@@ -1,7 +1,6 @@
 #!/bin/sh -eux
 
-cd zip30
 # A -O3 veszélyes
 ub_replace -O3 -O2 unix/configure
 
-make -f unix/Makefile generic
+make -f unix/Makefile "CFLAGS_NOOPT=-I. -DUNIX" generic_gcc

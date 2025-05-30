@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-libmbim-${UB_VERSION}.tar.xz libmbim-${UB_VERSION}/
-	https://www.freedesktop.org/software/libmbim/
+libmbim-${UB_VERSION}.tar.gz libmbim-${UB_VERSION}/
+	https://gitlab.freedesktop.org/mobile-broadband/libmbim/-/archive/${UB_VERSION}/

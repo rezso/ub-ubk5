@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+swift-${UB_VERSION}-RELEASE.tar.gz swift-corelibs-libdispatch-swift-${UB_VERSION}-RELEASE/
+	https://github.com/swiftlang/swift-corelibs-libdispatch/archive/refs/tags/

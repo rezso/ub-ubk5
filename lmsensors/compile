@@ -1,4 +1,5 @@
 #!/bin/sh -eux
 
-make user \
+make \
+    PREFIX=/usr \
 	BUILD_STATIC_LIB=0

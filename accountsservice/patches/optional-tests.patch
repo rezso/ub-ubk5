@@ -1,0 +1,22 @@
+diff -Naur a/meson.build b/meson.build
+--- a/meson.build	2023-03-27 21:27:39.000000000 +0200
++++ b/meson.build	2025-04-21 01:09:24.874130461 +0200
+@@ -232,7 +232,9 @@
+   subdir('doc/libaccountsservice')
+ endif
+ 
+-subdir('tests')
++if get_option('tests')
++  subdir('tests')
++endif
+ 
+ configure_file(
+   output: 'config.h',
+diff -Naur a/meson_options.txt b/meson_options.txt
+--- a/meson_options.txt	2023-03-27 21:27:39.000000000 +0200
++++ b/meson_options.txt	2025-04-21 01:08:58.490038038 +0200
+@@ -13,3 +13,4 @@
+ 
+ option('docbook', type: 'boolean', value: false, description: 'build documentation (requires xmlto)')
+ option('gtk_doc', type: 'boolean', value: false, description: 'use gtk-doc to build documentation')
++option('tests', type: 'boolean', value: false, description: 'build tests')

@@ -1,6 +1,5 @@
 dbus-glib-dev
 expat-dev
-gamin-dev
 libexif-dev
 libexo-dev
 libgudev-dev

@@ -14,7 +14,6 @@ libpeas-dev
 libplist-dev
 libsecret-dev
 libsoup3-dev
-libunwind-dev
 libxshmfence-dev
 lirc-dev
 python3-pygobject-dev

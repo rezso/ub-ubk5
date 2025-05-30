@@ -9,7 +9,6 @@ gupnp-dlna-dev
 json-glib-dev
 libgee-dev
 libmediaart-dev
-libunwind-dev
 libxml2-dev
 meson
 tracker-dev

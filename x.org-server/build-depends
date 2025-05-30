@@ -5,7 +5,6 @@ libgcrypt-dev
 libglvnd-dev
 libpciaccess-dev
 libpng-dev
-libunwind-dev
 libxaw-dev
 libxcvt-dev
 libxfont2-dev

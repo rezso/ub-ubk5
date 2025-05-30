@@ -1,34 +1,24 @@
 #!/bin/sh -eux
 
-# rm -f meson.build
-
-# a meson vala kezelése időnként bugos...
-if [ -f meson.build ]; then
 ub_compile \
 	-Dudev_dir=/usr/lib/udev/ \
-	-Dconfig_dhcp_default=internal \
+	-Dkernel_firmware_dir=/usr/lib/firmware \
+	-Druntime_dir=/run \
 	-Dsession_tracking_consolekit=false \
 	-Dsession_tracking=systemd \
-	-Difupdown=true \
+	-Dpolkit=true \
 	-Dmodify_system=true \
-	-Dconcheck=true \
 	-Dselinux=false \
+	-Dconfig_wifi_backend_default=wpa_supplicant \
 	-Dlibaudit=no \
-	-Dnmtui=false \
-	-Dqt=false \
+	-Dwext=false \
+	-Dwifi=true \
+	-Dppp=true \
+	-Dmodem_manager=true \
+	-Dconcheck=true \
+	-Dnmtui=true \
 	-Dbluez5_dun=true \
-	-Dpolkit=true
-else
-ub_compile \
-	--with-udev-dir=/usr/lib/udev/ \
-	--with-config-dhcp-default=internal \
-	--with-session-tracking=systemd \
-	--enable-ifupdown \
-	--enable-modify-system \
-	--enable-concheck \
-	--with-selinux=no \
-	--with-nmtui=no \
-	--disable-qt \
-	--enable-bluez5-dun \
-	--enable-polkit=yes
-fi
+	-Difupdown=true \
+	-Dnetconfig=no \
+	-Dconfig_dhcp_default=internal \
+	-Dqt=false

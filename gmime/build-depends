@@ -1,3 +1,4 @@
 gobject-introspection-dev
 gpgme-dev
+libidn2-dev
 vala

@@ -10,6 +10,8 @@ libsndfile-dev
 libxcursor-dev
 libxft-dev
 libxinerama-dev
+perl-list-moreutils
+perl-xml-parser
 portaudio-dev
 pulseaudio-dev
 qt5-dev

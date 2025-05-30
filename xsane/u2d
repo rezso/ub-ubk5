@@ -1,1 +1,1 @@
-u2d https://ftp.debian.org/debian/pool/main/x/xsane/ xsane_ .orig
+urllist https://gitlab.com/sane-project/frontend/xsane/-/tags | grep -E '^[0-9]\.' | sort -V | tail -n 1

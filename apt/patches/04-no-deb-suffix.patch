@@ -1,7 +1,7 @@
 diff -Naur a/apt-pkg/deb/dpkgpm.cc b/apt-pkg/deb/dpkgpm.cc
---- a/apt-pkg/deb/dpkgpm.cc	2022-04-08 12:23:25.000000000 +0200
-+++ b/apt-pkg/deb/dpkgpm.cc	2022-05-15 05:19:42.627214406 +0200
-@@ -1867,8 +1867,6 @@
+--- a/apt-pkg/deb/dpkgpm.cc	2024-11-22 17:17:41.000000000 +0100
++++ b/apt-pkg/deb/dpkgpm.cc	2025-05-12 20:48:41.108158127 +0200
+@@ -1878,8 +1878,6 @@
  	       if (I->File[0] != '/')
  		  return _error->Error("Internal Error, Pathname to install is not absolute '%s'",I->File.c_str());
  	       auto file = flNotDir(I->File);

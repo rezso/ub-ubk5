@@ -1,5 +1,49 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--with-udev-base-dir=/usr/lib/udev \
-	--disable-gtk-doc
+    -Dplugin_generic=enabled \
+    -Dplugin_altair_lte=enabled \
+    -Dplugin_anydata=enabled \
+    -Dplugin_broadmobi=enabled \
+    -Dplugin_cellient=enabled \
+    -Dplugin_cinterion=enabled \
+    -Dplugin_dell=enabled \
+    -Dplugin_dlink=enabled \
+    -Dplugin_fibocom=enabled \
+    -Dplugin_foxconn=enabled \
+    -Dplugin_gosuncn=enabled \
+    -Dplugin_haier=enabled \
+    -Dplugin_huawei=enabled \
+    -Dplugin_intel=enabled \
+    -Dplugin_iridium=enabled \
+    -Dplugin_linktop=enabled \
+    -Dplugin_longcheer=enabled \
+    -Dplugin_mbm=enabled \
+    -Dplugin_motorola=enabled \
+    -Dplugin_mtk_legacy=enabled \
+    -Dplugin_mtk=enabled \
+    -Dplugin_netprisma=enabled \
+    -Dplugin_nokia=enabled \
+    -Dplugin_nokia_icera=enabled \
+    -Dplugin_novatel=enabled \
+    -Dplugin_novatel_lte=enabled \
+    -Dplugin_option=enabled \
+    -Dplugin_option_hso=enabled \
+    -Dplugin_pantech=enabled \
+    -Dplugin_qcom_soc=enabled \
+    -Dplugin_quectel=enabled \
+    -Dplugin_rolling=enabled \
+    -Dplugin_samsung=enabled \
+    -Dplugin_sierra_legacy=enabled \
+    -Dplugin_sierra=enabled \
+    -Dplugin_simtech=enabled \
+    -Dplugin_telit=enabled \
+    -Dplugin_thuraya=enabled \
+    -Dplugin_tplink=enabled \
+    -Dplugin_ublox=enabled \
+    -Dplugin_via=enabled \
+    -Dplugin_wavecom=enabled \
+    -Dplugin_x22x=enabled \
+    -Dplugin_zte=enabled \
+	-Dgtk_doc=false \
+	-Dbash_completion=false

@@ -51,7 +51,6 @@ yelp-xsl
 yelp-tools
 alsa-utils
 gtkspell
-scim
 sdl2-net
 sdl2-ttf
 slim
@@ -73,7 +72,6 @@ gexiv2
 gspell
 polkit-gnome
 gucharmap
-zeitgeist
 gtk-vnc
 vte
 xterm
@@ -93,9 +91,3 @@ libcaca
 ffmpeg
 ffmpeg4.4
 libheif
-gstreamer
-gstreamermm
-clutter-gst
-clutter-gtk
-libcanberra
-pavucontrol

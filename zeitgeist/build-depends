@@ -1,8 +1,0 @@
-dbus-dev
-gobject-introspection-dev
-gtk3-dev
-json-glib-dev
-raptor2-dev
-sqlite-dev
-telepathy-glib-dev
-vala

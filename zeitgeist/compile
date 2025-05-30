@@ -1,8 +1,0 @@
-#!/bin/sh -eux
-
-rm -r python
-
-libtoolize
-gettextize -f
-
-ub_compile

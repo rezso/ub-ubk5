@@ -1,6 +1,6 @@
 diff -Naur a/etc/login.defs b/etc/login.defs
---- a/etc/login.defs	2025-02-11 20:09:19.786308354 +0100
-+++ b/etc/login.defs	2025-02-11 20:10:59.898372459 +0100
+--- a/etc/login.defs	2025-04-17 03:00:53.677933475 +0200
++++ b/etc/login.defs	2025-04-17 03:01:42.046104190 +0200
 @@ -233,7 +233,7 @@
  UID_MIN			 1000
  UID_MAX			60000
@@ -20,8 +20,8 @@ diff -Naur a/etc/login.defs b/etc/login.defs
  # Extra per user group ids
  SUB_GID_MIN		   100000
 diff -Naur a/lib/find_new_gid.c b/lib/find_new_gid.c
---- a/lib/find_new_gid.c	2024-08-23 05:46:33.000000000 +0200
-+++ b/lib/find_new_gid.c	2025-02-11 20:19:40.218294119 +0100
+--- a/lib/find_new_gid.c	2025-03-02 22:51:13.000000000 +0100
++++ b/lib/find_new_gid.c	2025-04-17 03:01:42.046104190 +0200
 @@ -42,7 +42,7 @@
  		*preferred_min = (gid_t) 1;
  
@@ -32,8 +32,8 @@ diff -Naur a/lib/find_new_gid.c b/lib/find_new_gid.c
  		/*
  		 * If SYS_GID_MAX is unspecified, we should assume it to be one
 diff -Naur a/lib/find_new_uid.c b/lib/find_new_uid.c
---- a/lib/find_new_uid.c	2024-10-03 14:09:53.000000000 +0200
-+++ b/lib/find_new_uid.c	2025-02-11 20:18:10.402241851 +0100
+--- a/lib/find_new_uid.c	2025-03-02 22:51:13.000000000 +0100
++++ b/lib/find_new_uid.c	2025-04-17 03:01:42.046104190 +0200
 @@ -42,7 +42,7 @@
  		*preferred_min = (uid_t) 1;
  
@@ -44,8 +44,8 @@ diff -Naur a/lib/find_new_uid.c b/lib/find_new_uid.c
  		/*
  		 * If SYS_UID_MAX is unspecified, we should assume it to be one
 diff -Naur a/src/pwck.c b/src/pwck.c
---- a/src/pwck.c	2024-12-25 14:53:10.000000000 +0100
-+++ b/src/pwck.c	2025-02-11 20:12:20.250266604 +0100
+--- a/src/pwck.c	2025-03-02 22:51:13.000000000 +0100
++++ b/src/pwck.c	2025-04-17 03:01:42.046104190 +0200
 @@ -372,7 +372,7 @@
  	struct commonio_entry *pfe, *tpfe;
  	struct passwd *pwd;
@@ -56,9 +56,9 @@ diff -Naur a/src/pwck.c b/src/pwck.c
  
  	/*
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2024-12-25 14:53:10.000000000 +0100
-+++ b/src/useradd.c	2025-02-11 20:13:24.186219074 +0100
-@@ -96,9 +96,9 @@
+--- a/src/useradd.c	2025-03-19 19:57:26.000000000 +0100
++++ b/src/useradd.c	2025-04-17 03:01:42.046104190 +0200
+@@ -97,9 +97,9 @@
  /*
   * These defaults are used if there is no defaults file.
   */

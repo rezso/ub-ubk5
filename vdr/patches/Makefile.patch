@@ -1,6 +1,6 @@
 diff -Naur a/Makefile b/Makefile
---- a/Makefile	2024-10-12 13:32:46.000000000 +0200
-+++ b/Makefile	2024-10-17 21:41:18.706402008 +0200
+--- a/Makefile	2025-04-12 08:32:04.000000000 +0200
++++ b/Makefile	2025-04-30 01:14:26.294925154 +0200
 @@ -13,10 +13,10 @@
  PKG_CONFIG ?= pkg-config
  
@@ -9,8 +9,8 @@ diff -Naur a/Makefile b/Makefile
 +CFLAGS   ?= -g -O2 -Wall
  
  CXX      ?= g++
--CXXFLAGS ?= -g -O3 -Wall -Werror=overloaded-virtual -Wno-parentheses
-+CXXFLAGS ?= -g -O2 -Wall -Werror=overloaded-virtual -Wno-parentheses
+-CXXFLAGS ?= -g -O3 -Wall -Wno-parentheses
++CXXFLAGS ?= -g -O2 -Wall -Wno-parentheses
  CXXFLAGS += $(CPPFLAGS)
  
  CDEFINES  = -D_GNU_SOURCE

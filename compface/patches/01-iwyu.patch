@@ -1,0 +1,41 @@
+diff -Naur a/cmain.c b/cmain.c
+--- a/cmain.c	2005-10-04 14:28:47.000000000 +0200
++++ b/cmain.c	2025-04-19 04:51:42.863880669 +0200
+@@ -19,6 +19,8 @@
+ #include "config.h"
+ #endif
+ 
++#include <unistd.h>
++
+ #include "compface.h"
+ 
+ /* the buffer is longer than needed to handle sparse input formats */
+diff -Naur a/config.h b/config.h
+--- a/config.h	2005-10-04 14:29:00.000000000 +0200
++++ b/config.h	2025-04-19 04:51:22.879836843 +0200
+@@ -1,13 +1,5 @@
+-#ifdef	STDC_HEADERS
+ #include <stdlib.h>
+ #include <string.h>
+-#else	/* Not STDC_HEADERS */
+-#ifdef HAVE_STRINGS_H
+-#include <strings.h>
+-#endif
+-extern void exit ();
+-extern char *malloc ();
+-#endif	/* STDC_HEADERS */
+ 
+ #ifdef HAVE_FCNTL_H
+ #include <fcntl.h>
+diff -Naur a/uncmain.c b/uncmain.c
+--- a/uncmain.c	2005-10-04 14:28:47.000000000 +0200
++++ b/uncmain.c	2025-04-19 04:47:45.847367918 +0200
+@@ -19,6 +19,8 @@
+ #include "config.h"
+ #endif
+ 
++#include <unistd.h>
++
+ #include "compface.h"
+ 
+ /* the buffer is longer than needed to handle sparse input formats */

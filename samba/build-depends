@@ -4,7 +4,6 @@ bison
 cups-dev
 file-dev
 flex
-gamin-dev
 gnutls-dev
 jansson-dev
 krb5-dev

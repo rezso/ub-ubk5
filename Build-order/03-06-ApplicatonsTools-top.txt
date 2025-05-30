@@ -4,7 +4,6 @@ keepassxc
 gkrellm-themes
 multitail
 nload
-pfqueue
 qshutdown
 tack
 vbindiff
@@ -14,6 +13,7 @@ vacation
 ocrad
 bleachbit
 lrzip
+lzop
 qt5ct
 odt2txt
 pdfminer
@@ -21,7 +21,6 @@ qpdf
 pdfmixtool
 units
 tmux
-h5utils
 dateutils
 vdpauinfo
 fonts-terminus
@@ -32,9 +31,7 @@ hardinfo
 catdoc
 xchm
 rdiff-backup
-xmlstarlet
 cifs-utils
-rsw
 gkrellm
 gtklp
 gammu
@@ -56,7 +53,6 @@ intel-gpu-tools
 gparted
 deb-gview
 virt-viewer
-recordmydesktop
 gencfsm
 mencfsm
 bclock

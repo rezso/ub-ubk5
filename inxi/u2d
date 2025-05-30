@@ -1,1 +1,1 @@
-u2d https://github.com/smxi/inxi/tags/ | sed -e "s/-/+/"
+urllist https://codeberg.org/smxi/inxi/tags | grep -E '^[0-9]+\.' | grep -v 'zip' | grep -v 'tar' | sed -e "s/-/+/" | sort -V | tail -n 1

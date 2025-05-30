@@ -1,0 +1,63 @@
+diff -Naur a/avmedia/source/qt6/QtFrameGrabber.cxx b/avmedia/source/qt6/QtFrameGrabber.cxx
+--- a/avmedia/source/qt6/QtFrameGrabber.cxx	2025-05-20 10:25:45.000000000 +0200
++++ b/avmedia/source/qt6/QtFrameGrabber.cxx	2025-05-22 20:39:29.084789560 +0200
+@@ -14,6 +14,7 @@
+ #include <vcl/filter/PngImageReader.hxx>
+ #include <vcl/graph.hxx>
+ #include <vcl/image.hxx>
++#include <vcl/qt/QtUtils.hxx>
+ #include <vcl/scheduler.hxx>
+ 
+ #include "QtFrameGrabber.hxx"
+@@ -23,11 +24,6 @@
+ 
+ namespace
+ {
+-inline OUString toOUString(const QString& s)
+-{
+-    return OUString(reinterpret_cast<const sal_Unicode*>(s.data()), s.length());
+-}
+-
+ uno::Reference<css::graphic::XGraphic> toXGraphic(const QImage& rImage)
+ {
+     QByteArray aData;
+diff -Naur a/include/vcl/qt/QtUtils.hxx b/include/vcl/qt/QtUtils.hxx
+--- a/include/vcl/qt/QtUtils.hxx	2025-05-20 10:25:45.000000000 +0200
++++ b/include/vcl/qt/QtUtils.hxx	2025-05-22 20:39:29.084789560 +0200
+@@ -31,6 +31,12 @@
+     return QString::fromUtf16(rStr.getStr(), rStr.getLength());
+ }
+ 
++inline OUString toOUString(const QString& s)
++{
++    // QString stores UTF16, just like OUString
++    return OUString(reinterpret_cast<const sal_Unicode*>(s.data()), s.length());
++}
++
+ inline QPixmap toQPixmap(const BitmapEx& rBitmapEx)
+ {
+     SvMemoryStream aMemoryStream;
+diff -Naur a/vcl/inc/qt5/QtTools.hxx b/vcl/inc/qt5/QtTools.hxx
+--- a/vcl/inc/qt5/QtTools.hxx	2025-05-20 10:25:45.000000000 +0200
++++ b/vcl/inc/qt5/QtTools.hxx	2025-05-22 20:41:27.965156163 +0200
+@@ -33,6 +33,7 @@
+ #include <tools/color.hxx>
+ #include <tools/gen.hxx>
+ #include <vcl/bitmap/BitmapTypes.hxx>
++#include <vcl/qt/QtUtils.hxx>
+ #include <vcl/vclenum.hxx>
+ 
+ #include <com/sun/star/uno/Sequence.hxx>
+@@ -43,12 +44,6 @@
+ class Image;
+ class QImage;
+ 
+-inline OUString toOUString(const QString& s)
+-{
+-    // QString stores UTF16, just like OUString
+-    return OUString(reinterpret_cast<const sal_Unicode*>(s.data()), s.length());
+-}
+-
+ inline QRect toQRect(const tools::Rectangle& rRect)
+ {
+     return QRect(rRect.Left(), rRect.Top(), rRect.GetWidth(), rRect.GetHeight());

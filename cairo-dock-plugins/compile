@@ -2,4 +2,5 @@
 
 sed 's/gmcs/mcs/' -i CMakeLists.txt
 chmod -x LGPL-2 LICENSE copyright
-ub_compile
+ub_compile \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5

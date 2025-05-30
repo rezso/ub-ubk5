@@ -8,7 +8,6 @@ libdrm-dev
 libelf-dev
 libgsl-dev
 libpciaccess-dev
-libunwind-dev
 libxrandr-dev
 libxv-dev
 meson

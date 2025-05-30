@@ -1,15 +1,12 @@
-aalib-dev
 alsa-lib-dev
 aom-dev
 audiofile-dev
 dav1d-dev
-esound-dev
 faac-dev
 ffmpeg-dev
 fribidi-dev
 gnutls-dev
 gtk2-dev
-jack-dev
 ladspa-dev
 liba52-dev
 libass-dev
@@ -50,6 +47,7 @@ libxvmc-dev
 libxxf86vm-dev
 lirc-dev
 mpg123-dev
+nasm
 openal-dev
 opencore-amr-dev
 opus-dev
@@ -61,4 +59,3 @@ toolame
 x264-dev
 x265-dev
 xvid-dev
-yasm

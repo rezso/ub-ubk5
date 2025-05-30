@@ -1,1 +1,1 @@
-u2d https://www.freedesktop.org/software/ModemManager/ ModemManager-
+urllist https://gitlab.freedesktop.org/mobile-broadband/ModemManager/-/tags | grep -E '^[0-9]+\.' | sort -V | tail -n 1

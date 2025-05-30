@@ -3,4 +3,5 @@ freetype2-dev
 libjpeg-turbo-dev
 libpng-dev
 libtiff-dev
+libxml2-dev
 openssl-dev

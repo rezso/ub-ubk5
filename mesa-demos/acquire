@@ -3,8 +3,8 @@
 icon.png
 	https://icons.iconarchive.com/icons/rob-sanders/gear/128/gear-icon.png
 
-mesa-demos-${UB_VERSION}.tar.gz mesa-demos-1b2cb9d/
-    git+https://salsa.debian.org/xorg-team/app/mesa-demos.git@1b2cb9d
+mesa-demos-${UB_VERSION}.tar.gz mesa-demos-1e0bf39/
+    git+https://salsa.debian.org/xorg-team/app/mesa-demos.git@1e0bf39
 
 alpine_down.rgb :src/objviewer
     https://raw.githubusercontent.com/JoakimSoderberg/mesademos/master/src/objviewer/

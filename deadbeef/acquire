@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-deadbeef-${UB_VERSION}.tar.bz2 deadbeef-${UB_VERSION}/
-	https://downloads.sourceforge.net/deadbeef/
+${UB_VERSION}.tar.gz deadbeef-${UB_VERSION}/
+	https://github.com/DeaDBeeF-Player/deadbeef/archive/refs/tags/

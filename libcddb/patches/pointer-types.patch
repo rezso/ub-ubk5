@@ -1,0 +1,12 @@
+diff -Naur a/lib/cddb_net.c b/lib/cddb_net.c
+--- a/lib/cddb_net.c	2009-03-01 04:28:07.000000000 +0100
++++ b/lib/cddb_net.c	2025-04-20 01:41:34.066512411 +0200
+@@ -325,7 +325,7 @@
+             default:
+                 /* we got connected, check error condition */
+                 l = sizeof(rv);
+-                getsockopt(sockfd, SOL_SOCKET, SO_ERROR, &rv, &l);
++                getsockopt(sockfd, SOL_SOCKET, SO_ERROR, &rv, (socklen_t * restrict)&l);
+                 if (rv) {
+                     /* something went wrong, simulate normal connect behaviour */
+                     errno = rv;

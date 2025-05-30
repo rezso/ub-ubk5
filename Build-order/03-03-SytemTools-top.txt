@@ -2,12 +2,10 @@ conky
 ethtool
 minicom
 sysstat
-blktool
 open-isns
 open-iscsi
 tcpdump
 vde
-read-edid
 xcalib
 libp11
 librtlsdr
@@ -19,15 +17,12 @@ powertop
 bluez-hcidump
 gptfdisk
 drbd-utils
-btsco
 gsmartcontrol
 openocd
 xsensors
 open-vm-tools
 hwinfo
 libva-utils
-epson-scanner-driver
-epson-printer-utility
 plymouth
 usb-modeswitch-data
 usb-modeswitch
@@ -35,5 +30,6 @@ clamav
 qlam
 pinentry-qt
 tlp
+zsh
 optimus-manager
 optimus-manager-qt

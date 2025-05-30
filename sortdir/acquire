@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-sortdir-${UB_VERSION}.tar.gz sortdir-${UB_VERSION}/
-	http://download.ubk.hu/src/uhu/sortdir/
+${UB_VERSION}.tar.gz sortdir-${UB_VERSION}/
+	https://github.com/uhulinux/sortdir/archive/refs/tags/

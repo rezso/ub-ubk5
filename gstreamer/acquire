@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-gstreamer-${UB_VERSION}.tar.bz2 gstreamer-${UB_VERSION}/
-	https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/${UB_VERSION}/
+#gstreamer-${UB_VERSION}.tar.bz2 gstreamer-${UB_VERSION}/
+#	https://gitlab.freedesktop.org/gstreamer/gstreamer/-/archive/${UB_VERSION}/
+
+${UB_VERSION}.tar.gz gstreamer-${UB_VERSION}/
+    https://github.com/GStreamer/gstreamer/archive/refs/tags/

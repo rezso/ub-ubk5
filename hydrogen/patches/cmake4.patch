@@ -1,0 +1,18 @@
+diff -Naur a/cmake/rtclock/CMakeLists.txt b/cmake/rtclock/CMakeLists.txt
+--- a/cmake/rtclock/CMakeLists.txt	2024-12-07 14:22:33.000000000 +0100
++++ b/cmake/rtclock/CMakeLists.txt	2025-04-30 00:59:33.651325348 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 3.8)
+ project($CMAKE_PROJECT_NAME)
+ add_definitions()
+ include_directories()
+diff -Naur a/cmake/sscanf/CMakeLists.txt b/cmake/sscanf/CMakeLists.txt
+--- a/cmake/sscanf/CMakeLists.txt	2024-12-07 14:22:33.000000000 +0100
++++ b/cmake/sscanf/CMakeLists.txt	2025-04-30 00:57:37.242868534 +0200
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 3.8)
+ project($CMAKE_PROJECT_NAME)
+ add_definitions()
+ include_directories()

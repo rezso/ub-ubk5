@@ -1,5 +1,4 @@
 clamav
-icon-theme-gnome
 perl-gtk3 >=
 perl-http-message
 perl-json

@@ -1,3 +1,5 @@
+slim-themes
+cursor-theme-x.org
 icewm
 fish
 fonts-libertine
@@ -55,5 +57,4 @@ sddm-config-editor
 grub-customizer
 systemd-ui
 nvidia-470
-synapse
 calamares

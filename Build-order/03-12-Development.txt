@@ -1,6 +1,5 @@
 dpkg-repack
 ltrace
-cgdb
 icon-slicer
 pugixml
 lucene++

@@ -1,15 +1,15 @@
 diff -Naur a/src/useradd.c b/src/useradd.c
---- a/src/useradd.c	2025-02-11 20:13:24.186219074 +0100
-+++ b/src/useradd.c	2025-02-11 20:31:31.011928122 +0100
-@@ -2358,7 +2358,6 @@
+--- a/src/useradd.c	2025-04-17 03:01:42.046104190 +0200
++++ b/src/useradd.c	2025-04-17 03:04:09.034626220 +0200
+@@ -2312,7 +2312,6 @@
  	gid_t         gid;
  	mode_t        mode;
  	const char    *spool;
 -	struct group  *gr;
  
- 	if (strcasecmp(create_mail_spool, "yes") != 0)
+ 	if (!strcaseeq(create_mail_spool, "yes"))
  		return;
-@@ -2394,16 +2393,8 @@
+@@ -2348,16 +2347,8 @@
  		return;
  	}
  

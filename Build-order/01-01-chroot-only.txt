@@ -6,7 +6,6 @@ agedu
 alien
 alsa-lib
 antiword
-aoetools
 argon2
 autoconf2.13
 at # bison, flex
@@ -19,7 +18,6 @@ bridge-utils
 cabextract
 c-ares
 ccrypt
-cdctl
 cdparanoia
 chkrootkit
 chmlib
@@ -30,7 +28,6 @@ cmark
 cmocka
 compface
 convmv
-corkscrew
 cppunit
 cron # pam
 ddrescue
@@ -56,7 +53,6 @@ glm
 gocr
 hashalot
 hddtemp
-hdf5
 hdparm
 htpdate
 hwdata
@@ -69,6 +65,7 @@ imediff2
 inxi
 iodine
 iperf
+iw
 jansson
 jitterentropy
 joe
@@ -129,7 +126,6 @@ libzip
 libzmq
 lmdb
 localepurge
-lrzsz
 lsb-release
 lsof
 lsscsi
@@ -160,15 +156,12 @@ pwgen
 qqwing
 qstat
 qtilitools
-rand
 rdate
 recode
 rinutils
 rkhunter
 rpcsvc-proto
-schedtool
 sdparm
-setserial
 setuser
 sg3-utils
 sipcalc
@@ -194,11 +187,10 @@ unicode-ucd
 unifdef
 unrar
 upx
-v86d
 vblade
 vulkan-headers
 wavpack
-wireless-tools
+wireless-regdb
 xorg-cf-files
 zisofs-tools
 zziplib

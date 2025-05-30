@@ -1,4 +1,3 @@
-aalib-dev
 alsa-lib-dev
 aom-dev
 bash-completion
@@ -7,7 +6,6 @@ bluez-dev
 cdparanoia-dev
 curl-dev
 dbus-glib-dev
-esound-dev
 faac-dev
 ffmpeg-dev
 flac-dev
@@ -56,7 +54,6 @@ libraw1394-dev
 librsvg-dev
 libsm-dev
 libsndfile-dev
-libsoup3-dev
 libsrtp2-dev
 libssh2-dev
 libtheora-dev

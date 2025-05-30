@@ -1,0 +1,20 @@
+diff -Naur a/po/CMakeLists.txt b/po/CMakeLists.txt
+--- a/po/CMakeLists.txt	2025-04-21 11:36:00.000000000 +0200
++++ b/po/CMakeLists.txt	2025-04-27 19:37:03.063701853 +0200
+@@ -122,16 +122,6 @@
+     # Install user products
+     install(FILES ${_tempMO} DESTINATION "${LOCDIR}/${_lang}/LC_MESSAGES/" RENAME "${PACKAGE}.mo" OPTIONAL)
+ 
+-    # mimic the content of the installation folder, for development purposes
+-    set(PG "${CMAKE_CURRENT_BINARY_DIR}/playground")
+-    file(MAKE_DIRECTORY "${PG}")
+-    file(MAKE_DIRECTORY "${PG}/${_lang}/LC_MESSAGES/")
+-    if(CMAKE_VERSION VERSION_GREATER OR  VERSION_EQUAL "3.14")
+-        file(CREATE_LINK ${_tempMO} "${PG}/${_lang}/LC_MESSAGES/${PACKAGE}.mo" SYMBOLIC)
+-    else()
+-        install(FILES ${_tempMO} DESTINATION "${PG}/${_lang}/LC_MESSAGES/" RENAME "${PACKAGE}.mo" OPTIONAL)
+-    endif()
+-
+ endforeach()
+ 
+ if(PO_REPLACE_ONCE)

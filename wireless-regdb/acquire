@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+wireless-regdb-${UB_VERSION}.tar.gz wireless-regdb-${UB_VERSION}/
+	https://kernel.org/pub/software/network/wireless-regdb/

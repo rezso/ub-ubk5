@@ -14,7 +14,7 @@ ub_compile \
 	-Dvulkan-drivers=amd,intel \
 	-Dvulkan-layers=device-select,intel-nullhw,overlay \
 	-Dllvm=enabled \
-	-Dlibunwind=enabled \
+	-Dlibunwind=disabled \
 	-Dlmsensors=enabled \
 	-Dtools=all \
 	-Db_ndebug=true \

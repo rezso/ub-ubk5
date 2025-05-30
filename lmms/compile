@@ -8,6 +8,6 @@ git checkout e8b3be9
 cd -
 
 ub_compile \
-	-USE=vst \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 	-DWANT_QT5=ON \
 	-DWANT_CARLA=OFF

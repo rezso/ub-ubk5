@@ -1,6 +1,5 @@
 #!/bin/sh -eux
 
-cd zip30
 cp zip "$UB_INSTALLDIR"/usr/bin/
 cp zipcloak "$UB_INSTALLDIR"/usr/bin/
 cp zipnote "$UB_INSTALLDIR"/usr/bin/

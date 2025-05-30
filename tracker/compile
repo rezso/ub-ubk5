@@ -3,4 +3,5 @@
 ub_compile \
     -Ddocs=false \
     -Dman=false \
+    -Dtests=false \
     -Dunicode_support=icu

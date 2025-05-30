@@ -1,8 +1,14 @@
 #!/bin/sh -eux
 
+export CFLAGS=" -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT \
+ -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD \
+ -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY \
+ -DNO_WORKING_ISPRINT "
+
 # A -O3 veszélyes
 ub_replace -O3 -O2 unix/Makefile
 ub_replace -O3 -O2 unix/configure
 
 cp unix/Makefile Makefile
-make generic
+# make D_USE_BZ2=-DUSE_BZIP2 L_BZ2=-lbz2 -I. $(DEFINES) unzips
+make D_USE_BZ2=-DUSE_BZIP2 L_BZ2=-lbz2 -I. unzips

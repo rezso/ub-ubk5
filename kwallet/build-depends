@@ -9,6 +9,6 @@ ki18n-dev
 knotifications-dev
 kservice-dev
 kwindowsystem-dev
-libgcrypt-dev
+libsecret-dev
 qca-dev
 qt6-dev

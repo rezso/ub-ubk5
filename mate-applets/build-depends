@@ -18,6 +18,5 @@ polkit-dev
 python3-pygobject-dev
 systemd-dev
 upower-dev
-wireless-tools-dev
 xcb-util-dev
 yelp-tools

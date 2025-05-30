@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 ${UB_VERSION}.tar.gz mate-applet-lockkeys-${UB_VERSION}/
-	https://github.com/assen-totin/mate-applet-lockkeys/archive/
+	https://github.com/rezso/mate-applet-lockkeys/archive/

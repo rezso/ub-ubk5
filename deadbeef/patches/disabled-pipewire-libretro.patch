@@ -1,0 +1,21 @@
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2025-03-26 18:37:03.000000000 +0100
++++ b/configure.ac	2025-05-21 05:16:43.554608752 +0200
+@@ -942,8 +942,6 @@
+ shared/undo/Makefile
+ shared/filereader/Makefile
+ external/Makefile
+-external/ddb_dsp_libretro/Makefile
+-external/ddb_output_pw/Makefile
+ pixmaps/Makefile
+ icons/Makefile
+ plugins/liboggedit/Makefile
+diff -Naur a/external/Makefile.am b/external/Makefile.am
+--- a/external/Makefile.am	2025-03-26 18:37:03.000000000 +0100
++++ b/external/Makefile.am	2025-05-21 05:16:51.782640111 +0200
+@@ -2,5 +2,3 @@
+ libmp4p_la_SOURCES = mp4p/src/mp4p.c mp4p/src/mp4patomdata.c mp4p/src/mp4pfile.c\
+ 				   	mp4p/include/mp4p/mp4p.h mp4p/include/mp4p/mp4patomdata.h mp4p/include/mp4p/mp4pfile.h 
+ libmp4p_la_CFLAGS = -fPIC -std=c99 -I@top_srcdir@/external/mp4p/include -I@top_srcdir@/include
+-
+-SUBDIRS = ddb_output_pw ddb_dsp_libretro

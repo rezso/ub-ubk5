@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-xf86-video-openchrome-${UB_VERSION}.tar.gz xf86-video-openchrome-${UB_VERSION}/
-	https://ftp.x.org/pub/individual/driver/

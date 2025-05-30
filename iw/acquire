@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+iw-${UB_VERSION}.tar.gz iw-${UB_VERSION}/
+	https://kernel.org/pub/software/network/iw/

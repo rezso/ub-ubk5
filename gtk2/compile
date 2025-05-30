@@ -1,3 +1,4 @@
 #!/bin/sh -eux
 
+export CFLAGS+=" -Wno-error=implicit-int -Wno-error=incompatible-pointer-types"
 ub_compile

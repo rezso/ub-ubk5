@@ -1,3 +1,4 @@
 #!/bin/sh -eux
 
 mv target/release/cargo-* "$UB_INSTALLDIR"/usr/bin/
+rm -f "$UB_INSTALLDIR"/usr/bin/*.d

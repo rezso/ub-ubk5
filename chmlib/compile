@@ -1,3 +1,4 @@
 #!/bin/sh -eux
 
+export CFLAGS+=" -Wno-implicit-function-declaration"
 ub_compile

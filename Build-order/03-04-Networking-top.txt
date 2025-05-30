@@ -1,9 +1,7 @@
 gn
 trurl
 claws-mail-themes
-lzop
 ncftp
-p0f
 fetchmail
 whois
 ufw
@@ -19,11 +17,9 @@ gftp
 mtr
 gufw
 fwbuilder
-transmission
 google-earth
 wget2
 nmap
-bluefish
 discord
 lftp
 anyremote

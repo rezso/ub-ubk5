@@ -20,7 +20,6 @@ plasma-activities-stats-dev
 plasma-workspace-dev
 qqc2-desktop-style-dev
 qt6-dev
-scim-dev
 sdl2-dev
 systemd-dev
 wayland-protocols

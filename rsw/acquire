@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-gtk-sunlight-${UB_VERSION}.tar.gz gtk-sunlight-${UB_VERSION}/
-	https://launchpad.net/realtimesunlightwallpaper/trunk/${UB_VERSION}/+download/

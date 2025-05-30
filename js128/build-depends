@@ -14,5 +14,4 @@ python3-setuptools
 readline-dev
 rust
 sqlite-dev
-zip
 zlib-dev

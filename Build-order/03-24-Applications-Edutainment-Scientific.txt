@@ -1,6 +1,5 @@
 mathomatic
 socnetv
-librecad
 gtkdatabox
 klavaro
 xplanet

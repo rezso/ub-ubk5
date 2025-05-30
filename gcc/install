@@ -13,10 +13,13 @@ ln -sf gcc "$UB_INSTALLDIR"/usr/bin/cc
 # delete .py file for gdb from /usr/lib
 rm -f "$UB_INSTALLDIR"/usr/lib/libstdc++*.py
 
+# delete include-fixed
+rm -Rf "$UB_INSTALLDIR"/usr/lib/gcc/x86_64-pc-linux-gnu/"$UB_VERSION"/include-fixed
+
 # create cc-rs compatible symlinks
 # https://github.com/rust-lang/cc-rs/blob/main/src/lib.rs#L2950-L2952
 for binary in {cc,c++,g++,gcc,gcc-ar,gcc-nm,gcc-ranlib}; do
     ln -s /usr/bin/${binary} "$UB_INSTALLDIR"/usr/bin/x86_64-linux-gnu-${binary}
 done
 
-ln -s ../../usr/bin/cpp "$UB_INSTALLDIR"/usr/lib/cpp
+# ln -s ../../usr/bin/cpp "$UB_INSTALLDIR"/usr/lib/cpp

@@ -18,6 +18,9 @@ mv $forras/* ./
 rm -f $forras.run
 rm -rf $forras
 cd kernel
+patch -Np1 < "$UB_SRCDIR"/patches/10-Fix-conftest-to-ignore-implicit-function-declaration.patch.skip
+patch -Np1 < "$UB_SRCDIR"/patches/11-Fix-conftest-to-use-a-short-wchar_t.patch.skip
+patch -Np1 < "$UB_SRCDIR"/patches/12-Fix-conftest-to-use-nv_drm_gem_vmap-which-has-the-se.patch.skip
 make IGNORE_CC_MISMATCH=yes SYSSRC=/usr/src/linux-$KVER KERNEL_UNAME="$KVER" MODULE_ROOT=$moduldir module
 cd ..
 export NV_USE_BUNDLED_LIBJANSSON=0

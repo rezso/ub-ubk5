@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-trunc-${UB_VERSION}.tar.gz trunc-${UB_VERSION}/
-	http://download.ubk.hu/src/uhu/trunc/
+${UB_VERSION}.tar.gz trunc-${UB_VERSION}/
+	https://github.com/uhulinux/trunc/archive/refs/tags/

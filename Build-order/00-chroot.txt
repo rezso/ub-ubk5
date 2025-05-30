@@ -53,6 +53,7 @@ procps
 gdbm
 perl
 perl-module-build
+perl-module-build-tiny
 perl-extutils-config
 perl-extutils-helpers
 perl-extutils-installpaths
@@ -145,7 +146,6 @@ intltool
 gawk
 docbook-xml
 docbook-xsl
-doxygen
 libpaper
 openjpeg
 gc
