@@ -4,4 +4,6 @@ libkscreen-dev
 libplasma-dev
 libxi-dev
 qt6-dev
+wayland-dev
+wayland-protocols
 xcb-util-dev

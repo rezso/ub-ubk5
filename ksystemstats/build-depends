@@ -1,4 +1,5 @@
 kf6-dev
+libdrm-dev
 libksysguard-dev
 libnl-dev
 lmsensors-dev

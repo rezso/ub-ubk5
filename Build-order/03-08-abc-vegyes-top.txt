@@ -1,3 +1,4 @@
+dvb-firmware
 slim-themes
 cursor-theme-x.org
 icewm

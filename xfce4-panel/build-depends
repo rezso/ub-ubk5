@@ -13,5 +13,6 @@ libxfce4ui-dev
 libxfce4util-dev
 libxfce4windowing-dev
 pango-dev
+vala
 xfce4-dev-tools
 xfconf-dev

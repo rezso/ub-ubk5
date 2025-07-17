@@ -1,0 +1,97 @@
+diff -Naur a/build/config/compiler/BUILD.gn b/build/config/compiler/BUILD.gn
+--- a/build/config/compiler/BUILD.gn	2025-07-07 20:29:43.000000000 +0200
++++ b/build/config/compiler/BUILD.gn	2025-07-11 11:12:11.668560592 +0200
+@@ -315,7 +315,6 @@
+     ":compiler_cpu_abi",
+     ":compiler_codegen",
+     ":compiler_deterministic",
+-    ":clang_warning_suppression",
+   ]
+ 
+   # TODO(https://crbug.com/404297941): Disable clang_warning_suppression
+@@ -604,24 +603,6 @@
+       }
+     }
+ 
+-    # TODO(crbug.com/40283598): This causes binary size growth and potentially
+-    # other problems.
+-    # TODO(crbug.com/40284925): This isn't supported by Cronet's mainline llvm version.
+-    if (default_toolchain != "//build/toolchain/cros:target" &&
+-        !llvm_android_mainline) {
+-      cflags += [
+-        "-mllvm",
+-        "-split-threshold-for-reg-with-hint=0",
+-      ]
+-      if (use_thin_lto && is_a_target_toolchain) {
+-        if (is_win) {
+-          ldflags += [ "-mllvm:-split-threshold-for-reg-with-hint=0" ]
+-        } else {
+-          ldflags += [ "-Wl,-mllvm,-split-threshold-for-reg-with-hint=0" ]
+-        }
+-      }
+-    }
+-
+     # TODO(crbug.com/40192287): Investigate why/if this should be needed.
+     if (is_win) {
+       cflags += [ "/clang:-ffp-contract=off" ]
+@@ -807,7 +788,6 @@
+       ldflags += [
+         "/opt:lldltojobs=all",
+         "-mllvm:-import-instr-limit=$import_instr_limit",
+-        "-mllvm:-disable-auto-upgrade-debug-info",
+       ]
+     } else {
+       ldflags += [ "-flto=thin" ]
+@@ -839,10 +819,6 @@
+       if (is_apple) {
+         ldflags += [ "-Wcrl,object_path_lto" ]
+       }
+-
+-      # We only use one version of LLVM within a build so there's no need to
+-      # upgrade debug info, which can be expensive since it runs the verifier.
+-      ldflags += [ "-Wl,-mllvm,-disable-auto-upgrade-debug-info" ]
+     }
+ 
+     if (!optimize_for_size) {
+@@ -1763,28 +1739,6 @@
+   }
+ }
+ 
+-# Controls the usage of a warning suppression mapping (WSM) file to suppress
+-# warnings based on the path of the file they come from. It's controlled by the
+-# `clang_warning_suppression_file` gn argument , which points to a text file
+-# defining which warnings should be suppressed where.
+-# See //build/config/warning_suppression.txt for an example file; this is the
+-# file used by Chromium.
+-#
+-# To use a different file, or to use this functionality outside of chromium,
+-# set the `clang_warning_suppression_file` argument to point to the new file,
+-# e.g. by setting in the the project's .gn file.
+-config("clang_warning_suppression") {
+-  # Some build configs use older versions of clang that don't support WSMs
+-  if (!is_nacl && default_toolchain != "//build/toolchain/cros:target" &&
+-      !llvm_android_mainline && is_clang &&
+-      clang_warning_suppression_file != "") {
+-    from_build_root =
+-        rebase_path(clang_warning_suppression_file, root_build_dir)
+-    inputs = [ clang_warning_suppression_file ]
+-    cflags = [ "--warning-suppression-mappings=" + from_build_root ]
+-  }
+-}
+-
+ config("rustc_revision") {
+   if (rustc_revision != "") {
+     # Similar to the above config, this is here so that all files get recompiled
+@@ -2131,12 +2085,6 @@
+       cflags += [
+         # TODO(crbug.com/330524456): -Wcast-function-type is under -Wextra now.
+         "-Wno-cast-function-type",
+-
+-        # TODO(crbug.com/40284799): Fix and re-enable.
+-        "-Wno-thread-safety-reference-return",
+-
+-        # TODO(crbug.com/376641662): Fix and re-enable.
+-        "-Wno-nontrivial-memcall",
+       ]
+ 
+       cflags_cc += [

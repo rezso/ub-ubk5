@@ -1,4 +1,5 @@
 kf6-dev
+libdrm-dev
 libnl-dev
 libpcap-dev
 lmsensors-dev

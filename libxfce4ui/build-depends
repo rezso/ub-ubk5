@@ -1,8 +1,10 @@
+gobject-introspection-dev
 gtk3-dev
 libxfce4util-dev
 libxinerama-dev
 libxml2-dev
 libxt-dev
 startup-notification-dev
+vala
 xcb-util-dev
 xfconf-dev

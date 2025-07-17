@@ -36,7 +36,7 @@ wireshark
 balsa
 claws-mail
 liferea
-seamonkey
 firefox
 thunderbird
+seamonkey
 chromium

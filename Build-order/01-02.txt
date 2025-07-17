@@ -122,7 +122,6 @@ netpbm # lilypond build-depends
 djvulibre
 java-jre
 telepathy-glib
-libmpeg2
 cogl
 libvpx
 gd

@@ -2,6 +2,4 @@
 
 ub_install
 
-mkdir -p "$UB_INSTALLDIR"/usr/share/doc/Packages/libogg
-mv "$UB_INSTALLDIR"/usr/share/doc/libogg \
-	"$UB_INSTALLDIR"/usr/share/doc/Packages/libogg/html
+rm -Rf "$UB_INSTALLDIR"/usr/share/doc/ogg/html

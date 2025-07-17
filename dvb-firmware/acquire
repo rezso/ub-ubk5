@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+${UB_VERSION}.tar.gz dvb-firmware-${UB_VERSION}/
+	https://github.com/OpenELEC/dvb-firmware/archive/refs/tags/

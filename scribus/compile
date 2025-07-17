@@ -2,4 +2,5 @@
 
 ub_compile \
     -DWANT_CPP17=ON \
-    -DWANT_QT6=OFF
+    -DWANT_QT6=OFF \
+    -DWITH_PODOFO=OFF

@@ -186,4 +186,4 @@ tellico
 digikam
 krusader
 kaffeine # kf6: git, multimedia lejátszó
-kshutdown # kf5 + patch
+kshutdown

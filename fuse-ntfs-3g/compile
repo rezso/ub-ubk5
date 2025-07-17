@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-sed 's|$(DESTDIR)/sbin|$(DESTDIR)/usr/sbin|' -i {ntfsprogs,src}/Makefile.in
+sed 's|$(DESTDIR)/sbin|$(DESTDIR)/usr/sbin|' -i {ntfsprogs,src}/Makefile.am
 
 ub_compile \
     --with-fuse=external \

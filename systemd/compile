@@ -8,14 +8,12 @@
 ub_compile \
     --optimization=2 \
     -Dmode=release \
-   	-Dsplit-usr=false \
-   	-Dinitrd=true \
-   	-Dstandalone-binaries=true \
    	-Ddefault-kill-user-processes=false \
 	-Dpamlibdir=/usr/lib/security \
 	-Ddefault-dnssec=no \
-	-Dlink-udev-shared=true \
+	-Dapparmor=false \
 	-Daudit=false \
+	-Dselinux=false \
 	-Dlibcurl=false \
 	-Dmicrohttpd=false \
 	-Dcoredump=true \
@@ -28,6 +26,8 @@ ub_compile \
 	-Dldconfig=false \
     -Dsysusers=true \
     -Drpmmacrosdir=no \
+    -Dsysvinit-path= \
+    -Dsysvrcnd-path= \
     -Dadm-gid=3 \
     -Daudio-gid=50 \
     -Dlp-gid=7 \

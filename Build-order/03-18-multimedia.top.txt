@@ -39,7 +39,6 @@ audacious
 xine-ui
 cmus
 moc
-transcode
 handbrake
 cinelerra
 mpv

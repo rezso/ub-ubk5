@@ -1,31 +1,11 @@
 #!/bin/bash -eux
 
-make -C linux-firmware DESTDIR=${UB_INSTALLDIR} FIRMWAREDIR=/usr/lib/firmware install
-make -C linux-firmware DESTDIR=${UB_INSTALLDIR} FIRMWAREDIR=/usr/lib/firmware dedup
-
-cp -a dvb-firmware/* ${UB_INSTALLDIR}/usr/lib/firmware
+make DESTDIR=${UB_INSTALLDIR} FIRMWAREDIR=/usr/lib/firmware install
+make DESTDIR=${UB_INSTALLDIR} FIRMWAREDIR=/usr/lib/firmware dedup
 
 rm -Rf ${UB_INSTALLDIR}/usr/lib/firmware/.git
-
-docdir=${UB_INSTALLDIR}/usr/share/doc/Packages/linux-firmware
-mkdir -p ${docdir}
-mv linux-firmware/GPL-* ${docdir}/
-mv linux-firmware/LICENCE* ${docdir}/
-mv linux-firmware/LICENSE* ${docdir}/
-mv linux-firmware/README* ${docdir}/
-mv linux-firmware/WHENCE ${docdir}/
-mv dvb-firmware/LICENCE* ${docdir}/
-mv dvb-firmware/license-*.txt ${docdir}/
-mv ${UB_INSTALLDIR}/usr/lib/firmware/dvb-*.fw.license.txt ${docdir}/
-mv ${UB_INSTALLDIR}/usr/lib/firmware/LICENCE* ${docdir}/
-mv ${UB_INSTALLDIR}/usr/lib/firmware/license*.txt ${docdir}/
 
 rm -Rf ${UB_INSTALLDIR}/usr/lib/firmware/{Makefile,configure,README*,*.txt,*.py}
 
 # üres könyvtárak törlése
 find ${UB_INSTALLDIR} -type d -empty -delete
-
-# Trigger a microcode reload for configurations not using early updates
-install -d "${UB_INSTALLDIR}/usr/lib/tmpfiles.d"
-echo 'w /sys/devices/system/cpu/microcode/reload - - - - 1' \
-	>"${UB_INSTALLDIR}/usr/lib/tmpfiles.d/linux-firmware.conf"

@@ -1,0 +1,12 @@
+diff -Naur a/src/core/meson.build b/src/core/meson.build
+--- a/src/core/meson.build	2025-03-05 16:13:29.000000000 +0100
++++ b/src/core/meson.build	2025-06-24 21:56:35.669223264 +0200
+@@ -261,6 +261,8 @@
+ 
+ install_emptydir(sbindir)
+ meson.add_install_script(sh, '-c', ln_s.format(libexecdir / 'systemd', sbindir / 'init'))
++meson.add_install_script(sh, '-c', ln_s.format(libexecdir / 'systemd', bindir / 'init'))
++
+ 
+ ############################################################
+ 

@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-v${UB_VERSION}.tar.gz systemd-${UB_VERSION}/
-	https://github.com/systemd/systemd/archive/
+#v${UB_VERSION}.tar.gz systemd-${UB_VERSION}/
+#	https://github.com/systemd/systemd/archive/
+
+v${UB_VERSION}.tar.gz systemd-stable-${UB_VERSION}/
+	https://github.com/systemd/systemd-stable/archive/refs/tags/

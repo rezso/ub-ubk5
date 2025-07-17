@@ -5,6 +5,7 @@ gtksourceview4-dev
 libsm-dev
 libxfce4ui-dev
 startup-notification-dev
+vala
 xcb-util-dev
 xfce4-panel-dev
 xfconf-dev

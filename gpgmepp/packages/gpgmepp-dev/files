@@ -1,0 +1,4 @@
+	/usr/include/gpgme++
+	/usr/lib/cmake
+@	/usr/lib/libgpgmepp.so
+	/usr/lib/pkgconfig

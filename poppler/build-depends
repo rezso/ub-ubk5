@@ -9,4 +9,5 @@ libxi-dev
 libxml2-dev
 nss-dev
 openjpeg-dev
+poppler-data
 qt6-dev

@@ -1,2 +1,6 @@
+bison
+flex
+gperf
 help2man
+texinfo
 tzdata

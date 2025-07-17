@@ -1,2 +1,2 @@
-noupdate
+urllist https://github.com/systemd/systemd-stable/tags | grep 'v255' | grep '[0-9.]$' | sed -e 's/v//' | sort -V | tail -n1
 # u2d https://github.com/systemd/systemd/tags/ v

@@ -14,6 +14,8 @@ libmediaart-dev
 liboauth-dev
 libxml2-dev
 lua-dev
+rest-dev
 sqlite-dev
 totem-plparser-dev
 tracker-dev
+tracker-miners

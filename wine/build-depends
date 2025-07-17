@@ -4,6 +4,7 @@ audiofile-dev
 bison
 cups-dev
 dbus-dev
+ffmpeg-dev
 flex
 fontconfig-dev
 freetype2-dev
@@ -26,6 +27,7 @@ libxcursor-dev
 libxext-dev
 libxi-dev
 libxinerama-dev
+libxkbcommon-dev
 libxml2-dev
 libxrandr-dev
 libxrender-dev

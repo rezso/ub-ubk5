@@ -1,3 +1,5 @@
 #!/bin/sh -eux
 
 ub_install
+
+sed -i 's/\r//g' ${UB_INSTALLDIR}/usr/lib/gimp/3.0/plug-ins/palette-export-as-kpl/palette-export-as-kpl.py

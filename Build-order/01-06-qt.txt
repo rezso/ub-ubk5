@@ -1,5 +1,5 @@
 icon-naming-utils
-wget # -gpgme
+wget
 spamassassin
 nodejs
 libproxy
@@ -93,6 +93,7 @@ lightdm
 lightdm-qt5-greeter
 extra-cmake-modules
 gpgme
+gpgmepp
 poppler
 sane-backends
 gmime

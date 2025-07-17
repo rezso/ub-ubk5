@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-dateutils-${UB_VERSION}.tar.xz dateutils-${UB_VERSION}/
-	https://bitbucket.org/hroptatyr/dateutils/downloads/
+v${UB_VERSION}.tar.gz dateutils-${UB_VERSION}/
+	https://github.com/hroptatyr/dateutils/archive/refs/tags/

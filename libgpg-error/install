@@ -1,3 +1,6 @@
 #!/bin/sh -eux
 
 ub_install
+
+# hack for gpgmepp cmake file
+ln -s gpg-error.pc ${UB_INSTALLDIR}/usr/lib/pkgconfig/libgpgerror.pc

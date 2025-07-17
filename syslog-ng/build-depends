@@ -9,6 +9,5 @@ libnet-dev
 openssl-dev
 pcre2-dev
 popt-dev
-python3-dev
 systemd-dev
 util-linux-dev

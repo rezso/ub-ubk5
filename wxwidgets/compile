@@ -1,6 +1,10 @@
 #!/bin/sh -eux
 
 git clone https://github.com/wxWidgets/nanosvg 3rdparty/nanosvg
+git clone https://github.com/wxWidgets/libwebp.git 3rdparty/libwebp
+git clone https://github.com/wxWidgets/scintilla.git src/stc/scintilla
+git clone https://github.com/wxWidgets/lexilla.git src/stc/lexilla
+
 ub_compile \
     -DwxBUILD_SHARED=ON \
     -DwxBUILD_PRECOMP=OFF \

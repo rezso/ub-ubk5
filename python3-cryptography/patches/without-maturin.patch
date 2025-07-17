@@ -1,6 +1,6 @@
 diff -Naur a/MANIFEST.in b/MANIFEST.in
 --- a/MANIFEST.in	1970-01-01 01:00:00.000000000 +0100
-+++ b/MANIFEST.in	2024-12-29 00:50:44.159609979 +0100
++++ b/MANIFEST.in	2025-06-04 19:10:59.886293149 +0200
 @@ -0,0 +1,24 @@
 +include CHANGELOG.rst
 +include CONTRIBUTING.rst
@@ -27,20 +27,21 @@ diff -Naur a/MANIFEST.in b/MANIFEST.in
 +
 +exclude release.py .readthedocs.yml ci-constraints-requirements.txt mypy.ini
 diff -Naur a/pyproject.toml b/pyproject.toml
---- a/pyproject.toml	2024-11-27 18:58:40.000000000 +0100
-+++ b/pyproject.toml	2024-12-29 00:54:43.540224286 +0100
-@@ -2,15 +2,14 @@
+--- a/pyproject.toml	2025-05-25 16:10:46.000000000 +0200
++++ b/pyproject.toml	2025-06-04 19:15:01.743241889 +0200
+@@ -2,16 +2,14 @@
  # These requirements must be kept sync with the requirements in
  # ./.github/requirements/build-requirements.{in,txt}
  requires = [
--    "maturin>=1,<2",
+-    "maturin>=1.8.6,<2",
 +    # First version of setuptools to support pyproject.toml configuration
 +    "setuptools>=61.0.0",
  
      # Must be kept in sync with `project.dependencies`
-     "cffi>=1.12; platform_python_implementation != 'PyPy'",
--    # Needed because cffi imports distutils, and in Python 3.12, distutils has
--    # been removed from the stdlib, but installing setuptools puts it back.
+     "cffi>=1.14; platform_python_implementation != 'PyPy'",
+-    # Used by cffi (which import distutils, and in Python 3.12, distutils has
+-    # been removed from the stdlib, but installing setuptools puts it back) as
+-    # well as our build.rs for the rust/cffi bridge.
 -    "setuptools!=74.0.0,!=74.1.0,!=74.1.1,!=74.1.2",
 +    "setuptools-rust>=1.7.0",
  ]
@@ -49,9 +50,9 @@ diff -Naur a/pyproject.toml b/pyproject.toml
  
  [project]
  name = "cryptography"
-@@ -80,42 +79,19 @@
- # `click` included because its needed to type check `release.py`
- pep8test = ["ruff >=0.3.6", "mypy >=1.4", "check-sdist; python_version >= '3.8'", "click >=8.0.1"]
+@@ -93,40 +91,19 @@
+     "click >=8.0.1",
+ ]
  
 -[tool.maturin]
 -python-source = "src"
@@ -60,29 +61,27 @@ diff -Naur a/pyproject.toml b/pyproject.toml
 -module-name = "cryptography.hazmat.bindings._rust"
 -locked = true
 -sdist-generator = "git"
--features = ["pyo3/abi3-py37"]
 -include = [
 -    "CHANGELOG.rst",
 -    "CONTRIBUTING.rst",
--    "LICENSE",
--    "LICENSE.APACHE",
--    "LICENSE.BSD",
 -
 -    "docs/**/*",
 -
--    "src/_cffi_src/**/*.py",
--    "src/_cffi_src/**/*.c",
--    "src/_cffi_src/**/*.h",
+-    { path = "src/_cffi_src/**/*.py", format = "sdist" },
+-    { path = "src/_cffi_src/**/*.c", format = "sdist" },
+-    { path = "src/_cffi_src/**/*.h", format = "sdist" },
 -
--    "**/Cargo.toml",
--    "**/Cargo.lock",
--    "src/rust/**/*.rs",
+-    { path = "Cargo.toml", format = "sdist" },
+-    { path = "Cargo.lock", format = "sdist" },
+-    { path = "src/rust/**/Cargo.toml", format = "sdist" },
+-    { path = "src/rust/**/Cargo.lock", format = "sdist" },
+-    { path = "src/rust/**/*.rs", format = "sdist" },
 -
 -    "tests/**/*.py",
 -]
 -exclude = [
 -    "vectors/**/*",
--    "src/rust/target/**/*",
+-    "target/**/*",
 -    "docs/_build/**/*",
 -    ".github/**/*",
 -    ".readthedocs.yml",

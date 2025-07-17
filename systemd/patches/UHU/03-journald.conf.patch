@@ -1,7 +1,7 @@
-diff -Naur orig/src/journal/journald.conf patched/src/journal/journald.conf
---- orig/src/journal/journald.conf	2019-04-11 18:28:36.000000000 +0200
-+++ patched/src/journal/journald.conf	2019-04-24 00:51:41.714268416 +0200
-@@ -22,13 +22,13 @@
+diff -Naur a/src/journal/journald.conf b/src/journal/journald.conf
+--- a/src/journal/journald.conf	2025-03-05 16:13:29.000000000 +0100
++++ b/src/journal/journald.conf	2025-06-24 21:22:33.633621748 +0200
+@@ -24,13 +24,13 @@
  #SyncIntervalSec=5m
  #RateLimitIntervalSec=30s
  #RateLimitBurst=10000
@@ -17,5 +17,5 @@ diff -Naur orig/src/journal/journald.conf patched/src/journal/journald.conf
 -#RuntimeMaxFileSize=
 +RuntimeMaxFileSize=50M
  #RuntimeMaxFiles=100
- #MaxRetentionSec=
+ #MaxRetentionSec=0
  #MaxFileSec=1month

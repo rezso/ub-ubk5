@@ -1,9 +1,5 @@
 #!/usr/bin/env dl
 
-linux-firmware-${UB_VERSION}.tar.gz linux-firmware-${UB_VERSION}/ :linux-firmware
+linux-firmware-${UB_VERSION}.tar.gz linux-firmware-${UB_VERSION}/
     https://kernel.org/pub/linux/kernel/firmware/
     https://mirrors.edge.kernel.org/pub/linux/kernel/firmware/
-
-# dvb
-0.0.51.tar.gz dvb-firmware-0.0.51/firmware :dvb-firmware
-	https://github.com/OpenELEC/dvb-firmware/archive/
