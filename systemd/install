@@ -9,6 +9,3 @@ for file in "$UB_INSTALLDIR"/usr/lib/udev/rules.d/*.rules; do
 	done
 	sed -e "s/GROUP=\"kvm\"/GROUP=\"users\"/g" -i "$file"
 done
-
-# /etc/initrd-release
-touch "$UB_INSTALLDIR"/etc/initrd-release
