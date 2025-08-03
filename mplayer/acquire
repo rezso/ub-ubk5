@@ -1,10 +1,10 @@
 #!/usr/bin/env dl
 
 #MPlayer-${UB_VERSION}.tar.xz MPlayer-${UB_VERSION}/
-#	https://www.mplayerhq.hu/MPlayer/releases/
+#	https://mplayerhq.hu/MPlayer/releases/
 
-MPlayer-${UB_VERSION}.tar.gz MPlayer-a92df5d/
-    git+https://github.com/sherpya/MPlayer.git@a92df5d
+mplayer-export-snapshot.tar.bz2 mplayer-export-$(date -u +%Y-%m-%d)/
+    https://svn.mplayerhq.hu/MPlayer/releases/
 
 Blue-1.11.tar.bz2 . :skins
 	https://mplayerhq.hu/MPlayer/skins/

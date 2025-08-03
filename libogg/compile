@@ -3,5 +3,4 @@
 sed -i "s|-ffast-math||" configure
 export CFLAGS=" -fPIC "
 ub_compile \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DBUILD_SHARED_LIBS=ON

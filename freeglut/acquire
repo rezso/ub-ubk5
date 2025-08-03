@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 freeglut-${UB_VERSION}.tar.gz freeglut-${UB_VERSION}/
-	https://download.sourceforge.net/freeglut/
+	https://github.com/freeglut/freeglut/releases/download/v${UB_VERSION}/

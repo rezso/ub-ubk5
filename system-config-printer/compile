@@ -1,7 +1,8 @@
 #!/bin/sh -eux
 
-touch ChangeLog
+autopoint -f
 gettextize -f
+autoreconf -vif
 ub_compile \
 	--with-udev-rules \
 	--with-udevdir=/etc/udev \

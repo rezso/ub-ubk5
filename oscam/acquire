@@ -1,4 +1,7 @@
 #!/usr/bin/env dl
 
-oscam-${UB_VERSION}.tar.gz oscam-${UB_VERSION}/
-    https://git.streamboard.tv/common/oscam/-/archive/${UB_VERSION}/
+oscam-${UB_VERSION#*+}.tar.gz oscam-${UB_VERSION#*+}/
+    https://git.streamboard.tv/common/oscam/-/archive/${UB_VERSION#*+}/
+
+#oscam-${UB_VERSION}.tar.gz oscam-${UB_VERSION}/
+#   https://git.streamboard.tv/common/oscam/-/archive/${UB_VERSION}/

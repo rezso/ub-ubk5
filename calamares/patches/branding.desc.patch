@@ -24,9 +24,9 @@ diff -Naur a/src/branding/default/branding.desc b/src/branding/default/branding.
 +    versionedName:       UHU-Linux UBK5 (NG)
 +    shortVersionedName:  UHU-Linux UBK5
 +    bootloaderEntryName: UHU-Linux
-+    productUrl:          https://ubk.hu/
-+    supportUrl:          https://github.com/uhulinux/ub-ubk5/issues
-+    knownIssuesUrl:      https://github.com/uhulinux/ub-ubk5/issues
++    productUrl:          https://rezso.net/
++    supportUrl:          https://github.com/rezso/ub-ubk5/issues
++    knownIssuesUrl:      https://github.com/rezso/ub-ubk5/issues
  
  # These images are loaded from the branding module directory.
  #

@@ -12,6 +12,5 @@ git checkout ea3de62c
 cd -
 
 ub_compile \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DBUILD_TESTING=OFF \
     -DENABLE_POPPLER=OFF

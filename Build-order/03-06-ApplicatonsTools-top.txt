@@ -55,7 +55,6 @@ deb-gview
 virt-viewer
 gencfsm
 mencfsm
-bclock
 blueman
 recoll
 workrave

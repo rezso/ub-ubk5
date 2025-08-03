@@ -76,7 +76,6 @@ gnome-dictionary
 gnome-nettool
 gnome-weather
 gnome-sound-recorder
-gnome-todo # endeavour
 bijiben
 gnome-maps
 gnome-clocks

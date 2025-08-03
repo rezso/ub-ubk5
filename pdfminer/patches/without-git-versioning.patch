@@ -1,14 +1,19 @@
-diff -Naur a/setup.py b/setup.py
---- a/setup.py	2024-07-06 15:47:18.000000000 +0200
-+++ b/setup.py	2024-12-21 18:37:46.602838247 +0100
-@@ -19,10 +19,6 @@
+diff -Naur a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	2025-05-06 18:14:00.000000000 +0200
++++ b/pyproject.toml	2025-08-01 06:38:25.113641263 +0200
+@@ -1,5 +1,5 @@
+ [build-system]
+-requires = ["setuptools >= 61.0", "setuptools-scm>=8"]
++requires = ["setuptools >= 61.0"]
+ build-backend = "setuptools.build_meta"
  
- setup(
-     name="pdfminer.six",
--    setuptools_git_versioning={
--        "enabled": True,
--    },
--    setup_requires=["setuptools-git-versioning<3"],
-     packages=["pdfminer"],
-     package_data={"pdfminer": ["cmap/*.pickle.gz", "py.typed"]},
-     install_requires=[
+ [project]
+@@ -67,8 +67,6 @@
+     "tools/dumppdf.py",
+ ]
+ 
+-[tool.setuptools_scm]
+-
+ [tool.ruff.lint]
+ extend-select = [
+     "W",  # pycodestyle warnings

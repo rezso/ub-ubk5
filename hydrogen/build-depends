@@ -5,4 +5,4 @@ libarchive-dev
 liblrdf-dev
 libsndfile-dev
 pulseaudio-dev
-qt5-dev
+qt6-dev

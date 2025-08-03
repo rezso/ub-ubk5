@@ -1,0 +1,14 @@
+diff -Naur a/configure.ac b/configure.ac
+--- a/configure.ac	2022-08-30 17:50:41.000000000 +0200
++++ b/configure.ac	2025-08-01 20:29:19.860656328 +0200
+@@ -1,9 +1,8 @@
+ AC_INIT(system-config-printer, 1.5.18)
+ AC_CONFIG_SRCDIR(system-config-printer.py)
+ AM_INIT_AUTOMAKE([dist-xz dist-bzip2 subdir-objects 1.6])
+-AM_GNU_GETTEXT_VERSION(0.20)
+-AX_REQUIRE_DEFINED([AM_GNU_GETTEXT])
+ AM_GNU_GETTEXT([external])
++AM_GNU_GETTEXT_VERSION(0.21)
+ AM_PATH_PYTHON([3])
+ PACKAGE="AC_PACKAGE_NAME"
+ VERSION="AC_PACKAGE_VERSION"

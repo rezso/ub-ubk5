@@ -1,9 +1,0 @@
-#!/bin/sh -eux
-
-rm -f CMakeLists.txt
-ub_compile \
-    --enable-qt6 \
-	--with-qt-dir=/usr/lib/qt6 \
-	--with-qt-includes=/usr/include/qt6 \
-	--with-qt-libraries=/usr/lib/qt6 \
-	--without-included-mythes

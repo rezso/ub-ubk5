@@ -1,3 +1,4 @@
 #!/bin/sh -eux
 
+autopoint -f
 ub_compile

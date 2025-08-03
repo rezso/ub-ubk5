@@ -6,10 +6,7 @@ fetchmail
 whois
 ufw
 nrpe
-ytalk
 grsync
-libfilezilla
-filezilla
 speedtest-cli
 irssi
 stunnel

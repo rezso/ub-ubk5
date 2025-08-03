@@ -42,7 +42,7 @@ chmod 755 usr/lib/uhubuild/steps/*
 chmod 755 usr/bin/ub_*
 
 # build
-for dist in UBK3 UBK4 UBK5; do
+for dist in UBK4 UBK5; do
 	for a in 1 2 3 ; do
 		mkdir -p "$UB_INSTALLDIR"/var/uhubuild/"$dist"/amd64/chroot${a}
 	done
@@ -58,7 +58,7 @@ mkdir -p "$UB_INSTALLDIR"/usr/src/UHUBUILD/packages-"$dist"/amd64
 cd "$UB_INSTALLDIR"/usr/src/UHUBUILD/packages-"$dist"/amd64
 uhu-scanpkgs
 echo "Label: UHU-Linux" > Release
-echo "Origin: ubk.hu" >> Release
+echo "Origin: rezso.net" >> Release
 echo "Version: $dist" >> Release
 
 ln -s "$UB_INSTALLDIR"/usr/bin/build-clean \
@@ -75,8 +75,7 @@ cat > "$UB_INSTALLDIR"/etc/apt/sources.list-build-$dist <<END
 
 deb file:/usr/src/UHUBUILD/packages-$dist/amd64 ./
 
-deb http://download.ubk.hu/pkg/${dist,,}/main/amd64 ./
-deb http://quantum-mirror.hu/mirrors/pub/ubk/pkg/${dist,,}/main/amd64 ./
+deb http://download.rezso.net/pkg/${dist,,}/main/amd64 ./
 
 END
 

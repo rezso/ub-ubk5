@@ -1,4 +1,6 @@
 #!/bin/sh -eux
 
-./autogen.sh
+autopoint -f
+intltoolize -f
+autoreconf -vif
 ub_compile

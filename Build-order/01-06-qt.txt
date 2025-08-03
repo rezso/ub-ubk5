@@ -13,7 +13,6 @@ libxmlb
 bind
 openconnect
 appstream-glib
-libsoup
 libsoup3
 libosinfo
 osinfo-db-tools

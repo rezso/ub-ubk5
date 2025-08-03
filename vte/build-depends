@@ -3,6 +3,7 @@ gobject-introspection-dev
 gperf
 gtk3-dev
 gtk4-dev
+libfmt-dev
 liblz4-dev
 pcre2-dev
 vala

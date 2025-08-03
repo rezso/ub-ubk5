@@ -67,7 +67,6 @@ iodine
 iperf
 iw
 jansson
-jitterentropy
 joe
 kanyremote
 keyutils
@@ -76,7 +75,6 @@ libaal
 libasyncns
 libburn
 libcddb
-libcue
 libdca
 libdiscid
 libdvbpsi
@@ -152,6 +150,7 @@ pptpclient
 procmail
 protobuf
 psacct
+pugixml
 pwgen
 qqwing
 qstat

@@ -1,6 +1,4 @@
 #!/bin/sh -eux
 
-git clone https://github.com/nemtrif/utfcpp.git 3rdparty/utfcpp
-
 ub_compile \
 	-DBUILD_SHARED_LIBS=ON

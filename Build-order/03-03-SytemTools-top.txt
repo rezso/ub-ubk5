@@ -8,8 +8,6 @@ tcpdump
 vde
 xcalib
 libp11
-librtlsdr
-rng-tools
 blktrace
 freeipmi
 pcmciautils

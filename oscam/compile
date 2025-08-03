@@ -1,6 +1,5 @@
 #!/bin/sh -eux
 
-make allyesconfig
+# make allyesconfig
 ub_compile \
-    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DCS_CONFDIR=/etc/oscam

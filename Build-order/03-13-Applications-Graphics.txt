@@ -10,10 +10,6 @@ povray
 mtpaint
 gphoto2
 geeqie
-spglib
-molequeue
-avogadro2libs
-avogadro2
 gv
 rawtherapee
 enblend

@@ -1,6 +1,6 @@
 #!/bin/sh -eux
 
-./makeconf.sh
+autopoint -f
 export MOUNT_FUSE_PATH=/usr/bin
 ub_compile \
     --with-iconv-prefix=/usr \

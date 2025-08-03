@@ -1,0 +1,25 @@
+diff -Naur a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	2025-03-08 15:03:09.000000000 +0100
++++ b/CMakeLists.txt	2025-07-30 18:50:29.216803788 +0200
+@@ -1,16 +1,18 @@
+ ########### requirements ###############
+ 
+-cmake_minimum_required (VERSION 2.6)
++cmake_minimum_required (VERSION 3.16.0)
++
++project ("cairo-dock-plugins" C)
++
+ find_package (PkgConfig)
+ include (CheckLibraryExists)
+ include (CheckIncludeFiles)
+ include (CheckFunctionExists)
+ include (CheckSymbolExists)
+-include ("${CMAKE_CURRENT_SOURCE_DIR}/cmake_modules/GNUInstallDirs.cmake")
++include (GNUInstallDirs)
+ 
+ ########### project ###############
+ 
+-project ("cairo-dock-plugins")
+ set (VERSION "3.5.2")
+ 
+ add_definitions (-std=gnu99 -Wall -Werror-implicit-function-declaration) # -Wextra -Wwrite-strings -Wuninitialized -Werror-implicit-function-declaration -Wstrict-prototypes -Wreturn-type -Wparentheses -Warray-bounds)

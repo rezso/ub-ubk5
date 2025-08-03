@@ -3,7 +3,6 @@ dbus-glib-dev
 ffmpeg-dev
 flac-dev
 libcddb-dev
-libcue-dev
 libfaad2-dev
 libmms-dev
 libmtp-dev

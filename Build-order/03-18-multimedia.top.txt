@@ -40,7 +40,6 @@ xine-ui
 cmus
 moc
 handbrake
-cinelerra
 mpv
 celluloid
 xawtv

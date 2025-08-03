@@ -1,4 +1,5 @@
 libcap-dev
+libidn2-dev
 libnghttp2-dev
 liburcu-dev
 libuv-dev
