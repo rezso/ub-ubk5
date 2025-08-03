@@ -1,1 +1,0 @@
-curl -s -k https://bitbucket.org/raymonad/xss-lock/raw/master/CMakeLists.txt | grep PROJECT_VERSION | sed 's/.*VERSION '//g | sed s%\).*%%

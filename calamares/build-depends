@@ -21,4 +21,4 @@ polkit-qt-dev
 python3-dev
 qt6-qtwebengine-dev
 systemd-dev
-yaml-cpp
+yaml-cpp-dev

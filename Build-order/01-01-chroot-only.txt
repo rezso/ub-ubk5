@@ -115,7 +115,6 @@ libupnp
 liburcu
 libutf8proc
 libuv
-libvidstab
 libvisual
 libx86
 libx86mu

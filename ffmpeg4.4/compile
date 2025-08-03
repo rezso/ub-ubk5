@@ -26,6 +26,7 @@ extlibs="
     --disable-libopencv \
 	--disable-libsmbclient \
 	--disable-libtesseract \
+	--disable-libvidstab \
 	--enable-gcrypt \
 	--enable-gmp \
 	--enable-gnutls \
@@ -58,7 +59,6 @@ extlibs="
 	--enable-libssh \
 	--enable-libtheora \
 	--enable-libv4l2 \
-	--enable-libvidstab \
 	--enable-libvorbis \
 	--enable-libvpx \
 	--enable-libwebp \

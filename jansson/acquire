@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 jansson-${UB_VERSION}.tar.gz jansson-${UB_VERSION}/
-	https://www.digip.org/jansson/releases/
+	https://github.com/akheron/jansson/releases/download/v${UB_VERSION}/

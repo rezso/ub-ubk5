@@ -1,12 +1,7 @@
 #!/bin/sh -eux
 
-export CXXFLAGS+="-fPIC"
-mkdir build
-cd build
-cmake \
+ub_compile \
     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
-	-DCMAKE_BUILD_TYPE=Release \
-	-DCMAKE_INSTALL_PREFIX=/usr \
-	-DYAML_CPP_BUILD_TESTS=OFF \
-..
-make VERBOSE=1
+	-DBUILD_SHARED_LIBS=ON \
+	-DYAML_BUILD_SHARED_LIBS=ON \
+	-DYAML_CPP_BUILD_TESTS=OFF

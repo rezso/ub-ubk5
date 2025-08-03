@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-${UB_VERSION}.tar.gz xss-lock-ac39fdc/
-    git+https://github.com/wavexx/xss-lock.git@ac39fdc

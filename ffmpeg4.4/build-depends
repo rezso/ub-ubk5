@@ -36,7 +36,6 @@ libtheora-dev
 libv4l-dev
 libva-dev
 libvdpau-dev
-libvidstab-dev
 libvorbis-dev
 libvpx-dev
 libwebp-dev

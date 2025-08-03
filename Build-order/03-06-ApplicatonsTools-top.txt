@@ -13,7 +13,6 @@ vacation
 ocrad
 bleachbit
 lrzip
-lzop
 qt5ct
 odt2txt
 pdfminer
