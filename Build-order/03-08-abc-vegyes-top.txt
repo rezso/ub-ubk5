@@ -39,7 +39,7 @@ foomatic-db
 foomatic-db-engine
 libmypaint
 mypaint-brushes
-gimp3
+gimp
 xsane
 gutenprint
 networkmanager-openvpn
