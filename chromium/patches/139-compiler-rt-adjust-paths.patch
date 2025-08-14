@@ -1,6 +1,6 @@
 diff -Naur a/build/config/clang/BUILD.gn b/build/config/clang/BUILD.gn
---- a/build/config/clang/BUILD.gn	2025-07-07 20:29:43.000000000 +0200
-+++ b/build/config/clang/BUILD.gn	2025-07-11 11:08:25.060096147 +0200
+--- a/build/config/clang/BUILD.gn	2025-07-30 00:51:44.000000000 +0200
++++ b/build/config/clang/BUILD.gn	2025-08-09 20:26:51.383118695 +0200
 @@ -210,12 +210,15 @@
        } else if (is_linux || is_chromeos) {
          if (current_cpu == "x64") {
@@ -16,8 +16,8 @@ diff -Naur a/build/config/clang/BUILD.gn b/build/config/clang/BUILD.gn
 +          _suffix = "-aarch64"
          } else if (current_cpu == "loong64") {
            _dir = "loongarch64-unknown-linux-gnu"
-         } else {
-@@ -248,6 +251,11 @@
+         } else if (current_cpu == "riscv64") {
+@@ -250,6 +253,11 @@
          assert(false)  # Unhandled target platform
        }
  

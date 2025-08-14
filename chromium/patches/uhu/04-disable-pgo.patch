@@ -1,6 +1,6 @@
 diff -Naur a/build/config/compiler/pgo/pgo.gni b/build/config/compiler/pgo/pgo.gni
---- a/build/config/compiler/pgo/pgo.gni	2025-03-25 22:32:50.000000000 +0100
-+++ b/build/config/compiler/pgo/pgo.gni	2025-04-06 23:01:26.687402313 +0200
+--- a/build/config/compiler/pgo/pgo.gni	2025-07-28 22:04:51.000000000 +0200
++++ b/build/config/compiler/pgo/pgo.gni	2025-08-04 23:43:29.642517635 +0200
 @@ -24,15 +24,6 @@
    # to think some code is hotter than it actually is, potentially causing very
    # bad compile times.
