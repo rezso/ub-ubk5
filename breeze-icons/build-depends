@@ -1,3 +1,4 @@
 extra-cmake-modules
 python3-lxml
 qt6-dev
+symlinks

@@ -2,5 +2,4 @@
 
 ub_install
 
-# target of symlink is missing
-rm -f ${UB_INSTALLDIR}/usr/share/icons/breeze/actions/24/fingerprint-symbolic.svg
+symlinks -r -d ${UB_INSTALLDIR}/usr/share/icons/
