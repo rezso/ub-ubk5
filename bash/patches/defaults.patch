@@ -1,7 +1,7 @@
 diff -Naur orig/config-top.h patched/config-top.h
 --- orig/config-top.h	2016-05-19 20:34:02.000000000 +0200
 +++ patched/config-top.h	2018-06-25 23:54:40.969136272 +0200
-@@ -87,14 +87,14 @@
+@@ -97,14 +97,14 @@
  #define DEFAULT_BASHRC "~/.bashrc"
  
  /* System-wide .bashrc file for interactive shells. */
