@@ -1,6 +1,7 @@
 conky
 ethtool
 minicom
+putty
 sysstat
 open-isns
 open-iscsi

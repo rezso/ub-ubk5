@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+putty-${UB_VERSION}.tar.gz putty-${UB_VERSION}/
+	https://the.earth.li/~sgtatham/putty/${UB_VERSION}/
