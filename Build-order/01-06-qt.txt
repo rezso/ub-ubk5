@@ -8,6 +8,7 @@ wpasupplicant
 iwd
 chrony
 dhcpcd
+libnvme
 networkmanager
 libxmlb
 bind
@@ -98,7 +99,6 @@ gmime
 sddm
 volume-key
 btrfs-progs
-libnvme
 libblockdev
 fuse2
 fuse-ntfs-3g

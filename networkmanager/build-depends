@@ -8,6 +8,7 @@ gobject-introspection-dev
 iptables
 jansson-dev
 libndp-dev
+libnvme-dev
 libpsl-dev
 libxslt-dev
 meson
