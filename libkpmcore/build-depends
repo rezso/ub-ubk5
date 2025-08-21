@@ -8,6 +8,5 @@ parted-dev
 polkit-qt-dev
 qca-dev
 qt6-dev
-reiserfsprogs
 util-linux-dev
 xfsprogs
