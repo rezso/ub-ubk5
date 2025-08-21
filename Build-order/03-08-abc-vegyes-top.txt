@@ -55,6 +55,5 @@ aspell-dict-hungarian
 media-player-info
 lightdm-gtk-greeter-settings
 sddm-config-editor
-systemd-ui
 nvidia-470
 calamares

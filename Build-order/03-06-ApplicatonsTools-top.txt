@@ -27,7 +27,6 @@ nfoview
 xorriso
 lshw
 hardinfo
-catdoc
 xchm
 rdiff-backup
 cifs-utils

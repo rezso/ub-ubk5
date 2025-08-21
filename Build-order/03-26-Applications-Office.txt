@@ -7,8 +7,6 @@ zbar
 qalculate-gtk
 abevjava
 fet
-efax
-efax-gtk
 qpdfview
 gnucash
 gnucash-doc

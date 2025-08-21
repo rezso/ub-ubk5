@@ -1,5 +1,3 @@
-mathomatic
-socnetv
 gtkdatabox
 klavaro
 xplanet

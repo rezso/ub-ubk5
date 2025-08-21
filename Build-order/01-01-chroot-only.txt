@@ -149,7 +149,6 @@ protobuf
 psacct
 pugixml
 pwgen
-qstat
 qtilitools
 rdate
 recode

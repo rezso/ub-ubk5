@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	--prefix=/usr \
-	--target="$UB_INSTALLDIR" \
-	--with-wish=/usr/bin/wish
