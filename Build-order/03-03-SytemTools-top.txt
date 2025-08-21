@@ -8,7 +8,6 @@ open-iscsi
 tcpdump
 vde
 xcalib
-libp11
 blktrace
 freeipmi
 pcmciautils

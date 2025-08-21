@@ -36,7 +36,6 @@ aspell
 cbindgen
 dhcp
 gpm
-libidl2
 libnftnl
 libnetfilter-conntrack
 iptables
@@ -82,7 +81,6 @@ sdl2
 sdl
 libtheora
 samba
-ladspa
 aom
 enca
 libatasmart
@@ -135,7 +133,6 @@ fltk
 openexr
 imagemagick
 libisofs
-libmythes
 libopusenc
 libgee
 libindicator3

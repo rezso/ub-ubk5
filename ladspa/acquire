@@ -1,4 +1,0 @@
-#!/usr/bin/env dl
-
-ladspa_sdk_${UB_VERSION}.tgz ladspa_sdk_${UB_VERSION}/
-	https://www.ladspa.org/download/

@@ -71,7 +71,6 @@ joe
 kanyremote
 keyutils
 liba52
-libaal
 libasyncns
 libburn
 libcddb
@@ -102,7 +101,6 @@ libnet
 libnfnetlink
 libnfs
 libogg
-liboil
 libpipeline
 libraw1394
 libsigc++2
@@ -151,7 +149,6 @@ protobuf
 psacct
 pugixml
 pwgen
-qqwing
 qstat
 qtilitools
 rdate

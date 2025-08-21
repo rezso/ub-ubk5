@@ -8,7 +8,6 @@ jack-dev
 json-c-dev
 libasyncns-dev
 libcap-dev
-liboil-dev
 libsm-dev
 libsndfile-dev
 libsoxr-dev

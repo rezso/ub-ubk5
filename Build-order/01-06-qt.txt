@@ -42,8 +42,6 @@ fonts-unicode
 lndir
 mdadm
 squashfs-tools
-reiser4progs
-reiserfsprogs
 jfsutils
 xkb-utils
 x.org-utils

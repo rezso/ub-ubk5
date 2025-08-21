@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_install
-
-ln -sf mkreiserfs "$UB_INSTALLDIR"/usr/sbin/mkfs.reiserfs
-ln -sf reiserfsck "$UB_INSTALLDIR"/usr/sbin/fsck.reiserfs
