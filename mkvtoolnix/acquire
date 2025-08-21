@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-mkvtoolnix-${UB_VERSION}.tar.xz mkvtoolnix-${UB_VERSION}/
-	https://www.bunkus.org/videotools/mkvtoolnix/sources/
+release-${UB_VERSION}.tar.gz mkvtoolnix/
+	https://codeberg.org/mbunkus/mkvtoolnix/archive/

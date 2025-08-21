@@ -1,1 +1,1 @@
-u2d https://www.bunkus.org/videotools/mkvtoolnix/sources/
+urllist https://codeberg.org/mbunkus/mkvtoolnix/tags | grep -E '^release-[0-9]+\.' | sed -e 's/release-//' -e 's/\.zip//' -e 's/\.tar\.gz//' | sort -V | tail -n 1
