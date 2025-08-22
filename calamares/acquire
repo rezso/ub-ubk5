@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-v${UB_VERSION}.tar.gz calamares-${UB_VERSION}/
-	https://github.com/calamares/calamares/archive/
+v${UB_VERSION}.tar.gz calamares/
+	https://codeberg.org/Calamares/calamares/archive/

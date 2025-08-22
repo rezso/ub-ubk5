@@ -1,6 +1,6 @@
 diff -Naur a/src/branding/default/branding.desc b/src/branding/default/branding.desc
---- a/src/branding/default/branding.desc	2023-12-12 00:04:06.000000000 +0100
-+++ b/src/branding/default/branding.desc	2023-12-16 23:34:03.712651831 +0100
+--- a/src/branding/default/branding.desc	2025-07-21 18:32:10.000000000 +0200
++++ b/src/branding/default/branding.desc	2025-08-22 15:03:37.270998256 +0200
 @@ -121,18 +121,16 @@
  # are visible as buttons there if the corresponding *show* keys
  # are set to "true" (they can also be overridden).
@@ -13,10 +13,10 @@ diff -Naur a/src/branding/default/branding.desc b/src/branding/default/branding.
 -    shortVersionedName:  FancyGL 2023.3
 -    bootloaderEntryName: FancyGL
 -    productUrl:          https://calamares.io/
--    supportUrl:          https://github.com/calamares/calamares/wiki
--    knownIssuesUrl:      https://github.com/calamares/calamares/issues
+-    supportUrl:          https://codeberg.org/Calamares/calamares/wiki
+-    knownIssuesUrl:      https://codeberg.org/Calamares/calamares/issues
 -    releaseNotesUrl:     https://calamares.io/news/
--    donateUrl:           https://kde.org/community/donations/index.php
+-    donateUrl:           https://docs.codeberg.org/improving-codeberg/donate/
 +    productName:         UHU-Linux
 +    shortProductName:    UHU-Linux
 +    version:             UBK5 (NG)

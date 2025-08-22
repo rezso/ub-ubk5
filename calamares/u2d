@@ -1,1 +1,1 @@
-u2d https://github.com/calamares/calamares/tags/ v
+urllist https://codeberg.org/Calamares/calamares/tags | grep 'v' | grep '\.tar\.gz' | sed -e 's/\.tar\.gz//' -e 's/v//' | sort -V | tail -n1

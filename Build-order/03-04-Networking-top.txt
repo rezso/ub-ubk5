@@ -27,7 +27,6 @@ libtorrent
 rtorrent
 rdesktop
 ettercap
-hexchat
 opera
 wireshark
 balsa

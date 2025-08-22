@@ -1,4 +1,8 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--disable-cups-ppds
+    --enable-cups-ppds \
+    --enable-simplified-cups-ppds=only \
+    --enable-translated-cups-ppds \
+    --enable-globalized-cups-ppds \
+    --disable-libgutenprintui2

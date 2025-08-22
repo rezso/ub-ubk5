@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-ub_compile \
-	-Dtls=enabled \
-	-Dgtk-frontend=true \
-	-Dtext-frontend=true
