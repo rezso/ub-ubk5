@@ -1,6 +1,0 @@
-#!/bin/sh -eux
-
-CXXFLAGS+=' -std=c++11'
-
-ub_compile \
-	--disable-documentation

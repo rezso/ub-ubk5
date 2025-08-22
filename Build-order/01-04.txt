@@ -24,7 +24,6 @@ pangomm1.4
 pangomm
 atkmm1.6
 atkmm
-gtkmm2
 bolt
 libvisio
 libwnck

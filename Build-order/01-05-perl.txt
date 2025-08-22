@@ -23,8 +23,6 @@ perl-file-homedir
 perl-glib
 perl-cairo
 perl-pango
-perl-gtk2
-perl-gtk2-ex-formfactory
 perl-net-dns
 perl-event-execflow
 perl-io-socket-inet6

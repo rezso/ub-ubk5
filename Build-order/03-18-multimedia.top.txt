@@ -8,11 +8,9 @@ smplayer
 lsdvd
 youtube-dl
 mp3wrap
-pavumeter
 canorus
 exaile
 grimripper
-acidrip
 wxsvg
 opus-tools
 cdw

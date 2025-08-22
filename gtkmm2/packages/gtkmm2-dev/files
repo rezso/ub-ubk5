@@ -1,5 +1,0 @@
-	/usr/include
-	/usr/lib/*/include
-	/usr/lib/pkgconfig
-	/usr/lib/*/proc
-@	/usr/lib/*.so
