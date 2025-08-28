@@ -1,0 +1,7 @@
+#!/bin/sh -eux
+
+rm -Rf subprojects
+
+ub_compile \
+    -Dlua51=false \
+	-Dgtk_doc=false

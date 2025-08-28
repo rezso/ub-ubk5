@@ -4,6 +4,7 @@ gcr
 js128
 gjs
 libpeas
+libpeas2
 libgweather
 libgxps
 gnome-autoar

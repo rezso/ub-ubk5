@@ -3,6 +3,6 @@ gtk3-dev
 intltool
 json-glib-dev
 libnotify-dev
-libpeas-dev
+libpeas2-dev
 libxml2-dev
 webkit2gtk-4.1-dev
