@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-${UB_VERSION}.tar.gz patchutils-${UB_VERSION}/
-	https://github.com/twaugh/patchutils/archive/refs/tags/
+patchutils-${UB_VERSION}.tar.xz patchutils-${UB_VERSION}/
+	https://cyberelk.net/tim/data/patchutils/stable/
