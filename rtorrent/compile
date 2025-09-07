@@ -1,5 +1,4 @@
 #!/bin/sh -eux
 
 ub_compile \
-	--with-xmlrpc-c \
-	--enable-ipv6
+	--with-xmlrpc-c

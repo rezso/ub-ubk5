@@ -1,5 +1,5 @@
 alsa-lib-dev
-appstream-glib-dev
+appstream-dev
 babl-dev
 curl-dev
 dbus-glib-dev
@@ -13,6 +13,7 @@ gtk3-dev
 gtk-update-icon-cache
 iso-codes
 lcms2-dev
+libarchive-dev
 libexif-dev
 libgsf-dev
 libheif-dev

@@ -9,6 +9,7 @@ libsm-dev
 libsndfile-dev
 libx11-dev
 libxcomposite-dev
+libxcursor-dev
 libxdamage-dev
 libxext-dev
 libxfixes-dev
