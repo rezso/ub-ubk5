@@ -13,6 +13,7 @@ libcanberra-dev
 libgee-dev
 libnotify-dev
 libpeas-dev
+libwacom-dev
 libwnck-dev
 libxfce4windowing-dev
 libxkbfile-dev

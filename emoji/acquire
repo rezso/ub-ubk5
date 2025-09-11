@@ -1,16 +1,16 @@
 #!/usr/bin/env dl
 
-emoji-data.txt
-    https://www.unicode.org/Public/emoji/${UB_VERSION}
-
 emoji-sequences.txt
-    https://www.unicode.org/Public/emoji/${UB_VERSION}
+    https://www.unicode.org/Public/${UB_VERSION}/emoji/
 
 emoji-test.txt
-    https://www.unicode.org/Public/emoji/${UB_VERSION}
-
-emoji-variation-sequences.txt
-    https://www.unicode.org/Public/emoji/${UB_VERSION}
+    https://www.unicode.org/Public/${UB_VERSION}/emoji/
 
 emoji-zwj-sequences.txt
-    https://www.unicode.org/Public/emoji/${UB_VERSION}
+    https://www.unicode.org/Public/${UB_VERSION}/emoji/
+
+emoji-data.txt
+    https://www.unicode.org/Public/${UB_VERSION}/ucd/emoji/
+
+emoji-variation-sequences.txt
+    https://www.unicode.org/Public/${UB_VERSION}/ucd/emoji/
