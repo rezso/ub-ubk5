@@ -42,6 +42,7 @@ kpackage-dev
 kparts-dev
 kplotting-dev
 kpty-dev
+kquickcharts-dev
 krunner-dev
 kservice-dev
 kstatusnotifieritem-dev

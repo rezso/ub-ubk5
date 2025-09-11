@@ -3,6 +3,7 @@ kactivitymanagerd >=
 kded >=
 kirigami >=
 kirigami-addons >=
+kquickcharts >=
 ksystemstats >=
 ocean-sound-theme >=
 xdg-user-dirs

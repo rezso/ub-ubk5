@@ -49,6 +49,7 @@ syntax-highlighting
 ki18n
 kholidays
 kirigami
+kquickcharts
 ktexttemplate
 #
 kcoreaddons
