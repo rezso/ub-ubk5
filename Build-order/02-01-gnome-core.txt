@@ -22,6 +22,7 @@ gssdp
 gupnp
 gupnp-dlna
 gupnp-av
+typescript # gnome-weather
 
 gnome-desktop
 cheese
