@@ -1,0 +1,14 @@
+diff -Naur a/meson.build b/meson.build
+--- a/meson.build	2025-09-13 03:03:28.000000000 +0200
++++ b/meson.build	2025-09-14 00:10:12.561789335 +0200
+@@ -427,10 +427,6 @@
+ 
+ subdir('loaders')
+ 
+-if generate_gir == true
+-  subdir('tests')
+-endif
+-
+ summary = [
+   '',
+   '------',
