@@ -1,5 +1,6 @@
 appstream-dev
 curl-dev
+flex
 gobject-introspection-dev
 gtk4-dev
 libxkbcommon-dev
