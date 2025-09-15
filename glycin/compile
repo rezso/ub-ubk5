@@ -1,0 +1,8 @@
+#!/bin/sh -eux
+
+ub_compile \
+    -Dloaders=glycin-image-rs,glycin-jpeg2000,glycin-raw,glycin-svg \
+	-Dglycin-thumbnailer=true \
+	-Dintrospection=true \
+	-Dvapi=true \
+	-Dtest_skip_install=true

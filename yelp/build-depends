@@ -1,10 +1,11 @@
-gtk3-dev
+gtk4-dev
 itstool
+libadwaita-dev
 libhandy-dev
 libsm-dev
 libxslt-dev
 libxt-dev
 sqlite-dev
 systemd-dev
-webkit2gtk-4.1-dev
+webkitgtk-6.0-dev
 yelp-xsl

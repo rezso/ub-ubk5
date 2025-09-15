@@ -1,3 +1,4 @@
+blueprint-compiler
 gobject-introspection-dev
 gtk4-dev
 gtksourceview5-dev

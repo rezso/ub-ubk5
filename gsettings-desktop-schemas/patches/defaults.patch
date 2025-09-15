@@ -1,11 +1,11 @@
 diff -Naur a/schemas/org.gnome.desktop.background.gschema.xml.in b/schemas/org.gnome.desktop.background.gschema.xml.in
---- a/schemas/org.gnome.desktop.background.gschema.xml.in	2025-03-17 13:36:02.000000000 +0100
-+++ b/schemas/org.gnome.desktop.background.gschema.xml.in	2025-03-21 22:04:52.461275806 +0100
+--- a/schemas/org.gnome.desktop.background.gschema.xml.in	2025-09-14 12:59:21.000000000 +0200
++++ b/schemas/org.gnome.desktop.background.gschema.xml.in	2025-09-15 20:40:59.805544216 +0200
 @@ -11,7 +11,7 @@
        </description>
      </key>
      <key name="picture-uri" type="s">
--      <default>'file://@datadir@/backgrounds/gnome/adwaita-l.jpg'</default>
+-      <default>'file://@datadir@/backgrounds/gnome/adwaita-l.jxl'</default>
 +      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
        <summary>Picture URI</summary>
        <description>
@@ -14,7 +14,7 @@ diff -Naur a/schemas/org.gnome.desktop.background.gschema.xml.in b/schemas/org.g
        </description>
      </key>
      <key name="picture-uri-dark" type="s">
--      <default>'file://@datadir@/backgrounds/gnome/adwaita-d.jpg'</default>
+-      <default>'file://@datadir@/backgrounds/gnome/adwaita-d.jxl'</default>
 +      <default>'file://@datadir@/backgrounds/UHU/uhu_linux_ubk.jpg'</default>
        <summary>Picture URI (dark)</summary>
        <description>
@@ -29,8 +29,8 @@ diff -Naur a/schemas/org.gnome.desktop.background.gschema.xml.in b/schemas/org.g
        <description>
          If set to true, then file manager will draw the icons on the desktop.
 diff -Naur a/schemas/org.gnome.desktop.input-sources.gschema.xml.in b/schemas/org.gnome.desktop.input-sources.gschema.xml.in
---- a/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2025-03-17 13:36:02.000000000 +0100
-+++ b/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2025-03-21 22:06:13.017564845 +0100
+--- a/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2025-09-14 12:59:21.000000000 +0200
++++ b/schemas/org.gnome.desktop.input-sources.gschema.xml.in	2025-09-15 20:41:58.141655116 +0200
 @@ -15,7 +15,7 @@
        </description>
      </key>
@@ -41,9 +41,9 @@ diff -Naur a/schemas/org.gnome.desktop.input-sources.gschema.xml.in b/schemas/or
        <description>
          List of input source identifiers available. Each source is
 diff -Naur a/schemas/org.gnome.desktop.screensaver.gschema.xml.in b/schemas/org.gnome.desktop.screensaver.gschema.xml.in
---- a/schemas/org.gnome.desktop.screensaver.gschema.xml.in	2025-03-17 13:36:02.000000000 +0100
-+++ b/schemas/org.gnome.desktop.screensaver.gschema.xml.in	2025-03-21 22:03:13.972920059 +0100
-@@ -95,7 +95,7 @@
+--- a/schemas/org.gnome.desktop.screensaver.gschema.xml.in	2025-09-14 12:59:21.000000000 +0200
++++ b/schemas/org.gnome.desktop.screensaver.gschema.xml.in	2025-09-15 20:42:41.581742570 +0200
+@@ -102,7 +102,7 @@
        </description>
      </key>
      <key name="picture-uri" type="s">

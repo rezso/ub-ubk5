@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+glycin-${UB_VERSION}.tar.xz glycin-${UB_VERSION}/
+	https://download.gnome.org/sources/glycin/${UB_VERSION_HEAD2}/

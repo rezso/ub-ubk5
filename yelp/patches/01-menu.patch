@@ -1,10 +1,10 @@
-diff -Naur orig/yelp.desktop.in patched/yelp.desktop.in
---- orig/yelp.desktop.in	2019-02-04 18:00:46.000000000 +0100
-+++ patched/yelp.desktop.in	2019-03-19 02:19:32.901221333 +0100
+diff -Naur a/org.gnome.Yelp.desktop.in b/org.gnome.Yelp.desktop.in
+--- a/org.gnome.Yelp.desktop.in	2025-09-13 21:38:45.000000000 +0200
++++ b/org.gnome.Yelp.desktop.in	2025-09-15 20:51:55.910995442 +0200
 @@ -1,5 +1,5 @@
  [Desktop Entry]
 -Name=Help
-+Name=Gnome Help
++Name=GNOME Help
  Comment=Get help with GNOME
+ # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
  Keywords=documentation;information;manual;help;
- OnlyShowIn=GNOME;Unity;

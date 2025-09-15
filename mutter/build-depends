@@ -1,6 +1,7 @@
 colord-dev
 cvt
 dbus-glib-dev
+glycin-dev
 gnome-desktop-dev
 gnome-settings-daemon-dev
 gobject-introspection-dev

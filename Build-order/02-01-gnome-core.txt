@@ -7,6 +7,9 @@ libpeas
 libpeas2
 libgweather
 libgxps
+typescript # gnome-weather
+blueprint-compiler
+glycin
 gnome-autoar
 gnome-video-effects
 libnma
@@ -22,7 +25,6 @@ gssdp
 gupnp
 gupnp-dlna
 gupnp-av
-typescript # gnome-weather
 
 gnome-desktop
 cheese
