@@ -3,4 +3,4 @@
 ub_compile \
 	-Dlandlock=disabled \
 	-Dman=false \
-	-Dminer_rss=false
+	-Dfunctional_tests=false

@@ -18,7 +18,6 @@ iso-codes
 itstool
 jack-dev
 json-glib-dev
-ladspa-dev
 lcms2-dev
 liba52-dev
 libass-dev

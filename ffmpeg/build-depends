@@ -13,7 +13,6 @@ gmp-dev
 gnutls-dev
 imlib2-dev
 jack-dev
-ladspa-dev
 libass-dev
 libavc1394-dev
 libbluray-dev

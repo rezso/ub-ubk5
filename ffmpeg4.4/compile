@@ -30,7 +30,6 @@ extlibs="
 	--enable-gcrypt \
 	--enable-gmp \
 	--enable-gnutls \
-	--enable-ladspa \
 	--enable-libaom \
 	--enable-libass \
 	--enable-libbluray \

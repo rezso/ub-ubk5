@@ -4,6 +4,5 @@ gtksourceview5-dev
 itstool
 json-glib-dev
 libadwaita-dev
-libgda-dev
 libsoup3-dev
 libspelling-dev

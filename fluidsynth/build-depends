@@ -1,6 +1,5 @@
 alsa-lib-dev
 jack-dev
-ladspa-dev
 libsndfile-dev
 portaudio-dev
 pulseaudio-dev

@@ -1,7 +1,6 @@
 ffmpeg-dev
 gdk-pixbuf-dev
 jack-dev
-ladspa-dev
 libdv-dev
 libsamplerate-dev
 libvdpau-dev

@@ -1,6 +1,5 @@
 alsa-lib-dev
 jack-dev
-ladspa-dev
 libarchive-dev
 liblrdf-dev
 libsndfile-dev

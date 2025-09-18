@@ -2,7 +2,6 @@ alsa-lib-dev
 dbus-dev
 file-dev
 flac-dev
-ladspa-dev
 libao-dev
 libgsm-dev
 libid3tag-dev
