@@ -8,6 +8,7 @@ gexiv2-dev
 ghostscript
 gjs-dev
 glib-networking
+gobject-introspection-dev
 gpm-dev
 gtk3-dev
 gtk-update-icon-cache
