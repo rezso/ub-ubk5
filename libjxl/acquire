@@ -1,0 +1,4 @@
+#!/usr/bin/env dl
+
+v${UB_VERSION}.tar.gz libjxl-${UB_VERSION}/
+	https://github.com/libjxl/libjxl/archive/refs/tags/

@@ -302,6 +302,7 @@ pango
 libungif
 libwebp
 gdk-pixbuf
+libjxl
 colord
 gtk3
 gtk2
