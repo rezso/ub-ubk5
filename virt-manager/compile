@@ -1,5 +1,6 @@
 #!/bin/sh -eux
 
+rm -f pyproject.toml
 ub_compile \
     -Dupdate-icon-cache=false \
     -Dcompile-schemas=false
