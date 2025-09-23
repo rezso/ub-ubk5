@@ -72,7 +72,7 @@ xcursorgen
 numlockx
 xbindkeys
 xinit
-libxml++3
+libxml++2.6
 upower
 mdds
 libetonyek
