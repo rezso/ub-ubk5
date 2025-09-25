@@ -14,6 +14,7 @@ python3-async-timeout
 python3-attrs
 python3-chardet
 python3-constantly
+python3-dasbus
 python3-dateutil
 python3-distro
 python3-distutils-extra
