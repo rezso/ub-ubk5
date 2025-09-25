@@ -10,6 +10,7 @@ icu-dev
 lcms2-dev
 libglvnd-dev
 libjpeg-turbo-dev
+libjxl-dev
 libnotify-dev
 libsecret-dev
 libsoup3-dev

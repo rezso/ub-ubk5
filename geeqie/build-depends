@@ -5,6 +5,7 @@ gtk3-dev
 lcms2-dev
 libarchive-dev
 libheif-dev
+libjxl-dev
 libtiff-dev
 libwebp-dev
 poppler-glib-dev

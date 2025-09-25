@@ -4,6 +4,7 @@ fftw3-dev
 graphviz-dev
 lcms2-dev
 libjpeg-turbo-dev
+libjxl-dev
 liblqr-dev
 libpng-dev
 librsvg-dev

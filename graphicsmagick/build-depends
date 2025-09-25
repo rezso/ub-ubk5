@@ -2,6 +2,7 @@ freetype2-dev
 ghostscript-dev
 lcms2-dev
 libjpeg-turbo-dev
+libjxl-dev
 libpng-dev
 libtiff-dev
 libwmf-dev

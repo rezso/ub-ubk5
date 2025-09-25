@@ -25,6 +25,7 @@ libgcrypt-dev
 libgme-dev
 libgsm-dev
 libiec61883-dev
+libjxl-dev
 liblame-dev
 liblzo-dev
 libmodplug-dev

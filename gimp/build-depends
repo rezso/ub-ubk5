@@ -19,6 +19,7 @@ libexif-dev
 libgsf-dev
 libheif-dev
 libjpeg-turbo-dev
+libjxl-dev
 libmng-dev
 libmypaint-dev
 libpng-dev

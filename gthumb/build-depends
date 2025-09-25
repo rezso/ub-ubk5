@@ -7,6 +7,7 @@ gtk3-dev
 itstool
 lcms2-dev
 libheif-dev
+libjxl-dev
 librsvg-dev
 libtiff-dev
 wayland-dev
