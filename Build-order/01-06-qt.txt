@@ -13,7 +13,6 @@ networkmanager
 libxmlb
 bind
 openconnect
-appstream-glib
 libsoup3
 libosinfo
 osinfo-db-tools
@@ -56,7 +55,6 @@ autogen
 gtk-stock-icons
 vigra
 libodfgen
-alsa-plugins
 less
 libseccomp
 gtksourceview4

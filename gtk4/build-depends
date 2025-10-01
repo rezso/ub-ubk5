@@ -1,5 +1,3 @@
-atk-dev
-at-spi2-atk-dev
 cairo-dev
 colord-dev
 cups-dev
@@ -19,6 +17,7 @@ libx11-dev
 libxcomposite-dev
 libxcursor-dev
 libxdamage-dev
+libxi-dev
 libxinerama-dev
 libxkbcommon-dev
 libxrandr-dev
