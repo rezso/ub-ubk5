@@ -44,7 +44,6 @@ orage
 ristretto
 parole
 gigolo
-xfwm4-themes
 icon-theme-xfce
 xfdashboard
 xfce4-pulseaudio-plugin
