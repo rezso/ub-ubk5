@@ -1,6 +1,5 @@
 #!/bin/sh -eux
 
 ub_compile \
-	-Dxkb-base=/usr/share/X11/xkb \
 	-Dcompat-rules=true \
 	-Dxorg-rules-symlinks=true
