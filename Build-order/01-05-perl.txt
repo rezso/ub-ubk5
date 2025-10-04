@@ -14,17 +14,9 @@ perl-timedate
 perl-version
 perl-net-ssleay
 perl-io-socket-ssl
-perl-event-rpc
-perl-file-remove
-perl-test-requires
-perl-module-scandeps
-perl-par-dist
-perl-file-homedir
 perl-glib
 perl-cairo
-perl-pango
 perl-net-dns
-perl-event-execflow
 perl-io-socket-inet6
 perl-list-moreutils
 perl-libxml
