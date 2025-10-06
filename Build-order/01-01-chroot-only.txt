@@ -1,23 +1,18 @@
 7zip
 acpid
-acpitool
 adduser
 agedu
 alien
 alsa-lib
-antiword
 argon2
 autoconf2.13
 at # bison, flex
 audiofile
 barcode
-bchunk
-bonnie++
 botan3
 bridge-utils
 cabextract
 c-ares
-ccrypt
 cdparanoia
 chkrootkit
 chmlib

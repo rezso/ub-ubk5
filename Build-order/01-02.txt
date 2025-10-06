@@ -45,7 +45,6 @@ orc
 speex
 speexdsp
 flac
-celt
 libmng
 mercurial
 scons

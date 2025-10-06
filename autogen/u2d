@@ -1,1 +1,0 @@
-urllist https://ftp.gnu.org/gnu/autogen/| splitver '^rel([0-9.]+)$' | sort -V | tail -n 1

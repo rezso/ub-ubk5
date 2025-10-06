@@ -30,7 +30,6 @@ gnumeric
 rest
 spice-gtk
 wxwidgets
-bigreqsproto
 uhu-pixmaps
 clawsker
 dialog
@@ -51,7 +50,6 @@ libpst
 bogofilter
 highlight
 guile2.2
-autogen
 gtk-stock-icons
 vigra
 libodfgen
