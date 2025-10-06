@@ -35,7 +35,6 @@ extlibs="
 	--enable-libbluray \
 	--enable-libcaca \
 	--enable-libcdio \
-	--enable-libcelt \
 	--enable-libdc1394 \
 	--enable-libdrm \
 	--enable-libfdk-aac \

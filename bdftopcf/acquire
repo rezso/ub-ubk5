@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-bdftopcf-${UB_VERSION}.tar.gz bdftopcf-${UB_VERSION}/
-  https://www.x.org/releases/individual/app/
+bdftopcf-${UB_VERSION}.tar.xz bdftopcf-${UB_VERSION}/
+  https://xorg.freedesktop.org/archive/individual/util/

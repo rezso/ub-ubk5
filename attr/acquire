@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-attr-${UB_VERSION}.src.tar.gz attr-${UB_VERSION}/
+attr-${UB_VERSION}.tar.xz attr-${UB_VERSION}/
 	https://download.savannah.nongnu.org/releases/attr/

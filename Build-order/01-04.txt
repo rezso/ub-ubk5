@@ -23,7 +23,6 @@ glibmm
 pangomm1.4
 pangomm
 atkmm1.6
-bolt
 libvisio
 libwnck
 emacs
