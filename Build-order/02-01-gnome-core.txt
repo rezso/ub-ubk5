@@ -62,7 +62,6 @@ gnome-themes-extra
 gnome-user-docs
 gnome-user-share
 grilo-plugins
-mousetweaks
 gnome-initial-setup
 gnome-keyring
 orca
@@ -98,7 +97,6 @@ gnome-photos
 gnome-boxes
 eiciel
 meld
-d-feet
 ghex
 gwget
 pan

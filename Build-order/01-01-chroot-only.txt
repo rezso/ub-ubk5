@@ -46,7 +46,6 @@ ganyremote
 geoip
 glm
 gocr
-hashalot
 hddtemp
 hdparm
 htpdate
@@ -56,7 +55,6 @@ hyphen-hu
 icmptx
 ico2xpm
 id3lib
-imediff2
 inxi
 iodine
 iperf
@@ -118,17 +116,13 @@ lmdb
 localepurge
 lsb-release
 lsof
-lsscsi
 luajit
 man-pages
 memtest86+
 mpage
-mtx
 muparser
 neofetch
-nomarch
 nspr
-numdiff
 opencore-amr
 opus
 os-prober

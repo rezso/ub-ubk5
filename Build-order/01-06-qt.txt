@@ -45,7 +45,6 @@ xkb-utils
 x.org-utils
 xmldiff
 sox
-espeak
 libpst
 bogofilter
 highlight

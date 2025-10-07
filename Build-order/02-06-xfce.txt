@@ -15,7 +15,6 @@ xfdesktop
 xfwm4
 xfce4-appfinder
 tumbler
-gtk-engine-xfce
 thunar-volman
 xfce4-power-manager
 xfce4-notifyd
@@ -44,7 +43,6 @@ orage
 ristretto
 parole
 gigolo
-icon-theme-xfce
 xfdashboard
 xfce4-pulseaudio-plugin
 xfce4-cpufreq-plugin

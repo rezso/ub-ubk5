@@ -3,9 +3,7 @@ fmtools
 fonts-ghostscript-std
 libdispatch
 deadbeef
-devede
 smplayer
-lsdvd
 youtube-dl
 mp3wrap
 canorus
@@ -18,7 +16,6 @@ schism
 xdg-user-dirs-gtk
 dvdauthor
 paprefs
-lingot
 dvdstyler
 vorbis-tools
 dvgrab

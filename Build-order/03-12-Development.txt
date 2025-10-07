@@ -1,9 +1,7 @@
 dpkg-repack
 ltrace
-icon-slicer
 lucene++
 poedit
-duff
 help2info
 xdelta
 translate-toolkit
