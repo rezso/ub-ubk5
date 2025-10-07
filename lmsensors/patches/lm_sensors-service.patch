@@ -1,6 +1,6 @@
 diff -Naur a/prog/detect/sensors-detect b/prog/detect/sensors-detect
---- a/prog/detect/sensors-detect	2025-04-16 23:26:23.000000000 +0200
-+++ b/prog/detect/sensors-detect	2025-04-17 00:34:14.512542820 +0200
+--- a/prog/detect/sensors-detect	2024-01-13 17:03:31.000000000 +0100
++++ b/prog/detect/sensors-detect	2025-10-07 15:08:08.535598920 +0200
 @@ -7430,18 +7430,18 @@
  		}
  	}
@@ -28,33 +28,26 @@ diff -Naur a/prog/detect/sensors-detect b/prog/detect/sensors-detect
  		print SYSCONFIG <<'EOT';
  # This file is sourced by /etc/init.d/lm_sensors and defines the modules to
 diff -Naur a/prog/init/lm_sensors.service b/prog/init/lm_sensors.service
---- a/prog/init/lm_sensors.service	2025-04-16 23:26:23.000000000 +0200
-+++ b/prog/init/lm_sensors.service	2025-04-17 00:34:42.376685289 +0200
-@@ -2,12 +2,12 @@
- Description=Initialize hardware monitoring sensors
- 
- [Service]
+--- a/prog/init/lm_sensors.service	2024-01-13 17:03:31.000000000 +0100
++++ b/prog/init/lm_sensors.service	2025-10-07 15:08:32.383634015 +0200
+@@ -11,7 +11,7 @@
+ ProtectControlGroups=true
+ RestrictRealtime=true
+ # end of automatic additions
 -EnvironmentFile=/etc/sysconfig/lm_sensors
 +EnvironmentFile=-/etc/conf.d/lm_sensors
  Type=oneshot
  RemainAfterExit=yes
--ExecStart=-/sbin/modprobe -qab $BUS_MODULES $HWMON_MODULES
-+ExecStart=-/usr/sbin/modprobe -qab $BUS_MODULES $HWMON_MODULES
- ExecStart=/usr/bin/sensors -s
--ExecStop=-/sbin/modprobe -qabr $BUS_MODULES $HWMON_MODULES
-+ExecStop=-/usr/sbin/modprobe -qabr $BUS_MODULES $HWMON_MODULES
- 
- [Install]
- WantedBy=multi-user.target
+ ExecStart=-/sbin/modprobe -qab $BUS_MODULES $HWMON_MODULES
 diff -Naur a/prog/init/sensord.service b/prog/init/sensord.service
---- a/prog/init/sensord.service	2025-04-16 23:26:23.000000000 +0200
-+++ b/prog/init/sensord.service	2025-04-17 00:34:14.512542820 +0200
-@@ -3,7 +3,7 @@
- After=lm_sensors.service
- 
- [Service]
+--- a/prog/init/sensord.service	2024-01-13 17:03:31.000000000 +0100
++++ b/prog/init/sensord.service	2025-10-07 15:08:08.535598920 +0200
+@@ -13,7 +13,7 @@
+ ProtectControlGroups=true
+ RestrictRealtime=true
+ # end of automatic additions
 -EnvironmentFile=/etc/sysconfig/sensord
 +EnvironmentFile=/etc/conf.d/sensord
  Type=forking
  PIDFile=/run/sensord.pid
- ExecStart=/usr/sbin/sensord -i $INTERVAL -l $LOG_INTERVAL -f daemon
+ ExecStart=/usr/sbin/sensord -i $INTERVAL -l $LOG_INTERVAL -f daemon $SENSORD_ARGS

@@ -3,5 +3,5 @@
 #V${UB_VERSION//./-}.tar.gz lm-sensors-${UB_VERSION//./-}/
 #	https://github.com/lm-sensors/lm-sensors/archive/
 
-${UB_VERSION}.tar.gz lm-sensors-42f240d/
-    git+https://github.com/lm-sensors/lm-sensors.git@42f240d
+V${UB_VERSION//./-}.tar.gz lm-sensors-${UB_VERSION//./-}/
+    https://github.com/hramrach/lm-sensors/archive/refs/tags/

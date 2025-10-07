@@ -1,1 +1,1 @@
-u2d https://www.freedesktop.org/software/media-player-info/
+urllist https://gitlab.freedesktop.org/media-player-info/media-player-info/-/tags | grep -E '^[0-9]+$' | sort -V | tail -n 1

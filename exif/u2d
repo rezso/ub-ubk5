@@ -1,1 +1,1 @@
-sflist libexif exif | splitver '^([0-9.]+)' | sort -V | tail -n 1
+urllist https://github.com/libexif/exif/tags | grep 'exif-' | grep 'release' | grep 'gz' | sed -e 's/exif-//' -e 's/-release.tar.gz//' -e 's/_/./g' | sort -V | tail -n1

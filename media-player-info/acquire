@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
 media-player-info-${UB_VERSION}.tar.gz media-player-info-${UB_VERSION}/
-	https://www.freedesktop.org/software/media-player-info/
+	https://gitlab.freedesktop.org/media-player-info/media-player-info/-/archive/${UB_VERSION}/

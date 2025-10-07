@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-exif-"$UB_VERSION".tar.gz exif-"$UB_VERSION"/
-	https://downloads.sourceforge.net/libexif/
+exif-${UB_VERSION//./_}-release.tar.gz exif-exif-${UB_VERSION//./_}-release/
+	https://github.com/libexif/exif/archive/refs/tags/

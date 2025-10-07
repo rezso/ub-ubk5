@@ -1,4 +1,4 @@
 #!/usr/bin/env dl
 
-enca-${UB_VERSION/~/-}.tar.xz enca-${UB_VERSION/~/-}/
-	https://dl.cihar.com/enca/
+enca-${UB_VERSION}.tar.xz enca-${UB_VERSION}/
+	https://github.com/Project-OSS-Revival/enca/releases/download/${UB_VERSION}/

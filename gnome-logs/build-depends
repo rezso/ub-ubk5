@@ -1,5 +1,6 @@
 gobject-introspection-dev
-gtk3-dev
+gsettings-desktop-schemas
+gtk4-dev
 itstool
-libhandy-dev
+libadwaita-dev
 systemd-dev
