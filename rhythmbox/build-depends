@@ -2,7 +2,6 @@ avahi-dev
 brasero-dev
 clutter-gst-dev
 clutter-gtk-dev
-gobject-introspection-dev
 grilo-dev
 gstreamer-dev
 itstool
